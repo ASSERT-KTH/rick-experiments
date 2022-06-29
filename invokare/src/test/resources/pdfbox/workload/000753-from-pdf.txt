@@ -1,0 +1,82 @@
+Fall 2002 Simple Machines Robotics Competition 
+Hogg Middle School 
+December 7, 2002 
+ 
+LEGOnauts, welcome to LEGO Centauri.  Wow, that was a long journey from Earth.  Now we must put our 
+exploration team into action.  Unfortunately, our transporters were damaged in the landing; therefore we need a 
+team to develop a robot that will help transport 30 LEGOnauts from the LANDING ZONE to the 
+EXPLORATION ZONE.  Is anyone here ready to step up to the challenge? 
+ 
+Below is everything that we know about the challenge. 
+ 
+• The team must be ready to execute the mission on December 7, 2002 at Hogg Middle School. 
+• The equipment available for a team to build a robot or robots is 3 LEGO Motorized Simple Machines 
+Kits. 
+• The following diagram presents the environment which will be encountered. 
+ 
+ 
+ 
+ 
+Robot
+Base 
+“Mountain” 
+4 ft 
+2x4 border 
+4 ft 
+ 
+• The following diagram presents where the LEGOnauts will be in the LANDING ZONE. 
+ LEGOnauts at Base Dual Transporter 
+ 
+ 
+ 
+Robot Base  
+ 
+16” Robot  
+12” 
+ Base Lift Transporter 
+Quad Transporter  
+ 
+ Solo Transporters 
+ 
+Platform   
+Transporter 
+ 
+ Mass Transporter 
+ 
+• The team has 2 minutes to complete the mission. 
+• The team scores 5 points for transporting a LEGOnaut to the EXPLORATION ZONE. 
+• The team scores 2 points for transporting a LEGOnaut to the HABITATION ZONE. 
+• The team’s score is determined at the end of the 2-minute mission. 
+• A LEGOnaut counts if any part of the LEGOnaut is breaking the plane of the zone. 
+• The mountain is considered part of the HABITATION ZONE. 
+• The black line between the HABITATION ZONE and LANDING ZONE is considered part of the 
+HABITATION ZONE. 
+• A LEGOnaut in both the EXPLORATION ZONE and HABITATION ZONE counts 5 points. 
+• The team’s robot/robots must start inside of the ROBOT BASE and every time it is returned to the 
+ROBOT BASE during the mission. 
+• The robot shall not have any elastic stored energy (i.e. stretched rubber band) when the mission begins 
+or when the robot is returned to base but elastic stored energy can be generated from activating a 
+motor. 
+• The ROBOT BASE is the 12” x 16” boundary extended vertically (i.e. the robot can not hang over the 
+line at the beginning of the mission). 
+• The team can touch their robot without penalty when the robot is partially inside the ROBOT BASE 
+• The controller and wire are NOT considered part of the robot. 
+• The black line indicating the ROBOT BASE is NOT part of the ROBOT BASE. 
+• A penalty of 5 points will be assessed if a team touches their robot that is outside of the ROBOT 
+BASE.   
+• If a robot is touched, the robot must be returned to the ROBOT BASE to continue the mission. 
+• The controller and wire can ONLY be used to provide electrical power to robot motors (i.e. it can not 
+be used to drag the robot, corral LEGOnauts, etc.). 
+• If a controller or wire are used illegally (judges call), the team will be required to immediately place the 
+robot back in the ROBOT BASE to continue the mission. 
+• A team may touch any playing piece (Lift Transporter, Mass Transporter, LEGOnaut, etc.) 
+COMPLETELY inside the ROBOT BASE without penalty.  
+• If a playing piece is illegally touched, the playing piece along with all attached pieces will be removed 
+from play for the remainder of the mission. 
+• A playing piece is NEVER considered part of the robot. 
+• A penalty of 10 points will be assessed for each LEGOnaut that leaves LEGO Centauri (i.e. the playing 
+field). 
+ 
+Please contact Lucien at Lucien.Junkin@jsc.nasa.gov with any questions or comments. 
+ 
+Thank you for maintaining the spirit of the game! 
