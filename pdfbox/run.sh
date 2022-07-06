@@ -48,3 +48,4 @@ do
   echo "OverlayPDF " ${i}${extension}
   java -jar ${pdfbox_jar_loc} OverlayPDF ${i}${extension} ${overlay_pdf}${extension} -position foreground ${i}-overlaid${extension}
 done
+
