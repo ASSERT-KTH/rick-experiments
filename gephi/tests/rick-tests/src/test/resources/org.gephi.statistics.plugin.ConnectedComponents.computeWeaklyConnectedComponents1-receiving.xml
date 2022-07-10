@@ -1,0 +1,8 @@
+<org.gephi.statistics.plugin.ConnectedComponents>
+  <count>0</count>
+  <isDirected>true</isDirected>
+  <progress class="org.gephi.desktop.progress.ProgressTicketImpl"/>
+  <isCanceled>false</isCanceled>
+  <componentCount>0</componentCount>
+  <stronglyCount>0</stronglyCount>
+</org.gephi.statistics.plugin.ConnectedComponents>

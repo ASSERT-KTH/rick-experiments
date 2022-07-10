@@ -1,0 +1,6 @@
+<org.gephi.statistics.plugin.Hits>
+  <isCanceled>false</isCanceled>
+  <progress class="org.gephi.desktop.progress.ProgressTicketImpl"/>
+  <useUndirected>false</useUndirected>
+  <epsilon>1.0E-4</epsilon>
+</org.gephi.statistics.plugin.Hits>

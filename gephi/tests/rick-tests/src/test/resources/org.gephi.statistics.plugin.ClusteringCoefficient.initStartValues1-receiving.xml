@@ -1,0 +1,9 @@
+<org.gephi.statistics.plugin.ClusteringCoefficient>
+  <avgClusteringCoeff>0.0</avgClusteringCoeff>
+  <isDirected>false</isDirected>
+  <isCanceled>false</isCanceled>
+  <progress class="org.gephi.desktop.progress.ProgressTicketImpl"/>
+  <K>0</K>
+  <N>0</N>
+  <totalTriangles>0</totalTriangles>
+</org.gephi.statistics.plugin.ClusteringCoefficient>

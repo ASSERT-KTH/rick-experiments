@@ -1,0 +1,115 @@
+<org.gephi.io.importer.impl.ImportContainerImpl>
+  <factory>
+    <container reference="../.."/>
+    <nextSequentialNodeId>
+      <value>0</value>
+    </nextSequentialNodeId>
+  </factory>
+  <parameters>
+    <selfLoops>true</selfLoops>
+    <parallelEdges>true</parallelEdges>
+    <autoNode>true</autoNode>
+    <autoScale>true</autoScale>
+    <sortNodesBySize>true</sortNodesBySize>
+    <fillLabelWithId>true</fillLabelWithId>
+    <edgesMergeStrategy>SUM</edgesMergeStrategy>
+    <mergeParallelEdgesAttributes>true</mergeParallelEdgesAttributes>
+    <duplicateWithLabels>false</duplicateWithLabels>
+  </parameters>
+  <nodeList class="it.unimi.dsi.fastutil.objects.ObjectArrayList" serialization="custom">
+    <unserializable-parents/>
+    <it.unimi.dsi.fastutil.objects.ObjectArrayList>
+      <default>
+        <size>0</size>
+        <wrapped>false</wrapped>
+      </default>
+    </it.unimi.dsi.fastutil.objects.ObjectArrayList>
+  </nodeList>
+  <edgeList class="it.unimi.dsi.fastutil.objects.ObjectArrayList" serialization="custom">
+    <unserializable-parents/>
+    <it.unimi.dsi.fastutil.objects.ObjectArrayList>
+      <default>
+        <size>0</size>
+        <wrapped>false</wrapped>
+      </default>
+    </it.unimi.dsi.fastutil.objects.ObjectArrayList>
+  </edgeList>
+  <nodeMap class="it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap" serialization="custom">
+    <it.unimi.dsi.fastutil.objects.AbstractObject2IntFunction>
+      <default>
+        <defRetValue>-1</defRetValue>
+      </default>
+    </it.unimi.dsi.fastutil.objects.AbstractObject2IntFunction>
+    <it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap>
+      <default>
+        <f>0.75</f>
+        <size>0</size>
+      </default>
+    </it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap>
+  </nodeMap>
+  <edgeMap class="it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap" serialization="custom">
+    <it.unimi.dsi.fastutil.objects.AbstractObject2IntFunction>
+      <default>
+        <defRetValue>-1</defRetValue>
+      </default>
+    </it.unimi.dsi.fastutil.objects.AbstractObject2IntFunction>
+    <it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap>
+      <default>
+        <f>0.75</f>
+        <size>0</size>
+      </default>
+    </it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap>
+  </edgeMap>
+  <edgeTypeMap class="it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap" serialization="custom">
+    <it.unimi.dsi.fastutil.objects.AbstractObject2IntFunction>
+      <default>
+        <defRetValue>0</defRetValue>
+      </default>
+    </it.unimi.dsi.fastutil.objects.AbstractObject2IntFunction>
+    <it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap>
+      <default>
+        <f>0.75</f>
+        <size>0</size>
+      </default>
+    </it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap>
+  </edgeTypeMap>
+  <nodeColumns class="it.unimi.dsi.fastutil.objects.Object2ObjectLinkedOpenHashMap" serialization="custom">
+    <it.unimi.dsi.fastutil.objects.Object2ObjectLinkedOpenHashMap>
+      <default>
+        <f>0.75</f>
+        <size>0</size>
+      </default>
+    </it.unimi.dsi.fastutil.objects.Object2ObjectLinkedOpenHashMap>
+  </nodeColumns>
+  <edgeColumns class="it.unimi.dsi.fastutil.objects.Object2ObjectLinkedOpenHashMap" serialization="custom">
+    <it.unimi.dsi.fastutil.objects.Object2ObjectLinkedOpenHashMap>
+      <default>
+        <f>0.75</f>
+        <size>0</size>
+      </default>
+    </it.unimi.dsi.fastutil.objects.Object2ObjectLinkedOpenHashMap>
+  </edgeColumns>
+  <edgeTypeSets/>
+  <edgeDefault>MIXED</edgeDefault>
+  <elementIdType>STRING</elementIdType>
+  <dynamicGraph>false</dynamicGraph>
+  <dynamicAttributes>false</dynamicAttributes>
+  <report>
+    <file>/tmp/tempreport12267530498572518882187405884618885</file>
+    <exceptionLevel>CRITICAL</exceptionLevel>
+    <empty>true</empty>
+  </report>
+  <directedEdgesCount>0</directedEdgesCount>
+  <undirectedEdgesCount>0</undirectedEdgesCount>
+  <selfLoops>0</selfLoops>
+  <mutualEdgesCount>0</mutualEdgesCount>
+  <timeFormat>DOUBLE</timeFormat>
+  <timeRepresentation>INTERVAL</timeRepresentation>
+  <timeZone class="org.joda.time.tz.CachedDateTimeZone" resolves-to="org.joda.time.DateTimeZone$Stub" serialization="custom">
+    <org.joda.time.DateTimeZone_-Stub>
+      <string>Europe/Stockholm</string>
+    </org.joda.time.DateTimeZone_-Stub>
+  </timeZone>
+  <reportedUnknownNode>false</reportedUnknownNode>
+  <reportedParallelEdges>false</reportedParallelEdges>
+</org.gephi.io.importer.impl.ImportContainerImpl>

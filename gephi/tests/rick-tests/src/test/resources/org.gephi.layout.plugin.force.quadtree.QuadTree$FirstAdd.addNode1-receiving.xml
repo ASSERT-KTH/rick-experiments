@@ -1,0 +1,13 @@
+<org.gephi.layout.plugin.force.quadtree.QuadTree_-FirstAdd>
+  <outer-class>
+    <posX>-462.42426</posX>
+    <posY>-472.06363</posY>
+    <size>959.4863</size>
+    <maxLevel>10</maxLevel>
+    <centerMassX>0.0</centerMassX>
+    <centerMassY>0.0</centerMassY>
+    <mass>0</mass>
+    <add class="org.gephi.layout.plugin.force.quadtree.QuadTree$FirstAdd" reference="../.."/>
+    <isLeaf>true</isLeaf>
+  </outer-class>
+</org.gephi.layout.plugin.force.quadtree.QuadTree_-FirstAdd>

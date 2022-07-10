@@ -1,0 +1,10 @@
+<org.gephi.statistics.plugin.Modularity>
+  <progress class="org.gephi.desktop.progress.ProgressTicketImpl"/>
+  <isCanceled>false</isCanceled>
+  <modularity>0.0</modularity>
+  <modularityResolution>0.0</modularityResolution>
+  <isRandomized>true</isRandomized>
+  <useWeight>true</useWeight>
+  <resolution>1.0</resolution>
+  <initialModularityClassIndex>0</initialModularityClassIndex>
+</org.gephi.statistics.plugin.Modularity>

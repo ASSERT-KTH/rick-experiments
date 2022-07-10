@@ -1,0 +1,8 @@
+<org.gephi.statistics.plugin.PageRank>
+  <progress class="org.gephi.desktop.progress.ProgressTicketImpl"/>
+  <isCanceled>false</isCanceled>
+  <epsilon>0.001</epsilon>
+  <probability>0.85</probability>
+  <useEdgeWeight>false</useEdgeWeight>
+  <isDirected>true</isDirected>
+</org.gephi.statistics.plugin.PageRank>

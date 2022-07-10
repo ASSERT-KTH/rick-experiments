@@ -1,0 +1,6 @@
+<org.gephi.statistics.plugin.StatisticalInferenceClustering>
+  <useWeight>false</useWeight>
+  <isCanceled>false</isCanceled>
+  <progress class="org.gephi.desktop.progress.ProgressTicketImpl"/>
+  <descriptionLength>0.0</descriptionLength>
+</org.gephi.statistics.plugin.StatisticalInferenceClustering>

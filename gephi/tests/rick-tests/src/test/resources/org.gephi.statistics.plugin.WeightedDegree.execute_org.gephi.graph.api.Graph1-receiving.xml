@@ -1,0 +1,6 @@
+<org.gephi.statistics.plugin.WeightedDegree>
+  <isDirected>false</isDirected>
+  <isCanceled>false</isCanceled>
+  <progress class="org.gephi.desktop.progress.ProgressTicketImpl"/>
+  <avgWDegree>0.0</avgWDegree>
+</org.gephi.statistics.plugin.WeightedDegree>

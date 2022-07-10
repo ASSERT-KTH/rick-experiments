@@ -1,0 +1,10 @@
+<object-array>
+  <org.gephi.workspace.impl.WorkspaceImpl>
+    <id>1</id>
+    <project>
+      <workspaceIds>
+        <value>2</value>
+      </workspaceIds>
+    </project>
+  </org.gephi.workspace.impl.WorkspaceImpl>
+</object-array>

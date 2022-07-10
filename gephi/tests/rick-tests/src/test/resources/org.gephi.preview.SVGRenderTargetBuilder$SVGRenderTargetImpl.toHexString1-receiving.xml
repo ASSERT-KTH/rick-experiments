@@ -1,0 +1,2680 @@
+<org.gephi.preview.SVGRenderTargetBuilder_-SVGRenderTargetImpl>
+  <cancel>false</cancel>
+  <progressTicket class="org.gephi.desktop.progress.ProgressTicketImpl"/>
+  <document class="org.apache.batik.anim.dom.SVGOMDocument" serialization="custom">
+    <org.apache.batik.dom.AbstractParentNode>
+      <default>
+        <childNodes>
+          <firstChild class="org.apache.batik.dom.GenericDocumentType">
+            <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../.."/>
+            <parentNode class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../.."/>
+            <nextSibling class="org.apache.batik.anim.dom.SVGOMSVGElement">
+              <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../.."/>
+              <parentNode class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../.."/>
+              <previousSibling class="org.apache.batik.dom.GenericDocumentType" reference="../.."/>
+              <attributes class="org.apache.batik.anim.dom.AbstractElement$ExtendedNamedNodeHashMap">
+                <table>
+                  <org.apache.batik.dom.AbstractElement_-Entry>
+                    <hash>419628030</hash>
+                    <name>contentScriptType</name>
+                    <value class="org.apache.batik.dom.GenericAttr">
+                      <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../.."/>
+                      <childNodes>
+                        <firstChild class="org.apache.batik.dom.GenericText">
+                          <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../../../.."/>
+                          <parentNode class="org.apache.batik.dom.GenericAttr" reference="../../.."/>
+                          <nodeValue>text/ecmascript</nodeValue>
+                          <readonly>false</readonly>
+                        </firstChild>
+                        <lastChild class="org.apache.batik.dom.GenericText" reference="../firstChild"/>
+                        <children>1</children>
+                        <elementChildren>0</elementChildren>
+                        <outer-class class="org.apache.batik.dom.GenericAttr" reference="../.."/>
+                      </childNodes>
+                      <nodeName>contentScriptType</nodeName>
+                      <unspecified>true</unspecified>
+                      <isIdAttr>false</isIdAttr>
+                      <ownerElement class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../.."/>
+                      <readonly>false</readonly>
+                    </value>
+                  </org.apache.batik.dom.AbstractElement_-Entry>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <org.apache.batik.dom.AbstractElement_-Entry>
+                    <hash>113126854</hash>
+                    <name>width</name>
+                    <value class="org.apache.batik.dom.GenericAttr">
+                      <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../.."/>
+                      <childNodes>
+                        <firstChild class="org.apache.batik.dom.GenericText">
+                          <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../../../.."/>
+                          <parentNode class="org.apache.batik.dom.GenericAttr" reference="../../.."/>
+                          <nodeValue>11879.973</nodeValue>
+                          <readonly>false</readonly>
+                        </firstChild>
+                        <lastChild class="org.apache.batik.dom.GenericText" reference="../firstChild"/>
+                        <children>1</children>
+                        <elementChildren>0</elementChildren>
+                        <outer-class class="org.apache.batik.dom.GenericAttr" reference="../.."/>
+                      </childNodes>
+                      <nodeName>width</nodeName>
+                      <unspecified>false</unspecified>
+                      <isIdAttr>false</isIdAttr>
+                      <ownerElement class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../.."/>
+                      <readonly>false</readonly>
+                    </value>
+                    <next>
+                      <hash>663498274</hash>
+                      <namespaceURI>http://www.w3.org/2000/xmlns/</namespaceURI>
+                      <name>xlink</name>
+                      <value class="org.apache.batik.dom.GenericAttrNS">
+                        <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../../.."/>
+                        <childNodes>
+                          <firstChild class="org.apache.batik.dom.GenericText">
+                            <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../../../../.."/>
+                            <parentNode class="org.apache.batik.dom.GenericAttrNS" reference="../../.."/>
+                            <nodeValue>http://www.w3.org/1999/xlink</nodeValue>
+                            <readonly>false</readonly>
+                          </firstChild>
+                          <lastChild class="org.apache.batik.dom.GenericText" reference="../firstChild"/>
+                          <children>1</children>
+                          <elementChildren>0</elementChildren>
+                          <outer-class class="org.apache.batik.dom.GenericAttrNS" reference="../.."/>
+                        </childNodes>
+                        <nodeName>xmlns:xlink</nodeName>
+                        <unspecified>true</unspecified>
+                        <isIdAttr>false</isIdAttr>
+                        <ownerElement class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../../.."/>
+                        <namespaceURI>http://www.w3.org/2000/xmlns/</namespaceURI>
+                        <readonly>false</readonly>
+                      </value>
+                    </next>
+                  </org.apache.batik.dom.AbstractElement_-Entry>
+                  <org.apache.batik.dom.AbstractElement_-Entry>
+                    <hash>981303545</hash>
+                    <name>zoomAndPan</name>
+                    <value class="org.apache.batik.dom.GenericAttr">
+                      <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../.."/>
+                      <childNodes>
+                        <firstChild class="org.apache.batik.dom.GenericText">
+                          <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../../../.."/>
+                          <parentNode class="org.apache.batik.dom.GenericAttr" reference="../../.."/>
+                          <nodeValue>magnify</nodeValue>
+                          <readonly>false</readonly>
+                        </firstChild>
+                        <lastChild class="org.apache.batik.dom.GenericText" reference="../firstChild"/>
+                        <children>1</children>
+                        <elementChildren>0</elementChildren>
+                        <outer-class class="org.apache.batik.dom.GenericAttr" reference="../.."/>
+                      </childNodes>
+                      <nodeName>zoomAndPan</nodeName>
+                      <unspecified>true</unspecified>
+                      <isIdAttr>false</isIdAttr>
+                      <ownerElement class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../.."/>
+                      <readonly>false</readonly>
+                    </value>
+                  </org.apache.batik.dom.AbstractElement_-Entry>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <org.apache.batik.dom.AbstractElement_-Entry>
+                    <hash>1776731154</hash>
+                    <name>contentStyleType</name>
+                    <value class="org.apache.batik.dom.GenericAttr">
+                      <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../.."/>
+                      <childNodes>
+                        <firstChild class="org.apache.batik.dom.GenericText">
+                          <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../../../.."/>
+                          <parentNode class="org.apache.batik.dom.GenericAttr" reference="../../.."/>
+                          <nodeValue>text/css</nodeValue>
+                          <readonly>false</readonly>
+                        </firstChild>
+                        <lastChild class="org.apache.batik.dom.GenericText" reference="../firstChild"/>
+                        <children>1</children>
+                        <elementChildren>0</elementChildren>
+                        <outer-class class="org.apache.batik.dom.GenericAttr" reference="../.."/>
+                      </childNodes>
+                      <nodeName>contentStyleType</nodeName>
+                      <unspecified>true</unspecified>
+                      <isIdAttr>false</isIdAttr>
+                      <ownerElement class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../.."/>
+                      <readonly>false</readonly>
+                    </value>
+                  </org.apache.batik.dom.AbstractElement_-Entry>
+                  <org.apache.batik.dom.AbstractElement_-Entry>
+                    <hash>454200550</hash>
+                    <name>viewBox</name>
+                    <value class="org.apache.batik.dom.GenericAttr">
+                      <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../.."/>
+                      <childNodes>
+                        <firstChild class="org.apache.batik.dom.GenericText">
+                          <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../../../.."/>
+                          <parentNode class="org.apache.batik.dom.GenericAttr" reference="../../.."/>
+                          <nodeValue>-4759.000000 -5052.954590 11879.972656 11354.468750</nodeValue>
+                          <readonly>false</readonly>
+                        </firstChild>
+                        <lastChild class="org.apache.batik.dom.GenericText" reference="../firstChild"/>
+                        <children>1</children>
+                        <elementChildren>0</elementChildren>
+                        <outer-class class="org.apache.batik.dom.GenericAttr" reference="../.."/>
+                      </childNodes>
+                      <nodeName>viewBox</nodeName>
+                      <unspecified>false</unspecified>
+                      <isIdAttr>false</isIdAttr>
+                      <ownerElement class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../.."/>
+                      <readonly>false</readonly>
+                    </value>
+                    <next>
+                      <hash>926454055</hash>
+                      <name>height</name>
+                      <value class="org.apache.batik.dom.GenericAttr">
+                        <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../../.."/>
+                        <childNodes>
+                          <firstChild class="org.apache.batik.dom.GenericText">
+                            <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../../../../.."/>
+                            <parentNode class="org.apache.batik.dom.GenericAttr" reference="../../.."/>
+                            <nodeValue>11354.469</nodeValue>
+                            <readonly>false</readonly>
+                          </firstChild>
+                          <lastChild class="org.apache.batik.dom.GenericText" reference="../firstChild"/>
+                          <children>1</children>
+                          <elementChildren>0</elementChildren>
+                          <outer-class class="org.apache.batik.dom.GenericAttr" reference="../.."/>
+                        </childNodes>
+                        <nodeName>height</nodeName>
+                        <unspecified>false</unspecified>
+                        <isIdAttr>false</isIdAttr>
+                        <ownerElement class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../../.."/>
+                        <readonly>false</readonly>
+                      </value>
+                    </next>
+                  </org.apache.batik.dom.AbstractElement_-Entry>
+                  <org.apache.batik.dom.AbstractElement_-Entry>
+                    <hash>1365218471</hash>
+                    <name>preserveAspectRatio</name>
+                    <value class="org.apache.batik.dom.GenericAttr">
+                      <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../.."/>
+                      <childNodes>
+                        <firstChild class="org.apache.batik.dom.GenericText">
+                          <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../../../.."/>
+                          <parentNode class="org.apache.batik.dom.GenericAttr" reference="../../.."/>
+                          <nodeValue>xMidYMid meet</nodeValue>
+                          <readonly>false</readonly>
+                        </firstChild>
+                        <lastChild class="org.apache.batik.dom.GenericText" reference="../firstChild"/>
+                        <children>1</children>
+                        <elementChildren>0</elementChildren>
+                        <outer-class class="org.apache.batik.dom.GenericAttr" reference="../.."/>
+                      </childNodes>
+                      <nodeName>preserveAspectRatio</nodeName>
+                      <unspecified>true</unspecified>
+                      <isIdAttr>false</isIdAttr>
+                      <ownerElement class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../.."/>
+                      <readonly>false</readonly>
+                    </value>
+                  </org.apache.batik.dom.AbstractElement_-Entry>
+                  <org.apache.batik.dom.AbstractElement_-Entry>
+                    <hash>663727692</hash>
+                    <namespaceURI>http://www.w3.org/2000/xmlns/</namespaceURI>
+                    <name>xmlns</name>
+                    <value class="org.apache.batik.dom.GenericAttrNS">
+                      <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../.."/>
+                      <childNodes>
+                        <firstChild class="org.apache.batik.dom.GenericText">
+                          <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../../../.."/>
+                          <parentNode class="org.apache.batik.dom.GenericAttrNS" reference="../../.."/>
+                          <nodeValue>http://www.w3.org/2000/svg</nodeValue>
+                          <readonly>false</readonly>
+                        </firstChild>
+                        <lastChild class="org.apache.batik.dom.GenericText" reference="../firstChild"/>
+                        <children>1</children>
+                        <elementChildren>0</elementChildren>
+                        <outer-class class="org.apache.batik.dom.GenericAttrNS" reference="../.."/>
+                      </childNodes>
+                      <nodeName>xmlns</nodeName>
+                      <unspecified>true</unspecified>
+                      <isIdAttr>false</isIdAttr>
+                      <ownerElement class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../.."/>
+                      <namespaceURI>http://www.w3.org/2000/xmlns/</namespaceURI>
+                      <readonly>false</readonly>
+                    </value>
+                  </org.apache.batik.dom.AbstractElement_-Entry>
+                  <null/>
+                  <org.apache.batik.dom.AbstractElement_-Entry>
+                    <hash>351608024</hash>
+                    <name>version</name>
+                    <value class="org.apache.batik.dom.GenericAttr">
+                      <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../.."/>
+                      <childNodes>
+                        <firstChild class="org.apache.batik.dom.GenericText">
+                          <ownerDocument class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../../../.."/>
+                          <parentNode class="org.apache.batik.dom.GenericAttr" reference="../../.."/>
+                          <nodeValue>1.1</nodeValue>
+                          <readonly>false</readonly>
+                        </firstChild>
+                        <lastChild class="org.apache.batik.dom.GenericText" reference="../firstChild"/>
+                        <children>1</children>
+                        <elementChildren>0</elementChildren>
+                        <outer-class class="org.apache.batik.dom.GenericAttr" reference="../.."/>
+                      </childNodes>
+                      <nodeName>version</nodeName>
+                      <unspecified>false</unspecified>
+                      <isIdAttr>false</isIdAttr>
+                      <ownerElement class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../.."/>
+                      <readonly>false</readonly>
+                    </value>
+                  </org.apache.batik.dom.AbstractElement_-Entry>
+                </table>
+                <count>10</count>
+                <outer-class class="org.apache.batik.anim.dom.SVGOMSVGElement" defined-in="org.apache.batik.dom.AbstractElement$NamedNodeHashMap" reference="../.."/>
+                <outer-class class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../.."/>
+              </attributes>
+              <computedStyleMap>
+                <values>
+                  <null/>
+                  <null/>
+                  <org.apache.batik.css.engine.value.StringValue>
+                    <value>auto</value>
+                    <unitType>21</unitType>
+                  </org.apache.batik.css.engine.value.StringValue>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <org.apache.batik.css.engine.value.StringValue reference="../org.apache.batik.css.engine.value.StringValue"/>
+                  <null/>
+                  <null/>
+                  <org.apache.batik.css.engine.value.StringValue>
+                    <value>inline</value>
+                    <unitType>21</unitType>
+                  </org.apache.batik.css.engine.value.StringValue>
+                  <null/>
+                  <org.apache.batik.css.engine.value.StringValue>
+                    <value>accumulate</value>
+                    <unitType>21</unitType>
+                  </org.apache.batik.css.engine.value.StringValue>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <org.apache.batik.css.engine.value.StringValue>
+                    <value>none</value>
+                    <unitType>21</unitType>
+                  </org.apache.batik.css.engine.value.StringValue>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <org.apache.batik.css.engine.value.StringValue reference="../org.apache.batik.css.engine.value.StringValue[5]"/>
+                  <org.apache.batik.css.engine.value.FloatValue>
+                    <floatValue>1.0</floatValue>
+                    <unitType>1</unitType>
+                  </org.apache.batik.css.engine.value.FloatValue>
+                  <org.apache.batik.css.engine.value.StringValue>
+                    <value>hidden</value>
+                    <unitType>21</unitType>
+                  </org.apache.batik.css.engine.value.StringValue>
+                  <org.apache.batik.css.engine.value.StringValue>
+                    <value>visiblepainted</value>
+                    <unitType>21</unitType>
+                  </org.apache.batik.css.engine.value.StringValue>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <null/>
+                  <org.apache.batik.css.engine.value.StringValue>
+                    <value>visible</value>
+                    <unitType>21</unitType>
+                  </org.apache.batik.css.engine.value.StringValue>
+                  <null/>
+                  <null/>
+                </values>
+                <masks>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>6</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>6</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>6</short>
+                  <short>0</short>
+                  <short>6</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>6</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>6</short>
+                  <short>6</short>
+                  <short>2</short>
+                  <short>6</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>0</short>
+                  <short>6</short>
+                  <short>0</short>
+                  <short>0</short>
+                </masks>
+                <fixedCascadedValues>false</fixedCascadedValues>
+              </computedStyleMap>
+              <overrideStyleDeclaration>
+                <valueProvider class="org.apache.batik.anim.dom.SVGStylableElement$OverrideStyleDeclaration" reference=".."/>
+                <handler class="org.apache.batik.anim.dom.SVGStylableElement$OverrideStyleDeclaration" reference=".."/>
+                <cssEngine class="org.apache.batik.css.engine.SVGCSSEngine">
+                  <userAgent class="org.apache.batik.bridge.BridgeContext$CSSEngineUserAgentWrapper">
+                    <ua class="org.apache.batik.bridge.UserAgentAdapter">
+                      <FEATURES/>
+                      <extensions/>
+                    </ua>
+                  </userAgent>
+                  <cssContext class="org.apache.batik.bridge.BridgeContext">
+                    <document class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../.."/>
+                    <isSVG12>false</isSVG12>
+                    <gvtBuilder/>
+                    <interpreterMap/>
+                    <viewportMap class="java.util.WeakHashMap">
+                      <table>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <java.util.WeakHashMap_-Entry>
+                          <referent class="org.apache.batik.bridge.UserAgentAdapter" reference="../../../../../userAgent/ua"/>
+                          <queue>
+                            <lock/>
+                            <queueLength>0</queueLength>
+                          </queue>
+                          <value class="org.apache.batik.bridge.UserAgentViewport">
+                            <userAgent class="org.apache.batik.bridge.UserAgentAdapter" reference="../../../../../../userAgent/ua"/>
+                          </value>
+                          <hash>1153742119</hash>
+                        </java.util.WeakHashMap_-Entry>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <java.util.WeakHashMap_-Entry>
+                          <referent class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../../../.."/>
+                          <queue reference="../../java.util.WeakHashMap_-Entry/queue"/>
+                          <value class="org.apache.batik.bridge.SVGSVGElementBridge$SVGSVGElementViewport">
+                            <width>11879.973</width>
+                            <height>11354.469</height>
+                          </value>
+                          <hash>228301839</hash>
+                        </java.util.WeakHashMap_-Entry>
+                      </table>
+                      <size>2</size>
+                      <threshold>12</threshold>
+                      <loadFactor>0.75</loadFactor>
+                      <queue reference="../table/java.util.WeakHashMap_-Entry/queue"/>
+                      <modCount>6</modCount>
+                    </viewportMap>
+                    <userAgent class="org.apache.batik.bridge.UserAgentAdapter" reference="../../userAgent/ua"/>
+                    <elementNodeMap class="java.util.WeakHashMap">
+                      <table>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <java.util.WeakHashMap_-Entry>
+                          <referent class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../../../.."/>
+                          <queue>
+                            <lock/>
+                            <queueLength>0</queueLength>
+                          </queue>
+                          <value class="java.lang.ref.SoftReference">
+                            <referent class="org.apache.batik.gvt.RootGraphicsNode">
+                              <isVisible>true</isVisible>
+                              <pointerEventType>0</pointerEventType>
+                              <changeStartedEvent>
+                                <consumed>false</consumed>
+                                <id>9800</id>
+                              </changeStartedEvent>
+                              <changeCompletedEvent>
+                                <consumed>false</consumed>
+                                <id>9801</id>
+                              </changeCompletedEvent>
+                              <children>
+                                <org.apache.batik.gvt.CanvasGraphicsNode>
+                                  <transform serialization="custom">
+                                    <java.awt.geom.AffineTransform>
+                                      <default>
+                                        <m00>1.0</m00>
+                                        <m01>0.0</m01>
+                                        <m02>4759.0</m02>
+                                        <m10>0.0</m10>
+                                        <m11>1.0</m11>
+                                        <m12>5052.95458984375</m12>
+                                      </default>
+                                    </java.awt.geom.AffineTransform>
+                                  </transform>
+                                  <inverseTransform serialization="custom">
+                                    <java.awt.geom.AffineTransform>
+                                      <default>
+                                        <m00>1.0</m00>
+                                        <m01>0.0</m01>
+                                        <m02>-4759.0</m02>
+                                        <m10>0.0</m10>
+                                        <m11>1.0</m11>
+                                        <m12>-5052.95458984375</m12>
+                                      </default>
+                                    </java.awt.geom.AffineTransform>
+                                  </inverseTransform>
+                                  <composite class="java.awt.AlphaComposite">
+                                    <extraAlpha>1.0</extraAlpha>
+                                    <rule>3</rule>
+                                  </composite>
+                                  <isVisible>true</isVisible>
+                                  <clip class="org.apache.batik.ext.awt.image.renderable.ClipRable8Bit">
+                                    <srcs>
+                                      <org.apache.batik.gvt.filter.GraphicsNodeRable8Bit>
+                                        <srcs/>
+                                        <props/>
+                                        <stamp>0</stamp>
+                                        <usePrimitivePaint>true</usePrimitivePaint>
+                                        <node class="org.apache.batik.gvt.CanvasGraphicsNode" reference="../../../.."/>
+                                      </org.apache.batik.gvt.filter.GraphicsNodeRable8Bit>
+                                    </srcs>
+                                    <props/>
+                                    <stamp>3</stamp>
+                                    <useAA>false</useAA>
+                                    <clipPath class="java.awt.geom.Path2D$Double" serialization="custom">
+                                      <unserializable-parents/>
+                                      <java.awt.geom.Path2D_-Double>
+                                        <default/>
+                                        <byte>49</byte>
+                                        <int>6</int>
+                                        <int>10</int>
+                                        <byte>1</byte>
+                                        <byte>80</byte>
+                                        <double>-4759.0</double>
+                                        <double>-5052.95458984375</double>
+                                        <byte>81</byte>
+                                        <double>7120.97265625</double>
+                                        <double>-5052.95458984375</double>
+                                        <byte>81</byte>
+                                        <double>7120.97265625</double>
+                                        <double>6301.51416015625</double>
+                                        <byte>81</byte>
+                                        <double>-4759.0</double>
+                                        <double>6301.51416015625</double>
+                                        <byte>81</byte>
+                                        <double>-4759.0</double>
+                                        <double>-5052.95458984375</double>
+                                        <byte>96</byte>
+                                        <byte>97</byte>
+                                      </java.awt.geom.Path2D_-Double>
+                                    </clipPath>
+                                  </clip>
+                                  <parent class="org.apache.batik.gvt.RootGraphicsNode" reference="../../.."/>
+                                  <root reference="../../.."/>
+                                  <pointerEventType>0</pointerEventType>
+                                  <graphicsNodeRable>
+                                    <referent class="org.apache.batik.gvt.filter.GraphicsNodeRable8Bit" reference="../../clip/srcs/org.apache.batik.gvt.filter.GraphicsNodeRable8Bit"/>
+                                    <queue class="java.lang.ref.ReferenceQueue$Null">
+                                      <lock/>
+                                      <queueLength>0</queueLength>
+                                    </queue>
+                                  </graphicsNodeRable>
+                                  <changeStartedEvent>
+                                    <consumed>false</consumed>
+                                    <id>9800</id>
+                                  </changeStartedEvent>
+                                  <changeCompletedEvent>
+                                    <consumed>false</consumed>
+                                    <id>9801</id>
+                                  </changeCompletedEvent>
+                                  <count>0</count>
+                                  <modCount>0</modCount>
+                                  <viewingTransform serialization="custom">
+                                    <java.awt.geom.AffineTransform>
+                                      <default>
+                                        <m00>1.0</m00>
+                                        <m01>0.0</m01>
+                                        <m02>4759.0</m02>
+                                        <m10>0.0</m10>
+                                        <m11>1.0</m11>
+                                        <m12>5052.95458984375</m12>
+                                      </default>
+                                    </java.awt.geom.AffineTransform>
+                                  </viewingTransform>
+                                </org.apache.batik.gvt.CanvasGraphicsNode>
+                                <null/>
+                                <null/>
+                                <null/>
+                              </children>
+                              <count>1</count>
+                              <modCount>5</modCount>
+                              <treeGraphicsNodeChangeListeners class="linked-list"/>
+                            </referent>
+                            <queue class="java.lang.ref.ReferenceQueue$Null" reference="../referent/children/org.apache.batik.gvt.CanvasGraphicsNode/graphicsNodeRable/queue"/>
+                            <timestamp>192619597</timestamp>
+                          </value>
+                          <hash>1764118741</hash>
+                        </java.util.WeakHashMap_-Entry>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <java.util.WeakHashMap_-Entry>
+                          <referent class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../../../.."/>
+                          <queue reference="../../java.util.WeakHashMap_-Entry/queue"/>
+                          <value class="java.lang.ref.SoftReference">
+                            <referent class="org.apache.batik.gvt.CanvasGraphicsNode" reference="../../../java.util.WeakHashMap_-Entry/value/referent/children/org.apache.batik.gvt.CanvasGraphicsNode"/>
+                            <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../java.util.WeakHashMap_-Entry/value/referent/children/org.apache.batik.gvt.CanvasGraphicsNode/graphicsNodeRable/queue"/>
+                            <timestamp>192619597</timestamp>
+                          </value>
+                          <hash>228301839</hash>
+                        </java.util.WeakHashMap_-Entry>
+                      </table>
+                      <size>2</size>
+                      <threshold>12</threshold>
+                      <loadFactor>0.75</loadFactor>
+                      <queue reference="../table/java.util.WeakHashMap_-Entry/queue"/>
+                      <modCount>6</modCount>
+                    </elementNodeMap>
+                    <nodeElementMap class="java.util.WeakHashMap">
+                      <table>
+                        <java.util.WeakHashMap_-Entry>
+                          <referent class="org.apache.batik.gvt.CanvasGraphicsNode" reference="../../../../elementNodeMap/table/java.util.WeakHashMap_-Entry/value/referent/children/org.apache.batik.gvt.CanvasGraphicsNode"/>
+                          <queue>
+                            <lock/>
+                            <queueLength>0</queueLength>
+                          </queue>
+                          <value class="java.lang.ref.SoftReference">
+                            <referent class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../../../../.."/>
+                            <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../elementNodeMap/table/java.util.WeakHashMap_-Entry/value/referent/children/org.apache.batik.gvt.CanvasGraphicsNode/graphicsNodeRable/queue"/>
+                            <timestamp>192619597</timestamp>
+                          </value>
+                          <hash>1445482384</hash>
+                        </java.util.WeakHashMap_-Entry>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <null/>
+                        <java.util.WeakHashMap_-Entry>
+                          <referent class="org.apache.batik.gvt.RootGraphicsNode" reference="../../../../elementNodeMap/table/java.util.WeakHashMap_-Entry/value/referent"/>
+                          <queue reference="../../java.util.WeakHashMap_-Entry/queue"/>
+                          <value class="java.lang.ref.SoftReference">
+                            <referent class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../../../../.."/>
+                            <queue class="java.lang.ref.ReferenceQueue$Null" reference="../../../../../elementNodeMap/table/java.util.WeakHashMap_-Entry/value/referent/children/org.apache.batik.gvt.CanvasGraphicsNode/graphicsNodeRable/queue"/>
+                            <timestamp>192619597</timestamp>
+                          </value>
+                          <hash>376129663</hash>
+                        </java.util.WeakHashMap_-Entry>
+                      </table>
+                      <size>2</size>
+                      <threshold>12</threshold>
+                      <loadFactor>0.75</loadFactor>
+                      <queue reference="../table/java.util.WeakHashMap_-Entry/queue"/>
+                      <modCount>6</modCount>
+                    </nodeElementMap>
+                    <namespaceURIMap>
+                      <entry>
+                        <string>http://www.w3.org/2000/svg</string>
+                        <map>
+                          <entry>
+                            <string>altGlyph</string>
+                            <org.apache.batik.bridge.SVGAltGlyphElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>use</string>
+                            <org.apache.batik.bridge.SVGUseElementBridge>
+                              <isSVG12>false</isSVG12>
+                            </org.apache.batik.bridge.SVGUseElementBridge>
+                          </entry>
+                          <entry>
+                            <string>animate</string>
+                            <org.apache.batik.bridge.SVGAnimateElementBridge>
+                              <animationType>0</animationType>
+                            </org.apache.batik.bridge.SVGAnimateElementBridge>
+                          </entry>
+                          <entry>
+                            <string>feImage</string>
+                            <org.apache.batik.bridge.SVGFeImageElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>path</string>
+                            <org.apache.batik.bridge.SVGPathElementBridge>
+                              <isSVG12>false</isSVG12>
+                              <hasNewShapePainter>false</hasNewShapePainter>
+                            </org.apache.batik.bridge.SVGPathElementBridge>
+                          </entry>
+                          <entry>
+                            <string>feConvolveMatrix</string>
+                            <org.apache.batik.bridge.SVGFeConvolveMatrixElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>feComposite</string>
+                            <org.apache.batik.bridge.SVGFeCompositeElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>hkern</string>
+                            <org.apache.batik.bridge.SVGHKernElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>ellipse</string>
+                            <org.apache.batik.bridge.SVGEllipseElementBridge>
+                              <isSVG12>false</isSVG12>
+                              <hasNewShapePainter>false</hasNewShapePainter>
+                            </org.apache.batik.bridge.SVGEllipseElementBridge>
+                          </entry>
+                          <entry>
+                            <string>feOffset</string>
+                            <org.apache.batik.bridge.SVGFeOffsetElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>text</string>
+                            <org.apache.batik.bridge.SVGTextElementBridge>
+                              <isSVG12>false</isSVG12>
+                              <elemTPI>
+                                <table>
+                                  <null/>
+                                  <null/>
+                                  <null/>
+                                  <null/>
+                                  <null/>
+                                  <null/>
+                                  <null/>
+                                  <null/>
+                                  <null/>
+                                  <null/>
+                                  <null/>
+                                  <null/>
+                                  <null/>
+                                  <null/>
+                                  <null/>
+                                  <null/>
+                                </table>
+                                <size>0</size>
+                                <threshold>12</threshold>
+                                <loadFactor>0.75</loadFactor>
+                                <queue>
+                                  <lock/>
+                                  <queueLength>0</queueLength>
+                                </queue>
+                                <modCount>0</modCount>
+                              </elemTPI>
+                              <usingComplexSVGFont>false</usingComplexSVGFont>
+                              <hasNewACI>false</hasNewACI>
+                              <endLimit>0</endLimit>
+                            </org.apache.batik.bridge.SVGTextElementBridge>
+                          </entry>
+                          <entry>
+                            <string>color-profile</string>
+                            <org.apache.batik.bridge.SVGColorProfileElementBridge>
+                              <cache>
+                                <map/>
+                                <synchronous>true</synchronous>
+                              </cache>
+                            </org.apache.batik.bridge.SVGColorProfileElementBridge>
+                          </entry>
+                          <entry>
+                            <string>feTurbulence</string>
+                            <org.apache.batik.bridge.SVGFeTurbulenceElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>image</string>
+                            <org.apache.batik.bridge.SVGImageElementBridge>
+                              <isSVG12>false</isSVG12>
+                              <hitCheckChildren>false</hitCheckChildren>
+                            </org.apache.batik.bridge.SVGImageElementBridge>
+                          </entry>
+                          <entry>
+                            <string>feFuncG</string>
+                            <org.apache.batik.bridge.SVGFeComponentTransferElementBridge_-SVGFeFuncGElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>clipPath</string>
+                            <org.apache.batik.bridge.SVGClipPathElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>linearGradient</string>
+                            <org.apache.batik.bridge.SVGLinearGradientElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>feFuncR</string>
+                            <org.apache.batik.bridge.SVGFeComponentTransferElementBridge_-SVGFeFuncRElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>feColorMatrix</string>
+                            <org.apache.batik.bridge.SVGFeColorMatrixElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>feComponentTransfer</string>
+                            <org.apache.batik.bridge.SVGFeComponentTransferElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>stop</string>
+                            <org.apache.batik.bridge.AbstractSVGGradientElementBridge_-SVGStopElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>marker</string>
+                            <org.apache.batik.bridge.SVGMarkerElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>feMorphology</string>
+                            <org.apache.batik.bridge.SVGFeMorphologyElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>feMerge</string>
+                            <org.apache.batik.bridge.SVGFeMergeElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>fePointLight</string>
+                            <org.apache.batik.bridge.AbstractSVGLightingElementBridge_-SVGFePointLightElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>feDiffuseLighting</string>
+                            <org.apache.batik.bridge.SVGFeDiffuseLightingElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>feBlend</string>
+                            <org.apache.batik.bridge.SVGFeBlendElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>animateColor</string>
+                            <org.apache.batik.bridge.SVGAnimateColorElementBridge>
+                              <animationType>0</animationType>
+                            </org.apache.batik.bridge.SVGAnimateColorElementBridge>
+                          </entry>
+                          <entry>
+                            <string>circle</string>
+                            <org.apache.batik.bridge.SVGCircleElementBridge>
+                              <isSVG12>false</isSVG12>
+                              <hasNewShapePainter>false</hasNewShapePainter>
+                            </org.apache.batik.bridge.SVGCircleElementBridge>
+                          </entry>
+                          <entry>
+                            <string>vkern</string>
+                            <org.apache.batik.bridge.SVGVKernElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>polyline</string>
+                            <org.apache.batik.bridge.SVGPolylineElementBridge>
+                              <isSVG12>false</isSVG12>
+                              <hasNewShapePainter>false</hasNewShapePainter>
+                            </org.apache.batik.bridge.SVGPolylineElementBridge>
+                          </entry>
+                          <entry>
+                            <string>desc</string>
+                            <org.apache.batik.bridge.SVGDescElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>feSpecularLighting</string>
+                            <org.apache.batik.bridge.SVGFeSpecularLightingElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>line</string>
+                            <org.apache.batik.bridge.SVGLineElementBridge>
+                              <isSVG12>false</isSVG12>
+                              <hasNewShapePainter>false</hasNewShapePainter>
+                            </org.apache.batik.bridge.SVGLineElementBridge>
+                          </entry>
+                          <entry>
+                            <string>feSpotLight</string>
+                            <org.apache.batik.bridge.AbstractSVGLightingElementBridge_-SVGFeSpotLightElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>feTile</string>
+                            <org.apache.batik.bridge.SVGFeTileElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>pattern</string>
+                            <org.apache.batik.bridge.SVGPatternElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>title</string>
+                            <org.apache.batik.bridge.SVGTitleElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>switch</string>
+                            <org.apache.batik.bridge.SVGSwitchElementBridge>
+                              <isSVG12>false</isSVG12>
+                            </org.apache.batik.bridge.SVGSwitchElementBridge>
+                          </entry>
+                          <entry>
+                            <string>rect</string>
+                            <org.apache.batik.bridge.SVGRectElementBridge>
+                              <isSVG12>false</isSVG12>
+                              <hasNewShapePainter>false</hasNewShapePainter>
+                            </org.apache.batik.bridge.SVGRectElementBridge>
+                          </entry>
+                          <entry>
+                            <string>feDisplacementMap</string>
+                            <org.apache.batik.bridge.SVGFeDisplacementMapElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>feFuncA</string>
+                            <org.apache.batik.bridge.SVGFeComponentTransferElementBridge_-SVGFeFuncAElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>feFuncB</string>
+                            <org.apache.batik.bridge.SVGFeComponentTransferElementBridge_-SVGFeFuncBElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>feMergeNode</string>
+                            <org.apache.batik.bridge.SVGFeMergeElementBridge_-SVGFeMergeNodeElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>textPath</string>
+                            <org.apache.batik.bridge.SVGTextPathElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>feFlood</string>
+                            <org.apache.batik.bridge.SVGFeFloodElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>mask</string>
+                            <org.apache.batik.bridge.SVGMaskElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>a</string>
+                            <org.apache.batik.bridge.SVGAElementBridge>
+                              <isSVG12>false</isSVG12>
+                            </org.apache.batik.bridge.SVGAElementBridge>
+                          </entry>
+                          <entry>
+                            <string>animateTransform</string>
+                            <org.apache.batik.bridge.SVGAnimateTransformElementBridge>
+                              <animationType>0</animationType>
+                            </org.apache.batik.bridge.SVGAnimateTransformElementBridge>
+                          </entry>
+                          <entry>
+                            <string>set</string>
+                            <org.apache.batik.bridge.SVGSetElementBridge>
+                              <animationType>0</animationType>
+                            </org.apache.batik.bridge.SVGSetElementBridge>
+                          </entry>
+                          <entry>
+                            <string>svg</string>
+                            <org.apache.batik.bridge.SVGSVGElementBridge>
+                              <isSVG12>false</isSVG12>
+                            </org.apache.batik.bridge.SVGSVGElementBridge>
+                          </entry>
+                          <entry>
+                            <string>g</string>
+                            <org.apache.batik.bridge.SVGGElementBridge>
+                              <isSVG12>false</isSVG12>
+                            </org.apache.batik.bridge.SVGGElementBridge>
+                          </entry>
+                          <entry>
+                            <string>animateMotion</string>
+                            <org.apache.batik.bridge.SVGAnimateMotionElementBridge>
+                              <animationType>0</animationType>
+                            </org.apache.batik.bridge.SVGAnimateMotionElementBridge>
+                          </entry>
+                          <entry>
+                            <string>feDistantLight</string>
+                            <org.apache.batik.bridge.AbstractSVGLightingElementBridge_-SVGFeDistantLightElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>font-face</string>
+                            <org.apache.batik.bridge.SVGFontFaceElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>radialGradient</string>
+                            <org.apache.batik.bridge.SVGRadialGradientElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>filter</string>
+                            <org.apache.batik.bridge.SVGFilterElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>glyph</string>
+                            <org.apache.batik.bridge.SVGGlyphElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>polygon</string>
+                            <org.apache.batik.bridge.SVGPolygonElementBridge>
+                              <isSVG12>false</isSVG12>
+                              <hasNewShapePainter>false</hasNewShapePainter>
+                            </org.apache.batik.bridge.SVGPolygonElementBridge>
+                          </entry>
+                          <entry>
+                            <string>feGaussianBlur</string>
+                            <org.apache.batik.bridge.SVGFeGaussianBlurElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>missing-glyph</string>
+                            <org.apache.batik.bridge.SVGMissingGlyphElementBridge/>
+                          </entry>
+                          <entry>
+                            <string>font</string>
+                            <org.apache.batik.bridge.SVGFontElementBridge/>
+                          </entry>
+                        </map>
+                      </entry>
+                    </namespaceURIMap>
+                    <interpreterPool>
+                      <factories>
+                        <entry>
+                          <string>text/javascript</string>
+                          <org.apache.batik.bridge.RhinoInterpreterFactory/>
+                        </entry>
+                        <entry>
+                          <string>text/ecmascript</string>
+                          <org.apache.batik.bridge.RhinoInterpreterFactory reference="../../entry/org.apache.batik.bridge.RhinoInterpreterFactory"/>
+                        </entry>
+                        <entry>
+                          <string>application/ecmascript</string>
+                          <org.apache.batik.bridge.RhinoInterpreterFactory reference="../../entry/org.apache.batik.bridge.RhinoInterpreterFactory"/>
+                        </entry>
+                        <entry>
+                          <string>application/javascript</string>
+                          <org.apache.batik.bridge.RhinoInterpreterFactory reference="../../entry/org.apache.batik.bridge.RhinoInterpreterFactory"/>
+                        </entry>
+                      </factories>
+                    </interpreterPool>
+                    <documentLoader>
+                      <documentFactory class="org.apache.batik.anim.dom.SAXSVGDocumentFactory">
+                        <implementation class="org.apache.batik.anim.dom.SVGDOMImplementation">
+                          <localizableSupport>
+                            <localeGroup/>
+                            <bundleName>org.apache.batik.dom.resources.Messages</bundleName>
+                            <classLoader class="org.netbeans.StandardModule$OneModuleClassLoader"/>
+                            <resourceBundles/>
+                          </localizableSupport>
+                          <features>
+                            <entry>
+                              <string>css</string>
+                              <string>2.0</string>
+                            </entry>
+                            <entry>
+                              <string>svg</string>
+                              <string-array>
+                                <string>1.0</string>
+                                <string>1.1</string>
+                              </string-array>
+                            </entry>
+                            <entry>
+                              <string>textevents</string>
+                              <string>3.0</string>
+                            </entry>
+                            <entry>
+                              <string>mutationevents</string>
+                              <string-array>
+                                <string>2.0</string>
+                                <string>3.0</string>
+                              </string-array>
+                            </entry>
+                            <entry>
+                              <string>keyboardevents</string>
+                              <string>3.0</string>
+                            </entry>
+                            <entry>
+                              <string>svgevents</string>
+                              <string-array>
+                                <string>1.0</string>
+                                <string>1.1</string>
+                              </string-array>
+                            </entry>
+                            <entry>
+                              <string>core</string>
+                              <string-array>
+                                <string>2.0</string>
+                                <string>3.0</string>
+                              </string-array>
+                            </entry>
+                            <entry>
+                              <string>uievents</string>
+                              <string-array>
+                                <string>2.0</string>
+                                <string>3.0</string>
+                              </string-array>
+                            </entry>
+                            <entry>
+                              <string>xpath</string>
+                              <string>3.0</string>
+                            </entry>
+                            <entry>
+                              <string>mutationnameevents</string>
+                              <string>3.0</string>
+                            </entry>
+                            <entry>
+                              <string>stylesheets</string>
+                              <string>2.0</string>
+                            </entry>
+                            <entry>
+                              <string>xml</string>
+                              <string-array>
+                                <string>1.0</string>
+                                <string>2.0</string>
+                                <string>3.0</string>
+                              </string-array>
+                            </entry>
+                            <entry>
+                              <string>traversal</string>
+                              <string>2.0</string>
+                            </entry>
+                            <entry>
+                              <string>mouseevents</string>
+                              <string-array>
+                                <string>2.0</string>
+                                <string>3.0</string>
+                              </string-array>
+                            </entry>
+                            <entry>
+                              <string>events</string>
+                              <string-array>
+                                <string>2.0</string>
+                                <string>3.0</string>
+                              </string-array>
+                            </entry>
+                          </features>
+                          <factories>
+                            <entry>
+                              <string>symbol</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-SymbolElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>metadata</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-MetadataElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>altGlyph</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-AltGlyphElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>use</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-UseElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>altGlyphDef</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-AltGlyphDefElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>animate</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-AnimateElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feImage</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeImageElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>path</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-PathElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>view</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-ViewElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feConvolveMatrix</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeConvolveMatrixElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feComposite</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeCompositeElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>hkern</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-HkernElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>ellipse</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-EllipseElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feOffset</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeOffsetElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>text</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-TextElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>color-profile</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-ColorProfileElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>defs</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-DefsElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feTurbulence</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeTurbulenceElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>image</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-ImageElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feFuncG</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeFuncGElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>mpath</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-MpathElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>tspan</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-TspanElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>clipPath</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-ClipPathElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>linearGradient</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-LinearGradientElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feFuncR</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeFuncRElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>font-face-format</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FontFaceFormatElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>tref</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-TrefElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>script</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-ScriptElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feColorMatrix</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeColorMatrixElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feComponentTransfer</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeComponentTransferElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>stop</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-StopElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>marker</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-MarkerElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feMorphology</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeMorphologyElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feMerge</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeMergeElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>fePointLight</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FePointLightElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>foreignObject</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-ForeignObjectElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feDiffuseLighting</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeDiffuseLightingElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>style</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-StyleElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>animateColor</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-AnimateColorElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feBlend</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeBlendElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>circle</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-CircleElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>vkern</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-VkernElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>polyline</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-PolylineElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>desc</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-DescElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>cursor</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-CursorElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feSpecularLighting</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeSpecularLightingElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>line</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-LineElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feSpotLight</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeSpotLightElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feTile</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeTileElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>glyphRef</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-GlyphRefElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>pattern</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-PatternElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>title</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-TitleElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>font-face-name</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FontFaceNameElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>switch</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-SwitchElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>rect</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-RectElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feDisplacementMap</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeDisplacementMapElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feFuncA</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeFuncAElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feFuncB</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeFuncBElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feMergeNode</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeMergeNodeElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>textPath</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-TextPathElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feFlood</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeFloodElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>mask</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-MaskElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>a</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-AElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>animateTransform</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-AnimateTransformElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>font-face-uri</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FontFaceUriElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>set</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-SetElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>definition-src</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-DefinitionSrcElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>svg</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-SvgElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>animateMotion</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-AnimateMotionElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>g</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-GElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>font-face-src</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FontFaceSrcElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feDistantLight</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeDistantLightElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>font-face</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FontFaceElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>altGlyphItem</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-AltGlyphItemElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>radialGradient</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-RadialGradientElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>filter</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FilterElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>glyph</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-GlyphElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>polygon</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-PolygonElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>feGaussianBlur</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FeGaussianBlurElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>missing-glyph</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-MissingGlyphElementFactory/>
+                            </entry>
+                            <entry>
+                              <string>font</string>
+                              <org.apache.batik.anim.dom.SVGDOMImplementation_-FontElementFactory/>
+                            </entry>
+                          </factories>
+                        </implementation>
+                        <createDocumentDescriptor>true</createDocumentDescriptor>
+                        <stringBuffer/>
+                        <stringContent>false</stringContent>
+                        <inDTD>false</inDTD>
+                        <inCDATA>false</inCDATA>
+                        <inProlog>false</inProlog>
+                        <isValidating>false</isValidating>
+                        <isStandalone>false</isStandalone>
+                      </documentFactory>
+                      <cacheMap/>
+                      <userAgent class="org.apache.batik.bridge.UserAgentAdapter" reference="../../../userAgent/ua"/>
+                    </documentLoader>
+                    <documentSize class="org.apache.batik.bridge.SVGSVGElementBridge$1">
+                      <w>11879.97265625</w>
+                      <h>11354.46875</h>
+                      <val_-dw>11879.97265625</val_-dw>
+                      <val_-dh>11354.46875</val_-dh>
+                      <outer-class>
+                        <e class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../../.."/>
+                        <ctx reference="../../.."/>
+                        <node class="org.apache.batik.gvt.CanvasGraphicsNode" reference="../../../elementNodeMap/table/java.util.WeakHashMap_-Entry/value/referent/children/org.apache.batik.gvt.CanvasGraphicsNode"/>
+                        <isSVG12>false</isSVG12>
+                        <unitContext class="org.apache.batik.bridge.UnitProcessor$DefaultContext">
+                          <e class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../../../.."/>
+                          <ctx reference="../../../.."/>
+                        </unitContext>
+                      </outer-class>
+                    </documentSize>
+                    <dynamicStatus>2</dynamicStatus>
+                    <childContexts/>
+                    <animationLimitingMode>0</animationLimitingMode>
+                    <animationLimitingAmount>0.0</animationLimitingAmount>
+                    <eventListenerSet>
+                      <org.apache.batik.bridge.BridgeContext_-EventListenerMememto>
+                        <target class="org.apache.batik.bridge.BridgeContext$SoftReferenceMememto">
+                          <referent class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../../../.."/>
+                          <queue>
+                            <lock/>
+                            <queueLength>0</queueLength>
+                          </queue>
+                          <timestamp>192619597</timestamp>
+                          <mememto class="org.apache.batik.bridge.BridgeContext$EventListenerMememto" reference="../.."/>
+                          <set reference="../../.."/>
+                        </target>
+                        <listener class="org.apache.batik.bridge.BridgeContext$SoftReferenceMememto">
+                          <referent class="org.apache.batik.bridge.BridgeContext$DOMMouseOutEventListener">
+                            <outer-class reference="../../../../.."/>
+                          </referent>
+                          <queue reference="../../target/queue"/>
+                          <timestamp>192619597</timestamp>
+                          <mememto class="org.apache.batik.bridge.BridgeContext$EventListenerMememto" reference="../.."/>
+                          <set reference="../../.."/>
+                        </listener>
+                        <useCapture>true</useCapture>
+                        <namespaceURI>http://www.w3.org/2001/xml-events</namespaceURI>
+                        <eventType>mouseout</eventType>
+                        <namespaced>true</namespaced>
+                      </org.apache.batik.bridge.BridgeContext_-EventListenerMememto>
+                      <org.apache.batik.bridge.BridgeContext_-EventListenerMememto>
+                        <target class="org.apache.batik.bridge.BridgeContext$SoftReferenceMememto">
+                          <referent class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../../../../../../.."/>
+                          <queue reference="../../../org.apache.batik.bridge.BridgeContext_-EventListenerMememto/target/queue"/>
+                          <timestamp>192619597</timestamp>
+                          <mememto class="org.apache.batik.bridge.BridgeContext$EventListenerMememto" reference="../.."/>
+                          <set reference="../../.."/>
+                        </target>
+                        <listener class="org.apache.batik.bridge.BridgeContext$SoftReferenceMememto">
+                          <referent class="org.apache.batik.bridge.BridgeContext$DOMMouseOverEventListener">
+                            <outer-class reference="../../../../.."/>
+                          </referent>
+                          <queue reference="../../../org.apache.batik.bridge.BridgeContext_-EventListenerMememto/target/queue"/>
+                          <timestamp>192619597</timestamp>
+                          <mememto class="org.apache.batik.bridge.BridgeContext$EventListenerMememto" reference="../.."/>
+                          <set reference="../../.."/>
+                        </listener>
+                        <useCapture>true</useCapture>
+                        <namespaceURI>http://www.w3.org/2001/xml-events</namespaceURI>
+                        <eventType>mouseover</eventType>
+                        <namespaced>true</namespaced>
+                      </org.apache.batik.bridge.BridgeContext_-EventListenerMememto>
+                    </eventListenerSet>
+                    <domCharacterDataModifiedEventListener class="org.apache.batik.bridge.BridgeContext$DOMCharacterDataModifiedEventListener">
+                      <outer-class reference="../.."/>
+                    </domCharacterDataModifiedEventListener>
+                    <domAttrModifiedEventListener class="org.apache.batik.bridge.BridgeContext$DOMAttrModifiedEventListener">
+                      <outer-class reference="../.."/>
+                    </domAttrModifiedEventListener>
+                    <domNodeInsertedEventListener class="org.apache.batik.bridge.BridgeContext$DOMNodeInsertedEventListener">
+                      <outer-class reference="../.."/>
+                    </domNodeInsertedEventListener>
+                    <domNodeRemovedEventListener class="org.apache.batik.bridge.BridgeContext$DOMNodeRemovedEventListener">
+                      <outer-class reference="../.."/>
+                    </domNodeRemovedEventListener>
+                    <cssPropertiesChangedListener class="org.apache.batik.bridge.BridgeContext$CSSPropertiesChangedListener">
+                      <outer-class reference="../.."/>
+                    </cssPropertiesChangedListener>
+                    <animatedAttributeListener class="org.apache.batik.bridge.BridgeContext$AnimatedAttrListener">
+                      <outer-class reference="../.."/>
+                    </animatedAttributeListener>
+                    <focusManager>
+                      <document class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../../../.."/>
+                      <mouseclickListener class="org.apache.batik.bridge.FocusManager$MouseClickTracker">
+                        <outer-class reference="../.."/>
+                      </mouseclickListener>
+                      <domFocusInListener class="org.apache.batik.bridge.FocusManager$DOMFocusInTracker">
+                        <outer-class reference="../.."/>
+                      </domFocusInListener>
+                      <domFocusOutListener class="org.apache.batik.bridge.FocusManager$DOMFocusOutTracker">
+                        <outer-class reference="../.."/>
+                      </domFocusOutListener>
+                      <mouseoverListener class="org.apache.batik.bridge.FocusManager$MouseOverTracker">
+                        <outer-class reference="../.."/>
+                      </mouseoverListener>
+                      <mouseoutListener class="org.apache.batik.bridge.FocusManager$MouseOutTracker">
+                        <outer-class reference="../.."/>
+                      </mouseoutListener>
+                    </focusManager>
+                    <cursorManager>
+                      <ctx reference="../.."/>
+                      <cursorCache>
+                        <map/>
+                        <synchronous>false</synchronous>
+                      </cursorCache>
+                    </cursorManager>
+                    <extensions class="linked-list">
+                      <org.apache.batik.bridge.SVGBridgeExtension/>
+                    </extensions>
+                  </cssContext>
+                  <document class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../../../../../.."/>
+                  <isCSSNavigableDocument>true</isCSSNavigableDocument>
+                  <indexes>
+                    <table>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>550691968</hash>
+                        <key>word-spacing</key>
+                        <value>58</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>1930834106</hash>
+                        <key>color-interpolation</key>
+                        <value>6</value>
+                        <next>
+                          <hash>1354324130</hash>
+                          <key>color-rendering</key>
+                          <value>9</value>
+                          <next>
+                            <hash>1910377826</hash>
+                            <key>lighting-color</key>
+                            <value>33</value>
+                          </next>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>1206197176</hash>
+                        <key>enable-background</key>
+                        <value>14</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>1469201922</hash>
+                        <key>glyph-orientation-horizontal</key>
+                        <value>28</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>498247513</hash>
+                        <key>clip-rule</key>
+                        <value>4</value>
+                        <next>
+                          <hash>94538047</hash>
+                          <key>color-profile</key>
+                          <value>8</value>
+                          <next>
+                            <hash>386177398</hash>
+                            <key>stroke-opacity</key>
+                            <value>51</value>
+                            <next>
+                              <hash>2043855712</hash>
+                              <key>shape-rendering</key>
+                              <value>42</value>
+                            </next>
+                          </next>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>3344108</hash>
+                        <key>mask</key>
+                        <value>37</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>3143043</hash>
+                        <key>fill</key>
+                        <value>15</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>1032314618</hash>
+                        <key>baseline-shift</key>
+                        <value>1</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>3056464</hash>
+                        <key>clip</key>
+                        <value>2</value>
+                        <next>
+                          <hash>474623473</hash>
+                          <key>stroke-width</key>
+                          <value>52</value>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>94842723</hash>
+                        <key>color</key>
+                        <value>5</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>1922878162</hash>
+                        <key>dominant-baseline</key>
+                        <value>13</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>904593171</hash>
+                        <key>stroke-linejoin</key>
+                        <value>49</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>418125703</hash>
+                        <key>font-stretch</key>
+                        <value>24</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>1262914548</hash>
+                        <key>writing-mode</key>
+                        <value>59</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>1114236104</hash>
+                        <key>marker-end</key>
+                        <value>34</value>
+                        <next>
+                          <hash>1114243637</hash>
+                          <key>marker-mid</key>
+                          <value>35</value>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>1671903724</hash>
+                        <key>text-rendering</key>
+                        <value>55</value>
+                        <next>
+                          <hash>114148</hash>
+                          <key>src</key>
+                          <value>41</value>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>36179549</hash>
+                        <key>font-size-adjust</key>
+                        <value>23</value>
+                        <next>
+                          <hash>431477072</hash>
+                          <key>text-decoration</key>
+                          <value>54</value>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>1830288585</hash>
+                        <key>stroke-linecap</key>
+                        <value>48</value>
+                        <next>
+                          <hash>1842201048</hash>
+                          <key>stop-color</key>
+                          <value>43</value>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>498168962</hash>
+                        <key>clip-path</key>
+                        <value>3</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>598800822</hash>
+                        <key>font-weight</key>
+                        <value>27</value>
+                        <next>
+                          <hash>862478514</hash>
+                          <key>stroke-dasharray</key>
+                          <value>46</value>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>798364502</hash>
+                        <key>cursor</key>
+                        <value>10</value>
+                        <next>
+                          <hash>872991608</hash>
+                          <key>filter</key>
+                          <value>18</value>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>223905459</hash>
+                        <key>font-style</key>
+                        <value>25</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>529642498</hash>
+                        <key>overflow</key>
+                        <value>39</value>
+                        <next>
+                          <hash>880277515</hash>
+                          <key>opacity</key>
+                          <value>38</value>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>561401535</hash>
+                        <key>font-size</key>
+                        <value>22</value>
+                        <next>
+                          <hash>2134374612</hash>
+                          <key>glyph-orientation-vertical</key>
+                          <value>29</value>
+                          <next>
+                            <hash>1788808188</hash>
+                            <key>unicode-bidi</key>
+                            <value>56</value>
+                          </next>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>602939708</hash>
+                        <key>flood-opacity</key>
+                        <value>20</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>1660037973</hash>
+                        <key>text-anchor</key>
+                        <value>53</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>674969327</hash>
+                        <key>alignment-baseline</key>
+                        <value>0</value>
+                        <next>
+                          <hash>897359297</hash>
+                          <key>fill-opacity</key>
+                          <value>16</value>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>1671764162</hash>
+                        <key>display</key>
+                        <value>12</value>
+                        <next>
+                          <hash>1255503416</hash>
+                          <key>stroke</key>
+                          <value>45</value>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>389300487</hash>
+                        <key>font-variant</key>
+                        <value>26</value>
+                        <next>
+                          <hash>1941332754</hash>
+                          <key>visibility</key>
+                          <value>57</value>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>1184892799</hash>
+                        <key>direction</key>
+                        <value>11</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>1479838859</hash>
+                        <key>stroke-miterlimit</key>
+                        <value>50</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>759415104</hash>
+                        <key>stop-opacity</key>
+                        <value>44</value>
+                        <next>
+                          <hash>1326336780</hash>
+                          <key>kerning</key>
+                          <value>31</value>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>852095188</hash>
+                        <key>flood-color</key>
+                        <value>19</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>1347148047</hash>
+                        <key>marker-start</key>
+                        <value>36</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>1342635689</hash>
+                        <key>pointer-events</key>
+                        <value>40</value>
+                        <next>
+                          <hash>159081884</hash>
+                          <key>letter-spacing</key>
+                          <value>32</value>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>108532386</hash>
+                        <key>font-family</key>
+                        <value>21</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>457465320</hash>
+                        <key>color-interpolation-filters</key>
+                        <value>7</value>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>985382150</hash>
+                        <key>fill-rule</key>
+                        <value>17</value>
+                        <next>
+                          <hash>1356415322</hash>
+                          <key>stroke-dashoffset</key>
+                          <value>47</value>
+                          <next>
+                            <hash>458669210</hash>
+                            <key>image-rendering</key>
+                            <value>30</value>
+                          </next>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                    </table>
+                    <count>60</count>
+                  </indexes>
+                  <shorthandIndexes>
+                    <table>
+                      <null/>
+                      <org.apache.batik.css.engine.StringIntMap_-Entry>
+                        <hash>3148879</hash>
+                        <key>font</key>
+                        <value>0</value>
+                        <next>
+                          <hash>1066177594</hash>
+                          <key>marker</key>
+                          <value>1</value>
+                        </next>
+                      </org.apache.batik.css.engine.StringIntMap_-Entry>
+                      <null/>
+                    </table>
+                    <count>2</count>
+                  </shorthandIndexes>
+                  <valueManagers>
+                    <org.apache.batik.css.engine.value.svg.AlignmentBaselineManager/>
+                    <org.apache.batik.css.engine.value.svg.BaselineShiftManager/>
+                    <org.apache.batik.css.engine.value.css2.ClipManager>
+                      <orientation>0</orientation>
+                    </org.apache.batik.css.engine.value.css2.ClipManager>
+                    <org.apache.batik.css.engine.value.svg.ClipPathManager/>
+                    <org.apache.batik.css.engine.value.svg.ClipRuleManager/>
+                    <org.apache.batik.css.engine.value.svg.ColorManager/>
+                    <org.apache.batik.css.engine.value.svg.ColorInterpolationManager/>
+                    <org.apache.batik.css.engine.value.svg.ColorInterpolationFiltersManager/>
+                    <org.apache.batik.css.engine.value.svg.ColorProfileManager/>
+                    <org.apache.batik.css.engine.value.svg.ColorRenderingManager/>
+                    <org.apache.batik.css.engine.value.css2.CursorManager/>
+                    <org.apache.batik.css.engine.value.css2.DirectionManager/>
+                    <org.apache.batik.css.engine.value.css2.DisplayManager/>
+                    <org.apache.batik.css.engine.value.svg.DominantBaselineManager/>
+                    <org.apache.batik.css.engine.value.svg.EnableBackgroundManager>
+                      <orientation>0</orientation>
+                    </org.apache.batik.css.engine.value.svg.EnableBackgroundManager>
+                    <org.apache.batik.css.engine.value.svg.SVGPaintManager>
+                      <property>fill</property>
+                      <defaultValue class="org.apache.batik.css.engine.value.RGBColorValue">
+                        <red class="org.apache.batik.css.engine.value.FloatValue">
+                          <floatValue>0.0</floatValue>
+                          <unitType>1</unitType>
+                        </red>
+                        <green class="org.apache.batik.css.engine.value.FloatValue" reference="../red"/>
+                        <blue class="org.apache.batik.css.engine.value.FloatValue" reference="../red"/>
+                      </defaultValue>
+                    </org.apache.batik.css.engine.value.svg.SVGPaintManager>
+                    <org.apache.batik.css.engine.value.svg.OpacityManager>
+                      <inherited>true</inherited>
+                      <property>fill-opacity</property>
+                    </org.apache.batik.css.engine.value.svg.OpacityManager>
+                    <org.apache.batik.css.engine.value.svg.FillRuleManager/>
+                    <org.apache.batik.css.engine.value.svg.FilterManager/>
+                    <org.apache.batik.css.engine.value.svg.SVGColorManager>
+                      <property>flood-color</property>
+                      <defaultValue class="org.apache.batik.css.engine.value.RGBColorValue" reference="../../org.apache.batik.css.engine.value.svg.SVGPaintManager/defaultValue"/>
+                    </org.apache.batik.css.engine.value.svg.SVGColorManager>
+                    <org.apache.batik.css.engine.value.svg.OpacityManager>
+                      <inherited>false</inherited>
+                      <property>flood-opacity</property>
+                    </org.apache.batik.css.engine.value.svg.OpacityManager>
+                    <org.apache.batik.css.engine.value.css2.FontFamilyManager/>
+                    <org.apache.batik.css.engine.value.css2.FontSizeManager/>
+                    <org.apache.batik.css.engine.value.css2.FontSizeAdjustManager/>
+                    <org.apache.batik.css.engine.value.css2.FontStretchManager/>
+                    <org.apache.batik.css.engine.value.css2.FontStyleManager/>
+                    <org.apache.batik.css.engine.value.css2.FontVariantManager/>
+                    <org.apache.batik.css.engine.value.css2.FontWeightManager/>
+                    <org.apache.batik.css.engine.value.svg.GlyphOrientationHorizontalManager/>
+                    <org.apache.batik.css.engine.value.svg.GlyphOrientationVerticalManager/>
+                    <org.apache.batik.css.engine.value.svg.ImageRenderingManager/>
+                    <org.apache.batik.css.engine.value.svg.KerningManager/>
+                    <org.apache.batik.css.engine.value.svg.SpacingManager>
+                      <property>letter-spacing</property>
+                    </org.apache.batik.css.engine.value.svg.SpacingManager>
+                    <org.apache.batik.css.engine.value.svg.SVGColorManager>
+                      <property>lighting-color</property>
+                      <defaultValue class="org.apache.batik.css.engine.value.RGBColorValue">
+                        <red class="org.apache.batik.css.engine.value.FloatValue">
+                          <floatValue>255.0</floatValue>
+                          <unitType>1</unitType>
+                        </red>
+                        <green class="org.apache.batik.css.engine.value.FloatValue" reference="../red"/>
+                        <blue class="org.apache.batik.css.engine.value.FloatValue" reference="../red"/>
+                      </defaultValue>
+                    </org.apache.batik.css.engine.value.svg.SVGColorManager>
+                    <org.apache.batik.css.engine.value.svg.MarkerManager>
+                      <property>marker-end</property>
+                    </org.apache.batik.css.engine.value.svg.MarkerManager>
+                    <org.apache.batik.css.engine.value.svg.MarkerManager>
+                      <property>marker-mid</property>
+                    </org.apache.batik.css.engine.value.svg.MarkerManager>
+                    <org.apache.batik.css.engine.value.svg.MarkerManager>
+                      <property>marker-start</property>
+                    </org.apache.batik.css.engine.value.svg.MarkerManager>
+                    <org.apache.batik.css.engine.value.svg.MaskManager/>
+                    <org.apache.batik.css.engine.value.svg.OpacityManager>
+                      <inherited>false</inherited>
+                      <property>opacity</property>
+                    </org.apache.batik.css.engine.value.svg.OpacityManager>
+                    <org.apache.batik.css.engine.value.css2.OverflowManager/>
+                    <org.apache.batik.css.engine.value.svg.PointerEventsManager/>
+                    <org.apache.batik.css.engine.value.css2.SrcManager/>
+                    <org.apache.batik.css.engine.value.svg.ShapeRenderingManager/>
+                    <org.apache.batik.css.engine.value.svg.SVGColorManager>
+                      <property>stop-color</property>
+                      <defaultValue class="org.apache.batik.css.engine.value.RGBColorValue" reference="../../org.apache.batik.css.engine.value.svg.SVGPaintManager/defaultValue"/>
+                    </org.apache.batik.css.engine.value.svg.SVGColorManager>
+                    <org.apache.batik.css.engine.value.svg.OpacityManager>
+                      <inherited>false</inherited>
+                      <property>stop-opacity</property>
+                    </org.apache.batik.css.engine.value.svg.OpacityManager>
+                    <org.apache.batik.css.engine.value.svg.SVGPaintManager>
+                      <property>stroke</property>
+                      <defaultValue class="org.apache.batik.css.engine.value.StringValue" reference="../../../../../computedStyleMap/values/org.apache.batik.css.engine.value.StringValue[5]"/>
+                    </org.apache.batik.css.engine.value.svg.SVGPaintManager>
+                    <org.apache.batik.css.engine.value.svg.StrokeDasharrayManager/>
+                    <org.apache.batik.css.engine.value.svg.StrokeDashoffsetManager/>
+                    <org.apache.batik.css.engine.value.svg.StrokeLinecapManager/>
+                    <org.apache.batik.css.engine.value.svg.StrokeLinejoinManager/>
+                    <org.apache.batik.css.engine.value.svg.StrokeMiterlimitManager/>
+                    <org.apache.batik.css.engine.value.svg.OpacityManager>
+                      <inherited>true</inherited>
+                      <property>stroke-opacity</property>
+                    </org.apache.batik.css.engine.value.svg.OpacityManager>
+                    <org.apache.batik.css.engine.value.svg.StrokeWidthManager/>
+                    <org.apache.batik.css.engine.value.svg.TextAnchorManager/>
+                    <org.apache.batik.css.engine.value.css2.TextDecorationManager/>
+                    <org.apache.batik.css.engine.value.svg.TextRenderingManager/>
+                    <org.apache.batik.css.engine.value.css2.UnicodeBidiManager/>
+                    <org.apache.batik.css.engine.value.css2.VisibilityManager/>
+                    <org.apache.batik.css.engine.value.svg.SpacingManager>
+                      <property>word-spacing</property>
+                    </org.apache.batik.css.engine.value.svg.SpacingManager>
+                    <org.apache.batik.css.engine.value.svg.WritingModeManager/>
+                  </valueManagers>
+                  <shorthandManagers>
+                    <org.apache.batik.css.engine.value.css2.FontShorthandManager/>
+                    <org.apache.batik.css.engine.value.svg.MarkerShorthandManager/>
+                  </shorthandManagers>
+                  <parser class="org.apache.batik.css.parser.Parser">
+                    <localizableSupport>
+                      <localeGroup reference="../../../cssContext/documentLoader/documentFactory/implementation/localizableSupport/localeGroup"/>
+                      <bundleName>org.apache.batik.css.parser.resources.Messages</bundleName>
+                      <classLoader class="org.netbeans.StandardModule$OneModuleClassLoader" reference="../../../cssContext/documentLoader/documentFactory/implementation/localizableSupport/classLoader"/>
+                      <resourceBundles/>
+                    </localizableSupport>
+                    <current>0</current>
+                    <documentHandler class="org.apache.batik.css.engine.CSSEngine$StyleSheetDocumentHandler">
+                      <styleSheet>
+                        <rules>
+                          <org.apache.batik.css.engine.StyleRule>
+                            <selectorList class="org.apache.batik.css.parser.CSSSelectorList">
+                              <list>
+                                <org.apache.batik.css.engine.sac.CSSElementSelector>
+                                  <localName>svg</localName>
+                                </org.apache.batik.css.engine.sac.CSSElementSelector>
+                                <org.apache.batik.css.engine.sac.CSSElementSelector>
+                                  <localName>symbol</localName>
+                                </org.apache.batik.css.engine.sac.CSSElementSelector>
+                                <org.apache.batik.css.engine.sac.CSSElementSelector>
+                                  <localName>image</localName>
+                                </org.apache.batik.css.engine.sac.CSSElementSelector>
+                                <org.apache.batik.css.engine.sac.CSSElementSelector>
+                                  <localName>marker</localName>
+                                </org.apache.batik.css.engine.sac.CSSElementSelector>
+                                <org.apache.batik.css.engine.sac.CSSElementSelector>
+                                  <localName>pattern</localName>
+                                </org.apache.batik.css.engine.sac.CSSElementSelector>
+                                <org.apache.batik.css.engine.sac.CSSElementSelector>
+                                  <localName>foreignObject</localName>
+                                </org.apache.batik.css.engine.sac.CSSElementSelector>
+                                <null/>
+                                <null/>
+                              </list>
+                              <length>6</length>
+                            </selectorList>
+                            <styleDeclaration>
+                              <values>
+                                <org.apache.batik.css.engine.value.StringValue reference="../../../../../../../../../../computedStyleMap/values/org.apache.batik.css.engine.value.StringValue[7]"/>
+                                <null/>
+                                <null/>
+                                <null/>
+                                <null/>
+                                <null/>
+                                <null/>
+                                <null/>
+                              </values>
+                              <indexes>
+                                <int>39</int>
+                                <int>0</int>
+                                <int>0</int>
+                                <int>0</int>
+                                <int>0</int>
+                                <int>0</int>
+                                <int>0</int>
+                                <int>0</int>
+                              </indexes>
+                              <priorities>
+                                <boolean>false</boolean>
+                                <boolean>false</boolean>
+                                <boolean>false</boolean>
+                                <boolean>false</boolean>
+                                <boolean>false</boolean>
+                                <boolean>false</boolean>
+                                <boolean>false</boolean>
+                                <boolean>false</boolean>
+                              </priorities>
+                              <count>1</count>
+                            </styleDeclaration>
+                          </org.apache.batik.css.engine.StyleRule>
+                          <null/>
+                          <null/>
+                          <null/>
+                          <null/>
+                          <null/>
+                          <null/>
+                          <null/>
+                          <null/>
+                          <null/>
+                          <null/>
+                          <null/>
+                          <null/>
+                          <null/>
+                          <null/>
+                          <null/>
+                        </rules>
+                        <size>1</size>
+                        <alternate>false</alternate>
+                        <media class="org.apache.batik.css.parser.CSSSACMediaList">
+                          <list>
+                            <null/>
+                            <null/>
+                            <null/>
+                          </list>
+                          <length>0</length>
+                        </media>
+                      </styleSheet>
+                      <outer-class class="org.apache.batik.css.engine.SVGCSSEngine" reference="../../.."/>
+                    </documentHandler>
+                    <selectorFactory class="org.apache.batik.css.engine.sac.CSSSelectorFactory"/>
+                    <conditionFactory class="org.apache.batik.css.engine.sac.CSSConditionFactory">
+                      <classLocalName>class</classLocalName>
+                      <idLocalName>id</idLocalName>
+                    </conditionFactory>
+                    <errorHandler class="org.apache.batik.css.parser.DefaultErrorHandler"/>
+                    <documentURI>jar:file:/home/dee/dev/gephi/modules/application/target/gephi/gephi/modules/ext/org.gephi.batik-wrapper/org-apache-xmlgraphics/batik-anim.jar!/org/apache/batik/anim/dom/resources/UserAgentStyleSheet.css</documentURI>
+                  </parser>
+                  <fontSizeIndex>22</fontSizeIndex>
+                  <lineHeightIndex>22</lineHeightIndex>
+                  <colorIndex>5</colorIndex>
+                  <userAgentStyleSheet reference="../parser/documentHandler/styleSheet"/>
+                  <media class="org.apache.batik.css.parser.CSSSACMediaList">
+                    <list>
+                      <null/>
+                      <null/>
+                      <null/>
+                    </list>
+                    <length>0</length>
+                  </media>
+                  <styleSheetNodes/>
+                  <fontFaces class="linked-list"/>
+                  <styleLocalName>style</styleLocalName>
+                  <classLocalName>class</classLocalName>
+                  <nonCSSPresentationalHints>
+                    <string>kerning</string>
+                    <string>stop-opacity</string>
+                    <string>stroke-dashoffset</string>
+                    <string>font-weight</string>
+                    <string>glyph-orientation-horizontal</string>
+                    <string>overflow</string>
+                    <string>stop-color</string>
+                    <string>color-rendering</string>
+                    <string>color-profile</string>
+                    <string>flood-color</string>
+                    <string>marker-end</string>
+                    <string>visibility</string>
+                    <string>text-anchor</string>
+                    <string>color-interpolation</string>
+                    <string>color-interpolation-filters</string>
+                    <string>fill</string>
+                    <string>pointer-events</string>
+                    <string>shape-rendering</string>
+                    <string>writing-mode</string>
+                    <string>clip-path</string>
+                    <string>font-variant</string>
+                    <string>marker</string>
+                    <string>stroke-width</string>
+                    <string>lighting-color</string>
+                    <string>fill-opacity</string>
+                    <string>fill-rule</string>
+                    <string>stroke-miterlimit</string>
+                    <string>cursor</string>
+                    <string>color</string>
+                    <string>marker-start</string>
+                    <string>font-size</string>
+                    <string>text-rendering</string>
+                    <string>flood-opacity</string>
+                    <string>image-rendering</string>
+                    <string>dominant-baseline</string>
+                    <string>word-spacing</string>
+                    <string>alignment-baseline</string>
+                    <string>font-family</string>
+                    <string>stroke-dasharray</string>
+                    <string>enable-background</string>
+                    <string>stroke-linecap</string>
+                    <string>direction</string>
+                    <string>marker-mid</string>
+                    <string>mask</string>
+                    <string>glyph-orientation-vertical</string>
+                    <string>unicode-bidi</string>
+                    <string>src</string>
+                    <string>display</string>
+                    <string>letter-spacing</string>
+                    <string>text-decoration</string>
+                    <string>clip-rule</string>
+                    <string>font-stretch</string>
+                    <string>font-style</string>
+                    <string>stroke</string>
+                    <string>filter</string>
+                    <string>stroke-opacity</string>
+                    <string>font-size-adjust</string>
+                    <string>stroke-linejoin</string>
+                    <string>opacity</string>
+                    <string>baseline-shift</string>
+                    <string>clip</string>
+                    <string>font</string>
+                  </nonCSSPresentationalHints>
+                  <styleDeclarationDocumentHandler>
+                    <outer-class class="org.apache.batik.css.engine.SVGCSSEngine" reference="../.."/>
+                  </styleDeclarationDocumentHandler>
+                  <styleDeclarationUpdateHandler>
+                    <updatedProperties>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                      <boolean>false</boolean>
+                    </updatedProperties>
+                    <outer-class class="org.apache.batik.css.engine.SVGCSSEngine" reference="../.."/>
+                  </styleDeclarationUpdateHandler>
+                  <styleSheetDocumentHandler reference="../parser/documentHandler"/>
+                  <styleDeclarationBuilder>
+                    <outer-class class="org.apache.batik.css.engine.SVGCSSEngine" reference="../.."/>
+                  </styleDeclarationBuilder>
+                  <cssNavigableDocumentListener>
+                    <outer-class class="org.apache.batik.css.engine.SVGCSSEngine" reference="../.."/>
+                  </cssNavigableDocumentListener>
+                  <styleSheetRemoved>false</styleSheetRemoved>
+                  <listeners class="java.util.Collections$SynchronizedList" serialization="custom">
+                    <java.util.Collections_-SynchronizedCollection>
+                      <default>
+                        <c class="linked-list">
+                          <org.apache.batik.bridge.BridgeContext_-CSSPropertiesChangedListener reference="../../../../../cssContext/cssPropertiesChangedListener"/>
+                        </c>
+                        <mutex class="java.util.Collections$SynchronizedList" reference="../../.."/>
+                      </default>
+                    </java.util.Collections_-SynchronizedCollection>
+                    <java.util.Collections_-SynchronizedList>
+                      <default>
+                        <list class="linked-list" reference="../../../java.util.Collections_-SynchronizedCollection/default/c"/>
+                      </default>
+                    </java.util.Collections_-SynchronizedList>
+                  </listeners>
+                  <selectorAttributes/>
+                  <ALL__PROPERTIES>
+                    <int>0</int>
+                    <int>1</int>
+                    <int>2</int>
+                    <int>3</int>
+                    <int>4</int>
+                    <int>5</int>
+                    <int>6</int>
+                    <int>7</int>
+                    <int>8</int>
+                    <int>9</int>
+                    <int>10</int>
+                    <int>11</int>
+                    <int>12</int>
+                    <int>13</int>
+                    <int>14</int>
+                    <int>15</int>
+                    <int>16</int>
+                    <int>17</int>
+                    <int>18</int>
+                    <int>19</int>
+                    <int>20</int>
+                    <int>21</int>
+                    <int>22</int>
+                    <int>23</int>
+                    <int>24</int>
+                    <int>25</int>
+                    <int>26</int>
+                    <int>27</int>
+                    <int>28</int>
+                    <int>29</int>
+                    <int>30</int>
+                    <int>31</int>
+                    <int>32</int>
+                    <int>33</int>
+                    <int>34</int>
+                    <int>35</int>
+                    <int>36</int>
+                    <int>37</int>
+                    <int>38</int>
+                    <int>39</int>
+                    <int>40</int>
+                    <int>41</int>
+                    <int>42</int>
+                    <int>43</int>
+                    <int>44</int>
+                    <int>45</int>
+                    <int>46</int>
+                    <int>47</int>
+                    <int>48</int>
+                    <int>49</int>
+                    <int>50</int>
+                    <int>51</int>
+                    <int>52</int>
+                    <int>53</int>
+                    <int>54</int>
+                    <int>55</int>
+                    <int>56</int>
+                    <int>57</int>
+                    <int>58</int>
+                    <int>59</int>
+                  </ALL__PROPERTIES>
+                  <cssConditionFactory reference="../parser/conditionFactory"/>
+                </cssEngine>
+                <declaration>
+                  <values>
+                    <null/>
+                    <null/>
+                    <null/>
+                    <null/>
+                    <null/>
+                    <null/>
+                    <null/>
+                    <null/>
+                  </values>
+                  <indexes>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                    <int>0</int>
+                  </indexes>
+                  <priorities>
+                    <boolean>false</boolean>
+                    <boolean>false</boolean>
+                    <boolean>false</boolean>
+                    <boolean>false</boolean>
+                    <boolean>false</boolean>
+                    <boolean>false</boolean>
+                    <boolean>false</boolean>
+                    <boolean>false</boolean>
+                  </priorities>
+                  <count>0</count>
+                </declaration>
+                <outer-class class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../.."/>
+              </overrideStyleDeclaration>
+              <className>
+                <element class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../.."/>
+                <localName>class</localName>
+                <hasAnimVal>false</hasAnimVal>
+                <listeners>
+                  <org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener>
+                    <outer-class reference="../../../../../../../../.."/>
+                  </org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener>
+                </listeners>
+              </className>
+              <x>
+                <element class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../.."/>
+                <localName>x</localName>
+                <hasAnimVal>false</hasAnimVal>
+                <listeners>
+                  <org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener reference="../../../className/listeners/org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener"/>
+                </listeners>
+                <direction>2</direction>
+                <changing>false</changing>
+                <nonNegative>false</nonNegative>
+                <defaultValue>0</defaultValue>
+              </x>
+              <y>
+                <element class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../.."/>
+                <localName>y</localName>
+                <hasAnimVal>false</hasAnimVal>
+                <listeners>
+                  <org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener reference="../../../className/listeners/org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener"/>
+                </listeners>
+                <direction>1</direction>
+                <changing>false</changing>
+                <nonNegative>false</nonNegative>
+                <defaultValue>0</defaultValue>
+              </y>
+              <width>
+                <element class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../.."/>
+                <localName>width</localName>
+                <hasAnimVal>false</hasAnimVal>
+                <listeners>
+                  <org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener reference="../../../className/listeners/org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener"/>
+                </listeners>
+                <direction>2</direction>
+                <baseVal>
+                  <unitType>1</unitType>
+                  <value>11879.973</value>
+                  <direction>2</direction>
+                  <context class="org.apache.batik.anim.dom.AbstractSVGLength$DefaultContext">
+                    <outer-class class="org.apache.batik.anim.dom.AbstractSVGAnimatedLength$BaseSVGLength" reference="../.."/>
+                  </context>
+                  <valid>true</valid>
+                  <missing>false</missing>
+                  <outer-class class="org.apache.batik.anim.dom.SVGOMAnimatedLength" reference="../.."/>
+                </baseVal>
+                <changing>false</changing>
+                <nonNegative>true</nonNegative>
+                <defaultValue>100%</defaultValue>
+              </width>
+              <height>
+                <element class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../.."/>
+                <localName>height</localName>
+                <hasAnimVal>false</hasAnimVal>
+                <listeners>
+                  <org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener reference="../../../className/listeners/org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener"/>
+                </listeners>
+                <direction>1</direction>
+                <baseVal>
+                  <unitType>1</unitType>
+                  <value>11354.469</value>
+                  <direction>1</direction>
+                  <context class="org.apache.batik.anim.dom.AbstractSVGLength$DefaultContext">
+                    <outer-class class="org.apache.batik.anim.dom.AbstractSVGAnimatedLength$BaseSVGLength" reference="../.."/>
+                  </context>
+                  <valid>true</valid>
+                  <missing>false</missing>
+                  <outer-class class="org.apache.batik.anim.dom.SVGOMAnimatedLength" reference="../.."/>
+                </baseVal>
+                <changing>false</changing>
+                <nonNegative>true</nonNegative>
+                <defaultValue>100%</defaultValue>
+              </height>
+              <externalResourcesRequired>
+                <element class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../.."/>
+                <localName>externalResourcesRequired</localName>
+                <hasAnimVal>false</hasAnimVal>
+                <listeners>
+                  <org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener reference="../../../className/listeners/org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener"/>
+                </listeners>
+                <defaultValue>false</defaultValue>
+                <valid>false</valid>
+                <baseVal>false</baseVal>
+                <animVal>false</animVal>
+                <changing>false</changing>
+              </externalResourcesRequired>
+              <preserveAspectRatio>
+                <element class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../.."/>
+                <localName>preserveAspectRatio</localName>
+                <hasAnimVal>false</hasAnimVal>
+                <listeners>
+                  <org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener reference="../../../className/listeners/org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener"/>
+                </listeners>
+                <baseVal>
+                  <align>6</align>
+                  <meetOrSlice>1</meetOrSlice>
+                  <malformed>false</malformed>
+                  <outer-class reference="../.."/>
+                </baseVal>
+                <animVal>
+                  <align>6</align>
+                  <meetOrSlice>1</meetOrSlice>
+                  <outer-class reference="../.."/>
+                </animVal>
+                <changing>false</changing>
+              </preserveAspectRatio>
+              <viewBox>
+                <element class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../.."/>
+                <localName>viewBox</localName>
+                <hasAnimVal>false</hasAnimVal>
+                <listeners>
+                  <org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener reference="../../../className/listeners/org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener"/>
+                </listeners>
+                <baseVal>
+                  <x>-4759.0</x>
+                  <y>-5052.9546</y>
+                  <w>11879.973</w>
+                  <h>11354.469</h>
+                  <valid>true</valid>
+                  <outer-class reference="../.."/>
+                </baseVal>
+                <animVal>
+                  <x>0.0</x>
+                  <y>0.0</y>
+                  <w>0.0</w>
+                  <h>0.0</h>
+                  <outer-class reference="../.."/>
+                </animVal>
+                <changing>false</changing>
+              </viewBox>
+            </nextSibling>
+            <qualifiedName>svg</qualifiedName>
+            <publicId>-//W3C//DTD SVG 1.1//EN</publicId>
+            <systemId>http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd</systemId>
+          </firstChild>
+          <lastChild class="org.apache.batik.anim.dom.SVGOMSVGElement" reference="../firstChild/nextSibling"/>
+          <children>2</children>
+          <elementChildren>1</elementChildren>
+          <outer-class class="org.apache.batik.anim.dom.SVGOMDocument" reference="../../../.."/>
+        </childNodes>
+      </default>
+    </org.apache.batik.dom.AbstractParentNode>
+    <org.apache.batik.dom.AbstractDocument>
+      <default>
+        <strictErrorChecking>true</strictErrorChecking>
+        <xmlStandalone>false</xmlStandalone>
+        <xmlVersion>1.0</xmlVersion>
+      </default>
+      <string>org.apache.batik.anim.dom.SVGDOMImplementation</string>
+    </org.apache.batik.dom.AbstractDocument>
+    <org.apache.batik.anim.dom.SVGOMDocument>
+      <default>
+        <isSVG12>false</isSVG12>
+        <animatedAttributeListeners>
+          <org.apache.batik.bridge.BridgeContext_-AnimatedAttrListener reference="../../../../org.apache.batik.dom.AbstractParentNode/default/childNodes/firstChild/nextSibling/overrideStyleDeclaration/cssEngine/cssContext/animatedAttributeListener"/>
+        </animatedAttributeListeners>
+        <cssNavigableDocumentListeners>
+          <entry>
+            <org.apache.batik.css.engine.CSSEngine_-CSSNavigableDocumentHandler reference="../../../../../org.apache.batik.dom.AbstractParentNode/default/childNodes/firstChild/nextSibling/overrideStyleDeclaration/cssEngine/cssNavigableDocumentListener"/>
+            <org.w3c.dom.events.EventListener-array>
+              <org.apache.batik.anim.dom.SVGOMDocument_-DOMNodeInsertedListenerWrapper>
+                <listener class="org.apache.batik.css.engine.CSSEngine$CSSNavigableDocumentHandler" reference="../../../../../../../org.apache.batik.dom.AbstractParentNode/default/childNodes/firstChild/nextSibling/overrideStyleDeclaration/cssEngine/cssNavigableDocumentListener"/>
+              </org.apache.batik.anim.dom.SVGOMDocument_-DOMNodeInsertedListenerWrapper>
+              <org.apache.batik.anim.dom.SVGOMDocument_-DOMNodeRemovedListenerWrapper>
+                <listener class="org.apache.batik.css.engine.CSSEngine$CSSNavigableDocumentHandler" reference="../../../../../../../org.apache.batik.dom.AbstractParentNode/default/childNodes/firstChild/nextSibling/overrideStyleDeclaration/cssEngine/cssNavigableDocumentListener"/>
+              </org.apache.batik.anim.dom.SVGOMDocument_-DOMNodeRemovedListenerWrapper>
+              <org.apache.batik.anim.dom.SVGOMDocument_-DOMSubtreeModifiedListenerWrapper>
+                <listener class="org.apache.batik.css.engine.CSSEngine$CSSNavigableDocumentHandler" reference="../../../../../../../org.apache.batik.dom.AbstractParentNode/default/childNodes/firstChild/nextSibling/overrideStyleDeclaration/cssEngine/cssNavigableDocumentListener"/>
+              </org.apache.batik.anim.dom.SVGOMDocument_-DOMSubtreeModifiedListenerWrapper>
+              <org.apache.batik.anim.dom.SVGOMDocument_-DOMCharacterDataModifiedListenerWrapper>
+                <listener class="org.apache.batik.css.engine.CSSEngine$CSSNavigableDocumentHandler" reference="../../../../../../../org.apache.batik.dom.AbstractParentNode/default/childNodes/firstChild/nextSibling/overrideStyleDeclaration/cssEngine/cssNavigableDocumentListener"/>
+              </org.apache.batik.anim.dom.SVGOMDocument_-DOMCharacterDataModifiedListenerWrapper>
+              <org.apache.batik.anim.dom.SVGOMDocument_-DOMAttrModifiedListenerWrapper>
+                <listener class="org.apache.batik.css.engine.CSSEngine$CSSNavigableDocumentHandler" reference="../../../../../../../org.apache.batik.dom.AbstractParentNode/default/childNodes/firstChild/nextSibling/overrideStyleDeclaration/cssEngine/cssNavigableDocumentListener"/>
+              </org.apache.batik.anim.dom.SVGOMDocument_-DOMAttrModifiedListenerWrapper>
+            </org.w3c.dom.events.EventListener-array>
+          </entry>
+        </cssNavigableDocumentListeners>
+        <mainAnimatedAttributeListener class="org.apache.batik.anim.dom.SVGOMDocument$AnimAttrListener" reference="../../../org.apache.batik.dom.AbstractParentNode/default/childNodes/firstChild/nextSibling/className/listeners/org.apache.batik.anim.dom.SVGOMDocument_-AnimAttrListener"/>
+        <referrer/>
+      </default>
+    </org.apache.batik.anim.dom.SVGOMDocument>
+  </document>
+  <topElements/>
+  <scaleRatio>1.0</scaleRatio>
+</org.gephi.preview.SVGRenderTargetBuilder_-SVGRenderTargetImpl>

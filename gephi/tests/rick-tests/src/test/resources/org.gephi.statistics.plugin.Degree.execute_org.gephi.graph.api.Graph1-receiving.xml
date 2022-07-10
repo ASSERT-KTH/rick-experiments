@@ -1,0 +1,6 @@
+<org.gephi.statistics.plugin.Degree>
+  <isDirected>false</isDirected>
+  <isCanceled>false</isCanceled>
+  <progress class="org.gephi.desktop.progress.ProgressTicketImpl"/>
+  <avgDegree>0.0</avgDegree>
+</org.gephi.statistics.plugin.Degree>

@@ -1,0 +1,31 @@
+<org.gephi.io.importer.impl.ImportControllerImpl>
+  <fileImporterBuilders>
+    <org.gephi.io.importer.plugin.file.ImporterBuilderDL/>
+    <org.gephi.io.importer.plugin.file.ImporterBuilderDOT/>
+    <org.gephi.io.importer.plugin.file.ImporterBuilderGDF/>
+    <org.gephi.io.importer.plugin.file.ImporterBuilderGEXF/>
+    <org.gephi.io.importer.plugin.file.ImporterBuilderGML/>
+    <org.gephi.io.importer.plugin.file.ImporterBuilderGraphML/>
+    <org.gephi.io.importer.plugin.file.ImporterBuilderPajek/>
+    <org.gephi.io.importer.plugin.file.ImporterBuilderTGF/>
+    <org.gephi.io.importer.plugin.file.ImporterBuilderTLP/>
+    <org.gephi.io.importer.plugin.file.ImporterBuilderVNA/>
+    <org.gephi.io.importer.plugin.file.spreadsheet.ImporterSpreadsheetCSVBuilder/>
+    <org.gephi.io.importer.plugin.file.spreadsheet.ImporterSpreadsheetExcelBuilder/>
+  </fileImporterBuilders>
+  <databaseImporterBuilders>
+    <org.gephi.io.importer.plugin.database.ImporterBuilderEdgeList/>
+  </databaseImporterBuilders>
+  <wizardImporterBuilders/>
+  <uis>
+    <org.gephi.ui.importer.plugin.EdgeListDatabaseImporterUI/>
+    <org.gephi.ui.importer.plugin.ImporterVnaUI>
+      <MESSAGE__LINEAR>Line width increases linearly with its value.</MESSAGE__LINEAR>
+      <MESSAGE__SQUARE__ROOT>Line width increases with a square root of its value.</MESSAGE__SQUARE__ROOT>
+      <MESSAGE__LOGARITHMIC>Line width increases logarithmically with its value.</MESSAGE__LOGARITHMIC>
+    </org.gephi.ui.importer.plugin.ImporterVnaUI>
+    <org.gephi.ui.importer.plugin.spreadsheet.SpreadsheetImporterCSVUI/>
+    <org.gephi.ui.importer.plugin.spreadsheet.SpreadsheetImporterExcelUI/>
+  </uis>
+  <wizardUis/>
+</org.gephi.io.importer.impl.ImportControllerImpl>

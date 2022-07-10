@@ -1,0 +1,14 @@
+<org.gephi.preview.plugin.renderers.NodeRenderer>
+  <defaultBorderWidth>1.0</defaultBorderWidth>
+  <defaultBorderColor>
+    <customColor>
+      <red>0</red>
+      <green>0</green>
+      <blue>0</blue>
+      <alpha>255</alpha>
+    </customColor>
+    <mode>CUSTOM</mode>
+  </defaultBorderColor>
+  <defaultOpacity>100.0</defaultOpacity>
+  <defaultPerNodeOpacity>false</defaultPerNodeOpacity>
+</org.gephi.preview.plugin.renderers.NodeRenderer>

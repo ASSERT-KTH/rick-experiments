@@ -1,0 +1,10 @@
+<org.gephi.statistics.plugin.GraphDistance>
+  <diameter>0</diameter>
+  <radius>0</radius>
+  <avgDist>0.0</avgDist>
+  <N>0</N>
+  <isDirected>true</isDirected>
+  <progress class="org.gephi.desktop.progress.ProgressTicketImpl"/>
+  <isCanceled>false</isCanceled>
+  <isNormalized>false</isNormalized>
+</org.gephi.statistics.plugin.GraphDistance>

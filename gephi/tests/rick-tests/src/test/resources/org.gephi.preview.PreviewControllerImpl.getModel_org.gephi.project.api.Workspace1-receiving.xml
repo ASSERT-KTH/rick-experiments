@@ -1,0 +1,4 @@
+<org.gephi.preview.PreviewControllerImpl>
+  <graphController class="org.gephi.graph.GraphControllerImpl"/>
+  <mousePressed>false</mousePressed>
+</org.gephi.preview.PreviewControllerImpl>

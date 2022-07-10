@@ -1,0 +1,136 @@
+<org.gephi.preview.PreviewModelImpl>
+  <previewController class="org.gephi.preview.PreviewControllerImpl">
+    <graphController class="org.gephi.graph.GraphControllerImpl"/>
+    <registeredRenderers>
+      <org.gephi.preview.plugin.renderers.EdgeRenderer>
+        <defaultShowEdges>true</defaultShowEdges>
+        <defaultThickness>1.0</defaultThickness>
+        <defaultRescaleWeight>true</defaultRescaleWeight>
+        <defaultRescaleWeightMin>0.1</defaultRescaleWeightMin>
+        <defaultRescaleWeightMax>1.0</defaultRescaleWeightMax>
+        <defaultColor>
+          <mode>MIXED</mode>
+          <customColor>
+            <red>0</red>
+            <green>0</green>
+            <blue>0</blue>
+            <alpha>255</alpha>
+          </customColor>
+        </defaultColor>
+        <defaultEdgeCurved>true</defaultEdgeCurved>
+        <defaultBezierCurviness>0.2</defaultBezierCurviness>
+        <defaultOpacity>100</defaultOpacity>
+        <defaultRadius>0.0</defaultRadius>
+      </org.gephi.preview.plugin.renderers.EdgeRenderer>
+      <org.gephi.preview.plugin.renderers.ArrowRenderer>
+        <BASE__RATIO>0.5</BASE__RATIO>
+        <defaultArrowSize>3.0</defaultArrowSize>
+      </org.gephi.preview.plugin.renderers.ArrowRenderer>
+      <org.gephi.preview.plugin.renderers.NodeRenderer>
+        <defaultBorderWidth>1.0</defaultBorderWidth>
+        <defaultBorderColor>
+          <customColor reference="../../../org.gephi.preview.plugin.renderers.EdgeRenderer/defaultColor/customColor"/>
+          <mode>CUSTOM</mode>
+        </defaultBorderColor>
+        <defaultOpacity>100.0</defaultOpacity>
+        <defaultPerNodeOpacity>false</defaultPerNodeOpacity>
+      </org.gephi.preview.plugin.renderers.NodeRenderer>
+      <org.gephi.preview.plugin.renderers.NodeLabelRenderer>
+        <defaultShowLabels>true</defaultShowLabels>
+        <defaultFont>
+          <posture class="null"/>
+          <family class="string">Arial</family>
+          <width class="null"/>
+          <superscript class="null"/>
+          <tracking class="null"/>
+          <size class="null"/>
+          <transform class="null"/>
+          <weight class="null"/>
+        </defaultFont>
+        <defaultShorten>false</defaultShorten>
+        <defaultColor>
+          <customColor reference="../../../org.gephi.preview.plugin.renderers.EdgeRenderer/defaultColor/customColor"/>
+          <mode>ORIGINAL</mode>
+        </defaultColor>
+        <defaultMaxChar>30</defaultMaxChar>
+        <defaultProportinalSize>true</defaultProportinalSize>
+        <defaultOutlineSize>4.0</defaultOutlineSize>
+        <defaultOutlineColor>
+          <customColor>
+            <red>255</red>
+            <green>255</green>
+            <blue>255</blue>
+            <alpha>255</alpha>
+          </customColor>
+          <mode>CUSTOM</mode>
+        </defaultOutlineColor>
+        <defaultOutlineOpacity>40</defaultOutlineOpacity>
+        <defaultShowBox>false</defaultShowBox>
+        <defaultBoxColor>
+          <customColor reference="../../../org.gephi.preview.plugin.renderers.EdgeRenderer/defaultColor/customColor"/>
+          <mode>PARENT</mode>
+        </defaultBoxColor>
+        <defaultBoxOpacity>100</defaultBoxOpacity>
+      </org.gephi.preview.plugin.renderers.NodeLabelRenderer>
+      <org.gephi.preview.plugin.renderers.EdgeLabelRenderer>
+        <defaultShowLabels>true</defaultShowLabels>
+        <defaultFont>
+          <posture class="null"/>
+          <family class="string">Arial</family>
+          <width class="null"/>
+          <superscript class="null"/>
+          <tracking class="null"/>
+          <size class="float">10.0</size>
+          <transform class="null"/>
+          <weight class="null"/>
+        </defaultFont>
+        <defaultShorten>false</defaultShorten>
+        <defaultColor>
+          <customColor reference="../../../org.gephi.preview.plugin.renderers.EdgeRenderer/defaultColor/customColor"/>
+          <mode>ORIGINAL</mode>
+        </defaultColor>
+        <defaultMaxChar>30</defaultMaxChar>
+        <defaultOutlineSize>2.0</defaultOutlineSize>
+        <defaultOutlineColor>
+          <customColor reference="../../../org.gephi.preview.plugin.renderers.NodeLabelRenderer/defaultOutlineColor/customColor"/>
+          <mode>CUSTOM</mode>
+        </defaultOutlineColor>
+        <defaultOutlineOpacity>40.0</defaultOutlineOpacity>
+      </org.gephi.preview.plugin.renderers.EdgeLabelRenderer>
+    </registeredRenderers>
+    <mousePressed>false</mousePressed>
+  </previewController>
+  <workspace class="org.gephi.workspace.impl.WorkspaceImpl">
+    <id>1</id>
+    <project>
+      <workspaceIds>
+        <value>2</value>
+      </workspaceIds>
+    </project>
+  </workspace>
+  <typeMap/>
+  <sourceMap/>
+  <managedRenderers>
+    <org.gephi.preview.api.ManagedRenderer>
+      <renderer class="org.gephi.preview.plugin.renderers.EdgeRenderer" reference="../../../previewController/registeredRenderers/org.gephi.preview.plugin.renderers.EdgeRenderer"/>
+      <enabled>true</enabled>
+    </org.gephi.preview.api.ManagedRenderer>
+    <org.gephi.preview.api.ManagedRenderer>
+      <renderer class="org.gephi.preview.plugin.renderers.ArrowRenderer" reference="../../../previewController/registeredRenderers/org.gephi.preview.plugin.renderers.ArrowRenderer"/>
+      <enabled>true</enabled>
+    </org.gephi.preview.api.ManagedRenderer>
+    <org.gephi.preview.api.ManagedRenderer>
+      <renderer class="org.gephi.preview.plugin.renderers.NodeRenderer" reference="../../../previewController/registeredRenderers/org.gephi.preview.plugin.renderers.NodeRenderer"/>
+      <enabled>true</enabled>
+    </org.gephi.preview.api.ManagedRenderer>
+    <org.gephi.preview.api.ManagedRenderer>
+      <renderer class="org.gephi.preview.plugin.renderers.NodeLabelRenderer" reference="../../../previewController/registeredRenderers/org.gephi.preview.plugin.renderers.NodeLabelRenderer"/>
+      <enabled>true</enabled>
+    </org.gephi.preview.api.ManagedRenderer>
+    <org.gephi.preview.api.ManagedRenderer>
+      <renderer class="org.gephi.preview.plugin.renderers.EdgeLabelRenderer" reference="../../../previewController/registeredRenderers/org.gephi.preview.plugin.renderers.EdgeLabelRenderer"/>
+      <enabled>true</enabled>
+    </org.gephi.preview.api.ManagedRenderer>
+  </managedRenderers>
+  <enabledMouseListeners/>
+</org.gephi.preview.PreviewModelImpl>

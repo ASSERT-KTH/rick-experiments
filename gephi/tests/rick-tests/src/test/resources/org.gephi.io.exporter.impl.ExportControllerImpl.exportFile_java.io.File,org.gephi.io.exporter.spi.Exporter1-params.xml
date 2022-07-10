@@ -1,0 +1,26 @@
+<object-array>
+  <file>/home/dee/jungle.pdf</file>
+  <org.gephi.io.exporter.preview.PDFExporter>
+    <progress class="org.gephi.desktop.progress.ProgressTicketImpl"/>
+    <cancel>false</cancel>
+    <marginTop>18.0</marginTop>
+    <marginBottom>18.0</marginBottom>
+    <marginLeft>18.0</marginLeft>
+    <marginRight>18.0</marginRight>
+    <landscape>false</landscape>
+    <pageSize class="com.itextpdf.text.RectangleReadOnly">
+      <llx>0.0</llx>
+      <lly>0.0</lly>
+      <urx>595.0</urx>
+      <ury>842.0</ury>
+      <rotation>0</rotation>
+      <border>-1</border>
+      <useVariableBorders>false</useVariableBorders>
+      <borderWidth>-1.0</borderWidth>
+      <borderWidthLeft>-1.0</borderWidthLeft>
+      <borderWidthRight>-1.0</borderWidthRight>
+      <borderWidthTop>-1.0</borderWidthTop>
+      <borderWidthBottom>-1.0</borderWidthBottom>
+    </pageSize>
+  </org.gephi.io.exporter.preview.PDFExporter>
+</object-array>

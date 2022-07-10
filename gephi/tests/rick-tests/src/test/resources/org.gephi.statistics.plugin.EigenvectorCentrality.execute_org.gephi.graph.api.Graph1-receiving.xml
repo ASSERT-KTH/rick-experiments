@@ -1,0 +1,7 @@
+<org.gephi.statistics.plugin.EigenvectorCentrality>
+  <numRuns>100</numRuns>
+  <sumChange>0.0</sumChange>
+  <progress class="org.gephi.desktop.progress.ProgressTicketImpl"/>
+  <isCanceled>false</isCanceled>
+  <isDirected>true</isDirected>
+</org.gephi.statistics.plugin.EigenvectorCentrality>
