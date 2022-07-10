@@ -1,0 +1,14 @@
+<object-array>
+  <java.awt.geom.AffineTransform serialization="custom">
+    <java.awt.geom.AffineTransform>
+      <default>
+        <m00>1.0</m00>
+        <m01>0.0</m01>
+        <m02>0.0</m02>
+        <m10>0.0</m10>
+        <m11>1.0</m11>
+        <m12>0.0</m12>
+      </default>
+    </java.awt.geom.AffineTransform>
+  </java.awt.geom.AffineTransform>
+</object-array>

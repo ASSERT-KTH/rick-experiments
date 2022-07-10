@@ -1,0 +1,62 @@
+<object-array>
+  <sun.awt.image.ByteInterleavedRaster>
+    <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+      <width>8</width>
+      <height>128</height>
+      <numBands defined-in="java.awt.image.SampleModel">1</numBands>
+      <dataType>0</dataType>
+      <bandOffsets>
+        <int>0</int>
+      </bandOffsets>
+      <bankIndices>
+        <int>0</int>
+      </bankIndices>
+      <numBands>1</numBands>
+      <numBanks>1</numBanks>
+      <scanlineStride>8</scanlineStride>
+      <pixelStride>1</pixelStride>
+    </sampleModel>
+    <dataBuffer class="java.awt.image.DataBufferByte">
+      <dataType>0</dataType>
+      <banks>1</banks>
+      <offset>0</offset>
+      <size>1024</size>
+      <offsets>
+        <int>0</int>
+      </offsets>
+      <theTrackable>
+        <theState>UNTRACKABLE</theState>
+        <numDynamicAgents>0</numDynamicAgents>
+      </theTrackable>
+      <data>iWOVlXbw2NiLuqhfX1+Hiajbi6iLqKioBgYGBgYGBgZfiwZmQTMGQYuLi4uLi4uLVDMGZoJTi4szOzNBBkFFU1RUBgZTBkEzO0FBBouLBgaLi4u629vbuouLi4uLi4uLi4tjU1OCU1OLi4uLgnR0iwYGU1NTU1OCi7qui4uLi4uLi4uLi4uuiwYGBlMGU1NTOztUMwYzMzOoi4uoi9uL29HR29vb29vbi4uLi4uurq7R29Gu29vb3tuui4uCgouLOwYGiwZTgouJi4uLZotTi9HR29vb29vb29uu267ert7R24uLrouLi9vbrtuu3q7e0duurouLrq6urotTRSsrK9GLrouCU4JT4+vr6+v9/f2urq6uyMjIyK6CgsiYyOPji66CgoJjY2NFT08xMSsrJGOCdK7IyOPj6+vx8ePj466uyMjj4+OuyIKCmJiursjIRYJPY0VFT4KuyMiYgoKCguPr4+P24+Pj8ePj4+XlyMjjyK7I48jIgjE9TU1NY4KYrq50fa7IgnT9//b8/OX96fz9///25f39ruv29tPe5f2LgnR9fX19i/39//b8/Pz8296wsMiwi9P96//2/Pb8/CImKzUxJCsrXwZBNSYxNEnw/Pz8/f3///D2/Pf33unp8Nu6urze6/0kKCgoNTU1Nv//////225T8Nvw29723vb4//z8/N72/TMGi9uLi25uOygoIiImKEH8////9vbb2/D4/Pz9/Pbei4uLU2Zui7o7OwaLi2ZBNdvburq63vb2/Pb2//39/fYGZmaLjrzevDs7QUFmU1NT///9//39/f3w297e/d7e3vzr/evr/ev9/Pze6/3r6966sLCwsN7e3qi63t6wjrDeZotTdHSOjo5fQTVBU1NFNmZBQTVBblNB27q6ury8vI729vb33t733vD23vf93t7e9t7e/ev93t7but6O3rCOjrqLjrCwsN6wX2Zmi4uLU44GU1NTU1NTUyIiICIhIiEgOzs7MzsoOyhfX3FOTl87X19fOztfO18Gi19fX18GBk4GBkEGQTtBQV8GZlNmBkFTQUFBZlNTU1MzMzVBQTU1QSYiJiYmJiYmIiAiIiIhICJUVDsGMzszO19fX2ZmU4tmZlOLU4tTU1OLi4uLi4uLi1OLi4uLdG6L297e3rCwsN4mNjExJyYmJkE1QTY2NjY23t7p6f3p/enb3uvp6enp6evr/enp6enpBkVTSXR0YHQiJiYmJzExMYlmU1NTU1hY3t7esN6wsN7b267esN7e6dvesLCwsLCwQVOLsI50sH0GNVNFRUk0SV8GU1NTU0k0i7qLjo6OjrAGZouLi1OOjig1QUE2NjY2OwYGQTZTNlOLZmZui4uOjg==</data>
+      <bankdata>
+        <byte-array reference="../../data"/>
+      </bankdata>
+    </dataBuffer>
+    <minX>0</minX>
+    <minY>0</minY>
+    <width>8</width>
+    <height>128</height>
+    <sampleModelTranslateX>0</sampleModelTranslateX>
+    <sampleModelTranslateY>0</sampleModelTranslateY>
+    <numBands>1</numBands>
+    <numDataElements>1</numDataElements>
+    <theTrackable reference="../dataBuffer/theTrackable"/>
+    <bandOffset>0</bandOffset>
+    <dataOffsets>
+      <int>0</int>
+    </dataOffsets>
+    <scanlineStride>8</scanlineStride>
+    <pixelStride>1</pixelStride>
+    <data reference="../dataBuffer/data"/>
+    <type>1</type>
+    <maxX defined-in="sun.awt.image.ByteComponentRaster">8</maxX>
+    <maxY defined-in="sun.awt.image.ByteComponentRaster">128</maxY>
+    <inOrder>true</inOrder>
+    <dbOffset>0</dbOffset>
+    <dbOffsetPacked>0</dbOffsetPacked>
+    <packed>false</packed>
+    <maxX>8</maxX>
+    <maxY>128</maxY>
+  </sun.awt.image.ByteInterleavedRaster>
+</object-array>

@@ -1,0 +1,30 @@
+<object-array>
+  <org.apache.pdfbox.pdmodel.common.PDRectangle>
+    <rectArray>
+      <direct>false</direct>
+      <objects>
+        <org.apache.pdfbox.cos.COSFloat>
+          <direct>false</direct>
+          <value>0.0</value>
+          <valueAsString>0.0</valueAsString>
+        </org.apache.pdfbox.cos.COSFloat>
+        <org.apache.pdfbox.cos.COSFloat>
+          <direct>false</direct>
+          <value>0.0</value>
+          <valueAsString>0.0</valueAsString>
+        </org.apache.pdfbox.cos.COSFloat>
+        <org.apache.pdfbox.cos.COSFloat>
+          <direct>false</direct>
+          <value>612.0</value>
+          <valueAsString>612.0</valueAsString>
+        </org.apache.pdfbox.cos.COSFloat>
+        <org.apache.pdfbox.cos.COSFloat>
+          <direct>false</direct>
+          <value>792.0</value>
+          <valueAsString>792.0</valueAsString>
+        </org.apache.pdfbox.cos.COSFloat>
+      </objects>
+      <needToBeUpdated>false</needToBeUpdated>
+    </rectArray>
+  </org.apache.pdfbox.pdmodel.common.PDRectangle>
+</object-array>

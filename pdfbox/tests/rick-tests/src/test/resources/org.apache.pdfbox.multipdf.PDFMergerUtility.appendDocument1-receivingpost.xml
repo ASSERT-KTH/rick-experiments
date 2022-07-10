@@ -1,0 +1,11 @@
+<org.apache.pdfbox.multipdf.PDFMergerUtility>
+  <sources>
+    <file>./workload/000752-locked-1.pdf</file>
+    <file>./workload/000752-locked-2.pdf</file>
+  </sources>
+  <destinationFileName>./workload/000752-merged.pdf</destinationFileName>
+  <ignoreAcroFormErrors>false</ignoreAcroFormErrors>
+  <documentMergeMode>PDFBOX_LEGACY_MODE</documentMergeMode>
+  <acroFormMergeMode>PDFBOX_LEGACY_MODE</acroFormMergeMode>
+  <nextFieldNum>1</nextFieldNum>
+</org.apache.pdfbox.multipdf.PDFMergerUtility>

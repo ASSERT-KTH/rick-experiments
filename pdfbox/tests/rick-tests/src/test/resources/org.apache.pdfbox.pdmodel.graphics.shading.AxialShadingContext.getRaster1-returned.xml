@@ -1,0 +1,69 @@
+<sun.awt.image.ByteInterleavedRaster>
+  <sampleModel class="java.awt.image.PixelInterleavedSampleModel">
+    <width>14</width>
+    <height>12</height>
+    <numBands defined-in="java.awt.image.SampleModel">4</numBands>
+    <dataType>0</dataType>
+    <bandOffsets>
+      <int>0</int>
+      <int>1</int>
+      <int>2</int>
+      <int>3</int>
+    </bandOffsets>
+    <bankIndices>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </bankIndices>
+    <numBands>4</numBands>
+    <numBanks>1</numBanks>
+    <scanlineStride>56</scanlineStride>
+    <pixelStride>4</pixelStride>
+  </sampleModel>
+  <dataBuffer class="java.awt.image.DataBufferByte">
+    <dataType>0</dataType>
+    <banks>1</banks>
+    <offset>0</offset>
+    <size>672</size>
+    <offsets>
+      <int>0</int>
+    </offsets>
+    <theTrackable>
+      <theState>STABLE</theState>
+      <numDynamicAgents>0</numDynamicAgents>
+    </theTrackable>
+    <data>/v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+/////v////7////+////</data>
+    <bankdata>
+      <byte-array reference="../../data"/>
+    </bankdata>
+  </dataBuffer>
+  <minX>0</minX>
+  <minY>0</minY>
+  <width>14</width>
+  <height>12</height>
+  <sampleModelTranslateX>0</sampleModelTranslateX>
+  <sampleModelTranslateY>0</sampleModelTranslateY>
+  <numBands>4</numBands>
+  <numDataElements>4</numDataElements>
+  <theTrackable reference="../dataBuffer/theTrackable"/>
+  <bandOffset>0</bandOffset>
+  <dataOffsets>
+    <int>0</int>
+    <int>1</int>
+    <int>2</int>
+    <int>3</int>
+  </dataOffsets>
+  <scanlineStride>56</scanlineStride>
+  <pixelStride>4</pixelStride>
+  <data reference="../dataBuffer/data"/>
+  <type>1</type>
+  <maxX defined-in="sun.awt.image.ByteComponentRaster">14</maxX>
+  <maxY defined-in="sun.awt.image.ByteComponentRaster">12</maxY>
+  <inOrder>true</inOrder>
+  <dbOffset>0</dbOffset>
+  <dbOffsetPacked>0</dbOffsetPacked>
+  <packed>false</packed>
+  <maxX>14</maxX>
+  <maxY>12</maxY>
+</sun.awt.image.ByteInterleavedRaster>

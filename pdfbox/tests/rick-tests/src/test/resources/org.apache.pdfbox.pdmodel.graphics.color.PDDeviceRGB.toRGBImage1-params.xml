@@ -1,0 +1,67 @@
+<object-array>
+  <sun.awt.image.ByteBandedRaster>
+    <sampleModel class="java.awt.image.BandedSampleModel">
+      <width>1</width>
+      <height>1</height>
+      <numBands defined-in="java.awt.image.SampleModel">3</numBands>
+      <dataType>0</dataType>
+      <bandOffsets>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+      </bandOffsets>
+      <bankIndices>
+        <int>0</int>
+        <int>1</int>
+        <int>2</int>
+      </bankIndices>
+      <numBands>3</numBands>
+      <numBanks>3</numBanks>
+      <scanlineStride>1</scanlineStride>
+      <pixelStride>1</pixelStride>
+    </sampleModel>
+    <dataBuffer class="java.awt.image.DataBufferByte">
+      <dataType>0</dataType>
+      <banks>3</banks>
+      <offset>0</offset>
+      <size>1</size>
+      <offsets>
+        <int>0</int>
+        <int>0</int>
+        <int>0</int>
+      </offsets>
+      <theTrackable>
+        <theState>STABLE</theState>
+        <numDynamicAgents>0</numDynamicAgents>
+      </theTrackable>
+      <data>AA==</data>
+      <bankdata>
+        <byte-array reference="../../data"/>
+        <byte-array>AA==</byte-array>
+        <byte-array>AA==</byte-array>
+      </bankdata>
+    </dataBuffer>
+    <minX>0</minX>
+    <minY>0</minY>
+    <width>1</width>
+    <height>1</height>
+    <sampleModelTranslateX>0</sampleModelTranslateX>
+    <sampleModelTranslateY>0</sampleModelTranslateY>
+    <numBands>3</numBands>
+    <numDataElements>3</numDataElements>
+    <theTrackable reference="../dataBuffer/theTrackable"/>
+    <dataOffsets>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </dataOffsets>
+    <scanlineStride>1</scanlineStride>
+    <data>
+      <byte-array reference="../../dataBuffer/data"/>
+      <byte-array reference="../../dataBuffer/bankdata/byte-array[2]"/>
+      <byte-array reference="../../dataBuffer/bankdata/byte-array[3]"/>
+    </data>
+    <maxX>1</maxX>
+    <maxY>1</maxY>
+  </sun.awt.image.ByteBandedRaster>
+</object-array>

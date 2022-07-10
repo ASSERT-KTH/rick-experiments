@@ -1,0 +1,18 @@
+<object-array>
+  <java.awt.geom.Point2D_-Float>
+    <x>199.8</x>
+    <y>241.5</y>
+  </java.awt.geom.Point2D_-Float>
+  <java.awt.geom.Point2D_-Float>
+    <x>271.8</x>
+    <y>241.5</y>
+  </java.awt.geom.Point2D_-Float>
+  <java.awt.geom.Point2D_-Float>
+    <x>271.8</x>
+    <y>457.5</y>
+  </java.awt.geom.Point2D_-Float>
+  <java.awt.geom.Point2D_-Float>
+    <x>199.8</x>
+    <y>457.5</y>
+  </java.awt.geom.Point2D_-Float>
+</object-array>

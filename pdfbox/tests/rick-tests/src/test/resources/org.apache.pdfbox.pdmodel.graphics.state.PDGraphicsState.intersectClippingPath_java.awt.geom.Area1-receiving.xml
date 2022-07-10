@@ -1,0 +1,82 @@
+<org.apache.pdfbox.pdmodel.graphics.state.PDGraphicsState>
+  <isClippingPathDirty>false</isClippingPathDirty>
+  <clippingPath>
+    <curves>
+      <sun.awt.geom.Order0>
+        <direction>1</direction>
+        <x>0.0</x>
+        <y>0.0</y>
+      </sun.awt.geom.Order0>
+      <sun.awt.geom.Order1>
+        <direction>1</direction>
+        <x0>0.0</x0>
+        <y0>0.0</y0>
+        <x1>0.0</x1>
+        <y1>792.0</y1>
+        <xmin>0.0</xmin>
+        <xmax>0.0</xmax>
+      </sun.awt.geom.Order1>
+      <sun.awt.geom.Order1>
+        <direction>-1</direction>
+        <x0>612.0</x0>
+        <y0>0.0</y0>
+        <x1>612.0</x1>
+        <y1>792.0</y1>
+        <xmin>612.0</xmin>
+        <xmax>612.0</xmax>
+      </sun.awt.geom.Order1>
+    </curves>
+  </clippingPath>
+  <currentTransformationMatrix>
+    <single>
+      <float>1.0</float>
+      <float>0.0</float>
+      <float>0.0</float>
+      <float>0.0</float>
+      <float>1.0</float>
+      <float>0.0</float>
+      <float>0.0</float>
+      <float>0.0</float>
+      <float>1.0</float>
+    </single>
+  </currentTransformationMatrix>
+  <strokingColor>
+    <components>
+      <float>0.0</float>
+    </components>
+    <colorSpace class="org.apache.pdfbox.pdmodel.graphics.color.PDDeviceGray">
+      <initialColor reference="../.."/>
+    </colorSpace>
+  </strokingColor>
+  <nonStrokingColor reference="../strokingColor"/>
+  <strokingColorSpace class="org.apache.pdfbox.pdmodel.graphics.color.PDDeviceGray" reference="../strokingColor/colorSpace"/>
+  <nonStrokingColorSpace class="org.apache.pdfbox.pdmodel.graphics.color.PDDeviceGray" reference="../strokingColor/colorSpace"/>
+  <textState>
+    <characterSpacing>0.0</characterSpacing>
+    <wordSpacing>0.0</wordSpacing>
+    <horizontalScaling>100.0</horizontalScaling>
+    <leading>0.0</leading>
+    <fontSize>0.0</fontSize>
+    <renderingMode>FILL</renderingMode>
+    <rise>0.0</rise>
+    <knockout>true</knockout>
+  </textState>
+  <lineWidth>1.0</lineWidth>
+  <lineCap>0</lineCap>
+  <lineJoin>0</lineJoin>
+  <miterLimit>10.0</miterLimit>
+  <lineDashPattern>
+    <phase>0</phase>
+    <array/>
+  </lineDashPattern>
+  <strokeAdjustment>false</strokeAdjustment>
+  <blendMode class="org.apache.pdfbox.pdmodel.graphics.blend.BlendMode$1"/>
+  <alphaConstant>1.0</alphaConstant>
+  <nonStrokingAlphaConstant>1.0</nonStrokingAlphaConstant>
+  <alphaSource>false</alphaSource>
+  <overprint>false</overprint>
+  <nonStrokingOverprint>false</nonStrokingOverprint>
+  <overprintMode>0.0</overprintMode>
+  <flatness>1.0</flatness>
+  <smoothness>0.0</smoothness>
+</org.apache.pdfbox.pdmodel.graphics.state.PDGraphicsState>

@@ -1,0 +1,10 @@
+<org.apache.pdfbox.pdmodel.graphics.color.PDDeviceRGB>
+  <initialColor>
+    <components>
+      <float>0.0</float>
+      <float>0.0</float>
+      <float>0.0</float>
+    </components>
+    <colorSpace class="org.apache.pdfbox.pdmodel.graphics.color.PDDeviceRGB" reference="../.."/>
+  </initialColor>
+</org.apache.pdfbox.pdmodel.graphics.color.PDDeviceRGB>
