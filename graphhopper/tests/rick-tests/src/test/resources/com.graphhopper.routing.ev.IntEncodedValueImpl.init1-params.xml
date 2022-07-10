@@ -1,0 +1,8 @@
+<object-array>
+  <com.graphhopper.routing.ev.EncodedValue_-InitializerConfig>
+    <dataIndex>-1</dataIndex>
+    <shift>32</shift>
+    <nextShift>32</nextShift>
+    <bitMask>0</bitMask>
+  </com.graphhopper.routing.ev.EncodedValue_-InitializerConfig>
+</object-array>

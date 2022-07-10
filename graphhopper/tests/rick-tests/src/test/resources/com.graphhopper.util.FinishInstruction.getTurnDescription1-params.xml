@@ -1,0 +1,391 @@
+<object-array>
+  <com.graphhopper.util.TranslationMap_-TranslationHashMap>
+    <locale>en_US</locale>
+    <map>
+      <entry>
+        <string>web.hike</string>
+        <string>Hike</string>
+      </entry>
+      <entry>
+        <string>pt_transfer_to</string>
+        <string>change to %1$s</string>
+      </entry>
+      <entry>
+        <string>web.locations_not_found</string>
+        <string>Routing not possible. Location(s) not found in the area.</string>
+      </entry>
+      <entry>
+        <string>turn_onto</string>
+        <string>%1$s onto %2$s</string>
+      </entry>
+      <entry>
+        <string>web.searching_location</string>
+        <string>Searching location</string>
+      </entry>
+      <entry>
+        <string>way_contains_private</string>
+        <string>private road</string>
+      </entry>
+      <entry>
+        <string>web.pt_route_info</string>
+        <string>arrives at %1$s with %2$s transfers (%3$s)</string>
+      </entry>
+      <entry>
+        <string>navigate.in_km</string>
+        <string>In %1$s kilometers</string>
+      </entry>
+      <entry>
+        <string>web.motorcycle</string>
+        <string>Motorcycle</string>
+      </entry>
+      <entry>
+        <string>turn_right</string>
+        <string>turn right</string>
+      </entry>
+      <entry>
+        <string>via</string>
+        <string>via</string>
+      </entry>
+      <entry>
+        <string>web.via_hint</string>
+        <string>Via</string>
+      </entry>
+      <entry>
+        <string>web.route_timed_out</string>
+        <string>Route calculation timed out</string>
+      </entry>
+      <entry>
+        <string>navigate.then</string>
+        <string>then</string>
+      </entry>
+      <entry>
+        <string>ft_abbr</string>
+        <string>ft</string>
+      </entry>
+      <entry>
+        <string>stopover</string>
+        <string>waypoint %1$s</string>
+      </entry>
+      <entry>
+        <string>min_abbr</string>
+        <string>min</string>
+      </entry>
+      <entry>
+        <string>road</string>
+        <string>road</string>
+      </entry>
+      <entry>
+        <string>web.zoom_in</string>
+        <string>Zoom in</string>
+      </entry>
+      <entry>
+        <string>web.gpx_export_button</string>
+        <string>GPX export</string>
+      </entry>
+      <entry>
+        <string>navigate.in_km_singular</string>
+        <string>In 1 kilometer</string>
+      </entry>
+      <entry>
+        <string>continue</string>
+        <string>continue</string>
+      </entry>
+      <entry>
+        <string>pt_start_trip</string>
+        <string>enter %1$s</string>
+      </entry>
+      <entry>
+        <string>navigate.in_ft</string>
+        <string>In %1$s feet</string>
+      </entry>
+      <entry>
+        <string>web.staticlink</string>
+        <string>static link</string>
+      </entry>
+      <entry>
+        <string>finish</string>
+        <string>arrive at destination</string>
+      </entry>
+      <entry>
+        <string>turn_left</string>
+        <string>turn left</string>
+      </entry>
+      <entry>
+        <string>web.racingbike</string>
+        <string>Racing Bike</string>
+      </entry>
+      <entry>
+        <string>u_turn</string>
+        <string>make a U-turn</string>
+      </entry>
+      <entry>
+        <string>navigate.accept_risks_after_warning</string>
+        <string>I understand and agree</string>
+      </entry>
+      <entry>
+        <string>continue_onto</string>
+        <string>continue onto %1$s</string>
+      </entry>
+      <entry>
+        <string>web.drag_to_reorder</string>
+        <string>Drag to reorder</string>
+      </entry>
+      <entry>
+        <string>web.set_end</string>
+        <string>Set as end</string>
+      </entry>
+      <entry>
+        <string>web.truck</string>
+        <string>Truck</string>
+      </entry>
+      <entry>
+        <string>turn_slight_left</string>
+        <string>turn slight left</string>
+      </entry>
+      <entry>
+        <string>web.to_hint</string>
+        <string>To</string>
+      </entry>
+      <entry>
+        <string>m_abbr</string>
+        <string>m</string>
+      </entry>
+      <entry>
+        <string>web.show_coords</string>
+        <string>Show coordinates</string>
+      </entry>
+      <entry>
+        <string>web.pt_route_info_walking</string>
+        <string>arrives at %1$s with just walking (%2$s)</string>
+      </entry>
+      <entry>
+        <string>web.more_button</string>
+        <string>more</string>
+      </entry>
+      <entry>
+        <string>navigate.warning</string>
+        <string>WARNING: This application is highly experimental! Use at your own risk!</string>
+      </entry>
+      <entry>
+        <string>keep_right</string>
+        <string>keep right</string>
+      </entry>
+      <entry>
+        <string>turn_sharp_right</string>
+        <string>turn sharp right</string>
+      </entry>
+      <entry>
+        <string>hour_abbr</string>
+        <string>h</string>
+      </entry>
+      <entry>
+        <string>roundabout_exit</string>
+        <string>At roundabout, take exit %1$s</string>
+      </entry>
+      <entry>
+        <string>navigate.for_km</string>
+        <string>for %1$s kilometers</string>
+      </entry>
+      <entry>
+        <string>web.intermediate_label</string>
+        <string>Intermediate</string>
+      </entry>
+      <entry>
+        <string>turn_sharp_left</string>
+        <string>turn sharp left</string>
+      </entry>
+      <entry>
+        <string>total_descend</string>
+        <string>%1$s total descent</string>
+      </entry>
+      <entry>
+        <string>navigate.in_mi_singular</string>
+        <string>In 1 mile</string>
+      </entry>
+      <entry>
+        <string>web.foot</string>
+        <string>Foot</string>
+      </entry>
+      <entry>
+        <string>web.bus</string>
+        <string>Bus</string>
+      </entry>
+      <entry>
+        <string>cycleway</string>
+        <string>cycleway</string>
+      </entry>
+      <entry>
+        <string>web.refresh_button</string>
+        <string>Refresh page</string>
+      </entry>
+      <entry>
+        <string>web.delete_from_route</string>
+        <string>Delete from Route</string>
+      </entry>
+      <entry>
+        <string>roundabout_exit_onto</string>
+        <string>At roundabout, take exit %1$s onto %2$s</string>
+      </entry>
+      <entry>
+        <string>web.bike</string>
+        <string>Bike</string>
+      </entry>
+      <entry>
+        <string>navigate.in_mi</string>
+        <string>In %1$s miles</string>
+      </entry>
+      <entry>
+        <string>km_abbr</string>
+        <string>km</string>
+      </entry>
+      <entry>
+        <string>unpaved</string>
+        <string>unpaved</string>
+      </entry>
+      <entry>
+        <string>web.zoom_out</string>
+        <string>Zoom out</string>
+      </entry>
+      <entry>
+        <string>web.route_request_failed</string>
+        <string>Route request failed</string>
+      </entry>
+      <entry>
+        <string>unknown</string>
+        <string>unknown instruction sign '%1$s'</string>
+      </entry>
+      <entry>
+        <string>way_contains_ford</string>
+        <string>Attention, there is a ford on the way</string>
+      </entry>
+      <entry>
+        <string>keep_left</string>
+        <string>keep left</string>
+      </entry>
+      <entry>
+        <string>web.marker</string>
+        <string>Marker</string>
+      </entry>
+      <entry>
+        <string>navigate.in_m</string>
+        <string>In %1$s meters</string>
+      </entry>
+      <entry>
+        <string>web.server_status</string>
+        <string>Status</string>
+      </entry>
+      <entry>
+        <string>way_contains_ferry</string>
+        <string>take the ferry</string>
+      </entry>
+      <entry>
+        <string>web.set_intermediate</string>
+        <string>Set intermediate</string>
+      </entry>
+      <entry>
+        <string>web.small_truck</string>
+        <string>Small Truck</string>
+      </entry>
+      <entry>
+        <string>web.gh_offline_info</string>
+        <string>GraphHopper API offline?</string>
+      </entry>
+      <entry>
+        <string>web.mtb</string>
+        <string>MTB</string>
+      </entry>
+      <entry>
+        <string>paved</string>
+        <string>paved</string>
+      </entry>
+      <entry>
+        <string>web.searching_location_failed</string>
+        <string>Searching location failed</string>
+      </entry>
+      <entry>
+        <string>web.end_label</string>
+        <string>End</string>
+      </entry>
+      <entry>
+        <string>day_abbr</string>
+        <string>d</string>
+      </entry>
+      <entry>
+        <string>web.set_start</string>
+        <string>Set as start</string>
+      </entry>
+      <entry>
+        <string>web.current_location</string>
+        <string>Current Location</string>
+      </entry>
+      <entry>
+        <string>web.car</string>
+        <string>Car</string>
+      </entry>
+      <entry>
+        <string>web.search_button</string>
+        <string>Search</string>
+      </entry>
+      <entry>
+        <string>off_bike</string>
+        <string>get off the bike</string>
+      </entry>
+      <entry>
+        <string>web.start_label</string>
+        <string>Start</string>
+      </entry>
+      <entry>
+        <string>web.from_hint</string>
+        <string>From</string>
+      </entry>
+      <entry>
+        <string>web.center_map</string>
+        <string>Center map here</string>
+      </entry>
+      <entry>
+        <string>mi_abbr</string>
+        <string>mi</string>
+      </entry>
+      <entry>
+        <string>way_contains_toll</string>
+        <string>toll road</string>
+      </entry>
+      <entry>
+        <string>roundabout_enter</string>
+        <string>Enter roundabout</string>
+      </entry>
+      <entry>
+        <string>web.route</string>
+        <string>Route</string>
+      </entry>
+      <entry>
+        <string>navigate.for_mi</string>
+        <string>for %1$s miles</string>
+      </entry>
+      <entry>
+        <string>way</string>
+        <string>way</string>
+      </entry>
+      <entry>
+        <string>total_ascend</string>
+        <string>%1$s total ascent</string>
+      </entry>
+      <entry>
+        <string>pt_end_trip</string>
+        <string>leave %1$s</string>
+      </entry>
+      <entry>
+        <string>small_way</string>
+        <string>small way</string>
+      </entry>
+      <entry>
+        <string>turn_slight_right</string>
+        <string>turn slight right</string>
+      </entry>
+      <entry>
+        <string>web.route_info</string>
+        <string>%1$s will take %2$s</string>
+      </entry>
+    </map>
+  </com.graphhopper.util.TranslationMap_-TranslationHashMap>
+</object-array>

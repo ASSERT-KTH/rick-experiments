@@ -1,0 +1,19 @@
+<object-array>
+  <com.graphhopper.util.PointList>
+    <size>2</size>
+    <is3D>true</is3D>
+    <latitudes>
+      <double>59.3602898</double>
+      <double>59.3601374</double>
+    </latitudes>
+    <longitudes>
+      <double>17.9892365</double>
+      <double>17.9885961</double>
+    </longitudes>
+    <elevations>
+      <double>19.0</double>
+      <double>20.0</double>
+    </elevations>
+    <isImmutable>false</isImmutable>
+  </com.graphhopper.util.PointList>
+</object-array>

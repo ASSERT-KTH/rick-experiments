@@ -1,0 +1,16 @@
+<object-array>
+  <com.graphhopper.routing.ev.SimpleBooleanEncodedValue>
+    <name>car_subnetwork</name>
+    <fwdDataIndex>0</fwdDataIndex>
+    <bwdDataIndex>0</bwdDataIndex>
+    <storeTwoDirections>false</storeTwoDirections>
+    <bits>1</bits>
+    <negateReverseDirection>false</negateReverseDirection>
+    <minValue>0</minValue>
+    <maxValue>1</maxValue>
+    <fwdShift>-1</fwdShift>
+    <bwdShift>-1</bwdShift>
+    <fwdMask>0</fwdMask>
+    <bwdMask>0</bwdMask>
+  </com.graphhopper.routing.ev.SimpleBooleanEncodedValue>
+</object-array>

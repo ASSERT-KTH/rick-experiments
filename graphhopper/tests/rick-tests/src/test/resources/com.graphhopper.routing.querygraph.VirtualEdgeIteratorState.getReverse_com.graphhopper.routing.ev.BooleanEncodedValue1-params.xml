@@ -1,0 +1,16 @@
+<object-array>
+  <com.graphhopper.routing.ev.SimpleBooleanEncodedValue>
+    <name>bike$access</name>
+    <fwdDataIndex>1</fwdDataIndex>
+    <bwdDataIndex>1</bwdDataIndex>
+    <storeTwoDirections>true</storeTwoDirections>
+    <bits>1</bits>
+    <negateReverseDirection>false</negateReverseDirection>
+    <minValue>0</minValue>
+    <maxValue>1</maxValue>
+    <fwdShift>11</fwdShift>
+    <bwdShift>12</bwdShift>
+    <fwdMask>2048</fwdMask>
+    <bwdMask>4096</bwdMask>
+  </com.graphhopper.routing.ev.SimpleBooleanEncodedValue>
+</object-array>

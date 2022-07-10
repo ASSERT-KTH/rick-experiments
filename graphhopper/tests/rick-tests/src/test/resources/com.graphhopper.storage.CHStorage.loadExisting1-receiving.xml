@@ -1,0 +1,91 @@
+<com.graphhopper.storage.CHStorage>
+  <shortcuts class="com.graphhopper.storage.RAMIntDataAccess">
+    <byteOrder>
+      <name>LITTLE_ENDIAN</name>
+    </byteOrder>
+    <bitUtil class="com.graphhopper.util.BitUtilLittle"/>
+    <location>graph-cache/</location>
+    <header>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </header>
+    <name>shortcuts_car</name>
+    <segmentSizeInBytes>1048576</segmentSizeInBytes>
+    <segmentSizePower>20</segmentSizePower>
+    <indexDivisor>262143</indexDivisor>
+    <closed defined-in="com.graphhopper.storage.AbstractDataAccess">false</closed>
+    <segments/>
+    <closed>false</closed>
+    <store>true</store>
+    <segmentSizeIntsPower>18</segmentSizeIntsPower>
+  </shortcuts>
+  <S__NODEA>0</S__NODEA>
+  <S__NODEB>4</S__NODEB>
+  <S__WEIGHT>8</S__WEIGHT>
+  <S__SKIP__EDGE1>12</S__SKIP__EDGE1>
+  <S__SKIP__EDGE2>16</S__SKIP__EDGE2>
+  <S__ORIG__FIRST>16</S__ORIG__FIRST>
+  <S__ORIG__LAST>16</S__ORIG__LAST>
+  <shortcutEntryBytes>20</shortcutEntryBytes>
+  <shortcutCount>0</shortcutCount>
+  <nodesCH class="com.graphhopper.storage.RAMIntDataAccess">
+    <byteOrder reference="../../shortcuts/byteOrder"/>
+    <bitUtil class="com.graphhopper.util.BitUtilLittle" reference="../../shortcuts/bitUtil"/>
+    <location>graph-cache/</location>
+    <header>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </header>
+    <name>nodes_ch_car</name>
+    <segmentSizeInBytes>1048576</segmentSizeInBytes>
+    <segmentSizePower>20</segmentSizePower>
+    <indexDivisor>262143</indexDivisor>
+    <closed defined-in="com.graphhopper.storage.AbstractDataAccess">false</closed>
+    <segments/>
+    <closed>false</closed>
+    <store>true</store>
+    <segmentSizeIntsPower>18</segmentSizeIntsPower>
+  </nodesCH>
+  <N__LEVEL>0</N__LEVEL>
+  <N__LAST__SC>4</N__LAST__SC>
+  <nodeCHEntryBytes>8</nodeCHEntryBytes>
+  <nodeCount>-1</nodeCount>
+  <edgeBased>false</edgeBased>
+  <numShortcutsExceedingWeight>0</numShortcutsExceedingWeight>
+</com.graphhopper.storage.CHStorage>

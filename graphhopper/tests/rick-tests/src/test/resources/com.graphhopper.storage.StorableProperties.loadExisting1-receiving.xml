@@ -1,0 +1,39 @@
+<com.graphhopper.storage.StorableProperties>
+  <map class="linked-hash-map"/>
+  <da class="com.graphhopper.storage.RAMDataAccess">
+    <byteOrder>
+      <name>LITTLE_ENDIAN</name>
+    </byteOrder>
+    <bitUtil class="com.graphhopper.util.BitUtilLittle"/>
+    <location>graph-cache/</location>
+    <header>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </header>
+    <name>properties</name>
+    <segmentSizeInBytes>32768</segmentSizeInBytes>
+    <segmentSizePower>15</segmentSizePower>
+    <indexDivisor>32767</indexDivisor>
+    <closed>false</closed>
+    <segments/>
+    <store>true</store>
+  </da>
+</com.graphhopper.storage.StorableProperties>

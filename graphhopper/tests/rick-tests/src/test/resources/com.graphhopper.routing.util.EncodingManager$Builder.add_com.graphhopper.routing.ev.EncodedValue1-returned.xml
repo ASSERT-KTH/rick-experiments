@@ -1,0 +1,56 @@
+<com.graphhopper.routing.util.EncodingManager_-Builder>
+  <em>
+    <edgeEncoders/>
+    <encodedValueMap class="linked-hash-map"/>
+    <relationTagParsers/>
+    <edgeTagParsers/>
+    <turnCostParsers class="linked-hash-map"/>
+    <turnCostConfig>
+      <dataIndex>-1</dataIndex>
+      <shift>32</shift>
+      <nextShift>32</nextShift>
+      <bitMask>0</bitMask>
+    </turnCostConfig>
+    <relationConfig>
+      <dataIndex>-1</dataIndex>
+      <shift>32</shift>
+      <nextShift>32</nextShift>
+      <bitMask>0</bitMask>
+    </relationConfig>
+    <edgeConfig>
+      <dataIndex>-1</dataIndex>
+      <shift>32</shift>
+      <nextShift>32</nextShift>
+      <bitMask>0</bitMask>
+    </edgeConfig>
+  </em>
+  <dateRangeParser>
+    <date>
+      <time>1655974977090</time>
+      <timezone>UTC</timezone>
+    </date>
+  </dateRangeParser>
+  <flagEncoderMap class="linked-hash-map"/>
+  <encodedValueMap class="linked-hash-map">
+    <entry>
+      <string>car_subnetwork</string>
+      <com.graphhopper.routing.ev.SimpleBooleanEncodedValue>
+        <name>car_subnetwork</name>
+        <fwdDataIndex>0</fwdDataIndex>
+        <bwdDataIndex>0</bwdDataIndex>
+        <storeTwoDirections>false</storeTwoDirections>
+        <bits>1</bits>
+        <negateReverseDirection>false</negateReverseDirection>
+        <minValue>0</minValue>
+        <maxValue>1</maxValue>
+        <fwdShift>-1</fwdShift>
+        <bwdShift>-1</bwdShift>
+        <fwdMask>0</fwdMask>
+        <bwdMask>0</bwdMask>
+      </com.graphhopper.routing.ev.SimpleBooleanEncodedValue>
+    </entry>
+  </encodedValueMap>
+  <tagParserSet class="linked-hash-set"/>
+  <turnCostParsers/>
+  <relationTagParsers/>
+</com.graphhopper.routing.util.EncodingManager_-Builder>

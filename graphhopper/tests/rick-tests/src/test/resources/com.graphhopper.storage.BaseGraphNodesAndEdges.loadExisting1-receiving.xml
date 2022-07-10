@@ -1,0 +1,106 @@
+<com.graphhopper.storage.BaseGraphNodesAndEdges>
+  <nodes class="com.graphhopper.storage.RAMIntDataAccess">
+    <byteOrder>
+      <name>LITTLE_ENDIAN</name>
+    </byteOrder>
+    <bitUtil class="com.graphhopper.util.BitUtilLittle"/>
+    <location>graph-cache/</location>
+    <header>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </header>
+    <name>nodes</name>
+    <segmentSizeInBytes>1048576</segmentSizeInBytes>
+    <segmentSizePower>20</segmentSizePower>
+    <indexDivisor>262143</indexDivisor>
+    <closed defined-in="com.graphhopper.storage.AbstractDataAccess">false</closed>
+    <segments/>
+    <closed>false</closed>
+    <store>true</store>
+    <segmentSizeIntsPower>18</segmentSizeIntsPower>
+  </nodes>
+  <N__EDGE__REF>0</N__EDGE__REF>
+  <N__LAT>4</N__LAT>
+  <N__LON>8</N__LON>
+  <N__ELE>12</N__ELE>
+  <N__TC>12</N__TC>
+  <nodeEntryBytes>16</nodeEntryBytes>
+  <nodeCount>0</nodeCount>
+  <edges class="com.graphhopper.storage.RAMIntDataAccess">
+    <byteOrder reference="../../nodes/byteOrder"/>
+    <bitUtil class="com.graphhopper.util.BitUtilLittle" reference="../../nodes/bitUtil"/>
+    <location>graph-cache/</location>
+    <header>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </header>
+    <name>edges</name>
+    <segmentSizeInBytes>1048576</segmentSizeInBytes>
+    <segmentSizePower>20</segmentSizePower>
+    <indexDivisor>262143</indexDivisor>
+    <closed defined-in="com.graphhopper.storage.AbstractDataAccess">false</closed>
+    <segments/>
+    <closed>false</closed>
+    <store>true</store>
+    <segmentSizeIntsPower>18</segmentSizeIntsPower>
+  </edges>
+  <E__NODEA>0</E__NODEA>
+  <E__NODEB>4</E__NODEB>
+  <E__LINKA>8</E__LINKA>
+  <E__LINKB>12</E__LINKB>
+  <E__FLAGS>16</E__FLAGS>
+  <E__DIST>24</E__DIST>
+  <E__GEO>28</E__GEO>
+  <E__NAME>32</E__NAME>
+  <intsForFlags>2</intsForFlags>
+  <edgeEntryBytes>36</edgeEntryBytes>
+  <edgeCount>0</edgeCount>
+  <withTurnCosts>false</withTurnCosts>
+  <withElevation>true</withElevation>
+  <bounds>
+    <elevation>true</elevation>
+    <minLon>1.7976931348623157E308</minLon>
+    <maxLon>-1.7976931348623157E308</maxLon>
+    <minLat>1.7976931348623157E308</minLat>
+    <maxLat>-1.7976931348623157E308</maxLat>
+    <minEle>1.7976931348623157E308</minEle>
+    <maxEle>-1.7976931348623157E308</maxEle>
+  </bounds>
+  <frozen>false</frozen>
+</com.graphhopper.storage.BaseGraphNodesAndEdges>

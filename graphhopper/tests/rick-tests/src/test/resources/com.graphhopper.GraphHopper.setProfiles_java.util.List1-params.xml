@@ -1,0 +1,22 @@
+<object-array>
+  <list>
+    <com.graphhopper.config.Profile>
+      <name>car</name>
+      <vehicle>car</vehicle>
+      <weighting>fastest</weighting>
+      <turnCosts>false</turnCosts>
+      <hints>
+        <map/>
+      </hints>
+    </com.graphhopper.config.Profile>
+    <com.graphhopper.config.Profile>
+      <name>bike</name>
+      <vehicle>bike</vehicle>
+      <weighting>fastest</weighting>
+      <turnCosts>false</turnCosts>
+      <hints>
+        <map/>
+      </hints>
+    </com.graphhopper.config.Profile>
+  </list>
+</object-array>

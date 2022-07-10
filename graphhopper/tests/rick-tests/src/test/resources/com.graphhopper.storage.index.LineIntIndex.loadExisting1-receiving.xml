@@ -1,0 +1,54 @@
+<com.graphhopper.storage.index.LineIntIndex>
+  <dataAccess class="com.graphhopper.storage.RAMIntDataAccess">
+    <byteOrder>
+      <name>LITTLE_ENDIAN</name>
+    </byteOrder>
+    <bitUtil class="com.graphhopper.util.BitUtilLittle"/>
+    <location>graph-cache/</location>
+    <header>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </header>
+    <name>location_index</name>
+    <segmentSizeInBytes>1048576</segmentSizeInBytes>
+    <segmentSizePower>20</segmentSizePower>
+    <indexDivisor>262143</indexDivisor>
+    <closed defined-in="com.graphhopper.storage.AbstractDataAccess">false</closed>
+    <segments/>
+    <closed>false</closed>
+    <store>true</store>
+    <segmentSizeIntsPower>18</segmentSizeIntsPower>
+  </dataAccess>
+  <bounds>
+    <elevation>true</elevation>
+    <minLon>10.1391693</minLon>
+    <maxLon>25.1965581</maxLon>
+    <minLat>53.8997012</minLat>
+    <maxLat>69.0812746</maxLat>
+    <minEle>-43.209999084472656</minEle>
+    <maxEle>4284.7900390625</maxEle>
+  </bounds>
+  <minResolutionInMeter>300</minResolutionInMeter>
+  <size>0</size>
+  <leafs>0</leafs>
+  <checksum>0</checksum>
+  <initialized>false</initialized>
+</com.graphhopper.storage.index.LineIntIndex>

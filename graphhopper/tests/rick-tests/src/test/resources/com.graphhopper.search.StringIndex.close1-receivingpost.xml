@@ -1,0 +1,111 @@
+<com.graphhopper.search.StringIndex>
+  <throwExceptionIfTooLong>false</throwExceptionIfTooLong>
+  <keys class="com.graphhopper.storage.RAMDataAccess">
+    <byteOrder>
+      <name>LITTLE_ENDIAN</name>
+    </byteOrder>
+    <bitUtil class="com.graphhopper.util.BitUtilLittle"/>
+    <location>graph-cache/</location>
+    <header>
+      <int>6</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </header>
+    <name>string_index_keys</name>
+    <segmentSizeInBytes>1048576</segmentSizeInBytes>
+    <segmentSizePower>20</segmentSizePower>
+    <indexDivisor>1048575</indexDivisor>
+    <closed>true</closed>
+    <segments/>
+    <store>true</store>
+  </keys>
+  <vals class="com.graphhopper.storage.RAMDataAccess">
+    <byteOrder reference="../../keys/byteOrder"/>
+    <bitUtil class="com.graphhopper.util.BitUtilLittle" reference="../../keys/bitUtil"/>
+    <location>graph-cache/</location>
+    <header>
+      <int>6</int>
+      <int>5340068</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+      <int>0</int>
+    </header>
+    <name>string_index_vals</name>
+    <segmentSizeInBytes>1048576</segmentSizeInBytes>
+    <segmentSizePower>20</segmentSizePower>
+    <indexDivisor>1048575</indexDivisor>
+    <closed>true</closed>
+    <segments/>
+    <store>true</store>
+  </vals>
+  <keysInMem class="linked-hash-map">
+    <entry>
+      <string/>
+      <int>0</int>
+    </entry>
+    <entry>
+      <string>name</string>
+      <int>1</int>
+    </entry>
+  </keysInMem>
+  <keyList>
+    <string/>
+    <string>name</string>
+  </keyList>
+  <smallCache class="com.graphhopper.search.StringIndex$1" serialization="custom">
+    <unserializable-parents/>
+    <map>
+      <default>
+        <loadFactor>0.75</loadFactor>
+        <threshold>1024</threshold>
+      </default>
+      <int>1024</int>
+      <int>0</int>
+    </map>
+    <linked-hash-map>
+      <default>
+        <accessOrder>true</accessOrder>
+      </default>
+    </linked-hash-map>
+    <com.graphhopper.search.StringIndex_-1>
+      <default>
+        <val_-cacheSize>1000</val_-cacheSize>
+        <outer-class reference="../../../.."/>
+      </default>
+    </com.graphhopper.search.StringIndex_-1>
+  </smallCache>
+  <bytePointer>5340068</bytePointer>
+  <lastEntryPointer>-1</lastEntryPointer>
+</com.graphhopper.search.StringIndex>

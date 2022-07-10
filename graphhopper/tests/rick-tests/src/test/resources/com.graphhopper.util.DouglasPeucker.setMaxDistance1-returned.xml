@@ -1,0 +1,7 @@
+<com.graphhopper.util.DouglasPeucker>
+  <normedMaxDist>2.4636827903947217E-14</normedMaxDist>
+  <elevationMaxDistance>0.0</elevationMaxDistance>
+  <maxDistance>1.0</maxDistance>
+  <calc class="com.graphhopper.util.DistancePlaneProjection"/>
+  <approx>true</approx>
+</com.graphhopper.util.DouglasPeucker>
