@@ -1,5 +1,6 @@
-# Setup and running
+# RICK workload for Gephi
 
+Setup and running:
 - Clone Gephi [v0.9.6](https://github.com/gephi/gephi/tree/v0.9.6)
 - `cd /path/to/gephi/modules/application/` 
 - To enable Glowroot, modify `default_options` in `/path/to/gephi/modules/application/target/gephi.conf`
