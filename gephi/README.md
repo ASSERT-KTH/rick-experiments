@@ -21,3 +21,5 @@ Setup and running:
   - Choose between different presets
   - Enable/disable features
   - Export as SVG, PDF, PNG 
+
+#### [Data](https://kth-my.sharepoint.com/:f:/g/personal/deepikat_ug_kth_se/EpATFwDVPhBFqS2IOxPLAcIBhgumvYfcZ9CXVc3hE2sLkg?e=HP7qFM)
