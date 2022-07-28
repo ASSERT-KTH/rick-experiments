@@ -3,6 +3,7 @@
 Running
 - Download `sweden-latest.osm.pbf` from [this page](https://download.geofabrik.de/europe/sweden.html)
 - Running the server: `java -Ddw.graphhopper.datareader.file=sweden-latest.osm.pbf -jar graphhopper-web-5.3.jar server config.yml`
+- Running the server with Glowroot: `java -javaagent:/path/to/glowroot/glowroot.jar -Ddw.graphhopper.datareader.file=sweden-latest.osm.pbf -jar graphhopper-web-5.3.jar server config.yml`
 - The first time you run Graphhopper, it takes a long time for the server to be up because graphhopper builds a cache
 - Subsequent runs are faster
 - We've disabled logs, so it seems like not much is going on, but graphhopper is building the `graph-cache` directory
