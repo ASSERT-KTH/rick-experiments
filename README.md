@@ -1,4 +1,4 @@
-# rick-experiments
+## Replication Package - RICK: Mimimicking Production Behavior with Generated Mocks
 
 This repository contains experimental data and results from our evaluation of the test and mock generation tool, [**rick**](https://github.com/castor-software/pankti#rick), with three applications: Graphhopper, Gephi, and PDFBox.
 
