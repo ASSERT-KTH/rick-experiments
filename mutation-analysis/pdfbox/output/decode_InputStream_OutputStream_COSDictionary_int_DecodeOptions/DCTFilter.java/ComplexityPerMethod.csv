@@ -1,0 +1,10 @@
+DCTFilter.clamp( float value );4;3;3
+DCTFilter.decode( InputStream encoded , OutputStream decoded , COSDictionary parameters , int index );5;1;3
+DCTFilter.decode( InputStream encoded , OutputStream decoded , COSDictionary parameters , int index , DecodeOptions options );16;14;82
+DCTFilter.encode( InputStream input , OutputStream encoded , COSDictionary parameters );5;1;3
+DCTFilter.fromBGRtoRGB( Raster raster );10;3;19
+DCTFilter.fromYCCKtoCMYK( Raster raster );21;3;27
+DCTFilter.fromYCbCrtoCMYK( Raster raster );30;3;27
+DCTFilter.getAdobeTransform( IIOMetadata metadata );8;3;11
+DCTFilter.getAdobeTransformByBruteForce( ImageInputStream iis );15;7;39
+DCTFilter.getNumChannels( ImageReader reader );12;5;25

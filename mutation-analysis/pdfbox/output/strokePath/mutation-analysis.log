@@ -1,0 +1,888 @@
+[LOG] Initiating analysis at 2023-06-05 11:57:53.634702
+---------------------------------------------------
+[LOG] Removing pre-existing mutants from current working directory
+[LOG] Cleaning up LittleDarwin results
+---------------------------------------------------
+[LOG] Working with strokePath
+[LOG] Generating mutants for its parent PageDrawer.java
+---------------------------------------------------
+[LOG] Running littledarwin on /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/
+[LOG] Invoked LitteDarwin with ['python3', '-m', 'littledarwin', '-m', '-v', '-p', '/home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/', '--all']
+
+    __     _  __   __   __       ____                          _
+   / /    (_)/ /_ / /_ / /___   / __ \ ____ _ _____ _      __ (_)____
+  / /    / // __// __// // _ \ / / / // __ `// ___/| | /| / // // __ \
+ / /___ / // /_ / /_ / //  __// /_/ // /_/ // /    | |/ |/ // // / / /
+/_____//_/ \__/ \__//_/ \___//_____/ \__,_//_/     |__/|__//_//_/ /_/
+
+      _                     _                 ___
+     /_|  /|/|  _/__/'     /_|   _ /   _ ' _ (_  _ _ _  _      _ /
+    (  | /   |(//(///()/) (  |/)(/((/_) /_)  /  / (///)(-((/()/ /(
+                                  /
+
+
+    LittleDarwin version 0.10.7 Copyright (C) 2014-2020 Ali Parsai
+
+    LittleDarwin comes with ABSOLUTELY NO WARRANTY.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; run LittleDarwin --license for details.
+
+    
+Source Path:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering
+Target Path:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults
+Creating Mutation Database:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults/mutationdatabase
+
+(1/13) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/PageDrawerParameters.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  12
+----> NullifyReturnValue : 4
+----> RemoveMethod : 8
+
+(2/13) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/CIDType0Glyph2D.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  9
+----> ConditionalOperatorDeletion : 1
+----> NullifyReturnValue : 2
+----> NullifyObjectInitialization : 2
+----> RemoveNullCheck : 1
+----> RemoveMethod : 2
+----> RelationalOperatorReplacement : 1
+
+(3/13) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/GroupGraphics.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  229
+----> ArithmeticOperatorReplacementBinary : 17
+----> NullifyInputVariable : 51
+----> NullifyReturnValue : 15
+----> NullifyObjectInitialization : 3
+----> LogicalOperatorReplacement : 12
+----> ConditionalOperatorReplacement : 13
+----> ShiftOperatorReplacement : 12
+----> RemoveMethod : 81
+----> RelationalOperatorReplacement : 21
+----> ArithmeticOperatorReplacementShortcut : 4
+
+(4/13) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/TTFGlyph2D.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  34
+----> ArithmeticOperatorReplacementBinary : 1
+----> ConditionalOperatorDeletion : 3
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 3
+----> RemoveNullCheck : 3
+----> ConditionalOperatorReplacement : 7
+----> RemoveMethod : 5
+----> RelationalOperatorReplacement : 9
+
+(5/13) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/SoftMask.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  59
+----> ArithmeticOperatorReplacementBinary : 23
+----> NullifyInputVariable : 5
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 3
+----> RemoveNullCheck : 4
+----> ConditionalOperatorReplacement : 3
+----> RemoveMethod : 6
+----> RelationalOperatorReplacement : 10
+----> ArithmeticOperatorReplacementShortcut : 2
+
+(6/13) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/RenderDestination.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(7/13) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/PageDrawer.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  516
+----> ArithmeticOperatorReplacementBinary : 63
+----> ConditionalOperatorDeletion : 21
+----> NullifyInputVariable : 52
+----> ArithmeticOperatorReplacementUnary : 23
+----> NullifyReturnValue : 27
+----> NullifyObjectInitialization : 76
+----> LogicalOperatorReplacement : 10
+----> RemoveNullCheck : 35
+----> ConditionalOperatorReplacement : 34
+----> ShiftOperatorReplacement : 4
+----> RemoveMethod : 74
+----> RelationalOperatorReplacement : 85
+----> ArithmeticOperatorReplacementShortcut : 12
+
+(8/13) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/Glyph2D.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(9/13) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/TilingPaint.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  50
+----> ArithmeticOperatorReplacementBinary : 10
+----> NullifyInputVariable : 12
+----> ArithmeticOperatorReplacementUnary : 4
+----> NullifyReturnValue : 3
+----> AssignmentOperatorReplacementShortcut : 2
+----> NullifyObjectInitialization : 5
+----> RemoveNullCheck : 1
+----> RemoveMethod : 7
+----> RelationalOperatorReplacement : 6
+
+(10/13) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/TilingPaintFactory.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  94
+----> ArithmeticOperatorReplacementBinary : 10
+----> ConditionalOperatorDeletion : 5
+----> NullifyInputVariable : 5
+----> NullifyReturnValue : 2
+----> NullifyObjectInitialization : 4
+----> RemoveNullCheck : 19
+----> ConditionalOperatorReplacement : 14
+----> RemoveMethod : 7
+----> RelationalOperatorReplacement : 28
+
+(11/13) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/Type1Glyph2D.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  25
+----> ConditionalOperatorDeletion : 1
+----> NullifyReturnValue : 7
+----> NullifyObjectInitialization : 3
+----> RemoveNullCheck : 3
+----> ConditionalOperatorReplacement : 2
+----> RemoveMethod : 4
+----> RelationalOperatorReplacement : 5
+
+(12/13) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/ImageType.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> RemoveMethod : 8
+
+(13/13) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/PDFRenderer.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  135
+----> ArithmeticOperatorReplacementBinary : 5
+----> ConditionalOperatorDeletion : 2
+----> NullifyInputVariable : 22
+----> NullifyReturnValue : 12
+----> NullifyObjectInitialization : 10
+----> RemoveNullCheck : 11
+----> ConditionalOperatorReplacement : 9
+----> RemoveMethod : 39
+----> RelationalOperatorReplacement : 25
+
+Total mutations found:  1171
+--> ArithmeticOperatorReplacementBinary: 129
+--> ConditionalOperatorDeletion: 33
+--> NullifyInputVariable: 147
+--> ArithmeticOperatorReplacementUnary: 27
+--> NullifyReturnValue: 78
+--> AssignmentOperatorReplacementShortcut: 2
+--> NullifyObjectInitialization: 109
+--> LogicalOperatorReplacement: 22
+--> RemoveNullCheck: 77
+--> ConditionalOperatorReplacement: 82
+--> ShiftOperatorReplacement: 16
+--> RemoveMethod: 241
+--> RelationalOperatorReplacement: 190
+--> ArithmeticOperatorReplacementShortcut: 18
+
+
+---------------------------------------------------
+[LOG] Copying mutants of PageDrawer.java
+---------------------------------------------------
+[LOG] Generated 516 mutants
+---------------------------------------------------
+[LOG] Backing up original RICK test as ./PageDrawer.java/original-test.java
+[LOG] Invoking cp /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java ./PageDrawer.java/original-test.java
+---------------------------------------------------
+[LOG] Generating variants of original RICK test
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/strokePath/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/strokePath/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/strokePath/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/strokePath/test-po.java
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/strokePath/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/strokePath/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/strokePath/test-all.java
+---------------------------------------------------
+[LOG] Replacing originalPageDrawer.java with ./PageDrawer.java/385.java
+[LOG] Invoking cp ./PageDrawer.java/385.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/PageDrawer.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.apache.pdfbox:pdfbox >----------------------
+[INFO] Building Apache PDFBox 2.0.24
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ pdfbox ---
+[INFO] Deleting /home/dee/dev/rick-major-review/pdfbox/pdfbox/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (default) @ pdfbox ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ pdfbox ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ pdfbox ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ pdfbox ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 21 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ pdfbox ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 609 source files to /home/dee/dev/rick-major-review/pdfbox/pdfbox/target/classes
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+/home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/PDDocument.java:[471,96] [deprecation] toList() in COSArrayList has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/PDDocument.java:[471,45] [deprecation] toList() in COSArrayList has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType3Font.java:[196,17] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/text/LegacyPDFStreamEngine.java:[152,19] [deprecation] showGlyph(Matrix,PDFont,int,String,Vector) in PDFStreamEngine has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.java:[375,17] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType0Font.java:[414,17] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType0Font.java:[416,29] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/TrueTypeEmbedder.java:[120,18] [deprecation] getUnicodeCmap() in TrueTypeFont has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType1Font.java:[395,17] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/UnmodifiableCOSDictionary.java:[286,16] [deprecation] mergeInto(COSDictionary) in COSDictionary has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDCIDFontType0.java:[439,17] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType1CFont.java:[304,17] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDCIDFontType2.java:[312,17] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-1031-1) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-1031-2) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-1065-1) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-1065-2) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-1100-1) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-1100-2) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3208) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3656) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3682) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3940) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3783) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3785) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3947) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3948) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3949) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3950) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3951) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3964) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3977) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (Genko) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3999) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4106) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4106b) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4115) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4197) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4184) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4184-2) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4308) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4338) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4339) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4408) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4418-1) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4418-2) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4423) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4517) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4750) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4153) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4490) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-5196) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ pdfbox ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 229 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ pdfbox ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 115 source files to /home/dee/dev/rick-major-review/pdfbox/pdfbox/target/test-classes
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+/home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/common/COSArrayListTest.java:[27,22] [deprecation] Assert in junit.framework has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/interactive/form/PDButtonTest.java:[109,19] [deprecation] setPushButton(boolean) in PDButton has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/interactive/form/PDButtonTest.java:[125,19] [deprecation] setRadioButton(boolean) in PDButton has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/io/UnmodifiableCOSDictionaryTest.java:[66,37] [deprecation] mergeInto(COSDictionary) in COSDictionary has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStream.java:[98,21] [deprecation] setNonStrokingColor(int,int,int) in PDPageContentStream has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStream.java:[100,21] [deprecation] setNonStrokingColor(int) in PDPageContentStream has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStream.java:[128,21] [deprecation] setStrokingColor(int,int,int) in PDPageContentStream has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStream.java:[130,21] [deprecation] setStrokingColor(int) in PDPageContentStream has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/font/PDFontTest.java:[288,36] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/PageModeTest.java:[27,55] [deprecation] none() in ExpectedException has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/cos/TestCOSInteger.java:[106,54] [deprecation] doubleValue() in COSInteger has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/graphics/state/RenderingIntentTest.java:[27,55] [deprecation] none() in ExpectedException has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/cos/TestCOSFloat.java:[187,78] [deprecation] doubleValue() in COSFloat has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/common/COSArrayListTest.java:[46,55] [deprecation] none() in ExpectedException has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/PageLayoutTest.java:[52,55] [deprecation] none() in ExpectedException has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdfwriter/COSWriterXRefEntryTest.java:[27,55] [deprecation] none() in ExpectedException has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[180,26] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[189,19] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[199,19] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[208,19] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[218,9] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[226,9] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[234,9] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[242,9] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/cos/COSObjectKeyTest.java:[27,55] [deprecation] none() in ExpectedException has been deprecated
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ pdfbox ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ pdfbox ---
+[INFO] Signature checking is skipped.
+[INFO] 
+[INFO] --- maven-bundle-plugin:3.5.1:bundle (default-bundle) @ pdfbox ---
+[INFO] 
+[INFO] --- maven-site-plugin:3.7:attach-descriptor (attach-descriptor) @ pdfbox ---
+[INFO] Skipping because packaging 'bundle' is not pom.
+[INFO] 
+[INFO] >>> maven-source-plugin:3.0.1:jar (attach-sources) > generate-sources @ pdfbox >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (default) @ pdfbox ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ pdfbox ---
+[INFO] 
+[INFO] <<< maven-source-plugin:3.0.1:jar (attach-sources) < generate-sources @ pdfbox <<<
+[INFO] 
+[INFO] 
+[INFO] --- maven-source-plugin:3.0.1:jar (attach-sources) @ pdfbox ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/pdfbox/pdfbox/target/pdfbox-2.0.24-sources.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ pdfbox ---
+[INFO] Installing /home/dee/dev/rick-major-review/pdfbox/pdfbox/target/pdfbox-2.0.24.jar to /home/dee/.m2/repository/org/apache/pdfbox/pdfbox/2.0.24/pdfbox-2.0.24.jar
+[INFO] Installing /home/dee/dev/rick-major-review/pdfbox/pdfbox/pom.xml to /home/dee/.m2/repository/org/apache/pdfbox/pdfbox/2.0.24/pdfbox-2.0.24.pom
+[INFO] Installing /home/dee/dev/rick-major-review/pdfbox/pdfbox/target/pdfbox-2.0.24-sources.jar to /home/dee/.m2/repository/org/apache/pdfbox/pdfbox/2.0.24/pdfbox-2.0.24-sources.jar
+[INFO] 
+[INFO] --- maven-bundle-plugin:3.5.1:install (default-install) @ pdfbox ---
+[INFO] Installing org/apache/pdfbox/pdfbox/2.0.24/pdfbox-2.0.24.jar
+[INFO] Writing OBR metadata
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  51.849 s
+[INFO] Finished at: 2023-06-05T11:59:19+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/strokePath/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPageDrawerRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (default) @ rick-major ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ rick-major ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ rick-major ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 69 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 38 source files to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.pdfbox.rendering.TestPageDrawerRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.239 s - in org.apache.pdfbox.rendering.TestPageDrawerRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  47.099 s
+[INFO] Finished at: 2023-06-05T12:00:10+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/pdfbox/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.840 s
+[INFO] Finished at: 2023-06-05T12:00:16+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./PageDrawer.java/original-test.java
+[LOG] Invoking cp ./PageDrawer.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/strokePath/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPageDrawerRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (default) @ rick-major ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ rick-major ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ rick-major ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 69 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 38 source files to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.pdfbox.rendering.TestPageDrawerRickGen
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 25.587 s <<< FAILURE! - in org.apache.pdfbox.rendering.TestPageDrawerRickGen
+[ERROR] test_strokePath_PO_555753857be74b738a876daa406fdfcf  Time elapsed: 11.613 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+graphics2D.setComposite(
+    <any java.awt.Composite>
+);
+-> at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_strokePath_PO_555753857be74b738a876daa406fdfcf(TestPageDrawerRickGen.java:67)
+Actually, there were zero interactions with this mock.
+
+	at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_strokePath_PO_555753857be74b738a876daa406fdfcf(TestPageDrawerRickGen.java:67)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestPageDrawerRickGen.test_strokePath_PO_555753857be74b738a876daa406fdfcf:67 
+Wanted but not invoked:
+graphics2D.setComposite(
+    <any java.awt.Composite>
+);
+-> at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_strokePath_PO_555753857be74b738a876daa406fdfcf(TestPageDrawerRickGen.java:67)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  41.303 s
+[INFO] Finished at: 2023-06-05T12:01:02+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/pdfbox/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.408 s
+[INFO] Finished at: 2023-06-05T12:01:07+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./PageDrawer.java/original-test.java
+[LOG] Invoking cp ./PageDrawer.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/strokePath/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPageDrawerRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (default) @ rick-major ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ rick-major ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ rick-major ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 69 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 38 source files to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.pdfbox.rendering.TestPageDrawerRickGen
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 17.619 s <<< FAILURE! - in org.apache.pdfbox.rendering.TestPageDrawerRickGen
+[ERROR] test_strokePath_CO_555753857be74b738a876daa406fdfcf  Time elapsed: 10.161 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+graphics2D.setComposite(<any>);
+-> at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_strokePath_CO_555753857be74b738a876daa406fdfcf(TestPageDrawerRickGen.java:85)
+Actually, there were zero interactions with this mock.
+
+	at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_strokePath_CO_555753857be74b738a876daa406fdfcf(TestPageDrawerRickGen.java:85)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestPageDrawerRickGen.test_strokePath_CO_555753857be74b738a876daa406fdfcf:85 
+Wanted but not invoked:
+graphics2D.setComposite(<any>);
+-> at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_strokePath_CO_555753857be74b738a876daa406fdfcf(TestPageDrawerRickGen.java:85)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  29.887 s
+[INFO] Finished at: 2023-06-05T12:01:41+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/pdfbox/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.411 s
+[INFO] Finished at: 2023-06-05T12:01:46+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./PageDrawer.java/original-test.java
+[LOG] Invoking cp ./PageDrawer.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./PageDrawer.java/original-test.java
+[LOG] Invoking cp ./PageDrawer.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPageDrawerRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (default) @ rick-major ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ rick-major ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ rick-major ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 69 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 38 source files to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.pdfbox.rendering.TestPageDrawerRickGen
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 17.576 s <<< FAILURE! - in org.apache.pdfbox.rendering.TestPageDrawerRickGen
+[ERROR] test_strokePath_CO_555753857be74b738a876daa406fdfcf  Time elapsed: 10.117 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+graphics2D.setComposite(<any>);
+-> at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_strokePath_CO_555753857be74b738a876daa406fdfcf(TestPageDrawerRickGen.java:85)
+Actually, there were zero interactions with this mock.
+
+	at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_strokePath_CO_555753857be74b738a876daa406fdfcf(TestPageDrawerRickGen.java:85)
+
+[ERROR] test_strokePath_PO_555753857be74b738a876daa406fdfcf  Time elapsed: 6.734 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+graphics2D.setComposite(
+    <any java.awt.Composite>
+);
+-> at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_strokePath_PO_555753857be74b738a876daa406fdfcf(TestPageDrawerRickGen.java:67)
+Actually, there were zero interactions with this mock.
+
+	at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_strokePath_PO_555753857be74b738a876daa406fdfcf(TestPageDrawerRickGen.java:67)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestPageDrawerRickGen.test_strokePath_CO_555753857be74b738a876daa406fdfcf:85 
+Wanted but not invoked:
+graphics2D.setComposite(<any>);
+-> at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_strokePath_CO_555753857be74b738a876daa406fdfcf(TestPageDrawerRickGen.java:85)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestPageDrawerRickGen.test_strokePath_PO_555753857be74b738a876daa406fdfcf:67 
+Wanted but not invoked:
+graphics2D.setComposite(
+    <any java.awt.Composite>
+);
+-> at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_strokePath_PO_555753857be74b738a876daa406fdfcf(TestPageDrawerRickGen.java:67)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  30.254 s
+[INFO] Finished at: 2023-06-05T12:02:20+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/pdfbox/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.262 s
+[INFO] Finished at: 2023-06-05T12:02:24+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting PageDrawer.java to original
+[LOG] Invoking cp ./PageDrawer.java/original.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/PageDrawer.java
+---------------------------------------------------
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/strokePath/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/PageDrawer.java', '/home/dee/dev/rick-major-review/finches/output/strokePath/']
+
+
+---------------------------------------------------
+[LOG] Finishing analysis at 2023-06-05 12:02:25.113027
+====== END OF THE LINE ======

@@ -1,0 +1,136 @@
+***not in a method***;3;1;0
+PDPageContentStream.PDPageContentStream( PDDocument doc , PDAppearanceStream appearance );0;1;3
+PDPageContentStream.PDPageContentStream( PDDocument doc , PDAppearanceStream appearance , OutputStream outputStream );0;1;7
+PDPageContentStream.PDPageContentStream( PDDocument doc , PDFormXObject form , OutputStream outputStream );0;1;7
+PDPageContentStream.PDPageContentStream( PDDocument doc , PDTilingPattern pattern , OutputStream outputStream );0;1;7
+PDPageContentStream.PDPageContentStream( PDDocument document , PDPage sourcePage );0;2;7
+PDPageContentStream.PDPageContentStream( PDDocument document , PDPage sourcePage , AppendMode appendContent , boolean compress );0;1;3
+PDPageContentStream.PDPageContentStream( PDDocument document , PDPage sourcePage , AppendMode appendContent , boolean compress , boolean resetContext );9;9;56
+PDPageContentStream.PDPageContentStream( PDDocument document , PDPage sourcePage , boolean appendContent , boolean compress );0;1;3
+PDPageContentStream.PDPageContentStream( PDDocument document , PDPage sourcePage , boolean appendContent , boolean compress , boolean resetContext );0;2;3
+PDPageContentStream.addBezier31( float x1 , float y1 , float x3 , float y3 );1;1;3
+PDPageContentStream.addBezier312( float x1 , float y1 , float x2 , float y2 , float x3 , float y3 );1;1;3
+PDPageContentStream.addBezier32( float x2 , float y2 , float x3 , float y3 );1;1;3
+PDPageContentStream.addComment( String comment );6;3;9
+PDPageContentStream.addLine( float xStart , float yStart , float xEnd , float yEnd );2;2;8
+PDPageContentStream.addPolygon( float [ ] x , float [ ] y );7;5;22
+PDPageContentStream.addRect( float x , float y , float width , float height );2;2;11
+PDPageContentStream.appendCOSName( COSName name );2;1;3
+PDPageContentStream.appendRawCommands( String commands );2;1;3
+PDPageContentStream.appendRawCommands( byte [ ] commands );1;1;3
+PDPageContentStream.appendRawCommands( double data );1;1;3
+PDPageContentStream.appendRawCommands( float data );1;1;3
+PDPageContentStream.appendRawCommands( int data );1;1;3
+PDPageContentStream.beginMarkedContent( COSName tag );2;1;4
+PDPageContentStream.beginMarkedContent( COSName tag , PDPropertyList propertyList );3;1;5
+PDPageContentStream.beginMarkedContentSequence( COSName tag );2;1;3
+PDPageContentStream.beginMarkedContentSequence( COSName tag , COSName propsName );3;1;5
+PDPageContentStream.beginText( );2;2;8
+PDPageContentStream.clip( );2;2;8
+PDPageContentStream.clipEvenOdd( );2;2;8
+PDPageContentStream.clipPath( int windingRule );5;4;19
+PDPageContentStream.close( );3;3;11
+PDPageContentStream.closeAndFillAndStroke( );2;2;7
+PDPageContentStream.closeAndFillAndStrokeEvenOdd( );2;2;7
+PDPageContentStream.closeAndStroke( );2;2;7
+PDPageContentStream.closePath( );2;2;7
+PDPageContentStream.closeSubPath( );1;1;3
+PDPageContentStream.concatenate2CTM( AffineTransform at );3;1;3
+PDPageContentStream.concatenate2CTM( double a , double b , double c , double d , double e , double f );2;1;3
+PDPageContentStream.curveTo( float x1 , float y1 , float x2 , float y2 , float x3 , float y3 );2;2;13
+PDPageContentStream.curveTo1( float x1 , float y1 , float x3 , float y3 );2;2;11
+PDPageContentStream.curveTo2( float x2 , float y2 , float x3 , float y3 );2;2;11
+PDPageContentStream.drawForm( PDFormXObject form );3;2;8
+PDPageContentStream.drawImage( PDImageXObject image , Matrix matrix );5;2;12
+PDPageContentStream.drawImage( PDImageXObject image , float x , float y );2;1;3
+PDPageContentStream.drawImage( PDImageXObject image , float x , float y , float width , float height );5;2;12
+PDPageContentStream.drawImage( PDInlineImage inlineImage , float x , float y );2;1;3
+PDPageContentStream.drawImage( PDInlineImage inlineImage , float x , float y , float width , float height );9;6;42
+PDPageContentStream.drawInlineImage( PDInlineImage inlineImage , float x , float y );2;1;3
+PDPageContentStream.drawInlineImage( PDInlineImage inlineImage , float x , float y , float width , float height );2;1;3
+PDPageContentStream.drawLine( float xStart , float yStart , float xEnd , float yEnd );2;2;9
+PDPageContentStream.drawPolygon( float [ ] x , float [ ] y );2;2;8
+PDPageContentStream.drawString( String text );2;1;3
+PDPageContentStream.drawXObject( PDXObject xobject , AffineTransform transform );5;3;21
+PDPageContentStream.drawXObject( PDXObject xobject , float x , float y , float width , float height );3;1;4
+PDPageContentStream.endMarkedContent( );1;1;3
+PDPageContentStream.endMarkedContentSequence( );1;1;3
+PDPageContentStream.endText( );3;2;8
+PDPageContentStream.fill( );2;2;7
+PDPageContentStream.fill( int windingRule );4;3;14
+PDPageContentStream.fillAndStroke( );2;2;7
+PDPageContentStream.fillAndStrokeEvenOdd( );2;2;7
+PDPageContentStream.fillEvenOdd( );2;2;7
+PDPageContentStream.fillPolygon( float [ ] x , float [ ] y );2;2;8
+PDPageContentStream.fillRect( float x , float y , float width , float height );2;2;8
+PDPageContentStream.getName( PDColorSpace colorSpace );6;4;12
+PDPageContentStream.isOutside255Interval( int val );5;2;3
+PDPageContentStream.isOutsideOneInterval( double val );5;2;3
+PDPageContentStream.isOverwrite( );3;1;3
+PDPageContentStream.isPrepend( );3;1;3
+PDPageContentStream.lineTo( float x , float y );2;2;9
+PDPageContentStream.moveTextPositionByAmount( float tx , float ty );1;1;3
+PDPageContentStream.moveTo( float x , float y );2;2;9
+PDPageContentStream.newLine( );3;2;7
+PDPageContentStream.newLineAtOffset( float tx , float ty );3;2;9
+PDPageContentStream.restoreGraphicsState( );4;5;19
+PDPageContentStream.saveGraphicsState( );4;5;19
+PDPageContentStream.setCharacterSpacing( float spacing );1;1;4
+PDPageContentStream.setFont( PDFont font , float fontSize );3;3;17
+PDPageContentStream.setGraphicsStateParameters( PDExtendedGraphicsState state );2;1;4
+PDPageContentStream.setHorizontalScaling( float scale );1;1;4
+PDPageContentStream.setLeading( double leading );1;1;3
+PDPageContentStream.setLeading( float leading );1;1;4
+PDPageContentStream.setLineCapStyle( int lineCapStyle );6;4;15
+PDPageContentStream.setLineDashPattern( float [ ] pattern , float phase );2;3;14
+PDPageContentStream.setLineJoinStyle( int lineJoinStyle );6;4;15
+PDPageContentStream.setLineWidth( float lineWidth );2;2;8
+PDPageContentStream.setMiterLimit( float miterLimit );4;3;12
+PDPageContentStream.setNonStrokingColor( Color color );6;1;6
+PDPageContentStream.setNonStrokingColor( PDColor color );7;9;28
+PDPageContentStream.setNonStrokingColor( double c , double m , double y , double k );1;1;3
+PDPageContentStream.setNonStrokingColor( double g );1;1;3
+PDPageContentStream.setNonStrokingColor( float [ ] components );4;6;21
+PDPageContentStream.setNonStrokingColor( float c , float m , float y , float k );5;5;13
+PDPageContentStream.setNonStrokingColor( float g );2;2;9
+PDPageContentStream.setNonStrokingColor( float r , float g , float b );4;4;12
+PDPageContentStream.setNonStrokingColor( int c , int m , int y , int k );9;5;8
+PDPageContentStream.setNonStrokingColor( int g );3;2;7
+PDPageContentStream.setNonStrokingColor( int r , int g , int b );7;4;8
+PDPageContentStream.setNonStrokingColorSpace( PDColorSpace colorSpace );2;1;5
+PDPageContentStream.setNonStrokingColorSpaceStack( PDColorSpace colorSpace );3;2;10
+PDPageContentStream.setRenderingMode( RenderingMode rm );2;1;4
+PDPageContentStream.setStrokingColor( Color color );6;1;6
+PDPageContentStream.setStrokingColor( PDColor color );7;9;28
+PDPageContentStream.setStrokingColor( double g );1;1;3
+PDPageContentStream.setStrokingColor( float [ ] components );4;6;21
+PDPageContentStream.setStrokingColor( float c , float m , float y , float k );5;5;13
+PDPageContentStream.setStrokingColor( float g );2;2;9
+PDPageContentStream.setStrokingColor( float r , float g , float b );4;4;12
+PDPageContentStream.setStrokingColor( int c , int m , int y , int k );9;5;8
+PDPageContentStream.setStrokingColor( int g );3;2;7
+PDPageContentStream.setStrokingColor( int r , int g , int b );7;4;8
+PDPageContentStream.setStrokingColorSpace( PDColorSpace colorSpace );2;1;5
+PDPageContentStream.setStrokingColorSpaceStack( PDColorSpace colorSpace );3;2;10
+PDPageContentStream.setTextMatrix( AffineTransform matrix );3;1;3
+PDPageContentStream.setTextMatrix( Matrix matrix );4;2;8
+PDPageContentStream.setTextMatrix( double a , double b , double c , double d , double e , double f );2;1;3
+PDPageContentStream.setTextRise( float rise );1;1;4
+PDPageContentStream.setTextRotation( double angle , double tx , double ty );1;1;3
+PDPageContentStream.setTextScaling( double sx , double sy , double tx , double ty );2;1;3
+PDPageContentStream.setTextTranslation( double tx , double ty );1;1;3
+PDPageContentStream.setWordSpacing( float spacing );1;1;4
+PDPageContentStream.shadingFill( PDShading shading );3;2;8
+PDPageContentStream.showText( String text );2;1;5
+PDPageContentStream.showTextInternal( String text );7;5;22
+PDPageContentStream.showTextWithPositioning( Object [ ] textWithPositioningArray );3;4;20
+PDPageContentStream.stroke( );2;2;7
+PDPageContentStream.transform( Matrix matrix );2;2;8
+PDPageContentStream.write( String text );2;1;3
+PDPageContentStream.writeAffineTransform( AffineTransform transform );2;2;8
+PDPageContentStream.writeBytes( byte [ ] data );1;1;3
+PDPageContentStream.writeLine( );1;1;3
+PDPageContentStream.writeOperand( COSName name );2;1;4
+PDPageContentStream.writeOperand( float real );5;4;16
+PDPageContentStream.writeOperand( int integer );1;1;4
+PDPageContentStream.writeOperator( String text );2;1;4

@@ -1,0 +1,19 @@
+PDFormXObject.PDFormXObject( COSStream stream );0;1;4
+PDFormXObject.PDFormXObject( COSStream stream , ResourceCache cache );0;1;4
+PDFormXObject.PDFormXObject( PDDocument document );0;1;4
+PDFormXObject.PDFormXObject( PDStream stream );0;1;4
+PDFormXObject.getBBox( );5;2;9
+PDFormXObject.getContentStream( );3;1;3
+PDFormXObject.getContents( );2;1;3
+PDFormXObject.getFormType( );2;1;3
+PDFormXObject.getGroup( );7;3;11
+PDFormXObject.getMatrix( );2;1;3
+PDFormXObject.getOptionalContent( );3;2;8
+PDFormXObject.getResources( );8;3;12
+PDFormXObject.getStructParents( );2;1;3
+PDFormXObject.setBBox( PDRectangle bbox );4;2;10
+PDFormXObject.setFormType( int formType );1;1;3
+PDFormXObject.setMatrix( AffineTransform transform );4;2;10
+PDFormXObject.setOptionalContent( PDPropertyList oc );2;1;3
+PDFormXObject.setResources( PDResources resources );2;1;3
+PDFormXObject.setStructParents( int structParent );1;1;3

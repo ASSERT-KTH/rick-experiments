@@ -1,0 +1,44 @@
+{
+    "mut": "setMediaBox_PDRectangle",
+    "CUT": "org.apache.pdfbox.pdmodel.PDPage",
+    "mutant-file": "./PDPage.java/139.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.199 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.379 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.182 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 9.935 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox"
+},
+{
+    "mut": "setMediaBox_PDRectangle",
+    "CUT": "org.apache.pdfbox.pdmodel.PDPage",
+    "mutant-file": "./PDPage.java/167.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.549 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.665 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.889 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.009 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox"
+},
+{
+    "mut": "setMediaBox_PDRectangle",
+    "CUT": "org.apache.pdfbox.pdmodel.PDPage",
+    "mutant-file": "./PDPage.java/23.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.607 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.222 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.071 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.217 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox"
+},
+{
+    "mut": "setMediaBox_PDRectangle",
+    "CUT": "org.apache.pdfbox.pdmodel.PDPage",
+    "mutant-file": "./PDPage.java/93.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.046 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.33 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.999 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.979 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox"
+},

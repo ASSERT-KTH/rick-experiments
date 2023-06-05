@@ -1,0 +1,6 @@
+RandomAccessInputStream.RandomAccessInputStream( RandomAccessRead randomAccessRead );0;1;4
+RandomAccessInputStream.available( );4;2;9
+RandomAccessInputStream.read( );6;3;18
+RandomAccessInputStream.read( byte [ ] b , int off , int len );6;3;18
+RandomAccessInputStream.restorePosition( );1;1;3
+RandomAccessInputStream.skip( long n );4;1;6

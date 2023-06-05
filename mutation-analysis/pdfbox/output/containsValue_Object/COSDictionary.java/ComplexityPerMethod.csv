@@ -1,0 +1,104 @@
+***not in a method***;1;1;0
+COSDictionary.COSDictionary( );0;1;2
+COSDictionary.COSDictionary( COSDictionary dict );0;1;3
+COSDictionary.accept( ICOSVisitor visitor );3;1;3
+COSDictionary.addAll( COSDictionary dic );2;2;6
+COSDictionary.asUnmodifiableDictionary( );3;1;3
+COSDictionary.clear( );1;1;3
+COSDictionary.containsKey( COSName name );3;1;3
+COSDictionary.containsKey( String name );3;1;3
+COSDictionary.containsValue( Object value );5;3;8
+COSDictionary.entrySet( );2;1;3
+COSDictionary.getBoolean( COSName firstKey , COSName secondKey , boolean defaultValue );5;2;9
+COSDictionary.getBoolean( COSName key , boolean defaultValue );3;1;3
+COSDictionary.getBoolean( String key , boolean defaultValue );3;1;3
+COSDictionary.getCOSArray( COSName key );4;2;8
+COSDictionary.getCOSDictionary( COSName key );4;2;8
+COSDictionary.getCOSName( COSName key );4;2;8
+COSDictionary.getCOSName( COSName key , COSName defaultValue );5;2;8
+COSDictionary.getCOSObject( COSName key );4;2;8
+COSDictionary.getCOSStream( COSName key );4;2;8
+COSDictionary.getDate( COSName key );4;2;8
+COSDictionary.getDate( COSName key , Calendar defaultValue );6;2;8
+COSDictionary.getDate( String key );3;1;3
+COSDictionary.getDate( String key , Calendar defaultValue );4;1;3
+COSDictionary.getDictionaryObject( COSName firstKey , COSName secondKey );9;3;8
+COSDictionary.getDictionaryObject( COSName key );3;3;12
+COSDictionary.getDictionaryObject( String [ ] keyList );8;3;8
+COSDictionary.getDictionaryObject( String key );3;1;3
+COSDictionary.getDictionaryString( COSBase base , List < COSBase > objs );14;9;48
+COSDictionary.getEmbeddedDate( String embedded , COSName key );4;1;3
+COSDictionary.getEmbeddedDate( String embedded , COSName key , Calendar defaultValue );7;2;9
+COSDictionary.getEmbeddedDate( String embedded , String key );4;1;3
+COSDictionary.getEmbeddedDate( String embedded , String key , Calendar defaultValue );5;1;3
+COSDictionary.getEmbeddedInt( String embeddedDictionary , COSName key );5;1;3
+COSDictionary.getEmbeddedInt( String embeddedDictionary , COSName key , int defaultValue );6;2;9
+COSDictionary.getEmbeddedInt( String embeddedDictionary , String key );4;1;3
+COSDictionary.getEmbeddedInt( String embeddedDictionary , String key , int defaultValue );4;1;3
+COSDictionary.getEmbeddedString( String embedded , COSName key );5;1;3
+COSDictionary.getEmbeddedString( String embedded , COSName key , String defaultValue );6;2;9
+COSDictionary.getEmbeddedString( String embedded , String key );5;1;3
+COSDictionary.getEmbeddedString( String embedded , String key , String defaultValue );6;1;3
+COSDictionary.getFlag( COSName field , int bitFlag );5;1;4
+COSDictionary.getFloat( COSName key );4;1;3
+COSDictionary.getFloat( COSName key , float defaultValue );3;2;9
+COSDictionary.getFloat( String key );4;1;3
+COSDictionary.getFloat( String key , float defaultValue );3;1;3
+COSDictionary.getInt( COSName firstKey , COSName secondKey );5;1;3
+COSDictionary.getInt( COSName firstKey , COSName secondKey , int defaultValue );4;2;9
+COSDictionary.getInt( COSName key );4;1;3
+COSDictionary.getInt( COSName key , int defaultValue );3;1;3
+COSDictionary.getInt( String [ ] keyList , int defaultValue );3;2;9
+COSDictionary.getInt( String key );4;1;3
+COSDictionary.getInt( String key , int defaultValue );3;1;3
+COSDictionary.getItem( COSName firstKey , COSName secondKey );9;3;8
+COSDictionary.getItem( COSName key );3;1;3
+COSDictionary.getItem( String key );3;1;3
+COSDictionary.getKeyForValue( Object value );6;5;13
+COSDictionary.getLong( COSName key );4;1;3
+COSDictionary.getLong( COSName key , long defaultValue );3;2;9
+COSDictionary.getLong( String [ ] keyList , long defaultValue );3;2;9
+COSDictionary.getLong( String key );4;1;3
+COSDictionary.getLong( String key , long defaultValue );3;1;3
+COSDictionary.getNameAsString( COSName key );4;3;13
+COSDictionary.getNameAsString( COSName key , String defaultValue );7;2;8
+COSDictionary.getNameAsString( String key );4;1;3
+COSDictionary.getNameAsString( String key , String defaultValue );5;1;3
+COSDictionary.getObjectFromPath( String objPath );3;4;17
+COSDictionary.getString( COSName key );4;2;9
+COSDictionary.getString( COSName key , String defaultValue );7;2;8
+COSDictionary.getString( String key );4;1;3
+COSDictionary.getString( String key , String defaultValue );5;1;3
+COSDictionary.getValues( );2;1;3
+COSDictionary.isNeedToBeUpdated( );2;1;3
+COSDictionary.keySet( );2;1;3
+COSDictionary.mergeInto( COSDictionary dic );4;3;9
+COSDictionary.removeItem( COSName key );2;1;3
+COSDictionary.setBoolean( COSName key , boolean value );2;1;3
+COSDictionary.setBoolean( String key , boolean value );2;1;3
+COSDictionary.setDate( COSName key , Calendar date );3;1;3
+COSDictionary.setDate( String key , Calendar date );3;1;3
+COSDictionary.setEmbeddedDate( String embedded , COSName key , Calendar date );12;4;12
+COSDictionary.setEmbeddedDate( String embedded , String key , Calendar date );4;1;3
+COSDictionary.setEmbeddedInt( String embeddedDictionary , COSName key , int value );6;2;9
+COSDictionary.setEmbeddedInt( String embeddedDictionary , String key , int value );3;1;3
+COSDictionary.setEmbeddedString( String embedded , COSName key , String value );12;4;12
+COSDictionary.setEmbeddedString( String embedded , String key , String value );4;1;3
+COSDictionary.setFlag( COSName field , int bitFlag , boolean value );4;2;12
+COSDictionary.setFloat( COSName key , float value );3;1;4
+COSDictionary.setFloat( String key , float value );2;1;3
+COSDictionary.setInt( COSName key , int value );2;1;3
+COSDictionary.setInt( String key , int value );2;1;3
+COSDictionary.setItem( COSName key , COSBase value );5;2;10
+COSDictionary.setItem( COSName key , COSObjectable value );5;2;8
+COSDictionary.setItem( String key , COSBase value );3;1;3
+COSDictionary.setItem( String key , COSObjectable value );3;1;3
+COSDictionary.setLong( COSName key , long value );2;1;4
+COSDictionary.setLong( String key , long value );2;1;3
+COSDictionary.setName( COSName key , String value );5;2;8
+COSDictionary.setName( String key , String value );3;1;3
+COSDictionary.setNeedToBeUpdated( boolean flag );1;1;3
+COSDictionary.setString( COSName key , String value );6;2;8
+COSDictionary.setString( String key , String value );3;1;3
+COSDictionary.size( );2;1;3
+COSDictionary.toString( );5;2;10

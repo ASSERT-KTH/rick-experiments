@@ -1,0 +1,819 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.49</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                                              
+</span><span class="outsideLine"><i>0002</i>  * Licensed to the Apache Software Foundation (ASF) under one or more                                           
+</span><span class="outsideLine"><i>0003</i>  * contributor license agreements.  See the NOTICE file distributed with                                        
+</span><span class="outsideLine"><i>0004</i>  * this work for additional information regarding copyright ownership.                                          
+</span><span class="outsideLine"><i>0005</i>  * The ASF licenses this file to You under the Apache License, Version 2.0                                      
+</span><span class="outsideLine"><i>0006</i>  * (the "License"); you may not use this file except in compliance with                                         
+</span><span class="outsideLine"><i>0007</i>  * the License.  You may obtain a copy of the License at                                                        
+</span><span class="outsideLine"><i>0008</i>  *                                                                                                              
+</span><span class="outsideLine"><i>0009</i>  *      http://www.apache.org/licenses/LICENSE-2.0                                                              
+</span><span class="outsideLine"><i>0010</i>  *                                                                                                              
+</span><span class="outsideLine"><i>0011</i>  * Unless required by applicable law or agreed to in writing, software                                          
+</span><span class="outsideLine"><i>0012</i>  * distributed under the License is distributed on an "AS IS" BASIS,                                            
+</span><span class="outsideLine"><i>0013</i>  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                                     
+</span><span class="outsideLine"><i>0014</i>  * See the License for the specific language governing permissions and                                          
+</span><span class="outsideLine"><i>0015</i>  * limitations under the License.                                                                               
+</span><span class="outsideLine"><i>0016</i>  */                                                                                                             
+</span><span class="outsideLine"><i>0017</i> package org.apache.pdfbox.io;                                                                                   
+</span><span class="outsideLine"><i>0018</i>                                                                                                                 
+</span><span class="outsideLine"><i>0019</i> import java.io.EOFException;                                                                                    
+</span><span class="outsideLine"><i>0020</i> import java.io.IOException;                                                                                     
+</span><span class="outsideLine"><i>0021</i>                                                                                                                 
+</span><span class="outsideLine"><i>0022</i> import org.apache.commons.logging.Log;                                                                          
+</span><span class="outsideLine"><i>0023</i> import org.apache.commons.logging.LogFactory;                                                                   
+</span><span class="outsideLine"><i>0024</i> import org.apache.pdfbox.cos.COSStream;                                                                         
+</span><span class="outsideLine"><i>0025</i>                                                                                                                 
+</span><span class="outsideLine"><i>0026</i> /**                                                                                                             
+</span><span class="outsideLine"><i>0027</i>  * Implementation of {@link RandomAccess} as sequence of multiple fixed size pages handled                      
+</span><span class="outsideLine"><i>0028</i>  * by {@link ScratchFile}.                                                                                      
+</span><span class="outsideLine"><i>0029</i>  */                                                                                                             
+</span><span class="outsideLine"><i>0030</i> class ScratchFileBuffer implements RandomAccess                                                                 
+</span><span class="outsideLine"><i>0031</i> {                                                                                                               
+</span><span class="outsideLine"><i>0032</i>     private final int pageSize;                                                                                 
+</span><span class="outsideLine"><i>0033</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0034</i>      * The underlying page handler.                                                                             
+</span><span class="outsideLine"><i>0035</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0036</i>     private ScratchFile pageHandler;                                                                            
+</span><span class="outsideLine"><i>0037</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0038</i>      * The number of bytes of content in this buffer.                                                           
+</span><span class="outsideLine"><i>0039</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0040</i>     private long size = 0;                                                                                      
+</span><span class="outsideLine"><i>0041</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0042</i>      * Index of current page in {@link #pageIndexes} (the nth page within this buffer).                         
+</span><span class="outsideLine"><i>0043</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0044</i>     private int currentPagePositionInPageIndexes;                                                               
+</span><span class="outsideLine"><i>0045</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0046</i>      * The offset of the current page within this buffer.                                                       
+</span><span class="outsideLine"><i>0047</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0048</i>     private long currentPageOffset;                                                                             
+</span><span class="outsideLine"><i>0049</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0050</i>      * The current page data.                                                                                   
+</span><span class="outsideLine"><i>0051</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0052</i>     private byte[] currentPage;                                                                                 
+</span><span class="outsideLine"><i>0053</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0054</i>      * The current position (for next read/write) of the buffer as an offset in the current page.               
+</span><span class="outsideLine"><i>0055</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0056</i>     private int positionInPage;                                                                                 
+</span><span class="outsideLine"><i>0057</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0058</i>      * <code>true</code> if current page was changed by a write method                                          
+</span><span class="outsideLine"><i>0059</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0060</i>     private boolean currentPageContentChanged = false;                                                          
+</span><span class="outsideLine"><i>0061</i>                                                                                                                 
+</span><span class="outsideLine"><i>0062</i>     /** contains ordered list of pages with the index the page is known by page handler ({@link ScratchFile}) */
+</span><span class="outsideLine"><i>0063</i>     private int[] pageIndexes = new int[16];                                                                    
+</span><span class="outsideLine"><i>0064</i>     /** number of pages held by this buffer */                                                                  
+</span><span class="outsideLine"><i>0065</i>     private int pageCount = 0;                                                                                  
+</span><span class="outsideLine"><i>0066</i>                                                                                                                 
+</span><span class="outsideLine"><i>0067</i>     private static final Log LOG = LogFactory.getLog(ScratchFileBuffer.class);                                  
+</span><span class="outsideLine"><i>0068</i>                                                                                                                 
+</span><span class="outsideLine"><i>0069</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0070</i>      * Creates a new buffer using pages handled by provided {@link ScratchFile}.                                
+</span><span class="outsideLine"><i>0071</i>      *                                                                                                          
+</span><span class="outsideLine"><i>0072</i>      * @param pageHandler The {@link ScratchFile} managing the pages to be used by this buffer.                 
+</span><span class="outsideLine"><i>0073</i>      *                                                                                                          
+</span><span class="outsideLine"><i>0074</i>      * @throws IOException If getting first page failed.                                                        
+</span><span class="outsideLine"><i>0075</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0076</i>     ScratchFileBuffer(ScratchFile pageHandler) throws IOException                                               
+</span><span class="methodLine"><i>0077</i>     {                                                                                                           
+</span><span class="methodLine"><i>0078</i>         pageHandler.checkClosed();                                                                              
+</span><span class="outsideLine"><i>0079</i>                                                                                                                 
+</span><span class="methodLine"><i>0080</i>         this.pageHandler = pageHandler;                                                                         
+</span><span class="outsideLine"><i>0081</i>                                                                                                                 
+</span><span class="methodLine"><i>0082</i>         pageSize = this.pageHandler.getPageSize();                                                              
+</span><span class="outsideLine"><i>0083</i>                                                                                                                 
+</span><span class="methodLine"><i>0084</i>         addPage();                                                                                              
+</span><span class="methodLine"><i>0085</i>     }                                                                                                           
+</span><span class="outsideLine"><i>0086</i>                                                                                                                 
+</span><span class="outsideLine"><i>0087</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0088</i>      * Checks if this buffer, or the underlying {@link ScratchFile} have been closed,                           
+</span><span class="outsideLine"><i>0089</i>      * throwing {@link IOException} if so.                                                                      
+</span><span class="outsideLine"><i>0090</i>      *                                                                                                          
+</span><span class="outsideLine"><i>0091</i>      * @throws IOException If either this buffer, or the underlying {@link ScratchFile} have been closed.       
+</span><span class="outsideLine"><i>0092</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0093</i>     private void checkClosed() throws IOException                                                               
+</span><span class="methodLine"><i>0094</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 348</span>{                                                                                                           
+</span><span class="methodLine"><i>0095</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1249</span>pageHandler <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1249</span>==</span> null</span>)                                                                                
+</span><span class="methodLine"><i>0096</i>         {                                                                                                       
+</span><span class="methodLine"><i>0097</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2229</span>new IOException("Buffer already closed")</span>;                                                     
+</span><span class="methodLine"><i>0098</i>         }                                                                                                       
+</span><span class="methodLine"><i>0099</i>         pageHandler.checkClosed();                                                                              
+</span><span class="methodLine"><i>0100</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0101</i>                                                                                                                 
+</span><span class="outsideLine"><i>0102</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0103</i>      * Adds a new page and positions all pointers to start of new page.                                         
+</span><span class="outsideLine"><i>0104</i>      *                                                                                                          
+</span><span class="outsideLine"><i>0105</i>      * @throws IOException if requesting a new page fails                                                       
+</span><span class="outsideLine"><i>0106</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0107</i>     private void addPage() throws IOException                                                                   
+</span><span class="methodLine"><i>0108</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 355</span>{                                                                                                           
+</span><span class="methodLine"><i>0109</i>         if (pageCount<span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1435</span>+</span>1 <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1254</span>>=</span> pageIndexes.length)                                                                  
+</span><span class="methodLine"><i>0110</i>         {                                                                                                       
+</span><span class="methodLine"><i>0111</i>             int newSize = pageIndexes.length<span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2886</span>*</span>2;                                                                 
+</span><span class="outsideLine"><i>0112</i>             // check overflow                                                                                   
+</span><span class="methodLine"><i>0113</i>             if (newSize<span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2237</span><</span>pageIndexes.length)                                                                     
+</span><span class="methodLine"><i>0114</i>             {                                                                                                   
+</span><span class="methodLine"><i>0115</i>                 if (pageIndexes.length <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3069</span>==</span> Integer.MAX_VALUE)                                                    
+</span><span class="methodLine"><i>0116</i>                 {                                                                                               
+</span><span class="methodLine"><i>0117</i>                     throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3475</span>new IOException("Maximum buffer size reached.")</span>;                                      
+</span><span class="methodLine"><i>0118</i>                 }                                                                                               
+</span><span class="methodLine"><i>0119</i>                 newSize = Integer.MAX_VALUE;                                                                    
+</span><span class="methodLine"><i>0120</i>             }                                                                                                   
+</span><span class="methodLine"><i>0121</i>             int[] newPageIndexes = new int[newSize];                                                            
+</span><span class="methodLine"><i>0122</i>             System.arraycopy(pageIndexes, 0, newPageIndexes, 0, pageCount);                                     
+</span><span class="methodLine"><i>0123</i>             pageIndexes = newPageIndexes;                                                                       
+</span><span class="methodLine"><i>0124</i>         }                                                                                                       
+</span><span class="outsideLine"><i>0125</i>                                                                                                                 
+</span><span class="methodLine"><i>0126</i>         int newPageIdx = pageHandler.getNewPage();                                                              
+</span><span class="outsideLine"><i>0127</i>                                                                                                                 
+</span><span class="methodLine"><i>0128</i>         pageIndexes[pageCount] = newPageIdx;                                                                    
+</span><span class="methodLine"><i>0129</i>         currentPagePositionInPageIndexes = pageCount;                                                           
+</span><span class="methodLine"><i>0130</i>         currentPageOffset = ((long)pageCount) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1455</span>*</span> pageSize;                                                       
+</span><span class="methodLine"><i>0131</i>         pageCount<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1262</span>++</span>;                                                                                            
+</span><span class="methodLine"><i>0132</i>         currentPage = new byte[pageSize];                                                                       
+</span><span class="methodLine"><i>0133</i>         positionInPage = 0;                                                                                     
+</span><span class="methodLine"><i>0134</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0135</i>                                                                                                                 
+</span><span class="outsideLine"><i>0136</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0137</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0138</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0139</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0140</i>     public long length() throws IOException                                                                     
+</span><span class="methodLine"><i>0141</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1L;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 363</span>{                                                                                                           
+</span><span class="methodLine"><i>0142</i>         return size;                                                                                            
+</span><span class="methodLine"><i>0143</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0144</i>                                                                                                                 
+</span><span class="outsideLine"><i>0145</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0146</i>      * Ensures the current page has at least one byte left                                                      
+</span><span class="outsideLine"><i>0147</i>      * ({@link #positionInPage} in &lt; {@link #pageSize}).                                                     
+</span><span class="outsideLine"><i>0148</i>      *                                                                                                          
+</span><span class="outsideLine"><i>0149</i>      * <p>If this is not the case we go to next page (writing                                                   
+</span><span class="outsideLine"><i>0150</i>      * current one if changed). If current buffer has no more                                                   
+</span><span class="outsideLine"><i>0151</i>      * pages we add a new one.</p>                                                                              
+</span><span class="outsideLine"><i>0152</i>      *                                                                                                          
+</span><span class="outsideLine"><i>0153</i>      * @param addNewPageIfNeeded if <code>true</code> it is allowed to add a new page in case                   
+</span><span class="outsideLine"><i>0154</i>      *                           we are currently at end of last buffer page                                    
+</span><span class="outsideLine"><i>0155</i>      *                                                                                                          
+</span><span class="outsideLine"><i>0156</i>      * @return <code>true</code> if we were successful positioning pointer before end of page;                  
+</span><span class="outsideLine"><i>0157</i>      *         we might return <code>false</code> if it is not allowed to add another page                      
+</span><span class="outsideLine"><i>0158</i>      *         and current pointer points at end of last page                                                   
+</span><span class="outsideLine"><i>0159</i>      *                                                                                                          
+</span><span class="outsideLine"><i>0160</i>      * @throws IOException                                                                                      
+</span><span class="outsideLine"><i>0161</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0162</i>     private boolean ensureAvailableBytesInPage(boolean addNewPageIfNeeded) throws IOException                   
+</span><span class="methodLine"><i>0163</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 370</span>{                                                                                                           
+</span><span class="methodLine"><i>0164</i>         if (positionInPage <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1268</span>>=</span> pageSize)                                                                         
+</span><span class="methodLine"><i>0165</i>         {                                                                                                       
+</span><span class="outsideLine"><i>0166</i>             // page full                                                                                        
+</span><span class="methodLine"><i>0167</i>             if (currentPageContentChanged)                                                                      
+</span><span class="methodLine"><i>0168</i>             {                                                                                                   
+</span><span class="outsideLine"><i>0169</i>                 // write page                                                                                   
+</span><span class="methodLine"><i>0170</i>                 pageHandler.writePage(pageIndexes[currentPagePositionInPageIndexes], currentPage);              
+</span><span class="methodLine"><i>0171</i>                 currentPageContentChanged = false;                                                              
+</span><span class="methodLine"><i>0172</i>             }                                                                                                   
+</span><span class="outsideLine"><i>0173</i>             // get new page                                                                                     
+</span><span class="methodLine"><i>0174</i>             if (currentPagePositionInPageIndexes<span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2449</span>+</span>1 <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2263</span><</span> pageCount)                                                 
+</span><span class="methodLine"><i>0175</i>             {                                                                                                   
+</span><span class="outsideLine"><i>0176</i>                 // we already have more pages assigned (there was a backward seek before)                       
+</span><span class="methodLine"><i>0177</i>                 currentPage = pageHandler.readPage(pageIndexes[<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 3486</span>++</span>currentPagePositionInPageIndexes]);            
+</span><span class="methodLine"><i>0178</i>                 currentPageOffset = ((long)currentPagePositionInPageIndexes) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3226</span>*</span> pageSize;                        
+</span><span class="methodLine"><i>0179</i>                 positionInPage = 0;                                                                             
+</span><span class="methodLine"><i>0180</i>             }                                                                                                   
+</span><span class="methodLine"><i>0181</i>             else if (addNewPageIfNeeded)                                                                        
+</span><span class="methodLine"><i>0182</i>             {                                                                                                   
+</span><span class="outsideLine"><i>0183</i>                 // need new page                                                                                
+</span><span class="methodLine"><i>0184</i>                 addPage();                                                                                      
+</span><span class="methodLine"><i>0185</i>             }                                                                                                   
+</span><span class="methodLine"><i>0186</i>             else                                                                                                
+</span><span class="methodLine"><i>0187</i>             {                                                                                                   
+</span><span class="outsideLine"><i>0188</i>                 // we are at last page and are not allowed to add new page                                      
+</span><span class="methodLine"><i>0189</i>                 return false;                                                                                   
+</span><span class="methodLine"><i>0190</i>             }                                                                                                   
+</span><span class="methodLine"><i>0191</i>         }                                                                                                       
+</span><span class="methodLine"><i>0192</i>         return true;                                                                                            
+</span><span class="methodLine"><i>0193</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0194</i>                                                                                                                 
+</span><span class="outsideLine"><i>0195</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0196</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0197</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0198</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0199</i>     public void write(int b) throws IOException                                                                 
+</span><span class="methodLine"><i>0200</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 378</span>{                                                                                                           
+</span><span class="methodLine"><i>0201</i>         checkClosed();                                                                                          
+</span><span class="outsideLine"><i>0202</i>                                                                                                                 
+</span><span class="methodLine"><i>0203</i>         ensureAvailableBytesInPage(true);                                                                       
+</span><span class="outsideLine"><i>0204</i>                                                                                                                 
+</span><span class="methodLine"><i>0205</i>         currentPage[positionInPage<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1765</span>++</span>] = (byte) b;                                                               
+</span><span class="methodLine"><i>0206</i>         currentPageContentChanged = true;                                                                       
+</span><span class="outsideLine"><i>0207</i>                                                                                                                 
+</span><span class="methodLine"><i>0208</i>         if(currentPageOffset <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1486</span>+</span> positionInPage <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1278</span>></span> size)                                                           
+</span><span class="methodLine"><i>0209</i>         {                                                                                                       
+</span><span class="methodLine"><i>0210</i>             size = currentPageOffset <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2466</span>+</span> positionInPage;                                                          
+</span><span class="methodLine"><i>0211</i>         }                                                                                                       
+</span><span class="methodLine"><i>0212</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0213</i>                                                                                                                 
+</span><span class="outsideLine"><i>0214</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0215</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0216</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0217</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0218</i>     public void write(byte[] b) throws IOException                                                              
+</span><span class="methodLine"><i>0219</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 386</span>{                                                                                                           
+</span><span class="methodLine"><i>0220</i>         write(b, 0, b.length);                                                                                  
+</span><span class="methodLine"><i>0221</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0222</i>                                                                                                                 
+</span><span class="outsideLine"><i>0223</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0224</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0225</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0226</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0227</i>     public void write(byte[] b, int off, int len) throws IOException                                            
+</span><span class="methodLine"><i>0228</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 394</span>{                                                                                                           
+</span><span class="methodLine"><i>0229</i>         checkClosed();                                                                                          
+</span><span class="outsideLine"><i>0230</i>                                                                                                                 
+</span><span class="methodLine"><i>0231</i>         int remain = len;                                                                                       
+</span><span class="methodLine"><i>0232</i>         int bOff   = off;                                                                                       
+</span><span class="outsideLine"><i>0233</i>                                                                                                                 
+</span><span class="methodLine"><i>0234</i>         while (remain <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1292</span>></span> 0)                                                                                      
+</span><span class="methodLine"><i>0235</i>         {                                                                                                       
+</span><span class="methodLine"><i>0236</i>             ensureAvailableBytesInPage(true);                                                                   
+</span><span class="outsideLine"><i>0237</i>                                                                                                                 
+</span><span class="methodLine"><i>0238</i>             int bytesToWrite = Math.min(remain, pageSize<span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3238</span>-</span>positionInPage);                                       
+</span><span class="outsideLine"><i>0239</i>                                                                                                                 
+</span><span class="methodLine"><i>0240</i>             System.arraycopy(b, bOff, currentPage, positionInPage, bytesToWrite);                               
+</span><span class="outsideLine"><i>0241</i>                                                                                                                 
+</span><span class="methodLine"><i>0242</i>             positionInPage <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 2290</span>+=</span> bytesToWrite;                                                                     
+</span><span class="methodLine"><i>0243</i>             currentPageContentChanged = true;                                                                   
+</span><span class="outsideLine"><i>0244</i>                                                                                                                 
+</span><span class="methodLine"><i>0245</i>             bOff   <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 2292</span>+=</span> bytesToWrite;                                                                             
+</span><span class="methodLine"><i>0246</i>             remain <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: += 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 2293</span>-=</span> bytesToWrite;                                                                             
+</span><span class="methodLine"><i>0247</i>         }                                                                                                       
+</span><span class="outsideLine"><i>0248</i>                                                                                                                 
+</span><span class="methodLine"><i>0249</i>         if(currentPageOffset <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1515</span>+</span> positionInPage <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1296</span>></span> size)                                                           
+</span><span class="methodLine"><i>0250</i>         {                                                                                                       
+</span><span class="methodLine"><i>0251</i>             size = currentPageOffset <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2495</span>+</span> positionInPage;                                                          
+</span><span class="methodLine"><i>0252</i>         }                                                                                                       
+</span><span class="methodLine"><i>0253</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0254</i>                                                                                                                 
+</span><span class="outsideLine"><i>0255</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0256</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0257</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0258</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0259</i>     public final void clear() throws IOException                                                                
+</span><span class="methodLine"><i>0260</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 403</span>{                                                                                                           
+</span><span class="methodLine"><i>0261</i>         checkClosed();                                                                                          
+</span><span class="outsideLine"><i>0262</i>                                                                                                                 
+</span><span class="outsideLine"><i>0263</i>         // keep only the first page, discard all other pages                                                    
+</span><span class="methodLine"><i>0264</i>         pageHandler.markPagesAsFree(pageIndexes, 1, pageCount <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1815</span>-</span> 1);                                             
+</span><span class="methodLine"><i>0265</i>         pageCount = 1;                                                                                          
+</span><span class="outsideLine"><i>0266</i>                                                                                                                 
+</span><span class="outsideLine"><i>0267</i>         // change to first page if we are not already there                                                     
+</span><span class="methodLine"><i>0268</i>         if (currentPagePositionInPageIndexes <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1303</span>></span> 0)                                                               
+</span><span class="methodLine"><i>0269</i>         {                                                                                                       
+</span><span class="methodLine"><i>0270</i>             currentPage = pageHandler.readPage(pageIndexes[0]);                                                 
+</span><span class="methodLine"><i>0271</i>             currentPagePositionInPageIndexes = 0;                                                               
+</span><span class="methodLine"><i>0272</i>             currentPageOffset = 0;                                                                              
+</span><span class="methodLine"><i>0273</i>         }                                                                                                       
+</span><span class="methodLine"><i>0274</i>         positionInPage = 0;                                                                                     
+</span><span class="methodLine"><i>0275</i>         size = 0;                                                                                               
+</span><span class="methodLine"><i>0276</i>         currentPageContentChanged = false;                                                                      
+</span><span class="methodLine"><i>0277</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0278</i>                                                                                                                 
+</span><span class="outsideLine"><i>0279</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0280</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0281</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0282</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0283</i>     public long getPosition() throws IOException                                                                
+</span><span class="methodLine"><i>0284</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1L;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 411</span>{                                                                                                           
+</span><span class="methodLine"><i>0285</i>         checkClosed();                                                                                          
+</span><span class="methodLine"><i>0286</i>         return currentPageOffset <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1129</span>+</span> positionInPage;                                                              
+</span><span class="methodLine"><i>0287</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0288</i>                                                                                                                 
+</span><span class="outsideLine"><i>0289</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0290</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0291</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0292</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0293</i>     public void seek(long seekToPosition) throws IOException                                                    
+</span><span class="methodLine"><i>0294</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 419</span>{                                                                                                           
+</span><span class="methodLine"><i>0295</i>         checkClosed();                                                                                          
+</span><span class="outsideLine"><i>0296</i>                                                                                                                 
+</span><span class="outsideLine"><i>0297</i>         /*                                                                                                      
+</span><span class="outsideLine"><i>0298</i>          * for now we won't allow to seek past end of buffer; this can be changed by adding new pages as needed 
+</span><span class="outsideLine"><i>0299</i>          */                                                                                                     
+</span><span class="methodLine"><i>0300</i>         if (seekToPosition <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1316</span>></span> size)                                                                              
+</span><span class="methodLine"><i>0301</i>         {                                                                                                       
+</span><span class="methodLine"><i>0302</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2311</span>new EOFException()</span>;                                                                           
+</span><span class="methodLine"><i>0303</i>         }                                                                                                       
+</span><span class="outsideLine"><i>0304</i>                                                                                                                 
+</span><span class="methodLine"><i>0305</i>         if (seekToPosition <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1320</span><</span> 0)                                                                                 
+</span><span class="methodLine"><i>0306</i>         {                                                                                                       
+</span><span class="methodLine"><i>0307</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2314</span>new IOException("Negative seek offset: " + seekToPosition)</span>;                                   
+</span><span class="methodLine"><i>0308</i>         }                                                                                                       
+</span><span class="outsideLine"><i>0309</i>                                                                                                                 
+</span><span class="methodLine"><i>0310</i>         if ((seekToPosition <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2089</span>>=</span> currentPageOffset) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 1324</span>&&</span> (seekToPosition <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2092</span><=</span> currentPageOffset <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2320</span>+</span> pageSize))          
+</span><span class="methodLine"><i>0311</i>         {                                                                                                       
+</span><span class="outsideLine"><i>0312</i>             // within same page                                                                                 
+</span><span class="methodLine"><i>0313</i>             positionInPage = (int) (seekToPosition <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3119</span>-</span> currentPageOffset);                                        
+</span><span class="methodLine"><i>0314</i>         }                                                                                                       
+</span><span class="methodLine"><i>0315</i>         else                                                                                                    
+</span><span class="methodLine"><i>0316</i>         {                                                                                                       
+</span><span class="outsideLine"><i>0317</i>             // have to go to another page                                                                       
+</span><span class="outsideLine"><i>0318</i>                                                                                                                 
+</span><span class="outsideLine"><i>0319</i>             // check if current page needs to be written to file                                                
+</span><span class="methodLine"><i>0320</i>             if (currentPageContentChanged)                                                                      
+</span><span class="methodLine"><i>0321</i>             {                                                                                                   
+</span><span class="methodLine"><i>0322</i>                 pageHandler.writePage(pageIndexes[currentPagePositionInPageIndexes], currentPage);              
+</span><span class="methodLine"><i>0323</i>                 currentPageContentChanged = false;                                                              
+</span><span class="methodLine"><i>0324</i>             }                                                                                                   
+</span><span class="outsideLine"><i>0325</i>                                                                                                                 
+</span><span class="methodLine"><i>0326</i>             int newPagePosition = (int) (seekToPosition <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3365</span>/</span> pageSize);                                            
+</span><span class="methodLine"><i>0327</i>             if (seekToPosition <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2760</span>%</span> pageSize <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2528</span>==</span> 0 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2329</span>&&</span> seekToPosition <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2530</span>==</span> size)                                       
+</span><span class="methodLine"><i>0328</i>             {                                                                                                   
+</span><span class="methodLine"><i>0329</i>                 newPagePosition<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: ++ 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 3132</span>--</span>; // PDFBOX-4756: Prevent seeking a non-yet-existent page...                   
+</span><span class="methodLine"><i>0330</i>             }                                                                                                   
+</span><span class="outsideLine"><i>0331</i>                                                                                                                 
+</span><span class="methodLine"><i>0332</i>             currentPage = pageHandler.readPage(pageIndexes[newPagePosition]);                                   
+</span><span class="methodLine"><i>0333</i>             currentPagePositionInPageIndexes = newPagePosition;                                                 
+</span><span class="methodLine"><i>0334</i>             currentPageOffset = ((long)currentPagePositionInPageIndexes) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2542</span>*</span> pageSize;                            
+</span><span class="methodLine"><i>0335</i>             positionInPage = (int) (seekToPosition <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3144</span>-</span> currentPageOffset);                                        
+</span><span class="methodLine"><i>0336</i>         }                                                                                                       
+</span><span class="methodLine"><i>0337</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0338</i>                                                                                                                 
+</span><span class="outsideLine"><i>0339</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0340</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0341</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0342</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0343</i>     public boolean isClosed()                                                                                   
+</span><span class="methodLine"><i>0344</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 425</span>{                                                                                                           
+</span><span class="methodLine"><i>0345</i>         return <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1147</span>pageHandler <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1147</span>==</span> null</span>;                                                                             
+</span><span class="methodLine"><i>0346</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0347</i>                                                                                                                 
+</span><span class="outsideLine"><i>0348</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0349</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0350</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0351</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0352</i>     public int peek() throws IOException                                                                        
+</span><span class="methodLine"><i>0353</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 433</span>{                                                                                                           
+</span><span class="methodLine"><i>0354</i>         int result = read();                                                                                    
+</span><span class="methodLine"><i>0355</i>         if (result <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1334</span>!=</span> <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 1589</span>-</span>1)                                                                                       
+</span><span class="methodLine"><i>0356</i>         {                                                                                                       
+</span><span class="methodLine"><i>0357</i>             rewind(1);                                                                                          
+</span><span class="methodLine"><i>0358</i>         }                                                                                                       
+</span><span class="methodLine"><i>0359</i>         return result;                                                                                          
+</span><span class="methodLine"><i>0360</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0361</i>                                                                                                                 
+</span><span class="outsideLine"><i>0362</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0363</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0364</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0365</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0366</i>     public void rewind(int bytes) throws IOException                                                            
+</span><span class="methodLine"><i>0367</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 441</span>{                                                                                                           
+</span><span class="methodLine"><i>0368</i>         seek(currentPageOffset <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2120</span>+</span> positionInPage <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1860</span>-</span> bytes);                                                       
+</span><span class="methodLine"><i>0369</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0370</i>                                                                                                                 
+</span><span class="outsideLine"><i>0371</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0372</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0373</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0374</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0375</i>     public byte[] readFully(int length) throws IOException                                                      
+</span><span class="methodLine"><i>0376</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 449</span>{                                                                                                           
+</span><span class="methodLine"><i>0377</i>         byte[] bytes = new byte[length];                                                                        
+</span><span class="methodLine"><i>0378</i>         int bytesRead = 0;                                                                                      
+</span><span class="methodLine"><i>0379</i>         do                                                                                                      
+</span><span class="methodLine"><i>0380</i>         {                                                                                                       
+</span><span class="methodLine"><i>0381</i>             int count = read(bytes, bytesRead, length <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3278</span>-</span> bytesRead);                                             
+</span><span class="methodLine"><i>0382</i>             if (count <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2351</span><</span> 0)                                                                                      
+</span><span class="methodLine"><i>0383</i>             {                                                                                                   
+</span><span class="methodLine"><i>0384</i>                 throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3154</span>new EOFException()</span>;                                                                       
+</span><span class="methodLine"><i>0385</i>             }                                                                                                   
+</span><span class="methodLine"><i>0386</i>             bytesRead <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 2354</span>+=</span> count;                                                                                 
+</span><span class="methodLine"><i>0387</i>         } while (bytesRead <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1347</span><</span> length);                                                                           
+</span><span class="methodLine"><i>0388</i>         return bytes;                                                                                           
+</span><span class="methodLine"><i>0389</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0390</i>                                                                                                                 
+</span><span class="outsideLine"><i>0391</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0392</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0393</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0394</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0395</i>     public boolean isEOF() throws IOException                                                                   
+</span><span class="methodLine"><i>0396</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 457</span>{                                                                                                           
+</span><span class="methodLine"><i>0397</i>         checkClosed();                                                                                          
+</span><span class="methodLine"><i>0398</i>         return currentPageOffset <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1351</span>+</span> positionInPage <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1178</span>>=</span> size;                                                      
+</span><span class="methodLine"><i>0399</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0400</i>                                                                                                                 
+</span><span class="outsideLine"><i>0401</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0402</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0403</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0404</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0405</i>     public int available() throws IOException                                                                   
+</span><span class="methodLine"><i>0406</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 465</span>{                                                                                                           
+</span><span class="methodLine"><i>0407</i>         checkClosed();                                                                                          
+</span><span class="methodLine"><i>0408</i>         return (int) Math.min(size <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1883</span>-</span> (currentPageOffset <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2571</span>+</span> positionInPage), Integer.MAX_VALUE);                  
+</span><span class="methodLine"><i>0409</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0410</i>                                                                                                                 
+</span><span class="outsideLine"><i>0411</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0412</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0413</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0414</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0415</i>     public int read() throws IOException                                                                        
+</span><span class="methodLine"><i>0416</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 473</span>{                                                                                                           
+</span><span class="methodLine"><i>0417</i>         checkClosed();                                                                                          
+</span><span class="outsideLine"><i>0418</i>                                                                                                                 
+</span><span class="methodLine"><i>0419</i>         if (currentPageOffset <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1631</span>+</span> positionInPage <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1361</span>>=</span> size)                                                         
+</span><span class="methodLine"><i>0420</i>         {                                                                                                       
+</span><span class="methodLine"><i>0421</i>             return <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 2152</span>-</span>1;                                                                                          
+</span><span class="methodLine"><i>0422</i>         }                                                                                                       
+</span><span class="outsideLine"><i>0423</i>                                                                                                                 
+</span><span class="methodLine"><i>0424</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 1365</span>!</span> ensureAvailableBytesInPage(false))                                                                
+</span><span class="methodLine"><i>0425</i>         {                                                                                                       
+</span><span class="outsideLine"><i>0426</i>             // should not happen, we checked it before                                                          
+</span><span class="methodLine"><i>0427</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2366</span>new IOException("Unexpectedly no bytes available for read in buffer.")</span>;                       
+</span><span class="methodLine"><i>0428</i>         }                                                                                                       
+</span><span class="outsideLine"><i>0429</i>                                                                                                                 
+</span><span class="methodLine"><i>0430</i>         return currentPage[positionInPage<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1644</span>++</span>] <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: | 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 1194</span>&</span> 0xff;                                                            
+</span><span class="methodLine"><i>0431</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0432</i>                                                                                                                 
+</span><span class="outsideLine"><i>0433</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0434</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0435</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0436</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0437</i>     public int read(byte[] b) throws IOException                                                                
+</span><span class="methodLine"><i>0438</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 481</span>{                                                                                                           
+</span><span class="methodLine"><i>0439</i>         return read(b, 0, b.length);                                                                            
+</span><span class="methodLine"><i>0440</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0441</i>                                                                                                                 
+</span><span class="outsideLine"><i>0442</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0443</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0444</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0445</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0446</i>     public int read(byte[] b, int off, int len) throws IOException                                              
+</span><span class="methodLine"><i>0447</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 489</span>{                                                                                                           
+</span><span class="methodLine"><i>0448</i>         checkClosed();                                                                                          
+</span><span class="outsideLine"><i>0449</i>                                                                                                                 
+</span><span class="methodLine"><i>0450</i>         if (currentPageOffset <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1656</span>+</span> positionInPage <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1381</span>>=</span> size)                                                         
+</span><span class="methodLine"><i>0451</i>         {                                                                                                       
+</span><span class="methodLine"><i>0452</i>             return <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 2170</span>-</span>1;                                                                                          
+</span><span class="methodLine"><i>0453</i>         }                                                                                                       
+</span><span class="outsideLine"><i>0454</i>                                                                                                                 
+</span><span class="methodLine"><i>0455</i>         int remain = (int) Math.min(len, size <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2816</span>-</span> (currentPageOffset <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3284</span>+</span> positionInPage));                          
+</span><span class="outsideLine"><i>0456</i>                                                                                                                 
+</span><span class="methodLine"><i>0457</i>         int totalBytesRead = 0;                                                                                 
+</span><span class="methodLine"><i>0458</i>         int bOff           = off;                                                                               
+</span><span class="outsideLine"><i>0459</i>                                                                                                                 
+</span><span class="methodLine"><i>0460</i>         while (remain <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1391</span>></span> 0)                                                                                      
+</span><span class="methodLine"><i>0461</i>         {                                                                                                       
+</span><span class="methodLine"><i>0462</i>             if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2382</span>!</span> ensureAvailableBytesInPage(false))                                                            
+</span><span class="methodLine"><i>0463</i>             {                                                                                                   
+</span><span class="outsideLine"><i>0464</i>                 // should not happen, we checked it before                                                      
+</span><span class="methodLine"><i>0465</i>                 throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3165</span>new IOException("Unexpectedly no bytes available for read in buffer.")</span>;                   
+</span><span class="methodLine"><i>0466</i>             }                                                                                                   
+</span><span class="outsideLine"><i>0467</i>                                                                                                                 
+</span><span class="methodLine"><i>0468</i>             int readBytes = Math.min(remain, pageSize <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3294</span>-</span> positionInPage);                                        
+</span><span class="outsideLine"><i>0469</i>                                                                                                                 
+</span><span class="methodLine"><i>0470</i>             System.arraycopy(currentPage, positionInPage, b, bOff, readBytes);                                  
+</span><span class="outsideLine"><i>0471</i>                                                                                                                 
+</span><span class="methodLine"><i>0472</i>             positionInPage <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 2388</span>+=</span> readBytes;                                                                        
+</span><span class="methodLine"><i>0473</i>             totalBytesRead <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 2389</span>+=</span> readBytes;                                                                        
+</span><span class="methodLine"><i>0474</i>             bOff <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 2390</span>+=</span> readBytes;                                                                                  
+</span><span class="methodLine"><i>0475</i>             remain <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: += 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 2391</span>-=</span> readBytes;                                                                                
+</span><span class="methodLine"><i>0476</i>         }                                                                                                       
+</span><span class="outsideLine"><i>0477</i>                                                                                                                 
+</span><span class="methodLine"><i>0478</i>         return totalBytesRead;                                                                                  
+</span><span class="methodLine"><i>0479</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0480</i>                                                                                                                 
+</span><span class="outsideLine"><i>0481</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0482</i>      * {@inheritDoc}                                                                                            
+</span><span class="outsideLine"><i>0483</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0484</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0485</i>     public void close() throws IOException                                                                      
+</span><span class="methodLine"><i>0486</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 497</span>{                                                                                                           
+</span><span class="methodLine"><i>0487</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1396</span>pageHandler <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1396</span>!=</span> null</span>) {                                                                              
+</span><span class="outsideLine"><i>0488</i>                                                                                                                 
+</span><span class="methodLine"><i>0489</i>             pageHandler.markPagesAsFree(pageIndexes, 0, pageCount);                                             
+</span><span class="methodLine"><i>0490</i>             pageHandler = null;                                                                                 
+</span><span class="outsideLine"><i>0491</i>                                                                                                                 
+</span><span class="methodLine"><i>0492</i>             pageIndexes = null;                                                                                 
+</span><span class="methodLine"><i>0493</i>             currentPage = null;                                                                                 
+</span><span class="methodLine"><i>0494</i>             currentPageOffset = 0;                                                                              
+</span><span class="methodLine"><i>0495</i>             currentPagePositionInPageIndexes = <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 2627</span>-</span>1;                                                              
+</span><span class="methodLine"><i>0496</i>             positionInPage = 0;                                                                                 
+</span><span class="methodLine"><i>0497</i>             size = 0;                                                                                           
+</span><span class="methodLine"><i>0498</i>         }                                                                                                       
+</span><span class="methodLine"><i>0499</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0500</i>                                                                                                                 
+</span><span class="outsideLine"><i>0501</i>     /**                                                                                                         
+</span><span class="outsideLine"><i>0502</i>      * While calling finalize is normally discouraged we will have to                                           
+</span><span class="outsideLine"><i>0503</i>      * use it here as long as closing a scratch file buffer is not                                              
+</span><span class="outsideLine"><i>0504</i>      * done in every case. Currently {@link COSStream} creates new                                              
+</span><span class="outsideLine"><i>0505</i>      * buffers without closing the old one - which might still be                                               
+</span><span class="outsideLine"><i>0506</i>      * used.                                                                                                    
+</span><span class="outsideLine"><i>0507</i>      *                                                                                                          
+</span><span class="outsideLine"><i>0508</i>      * <p>Enabling debugging one will see if there are still cases                                              
+</span><span class="outsideLine"><i>0509</i>      * where the buffer is not closed.</p>                                                                      
+</span><span class="outsideLine"><i>0510</i>      */                                                                                                         
+</span><span class="outsideLine"><i>0511</i>     @Override                                                                                                   
+</span><span class="outsideLine"><i>0512</i>     protected void finalize() throws Throwable                                                                  
+</span><span class="methodLine"><i>0513</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 505</span>{                                                                                                           
+</span><span class="methodLine"><i>0514</i>         try                                                                                                     
+</span><span class="methodLine"><i>0515</i>         {                                                                                                       
+</span><span class="methodLine"><i>0516</i>             if ((<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2871</span>pageHandler <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2871</span>!=</span> null</span>) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2214</span>&&</span> LOG.isDebugEnabled())                                                  
+</span><span class="methodLine"><i>0517</i>             {                                                                                                   
+</span><span class="methodLine"><i>0518</i>                 LOG.debug("ScratchFileBuffer not closed!");                                                     
+</span><span class="methodLine"><i>0519</i>             }                                                                                                   
+</span><span class="methodLine"><i>0520</i>             close();                                                                                            
+</span><span class="methodLine"><i>0521</i>         }                                                                                                       
+</span><span class="methodLine"><i>0522</i>         finally                                                                                                 
+</span><span class="methodLine"><i>0523</i>         {                                                                                                       
+</span><span class="methodLine"><i>0524</i>             super.finalize();                                                                                   
+</span><span class="methodLine"><i>0525</i>         }                                                                                                       
+</span><span class="methodLine"><i>0526</i>     }</span>                                                                                                           
+</span><span class="outsideLine"><i>0527</i> }                                                                                                               
+</span><span class="outsideLine"><i>0528</i>                                                                                                                 </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

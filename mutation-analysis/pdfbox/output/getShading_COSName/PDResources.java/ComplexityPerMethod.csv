@@ -1,0 +1,46 @@
+***not in a method***;1;1;0
+PDResources.PDResources( );1;1;4
+PDResources.PDResources( COSDictionary resourceDictionary );3;2;8
+PDResources.PDResources( COSDictionary resourceDictionary , ResourceCache resourceCache );3;2;8
+PDResources.add( COSName kind , String prefix , COSObjectable object );15;8;21
+PDResources.add( PDAbstractPattern pattern );3;1;3
+PDResources.add( PDColorSpace colorSpace );3;1;3
+PDResources.add( PDExtendedGraphicsState extGState );3;1;3
+PDResources.add( PDFont font );3;1;3
+PDResources.add( PDFormXObject form );3;1;3
+PDResources.add( PDImageXObject image );3;1;3
+PDResources.add( PDPropertyList properties );4;2;10
+PDResources.add( PDShading shading );3;1;3
+PDResources.add( PDXObject xobject , String prefix );4;1;3
+PDResources.createKey( COSName kind , String prefix );10;3;16
+PDResources.get( COSName kind , COSName name );7;2;8
+PDResources.getCOSObject( );2;1;3
+PDResources.getColorSpace( COSName name );3;1;3
+PDResources.getColorSpace( COSName name , boolean wasDefault );20;8;26
+PDResources.getColorSpaceNames( );2;1;3
+PDResources.getExtGState( COSName name );17;7;22
+PDResources.getExtGStateNames( );2;1;3
+PDResources.getFont( COSName name );26;11;38
+PDResources.getFontNames( );2;1;3
+PDResources.getIndirect( COSName kind , COSName name );8;3;13
+PDResources.getNames( COSName kind );6;2;8
+PDResources.getPattern( COSName name );16;7;22
+PDResources.getPatternNames( );2;1;3
+PDResources.getProperties( COSName name );16;7;22
+PDResources.getPropertiesNames( );2;1;3
+PDResources.getResourceCache( );2;1;3
+PDResources.getShading( COSName name );16;7;22
+PDResources.getShadingNames( );2;1;3
+PDResources.getXObject( COSName name );19;9;30
+PDResources.getXObjectNames( );2;1;3
+PDResources.hasColorSpace( COSName name );5;1;3
+PDResources.isAllowedCache( PDXObject xobject );6;10;27
+PDResources.isImageXObject( COSName name );6;4;17
+PDResources.put( COSName kind , COSName name , COSObjectable object );7;2;9
+PDResources.put( COSName name , PDAbstractPattern pattern );3;1;3
+PDResources.put( COSName name , PDColorSpace colorSpace );3;1;3
+PDResources.put( COSName name , PDExtendedGraphicsState extGState );3;1;3
+PDResources.put( COSName name , PDFont font );3;1;3
+PDResources.put( COSName name , PDPropertyList properties );3;1;3
+PDResources.put( COSName name , PDShading shading );3;1;3
+PDResources.put( COSName name , PDXObject xobject );3;1;3

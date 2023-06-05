@@ -1,0 +1,20 @@
+***not in a method***;1;1;0
+PDSimpleFont.PDSimpleFont( );0;1;2
+PDSimpleFont.PDSimpleFont( COSDictionary fontDictionary );0;1;3
+PDSimpleFont.PDSimpleFont( String baseFont );0;1;4
+PDSimpleFont.addToSubset( int codePoint );2;1;3
+PDSimpleFont.assignGlyphList( String baseFont );2;2;10
+PDSimpleFont.getEncoding( );2;1;3
+PDSimpleFont.getGlyphList( );2;1;3
+PDSimpleFont.getStandard14Width( int code );5;5;20
+PDSimpleFont.getSymbolicFlag( );5;2;7
+PDSimpleFont.hasExplicitWidth( int code );7;4;11
+PDSimpleFont.isFontSymbolic( );20;15;49
+PDSimpleFont.isStandard14( );4;5;18
+PDSimpleFont.isSymbolic( );6;3;15
+PDSimpleFont.isVertical( );2;1;3
+PDSimpleFont.readEncoding( );16;9;37
+PDSimpleFont.subset( );2;1;3
+PDSimpleFont.toUnicode( int code );3;1;3
+PDSimpleFont.toUnicode( int code , GlyphList customGlyphList );17;8;41
+PDSimpleFont.willBeSubset( );2;1;3

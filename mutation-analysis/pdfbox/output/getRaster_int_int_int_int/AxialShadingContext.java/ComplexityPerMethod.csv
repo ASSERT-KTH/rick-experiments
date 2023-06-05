@@ -1,0 +1,9 @@
+AxialShadingContext.AxialShadingContext( PDShadingType2 shading , ColorModel colorModel , AffineTransform xform , Matrix matrix , Rectangle deviceBounds );13;4;44
+AxialShadingContext.calcColorTable( );11;4;18
+AxialShadingContext.dispose( );1;1;4
+AxialShadingContext.getColorModel( );2;1;3
+AxialShadingContext.getCoords( );2;1;3
+AxialShadingContext.getDomain( );2;1;3
+AxialShadingContext.getExtend( );2;1;3
+AxialShadingContext.getFunction( );2;1;3
+AxialShadingContext.getRaster( int x , int y , int w , int h );37;12;78

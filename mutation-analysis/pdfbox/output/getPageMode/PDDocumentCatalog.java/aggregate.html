@@ -1,0 +1,1089 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.62</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                                                                 
+</span><span class="outsideLine"><i>0002</i>  * Licensed to the Apache Software Foundation (ASF) under one or more                                                              
+</span><span class="outsideLine"><i>0003</i>  * contributor license agreements. See the NOTICE file distributed with                                                            
+</span><span class="outsideLine"><i>0004</i>  * this work for additional information regarding copyright ownership.                                                             
+</span><span class="outsideLine"><i>0005</i>  * The ASF licenses this file to You under the Apache License, Version 2.0                                                         
+</span><span class="outsideLine"><i>0006</i>  * (the "License"); you may not use this file except in compliance with                                                            
+</span><span class="outsideLine"><i>0007</i>  * the License. You may obtain a copy of the License at                                                                            
+</span><span class="outsideLine"><i>0008</i>  *                                                                                                                                 
+</span><span class="outsideLine"><i>0009</i>  *      http://www.apache.org/licenses/LICENSE-2.0                                                                                 
+</span><span class="outsideLine"><i>0010</i>  *                                                                                                                                 
+</span><span class="outsideLine"><i>0011</i>  * Unless required by applicable law or agreed to in writing, software                                                             
+</span><span class="outsideLine"><i>0012</i>  * distributed under the License is distributed on an "AS IS" BASIS,                                                               
+</span><span class="outsideLine"><i>0013</i>  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                                                        
+</span><span class="outsideLine"><i>0014</i>  * See the License for the specific language governing permissions and                                                             
+</span><span class="outsideLine"><i>0015</i>  * limitations under the License.                                                                                                  
+</span><span class="outsideLine"><i>0016</i>  */                                                                                                                                
+</span><span class="outsideLine"><i>0017</i> package org.apache.pdfbox.pdmodel;                                                                                                 
+</span><span class="outsideLine"><i>0018</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0019</i> import java.io.IOException;                                                                                                        
+</span><span class="outsideLine"><i>0020</i> import java.util.ArrayList;                                                                                                        
+</span><span class="outsideLine"><i>0021</i> import java.util.List;                                                                                                             
+</span><span class="outsideLine"><i>0022</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0023</i> import org.apache.commons.logging.Log;                                                                                             
+</span><span class="outsideLine"><i>0024</i> import org.apache.commons.logging.LogFactory;                                                                                      
+</span><span class="outsideLine"><i>0025</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0026</i> import org.apache.pdfbox.cos.COSArray;                                                                                             
+</span><span class="outsideLine"><i>0027</i> import org.apache.pdfbox.cos.COSBase;                                                                                              
+</span><span class="outsideLine"><i>0028</i> import org.apache.pdfbox.cos.COSDictionary;                                                                                        
+</span><span class="outsideLine"><i>0029</i> import org.apache.pdfbox.cos.COSName;                                                                                              
+</span><span class="outsideLine"><i>0030</i> import org.apache.pdfbox.cos.COSObject;                                                                                            
+</span><span class="outsideLine"><i>0031</i> import org.apache.pdfbox.cos.COSStream;                                                                                            
+</span><span class="outsideLine"><i>0032</i> import org.apache.pdfbox.pdmodel.common.COSArrayList;                                                                              
+</span><span class="outsideLine"><i>0033</i> import org.apache.pdfbox.pdmodel.common.COSObjectable;                                                                             
+</span><span class="outsideLine"><i>0034</i> import org.apache.pdfbox.pdmodel.common.PDDestinationOrAction;                                                                     
+</span><span class="outsideLine"><i>0035</i> import org.apache.pdfbox.pdmodel.common.PDMetadata;                                                                                
+</span><span class="outsideLine"><i>0036</i> import org.apache.pdfbox.pdmodel.common.PDPageLabels;                                                                              
+</span><span class="outsideLine"><i>0037</i> import org.apache.pdfbox.pdmodel.documentinterchange.logicalstructure.PDMarkInfo;                                                  
+</span><span class="outsideLine"><i>0038</i> import org.apache.pdfbox.pdmodel.documentinterchange.logicalstructure.PDStructureTreeRoot;                                         
+</span><span class="outsideLine"><i>0039</i> import org.apache.pdfbox.pdmodel.fixup.AcroFormDefaultFixup;                                                                       
+</span><span class="outsideLine"><i>0040</i> import org.apache.pdfbox.pdmodel.fixup.PDDocumentFixup;                                                                            
+</span><span class="outsideLine"><i>0041</i> import org.apache.pdfbox.pdmodel.graphics.color.PDOutputIntent;                                                                    
+</span><span class="outsideLine"><i>0042</i> import org.apache.pdfbox.pdmodel.graphics.optionalcontent.PDOptionalContentProperties;                                             
+</span><span class="outsideLine"><i>0043</i> import org.apache.pdfbox.pdmodel.interactive.action.PDActionFactory;                                                               
+</span><span class="outsideLine"><i>0044</i> import org.apache.pdfbox.pdmodel.interactive.action.PDDocumentCatalogAdditionalActions;                                            
+</span><span class="outsideLine"><i>0045</i> import org.apache.pdfbox.pdmodel.interactive.action.PDURIDictionary;                                                               
+</span><span class="outsideLine"><i>0046</i> import org.apache.pdfbox.pdmodel.interactive.documentnavigation.destination.PDDestination;                                         
+</span><span class="outsideLine"><i>0047</i> import org.apache.pdfbox.pdmodel.interactive.documentnavigation.destination.PDNamedDestination;                                    
+</span><span class="outsideLine"><i>0048</i> import org.apache.pdfbox.pdmodel.interactive.documentnavigation.destination.PDPageDestination;                                     
+</span><span class="outsideLine"><i>0049</i> import org.apache.pdfbox.pdmodel.interactive.documentnavigation.outline.PDDocumentOutline;                                         
+</span><span class="outsideLine"><i>0050</i> import org.apache.pdfbox.pdmodel.interactive.form.PDAcroForm;                                                                      
+</span><span class="outsideLine"><i>0051</i> import org.apache.pdfbox.pdmodel.interactive.pagenavigation.PDThread;                                                              
+</span><span class="outsideLine"><i>0052</i> import org.apache.pdfbox.pdmodel.interactive.viewerpreferences.PDViewerPreferences;                                                
+</span><span class="outsideLine"><i>0053</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0054</i> /**                                                                                                                                
+</span><span class="outsideLine"><i>0055</i>  * The Document Catalog of a PDF.                                                                                                  
+</span><span class="outsideLine"><i>0056</i>  *                                                                                                                                 
+</span><span class="outsideLine"><i>0057</i>  * @author Ben Litchfield                                                                                                          
+</span><span class="outsideLine"><i>0058</i>  */                                                                                                                                
+</span><span class="outsideLine"><i>0059</i> public class PDDocumentCatalog implements COSObjectable                                                                            
+</span><span class="outsideLine"><i>0060</i> {                                                                                                                                  
+</span><span class="outsideLine"><i>0061</i>     private static final Log LOG = LogFactory.getLog(PDDocumentCatalog.class);                                                     
+</span><span class="outsideLine"><i>0062</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0063</i>     private final COSDictionary root;                                                                                              
+</span><span class="outsideLine"><i>0064</i>     private final PDDocument document;                                                                                             
+</span><span class="outsideLine"><i>0065</i>     private PDDocumentFixup acroFormFixupApplied;                                                                                  
+</span><span class="outsideLine"><i>0066</i>     private PDAcroForm cachedAcroForm;                                                                                             
+</span><span class="outsideLine"><i>0067</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0068</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0069</i>      * Constructor. Internal PDFBox use only! If you need to get the document catalog, call                                        
+</span><span class="outsideLine"><i>0070</i>      * {@link PDDocument#getDocumentCatalog()}.                                                                                    
+</span><span class="outsideLine"><i>0071</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0072</i>      * @param doc The document that this catalog is part of.                                                                       
+</span><span class="outsideLine"><i>0073</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0074</i>     public PDDocumentCatalog(PDDocument doc)                                                                                       
+</span><span class="methodLine"><i>0075</i>     {                                                                                                                              
+</span><span class="methodLine"><i>0076</i>         document = doc;                                                                                                            
+</span><span class="methodLine"><i>0077</i>         root = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2461</span>new COSDictionary()</span>;                                                                                                
+</span><span class="methodLine"><i>0078</i>         root.setItem(COSName.TYPE, COSName.CATALOG);                                                                               
+</span><span class="methodLine"><i>0079</i>         document.getDocument().getTrailer().setItem(COSName.ROOT, root);                                                           
+</span><span class="methodLine"><i>0080</i>     }                                                                                                                              
+</span><span class="outsideLine"><i>0081</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0082</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0083</i>      * Constructor. Internal PDFBox use only! If you need to get the document catalog, call                                        
+</span><span class="outsideLine"><i>0084</i>      * {@link PDDocument#getDocumentCatalog()}.                                                                                    
+</span><span class="outsideLine"><i>0085</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0086</i>      * @param doc The document that this catalog is part of.                                                                       
+</span><span class="outsideLine"><i>0087</i>      * @param rootDictionary The root dictionary that this object wraps.                                                           
+</span><span class="outsideLine"><i>0088</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0089</i>     public PDDocumentCatalog(PDDocument doc, COSDictionary rootDictionary)                                                         
+</span><span class="methodLine"><i>0090</i>     {                                                                                                                              
+</span><span class="methodLine"><i>0091</i>         document = doc;                                                                                                            
+</span><span class="methodLine"><i>0092</i>         root = rootDictionary;                                                                                                     
+</span><span class="methodLine"><i>0093</i>     }                                                                                                                              
+</span><span class="outsideLine"><i>0094</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0095</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0096</i>      * Convert this standard java object to a COS object.                                                                          
+</span><span class="outsideLine"><i>0097</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0098</i>      * @return The cos object that matches this Java object.                                                                       
+</span><span class="outsideLine"><i>0099</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0100</i>     @Override                                                                                                                      
+</span><span class="outsideLine"><i>0101</i>     public COSDictionary getCOSObject()                                                                                            
+</span><span class="methodLine"><i>0102</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 802</span>{                                                                                                                              
+</span><span class="methodLine"><i>0103</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1465</span>return root;</span>                                                                                                               
+</span><span class="methodLine"><i>0104</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0105</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0106</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0107</i>      * Get the documents AcroForm. This will return null if no AcroForm is part of the document.                                   
+</span><span class="outsideLine"><i>0108</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0109</i>      * @return The document's AcroForm.                                                                                            
+</span><span class="outsideLine"><i>0110</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0111</i>     public PDAcroForm getAcroForm()                                                                                                
+</span><span class="methodLine"><i>0112</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 807</span>{                                                                                                                              
+</span><span class="methodLine"><i>0113</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1466</span>return getAcroForm(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2480</span>new AcroFormDefaultFixup(document)</span>);</span>                                                                    
+</span><span class="methodLine"><i>0114</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0115</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0116</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0117</i>      * Get the documents AcroForm. This will return null if no AcroForm is part of the document.                                   
+</span><span class="outsideLine"><i>0118</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0119</i>      * Dependent on setting <code>acroFormFixup</code> some fixing/changes will be done to the AcroForm.                           
+</span><span class="outsideLine"><i>0120</i>      * If you need to ensure that there are no fixes applied call <code>getAcroForm</code> with <code>null</code>.                 
+</span><span class="outsideLine"><i>0121</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0122</i>      * Using <code>getAcroForm(PDDocumentFixup acroFormFixup)</code> might change the original content and                         
+</span><span class="outsideLine"><i>0123</i>      * subsequent calls with <code>getAcroForm(null)</code> will return the changed content.                                       
+</span><span class="outsideLine"><i>0124</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0125</i>      * @param acroFormFixup the fix up action or null                                                                              
+</span><span class="outsideLine"><i>0126</i>      * @return The document's AcroForm.                                                                                            
+</span><span class="outsideLine"><i>0127</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0128</i>     public PDAcroForm getAcroForm(PDDocumentFixup acroFormFixup)                                                                   
+</span><span class="methodLine"><i>0129</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 812</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0130</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2131</span>acroFormFixup <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2131</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 1884</span>&&</span> acroFormFixup <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2133</span>!=</span> acroFormFixupApplied)                                                        
+</span><span class="methodLine"><i>0131</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0132</i>             acroFormFixup.apply();                                                                                                 
+</span><span class="methodLine"><i>0133</i>             cachedAcroForm = null;                                                                                                 
+</span><span class="methodLine"><i>0134</i>             acroFormFixupApplied =  acroFormFixup;                                                                                 
+</span><span class="methodLine"><i>0135</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0136</i>         else if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2140</span>acroFormFixupApplied <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2140</span>!=</span> null</span>)                                                                                     
+</span><span class="methodLine"><i>0137</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0138</i>             LOG.debug("AcroForm content has already been retrieved with fixes applied - original content changed because of that");
+</span><span class="methodLine"><i>0139</i>         }                                                                                                                          
+</span><span class="outsideLine"><i>0140</i>                                                                                                                                    
+</span><span class="methodLine"><i>0141</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1891</span>cachedAcroForm <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1891</span>==</span> null</span>)                                                                                                
+</span><span class="methodLine"><i>0142</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0143</i>             COSDictionary dict = (COSDictionary)root.getDictionaryObject(COSName.ACRO_FORM);                                       
+</span><span class="methodLine"><i>0144</i>             cachedAcroForm = <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3758</span>dict <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3758</span>==</span> null</span> ? null : <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3990</span>new PDAcroForm(document, dict)</span>;                                                 
+</span><span class="methodLine"><i>0145</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0146</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1471</span>return cachedAcroForm;</span>                                                                                                     
+</span><span class="methodLine"><i>0147</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0148</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0149</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0150</i>      * Sets the AcroForm for this catalog.                                                                                         
+</span><span class="outsideLine"><i>0151</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0152</i>      * @param acroForm The new AcroForm.                                                                                           
+</span><span class="outsideLine"><i>0153</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0154</i>     public void setAcroForm(PDAcroForm acroForm)                                                                                   
+</span><span class="methodLine"><i>0155</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 817</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0156</i>         root.setItem(COSName.ACRO_FORM, acroForm);                                                                                 
+</span><span class="methodLine"><i>0157</i>         cachedAcroForm = null;                                                                                                     
+</span><span class="methodLine"><i>0158</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0159</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0160</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0161</i>      * Returns all pages in the document, as a page tree.                                                                          
+</span><span class="outsideLine"><i>0162</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0163</i>      * @return the page tree of all pages                                                                                          
+</span><span class="outsideLine"><i>0164</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0165</i>     public PDPageTree getPages()                                                                                                   
+</span><span class="methodLine"><i>0166</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 822</span>{                                                                                                                              
+</span><span class="outsideLine"><i>0167</i>         // todo: cache me?                                                                                                         
+</span><span class="methodLine"><i>0168</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1476</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1899</span>new PDPageTree((COSDictionary)root.getDictionaryObject(COSName.PAGES), document)</span>;</span>                                   
+</span><span class="methodLine"><i>0169</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0170</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0171</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0172</i>      * Get the viewer preferences associated with this document or null if they do not exist.                                      
+</span><span class="outsideLine"><i>0173</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0174</i>      * @return The document's viewer preferences.                                                                                  
+</span><span class="outsideLine"><i>0175</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0176</i>     public PDViewerPreferences getViewerPreferences()                                                                              
+</span><span class="methodLine"><i>0177</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 827</span>{                                                                                                                              
+</span><span class="methodLine"><i>0178</i>         COSBase base = root.getDictionaryObject(COSName.VIEWER_PREFERENCES);                                                       
+</span><span class="methodLine"><i>0179</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1478</span>return base instanceof COSDictionary ? <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2166</span>new PDViewerPreferences((COSDictionary) base)</span> : null;</span>                               
+</span><span class="methodLine"><i>0180</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0181</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0182</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0183</i>      * Sets the viewer preferences.                                                                                                
+</span><span class="outsideLine"><i>0184</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0185</i>      * @param prefs The new viewer preferences.                                                                                    
+</span><span class="outsideLine"><i>0186</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0187</i>     public void setViewerPreferences(PDViewerPreferences prefs)                                                                    
+</span><span class="methodLine"><i>0188</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 832</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0189</i>         root.setItem(COSName.VIEWER_PREFERENCES, prefs);                                                                           
+</span><span class="methodLine"><i>0190</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0191</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0192</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0193</i>      * Get the outline associated with this document or null if it does not exist.                                                 
+</span><span class="outsideLine"><i>0194</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0195</i>      * @return The document's outline.                                                                                             
+</span><span class="outsideLine"><i>0196</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0197</i>     public PDDocumentOutline getDocumentOutline()                                                                                  
+</span><span class="methodLine"><i>0198</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 837</span>{                                                                                                                              
+</span><span class="methodLine"><i>0199</i>         COSBase cosObj = root.getDictionaryObject(COSName.OUTLINES);                                                               
+</span><span class="methodLine"><i>0200</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1483</span>return cosObj instanceof COSDictionary ? <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2178</span>new PDDocumentOutline((COSDictionary)cosObj)</span> : null;</span>                              
+</span><span class="methodLine"><i>0201</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0202</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0203</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0204</i>      * Sets the document outlines.                                                                                                 
+</span><span class="outsideLine"><i>0205</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0206</i>      * @param outlines The new document outlines.                                                                                  
+</span><span class="outsideLine"><i>0207</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0208</i>     public void setDocumentOutline(PDDocumentOutline outlines)                                                                     
+</span><span class="methodLine"><i>0209</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 842</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0210</i>         root.setItem(COSName.OUTLINES, outlines);                                                                                  
+</span><span class="methodLine"><i>0211</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0212</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0213</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0214</i>      * Returns the document's article threads.                                                                                     
+</span><span class="outsideLine"><i>0215</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0216</i>      * @return a list containing all article threads.                                                                              
+</span><span class="outsideLine"><i>0217</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0218</i>     public List<PDThread> getThreads()                                                                                             
+</span><span class="methodLine"><i>0219</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 847</span>{                                                                                                                              
+</span><span class="methodLine"><i>0220</i>         COSArray array = (COSArray)root.getDictionaryObject(COSName.THREADS);                                                      
+</span><span class="methodLine"><i>0221</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1922</span>array <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1922</span>==</span> null</span>)                                                                                                         
+</span><span class="methodLine"><i>0222</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0223</i>             array = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3792</span>new COSArray()</span>;                                                                                                
+</span><span class="methodLine"><i>0224</i>             root.setItem(COSName.THREADS, array);                                                                                  
+</span><span class="methodLine"><i>0225</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0226</i>         List<PDThread> pdObjects = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3251</span>new ArrayList<PDThread>()</span>;                                                                      
+</span><span class="methodLine"><i>0227</i>         for (int i = 0; i <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1929</span><</span> array.size(); i<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 2560</span>++</span>)                                                                                     
+</span><span class="methodLine"><i>0228</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0229</i>             pdObjects.add(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4023</span>new PDThread((COSDictionary)array.getObject(i))</span>);                                                        
+</span><span class="methodLine"><i>0230</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0231</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1494</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1934</span>new COSArrayList<PDThread>(pdObjects, array)</span>;</span>                                                                       
+</span><span class="methodLine"><i>0232</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0233</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0234</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0235</i>      * Sets the list of threads for this pdf document.                                                                             
+</span><span class="outsideLine"><i>0236</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0237</i>      * @param threads The list of threads, or null to clear it.                                                                    
+</span><span class="outsideLine"><i>0238</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0239</i>     public void setThreads(List<PDThread> threads)                                                                                 
+</span><span class="methodLine"><i>0240</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 852</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0241</i>         root.setItem(COSName.THREADS, COSArrayList.converterToCOSArray(threads));                                                  
+</span><span class="methodLine"><i>0242</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0243</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0244</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0245</i>      * Get the metadata that is part of the document catalog. This will return null if there is no                                 
+</span><span class="outsideLine"><i>0246</i>      * meta data for this object.                                                                                                  
+</span><span class="outsideLine"><i>0247</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0248</i>      * @return The metadata for this object.                                                                                       
+</span><span class="outsideLine"><i>0249</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0250</i>     public PDMetadata getMetadata()                                                                                                
+</span><span class="methodLine"><i>0251</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 857</span>{                                                                                                                              
+</span><span class="methodLine"><i>0252</i>         COSBase metaObj = root.getDictionaryObject(COSName.METADATA);                                                              
+</span><span class="methodLine"><i>0253</i>         if (metaObj instanceof COSStream)                                                                                          
+</span><span class="methodLine"><i>0254</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0255</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2578</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3277</span>new PDMetadata((COSStream) metaObj)</span>;</span>                                                                            
+</span><span class="methodLine"><i>0256</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0257</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1500</span>return null;</span>                                                                                                               
+</span><span class="methodLine"><i>0258</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0259</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0260</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0261</i>      * Sets the metadata for this object. This can be null.                                                                        
+</span><span class="outsideLine"><i>0262</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0263</i>      * @param meta The meta data for this object.                                                                                  
+</span><span class="outsideLine"><i>0264</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0265</i>     public void setMetadata(PDMetadata meta)                                                                                       
+</span><span class="methodLine"><i>0266</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 862</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0267</i>         root.setItem(COSName.METADATA, meta);                                                                                      
+</span><span class="methodLine"><i>0268</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0269</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0270</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0271</i>      * Sets the Document Open Action for this object.                                                                              
+</span><span class="outsideLine"><i>0272</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0273</i>      * @param action The action you want to perform.                                                                               
+</span><span class="outsideLine"><i>0274</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0275</i>     public void setOpenAction(PDDestinationOrAction action)                                                                        
+</span><span class="methodLine"><i>0276</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 867</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0277</i>         root.setItem(COSName.OPEN_ACTION, action);                                                                                 
+</span><span class="methodLine"><i>0278</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0279</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0280</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0281</i>      * Get the Document Open Action for this object.                                                                               
+</span><span class="outsideLine"><i>0282</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0283</i>      * @return The action to perform when the document is opened.                                                                  
+</span><span class="outsideLine"><i>0284</i>      * @throws IOException If there is an error creating the destination or action.                                                
+</span><span class="outsideLine"><i>0285</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0286</i>     public PDDestinationOrAction getOpenAction() throws IOException                                                                
+</span><span class="methodLine"><i>0287</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 874</span>{                                                                                                                              
+</span><span class="methodLine"><i>0288</i>         COSBase openAction = root.getDictionaryObject(COSName.OPEN_ACTION);                                                        
+</span><span class="methodLine"><i>0289</i>         if (openAction instanceof COSDictionary)                                                                                   
+</span><span class="methodLine"><i>0290</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0291</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2598</span>return PDActionFactory.createAction((COSDictionary)openAction);</span>                                                        
+</span><span class="methodLine"><i>0292</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0293</i>         else if (openAction instanceof COSArray)                                                                                   
+</span><span class="methodLine"><i>0294</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0295</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2977</span>return PDDestination.create(openAction);</span>                                                                               
+</span><span class="methodLine"><i>0296</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0297</i>         else                                                                                                                       
+</span><span class="methodLine"><i>0298</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0299</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2978</span>return null;</span>                                                                                                           
+</span><span class="methodLine"><i>0300</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0301</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0302</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0303</i>      * @return The Additional Actions for this Document                                                                            
+</span><span class="outsideLine"><i>0304</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0305</i>     public PDDocumentCatalogAdditionalActions getActions()                                                                         
+</span><span class="methodLine"><i>0306</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 879</span>{                                                                                                                              
+</span><span class="methodLine"><i>0307</i>         COSDictionary addAction = (COSDictionary) root.getDictionaryObject(COSName.AA);                                            
+</span><span class="methodLine"><i>0308</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1963</span>addAction <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1963</span>==</span> null</span>)                                                                                                     
+</span><span class="methodLine"><i>0309</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0310</i>             addAction = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3840</span>new COSDictionary()</span>;                                                                                       
+</span><span class="methodLine"><i>0311</i>             root.setItem(COSName.AA, addAction);                                                                                   
+</span><span class="methodLine"><i>0312</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0313</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1511</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1967</span>new PDDocumentCatalogAdditionalActions(addAction)</span>;</span>                                                                  
+</span><span class="methodLine"><i>0314</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0315</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0316</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0317</i>      * Sets the additional actions for the document.                                                                               
+</span><span class="outsideLine"><i>0318</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0319</i>      * @param actions The actions that are associated with this document.                                                          
+</span><span class="outsideLine"><i>0320</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0321</i>     public void setActions(PDDocumentCatalogAdditionalActions actions)                                                             
+</span><span class="methodLine"><i>0322</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 884</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0323</i>         root.setItem(COSName.AA, actions);                                                                                         
+</span><span class="methodLine"><i>0324</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0325</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0326</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0327</i>      * @return The names dictionary for this document or null if none exist.                                                       
+</span><span class="outsideLine"><i>0328</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0329</i>     public PDDocumentNameDictionary getNames()                                                                                     
+</span><span class="methodLine"><i>0330</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 889</span>{                                                                                                                              
+</span><span class="methodLine"><i>0331</i>         COSDictionary names = (COSDictionary) root.getDictionaryObject(COSName.NAMES);                                             
+</span><span class="methodLine"><i>0332</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1516</span>return <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1972</span>names <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1972</span>==</span> null</span> ? null : <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2265</span>new PDDocumentNameDictionary(this, names)</span>;</span>                                                   
+</span><span class="methodLine"><i>0333</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0334</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0335</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0336</i>      * @return The named destinations dictionary for this document or null if none exists.                                         
+</span><span class="outsideLine"><i>0337</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0338</i>     public PDDocumentNameDestinationDictionary getDests()                                                                          
+</span><span class="methodLine"><i>0339</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 894</span>{                                                                                                                              
+</span><span class="methodLine"><i>0340</i>         PDDocumentNameDestinationDictionary nameDic = null;                                                                        
+</span><span class="methodLine"><i>0341</i>         COSDictionary dests = (COSDictionary) root.getDictionaryObject(COSName.DESTS);                                             
+</span><span class="methodLine"><i>0342</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1982</span>dests <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1982</span>!=</span> null</span>)                                                                                                         
+</span><span class="methodLine"><i>0343</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0344</i>             nameDic = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3863</span>new PDDocumentNameDestinationDictionary(dests)</span>;                                                              
+</span><span class="methodLine"><i>0345</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0346</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1520</span>return nameDic;</span>                                                                                                            
+</span><span class="methodLine"><i>0347</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0348</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0349</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0350</i>      * Find the page destination from a named destination.                                                                         
+</span><span class="outsideLine"><i>0351</i>      * @param namedDest the named destination.                                                                                     
+</span><span class="outsideLine"><i>0352</i>      * @return a PDPageDestination object or null if not found.                                                                    
+</span><span class="outsideLine"><i>0353</i>      * @throws IOException if there is an error creating the PDPageDestination object.                                             
+</span><span class="outsideLine"><i>0354</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0355</i>     public PDPageDestination findNamedDestinationPage(PDNamedDestination namedDest)                                                
+</span><span class="outsideLine"><i>0356</i>             throws IOException                                                                                                     
+</span><span class="methodLine"><i>0357</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 901</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0358</i>         PDPageDestination pageDestination = null;                                                                                  
+</span><span class="methodLine"><i>0359</i>         PDDocumentNameDictionary namesDict = getNames();                                                                           
+</span><span class="methodLine"><i>0360</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1992</span>namesDict <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1992</span>!=</span> null</span>)                                                                                                     
+</span><span class="methodLine"><i>0361</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0362</i>             PDDestinationNameTreeNode destsTree = namesDict.getDests();                                                            
+</span><span class="methodLine"><i>0363</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3334</span>destsTree <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3334</span>!=</span> null</span>)                                                                                                 
+</span><span class="methodLine"><i>0364</i>             {                                                                                                                      
+</span><span class="methodLine"><i>0365</i>                 pageDestination = destsTree.getValue(namedDest.getNamedDestination());                                             
+</span><span class="methodLine"><i>0366</i>             }                                                                                                                      
+</span><span class="methodLine"><i>0367</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0368</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1996</span>pageDestination <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1996</span>==</span> null</span>)                                                                                               
+</span><span class="methodLine"><i>0369</i>         {                                                                                                                          
+</span><span class="outsideLine"><i>0370</i>             // Look up /Dests dictionary from catalog                                                                              
+</span><span class="methodLine"><i>0371</i>             PDDocumentNameDestinationDictionary nameDestDict = getDests();                                                         
+</span><span class="methodLine"><i>0372</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3341</span>nameDestDict <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3341</span>!=</span> null</span>)                                                                                              
+</span><span class="methodLine"><i>0373</i>             {                                                                                                                      
+</span><span class="methodLine"><i>0374</i>                 String name = namedDest.getNamedDestination();                                                                     
+</span><span class="methodLine"><i>0375</i>                 pageDestination = (PDPageDestination) nameDestDict.getDestination(name);                                           
+</span><span class="methodLine"><i>0376</i>             }                                                                                                                      
+</span><span class="methodLine"><i>0377</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0378</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1527</span>return pageDestination;</span>                                                                                                    
+</span><span class="methodLine"><i>0379</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0380</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0381</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0382</i>      * Sets the names dictionary for the document.                                                                                 
+</span><span class="outsideLine"><i>0383</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0384</i>      * @param names The names dictionary that is associated with this document.                                                    
+</span><span class="outsideLine"><i>0385</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0386</i>     public void setNames(PDDocumentNameDictionary names)                                                                           
+</span><span class="methodLine"><i>0387</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 906</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0388</i>         root.setItem(COSName.NAMES, names);                                                                                        
+</span><span class="methodLine"><i>0389</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0390</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0391</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0392</i>      * Get info about doc's usage of tagged features. This will return null if there is no                                         
+</span><span class="outsideLine"><i>0393</i>      * information.                                                                                                                
+</span><span class="outsideLine"><i>0394</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0395</i>      * @return The new mark info.                                                                                                  
+</span><span class="outsideLine"><i>0396</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0397</i>     public PDMarkInfo getMarkInfo()                                                                                                
+</span><span class="methodLine"><i>0398</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 911</span>{                                                                                                                              
+</span><span class="methodLine"><i>0399</i>         COSDictionary dic = (COSDictionary)root.getDictionaryObject(COSName.MARK_INFO);                                            
+</span><span class="methodLine"><i>0400</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1532</span>return <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2004</span>dic <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2004</span>==</span> null</span> ? null : <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2307</span>new PDMarkInfo(dic)</span>;</span>                                                                           
+</span><span class="methodLine"><i>0401</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0402</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0403</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0404</i>      * Set information about the doc's usage of tagged features.                                                                   
+</span><span class="outsideLine"><i>0405</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0406</i>      * @param markInfo The new MarkInfo data.                                                                                      
+</span><span class="outsideLine"><i>0407</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0408</i>     public void setMarkInfo(PDMarkInfo markInfo)                                                                                   
+</span><span class="methodLine"><i>0409</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 916</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0410</i>         root.setItem(COSName.MARK_INFO, markInfo);                                                                                 
+</span><span class="methodLine"><i>0411</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0412</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0413</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0414</i>      * Get the list of OutputIntents defined in the document.                                                                      
+</span><span class="outsideLine"><i>0415</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0416</i>      * @return The list of PDOutputIntent                                                                                          
+</span><span class="outsideLine"><i>0417</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0418</i>     public List<PDOutputIntent> getOutputIntents()                                                                                 
+</span><span class="methodLine"><i>0419</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 921</span>{                                                                                                                              
+</span><span class="methodLine"><i>0420</i>         List<PDOutputIntent> retval = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3360</span>new ArrayList<PDOutputIntent>()</span>;                                                             
+</span><span class="methodLine"><i>0421</i>         COSArray array = (COSArray)root.getDictionaryObject(COSName.OUTPUT_INTENTS);                                               
+</span><span class="methodLine"><i>0422</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2017</span>array <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2017</span>!=</span> null</span>)                                                                                                         
+</span><span class="methodLine"><i>0423</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0424</i>             for (COSBase cosBase : array)                                                                                          
+</span><span class="methodLine"><i>0425</i>             {                                                                                                                      
+</span><span class="methodLine"><i>0426</i>                 if (cosBase instanceof COSObject)                                                                                  
+</span><span class="methodLine"><i>0427</i>                 {                                                                                                                  
+</span><span class="methodLine"><i>0428</i>                     cosBase = ((COSObject)cosBase).getObject();                                                                    
+</span><span class="methodLine"><i>0429</i>                 }                                                                                                                  
+</span><span class="methodLine"><i>0430</i>                 PDOutputIntent oi = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4449</span>new PDOutputIntent((COSDictionary) cosBase)</span>;                                                   
+</span><span class="methodLine"><i>0431</i>                 retval.add(oi);                                                                                                    
+</span><span class="methodLine"><i>0432</i>             }                                                                                                                      
+</span><span class="methodLine"><i>0433</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0434</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1542</span>return retval;</span>                                                                                                             
+</span><span class="methodLine"><i>0435</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0436</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0437</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0438</i>      * Add an OutputIntent to the list.  If there is not OutputIntent, the list is created and the                                 
+</span><span class="outsideLine"><i>0439</i>      * first  element added.                                                                                                       
+</span><span class="outsideLine"><i>0440</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0441</i>      * @param outputIntent the OutputIntent to add.                                                                                
+</span><span class="outsideLine"><i>0442</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0443</i>     public void addOutputIntent(PDOutputIntent outputIntent)                                                                       
+</span><span class="methodLine"><i>0444</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 926</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0445</i>         COSArray array = (COSArray)root.getDictionaryObject(COSName.OUTPUT_INTENTS);                                               
+</span><span class="methodLine"><i>0446</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2025</span>array <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2025</span>==</span> null</span>)                                                                                                         
+</span><span class="methodLine"><i>0447</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0448</i>             array = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3909</span>new COSArray()</span>;                                                                                                
+</span><span class="methodLine"><i>0449</i>             root.setItem(COSName.OUTPUT_INTENTS, array);                                                                           
+</span><span class="methodLine"><i>0450</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0451</i>         array.add(outputIntent.getCOSObject());                                                                                    
+</span><span class="methodLine"><i>0452</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0453</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0454</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0455</i>      * Replace the list of OutputIntents of the document.                                                                          
+</span><span class="outsideLine"><i>0456</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0457</i>      * @param outputIntents the list of OutputIntents, if the list is empty all OutputIntents are                                  
+</span><span class="outsideLine"><i>0458</i>      * removed.                                                                                                                    
+</span><span class="outsideLine"><i>0459</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0460</i>     public void setOutputIntents(List<PDOutputIntent> outputIntents)                                                               
+</span><span class="methodLine"><i>0461</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 931</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0462</i>         COSArray array = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3381</span>new COSArray()</span>;                                                                                           
+</span><span class="methodLine"><i>0463</i>         for (PDOutputIntent intent : outputIntents)                                                                                
+</span><span class="methodLine"><i>0464</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0465</i>             array.add(intent.getCOSObject());                                                                                      
+</span><span class="methodLine"><i>0466</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0467</i>         root.setItem(COSName.OUTPUT_INTENTS, array);                                                                               
+</span><span class="methodLine"><i>0468</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0469</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0470</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0471</i>      * Returns the page display mode.                                                                                              
+</span><span class="outsideLine"><i>0472</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0473</i>      * @return the page mode.                                                                                                      
+</span><span class="outsideLine"><i>0474</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0475</i>     public PageMode getPageMode()                                                                                                  
+</span><span class="methodLine"><i>0476</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 936</span>{                                                                                                                              
+</span><span class="methodLine"><i>0477</i>         String mode = root.getNameAsString(COSName.PAGE_MODE);                                                                     
+</span><span class="methodLine"><i>0478</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2039</span>mode <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2039</span>!=</span> null</span>)                                                                                                          
+</span><span class="methodLine"><i>0479</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0480</i>             try                                                                                                                    
+</span><span class="methodLine"><i>0481</i>             {                                                                                                                      
+</span><span class="methodLine"><i>0482</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3681</span>return PageMode.fromString(mode);</span>                                                                                  
+</span><span class="methodLine"><i>0483</i>             }                                                                                                                      
+</span><span class="methodLine"><i>0484</i>             catch (IllegalArgumentException e)                                                                                     
+</span><span class="methodLine"><i>0485</i>             {                                                                                                                      
+</span><span class="methodLine"><i>0486</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3931</span>return PageMode.USE_NONE;</span>                                                                                          
+</span><span class="methodLine"><i>0487</i>             }                                                                                                                      
+</span><span class="methodLine"><i>0488</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0489</i>         else                                                                                                                       
+</span><span class="methodLine"><i>0490</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0491</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2728</span>return PageMode.USE_NONE;</span>                                                                                              
+</span><span class="methodLine"><i>0492</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0493</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0494</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0495</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0496</i>      * Sets the page mode.                                                                                                         
+</span><span class="outsideLine"><i>0497</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0498</i>      * @param mode The new page mode.                                                                                              
+</span><span class="outsideLine"><i>0499</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0500</i>     public void setPageMode(PageMode mode)                                                                                         
+</span><span class="methodLine"><i>0501</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 941</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0502</i>         root.setName(COSName.PAGE_MODE, mode.stringValue());                                                                       
+</span><span class="methodLine"><i>0503</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0504</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0505</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0506</i>      * Returns the page layout.                                                                                                    
+</span><span class="outsideLine"><i>0507</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0508</i>      * @return the page layout.                                                                                                    
+</span><span class="outsideLine"><i>0509</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0510</i>     public PageLayout getPageLayout()                                                                                              
+</span><span class="methodLine"><i>0511</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 946</span>{                                                                                                                              
+</span><span class="methodLine"><i>0512</i>         String mode = root.getNameAsString(COSName.PAGE_LAYOUT);                                                                   
+</span><span class="methodLine"><i>0513</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2048</span>mode <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2048</span>!=</span> null</span>)                                                                                                          
+</span><span class="methodLine"><i>0514</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0515</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2741</span>return PageLayout.fromString(mode);</span>                                                                                    
+</span><span class="methodLine"><i>0516</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0517</i>         else                                                                                                                       
+</span><span class="methodLine"><i>0518</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0519</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2742</span>return PageLayout.SINGLE_PAGE;</span>                                                                                         
+</span><span class="methodLine"><i>0520</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0521</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0522</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0523</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0524</i>      * Sets the page layout.                                                                                                       
+</span><span class="outsideLine"><i>0525</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0526</i>      * @param layout The new page layout.                                                                                          
+</span><span class="outsideLine"><i>0527</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0528</i>     public void setPageLayout(PageLayout layout)                                                                                   
+</span><span class="methodLine"><i>0529</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 951</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0530</i>         root.setName(COSName.PAGE_LAYOUT, layout.stringValue());                                                                   
+</span><span class="methodLine"><i>0531</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0532</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0533</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0534</i>      * Returns the document-level URI.                                                                                             
+</span><span class="outsideLine"><i>0535</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0536</i>      * @return the document-level URI                                                                                              
+</span><span class="outsideLine"><i>0537</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0538</i>     public PDURIDictionary getURI()                                                                                                
+</span><span class="methodLine"><i>0539</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 956</span>{                                                                                                                              
+</span><span class="methodLine"><i>0540</i>         COSDictionary uri = (COSDictionary)root.getDictionaryObject(COSName.URI);                                                  
+</span><span class="methodLine"><i>0541</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1564</span>return <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2056</span>uri <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2056</span>==</span> null</span> ? null : <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2390</span>new PDURIDictionary(uri)</span>;</span>                                                                      
+</span><span class="methodLine"><i>0542</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0543</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0544</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0545</i>      * Sets the document level URI.                                                                                                
+</span><span class="outsideLine"><i>0546</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0547</i>      * @param uri The new document level URI.                                                                                      
+</span><span class="outsideLine"><i>0548</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0549</i>     public void setURI(PDURIDictionary uri)                                                                                        
+</span><span class="methodLine"><i>0550</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 961</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0551</i>         root.setItem(COSName.URI, uri);                                                                                            
+</span><span class="methodLine"><i>0552</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0553</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0554</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0555</i>      * Get the document's structure tree root, or null if none exists.                                                             
+</span><span class="outsideLine"><i>0556</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0557</i>      * @return the structure tree root.                                                                                            
+</span><span class="outsideLine"><i>0558</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0559</i>     public PDStructureTreeRoot getStructureTreeRoot()                                                                              
+</span><span class="methodLine"><i>0560</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 966</span>{                                                                                                                              
+</span><span class="methodLine"><i>0561</i>         COSDictionary dict = root.getCOSDictionary(COSName.STRUCT_TREE_ROOT);                                                      
+</span><span class="methodLine"><i>0562</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1569</span>return <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2065</span>dict <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2065</span>==</span> null</span> ? null : <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2402</span>new PDStructureTreeRoot(dict)</span>;</span>                                                                
+</span><span class="methodLine"><i>0563</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0564</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0565</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0566</i>      * Sets the document's structure tree root.                                                                                    
+</span><span class="outsideLine"><i>0567</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0568</i>      * @param treeRoot The new structure tree.                                                                                     
+</span><span class="outsideLine"><i>0569</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0570</i>     public void setStructureTreeRoot(PDStructureTreeRoot treeRoot)                                                                 
+</span><span class="methodLine"><i>0571</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 971</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0572</i>         root.setItem(COSName.STRUCT_TREE_ROOT, treeRoot);                                                                          
+</span><span class="methodLine"><i>0573</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0574</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0575</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0576</i>      * Returns the language for the document, or null.                                                                             
+</span><span class="outsideLine"><i>0577</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0578</i>      * @return the language or null.                                                                                               
+</span><span class="outsideLine"><i>0579</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0580</i>     public String getLanguage()                                                                                                    
+</span><span class="methodLine"><i>0581</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 976</span>{                                                                                                                              
+</span><span class="methodLine"><i>0582</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1573</span>return root.getString(COSName.LANG);</span>                                                                                       
+</span><span class="methodLine"><i>0583</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0584</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0585</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0586</i>      * Sets the Language for the document.                                                                                         
+</span><span class="outsideLine"><i>0587</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0588</i>      * @param language The new document language.                                                                                  
+</span><span class="outsideLine"><i>0589</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0590</i>     public void setLanguage(String language)                                                                                       
+</span><span class="methodLine"><i>0591</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 981</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0592</i>         root.setString(COSName.LANG, language);                                                                                    
+</span><span class="methodLine"><i>0593</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0594</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0595</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0596</i>      * Returns the PDF specification version this document conforms to.                                                            
+</span><span class="outsideLine"><i>0597</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0598</i>      * @return the PDF version (e.g. "1.4")                                                                                        
+</span><span class="outsideLine"><i>0599</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0600</i>     public String getVersion()                                                                                                     
+</span><span class="methodLine"><i>0601</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 986</span>{                                                                                                                              
+</span><span class="methodLine"><i>0602</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1577</span>return root.getNameAsString(COSName.VERSION);</span>                                                                              
+</span><span class="methodLine"><i>0603</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0604</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0605</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0606</i>      * Sets the PDF specification version this document conforms to.                                                               
+</span><span class="outsideLine"><i>0607</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0608</i>      * @param version the PDF version (e.g. "1.4")                                                                                 
+</span><span class="outsideLine"><i>0609</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0610</i>     public void setVersion(String version)                                                                                         
+</span><span class="methodLine"><i>0611</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 991</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0612</i>         root.setName(COSName.VERSION, version);                                                                                    
+</span><span class="methodLine"><i>0613</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0614</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0615</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0616</i>      * Returns the page labels descriptor of the document.                                                                         
+</span><span class="outsideLine"><i>0617</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0618</i>      * @return the page labels descriptor of the document.                                                                         
+</span><span class="outsideLine"><i>0619</i>      * @throws IOException If there is a problem retrieving the page labels.                                                       
+</span><span class="outsideLine"><i>0620</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0621</i>     public PDPageLabels getPageLabels() throws IOException                                                                         
+</span><span class="methodLine"><i>0622</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 998</span>{                                                                                                                              
+</span><span class="methodLine"><i>0623</i>         COSDictionary dict = (COSDictionary) root.getDictionaryObject(COSName.PAGE_LABELS);                                        
+</span><span class="methodLine"><i>0624</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1582</span>return <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2086</span>dict <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2086</span>==</span> null</span> ? null : <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2430</span>new PDPageLabels(document, dict)</span>;</span>                                                             
+</span><span class="methodLine"><i>0625</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0626</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0627</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0628</i>      * Sets the page label descriptor for the document.                                                                            
+</span><span class="outsideLine"><i>0629</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0630</i>      * @param labels the new page label descriptor to set.                                                                         
+</span><span class="outsideLine"><i>0631</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0632</i>     public void setPageLabels(PDPageLabels labels)                                                                                 
+</span><span class="methodLine"><i>0633</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1003</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0634</i>         root.setItem(COSName.PAGE_LABELS, labels);                                                                                 
+</span><span class="methodLine"><i>0635</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0636</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0637</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0638</i>      * Get the optional content properties dictionary associated with this document.                                               
+</span><span class="outsideLine"><i>0639</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0640</i>      * @return the optional properties dictionary or null if it is not present                                                     
+</span><span class="outsideLine"><i>0641</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0642</i>     public PDOptionalContentProperties getOCProperties()                                                                           
+</span><span class="methodLine"><i>0643</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1008</span>{                                                                                                                              
+</span><span class="methodLine"><i>0644</i>         COSDictionary dict = (COSDictionary)root.getDictionaryObject(COSName.OCPROPERTIES);                                        
+</span><span class="methodLine"><i>0645</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1587</span>return <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2095</span>dict <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2095</span>==</span> null</span> ? null : <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2442</span>new PDOptionalContentProperties(dict)</span>;</span>                                                        
+</span><span class="methodLine"><i>0646</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0647</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0648</i>     /**                                                                                                                            
+</span><span class="outsideLine"><i>0649</i>      * Sets the optional content properties dictionary. The document version is incremented to 1.5                                 
+</span><span class="outsideLine"><i>0650</i>      * if lower.                                                                                                                   
+</span><span class="outsideLine"><i>0651</i>      *                                                                                                                             
+</span><span class="outsideLine"><i>0652</i>      * @param ocProperties the optional properties dictionary                                                                      
+</span><span class="outsideLine"><i>0653</i>      */                                                                                                                            
+</span><span class="outsideLine"><i>0654</i>     public void setOCProperties(PDOptionalContentProperties ocProperties)                                                          
+</span><span class="methodLine"><i>0655</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1013</span>{</span>                                                                                                                              
+</span><span class="methodLine"><i>0656</i>         root.setItem(COSName.OCPROPERTIES, ocProperties);                                                                          
+</span><span class="outsideLine"><i>0657</i>                                                                                                                                    
+</span><span class="outsideLine"><i>0658</i>         // optional content groups require PDF 1.5                                                                                 
+</span><span class="methodLine"><i>0659</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2447</span>ocProperties <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2447</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2103</span>&&</span> document.getVersion() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2449</span><</span> 1.5)                                                                   
+</span><span class="methodLine"><i>0660</i>         {                                                                                                                          
+</span><span class="methodLine"><i>0661</i>             document.setVersion(1.5f);                                                                                             
+</span><span class="methodLine"><i>0662</i>         }                                                                                                                          
+</span><span class="methodLine"><i>0663</i>     }</span>                                                                                                                              
+</span><span class="outsideLine"><i>0664</i> }                                                                                                                                  
+</span><span class="outsideLine"><i>0665</i>                                                                                                                                    </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

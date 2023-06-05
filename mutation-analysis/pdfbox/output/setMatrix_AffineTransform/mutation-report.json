@@ -1,0 +1,44 @@
+{
+    "mut": "setMatrix_AffineTransform",
+    "CUT": "org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject",
+    "mutant-file": "./PDFormXObject.java/11.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.447 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.662 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.176 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.111 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen"
+},
+{
+    "mut": "setMatrix_AffineTransform",
+    "CUT": "org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject",
+    "mutant-file": "./PDFormXObject.java/29.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.739 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.452 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.895 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.776 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen"
+},
+{
+    "mut": "setMatrix_AffineTransform",
+    "CUT": "org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject",
+    "mutant-file": "./PDFormXObject.java/42.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.149 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.3 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.688 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.355 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen"
+},
+{
+    "mut": "setMatrix_AffineTransform",
+    "CUT": "org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject",
+    "mutant-file": "./PDFormXObject.java/43.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 11.07 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.824 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 11.816 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 12.649 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen"
+},

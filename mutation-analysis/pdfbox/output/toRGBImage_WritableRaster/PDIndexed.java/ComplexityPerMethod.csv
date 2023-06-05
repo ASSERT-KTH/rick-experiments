@@ -1,0 +1,19 @@
+***not in a method***;1;1;0
+PDIndexed.PDIndexed( );1;1;7
+PDIndexed.PDIndexed( COSArray indexedArray );0;1;3
+PDIndexed.PDIndexed( COSArray indexedArray , PDResources resources );0;1;6
+PDIndexed.getBaseColorSpace( );2;1;3
+PDIndexed.getDefaultDecode( int bitsPerComponent );3;1;3
+PDIndexed.getHival( );2;1;3
+PDIndexed.getInitialColor( );2;1;3
+PDIndexed.getName( );3;1;3
+PDIndexed.getNumberOfComponents( );2;1;3
+PDIndexed.initRgbColorTable( );12;5;30
+PDIndexed.readColorTable( );14;4;19
+PDIndexed.readLookupData( );7;5;22
+PDIndexed.setBaseColorSpace( PDColorSpace base );2;1;4
+PDIndexed.setHighValue( int high );1;1;3
+PDIndexed.toRGB( float [ ] value );7;2;11
+PDIndexed.toRGBImage( WritableRaster raster );8;3;17
+PDIndexed.toRawImage( WritableRaster raster );15;4;17
+PDIndexed.toString( );3;1;5

@@ -1,0 +1,415 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.47</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                                  
+</span><span class="outsideLine"><i>0002</i>  * Licensed to the Apache Software Foundation (ASF) under one or more                               
+</span><span class="outsideLine"><i>0003</i>  * contributor license agreements.  See the NOTICE file distributed with                            
+</span><span class="outsideLine"><i>0004</i>  * this work for additional information regarding copyright ownership.                              
+</span><span class="outsideLine"><i>0005</i>  * The ASF licenses this file to You under the Apache License, Version 2.0                          
+</span><span class="outsideLine"><i>0006</i>  * (the "License"); you may not use this file except in compliance with                             
+</span><span class="outsideLine"><i>0007</i>  * the License.  You may obtain a copy of the License at                                            
+</span><span class="outsideLine"><i>0008</i>  *                                                                                                  
+</span><span class="outsideLine"><i>0009</i>  *      http://www.apache.org/licenses/LICENSE-2.0                                                  
+</span><span class="outsideLine"><i>0010</i>  *                                                                                                  
+</span><span class="outsideLine"><i>0011</i>  * Unless required by applicable law or agreed to in writing, software                              
+</span><span class="outsideLine"><i>0012</i>  * distributed under the License is distributed on an "AS IS" BASIS,                                
+</span><span class="outsideLine"><i>0013</i>  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                         
+</span><span class="outsideLine"><i>0014</i>  * See the License for the specific language governing permissions and                              
+</span><span class="outsideLine"><i>0015</i>  * limitations under the License.                                                                   
+</span><span class="outsideLine"><i>0016</i>  */                                                                                                 
+</span><span class="outsideLine"><i>0017</i> package org.apache.pdfbox.pdmodel.graphics.form;                                                    
+</span><span class="outsideLine"><i>0018</i>                                                                                                     
+</span><span class="outsideLine"><i>0019</i> import java.awt.geom.AffineTransform;                                                               
+</span><span class="outsideLine"><i>0020</i> import java.io.IOException;                                                                         
+</span><span class="outsideLine"><i>0021</i> import java.io.InputStream;                                                                         
+</span><span class="outsideLine"><i>0022</i> import org.apache.pdfbox.contentstream.PDContentStream;                                             
+</span><span class="outsideLine"><i>0023</i> import org.apache.pdfbox.cos.COSArray;                                                              
+</span><span class="outsideLine"><i>0024</i> import org.apache.pdfbox.cos.COSBase;                                                               
+</span><span class="outsideLine"><i>0025</i> import org.apache.pdfbox.cos.COSDictionary;                                                         
+</span><span class="outsideLine"><i>0026</i> import org.apache.pdfbox.cos.COSFloat;                                                              
+</span><span class="outsideLine"><i>0027</i> import org.apache.pdfbox.cos.COSName;                                                               
+</span><span class="outsideLine"><i>0028</i> import org.apache.pdfbox.cos.COSStream;                                                             
+</span><span class="outsideLine"><i>0029</i> import org.apache.pdfbox.pdmodel.PDDocument;                                                        
+</span><span class="outsideLine"><i>0030</i> import org.apache.pdfbox.pdmodel.PDResources;                                                       
+</span><span class="outsideLine"><i>0031</i> import org.apache.pdfbox.pdmodel.ResourceCache;                                                     
+</span><span class="outsideLine"><i>0032</i> import org.apache.pdfbox.pdmodel.common.PDRectangle;                                                
+</span><span class="outsideLine"><i>0033</i> import org.apache.pdfbox.pdmodel.common.PDStream;                                                   
+</span><span class="outsideLine"><i>0034</i> import org.apache.pdfbox.pdmodel.documentinterchange.markedcontent.PDPropertyList;                  
+</span><span class="outsideLine"><i>0035</i> import org.apache.pdfbox.pdmodel.graphics.PDXObject;                                                
+</span><span class="outsideLine"><i>0036</i> import org.apache.pdfbox.util.Matrix;                                                               
+</span><span class="outsideLine"><i>0037</i>                                                                                                     
+</span><span class="outsideLine"><i>0038</i> /*                                                                                                  
+</span><span class="outsideLine"><i>0039</i> TODO There are further Form XObjects to implement:                                                  
+</span><span class="outsideLine"><i>0040</i>                                                                                                     
+</span><span class="outsideLine"><i>0041</i> + PDFormXObject                                                                                     
+</span><span class="outsideLine"><i>0042</i> |- PDReferenceXObject                                                                               
+</span><span class="outsideLine"><i>0043</i> |- PDGroupXObject                                                                                   
+</span><span class="outsideLine"><i>0044</i>    |- PDTransparencyXObject                                                                         
+</span><span class="outsideLine"><i>0045</i>                                                                                                     
+</span><span class="outsideLine"><i>0046</i> See PDF 32000 p111                                                                                  
+</span><span class="outsideLine"><i>0047</i>                                                                                                     
+</span><span class="outsideLine"><i>0048</i> When doing this all methods on PDFormXObject should probably be made                                
+</span><span class="outsideLine"><i>0049</i> final and all fields private.                                                                       
+</span><span class="outsideLine"><i>0050</i> */                                                                                                  
+</span><span class="outsideLine"><i>0051</i>                                                                                                     
+</span><span class="outsideLine"><i>0052</i> /**                                                                                                 
+</span><span class="outsideLine"><i>0053</i>  * A Form XObject.                                                                                  
+</span><span class="outsideLine"><i>0054</i>  *                                                                                                  
+</span><span class="outsideLine"><i>0055</i>  * @author Ben Litchfield                                                                           
+</span><span class="outsideLine"><i>0056</i>  */                                                                                                 
+</span><span class="outsideLine"><i>0057</i> public class PDFormXObject extends PDXObject implements PDContentStream                             
+</span><span class="outsideLine"><i>0058</i> {                                                                                                   
+</span><span class="outsideLine"><i>0059</i>     private PDTransparencyGroupAttributes group;                                                    
+</span><span class="outsideLine"><i>0060</i>     private final ResourceCache cache;                                                              
+</span><span class="outsideLine"><i>0061</i>                                                                                                     
+</span><span class="outsideLine"><i>0062</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0063</i>      * Creates a Form XObject for reading.                                                          
+</span><span class="outsideLine"><i>0064</i>      * @param stream The XObject stream                                                             
+</span><span class="outsideLine"><i>0065</i>      */                                                                                             
+</span><span class="outsideLine"><i>0066</i>     public PDFormXObject(PDStream stream)                                                           
+</span><span class="methodLine"><i>0067</i>     {                                                                                               
+</span><span class="methodLine"><i>0068</i>         super(stream, COSName.FORM);                                                                
+</span><span class="methodLine"><i>0069</i>         cache = null;                                                                               
+</span><span class="methodLine"><i>0070</i>     }                                                                                               
+</span><span class="outsideLine"><i>0071</i>                                                                                                     
+</span><span class="outsideLine"><i>0072</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0073</i>      * Creates a Form XObject for reading.                                                          
+</span><span class="outsideLine"><i>0074</i>      * @param stream The XObject stream                                                             
+</span><span class="outsideLine"><i>0075</i>      */                                                                                             
+</span><span class="outsideLine"><i>0076</i>     public PDFormXObject(COSStream stream)                                                          
+</span><span class="methodLine"><i>0077</i>     {                                                                                               
+</span><span class="methodLine"><i>0078</i>         super(stream, COSName.FORM);                                                                
+</span><span class="methodLine"><i>0079</i>         cache = null;                                                                               
+</span><span class="methodLine"><i>0080</i>     }                                                                                               
+</span><span class="outsideLine"><i>0081</i>                                                                                                     
+</span><span class="outsideLine"><i>0082</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0083</i>      * Creates a Form XObject for reading.                                                          
+</span><span class="outsideLine"><i>0084</i>      * @param stream The XObject stream                                                             
+</span><span class="outsideLine"><i>0085</i>      */                                                                                             
+</span><span class="outsideLine"><i>0086</i>     public PDFormXObject(COSStream stream, ResourceCache cache)                                     
+</span><span class="methodLine"><i>0087</i>     {                                                                                               
+</span><span class="methodLine"><i>0088</i>         super(stream, COSName.FORM);                                                                
+</span><span class="methodLine"><i>0089</i>         this.cache = cache;                                                                         
+</span><span class="methodLine"><i>0090</i>     }                                                                                               
+</span><span class="outsideLine"><i>0091</i>                                                                                                     
+</span><span class="outsideLine"><i>0092</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0093</i>      * Creates a Form Image XObject for writing, in the given document.                             
+</span><span class="outsideLine"><i>0094</i>      * @param document The current document                                                         
+</span><span class="outsideLine"><i>0095</i>      */                                                                                             
+</span><span class="outsideLine"><i>0096</i>     public PDFormXObject(PDDocument document)                                                       
+</span><span class="methodLine"><i>0097</i>     {                                                                                               
+</span><span class="methodLine"><i>0098</i>         super(document, COSName.FORM);                                                              
+</span><span class="methodLine"><i>0099</i>         cache = null;                                                                               
+</span><span class="methodLine"><i>0100</i>     }                                                                                               
+</span><span class="outsideLine"><i>0101</i>                                                                                                     
+</span><span class="outsideLine"><i>0102</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0103</i>      * This will get the form type, currently 1 is the only form type.                              
+</span><span class="outsideLine"><i>0104</i>      * @return The form type.                                                                       
+</span><span class="outsideLine"><i>0105</i>      */                                                                                             
+</span><span class="outsideLine"><i>0106</i>     public int getFormType()                                                                        
+</span><span class="methodLine"><i>0107</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 414</span>{                                                                                               
+</span><span class="methodLine"><i>0108</i>         return getCOSObject().getInt(COSName.FORMTYPE, 1);                                          
+</span><span class="methodLine"><i>0109</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0110</i>                                                                                                     
+</span><span class="outsideLine"><i>0111</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0112</i>      * Set the form type.                                                                           
+</span><span class="outsideLine"><i>0113</i>      * @param formType The new form type.                                                           
+</span><span class="outsideLine"><i>0114</i>      */                                                                                             
+</span><span class="outsideLine"><i>0115</i>     public void setFormType(int formType)                                                           
+</span><span class="methodLine"><i>0116</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 419</span>{                                                                                               
+</span><span class="methodLine"><i>0117</i>         getCOSObject().setInt(COSName.FORMTYPE, formType);                                          
+</span><span class="methodLine"><i>0118</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0119</i>                                                                                                     
+</span><span class="outsideLine"><i>0120</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0121</i>      * Returns the group attributes dictionary.                                                     
+</span><span class="outsideLine"><i>0122</i>      *                                                                                              
+</span><span class="outsideLine"><i>0123</i>      * @return the group attributes dictionary                                                      
+</span><span class="outsideLine"><i>0124</i>      */                                                                                             
+</span><span class="outsideLine"><i>0125</i>     public PDTransparencyGroupAttributes getGroup()                                                 
+</span><span class="methodLine"><i>0126</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 424</span>{                                                                                               
+</span><span class="methodLine"><i>0127</i>         if( <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 882</span>group <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 882</span>==</span> null</span> )                                                                         
+</span><span class="methodLine"><i>0128</i>         {                                                                                           
+</span><span class="methodLine"><i>0129</i>             COSDictionary dic = (COSDictionary) getCOSObject().getDictionaryObject(COSName.GROUP);  
+</span><span class="methodLine"><i>0130</i>             if( <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1372</span>dic <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1372</span>!=</span> null</span> )                                                                       
+</span><span class="methodLine"><i>0131</i>             {                                                                                       
+</span><span class="methodLine"><i>0132</i>                 group = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1673</span>new PDTransparencyGroupAttributes(dic)</span>;                                     
+</span><span class="methodLine"><i>0133</i>             }                                                                                       
+</span><span class="methodLine"><i>0134</i>         }                                                                                           
+</span><span class="methodLine"><i>0135</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 709</span>return group;</span>                                                                               
+</span><span class="methodLine"><i>0136</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0137</i>                                                                                                     
+</span><span class="outsideLine"><i>0138</i>     public PDStream getContentStream()                                                              
+</span><span class="methodLine"><i>0139</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 429</span>{                                                                                               
+</span><span class="methodLine"><i>0140</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 710</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 887</span>new PDStream(getCOSObject())</span>;</span>                                                        
+</span><span class="methodLine"><i>0141</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0142</i>                                                                                                     
+</span><span class="outsideLine"><i>0143</i>     @Override                                                                                       
+</span><span class="outsideLine"><i>0144</i>     public InputStream getContents() throws IOException                                             
+</span><span class="methodLine"><i>0145</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 437</span>{                                                                                               
+</span><span class="methodLine"><i>0146</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 712</span>return getCOSObject().createInputStream();</span>                                                  
+</span><span class="methodLine"><i>0147</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0148</i>                                                                                                     
+</span><span class="outsideLine"><i>0149</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0150</i>      * This will get the resources for this Form XObject.                                           
+</span><span class="outsideLine"><i>0151</i>      * This will return null if no resources are available.                                         
+</span><span class="outsideLine"><i>0152</i>      *                                                                                              
+</span><span class="outsideLine"><i>0153</i>      * @return The resources for this Form XObject.                                                 
+</span><span class="outsideLine"><i>0154</i>      */                                                                                             
+</span><span class="outsideLine"><i>0155</i>     @Override                                                                                       
+</span><span class="outsideLine"><i>0156</i>     public PDResources getResources()                                                               
+</span><span class="methodLine"><i>0157</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 443</span>{                                                                                               
+</span><span class="methodLine"><i>0158</i>         COSDictionary resources = getCOSObject().getCOSDictionary(COSName.RESOURCES);               
+</span><span class="methodLine"><i>0159</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 894</span>resources <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 894</span>!=</span> null</span>)                                                                      
+</span><span class="methodLine"><i>0160</i>         {                                                                                           
+</span><span class="methodLine"><i>0161</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1138</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1383</span>new PDResources(resources, cache)</span>;</span>                                               
+</span><span class="methodLine"><i>0162</i>         }                                                                                           
+</span><span class="methodLine"><i>0163</i>         if (getCOSObject().containsKey(COSName.RESOURCES))                                          
+</span><span class="methodLine"><i>0164</i>         {                                                                                           
+</span><span class="outsideLine"><i>0165</i>             // PDFBOX-4372 if the resource key exists but has nothing, return empty resources,      
+</span><span class="outsideLine"><i>0166</i>             // to avoid a self-reference (xobject form Fm0 contains "/Fm0 Do")                      
+</span><span class="outsideLine"><i>0167</i>             // See also the mention of PDFBOX-1359 in PDFStreamEngine                               
+</span><span class="methodLine"><i>0168</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1143</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1387</span>new PDResources()</span>;</span>                                                               
+</span><span class="methodLine"><i>0169</i>         }                                                                                           
+</span><span class="methodLine"><i>0170</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 717</span>return null;</span>                                                                                
+</span><span class="methodLine"><i>0171</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0172</i>                                                                                                     
+</span><span class="outsideLine"><i>0173</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0174</i>      * This will set the resources for this page.                                                   
+</span><span class="outsideLine"><i>0175</i>      * @param resources The new resources for this page.                                            
+</span><span class="outsideLine"><i>0176</i>      */                                                                                             
+</span><span class="outsideLine"><i>0177</i>     public void setResources(PDResources resources)                                                 
+</span><span class="methodLine"><i>0178</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { resources = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 638</span>{</span>                                                                                               
+</span><span class="methodLine"><i>0179</i>         getCOSObject().setItem(COSName.RESOURCES, resources);                                       
+</span><span class="methodLine"><i>0180</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0181</i>                                                                                                     
+</span><span class="outsideLine"><i>0182</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0183</i>      * An array of four numbers in the form coordinate system (see below),                          
+</span><span class="outsideLine"><i>0184</i>      * giving the coordinates of the left, bottom, right, and top edges, respectively,              
+</span><span class="outsideLine"><i>0185</i>      * of the form XObject's bounding box.                                                          
+</span><span class="outsideLine"><i>0186</i>      * These boundaries are used to clip the form XObject and to determine its size for caching.    
+</span><span class="outsideLine"><i>0187</i>      * @return The BBox of the form.                                                                
+</span><span class="outsideLine"><i>0188</i>      */                                                                                             
+</span><span class="outsideLine"><i>0189</i>     @Override                                                                                       
+</span><span class="outsideLine"><i>0190</i>     public PDRectangle getBBox()                                                                    
+</span><span class="methodLine"><i>0191</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 454</span>{                                                                                               
+</span><span class="methodLine"><i>0192</i>         PDRectangle retval = null;                                                                  
+</span><span class="methodLine"><i>0193</i>         COSArray array = (COSArray) getCOSObject().getDictionaryObject(COSName.BBOX);               
+</span><span class="methodLine"><i>0194</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 909</span>array <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 909</span>!=</span> null</span>)                                                                          
+</span><span class="methodLine"><i>0195</i>         {                                                                                           
+</span><span class="methodLine"><i>0196</i>             retval = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1529</span>new PDRectangle(array)</span>;                                                        
+</span><span class="methodLine"><i>0197</i>         }                                                                                           
+</span><span class="methodLine"><i>0198</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 725</span>return retval;</span>                                                                              
+</span><span class="methodLine"><i>0199</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0200</i>                                                                                                     
+</span><span class="outsideLine"><i>0201</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0202</i>      * This will set the BBox (bounding box) for this form.                                         
+</span><span class="outsideLine"><i>0203</i>      * @param bbox The new BBox for this form.                                                      
+</span><span class="outsideLine"><i>0204</i>      */                                                                                             
+</span><span class="outsideLine"><i>0205</i>     public void setBBox(PDRectangle bbox)                                                           
+</span><span class="methodLine"><i>0206</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { bbox = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 650</span>{</span>                                                                                               
+</span><span class="methodLine"><i>0207</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 915</span>bbox <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 915</span>==</span> null</span>)                                                                           
+</span><span class="methodLine"><i>0208</i>         {                                                                                           
+</span><span class="methodLine"><i>0209</i>             getCOSObject().removeItem(COSName.BBOX);                                                
+</span><span class="methodLine"><i>0210</i>         }                                                                                           
+</span><span class="methodLine"><i>0211</i>         else                                                                                        
+</span><span class="methodLine"><i>0212</i>         {                                                                                           
+</span><span class="methodLine"><i>0213</i>             getCOSObject().setItem(COSName.BBOX, bbox.getCOSArray());                               
+</span><span class="methodLine"><i>0214</i>         }                                                                                           
+</span><span class="methodLine"><i>0215</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0216</i>                                                                                                     
+</span><span class="outsideLine"><i>0217</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0218</i>      * This will get the optional matrix of an XObjectForm. It maps the form space to user space.   
+</span><span class="outsideLine"><i>0219</i>      * @return the form matrix if available, or the identity matrix.                                
+</span><span class="outsideLine"><i>0220</i>      */                                                                                             
+</span><span class="outsideLine"><i>0221</i>     @Override                                                                                       
+</span><span class="outsideLine"><i>0222</i>     public Matrix getMatrix()                                                                       
+</span><span class="methodLine"><i>0223</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 465</span>{                                                                                               
+</span><span class="methodLine"><i>0224</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 730</span>return Matrix.createMatrix(getCOSObject().getDictionaryObject(COSName.MATRIX));</span>             
+</span><span class="methodLine"><i>0225</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0226</i>                                                                                                     
+</span><span class="outsideLine"><i>0227</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0228</i>      * Sets the optional Matrix entry for the form XObject.                                         
+</span><span class="outsideLine"><i>0229</i>      * @param transform the transformation matrix                                                   
+</span><span class="outsideLine"><i>0230</i>      */                                                                                             
+</span><span class="outsideLine"><i>0231</i>     public void setMatrix(AffineTransform transform)                                                
+</span><span class="methodLine"><i>0232</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { transform = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 659</span>{</span>                                                                                               
+</span><span class="methodLine"><i>0233</i>         COSArray matrix = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1408</span>new COSArray()</span>;                                                           
+</span><span class="methodLine"><i>0234</i>         double[] values = new double[6];                                                            
+</span><span class="methodLine"><i>0235</i>         transform.getMatrix(values);                                                                
+</span><span class="methodLine"><i>0236</i>         for (double v : values)                                                                     
+</span><span class="methodLine"><i>0237</i>         {                                                                                           
+</span><span class="methodLine"><i>0238</i>             matrix.add(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1607</span>new COSFloat((float) v)</span>);                                                    
+</span><span class="methodLine"><i>0239</i>         }                                                                                           
+</span><span class="methodLine"><i>0240</i>         getCOSObject().setItem(COSName.MATRIX, matrix);                                             
+</span><span class="methodLine"><i>0241</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0242</i>                                                                                                     
+</span><span class="outsideLine"><i>0243</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0244</i>      * This will get the key of this XObjectForm in the structural parent tree. Required if the form
+</span><span class="outsideLine"><i>0245</i>      * XObject contains marked-content sequences that are structural content items.                 
+</span><span class="outsideLine"><i>0246</i>      *                                                                                              
+</span><span class="outsideLine"><i>0247</i>      * @return the integer key of the XObjectForm's entry in the structural parent tree or -1 if    
+</span><span class="outsideLine"><i>0248</i>      * there isn't any.                                                                             
+</span><span class="outsideLine"><i>0249</i>      */                                                                                             
+</span><span class="outsideLine"><i>0250</i>     public int getStructParents()                                                                   
+</span><span class="methodLine"><i>0251</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 475</span>{                                                                                               
+</span><span class="methodLine"><i>0252</i>         return getCOSObject().getInt(COSName.STRUCT_PARENTS);                                       
+</span><span class="methodLine"><i>0253</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0254</i>                                                                                                     
+</span><span class="outsideLine"><i>0255</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0256</i>      * This will set the key for this XObjectForm in the structural parent tree.                    
+</span><span class="outsideLine"><i>0257</i>      * @param structParent The new key for this XObjectForm.                                        
+</span><span class="outsideLine"><i>0258</i>      */                                                                                             
+</span><span class="outsideLine"><i>0259</i>     public void setStructParents(int structParent)                                                  
+</span><span class="methodLine"><i>0260</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 480</span>{                                                                                               
+</span><span class="methodLine"><i>0261</i>         getCOSObject().setInt(COSName.STRUCT_PARENTS, structParent);                                
+</span><span class="methodLine"><i>0262</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0263</i>                                                                                                     
+</span><span class="outsideLine"><i>0264</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0265</i>      * This will get the optional content group or optional content membership dictionary.          
+</span><span class="outsideLine"><i>0266</i>      *                                                                                              
+</span><span class="outsideLine"><i>0267</i>      * @return The optional content group or optional content membership dictionary or null if there
+</span><span class="outsideLine"><i>0268</i>      * is none.                                                                                     
+</span><span class="outsideLine"><i>0269</i>      */                                                                                             
+</span><span class="outsideLine"><i>0270</i>     public PDPropertyList getOptionalContent()                                                      
+</span><span class="methodLine"><i>0271</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 485</span>{                                                                                               
+</span><span class="methodLine"><i>0272</i>         COSBase base = getCOSObject().getDictionaryObject(COSName.OC);                              
+</span><span class="methodLine"><i>0273</i>         if (base instanceof COSDictionary)                                                          
+</span><span class="methodLine"><i>0274</i>         {                                                                                           
+</span><span class="methodLine"><i>0275</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1211</span>return PDPropertyList.create((COSDictionary) base);</span>                                     
+</span><span class="methodLine"><i>0276</i>         }                                                                                           
+</span><span class="methodLine"><i>0277</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 744</span>return null;</span>                                                                                
+</span><span class="methodLine"><i>0278</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0279</i>                                                                                                     
+</span><span class="outsideLine"><i>0280</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0281</i>      * Sets the optional content group or optional content membership dictionary.                   
+</span><span class="outsideLine"><i>0282</i>      *                                                                                              
+</span><span class="outsideLine"><i>0283</i>      * @param oc The optional content group or optional content membership dictionary.              
+</span><span class="outsideLine"><i>0284</i>      */                                                                                             
+</span><span class="outsideLine"><i>0285</i>     public void setOptionalContent(PDPropertyList oc)                                               
+</span><span class="methodLine"><i>0286</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { oc = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 681</span>{</span>                                                                                               
+</span><span class="methodLine"><i>0287</i>         getCOSObject().setItem(COSName.OC, oc);                                                     
+</span><span class="methodLine"><i>0288</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0289</i> }                                                                                                   
+</span><span class="outsideLine"><i>0290</i>                                                                                                     </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

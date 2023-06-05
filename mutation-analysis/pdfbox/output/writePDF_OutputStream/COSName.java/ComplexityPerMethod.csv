@@ -1,0 +1,13 @@
+***not in a method***;536;1;0
+COSName.COSName( String aName );0;1;3
+COSName.COSName( String aName , boolean staticValue );0;2;12
+COSName.accept( ICOSVisitor visitor );3;1;3
+COSName.clearResources( );1;1;3
+COSName.compareTo( COSName other );3;1;3
+COSName.equals( Object object );4;2;3
+COSName.getName( );3;1;3
+COSName.getPDFName( String aName );10;4;16
+COSName.hashCode( );2;1;3
+COSName.isEmpty( );2;1;3
+COSName.toString( );3;1;3
+COSName.writePDF( OutputStream output );30;16;27

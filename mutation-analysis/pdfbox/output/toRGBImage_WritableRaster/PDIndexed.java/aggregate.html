@@ -1,0 +1,529 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.52</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                               
+</span><span class="outsideLine"><i>0002</i>  * Licensed to the Apache Software Foundation (ASF) under one or more                            
+</span><span class="outsideLine"><i>0003</i>  * contributor license agreements.  See the NOTICE file distributed with                         
+</span><span class="outsideLine"><i>0004</i>  * this work for additional information regarding copyright ownership.                           
+</span><span class="outsideLine"><i>0005</i>  * The ASF licenses this file to You under the Apache License, Version 2.0                       
+</span><span class="outsideLine"><i>0006</i>  * (the "License"); you may not use this file except in compliance with                          
+</span><span class="outsideLine"><i>0007</i>  * the License.  You may obtain a copy of the License at                                         
+</span><span class="outsideLine"><i>0008</i>  *                                                                                               
+</span><span class="outsideLine"><i>0009</i>  *      http://www.apache.org/licenses/LICENSE-2.0                                               
+</span><span class="outsideLine"><i>0010</i>  *                                                                                               
+</span><span class="outsideLine"><i>0011</i>  * Unless required by applicable law or agreed to in writing, software                           
+</span><span class="outsideLine"><i>0012</i>  * distributed under the License is distributed on an "AS IS" BASIS,                             
+</span><span class="outsideLine"><i>0013</i>  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                      
+</span><span class="outsideLine"><i>0014</i>  * See the License for the specific language governing permissions and                           
+</span><span class="outsideLine"><i>0015</i>  * limitations under the License.                                                                
+</span><span class="outsideLine"><i>0016</i>  */                                                                                              
+</span><span class="outsideLine"><i>0017</i> package org.apache.pdfbox.pdmodel.graphics.color;                                                
+</span><span class="outsideLine"><i>0018</i>                                                                                                  
+</span><span class="outsideLine"><i>0019</i> import java.awt.Point;                                                                           
+</span><span class="outsideLine"><i>0020</i> import java.awt.image.BufferedImage;                                                             
+</span><span class="outsideLine"><i>0021</i> import java.awt.image.ColorModel;                                                                
+</span><span class="outsideLine"><i>0022</i> import java.awt.image.DataBuffer;                                                                
+</span><span class="outsideLine"><i>0023</i> import java.awt.image.IndexColorModel;                                                           
+</span><span class="outsideLine"><i>0024</i> import java.awt.image.Raster;                                                                    
+</span><span class="outsideLine"><i>0025</i> import java.awt.image.WritableRaster;                                                            
+</span><span class="outsideLine"><i>0026</i> import java.io.IOException;                                                                      
+</span><span class="outsideLine"><i>0027</i>                                                                                                  
+</span><span class="outsideLine"><i>0028</i> import org.apache.pdfbox.cos.COSArray;                                                           
+</span><span class="outsideLine"><i>0029</i> import org.apache.pdfbox.cos.COSBase;                                                            
+</span><span class="outsideLine"><i>0030</i> import org.apache.pdfbox.cos.COSInteger;                                                         
+</span><span class="outsideLine"><i>0031</i> import org.apache.pdfbox.cos.COSName;                                                            
+</span><span class="outsideLine"><i>0032</i> import org.apache.pdfbox.cos.COSNumber;                                                          
+</span><span class="outsideLine"><i>0033</i> import org.apache.pdfbox.cos.COSStream;                                                          
+</span><span class="outsideLine"><i>0034</i> import org.apache.pdfbox.cos.COSString;                                                          
+</span><span class="outsideLine"><i>0035</i> import org.apache.pdfbox.pdmodel.PDResources;                                                    
+</span><span class="outsideLine"><i>0036</i> import org.apache.pdfbox.pdmodel.common.PDStream;                                                
+</span><span class="outsideLine"><i>0037</i>                                                                                                  
+</span><span class="outsideLine"><i>0038</i> /**                                                                                              
+</span><span class="outsideLine"><i>0039</i>  * An Indexed colour space specifies that an area is to be painted using a colour table          
+</span><span class="outsideLine"><i>0040</i>  * of arbitrary colours from another color space.                                                
+</span><span class="outsideLine"><i>0041</i>  *                                                                                               
+</span><span class="outsideLine"><i>0042</i>  * @author John Hewson                                                                           
+</span><span class="outsideLine"><i>0043</i>  * @author Ben Litchfield                                                                        
+</span><span class="outsideLine"><i>0044</i>  */                                                                                              
+</span><span class="outsideLine"><i>0045</i> public final class PDIndexed extends PDSpecialColorSpace                                         
+</span><span class="outsideLine"><i>0046</i> {                                                                                                
+</span><span class="outsideLine"><i>0047</i>     private final PDColor initialColor = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 853</span>new PDColor(new float[] { 0 }, this)</span>;                   
+</span><span class="outsideLine"><i>0048</i>                                                                                                  
+</span><span class="outsideLine"><i>0049</i>     private PDColorSpace baseColorSpace = null;                                                  
+</span><span class="outsideLine"><i>0050</i>                                                                                                  
+</span><span class="outsideLine"><i>0051</i>     // cached lookup data                                                                        
+</span><span class="outsideLine"><i>0052</i>     private byte[] lookupData;                                                                   
+</span><span class="outsideLine"><i>0053</i>     private float[][] colorTable;                                                                
+</span><span class="outsideLine"><i>0054</i>     private int actualMaxIndex;                                                                  
+</span><span class="outsideLine"><i>0055</i>     private int[][] rgbColorTable;                                                               
+</span><span class="outsideLine"><i>0056</i>                                                                                                  
+</span><span class="outsideLine"><i>0057</i>     /**                                                                                          
+</span><span class="outsideLine"><i>0058</i>      * Creates a new Indexed color space.                                                        
+</span><span class="outsideLine"><i>0059</i>      * Default DeviceRGB, hival 255.                                                             
+</span><span class="outsideLine"><i>0060</i>      */                                                                                          
+</span><span class="outsideLine"><i>0061</i>     public PDIndexed()                                                                           
+</span><span class="methodLine"><i>0062</i>     {                                                                                            
+</span><span class="methodLine"><i>0063</i>         array = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1333</span>new COSArray()</span>;                                                                  
+</span><span class="methodLine"><i>0064</i>         array.add(COSName.INDEXED);                                                              
+</span><span class="methodLine"><i>0065</i>         array.add(COSName.DEVICERGB);                                                            
+</span><span class="methodLine"><i>0066</i>         array.add(COSInteger.get(255));                                                          
+</span><span class="methodLine"><i>0067</i>         array.add(org.apache.pdfbox.cos.COSNull.NULL);                                           
+</span><span class="methodLine"><i>0068</i>     }                                                                                            
+</span><span class="outsideLine"><i>0069</i>                                                                                                  
+</span><span class="outsideLine"><i>0070</i>     /**                                                                                          
+</span><span class="outsideLine"><i>0071</i>      * Creates a new indexed color space from the given PDF array.                               
+</span><span class="outsideLine"><i>0072</i>      * @param indexedArray the array containing the indexed parameters                           
+</span><span class="outsideLine"><i>0073</i>      * @throws java.io.IOException                                                               
+</span><span class="outsideLine"><i>0074</i>      */                                                                                          
+</span><span class="outsideLine"><i>0075</i>     public PDIndexed(COSArray indexedArray) throws IOException                                   
+</span><span class="methodLine"><i>0076</i>     {                                                                                            
+</span><span class="methodLine"><i>0077</i>         this(indexedArray, null);                                                                
+</span><span class="methodLine"><i>0078</i>     }                                                                                            
+</span><span class="outsideLine"><i>0079</i>                                                                                                  
+</span><span class="outsideLine"><i>0080</i>     /**                                                                                          
+</span><span class="outsideLine"><i>0081</i>      * Creates a new indexed color space from the given PDF array.                               
+</span><span class="outsideLine"><i>0082</i>      * @param indexedArray the array containing the indexed parameters                           
+</span><span class="outsideLine"><i>0083</i>      * @param resources the resources, can be null. Allows to use its cache for the colorspace.  
+</span><span class="outsideLine"><i>0084</i>      * @throws java.io.IOException                                                               
+</span><span class="outsideLine"><i>0085</i>      */                                                                                          
+</span><span class="outsideLine"><i>0086</i>     public PDIndexed(COSArray indexedArray, PDResources resources) throws IOException            
+</span><span class="methodLine"><i>0087</i>     {                                                                                            
+</span><span class="methodLine"><i>0088</i>         array = indexedArray;                                                                    
+</span><span class="outsideLine"><i>0089</i>         // don't call getObject(1), we want to pass a reference if possible                      
+</span><span class="outsideLine"><i>0090</i>         // to profit from caching (PDFBOX-4149)                                                  
+</span><span class="methodLine"><i>0091</i>         baseColorSpace = PDColorSpace.create(array.get(1), resources);                           
+</span><span class="methodLine"><i>0092</i>         readColorTable();                                                                        
+</span><span class="methodLine"><i>0093</i>         initRgbColorTable();                                                                     
+</span><span class="methodLine"><i>0094</i>     }                                                                                            
+</span><span class="outsideLine"><i>0095</i>                                                                                                  
+</span><span class="outsideLine"><i>0096</i>     @Override                                                                                    
+</span><span class="outsideLine"><i>0097</i>     public String getName()                                                                      
+</span><span class="methodLine"><i>0098</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 420</span>{                                                                                            
+</span><span class="methodLine"><i>0099</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 790</span>return COSName.INDEXED.getName();</span>                                                        
+</span><span class="methodLine"><i>0100</i>     }</span>                                                                                            
+</span><span class="outsideLine"><i>0101</i>                                                                                                  
+</span><span class="outsideLine"><i>0102</i>     @Override                                                                                    
+</span><span class="outsideLine"><i>0103</i>     public int getNumberOfComponents()                                                           
+</span><span class="methodLine"><i>0104</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 426</span>{                                                                                            
+</span><span class="methodLine"><i>0105</i>         return 1;                                                                                
+</span><span class="methodLine"><i>0106</i>     }</span>                                                                                            
+</span><span class="outsideLine"><i>0107</i>                                                                                                  
+</span><span class="outsideLine"><i>0108</i>     @Override                                                                                    
+</span><span class="outsideLine"><i>0109</i>     public float[] getDefaultDecode(int bitsPerComponent)                                        
+</span><span class="methodLine"><i>0110</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 432</span>{                                                                                            
+</span><span class="methodLine"><i>0111</i>         return new float[] { 0, (float)Math.pow(2, bitsPerComponent) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1779</span>-</span> 1 };                      
+</span><span class="methodLine"><i>0112</i>     }</span>                                                                                            
+</span><span class="outsideLine"><i>0113</i>                                                                                                  
+</span><span class="outsideLine"><i>0114</i>     @Override                                                                                    
+</span><span class="outsideLine"><i>0115</i>     public PDColor getInitialColor()                                                             
+</span><span class="methodLine"><i>0116</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 438</span>{                                                                                            
+</span><span class="methodLine"><i>0117</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 798</span>return initialColor;</span>                                                                     
+</span><span class="methodLine"><i>0118</i>     }</span>                                                                                            
+</span><span class="outsideLine"><i>0119</i>                                                                                                  
+</span><span class="outsideLine"><i>0120</i>     //                                                                                           
+</span><span class="outsideLine"><i>0121</i>     // WARNING: this method is performance sensitive, modify with care!                          
+</span><span class="outsideLine"><i>0122</i>     //                                                                                           
+</span><span class="outsideLine"><i>0123</i>     private void initRgbColorTable() throws IOException                                          
+</span><span class="methodLine"><i>0124</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 445</span>{                                                                                            
+</span><span class="methodLine"><i>0125</i>         int numBaseComponents = baseColorSpace.getNumberOfComponents();                          
+</span><span class="outsideLine"><i>0126</i>                                                                                                  
+</span><span class="outsideLine"><i>0127</i>         // convert the color table into a 1-row BufferedImage in the base color space,           
+</span><span class="outsideLine"><i>0128</i>         // using a writable raster for high performance                                          
+</span><span class="methodLine"><i>0129</i>         WritableRaster baseRaster;                                                               
+</span><span class="methodLine"><i>0130</i>         try                                                                                      
+</span><span class="methodLine"><i>0131</i>         {                                                                                        
+</span><span class="methodLine"><i>0132</i>             baseRaster = Raster.createBandedRaster(DataBuffer.TYPE_BYTE,                         
+</span><span class="methodLine"><i>0133</i>                     actualMaxIndex <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2197</span>+</span> 1, 1, numBaseComponents, <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2398</span>new Point(0, 0)</span>);                  
+</span><span class="methodLine"><i>0134</i>         }                                                                                        
+</span><span class="methodLine"><i>0135</i>         catch (IllegalArgumentException ex)                                                      
+</span><span class="methodLine"><i>0136</i>         {                                                                                        
+</span><span class="outsideLine"><i>0137</i>             // PDFBOX-4503: when stream is empty or null                                         
+</span><span class="methodLine"><i>0138</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1787</span>new IOException(ex)</span>;                                                           
+</span><span class="methodLine"><i>0139</i>         }                                                                                        
+</span><span class="outsideLine"><i>0140</i>                                                                                                  
+</span><span class="methodLine"><i>0141</i>         int[] base = new int[numBaseComponents];                                                 
+</span><span class="methodLine"><i>0142</i>         for (int i = 0, n = actualMaxIndex; i <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1049</span><=</span> n; i<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1389</span>++</span>)                                         
+</span><span class="methodLine"><i>0143</i>         {                                                                                        
+</span><span class="methodLine"><i>0144</i>             for (int c = 0; c <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1800</span><</span> numBaseComponents; c<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 2216</span>++</span>)                                          
+</span><span class="methodLine"><i>0145</i>             {                                                                                    
+</span><span class="methodLine"><i>0146</i>                 base[c] = (int)(colorTable[i][c] <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2975</span>*</span> 255f);                                        
+</span><span class="methodLine"><i>0147</i>             }                                                                                    
+</span><span class="methodLine"><i>0148</i>             baseRaster.setPixel(i, 0, base);                                                     
+</span><span class="methodLine"><i>0149</i>         }                                                                                        
+</span><span class="outsideLine"><i>0150</i>                                                                                                  
+</span><span class="outsideLine"><i>0151</i>         // convert the base image to RGB                                                         
+</span><span class="methodLine"><i>0152</i>         BufferedImage rgbImage = baseColorSpace.toRGBImage(baseRaster);                          
+</span><span class="methodLine"><i>0153</i>         WritableRaster rgbRaster = rgbImage.getRaster();                                         
+</span><span class="outsideLine"><i>0154</i>                                                                                                  
+</span><span class="outsideLine"><i>0155</i>         // build an RGB lookup table from the raster                                             
+</span><span class="methodLine"><i>0156</i>         rgbColorTable = new int[actualMaxIndex <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1814</span>+</span> 1][3];                                          
+</span><span class="methodLine"><i>0157</i>         int[] nil = null;                                                                        
+</span><span class="outsideLine"><i>0158</i>                                                                                                  
+</span><span class="methodLine"><i>0159</i>         for (int i = 0, n = actualMaxIndex; i <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1062</span><=</span> n; i<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1411</span>++</span>)                                         
+</span><span class="methodLine"><i>0160</i>         {                                                                                        
+</span><span class="methodLine"><i>0161</i>             rgbColorTable[i] = rgbRaster.getPixel(i, 0, nil);                                    
+</span><span class="methodLine"><i>0162</i>         }                                                                                        
+</span><span class="methodLine"><i>0163</i>     }</span>                                                                                            
+</span><span class="outsideLine"><i>0164</i>                                                                                                  
+</span><span class="outsideLine"><i>0165</i>     //                                                                                           
+</span><span class="outsideLine"><i>0166</i>     // WARNING: this method is performance sensitive, modify with care!                          
+</span><span class="outsideLine"><i>0167</i>     //                                                                                           
+</span><span class="outsideLine"><i>0168</i>     @Override                                                                                    
+</span><span class="outsideLine"><i>0169</i>     public float[] toRGB(float[] value)                                                          
+</span><span class="methodLine"><i>0170</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 451</span>{                                                                                            
+</span><span class="methodLine"><i>0171</i>         if (value.length <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1068</span>></span> 1)                                                                    
+</span><span class="methodLine"><i>0172</i>         {                                                                                        
+</span><span class="methodLine"><i>0173</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1832</span>new IllegalArgumentException("Indexed color spaces must have one color value")</span>;
+</span><span class="methodLine"><i>0174</i>         }                                                                                        
+</span><span class="outsideLine"><i>0175</i>                                                                                                  
+</span><span class="outsideLine"><i>0176</i>         // scale and clamp input value                                                           
+</span><span class="methodLine"><i>0177</i>         int index = Math.round(value[0]);                                                        
+</span><span class="methodLine"><i>0178</i>         index = Math.max(index, 0);                                                              
+</span><span class="methodLine"><i>0179</i>         index = Math.min(index, actualMaxIndex);                                                 
+</span><span class="outsideLine"><i>0180</i>                                                                                                  
+</span><span class="outsideLine"><i>0181</i>         // lookup rgb                                                                            
+</span><span class="methodLine"><i>0182</i>         int[] rgb = rgbColorTable[index];                                                        
+</span><span class="methodLine"><i>0183</i>         return new float[] { rgb[0] <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1847</span>/</span> 255f, rgb[1] <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1848</span>/</span> 255f, rgb[2] <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1849</span>/</span> 255f };                      
+</span><span class="methodLine"><i>0184</i>     }</span>                                                                                            
+</span><span class="outsideLine"><i>0185</i>                                                                                                  
+</span><span class="outsideLine"><i>0186</i>     //                                                                                           
+</span><span class="outsideLine"><i>0187</i>     // WARNING: this method is performance sensitive, modify with care!                          
+</span><span class="outsideLine"><i>0188</i>     //                                                                                           
+</span><span class="outsideLine"><i>0189</i>     @Override                                                                                    
+</span><span class="outsideLine"><i>0190</i>     public BufferedImage toRGBImage(WritableRaster raster) throws IOException                    
+</span><span class="methodLine"><i>0191</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { raster = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 713</span>{</span>                                                                                            
+</span><span class="outsideLine"><i>0192</i>         // use lookup table                                                                      
+</span><span class="methodLine"><i>0193</i>         int width = raster.getWidth();                                                           
+</span><span class="methodLine"><i>0194</i>         int height = raster.getHeight();                                                         
+</span><span class="outsideLine"><i>0195</i>                                                                                                  
+</span><span class="methodLine"><i>0196</i>         BufferedImage rgbImage = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1857</span>new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB)</span>;   
+</span><span class="methodLine"><i>0197</i>         WritableRaster rgbRaster = rgbImage.getRaster();                                         
+</span><span class="outsideLine"><i>0198</i>                                                                                                  
+</span><span class="methodLine"><i>0199</i>         int[] src = new int[1];                                                                  
+</span><span class="methodLine"><i>0200</i>         for (int y = 0; y <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1092</span><</span> height; y<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1464</span>++</span>)                                                         
+</span><span class="methodLine"><i>0201</i>         {                                                                                        
+</span><span class="methodLine"><i>0202</i>             for (int x = 0; x <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1870</span><</span> width; x<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 2282</span>++</span>)                                                      
+</span><span class="methodLine"><i>0203</i>             {                                                                                    
+</span><span class="methodLine"><i>0204</i>                 raster.getPixel(x, y, src);                                                      
+</span><span class="outsideLine"><i>0205</i>                                                                                                  
+</span><span class="outsideLine"><i>0206</i>                 // lookup                                                                        
+</span><span class="methodLine"><i>0207</i>                 int index = Math.min(src[0], actualMaxIndex);                                    
+</span><span class="methodLine"><i>0208</i>                 rgbRaster.setPixel(x, y, rgbColorTable[index]);                                  
+</span><span class="methodLine"><i>0209</i>             }                                                                                    
+</span><span class="methodLine"><i>0210</i>         }                                                                                        
+</span><span class="outsideLine"><i>0211</i>                                                                                                  
+</span><span class="methodLine"><i>0212</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 827</span>return rgbImage;</span>                                                                         
+</span><span class="methodLine"><i>0213</i>     }</span>                                                                                            
+</span><span class="outsideLine"><i>0214</i>                                                                                                  
+</span><span class="outsideLine"><i>0215</i>     @Override                                                                                    
+</span><span class="outsideLine"><i>0216</i>     public BufferedImage toRawImage(WritableRaster raster)                                       
+</span><span class="methodLine"><i>0217</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { raster = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 725</span>{</span>                                                                                            
+</span><span class="outsideLine"><i>0218</i>         // We can only convert sRGB index colorspaces, depending on the base colorspace          
+</span><span class="methodLine"><i>0219</i>         if (baseColorSpace instanceof PDICCBased <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 1099</span>&&</span> ((PDICCBased) baseColorSpace).isSRGB())      
+</span><span class="methodLine"><i>0220</i>         {                                                                                        
+</span><span class="methodLine"><i>0221</i>             byte[] r = new byte[colorTable.length];                                              
+</span><span class="methodLine"><i>0222</i>             byte[] g = new byte[colorTable.length];                                              
+</span><span class="methodLine"><i>0223</i>             byte[] b = new byte[colorTable.length];                                              
+</span><span class="methodLine"><i>0224</i>             for (int i = 0; i <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1885</span><</span> colorTable.length; i<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 2308</span>++</span>)                                          
+</span><span class="methodLine"><i>0225</i>             {                                                                                    
+</span><span class="methodLine"><i>0226</i>                 r[i] = (byte) ((int) (colorTable[i][0] <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3180</span>*</span> 255) <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: | 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 2999</span>&</span> 0xFF);                           
+</span><span class="methodLine"><i>0227</i>                 g[i] = (byte) ((int) (colorTable[i][1] <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3185</span>*</span> 255) <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: | 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 3005</span>&</span> 0xFF);                           
+</span><span class="methodLine"><i>0228</i>                 b[i] = (byte) ((int) (colorTable[i][2] <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3190</span>*</span> 255) <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: | 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 3011</span>&</span> 0xFF);                           
+</span><span class="methodLine"><i>0229</i>             }                                                                                    
+</span><span class="methodLine"><i>0230</i>             ColorModel colorModel = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2632</span>new IndexColorModel(8, colorTable.length, r, g, b)</span>;          
+</span><span class="methodLine"><i>0231</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1477</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1892</span>new BufferedImage(colorModel, raster, false, null)</span>;</span>                           
+</span><span class="methodLine"><i>0232</i>         }                                                                                        
+</span><span class="outsideLine"><i>0233</i>                                                                                                  
+</span><span class="outsideLine"><i>0234</i>         // We can't handle all other cases at the moment.                                        
+</span><span class="methodLine"><i>0235</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 832</span>return null;</span>                                                                             
+</span><span class="methodLine"><i>0236</i>     }</span>                                                                                            
+</span><span class="outsideLine"><i>0237</i>                                                                                                  
+</span><span class="outsideLine"><i>0238</i>     /**                                                                                          
+</span><span class="outsideLine"><i>0239</i>      * Returns the base color space.                                                             
+</span><span class="outsideLine"><i>0240</i>      * @return the base color space.                                                             
+</span><span class="outsideLine"><i>0241</i>      */                                                                                          
+</span><span class="outsideLine"><i>0242</i>     public PDColorSpace getBaseColorSpace()                                                      
+</span><span class="methodLine"><i>0243</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 470</span>{                                                                                            
+</span><span class="methodLine"><i>0244</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 833</span>return baseColorSpace;</span>                                                                   
+</span><span class="methodLine"><i>0245</i>     }</span>                                                                                            
+</span><span class="outsideLine"><i>0246</i>                                                                                                  
+</span><span class="outsideLine"><i>0247</i>     // returns "hival" array element                                                             
+</span><span class="outsideLine"><i>0248</i>     private int getHival()                                                                       
+</span><span class="methodLine"><i>0249</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 475</span>{                                                                                            
+</span><span class="methodLine"><i>0250</i>         return ((COSNumber) array.getObject(2)).intValue();                                      
+</span><span class="methodLine"><i>0251</i>     }</span>                                                                                            
+</span><span class="outsideLine"><i>0252</i>                                                                                                  
+</span><span class="outsideLine"><i>0253</i>     // reads the lookup table data from the array                                                
+</span><span class="outsideLine"><i>0254</i>     private void readLookupData() throws IOException                                             
+</span><span class="methodLine"><i>0255</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 482</span>{                                                                                            
+</span><span class="methodLine"><i>0256</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1108</span>lookupData <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1108</span>==</span> null</span>)                                                                  
+</span><span class="methodLine"><i>0257</i>         {                                                                                        
+</span><span class="methodLine"><i>0258</i>             COSBase lookupTable = array.getObject(3);                                            
+</span><span class="methodLine"><i>0259</i>             if (lookupTable instanceof COSString)                                                
+</span><span class="methodLine"><i>0260</i>             {                                                                                    
+</span><span class="methodLine"><i>0261</i>                 lookupData = ((COSString) lookupTable).getBytes();                               
+</span><span class="methodLine"><i>0262</i>             }                                                                                    
+</span><span class="methodLine"><i>0263</i>             else if (lookupTable instanceof COSStream)                                           
+</span><span class="methodLine"><i>0264</i>             {                                                                                    
+</span><span class="methodLine"><i>0265</i>                 lookupData = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3077</span>new PDStream((COSStream)lookupTable)</span>.toByteArray();                 
+</span><span class="methodLine"><i>0266</i>             }                                                                                    
+</span><span class="methodLine"><i>0267</i>             else if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2337</span>lookupTable <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2337</span>==</span> null</span>)                                                        
+</span><span class="methodLine"><i>0268</i>             {                                                                                    
+</span><span class="methodLine"><i>0269</i>                 lookupData = new byte[0];                                                        
+</span><span class="methodLine"><i>0270</i>             }                                                                                    
+</span><span class="methodLine"><i>0271</i>             else                                                                                 
+</span><span class="methodLine"><i>0272</i>             {                                                                                    
+</span><span class="methodLine"><i>0273</i>                 throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2876</span>new IOException("Error: Unknown type for lookup table " + lookupTable)</span>;    
+</span><span class="methodLine"><i>0274</i>             }                                                                                    
+</span><span class="methodLine"><i>0275</i>         }                                                                                        
+</span><span class="methodLine"><i>0276</i>     }</span>                                                                                            
+</span><span class="outsideLine"><i>0277</i>                                                                                                  
+</span><span class="outsideLine"><i>0278</i>     //                                                                                           
+</span><span class="outsideLine"><i>0279</i>     // WARNING: this method is performance sensitive, modify with care!                          
+</span><span class="outsideLine"><i>0280</i>     //                                                                                           
+</span><span class="outsideLine"><i>0281</i>     private void readColorTable() throws IOException                                             
+</span><span class="methodLine"><i>0282</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 489</span>{                                                                                            
+</span><span class="methodLine"><i>0283</i>         readLookupData();                                                                        
+</span><span class="outsideLine"><i>0284</i>                                                                                                  
+</span><span class="methodLine"><i>0285</i>         int maxIndex = Math.min(getHival(), 255);                                                
+</span><span class="methodLine"><i>0286</i>         int numComponents = baseColorSpace.getNumberOfComponents();                              
+</span><span class="outsideLine"><i>0287</i>                                                                                                  
+</span><span class="outsideLine"><i>0288</i>         // some tables are too short                                                             
+</span><span class="methodLine"><i>0289</i>         if (lookupData.length <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1293</span>/</span> numComponents <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1117</span><</span> maxIndex <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1295</span>+</span> 1)                                    
+</span><span class="methodLine"><i>0290</i>         {                                                                                        
+</span><span class="methodLine"><i>0291</i>             maxIndex = lookupData.length <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2348</span>/</span> numComponents <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2142</span>-</span> 1;                                    
+</span><span class="methodLine"><i>0292</i>         }                                                                                        
+</span><span class="methodLine"><i>0293</i>         actualMaxIndex = maxIndex;  // TODO "actual" is ugly, tidy this up                       
+</span><span class="outsideLine"><i>0294</i>                                                                                                  
+</span><span class="methodLine"><i>0295</i>         colorTable = new float[maxIndex <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1923</span>+</span> 1][numComponents];                                     
+</span><span class="methodLine"><i>0296</i>         for (int i = 0, offset = 0; i <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1124</span><=</span> maxIndex; i<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1509</span>++</span>)                                          
+</span><span class="methodLine"><i>0297</i>         {                                                                                        
+</span><span class="methodLine"><i>0298</i>             for (int c = 0; c <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1938</span><</span> numComponents; c<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 2360</span>++</span>)                                              
+</span><span class="methodLine"><i>0299</i>             {                                                                                    
+</span><span class="methodLine"><i>0300</i>                 colorTable[i][c] = (lookupData[offset] <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: | 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 3038</span>&</span> 0xff) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2771</span>/</span> 255f;                           
+</span><span class="methodLine"><i>0301</i>                 offset<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 2671</span>++</span>;                                                                        
+</span><span class="methodLine"><i>0302</i>             }                                                                                    
+</span><span class="methodLine"><i>0303</i>         }                                                                                        
+</span><span class="methodLine"><i>0304</i>     }</span>                                                                                            
+</span><span class="outsideLine"><i>0305</i>                                                                                                  
+</span><span class="outsideLine"><i>0306</i>     /**                                                                                          
+</span><span class="outsideLine"><i>0307</i>      * Sets the base color space.                                                                
+</span><span class="outsideLine"><i>0308</i>      * @param base the base color space                                                          
+</span><span class="outsideLine"><i>0309</i>      */                                                                                          
+</span><span class="outsideLine"><i>0310</i>     public void setBaseColorSpace(PDColorSpace base)                                             
+</span><span class="methodLine"><i>0311</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { base = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 752</span>{</span>                                                                                            
+</span><span class="methodLine"><i>0312</i>         array.set(1, base.getCOSObject());                                                       
+</span><span class="methodLine"><i>0313</i>         baseColorSpace = base;                                                                   
+</span><span class="methodLine"><i>0314</i>     }</span>                                                                                            
+</span><span class="outsideLine"><i>0315</i>                                                                                                  
+</span><span class="outsideLine"><i>0316</i>     /**                                                                                          
+</span><span class="outsideLine"><i>0317</i>      * Sets the highest value that is allowed. This cannot be higher than 255.                   
+</span><span class="outsideLine"><i>0318</i>      * @param high the highest value for the lookup table                                        
+</span><span class="outsideLine"><i>0319</i>      */                                                                                          
+</span><span class="outsideLine"><i>0320</i>     public void setHighValue(int high)                                                           
+</span><span class="methodLine"><i>0321</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 499</span>{                                                                                            
+</span><span class="methodLine"><i>0322</i>         array.set(2, high);                                                                      
+</span><span class="methodLine"><i>0323</i>     }</span>                                                                                            
+</span><span class="outsideLine"><i>0324</i>                                                                                                  
+</span><span class="outsideLine"><i>0325</i>     @Override                                                                                    
+</span><span class="outsideLine"><i>0326</i>     public String toString()                                                                     
+</span><span class="methodLine"><i>0327</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 505</span>{                                                                                            
+</span><span class="methodLine"><i>0328</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 851</span>return "Indexed{base:" + baseColorSpace + " " +                                          
+</span><span class="methodLine"><i>0329</i>                 "hival:" + getHival() + " " +                                                    
+</span><span class="methodLine"><i>0330</i>                 "lookup:(" + colorTable.length + " entries)}";</span>                                   
+</span><span class="methodLine"><i>0331</i>     }</span>                                                                                            
+</span><span class="outsideLine"><i>0332</i> }                                                                                                
+</span><span class="outsideLine"><i>0333</i>                                                                                                  </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

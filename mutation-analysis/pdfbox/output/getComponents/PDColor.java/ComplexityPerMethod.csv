@@ -1,0 +1,11 @@
+PDColor.PDColor( COSArray array , PDColorSpace colorSpace );10;5;21
+PDColor.PDColor( COSName patternName , PDColorSpace colorSpace );0;1;5
+PDColor.PDColor( float [ ] components , COSName patternName , PDColorSpace colorSpace );0;1;5
+PDColor.PDColor( float [ ] components , PDColorSpace colorSpace );0;1;5
+PDColor.getColorSpace( );2;1;3
+PDColor.getComponents( );5;3;7
+PDColor.getPatternName( );2;1;3
+PDColor.isPattern( );4;1;3
+PDColor.toCOSArray( );5;2;9
+PDColor.toRGB( );9;1;10
+PDColor.toString( );3;1;4

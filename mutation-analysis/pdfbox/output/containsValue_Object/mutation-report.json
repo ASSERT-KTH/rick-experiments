@@ -1,0 +1,55 @@
+{
+    "mut": "containsValue_Object",
+    "CUT": "org.apache.pdfbox.cos.COSDictionary",
+    "mutant-file": "./COSDictionary.java/141.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.154 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.222 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.494 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 12.969 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 12.885 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen"
+},
+{
+    "mut": "containsValue_Object",
+    "CUT": "org.apache.pdfbox.cos.COSDictionary",
+    "mutant-file": "./COSDictionary.java/249.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 12.908 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.836 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.319 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.11 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 12.785 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen"
+},
+{
+    "mut": "containsValue_Object",
+    "CUT": "org.apache.pdfbox.cos.COSDictionary",
+    "mutant-file": "./COSDictionary.java/392.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.055 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 12.894 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 13.054 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 12.644 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 13.41 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen"
+},
+{
+    "mut": "containsValue_Object",
+    "CUT": "org.apache.pdfbox.cos.COSDictionary",
+    "mutant-file": "./COSDictionary.java/393.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.31 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.44 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 13.107 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 12.946 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 12.712 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen"
+},
+{
+    "mut": "containsValue_Object",
+    "CUT": "org.apache.pdfbox.cos.COSDictionary",
+    "mutant-file": "./COSDictionary.java/421.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.23 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.46 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.256 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.896 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.758 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen"
+},

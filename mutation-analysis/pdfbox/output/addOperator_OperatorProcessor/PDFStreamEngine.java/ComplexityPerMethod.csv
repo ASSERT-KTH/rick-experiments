@@ -1,0 +1,59 @@
+***not in a method***;2;1;0
+PDFStreamEngine.PDFStreamEngine( );0;1;2
+PDFStreamEngine.addOperator( OperatorProcessor op );2;1;4
+PDFStreamEngine.applyTextAdjustment( float tx , float ty );1;1;3
+PDFStreamEngine.beginMarkedContentSequence( COSName tag , COSDictionary properties );3;1;2
+PDFStreamEngine.beginText( );1;1;2
+PDFStreamEngine.clipToRect( PDRectangle rectangle );4;2;7
+PDFStreamEngine.decreaseLevel( );3;2;7
+PDFStreamEngine.endMarkedContentSequence( );1;1;2
+PDFStreamEngine.endText( );1;1;2
+PDFStreamEngine.getAppearance( PDAnnotation annotation );3;1;3
+PDFStreamEngine.getCurrentPage( );2;1;3
+PDFStreamEngine.getGraphicsStackSize( );2;1;3
+PDFStreamEngine.getGraphicsState( );2;1;3
+PDFStreamEngine.getInitialMatrix( );2;1;3
+PDFStreamEngine.getLevel( );2;1;3
+PDFStreamEngine.getResources( );2;1;3
+PDFStreamEngine.getTextLineMatrix( );2;1;3
+PDFStreamEngine.getTextMatrix( );2;1;3
+PDFStreamEngine.increaseLevel( );2;1;3
+PDFStreamEngine.initPage( PDPage page );6;2;13
+PDFStreamEngine.operatorException( Operator operator , List < COSBase > operands , IOException e );6;6;20
+PDFStreamEngine.popResources( PDResources parentResources );2;1;3
+PDFStreamEngine.processAnnotation( PDAnnotation annotation , PDAppearanceStream appearance );20;7;24
+PDFStreamEngine.processChildStream( PDContentStream contentStream , PDPage page );4;2;10
+PDFStreamEngine.processOperator( Operator operator , List < COSBase > operands );5;3;20
+PDFStreamEngine.processOperator( String operation , List < COSBase > arguments );3;1;4
+PDFStreamEngine.processPage( PDPage page );2;2;9
+PDFStreamEngine.processSoftMask( PDTransparencyGroup group );2;1;7
+PDFStreamEngine.processStream( PDContentStream contentStream );2;1;14
+PDFStreamEngine.processStreamOperators( PDContentStream contentStream );7;3;18
+PDFStreamEngine.processTilingPattern( PDTilingPattern tilingPattern , PDColor color , PDColorSpace colorSpace );4;1;3
+PDFStreamEngine.processTilingPattern( PDTilingPattern tilingPattern , PDColor color , PDColorSpace colorSpace , Matrix patternMatrix );10;2;29
+PDFStreamEngine.processTransparencyGroup( PDTransparencyGroup group );5;2;22
+PDFStreamEngine.processType3Stream( PDType3CharProc charProc , Matrix textRenderingMatrix );8;2;20
+PDFStreamEngine.pushResources( PDContentStream contentStream );10;4;20
+PDFStreamEngine.registerOperatorProcessor( String operator , OperatorProcessor op );3;1;4
+PDFStreamEngine.restoreGraphicsStack( Deque < PDGraphicsState > snapshot );2;1;3
+PDFStreamEngine.restoreGraphicsState( );1;1;3
+PDFStreamEngine.saveGraphicsStack( );3;1;6
+PDFStreamEngine.saveGraphicsState( );1;1;3
+PDFStreamEngine.setLineDashPattern( COSArray array , int phase );4;2;9
+PDFStreamEngine.setTextLineMatrix( Matrix value );2;1;3
+PDFStreamEngine.setTextMatrix( Matrix value );2;1;3
+PDFStreamEngine.showAnnotation( PDAnnotation annotation );4;2;7
+PDFStreamEngine.showFontGlyph( Matrix textRenderingMatrix , PDFont font , int code , String unicode , Vector displacement );5;1;2
+PDFStreamEngine.showFontGlyph( Matrix textRenderingMatrix , PDFont font , int code , Vector displacement );4;1;3
+PDFStreamEngine.showForm( PDFormXObject form );6;3;11
+PDFStreamEngine.showGlyph( Matrix textRenderingMatrix , PDFont font , int code , String unicode , Vector displacement );5;2;10
+PDFStreamEngine.showGlyph( Matrix textRenderingMatrix , PDFont font , int code , Vector displacement );4;1;3
+PDFStreamEngine.showText( byte [ ] string );20;7;51
+PDFStreamEngine.showTextString( byte [ ] string );1;1;3
+PDFStreamEngine.showTextStrings( COSArray array );13;6;41
+PDFStreamEngine.showTransparencyGroup( PDTransparencyGroup form );2;1;3
+PDFStreamEngine.showType3Glyph( Matrix textRenderingMatrix , PDType3Font font , int code , String unicode , Vector displacement );7;2;7
+PDFStreamEngine.showType3Glyph( Matrix textRenderingMatrix , PDType3Font font , int code , Vector displacement );4;1;3
+PDFStreamEngine.transformWidth( float width );9;1;6
+PDFStreamEngine.transformedPoint( float x , float y );3;1;6
+PDFStreamEngine.unsupportedOperator( Operator operator , List < COSBase > operands );3;1;2

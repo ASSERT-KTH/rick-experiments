@@ -1,0 +1,52 @@
+***not in a method***;9;1;0
+COSWriter.COSWriter( OutputStream outputStream );1;1;4
+COSWriter.COSWriter( OutputStream outputStream , RandomAccessRead inputData );2;1;7
+COSWriter.COSWriter( OutputStream outputStream , RandomAccessRead inputData , Set < COSDictionary > objectsToWrite );0;1;4
+COSWriter.addObjectToWrite( COSBase object );20;12;33
+COSWriter.addXRefEntry( COSWriterXRefEntry entry );2;1;3
+COSWriter.close( );5;3;10
+COSWriter.doWriteBody( COSDocument doc );8;4;21
+COSWriter.doWriteHeader( COSDocument doc );4;2;16
+COSWriter.doWriteIncrement( );2;1;4
+COSWriter.doWriteObject( COSBase obj );3;1;15
+COSWriter.doWriteObjects( );2;2;8
+COSWriter.doWriteSignature( );17;5;38
+COSWriter.doWriteTrailer( COSDocument doc );8;4;23
+COSWriter.doWriteXRefInc( COSDocument doc , long hybridPrev );13;8;38
+COSWriter.doWriteXRefTable( );10;4;23
+COSWriter.getDataToSign( );14;3;13
+COSWriter.getNumber( );2;1;3
+COSWriter.getObjectKey( COSBase obj );14;6;23
+COSWriter.getObjectKeys( );2;1;3
+COSWriter.getOutput( );2;1;3
+COSWriter.getStandardOutput( );2;1;3
+COSWriter.getStartxref( );2;1;3
+COSWriter.getXRefEntries( );2;1;3
+COSWriter.getXRefRanges( List < COSWriterXRefEntry > xRefEntriesList );15;5;31
+COSWriter.isNeedToBeUpdated( COSBase base );3;2;7
+COSWriter.prepareIncrement( PDDocument doc );14;9;34
+COSWriter.setNumber( long newNumber );1;1;3
+COSWriter.setOutput( OutputStream newOutput );2;1;3
+COSWriter.setStandardOutput( COSStandardOutputStream newStandardOutput );2;1;3
+COSWriter.setStartxref( long newStartxref );1;1;3
+COSWriter.visitFromArray( COSArray obj );13;12;56
+COSWriter.visitFromBoolean( COSBoolean obj );3;1;4
+COSWriter.visitFromDictionary( COSDictionary obj );27;22;88
+COSWriter.visitFromDocument( COSDocument doc );11;8;44
+COSWriter.visitFromFloat( COSFloat obj );3;1;4
+COSWriter.visitFromInt( COSInteger obj );3;1;4
+COSWriter.visitFromName( COSName obj );3;1;4
+COSWriter.visitFromNull( COSNull obj );3;1;4
+COSWriter.visitFromStream( COSStream obj );5;3;27
+COSWriter.visitFromString( COSString obj );3;2;11
+COSWriter.write( COSDocument doc );3;1;4
+COSWriter.write( FDFDocument doc );2;1;6
+COSWriter.write( PDDocument doc );2;1;3
+COSWriter.write( PDDocument doc , SignatureInterface signInterface );22;18;83
+COSWriter.writeExternalSignature( byte [ ] cmsSignature );13;4;16
+COSWriter.writeReference( COSBase obj );2;1;8
+COSWriter.writeString( COSString string , OutputStream output );3;1;3
+COSWriter.writeString( byte [ ] bytes , OutputStream output );2;1;3
+COSWriter.writeString( byte [ ] bytes , boolean forceHex , OutputStream output );9;12;45
+COSWriter.writeXrefEntry( COSWriterXRefEntry entry );2;2;10
+COSWriter.writeXrefRange( long x , long y );1;1;6

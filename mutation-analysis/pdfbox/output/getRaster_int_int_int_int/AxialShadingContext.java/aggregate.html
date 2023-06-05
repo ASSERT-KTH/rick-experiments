@@ -1,0 +1,462 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.45</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                                  
+</span><span class="outsideLine"><i>0002</i>  * Licensed to the Apache Software Foundation (ASF) under one or more                               
+</span><span class="outsideLine"><i>0003</i>  * contributor license agreements.  See the NOTICE file distributed with                            
+</span><span class="outsideLine"><i>0004</i>  * this work for additional information regarding copyright ownership.                              
+</span><span class="outsideLine"><i>0005</i>  * The ASF licenses this file to You under the Apache License, Version 2.0                          
+</span><span class="outsideLine"><i>0006</i>  * (the "License"); you may not use this file except in compliance with                             
+</span><span class="outsideLine"><i>0007</i>  * the License.  You may obtain a copy of the License at                                            
+</span><span class="outsideLine"><i>0008</i>  *                                                                                                  
+</span><span class="outsideLine"><i>0009</i>  *      http://www.apache.org/licenses/LICENSE-2.0                                                  
+</span><span class="outsideLine"><i>0010</i>  *                                                                                                  
+</span><span class="outsideLine"><i>0011</i>  * Unless required by applicable law or agreed to in writing, software                              
+</span><span class="outsideLine"><i>0012</i>  * distributed under the License is distributed on an "AS IS" BASIS,                                
+</span><span class="outsideLine"><i>0013</i>  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                         
+</span><span class="outsideLine"><i>0014</i>  * See the License for the specific language governing permissions and                              
+</span><span class="outsideLine"><i>0015</i>  * limitations under the License.                                                                   
+</span><span class="outsideLine"><i>0016</i>  */                                                                                                 
+</span><span class="outsideLine"><i>0017</i> package org.apache.pdfbox.pdmodel.graphics.shading;                                                 
+</span><span class="outsideLine"><i>0018</i>                                                                                                     
+</span><span class="outsideLine"><i>0019</i> import java.awt.PaintContext;                                                                       
+</span><span class="outsideLine"><i>0020</i> import java.awt.Rectangle;                                                                          
+</span><span class="outsideLine"><i>0021</i> import java.awt.geom.AffineTransform;                                                               
+</span><span class="outsideLine"><i>0022</i> import java.awt.geom.NoninvertibleTransformException;                                               
+</span><span class="outsideLine"><i>0023</i> import java.awt.image.ColorModel;                                                                   
+</span><span class="outsideLine"><i>0024</i> import java.awt.image.Raster;                                                                       
+</span><span class="outsideLine"><i>0025</i> import java.awt.image.WritableRaster;                                                               
+</span><span class="outsideLine"><i>0026</i> import java.io.IOException;                                                                         
+</span><span class="outsideLine"><i>0027</i> import org.apache.commons.logging.Log;                                                              
+</span><span class="outsideLine"><i>0028</i> import org.apache.commons.logging.LogFactory;                                                       
+</span><span class="outsideLine"><i>0029</i> import org.apache.pdfbox.cos.COSArray;                                                              
+</span><span class="outsideLine"><i>0030</i> import org.apache.pdfbox.cos.COSBoolean;                                                            
+</span><span class="outsideLine"><i>0031</i> import org.apache.pdfbox.pdmodel.common.function.PDFunction;                                        
+</span><span class="outsideLine"><i>0032</i> import org.apache.pdfbox.util.Matrix;                                                               
+</span><span class="outsideLine"><i>0033</i>                                                                                                     
+</span><span class="outsideLine"><i>0034</i> /**                                                                                                 
+</span><span class="outsideLine"><i>0035</i>  * AWT PaintContext for axial shading.                                                              
+</span><span class="outsideLine"><i>0036</i>  *                                                                                                  
+</span><span class="outsideLine"><i>0037</i>  * Performance improvement done as part of GSoC2014, Tilman Hausherr is the mentor.                 
+</span><span class="outsideLine"><i>0038</i>  *                                                                                                  
+</span><span class="outsideLine"><i>0039</i>  * @author Shaola Ren                                                                               
+</span><span class="outsideLine"><i>0040</i>  */                                                                                                 
+</span><span class="outsideLine"><i>0041</i> public class AxialShadingContext extends ShadingContext implements PaintContext                     
+</span><span class="outsideLine"><i>0042</i> {                                                                                                   
+</span><span class="outsideLine"><i>0043</i>     private static final Log LOG = LogFactory.getLog(AxialShadingContext.class);                    
+</span><span class="outsideLine"><i>0044</i>                                                                                                     
+</span><span class="outsideLine"><i>0045</i>     private PDShadingType2 axialShadingType;                                                        
+</span><span class="outsideLine"><i>0046</i>                                                                                                     
+</span><span class="outsideLine"><i>0047</i>     private final float[] coords;                                                                   
+</span><span class="outsideLine"><i>0048</i>     private final float[] domain;                                                                   
+</span><span class="outsideLine"><i>0049</i>     private final boolean[] extend;                                                                 
+</span><span class="outsideLine"><i>0050</i>     private final double x1x0;                                                                      
+</span><span class="outsideLine"><i>0051</i>     private final double y1y0;                                                                      
+</span><span class="outsideLine"><i>0052</i>     private final float d1d0;                                                                       
+</span><span class="outsideLine"><i>0053</i>     private final double denom;                                                                     
+</span><span class="outsideLine"><i>0054</i>                                                                                                     
+</span><span class="outsideLine"><i>0055</i>     private final int factor;                                                                       
+</span><span class="outsideLine"><i>0056</i>     private final int[] colorTable;                                                                 
+</span><span class="outsideLine"><i>0057</i>                                                                                                     
+</span><span class="outsideLine"><i>0058</i>     private AffineTransform rat;                                                                    
+</span><span class="outsideLine"><i>0059</i>                                                                                                     
+</span><span class="outsideLine"><i>0060</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0061</i>      * Constructor creates an instance to be used for fill operations.                              
+</span><span class="outsideLine"><i>0062</i>      *                                                                                              
+</span><span class="outsideLine"><i>0063</i>      * @param shading the shading type to be used                                                   
+</span><span class="outsideLine"><i>0064</i>      * @param colorModel the color model to be used                                                 
+</span><span class="outsideLine"><i>0065</i>      * @param xform transformation for user to device space                                         
+</span><span class="outsideLine"><i>0066</i>      * @param matrix the pattern matrix concatenated with that of the parent content stream         
+</span><span class="outsideLine"><i>0067</i>      * @param deviceBounds the bounds of the area to paint, in device units                         
+</span><span class="outsideLine"><i>0068</i>      * @throws IOException if there is an error getting the color space or doing color conversion.  
+</span><span class="outsideLine"><i>0069</i>      */                                                                                             
+</span><span class="outsideLine"><i>0070</i>     public AxialShadingContext(PDShadingType2 shading, ColorModel colorModel, AffineTransform xform,
+</span><span class="outsideLine"><i>0071</i>                                Matrix matrix, Rectangle deviceBounds) throws IOException            
+</span><span class="methodLine"><i>0072</i>     {                                                                                               
+</span><span class="methodLine"><i>0073</i>         super(shading, colorModel, xform, matrix);                                                  
+</span><span class="methodLine"><i>0074</i>         this.axialShadingType = shading;                                                            
+</span><span class="methodLine"><i>0075</i>         coords = shading.getCoords().toFloatArray();                                                
+</span><span class="outsideLine"><i>0076</i>                                                                                                     
+</span><span class="outsideLine"><i>0077</i>         // domain values                                                                            
+</span><span class="methodLine"><i>0078</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 824</span>shading.getDomain() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 824</span>!=</span> null</span>)                                                            
+</span><span class="methodLine"><i>0079</i>         {                                                                                           
+</span><span class="methodLine"><i>0080</i>             domain = shading.getDomain().toFloatArray();                                            
+</span><span class="methodLine"><i>0081</i>         }                                                                                           
+</span><span class="methodLine"><i>0082</i>         else                                                                                        
+</span><span class="methodLine"><i>0083</i>         {                                                                                           
+</span><span class="outsideLine"><i>0084</i>             // set default values                                                                   
+</span><span class="methodLine"><i>0085</i>             domain = new float[] { 0, 1 };                                                          
+</span><span class="methodLine"><i>0086</i>         }                                                                                           
+</span><span class="outsideLine"><i>0087</i>         // extend values                                                                            
+</span><span class="methodLine"><i>0088</i>         COSArray extendValues = shading.getExtend();                                                
+</span><span class="methodLine"><i>0089</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 831</span>extendValues <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 831</span>!=</span> null</span>)                                                                   
+</span><span class="methodLine"><i>0090</i>         {                                                                                           
+</span><span class="methodLine"><i>0091</i>             extend = new boolean[2];                                                                
+</span><span class="methodLine"><i>0092</i>             extend[0] = ((COSBoolean) extendValues.getObject(0)).getValue();                        
+</span><span class="methodLine"><i>0093</i>             extend[1] = ((COSBoolean) extendValues.getObject(1)).getValue();                        
+</span><span class="methodLine"><i>0094</i>         }                                                                                           
+</span><span class="methodLine"><i>0095</i>         else                                                                                        
+</span><span class="methodLine"><i>0096</i>         {                                                                                           
+</span><span class="outsideLine"><i>0097</i>             // set default values                                                                   
+</span><span class="methodLine"><i>0098</i>             extend = new boolean[] { false, false };                                                
+</span><span class="methodLine"><i>0099</i>         }                                                                                           
+</span><span class="outsideLine"><i>0100</i>         // calculate some constants to be used in getRaster                                         
+</span><span class="methodLine"><i>0101</i>         x1x0 = coords[2] <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 931</span>-</span> coords[0];                                                               
+</span><span class="methodLine"><i>0102</i>         y1y0 = coords[3] <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 934</span>-</span> coords[1];                                                               
+</span><span class="methodLine"><i>0103</i>         d1d0 = domain[1] <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 937</span>-</span> domain[0];                                                               
+</span><span class="methodLine"><i>0104</i>         denom = Math.pow(x1x0, 2) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 940</span>+</span> Math.pow(y1y0, 2);                                              
+</span><span class="outsideLine"><i>0105</i>                                                                                                     
+</span><span class="methodLine"><i>0106</i>         try                                                                                         
+</span><span class="methodLine"><i>0107</i>         {                                                                                           
+</span><span class="outsideLine"><i>0108</i>             // get inverse transform to be independent of current user / device space               
+</span><span class="outsideLine"><i>0109</i>             // when handling actual pixels in getRaster()                                           
+</span><span class="methodLine"><i>0110</i>             rat = matrix.createAffineTransform().createInverse();                                   
+</span><span class="methodLine"><i>0111</i>             rat.concatenate(xform.createInverse());                                                 
+</span><span class="methodLine"><i>0112</i>         }                                                                                           
+</span><span class="methodLine"><i>0113</i>         catch (NoninvertibleTransformException ex)                                                  
+</span><span class="methodLine"><i>0114</i>         {                                                                                           
+</span><span class="methodLine"><i>0115</i>             LOG.error(ex.getMessage() + ", matrix: " <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1577</span>+</span> matrix, ex);                                 
+</span><span class="methodLine"><i>0116</i>             rat = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1582</span>new AffineTransform()</span>;                                                            
+</span><span class="methodLine"><i>0117</i>         }                                                                                           
+</span><span class="outsideLine"><i>0118</i>                                                                                                     
+</span><span class="outsideLine"><i>0119</i>         // shading space -> device space                                                            
+</span><span class="methodLine"><i>0120</i>         AffineTransform shadingToDevice = (AffineTransform)xform.clone();                           
+</span><span class="methodLine"><i>0121</i>         shadingToDevice.concatenate(matrix.createAffineTransform());                                
+</span><span class="outsideLine"><i>0122</i>                                                                                                     
+</span><span class="outsideLine"><i>0123</i>         // worst case for the number of steps is opposite diagonal corners, so use that             
+</span><span class="methodLine"><i>0124</i>         double dist = Math.sqrt(Math.pow(deviceBounds.getMaxX() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1821</span>-</span> deviceBounds.getMinX(), 2) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1463</span>+</span>      
+</span><span class="methodLine"><i>0125</i>                                 Math.pow(deviceBounds.getMaxY() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1827</span>-</span> deviceBounds.getMinY(), 2));      
+</span><span class="methodLine"><i>0126</i>         factor = (int) Math.ceil(dist);                                                             
+</span><span class="outsideLine"><i>0127</i>                                                                                                     
+</span><span class="outsideLine"><i>0128</i>         // build the color table for the given number of steps                                      
+</span><span class="methodLine"><i>0129</i>         colorTable = calcColorTable();                                                              
+</span><span class="methodLine"><i>0130</i>     }                                                                                               
+</span><span class="outsideLine"><i>0131</i>                                                                                                     
+</span><span class="outsideLine"><i>0132</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0133</i>      * Calculate the color on the axial line and store them in an array.                            
+</span><span class="outsideLine"><i>0134</i>      *                                                                                              
+</span><span class="outsideLine"><i>0135</i>      * @return an array, index denotes the relative position, the corresponding                     
+</span><span class="outsideLine"><i>0136</i>      * value is the color on the axial line                                                         
+</span><span class="outsideLine"><i>0137</i>      * @throws IOException if the color conversion fails.                                           
+</span><span class="outsideLine"><i>0138</i>      */                                                                                             
+</span><span class="outsideLine"><i>0139</i>     private int[] calcColorTable() throws IOException                                               
+</span><span class="methodLine"><i>0140</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 404</span>{                                                                                               
+</span><span class="methodLine"><i>0141</i>         int[] map = new int[factor <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1596</span>+</span> 1];                                                            
+</span><span class="methodLine"><i>0142</i>         if (factor <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 966</span>==</span> 0 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 859</span>||</span> d1d0 <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 968</span>==</span> 0)                                                               
+</span><span class="methodLine"><i>0143</i>         {                                                                                           
+</span><span class="methodLine"><i>0144</i>             float[] values = axialShadingType.evalFunction(domain[0]);                              
+</span><span class="methodLine"><i>0145</i>             map[0] = convertToRGB(values);                                                          
+</span><span class="methodLine"><i>0146</i>         }                                                                                           
+</span><span class="methodLine"><i>0147</i>         else                                                                                        
+</span><span class="methodLine"><i>0148</i>         {                                                                                           
+</span><span class="methodLine"><i>0149</i>             for (int i = 0; i <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1366</span><=</span> factor; i<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1614</span>++</span>)                                                       
+</span><span class="methodLine"><i>0150</i>             {                                                                                       
+</span><span class="methodLine"><i>0151</i>                 float t = domain[0] <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2216</span>+</span> d1d0 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2411</span>*</span> i <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2319</span>/</span> factor;                                            
+</span><span class="methodLine"><i>0152</i>                 float[] values = axialShadingType.evalFunction(t);                                  
+</span><span class="methodLine"><i>0153</i>                 map[i] = convertToRGB(values);                                                      
+</span><span class="methodLine"><i>0154</i>             }                                                                                       
+</span><span class="methodLine"><i>0155</i>         }                                                                                           
+</span><span class="methodLine"><i>0156</i>         return map;                                                                                 
+</span><span class="methodLine"><i>0157</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0158</i>                                                                                                     
+</span><span class="outsideLine"><i>0159</i>     @Override                                                                                       
+</span><span class="outsideLine"><i>0160</i>     public void dispose()                                                                           
+</span><span class="methodLine"><i>0161</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 410</span>{                                                                                               
+</span><span class="methodLine"><i>0162</i>         super.dispose();                                                                            
+</span><span class="methodLine"><i>0163</i>         axialShadingType = null;                                                                    
+</span><span class="methodLine"><i>0164</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0165</i>                                                                                                     
+</span><span class="outsideLine"><i>0166</i>     @Override                                                                                       
+</span><span class="outsideLine"><i>0167</i>     public ColorModel getColorModel()                                                               
+</span><span class="methodLine"><i>0168</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 416</span>{                                                                                               
+</span><span class="methodLine"><i>0169</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 682</span>return super.getColorModel();</span>                                                               
+</span><span class="methodLine"><i>0170</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0171</i>                                                                                                     
+</span><span class="outsideLine"><i>0172</i>     @Override                                                                                       
+</span><span class="outsideLine"><i>0173</i>     public Raster getRaster(int x, int y, int w, int h)                                             
+</span><span class="methodLine"><i>0174</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 422</span>{                                                                                               
+</span><span class="outsideLine"><i>0175</i>         // create writable raster                                                                   
+</span><span class="methodLine"><i>0176</i>         WritableRaster raster = getColorModel().createCompatibleWritableRaster(w, h);               
+</span><span class="methodLine"><i>0177</i>         boolean useBackground;                                                                      
+</span><span class="methodLine"><i>0178</i>         int[] data = new int[w <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1731</span>*</span> h <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1625</span>*</span> 4];                                                            
+</span><span class="methodLine"><i>0179</i>         float[] values = new float[2];                                                              
+</span><span class="methodLine"><i>0180</i>         for (int j = 0; j <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 883</span><</span> h; j<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1134</span>++</span>)                                                                 
+</span><span class="methodLine"><i>0181</i>         {                                                                                           
+</span><span class="methodLine"><i>0182</i>             for (int i = 0; i <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1387</span><</span> w; i<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1636</span>++</span>)                                                             
+</span><span class="methodLine"><i>0183</i>             {                                                                                       
+</span><span class="methodLine"><i>0184</i>                 useBackground = false;                                                              
+</span><span class="methodLine"><i>0185</i>                 values[0] = x <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1971</span>+</span> i;                                                                  
+</span><span class="methodLine"><i>0186</i>                 values[1] = y <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1974</span>+</span> j;                                                                  
+</span><span class="methodLine"><i>0187</i>                 rat.transform(values, 0, values, 0, 1);                                             
+</span><span class="methodLine"><i>0188</i>                 double inputValue = x1x0 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2344</span>*</span> (values[0] <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2550</span>-</span> coords[0]) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2241</span>+</span> y1y0 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2346</span>*</span> (values[1] <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2554</span>-</span> coords[1]);
+</span><span class="outsideLine"><i>0189</i>                 // TODO this happens if start == end, see PDFBOX-1442                               
+</span><span class="methodLine"><i>0190</i>                 if (denom <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1869</span>==</span> 0)                                                                     
+</span><span class="methodLine"><i>0191</i>                 {                                                                                   
+</span><span class="methodLine"><i>0192</i>                     if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2349</span>getBackground() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2349</span>==</span> null</span>)                                                    
+</span><span class="methodLine"><i>0193</i>                     {                                                                               
+</span><span class="methodLine"><i>0194</i>                         continue;                                                                   
+</span><span class="methodLine"><i>0195</i>                     }                                                                               
+</span><span class="methodLine"><i>0196</i>                     useBackground = true;                                                           
+</span><span class="methodLine"><i>0197</i>                 }                                                                                   
+</span><span class="methodLine"><i>0198</i>                 else                                                                                
+</span><span class="methodLine"><i>0199</i>                 {                                                                                   
+</span><span class="methodLine"><i>0200</i>                     inputValue <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: *= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 2353</span>/=</span> denom;                                                            
+</span><span class="methodLine"><i>0201</i>                 }                                                                                   
+</span><span class="outsideLine"><i>0202</i>                 // input value is out of range                                                      
+</span><span class="methodLine"><i>0203</i>                 if (inputValue <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1874</span><</span> 0)                                                                 
+</span><span class="methodLine"><i>0204</i>                 {                                                                                   
+</span><span class="outsideLine"><i>0205</i>                     // the shading has to be extended if extend[0] == true                          
+</span><span class="methodLine"><i>0206</i>                     if (extend[0])                                                                  
+</span><span class="methodLine"><i>0207</i>                     {                                                                               
+</span><span class="methodLine"><i>0208</i>                         inputValue = domain[0];                                                     
+</span><span class="methodLine"><i>0209</i>                     }                                                                               
+</span><span class="methodLine"><i>0210</i>                     else                                                                            
+</span><span class="methodLine"><i>0211</i>                     {                                                                               
+</span><span class="methodLine"><i>0212</i>                         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2604</span>getBackground() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2604</span>==</span> null</span>)                                                
+</span><span class="methodLine"><i>0213</i>                         {                                                                           
+</span><span class="methodLine"><i>0214</i>                             continue;                                                               
+</span><span class="methodLine"><i>0215</i>                         }                                                                           
+</span><span class="methodLine"><i>0216</i>                         useBackground = true;                                                       
+</span><span class="methodLine"><i>0217</i>                     }                                                                               
+</span><span class="methodLine"><i>0218</i>                 }                                                                                   
+</span><span class="outsideLine"><i>0219</i>                 // input value is out of range                                                      
+</span><span class="methodLine"><i>0220</i>                 else if (inputValue <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1998</span>></span> 1)                                                            
+</span><span class="methodLine"><i>0221</i>                 {                                                                                   
+</span><span class="outsideLine"><i>0222</i>                     // the shading has to be extended if extend[1] == true                          
+</span><span class="methodLine"><i>0223</i>                     if (extend[1])                                                                  
+</span><span class="methodLine"><i>0224</i>                     {                                                                               
+</span><span class="methodLine"><i>0225</i>                         inputValue = domain[1];                                                     
+</span><span class="methodLine"><i>0226</i>                     }                                                                               
+</span><span class="methodLine"><i>0227</i>                     else                                                                            
+</span><span class="methodLine"><i>0228</i>                     {                                                                               
+</span><span class="methodLine"><i>0229</i>                         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2659</span>getBackground() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2659</span>==</span> null</span>)                                                
+</span><span class="methodLine"><i>0230</i>                         {                                                                           
+</span><span class="methodLine"><i>0231</i>                             continue;                                                               
+</span><span class="methodLine"><i>0232</i>                         }                                                                           
+</span><span class="methodLine"><i>0233</i>                         useBackground = true;                                                       
+</span><span class="methodLine"><i>0234</i>                     }                                                                               
+</span><span class="methodLine"><i>0235</i>                 }                                                                                   
+</span><span class="methodLine"><i>0236</i>                 int value;                                                                          
+</span><span class="methodLine"><i>0237</i>                 if (useBackground)                                                                  
+</span><span class="methodLine"><i>0238</i>                 {                                                                                   
+</span><span class="outsideLine"><i>0239</i>                     // use the given background color values                                        
+</span><span class="methodLine"><i>0240</i>                     value = getRgbBackground();                                                     
+</span><span class="methodLine"><i>0241</i>                 }                                                                                   
+</span><span class="methodLine"><i>0242</i>                 else                                                                                
+</span><span class="methodLine"><i>0243</i>                 {                                                                                   
+</span><span class="methodLine"><i>0244</i>                     int key = (int) (inputValue <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2702</span>*</span> factor);                                          
+</span><span class="methodLine"><i>0245</i>                     value = colorTable[key];                                                        
+</span><span class="methodLine"><i>0246</i>                 }                                                                                   
+</span><span class="methodLine"><i>0247</i>                 int index = (j <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2585</span>*</span> w <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2533</span>+</span> i) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2269</span>*</span> 4;                                                        
+</span><span class="methodLine"><i>0248</i>                 data[index] = value <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: | 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 2015</span>&</span> 255;                                                          
+</span><span class="methodLine"><i>0249</i>                 value <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: >>>= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 1890</span>>>=</span> 8;                                                                        
+</span><span class="methodLine"><i>0250</i>                 data[index <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2160</span>+</span> 1] = value <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: | 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 2021</span>&</span> 255;                                                      
+</span><span class="methodLine"><i>0251</i>                 value <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: >>>= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 1892</span>>>=</span> 8;                                                                        
+</span><span class="methodLine"><i>0252</i>                 data[index <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2169</span>+</span> 2] = value <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: | 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 2027</span>&</span> 255;                                                      
+</span><span class="methodLine"><i>0253</i>                 data[index <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2176</span>+</span> 3] = 255;                                                              
+</span><span class="methodLine"><i>0254</i>             }                                                                                       
+</span><span class="methodLine"><i>0255</i>         }                                                                                           
+</span><span class="methodLine"><i>0256</i>         raster.setPixels(0, 0, w, h, data);                                                         
+</span><span class="methodLine"><i>0257</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 698</span>return raster;</span>                                                                              
+</span><span class="methodLine"><i>0258</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0259</i>                                                                                                     
+</span><span class="outsideLine"><i>0260</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0261</i>      * Returns the coords values.                                                                   
+</span><span class="outsideLine"><i>0262</i>      */                                                                                             
+</span><span class="outsideLine"><i>0263</i>     public float[] getCoords()                                                                      
+</span><span class="methodLine"><i>0264</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 427</span>{                                                                                               
+</span><span class="methodLine"><i>0265</i>         return coords;                                                                              
+</span><span class="methodLine"><i>0266</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0267</i>                                                                                                     
+</span><span class="outsideLine"><i>0268</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0269</i>      * Returns the domain values.                                                                   
+</span><span class="outsideLine"><i>0270</i>      */                                                                                             
+</span><span class="outsideLine"><i>0271</i>     public float[] getDomain()                                                                      
+</span><span class="methodLine"><i>0272</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 432</span>{                                                                                               
+</span><span class="methodLine"><i>0273</i>         return domain;                                                                              
+</span><span class="methodLine"><i>0274</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0275</i>                                                                                                     
+</span><span class="outsideLine"><i>0276</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0277</i>      * Returns the extend values.                                                                   
+</span><span class="outsideLine"><i>0278</i>      */                                                                                             
+</span><span class="outsideLine"><i>0279</i>     public boolean[] getExtend()                                                                    
+</span><span class="methodLine"><i>0280</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 437</span>{                                                                                               
+</span><span class="methodLine"><i>0281</i>         return extend;                                                                              
+</span><span class="methodLine"><i>0282</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0283</i>                                                                                                     
+</span><span class="outsideLine"><i>0284</i>     /**                                                                                             
+</span><span class="outsideLine"><i>0285</i>      * Returns the function.                                                                        
+</span><span class="outsideLine"><i>0286</i>      *                                                                                              
+</span><span class="outsideLine"><i>0287</i>      * @throws java.io.IOException if we were not able to create the function.                      
+</span><span class="outsideLine"><i>0288</i>      */                                                                                             
+</span><span class="outsideLine"><i>0289</i>     public PDFunction getFunction() throws IOException                                              
+</span><span class="methodLine"><i>0290</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 444</span>{                                                                                               
+</span><span class="methodLine"><i>0291</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 702</span>return axialShadingType.getFunction();</span>                                                      
+</span><span class="methodLine"><i>0292</i>     }</span>                                                                                               
+</span><span class="outsideLine"><i>0293</i> }                                                                                                   
+</span><span class="outsideLine"><i>0294</i>                                                                                                     </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

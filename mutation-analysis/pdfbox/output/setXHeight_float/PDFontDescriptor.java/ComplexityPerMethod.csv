@@ -1,0 +1,71 @@
+***not in a method***;1;1;0
+PDFontDescriptor.PDFontDescriptor( );1;1;4
+PDFontDescriptor.PDFontDescriptor( COSDictionary desc );0;1;3
+PDFontDescriptor.getAscent( );2;1;3
+PDFontDescriptor.getAverageWidth( );2;1;3
+PDFontDescriptor.getCIDSet( );4;2;8
+PDFontDescriptor.getCOSObject( );2;1;3
+PDFontDescriptor.getCapHeight( );3;2;7
+PDFontDescriptor.getCharSet( );5;2;9
+PDFontDescriptor.getDescent( );2;1;3
+PDFontDescriptor.getFlags( );4;2;7
+PDFontDescriptor.getFontBoundingBox( );5;2;9
+PDFontDescriptor.getFontFamily( );5;2;9
+PDFontDescriptor.getFontFile( );3;2;9
+PDFontDescriptor.getFontFile2( );3;2;9
+PDFontDescriptor.getFontFile3( );3;2;9
+PDFontDescriptor.getFontName( );3;2;9
+PDFontDescriptor.getFontStretch( );5;2;9
+PDFontDescriptor.getFontWeight( );2;1;3
+PDFontDescriptor.getItalicAngle( );2;1;3
+PDFontDescriptor.getLeading( );2;1;3
+PDFontDescriptor.getMaxWidth( );2;1;3
+PDFontDescriptor.getMissingWidth( );2;1;3
+PDFontDescriptor.getPanose( );6;2;10
+PDFontDescriptor.getStemH( );2;1;3
+PDFontDescriptor.getStemV( );2;1;3
+PDFontDescriptor.getXHeight( );3;2;7
+PDFontDescriptor.hasMissingWidth( );2;1;3
+PDFontDescriptor.hasWidths( );3;2;3
+PDFontDescriptor.isAllCap( );2;1;3
+PDFontDescriptor.isFixedPitch( );2;1;3
+PDFontDescriptor.isFlagBitOn( int bit );4;1;3
+PDFontDescriptor.isForceBold( );2;1;3
+PDFontDescriptor.isItalic( );2;1;3
+PDFontDescriptor.isNonSymbolic( );2;1;3
+PDFontDescriptor.isScript( );2;1;3
+PDFontDescriptor.isSerif( );2;1;3
+PDFontDescriptor.isSmallCap( );2;1;3
+PDFontDescriptor.isSymbolic( );2;1;3
+PDFontDescriptor.setAllCap( boolean flag );1;1;3
+PDFontDescriptor.setAscent( float ascent );1;1;3
+PDFontDescriptor.setAverageWidth( float averageWidth );1;1;3
+PDFontDescriptor.setCIDSet( PDStream stream );2;1;3
+PDFontDescriptor.setCapHeight( float capHeight );1;1;4
+PDFontDescriptor.setCharacterSet( String charSet );5;2;8
+PDFontDescriptor.setDescent( float descent );1;1;3
+PDFontDescriptor.setFixedPitch( boolean flag );1;1;3
+PDFontDescriptor.setFlagBit( int bit , boolean value );3;2;12
+PDFontDescriptor.setFlags( int flags );1;1;4
+PDFontDescriptor.setFontBoundingBox( PDRectangle rect );4;2;8
+PDFontDescriptor.setFontFamily( String fontFamily );5;2;8
+PDFontDescriptor.setFontFile( PDStream type1Stream );2;1;3
+PDFontDescriptor.setFontFile2( PDStream ttfStream );2;1;3
+PDFontDescriptor.setFontFile3( PDStream stream );2;1;3
+PDFontDescriptor.setFontName( String fontName );4;2;8
+PDFontDescriptor.setFontStretch( String fontStretch );4;2;8
+PDFontDescriptor.setFontWeight( float fontWeight );1;1;3
+PDFontDescriptor.setForceBold( boolean flag );1;1;3
+PDFontDescriptor.setItalic( boolean flag );1;1;3
+PDFontDescriptor.setItalicAngle( float angle );1;1;3
+PDFontDescriptor.setLeading( float leading );1;1;3
+PDFontDescriptor.setMaxWidth( float maxWidth );1;1;3
+PDFontDescriptor.setMissingWidth( float missingWidth );1;1;3
+PDFontDescriptor.setNonSymbolic( boolean flag );1;1;3
+PDFontDescriptor.setScript( boolean flag );1;1;3
+PDFontDescriptor.setSerif( boolean flag );1;1;3
+PDFontDescriptor.setSmallCap( boolean flag );1;1;3
+PDFontDescriptor.setStemH( float stemH );1;1;3
+PDFontDescriptor.setStemV( float stemV );1;1;3
+PDFontDescriptor.setSymbolic( boolean flag );1;1;3
+PDFontDescriptor.setXHeight( float xHeight );1;1;4

@@ -1,0 +1,997 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.46</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                                          
+</span><span class="outsideLine"><i>0002</i>  * Licensed to the Apache Software Foundation (ASF) under one or more                                       
+</span><span class="outsideLine"><i>0003</i>  * contributor license agreements.  See the NOTICE file distributed with                                    
+</span><span class="outsideLine"><i>0004</i>  * this work for additional information regarding copyright ownership.                                      
+</span><span class="outsideLine"><i>0005</i>  * The ASF licenses this file to You under the Apache License, Version 2.0                                  
+</span><span class="outsideLine"><i>0006</i>  * (the "License"); you may not use this file except in compliance with                                     
+</span><span class="outsideLine"><i>0007</i>  * the License.  You may obtain a copy of the License at                                                    
+</span><span class="outsideLine"><i>0008</i>  *                                                                                                          
+</span><span class="outsideLine"><i>0009</i>  *      http://www.apache.org/licenses/LICENSE-2.0                                                          
+</span><span class="outsideLine"><i>0010</i>  *                                                                                                          
+</span><span class="outsideLine"><i>0011</i>  * Unless required by applicable law or agreed to in writing, software                                      
+</span><span class="outsideLine"><i>0012</i>  * distributed under the License is distributed on an "AS IS" BASIS,                                        
+</span><span class="outsideLine"><i>0013</i>  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                                 
+</span><span class="outsideLine"><i>0014</i>  * See the License for the specific language governing permissions and                                      
+</span><span class="outsideLine"><i>0015</i>  * limitations under the License.                                                                           
+</span><span class="outsideLine"><i>0016</i>  */                                                                                                         
+</span><span class="outsideLine"><i>0017</i> package org.apache.pdfbox.pdmodel.graphics.color;                                                           
+</span><span class="outsideLine"><i>0018</i>                                                                                                             
+</span><span class="outsideLine"><i>0019</i> import java.awt.Transparency;                                                                               
+</span><span class="outsideLine"><i>0020</i> import java.awt.color.CMMException;                                                                         
+</span><span class="outsideLine"><i>0021</i> import java.awt.color.ColorSpace;                                                                           
+</span><span class="outsideLine"><i>0022</i> import java.awt.color.ICC_ColorSpace;                                                                       
+</span><span class="outsideLine"><i>0023</i> import java.awt.color.ICC_Profile;                                                                          
+</span><span class="outsideLine"><i>0024</i> import java.awt.color.ProfileDataException;                                                                 
+</span><span class="outsideLine"><i>0025</i> import java.awt.image.BufferedImage;                                                                        
+</span><span class="outsideLine"><i>0026</i> import java.awt.image.ComponentColorModel;                                                                  
+</span><span class="outsideLine"><i>0027</i> import java.awt.image.DataBuffer;                                                                           
+</span><span class="outsideLine"><i>0028</i> import java.awt.image.WritableRaster;                                                                       
+</span><span class="outsideLine"><i>0029</i> import java.io.IOException;                                                                                 
+</span><span class="outsideLine"><i>0030</i> import java.io.InputStream;                                                                                 
+</span><span class="outsideLine"><i>0031</i> import java.util.Arrays;                                                                                    
+</span><span class="outsideLine"><i>0032</i> import java.util.List;                                                                                      
+</span><span class="outsideLine"><i>0033</i> import java.util.StringTokenizer;                                                                           
+</span><span class="outsideLine"><i>0034</i> import org.apache.commons.logging.Log;                                                                      
+</span><span class="outsideLine"><i>0035</i> import org.apache.commons.logging.LogFactory;                                                               
+</span><span class="outsideLine"><i>0036</i> import org.apache.pdfbox.cos.COSArray;                                                                      
+</span><span class="outsideLine"><i>0037</i> import org.apache.pdfbox.cos.COSBase;                                                                       
+</span><span class="outsideLine"><i>0038</i> import org.apache.pdfbox.cos.COSFloat;                                                                      
+</span><span class="outsideLine"><i>0039</i> import org.apache.pdfbox.cos.COSName;                                                                       
+</span><span class="outsideLine"><i>0040</i> import org.apache.pdfbox.cos.COSObject;                                                                     
+</span><span class="outsideLine"><i>0041</i> import org.apache.pdfbox.cos.COSStream;                                                                     
+</span><span class="outsideLine"><i>0042</i> import org.apache.pdfbox.io.IOUtils;                                                                        
+</span><span class="outsideLine"><i>0043</i> import org.apache.pdfbox.pdmodel.PDDocument;                                                                
+</span><span class="outsideLine"><i>0044</i> import org.apache.pdfbox.pdmodel.PDResources;                                                               
+</span><span class="outsideLine"><i>0045</i> import org.apache.pdfbox.pdmodel.common.COSArrayList;                                                       
+</span><span class="outsideLine"><i>0046</i> import org.apache.pdfbox.pdmodel.common.PDRange;                                                            
+</span><span class="outsideLine"><i>0047</i> import org.apache.pdfbox.pdmodel.common.PDStream;                                                           
+</span><span class="outsideLine"><i>0048</i> import org.apache.pdfbox.util.Charsets;                                                                     
+</span><span class="outsideLine"><i>0049</i>                                                                                                             
+</span><span class="outsideLine"><i>0050</i> /**                                                                                                         
+</span><span class="outsideLine"><i>0051</i>  * ICCBased color spaces are based on a cross-platform color profile as defined by the                      
+</span><span class="outsideLine"><i>0052</i>  * International Color Consortium (ICC).                                                                    
+</span><span class="outsideLine"><i>0053</i>  *                                                                                                          
+</span><span class="outsideLine"><i>0054</i>  * @author Ben Litchfield                                                                                   
+</span><span class="outsideLine"><i>0055</i>  * @author John Hewson                                                                                      
+</span><span class="outsideLine"><i>0056</i>  */                                                                                                         
+</span><span class="outsideLine"><i>0057</i> public final class PDICCBased extends PDCIEBasedColorSpace                                                  
+</span><span class="outsideLine"><i>0058</i> {                                                                                                           
+</span><span class="outsideLine"><i>0059</i>     private static final Log LOG = LogFactory.getLog(PDICCBased.class);                                     
+</span><span class="outsideLine"><i>0060</i>                                                                                                             
+</span><span class="outsideLine"><i>0061</i>     private final PDStream stream;                                                                          
+</span><span class="outsideLine"><i>0062</i>     private int numberOfComponents = <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 1287</span>-</span>1;                                                                    
+</span><span class="outsideLine"><i>0063</i>     private ICC_Profile iccProfile;                                                                         
+</span><span class="outsideLine"><i>0064</i>     private PDColorSpace alternateColorSpace;                                                               
+</span><span class="outsideLine"><i>0065</i>     private ICC_ColorSpace awtColorSpace;                                                                   
+</span><span class="outsideLine"><i>0066</i>     private PDColor initialColor;                                                                           
+</span><span class="outsideLine"><i>0067</i>     private boolean isRGB = false;                                                                          
+</span><span class="outsideLine"><i>0068</i>     // allows to force using alternate color space instead of ICC color space for performance               
+</span><span class="outsideLine"><i>0069</i>     // reasons with LittleCMS (LCMS), see PDFBOX-4309                                                       
+</span><span class="outsideLine"><i>0070</i>     // WARNING: do not activate this in a conforming reader                                                 
+</span><span class="outsideLine"><i>0071</i>     private boolean useOnlyAlternateColorSpace = false;                                                     
+</span><span class="outsideLine"><i>0072</i>     private static final boolean IS_KCMS;                                                                   
+</span><span class="outsideLine"><i>0073</i>                                                                                                             
+</span><span class="outsideLine"><i>0074</i>     static                                                                                                  
+</span><span class="outsideLine"><i>0075</i>     {                                                                                                       
+</span><span class="outsideLine"><i>0076</i>         String cmmProperty = System.getProperty("sun.java2d.cmm");                                          
+</span><span class="outsideLine"><i>0077</i>         boolean result = false;                                                                             
+</span><span class="outsideLine"><i>0078</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 1076</span>!</span>isMinJdk8())                                                                                   
+</span><span class="outsideLine"><i>0079</i>         {                                                                                                   
+</span><span class="outsideLine"><i>0080</i>             // always KCMS but class has different name                                                     
+</span><span class="outsideLine"><i>0081</i>             result = true;                                                                                  
+</span><span class="outsideLine"><i>0082</i>         }                                                                                                   
+</span><span class="outsideLine"><i>0083</i>         else if ("sun.java2d.cmm.kcms.KcmsServiceProvider".equals(cmmProperty))                             
+</span><span class="outsideLine"><i>0084</i>         {                                                                                                   
+</span><span class="outsideLine"><i>0085</i>             try                                                                                             
+</span><span class="outsideLine"><i>0086</i>             {                                                                                               
+</span><span class="outsideLine"><i>0087</i>                 Class.forName("sun.java2d.cmm.kcms.KcmsServiceProvider");                                   
+</span><span class="outsideLine"><i>0088</i>                 result = true;                                                                              
+</span><span class="outsideLine"><i>0089</i>             }                                                                                               
+</span><span class="outsideLine"><i>0090</i>             catch (ClassNotFoundException e)                                                                
+</span><span class="outsideLine"><i>0091</i>             {                                                                                               
+</span><span class="outsideLine"><i>0092</i>                 // KCMS not available                                                                       
+</span><span class="outsideLine"><i>0093</i>             }                                                                                               
+</span><span class="outsideLine"><i>0094</i>         }                                                                                                   
+</span><span class="outsideLine"><i>0095</i>         // else maybe KCMS was available, but not wished                                                    
+</span><span class="outsideLine"><i>0096</i>         IS_KCMS = result;                                                                                   
+</span><span class="outsideLine"><i>0097</i>     }                                                                                                       
+</span><span class="outsideLine"><i>0098</i>                                                                                                             
+</span><span class="outsideLine"><i>0099</i>     /**                                                                                                     
+</span><span class="outsideLine"><i>0100</i>      * Creates a new ICC color space with an empty stream.                                                  
+</span><span class="outsideLine"><i>0101</i>      * @param doc the document to store the ICC data                                                        
+</span><span class="outsideLine"><i>0102</i>      */                                                                                                     
+</span><span class="outsideLine"><i>0103</i>     public PDICCBased(PDDocument doc)                                                                       
+</span><span class="methodLine"><i>0104</i>     {                                                                                                       
+</span><span class="methodLine"><i>0105</i>         array = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2418</span>new COSArray()</span>;                                                                             
+</span><span class="methodLine"><i>0106</i>         array.add(COSName.ICCBASED);                                                                        
+</span><span class="methodLine"><i>0107</i>         stream = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2425</span>new PDStream(doc)</span>;                                                                         
+</span><span class="methodLine"><i>0108</i>         array.add(stream);                                                                                  
+</span><span class="methodLine"><i>0109</i>     }                                                                                                       
+</span><span class="outsideLine"><i>0110</i>                                                                                                             
+</span><span class="outsideLine"><i>0111</i>     /**                                                                                                     
+</span><span class="outsideLine"><i>0112</i>      * Creates a new ICC color space using the PDF array.                                                   
+</span><span class="outsideLine"><i>0113</i>      *                                                                                                      
+</span><span class="outsideLine"><i>0114</i>      * @param iccArray the ICC stream object.                                                               
+</span><span class="outsideLine"><i>0115</i>      * @throws IOException if there is an error reading the ICC profile or if the parameter is              
+</span><span class="outsideLine"><i>0116</i>      * invalid.                                                                                             
+</span><span class="outsideLine"><i>0117</i>      *                                                                                                      
+</span><span class="outsideLine"><i>0118</i>      * @deprecated This will be private in 3.0. Please use                                                  
+</span><span class="outsideLine"><i>0119</i>      * {@link PDICCBased#create(org.apache.pdfbox.cos.COSArray, org.apache.pdfbox.pdmodel.PDResources)}     
+</span><span class="outsideLine"><i>0120</i>      * instead, which supports caching.                                                                     
+</span><span class="outsideLine"><i>0121</i>      */                                                                                                     
+</span><span class="outsideLine"><i>0122</i>     @Deprecated                                                                                             
+</span><span class="outsideLine"><i>0123</i>     public PDICCBased(COSArray iccArray) throws IOException                                                 
+</span><span class="methodLine"><i>0124</i>     {                                                                                                       
+</span><span class="methodLine"><i>0125</i>         checkArray(iccArray);                                                                               
+</span><span class="methodLine"><i>0126</i>         useOnlyAlternateColorSpace = <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2056</span>System                                                                 
+</span><span class="methodLine"><i>0127</i>                 .getProperty("org.apache.pdfbox.rendering.UseAlternateInsteadOfICCColorSpace") <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2056</span>!=</span> null</span>;     
+</span><span class="methodLine"><i>0128</i>         array = iccArray;                                                                                   
+</span><span class="methodLine"><i>0129</i>         stream = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2440</span>new PDStream((COSStream) iccArray.getObject(1))</span>;                                           
+</span><span class="methodLine"><i>0130</i>         loadICCProfile();                                                                                   
+</span><span class="methodLine"><i>0131</i>     }                                                                                                       
+</span><span class="outsideLine"><i>0132</i>                                                                                                             
+</span><span class="outsideLine"><i>0133</i>     /**                                                                                                     
+</span><span class="outsideLine"><i>0134</i>      * Creates a new ICC color space using the PDF array, optionally using a resource cache.                
+</span><span class="outsideLine"><i>0135</i>      *                                                                                                      
+</span><span class="outsideLine"><i>0136</i>      * @param iccArray the ICC stream object.                                                               
+</span><span class="outsideLine"><i>0137</i>      * @param resources resources to use as cache, or null for no caching.                                  
+</span><span class="outsideLine"><i>0138</i>      * @return an ICC color space.                                                                          
+</span><span class="outsideLine"><i>0139</i>      * @throws IOException if there is an error reading the ICC profile or if the parameter is              
+</span><span class="outsideLine"><i>0140</i>      * invalid.                                                                                             
+</span><span class="outsideLine"><i>0141</i>      */                                                                                                     
+</span><span class="outsideLine"><i>0142</i>     public static PDICCBased create(COSArray iccArray, PDResources resources) throws IOException            
+</span><span class="methodLine"><i>0143</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { iccArray = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1105</span>{</span>                                                                                                       
+</span><span class="methodLine"><i>0144</i>         checkArray(iccArray);                                                                               
+</span><span class="methodLine"><i>0145</i>         COSBase base = iccArray.get(1);                                                                     
+</span><span class="methodLine"><i>0146</i>         COSObject indirect = null;                                                                          
+</span><span class="methodLine"><i>0147</i>         if (base instanceof COSObject)                                                                      
+</span><span class="methodLine"><i>0148</i>         {                                                                                                   
+</span><span class="methodLine"><i>0149</i>             indirect = (COSObject) base;                                                                    
+</span><span class="methodLine"><i>0150</i>         }                                                                                                   
+</span><span class="methodLine"><i>0151</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2455</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2455</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2080</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2457</span>resources <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2457</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 1781</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2082</span>resources.getResourceCache() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2082</span>!=</span> null</span>)                  
+</span><span class="methodLine"><i>0152</i>         {                                                                                                   
+</span><span class="methodLine"><i>0153</i>             PDColorSpace space = resources.getResourceCache().getColorSpace(indirect);                      
+</span><span class="methodLine"><i>0154</i>             if (space instanceof PDICCBased)                                                                
+</span><span class="methodLine"><i>0155</i>             {                                                                                               
+</span><span class="methodLine"><i>0156</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3896</span>return (PDICCBased) space;</span>                                                                  
+</span><span class="methodLine"><i>0157</i>             }                                                                                               
+</span><span class="methodLine"><i>0158</i>         }                                                                                                   
+</span><span class="methodLine"><i>0159</i>         PDICCBased space = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3197</span>new PDICCBased(iccArray)</span>;                                                        
+</span><span class="methodLine"><i>0160</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2467</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2467</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2089</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2469</span>resources <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2469</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 1787</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2091</span>resources.getResourceCache() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2091</span>!=</span> null</span>)                  
+</span><span class="methodLine"><i>0161</i>         {                                                                                                   
+</span><span class="methodLine"><i>0162</i>             resources.getResourceCache().put(indirect, space);                                              
+</span><span class="methodLine"><i>0163</i>         }                                                                                                   
+</span><span class="methodLine"><i>0164</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1338</span>return space;</span>                                                                                       
+</span><span class="methodLine"><i>0165</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0166</i>                                                                                                             
+</span><span class="outsideLine"><i>0167</i>     private static void checkArray(COSArray iccArray) throws IOException                                    
+</span><span class="methodLine"><i>0168</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { iccArray = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1117</span>{</span>                                                                                                       
+</span><span class="methodLine"><i>0169</i>         if (iccArray.size() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1793</span><</span> 2)                                                                            
+</span><span class="methodLine"><i>0170</i>         {                                                                                                   
+</span><span class="methodLine"><i>0171</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3210</span>new IOException("ICCBased colorspace array must have two elements")</span>;                      
+</span><span class="methodLine"><i>0172</i>         }                                                                                                   
+</span><span class="methodLine"><i>0173</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 1797</span>!</span>(iccArray.getObject(1) instanceof COSStream))                                                  
+</span><span class="methodLine"><i>0174</i>         {                                                                                                   
+</span><span class="methodLine"><i>0175</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3215</span>new IOException("ICCBased colorspace array must have a stream as second element")</span>;        
+</span><span class="methodLine"><i>0176</i>         }                                                                                                   
+</span><span class="methodLine"><i>0177</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0178</i>                                                                                                             
+</span><span class="outsideLine"><i>0179</i>     @Override                                                                                               
+</span><span class="outsideLine"><i>0180</i>     public String getName()                                                                                 
+</span><span class="methodLine"><i>0181</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 710</span>{                                                                                                       
+</span><span class="methodLine"><i>0182</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1344</span>return COSName.ICCBASED.getName();</span>                                                                  
+</span><span class="methodLine"><i>0183</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0184</i>                                                                                                             
+</span><span class="outsideLine"><i>0185</i>     /**                                                                                                     
+</span><span class="outsideLine"><i>0186</i>      * Get the underlying ICC profile stream.                                                               
+</span><span class="outsideLine"><i>0187</i>      * @return the underlying ICC profile stream                                                            
+</span><span class="outsideLine"><i>0188</i>      */                                                                                                     
+</span><span class="outsideLine"><i>0189</i>     public PDStream getPDStream()                                                                           
+</span><span class="methodLine"><i>0190</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 715</span>{                                                                                                       
+</span><span class="methodLine"><i>0191</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1345</span>return stream;</span>                                                                                      
+</span><span class="methodLine"><i>0192</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0193</i>                                                                                                             
+</span><span class="outsideLine"><i>0194</i>     /**                                                                                                     
+</span><span class="outsideLine"><i>0195</i>      * Load the ICC profile, or init alternateColorSpace color space.                                       
+</span><span class="outsideLine"><i>0196</i>      */                                                                                                     
+</span><span class="outsideLine"><i>0197</i>     private void loadICCProfile() throws IOException                                                        
+</span><span class="methodLine"><i>0198</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 722</span>{                                                                                                       
+</span><span class="methodLine"><i>0199</i>         if (useOnlyAlternateColorSpace)                                                                     
+</span><span class="methodLine"><i>0200</i>         {                                                                                                   
+</span><span class="methodLine"><i>0201</i>             try                                                                                             
+</span><span class="methodLine"><i>0202</i>             {                                                                                               
+</span><span class="methodLine"><i>0203</i>                 fallbackToAlternateColorSpace(null);                                                        
+</span><span class="methodLine"><i>0204</i>                 return;                                                                                     
+</span><span class="methodLine"><i>0205</i>             }                                                                                               
+</span><span class="methodLine"><i>0206</i>             catch ( IOException e )                                                                         
+</span><span class="methodLine"><i>0207</i>             {                                                                                               
+</span><span class="methodLine"><i>0208</i>               LOG.warn("Error initializing alternate color space: " + e.getLocalizedMessage());             
+</span><span class="methodLine"><i>0209</i>             }                                                                                               
+</span><span class="methodLine"><i>0210</i>         }                                                                                                   
+</span><span class="methodLine"><i>0211</i>         InputStream input = null;                                                                           
+</span><span class="methodLine"><i>0212</i>         try                                                                                                 
+</span><span class="methodLine"><i>0213</i>         {                                                                                                   
+</span><span class="methodLine"><i>0214</i>             input = this.stream.createInputStream();                                                        
+</span><span class="outsideLine"><i>0215</i>                                                                                                             
+</span><span class="outsideLine"><i>0216</i>             // if the embedded profile is sRGB then we can use Java's built-in profile, which               
+</span><span class="outsideLine"><i>0217</i>             // results in a large performance gain as it's our native color space, see PDFBOX-2587          
+</span><span class="methodLine"><i>0218</i>             ICC_Profile profile;                                                                            
+</span><span class="methodLine"><i>0219</i>             synchronized (LOG)                                                                              
+</span><span class="methodLine"><i>0220</i>             {                                                                                               
+</span><span class="methodLine"><i>0221</i>                 profile = ICC_Profile.getInstance(input);                                                   
+</span><span class="methodLine"><i>0222</i>                 if (is_sRGB(profile))                                                                       
+</span><span class="methodLine"><i>0223</i>                 {                                                                                           
+</span><span class="methodLine"><i>0224</i>                     isRGB = true;                                                                           
+</span><span class="methodLine"><i>0225</i>                     awtColorSpace = (ICC_ColorSpace) ColorSpace.getInstance(ColorSpace.CS_sRGB);            
+</span><span class="methodLine"><i>0226</i>                     iccProfile = awtColorSpace.getProfile();                                                
+</span><span class="methodLine"><i>0227</i>                 }                                                                                           
+</span><span class="methodLine"><i>0228</i>                 else                                                                                        
+</span><span class="methodLine"><i>0229</i>                 {                                                                                           
+</span><span class="methodLine"><i>0230</i>                     profile = ensureDisplayProfile(profile);                                                
+</span><span class="methodLine"><i>0231</i>                     awtColorSpace = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5235</span>new ICC_ColorSpace(profile)</span>;                                            
+</span><span class="methodLine"><i>0232</i>                     iccProfile = profile;                                                                   
+</span><span class="methodLine"><i>0233</i>                 }                                                                                           
+</span><span class="outsideLine"><i>0234</i>                                                                                                             
+</span><span class="outsideLine"><i>0235</i>                 // set initial colour                                                                       
+</span><span class="methodLine"><i>0236</i>                 float[] initial = new float[getNumberOfComponents()];                                       
+</span><span class="methodLine"><i>0237</i>                 for (int c = 0; c <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3939</span><</span> getNumberOfComponents(); c<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 4535</span>++</span>)                                           
+</span><span class="methodLine"><i>0238</i>                 {                                                                                           
+</span><span class="methodLine"><i>0239</i>                     initial[c] = Math.max(0, getRangeForComponent(c).getMin());                             
+</span><span class="methodLine"><i>0240</i>                 }                                                                                           
+</span><span class="methodLine"><i>0241</i>                 initialColor = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4539</span>new PDColor(initial, this)</span>;                                                  
+</span><span class="outsideLine"><i>0242</i>                                                                                                             
+</span><span class="methodLine"><i>0243</i>                 if (IS_KCMS)                                                                                
+</span><span class="methodLine"><i>0244</i>                 {                                                                                           
+</span><span class="outsideLine"><i>0245</i>                     // do things that trigger a ProfileDataException                                        
+</span><span class="outsideLine"><i>0246</i>                     // or CMMException due to invalid profiles, see PDFBOX-1295 and PDFBOX-1740 (ü-file)    
+</span><span class="outsideLine"><i>0247</i>                     // or ArrayIndexOutOfBoundsException, see PDFBOX-3610                                   
+</span><span class="outsideLine"><i>0248</i>                     // also triggers a ProfileDataException for PDFBOX-3549 with KCMS                       
+</span><span class="methodLine"><i>0249</i>                     awtColorSpace.toRGB(new float[getNumberOfComponents()]);                                
+</span><span class="methodLine"><i>0250</i>                 }                                                                                           
+</span><span class="methodLine"><i>0251</i>                 else                                                                                        
+</span><span class="methodLine"><i>0252</i>                 {                                                                                           
+</span><span class="outsideLine"><i>0253</i>                     // PDFBOX-4015: this one triggers "CMMException: LCMS error 13" with LCMS               
+</span><span class="methodLine"><i>0254</i>                     <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5117</span>new ComponentColorModel(awtColorSpace, false, false,                                    
+</span><span class="methodLine"><i>0255</i>                             Transparency.OPAQUE, DataBuffer.TYPE_BYTE)</span>;                                     
+</span><span class="methodLine"><i>0256</i>                 }                                                                                           
+</span><span class="methodLine"><i>0257</i>             }                                                                                               
+</span><span class="methodLine"><i>0258</i>         }                                                                                                   
+</span><span class="methodLine"><i>0259</i>         catch (ProfileDataException e)                                                                      
+</span><span class="methodLine"><i>0260</i>         {                                                                                                   
+</span><span class="methodLine"><i>0261</i>             fallbackToAlternateColorSpace(e);                                                               
+</span><span class="methodLine"><i>0262</i>         }                                                                                                   
+</span><span class="methodLine"><i>0263</i>         catch (CMMException e)                                                                              
+</span><span class="methodLine"><i>0264</i>         {                                                                                                   
+</span><span class="methodLine"><i>0265</i>             fallbackToAlternateColorSpace(e);                                                               
+</span><span class="methodLine"><i>0266</i>         }                                                                                                   
+</span><span class="methodLine"><i>0267</i>         catch (IllegalArgumentException e)                                                                  
+</span><span class="methodLine"><i>0268</i>         {                                                                                                   
+</span><span class="methodLine"><i>0269</i>             fallbackToAlternateColorSpace(e);                                                               
+</span><span class="methodLine"><i>0270</i>         }                                                                                                   
+</span><span class="methodLine"><i>0271</i>         catch (ArrayIndexOutOfBoundsException e)                                                            
+</span><span class="methodLine"><i>0272</i>         {                                                                                                   
+</span><span class="methodLine"><i>0273</i>             fallbackToAlternateColorSpace(e);                                                               
+</span><span class="methodLine"><i>0274</i>         }                                                                                                   
+</span><span class="methodLine"><i>0275</i>         catch (IOException e)                                                                               
+</span><span class="methodLine"><i>0276</i>         {                                                                                                   
+</span><span class="methodLine"><i>0277</i>             fallbackToAlternateColorSpace(e);                                                               
+</span><span class="methodLine"><i>0278</i>         }                                                                                                   
+</span><span class="methodLine"><i>0279</i>         finally                                                                                             
+</span><span class="methodLine"><i>0280</i>         {                                                                                                   
+</span><span class="methodLine"><i>0281</i>             IOUtils.closeQuietly(input);                                                                    
+</span><span class="methodLine"><i>0282</i>         }                                                                                                   
+</span><span class="methodLine"><i>0283</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0284</i>                                                                                                             
+</span><span class="outsideLine"><i>0285</i>     private void fallbackToAlternateColorSpace(Exception e) throws IOException                              
+</span><span class="methodLine"><i>0286</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { e = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1138</span>{</span>                                                                                                       
+</span><span class="methodLine"><i>0287</i>         awtColorSpace = null;                                                                               
+</span><span class="methodLine"><i>0288</i>         alternateColorSpace = getAlternateColorSpace();                                                     
+</span><span class="methodLine"><i>0289</i>         if (alternateColorSpace.equals(PDDeviceRGB.INSTANCE))                                               
+</span><span class="methodLine"><i>0290</i>         {                                                                                                   
+</span><span class="methodLine"><i>0291</i>             isRGB = true;                                                                                   
+</span><span class="methodLine"><i>0292</i>         }                                                                                                   
+</span><span class="methodLine"><i>0293</i>         if ( <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1855</span>e <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1855</span>!=</span> null</span> )                                                                                    
+</span><span class="methodLine"><i>0294</i>         {                                                                                                   
+</span><span class="methodLine"><i>0295</i>             LOG.warn("Can't read embedded ICC profile (" + e.getLocalizedMessage() +                        
+</span><span class="methodLine"><i>0296</i>                      "), using alternate color space: " + alternateColorSpace.getName());                   
+</span><span class="methodLine"><i>0297</i>         }                                                                                                   
+</span><span class="methodLine"><i>0298</i>         initialColor = alternateColorSpace.getInitialColor();                                               
+</span><span class="methodLine"><i>0299</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0300</i>                                                                                                             
+</span><span class="outsideLine"><i>0301</i>     /**                                                                                                     
+</span><span class="outsideLine"><i>0302</i>      * Returns true if the given profile represents sRGB.                                                   
+</span><span class="outsideLine"><i>0303</i>      * (unreliable on the data of ColorSpace.CS_sRGB in openjdk)                                            
+</span><span class="outsideLine"><i>0304</i>      */                                                                                                     
+</span><span class="outsideLine"><i>0305</i>     private boolean is_sRGB(ICC_Profile profile)                                                            
+</span><span class="methodLine"><i>0306</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { profile = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1147</span>{</span>                                                                                                       
+</span><span class="methodLine"><i>0307</i>         byte[] bytes = Arrays.copyOfRange(profile.getData(ICC_Profile.icSigHead),                           
+</span><span class="methodLine"><i>0308</i>                 ICC_Profile.icHdrModel, ICC_Profile.icHdrModel <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3628</span>+</span> 7);                                        
+</span><span class="methodLine"><i>0309</i>         String deviceModel = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3981</span>new String(bytes, Charsets.US_ASCII)</span>.trim();                                   
+</span><span class="methodLine"><i>0310</i>         return deviceModel.equals("sRGB");                                                                  
+</span><span class="methodLine"><i>0311</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0312</i>                                                                                                             
+</span><span class="outsideLine"><i>0313</i>     // PDFBOX-4114: fix profile that has the wrong display class,                                           
+</span><span class="outsideLine"><i>0314</i>     // as done by Harald Kuhr in twelvemonkeys JPEGImageReader.ensureDisplayProfile()                       
+</span><span class="outsideLine"><i>0315</i>     private static ICC_Profile ensureDisplayProfile(ICC_Profile profile)                                    
+</span><span class="methodLine"><i>0316</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { profile = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1154</span>{</span>                                                                                                       
+</span><span class="methodLine"><i>0317</i>         if (profile.getProfileClass() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1870</span>!=</span> ICC_Profile.CLASS_DISPLAY)                                         
+</span><span class="methodLine"><i>0318</i>         {                                                                                                   
+</span><span class="methodLine"><i>0319</i>             byte[] profileData = profile.getData(); // Need to clone entire profile, due to a OpenJDK bug   
+</span><span class="outsideLine"><i>0320</i>                                                                                                             
+</span><span class="methodLine"><i>0321</i>             if (profileData[ICC_Profile.icHdrRenderingIntent] <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3267</span>==</span> ICC_Profile.icPerceptual)                  
+</span><span class="methodLine"><i>0322</i>             {                                                                                               
+</span><span class="methodLine"><i>0323</i>                 LOG.warn("ICC profile is Perceptual, ignoring, treating as Display class");                 
+</span><span class="methodLine"><i>0324</i>                 intToBigEndian(ICC_Profile.icSigDisplayClass, profileData, ICC_Profile.icHdrDeviceClass);   
+</span><span class="methodLine"><i>0325</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3995</span>return ICC_Profile.getInstance(profileData);</span>                                                
+</span><span class="methodLine"><i>0326</i>             }                                                                                               
+</span><span class="methodLine"><i>0327</i>         }                                                                                                   
+</span><span class="methodLine"><i>0328</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1364</span>return profile;</span>                                                                                     
+</span><span class="methodLine"><i>0329</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0330</i>                                                                                                             
+</span><span class="outsideLine"><i>0331</i>     private static void intToBigEndian(int value, byte[] array, int index)                                  
+</span><span class="methodLine"><i>0332</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 746</span>{                                                                                                       
+</span><span class="methodLine"><i>0333</i>         array[index] = (byte) (value <span class="ShiftOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: << 
+Mutation Operator Type: ShiftOperatorReplacement 
+Node ID: 3274</span>>></span> 24);                                                                
+</span><span class="methodLine"><i>0334</i>         array[index <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2554</span>+</span> 1] = (byte) (value <span class="ShiftOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: << 
+Mutation Operator Type: ShiftOperatorReplacement 
+Node ID: 3281</span>>></span> 16);                                                            
+</span><span class="methodLine"><i>0335</i>         array[index <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2562</span>+</span> 2] = (byte) (value <span class="ShiftOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: << 
+Mutation Operator Type: ShiftOperatorReplacement 
+Node ID: 3288</span>>></span> 8);                                                             
+</span><span class="methodLine"><i>0336</i>         array[index <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2570</span>+</span> 3] = (byte) (value);                                                                  
+</span><span class="methodLine"><i>0337</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0338</i>                                                                                                             
+</span><span class="outsideLine"><i>0339</i>     @Override                                                                                               
+</span><span class="outsideLine"><i>0340</i>     public float[] toRGB(float[] value) throws IOException                                                  
+</span><span class="methodLine"><i>0341</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 754</span>{                                                                                                       
+</span><span class="methodLine"><i>0342</i>         if (isRGB)                                                                                          
+</span><span class="methodLine"><i>0343</i>         {                                                                                                   
+</span><span class="methodLine"><i>0344</i>             return value;                                                                                   
+</span><span class="methodLine"><i>0345</i>         }                                                                                                   
+</span><span class="methodLine"><i>0346</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1887</span>awtColorSpace <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1887</span>!=</span> null</span>)                                                                          
+</span><span class="methodLine"><i>0347</i>         {                                                                                                   
+</span><span class="outsideLine"><i>0348</i>             // PDFBOX-2142: clamp bad values                                                                
+</span><span class="outsideLine"><i>0349</i>             // WARNING: toRGB is very slow when used with LUT-based ICC profiles                            
+</span><span class="methodLine"><i>0350</i>             return awtColorSpace.toRGB(clampColors(awtColorSpace, value));                                  
+</span><span class="methodLine"><i>0351</i>         }                                                                                                   
+</span><span class="methodLine"><i>0352</i>         else                                                                                                
+</span><span class="methodLine"><i>0353</i>         {                                                                                                   
+</span><span class="methodLine"><i>0354</i>             return alternateColorSpace.toRGB(value);                                                        
+</span><span class="methodLine"><i>0355</i>         }                                                                                                   
+</span><span class="methodLine"><i>0356</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0357</i>                                                                                                             
+</span><span class="outsideLine"><i>0358</i>     private float[] clampColors(ICC_ColorSpace cs, float[] value)                                           
+</span><span class="methodLine"><i>0359</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { cs = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1181</span>{</span>                                                                                                       
+</span><span class="methodLine"><i>0360</i>         float[] result = new float[value.length];                                                           
+</span><span class="methodLine"><i>0361</i>         for (int i = 0; i <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1897</span><</span> value.length; <span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 2592</span>++</span>i)                                                              
+</span><span class="methodLine"><i>0362</i>         {                                                                                                   
+</span><span class="methodLine"><i>0363</i>             float minValue = cs.getMinValue(i);                                                             
+</span><span class="methodLine"><i>0364</i>             float maxValue = cs.getMaxValue(i);                                                             
+</span><span class="methodLine"><i>0365</i>             result[i] = value[i] <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4030</span><</span> minValue ? minValue : (value[i] <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4816</span>></span> maxValue ? maxValue : value[i]);       
+</span><span class="methodLine"><i>0366</i>         }                                                                                                   
+</span><span class="methodLine"><i>0367</i>         return result;                                                                                      
+</span><span class="methodLine"><i>0368</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0369</i>                                                                                                             
+</span><span class="outsideLine"><i>0370</i>     @Override                                                                                               
+</span><span class="outsideLine"><i>0371</i>     public BufferedImage toRGBImage(WritableRaster raster) throws IOException                               
+</span><span class="methodLine"><i>0372</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { raster = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1190</span>{</span>                                                                                                       
+</span><span class="methodLine"><i>0373</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1904</span>awtColorSpace <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1904</span>!=</span> null</span>)                                                                          
+</span><span class="methodLine"><i>0374</i>         {                                                                                                   
+</span><span class="methodLine"><i>0375</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2598</span>return toRGBImageAWT(raster, awtColorSpace);</span>                                                    
+</span><span class="methodLine"><i>0376</i>         }                                                                                                   
+</span><span class="methodLine"><i>0377</i>         else                                                                                                
+</span><span class="methodLine"><i>0378</i>         {                                                                                                   
+</span><span class="methodLine"><i>0379</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2599</span>return alternateColorSpace.toRGBImage(raster);</span>                                                  
+</span><span class="methodLine"><i>0380</i>         }                                                                                                   
+</span><span class="methodLine"><i>0381</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0382</i>                                                                                                             
+</span><span class="outsideLine"><i>0383</i>     @Override                                                                                               
+</span><span class="outsideLine"><i>0384</i>     public BufferedImage toRawImage(WritableRaster raster) throws IOException                               
+</span><span class="methodLine"><i>0385</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { raster = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1197</span>{</span>                                                                                                       
+</span><span class="methodLine"><i>0386</i>         if(<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1910</span>awtColorSpace <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1910</span>==</span> null</span>)                                                                           
+</span><span class="methodLine"><i>0387</i>         {                                                                                                   
+</span><span class="methodLine"><i>0388</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2602</span>return alternateColorSpace.toRawImage(raster);</span>                                                  
+</span><span class="methodLine"><i>0389</i>         }                                                                                                   
+</span><span class="methodLine"><i>0390</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1395</span>return toRawImage(raster, awtColorSpace);</span>                                                           
+</span><span class="methodLine"><i>0391</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0392</i>                                                                                                             
+</span><span class="outsideLine"><i>0393</i>     @Override                                                                                               
+</span><span class="outsideLine"><i>0394</i>     public int getNumberOfComponents()                                                                      
+</span><span class="methodLine"><i>0395</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 781</span>{                                                                                                       
+</span><span class="methodLine"><i>0396</i>         if (numberOfComponents <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1918</span><</span> 0)                                                                         
+</span><span class="methodLine"><i>0397</i>         {                                                                                                   
+</span><span class="methodLine"><i>0398</i>             numberOfComponents = stream.getCOSObject().getInt(COSName.N);                                   
+</span><span class="outsideLine"><i>0399</i>                                                                                                             
+</span><span class="outsideLine"><i>0400</i>             // PDFBOX-4801 correct wrong /N values                                                          
+</span><span class="methodLine"><i>0401</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3337</span>iccProfile <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3337</span>!=</span> null</span>)                                                                         
+</span><span class="methodLine"><i>0402</i>             {                                                                                               
+</span><span class="methodLine"><i>0403</i>                 int numIccComponents = iccProfile.getNumComponents();                                       
+</span><span class="methodLine"><i>0404</i>                 if (numIccComponents <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4616</span>!=</span> numberOfComponents)                                                 
+</span><span class="methodLine"><i>0405</i>                 {                                                                                           
+</span><span class="methodLine"><i>0406</i>                     LOG.warn("Using " + numIccComponents + " components from ICC profile info instead of " +
+</span><span class="methodLine"><i>0407</i>                             numberOfComponents + " components from /N entry");                              
+</span><span class="methodLine"><i>0408</i>                     numberOfComponents = numIccComponents;                                                  
+</span><span class="methodLine"><i>0409</i>                 }                                                                                           
+</span><span class="methodLine"><i>0410</i>             }                                                                                               
+</span><span class="methodLine"><i>0411</i>         }                                                                                                   
+</span><span class="methodLine"><i>0412</i>         return numberOfComponents;                                                                          
+</span><span class="methodLine"><i>0413</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0414</i>                                                                                                             
+</span><span class="outsideLine"><i>0415</i>     @Override                                                                                               
+</span><span class="outsideLine"><i>0416</i>     public float[] getDefaultDecode(int bitsPerComponent)                                                   
+</span><span class="methodLine"><i>0417</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 787</span>{                                                                                                       
+</span><span class="methodLine"><i>0418</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1924</span>awtColorSpace <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1924</span>!=</span> null</span>)                                                                          
+</span><span class="methodLine"><i>0419</i>         {                                                                                                   
+</span><span class="methodLine"><i>0420</i>             int n = getNumberOfComponents();                                                                
+</span><span class="methodLine"><i>0421</i>             float[] decode = new float[n <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 5001</span>*</span> 2];                                                              
+</span><span class="methodLine"><i>0422</i>             for (int i = 0; i <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3347</span><</span> n; i<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 4063</span>++</span>)                                                                     
+</span><span class="methodLine"><i>0423</i>             {                                                                                               
+</span><span class="methodLine"><i>0424</i>                 decode[i <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 5006</span>*</span> 2] = awtColorSpace.getMinValue(i);                                               
+</span><span class="methodLine"><i>0425</i>                 decode[i <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 5176</span>*</span> 2 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 5014</span>+</span> 1] = awtColorSpace.getMaxValue(i);                                           
+</span><span class="methodLine"><i>0426</i>             }                                                                                               
+</span><span class="methodLine"><i>0427</i>             return decode;                                                                                  
+</span><span class="methodLine"><i>0428</i>         }                                                                                                   
+</span><span class="methodLine"><i>0429</i>         else                                                                                                
+</span><span class="methodLine"><i>0430</i>         {                                                                                                   
+</span><span class="methodLine"><i>0431</i>             return alternateColorSpace.getDefaultDecode(bitsPerComponent);                                  
+</span><span class="methodLine"><i>0432</i>         }                                                                                                   
+</span><span class="methodLine"><i>0433</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0434</i>                                                                                                             
+</span><span class="outsideLine"><i>0435</i>     @Override                                                                                               
+</span><span class="outsideLine"><i>0436</i>     public PDColor getInitialColor()                                                                        
+</span><span class="methodLine"><i>0437</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 793</span>{                                                                                                       
+</span><span class="methodLine"><i>0438</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1404</span>return initialColor;</span>                                                                                
+</span><span class="methodLine"><i>0439</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0440</i>                                                                                                             
+</span><span class="outsideLine"><i>0441</i>     /**                                                                                                     
+</span><span class="outsideLine"><i>0442</i>      * Returns a list of alternate color spaces for non-conforming readers.                                 
+</span><span class="outsideLine"><i>0443</i>      * WARNING: Do not use the information in a conforming reader.                                          
+</span><span class="outsideLine"><i>0444</i>      * @return A list of alternateColorSpace color spaces.                                                  
+</span><span class="outsideLine"><i>0445</i>      * @throws IOException If there is an error getting the alternateColorSpace color spaces.               
+</span><span class="outsideLine"><i>0446</i>      */                                                                                                     
+</span><span class="outsideLine"><i>0447</i>     public PDColorSpace getAlternateColorSpace() throws IOException                                         
+</span><span class="methodLine"><i>0448</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 800</span>{                                                                                                       
+</span><span class="methodLine"><i>0449</i>         COSBase alternate = stream.getCOSObject().getDictionaryObject(COSName.ALTERNATE);                   
+</span><span class="methodLine"><i>0450</i>         COSArray alternateArray;                                                                            
+</span><span class="methodLine"><i>0451</i>         if(<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1934</span>alternate <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1934</span>==</span> null</span>)                                                                               
+</span><span class="methodLine"><i>0452</i>         {                                                                                                   
+</span><span class="methodLine"><i>0453</i>             alternateArray = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4076</span>new COSArray()</span>;                                                                
+</span><span class="methodLine"><i>0454</i>             int numComponents = getNumberOfComponents();                                                    
+</span><span class="methodLine"><i>0455</i>             COSName csName;                                                                                 
+</span><span class="methodLine"><i>0456</i>             switch (numComponents)                                                                          
+</span><span class="methodLine"><i>0457</i>             {                                                                                               
+</span><span class="methodLine"><i>0458</i>                 case 1:                                                                                     
+</span><span class="methodLine"><i>0459</i>                     csName = COSName.DEVICEGRAY;                                                            
+</span><span class="methodLine"><i>0460</i>                     break;                                                                                  
+</span><span class="methodLine"><i>0461</i>                 case 3:                                                                                     
+</span><span class="methodLine"><i>0462</i>                     csName = COSName.DEVICERGB;                                                             
+</span><span class="methodLine"><i>0463</i>                     break;                                                                                  
+</span><span class="methodLine"><i>0464</i>                 case 4:                                                                                     
+</span><span class="methodLine"><i>0465</i>                     csName = COSName.DEVICECMYK;                                                            
+</span><span class="methodLine"><i>0466</i>                     break;                                                                                  
+</span><span class="methodLine"><i>0467</i>                 default:                                                                                    
+</span><span class="methodLine"><i>0468</i>                     throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4403</span>new IOException("Unknown color space number of components:" + numComponents)</span>;     
+</span><span class="methodLine"><i>0469</i>             }                                                                                               
+</span><span class="methodLine"><i>0470</i>             alternateArray.add(csName);                                                                     
+</span><span class="methodLine"><i>0471</i>         }                                                                                                   
+</span><span class="methodLine"><i>0472</i>         else                                                                                                
+</span><span class="methodLine"><i>0473</i>         {                                                                                                   
+</span><span class="methodLine"><i>0474</i>             if(alternate instanceof COSArray)                                                               
+</span><span class="methodLine"><i>0475</i>             {                                                                                               
+</span><span class="methodLine"><i>0476</i>                 alternateArray = (COSArray)alternate;                                                       
+</span><span class="methodLine"><i>0477</i>             }                                                                                               
+</span><span class="methodLine"><i>0478</i>             else if(alternate instanceof COSName)                                                           
+</span><span class="methodLine"><i>0479</i>             {                                                                                               
+</span><span class="methodLine"><i>0480</i>                 alternateArray = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5192</span>new COSArray()</span>;                                                            
+</span><span class="methodLine"><i>0481</i>                 alternateArray.add(alternate);                                                              
+</span><span class="methodLine"><i>0482</i>             }                                                                                               
+</span><span class="methodLine"><i>0483</i>             else                                                                                            
+</span><span class="methodLine"><i>0484</i>             {                                                                                               
+</span><span class="methodLine"><i>0485</i>                 throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4873</span>new IOException("Error: expected COSArray or COSName and not " +                      
+</span><span class="methodLine"><i>0486</i>                     alternate.getClass().getName())</span>;                                                        
+</span><span class="methodLine"><i>0487</i>             }                                                                                               
+</span><span class="methodLine"><i>0488</i>         }                                                                                                   
+</span><span class="methodLine"><i>0489</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1408</span>return PDColorSpace.create(alternateArray);</span>                                                         
+</span><span class="methodLine"><i>0490</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0491</i>                                                                                                             
+</span><span class="outsideLine"><i>0492</i>     /**                                                                                                     
+</span><span class="outsideLine"><i>0493</i>      * Returns the range for a certain component number.                                                    
+</span><span class="outsideLine"><i>0494</i>      * This will never return null.                                                                         
+</span><span class="outsideLine"><i>0495</i>      * If it is not present then the range 0..1 will be returned.                                           
+</span><span class="outsideLine"><i>0496</i>      * @param n the component number to get the range for                                                   
+</span><span class="outsideLine"><i>0497</i>      * @return the range for this component                                                                 
+</span><span class="outsideLine"><i>0498</i>      */                                                                                                     
+</span><span class="outsideLine"><i>0499</i>     public PDRange getRangeForComponent(int n)                                                              
+</span><span class="methodLine"><i>0500</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 805</span>{                                                                                                       
+</span><span class="methodLine"><i>0501</i>         COSArray rangeArray = (COSArray) stream.getCOSObject().getDictionaryObject(COSName.RANGE);          
+</span><span class="methodLine"><i>0502</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2286</span>rangeArray <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2286</span>==</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 1946</span>||</span> rangeArray.size() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2288</span><</span> getNumberOfComponents() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2642</span>*</span> 2)                          
+</span><span class="methodLine"><i>0503</i>         {                                                                                                   
+</span><span class="methodLine"><i>0504</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2643</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3404</span>new PDRange()</span>;</span> // 0..1                                                                   
+</span><span class="methodLine"><i>0505</i>         }                                                                                                   
+</span><span class="methodLine"><i>0506</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1413</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1950</span>new PDRange(rangeArray, n)</span>;</span>                                                                  
+</span><span class="methodLine"><i>0507</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0508</i>                                                                                                             
+</span><span class="outsideLine"><i>0509</i>     /**                                                                                                     
+</span><span class="outsideLine"><i>0510</i>      * Returns the metadata stream for this object, or null if there is no metadata stream.                 
+</span><span class="outsideLine"><i>0511</i>      * @return the metadata stream, or null if there is none                                                
+</span><span class="outsideLine"><i>0512</i>      */                                                                                                     
+</span><span class="outsideLine"><i>0513</i>     public COSStream getMetadata()                                                                          
+</span><span class="methodLine"><i>0514</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 810</span>{                                                                                                       
+</span><span class="methodLine"><i>0515</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1414</span>return (COSStream)stream.getCOSObject().getDictionaryObject(COSName.METADATA);</span>                      
+</span><span class="methodLine"><i>0516</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0517</i>                                                                                                             
+</span><span class="outsideLine"><i>0518</i>     /**                                                                                                     
+</span><span class="outsideLine"><i>0519</i>      * Returns the type of the color space in the ICC profile. If the ICC profile is invalid, the           
+</span><span class="outsideLine"><i>0520</i>      * type of the alternate colorspace is returned, which will be one of                                   
+</span><span class="outsideLine"><i>0521</i>      * {@link ColorSpace#TYPE_GRAY TYPE_GRAY}, {@link ColorSpace#TYPE_RGB TYPE_RGB},                        
+</span><span class="outsideLine"><i>0522</i>      * {@link ColorSpace#TYPE_CMYK TYPE_CMYK}, or -1 if that one is invalid.                                
+</span><span class="outsideLine"><i>0523</i>      *                                                                                                      
+</span><span class="outsideLine"><i>0524</i>      * @return an ICC color space type. See {@link ColorSpace#getType()} and the static values of           
+</span><span class="outsideLine"><i>0525</i>      * {@link ColorSpace} for more details.                                                                 
+</span><span class="outsideLine"><i>0526</i>      */                                                                                                     
+</span><span class="outsideLine"><i>0527</i>     public int getColorSpaceType()                                                                          
+</span><span class="methodLine"><i>0528</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 815</span>{                                                                                                       
+</span><span class="methodLine"><i>0529</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1956</span>iccProfile <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1956</span>!=</span> null</span>)                                                                             
+</span><span class="methodLine"><i>0530</i>         {                                                                                                   
+</span><span class="methodLine"><i>0531</i>             return iccProfile.getColorSpaceType();                                                          
+</span><span class="methodLine"><i>0532</i>         }                                                                                                   
+</span><span class="outsideLine"><i>0533</i>                                                                                                             
+</span><span class="outsideLine"><i>0534</i>         // if the ICC Profile could not be read                                                             
+</span><span class="methodLine"><i>0535</i>         switch (alternateColorSpace.getNumberOfComponents())                                                
+</span><span class="methodLine"><i>0536</i>         {                                                                                                   
+</span><span class="methodLine"><i>0537</i>             case 1:                                                                                         
+</span><span class="methodLine"><i>0538</i>                 return ColorSpace.TYPE_GRAY;                                                                
+</span><span class="methodLine"><i>0539</i>             case 3:                                                                                         
+</span><span class="methodLine"><i>0540</i>                 return ColorSpace.TYPE_RGB;                                                                 
+</span><span class="methodLine"><i>0541</i>             case 4:                                                                                         
+</span><span class="methodLine"><i>0542</i>                 return ColorSpace.TYPE_CMYK;                                                                
+</span><span class="methodLine"><i>0543</i>             default:                                                                                        
+</span><span class="outsideLine"><i>0544</i>                 // should not happen as all ICC color spaces in PDF must have 1,3, or 4 components          
+</span><span class="methodLine"><i>0545</i>                 return <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 2670</span>-</span>1;                                                                                  
+</span><span class="methodLine"><i>0546</i>         }                                                                                                   
+</span><span class="methodLine"><i>0547</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0548</i>                                                                                                             
+</span><span class="outsideLine"><i>0549</i>     /**                                                                                                     
+</span><span class="outsideLine"><i>0550</i>      * Sets the number of color components.                                                                 
+</span><span class="outsideLine"><i>0551</i>      * @param n the number of color components                                                              
+</span><span class="outsideLine"><i>0552</i>      * @deprecated it's probably not safe to use this, this method will be removed in 3.0.                  
+</span><span class="outsideLine"><i>0553</i>      */                                                                                                     
+</span><span class="outsideLine"><i>0554</i>     @Deprecated                                                                                             
+</span><span class="outsideLine"><i>0555</i>     public void setNumberOfComponents(int n)                                                                
+</span><span class="methodLine"><i>0556</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 821</span>{                                                                                                       
+</span><span class="methodLine"><i>0557</i>         numberOfComponents = n;                                                                             
+</span><span class="methodLine"><i>0558</i>         stream.getCOSObject().setInt(COSName.N, n);                                                         
+</span><span class="methodLine"><i>0559</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0560</i>                                                                                                             
+</span><span class="outsideLine"><i>0561</i>     /**                                                                                                     
+</span><span class="outsideLine"><i>0562</i>      * Sets the list of alternateColorSpace color spaces.                                                   
+</span><span class="outsideLine"><i>0563</i>      *                                                                                                      
+</span><span class="outsideLine"><i>0564</i>      * @param list the list of color space objects                                                          
+</span><span class="outsideLine"><i>0565</i>      */                                                                                                     
+</span><span class="outsideLine"><i>0566</i>     public void setAlternateColorSpaces(List<PDColorSpace> list)                                            
+</span><span class="methodLine"><i>0567</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { list = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1249</span>{</span>                                                                                                       
+</span><span class="methodLine"><i>0568</i>         COSArray altArray = null;                                                                           
+</span><span class="methodLine"><i>0569</i>         if(<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1978</span>list <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1978</span>!=</span> null</span>)                                                                                    
+</span><span class="methodLine"><i>0570</i>         {                                                                                                   
+</span><span class="methodLine"><i>0571</i>             altArray = COSArrayList.converterToCOSArray(list);                                              
+</span><span class="methodLine"><i>0572</i>         }                                                                                                   
+</span><span class="methodLine"><i>0573</i>         stream.getCOSObject().setItem(COSName.ALTERNATE, altArray);                                         
+</span><span class="methodLine"><i>0574</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0575</i>                                                                                                             
+</span><span class="outsideLine"><i>0576</i>     /**                                                                                                     
+</span><span class="outsideLine"><i>0577</i>      * Sets the range for this color space.                                                                 
+</span><span class="outsideLine"><i>0578</i>      * @param range the new range for the a component                                                       
+</span><span class="outsideLine"><i>0579</i>      * @param n the component to set the range for                                                          
+</span><span class="outsideLine"><i>0580</i>      */                                                                                                     
+</span><span class="outsideLine"><i>0581</i>     public void setRangeForComponent(PDRange range, int n)                                                  
+</span><span class="methodLine"><i>0582</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { range = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1257</span>{</span>                                                                                                       
+</span><span class="methodLine"><i>0583</i>         COSArray rangeArray = (COSArray) stream.getCOSObject().getDictionaryObject(COSName.RANGE);          
+</span><span class="methodLine"><i>0584</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1987</span>rangeArray <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1987</span>==</span> null</span>)                                                                             
+</span><span class="methodLine"><i>0585</i>         {                                                                                                   
+</span><span class="methodLine"><i>0586</i>             rangeArray = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4149</span>new COSArray()</span>;                                                                    
+</span><span class="methodLine"><i>0587</i>             stream.getCOSObject().setItem(COSName.RANGE, rangeArray);                                       
+</span><span class="methodLine"><i>0588</i>         }                                                                                                   
+</span><span class="outsideLine"><i>0589</i>         // extend range array with default values if needed                                                 
+</span><span class="methodLine"><i>0590</i>         while (rangeArray.size() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1991</span><</span> (n <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3447</span>+</span> 1) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2356</span>*</span> 2)                                                             
+</span><span class="methodLine"><i>0591</i>         {                                                                                                   
+</span><span class="methodLine"><i>0592</i>             rangeArray.add(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4449</span>new COSFloat(0)</span>);                                                                
+</span><span class="methodLine"><i>0593</i>             rangeArray.add(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4452</span>new COSFloat(1)</span>);                                                                
+</span><span class="methodLine"><i>0594</i>         }                                                                                                   
+</span><span class="methodLine"><i>0595</i>         rangeArray.set(n<span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2713</span>*</span>2, <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3111</span>new COSFloat(range.getMin())</span>);                                                  
+</span><span class="methodLine"><i>0596</i>         rangeArray.set(n<span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3113</span>*</span>2<span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2719</span>+</span>1, <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3117</span>new COSFloat(range.getMax())</span>);                                                
+</span><span class="methodLine"><i>0597</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0598</i>                                                                                                             
+</span><span class="outsideLine"><i>0599</i>     /**                                                                                                     
+</span><span class="outsideLine"><i>0600</i>      * Sets the metadata stream that is associated with this color space.                                   
+</span><span class="outsideLine"><i>0601</i>      * @param metadata the new metadata stream                                                              
+</span><span class="outsideLine"><i>0602</i>      */                                                                                                     
+</span><span class="outsideLine"><i>0603</i>     public void setMetadata(COSStream metadata)                                                             
+</span><span class="methodLine"><i>0604</i>     <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { metadata = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1265</span>{</span>                                                                                                       
+</span><span class="methodLine"><i>0605</i>         stream.getCOSObject().setItem(COSName.METADATA, metadata);                                          
+</span><span class="methodLine"><i>0606</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0607</i>                                                                                                             
+</span><span class="outsideLine"><i>0608</i>     /**                                                                                                     
+</span><span class="outsideLine"><i>0609</i>      * Internal accessor to support indexed raw images.                                                     
+</span><span class="outsideLine"><i>0610</i>      * @return true if this colorspace is sRGB.                                                             
+</span><span class="outsideLine"><i>0611</i>      */                                                                                                     
+</span><span class="outsideLine"><i>0612</i>     boolean isSRGB()                                                                                        
+</span><span class="methodLine"><i>0613</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 840</span>{                                                                                                       
+</span><span class="methodLine"><i>0614</i>         return isRGB;                                                                                       
+</span><span class="methodLine"><i>0615</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0616</i>                                                                                                             
+</span><span class="outsideLine"><i>0617</i>     @Override                                                                                               
+</span><span class="outsideLine"><i>0618</i>     public String toString()                                                                                
+</span><span class="methodLine"><i>0619</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 846</span>{                                                                                                       
+</span><span class="methodLine"><i>0620</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1441</span>return getName() + "{numberOfComponents: " <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1999</span>+</span> getNumberOfComponents() + "}";</span>                         
+</span><span class="methodLine"><i>0621</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0622</i>                                                                                                             
+</span><span class="outsideLine"><i>0623</i>     private static boolean isMinJdk8()                                                                      
+</span><span class="methodLine"><i>0624</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 852</span>{                                                                                                       
+</span><span class="outsideLine"><i>0625</i>         // strategy from lucene-solr/lucene/core/src/java/org/apache/lucene/util/Constants.java             
+</span><span class="methodLine"><i>0626</i>         String version = System.getProperty("java.specification.version");                                  
+</span><span class="methodLine"><i>0627</i>         final StringTokenizer st = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3477</span>new StringTokenizer(version, ".")</span>;                                       
+</span><span class="methodLine"><i>0628</i>         try                                                                                                 
+</span><span class="methodLine"><i>0629</i>         {                                                                                                   
+</span><span class="methodLine"><i>0630</i>             int major = Integer.parseInt(st.nextToken());                                                   
+</span><span class="methodLine"><i>0631</i>             int minor = 0;                                                                                  
+</span><span class="methodLine"><i>0632</i>             if (st.hasMoreTokens())                                                                         
+</span><span class="methodLine"><i>0633</i>             {                                                                                               
+</span><span class="methodLine"><i>0634</i>                 minor = Integer.parseInt(st.nextToken());                                                   
+</span><span class="methodLine"><i>0635</i>             }                                                                                               
+</span><span class="methodLine"><i>0636</i>             return major <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3143</span>></span> 1 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2751</span>||</span> (major <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4190</span>==</span> 1 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3865</span>&&</span> minor <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4192</span>>=</span> 8);                                                 
+</span><span class="methodLine"><i>0637</i>         }                                                                                                   
+</span><span class="methodLine"><i>0638</i>         catch (NumberFormatException nfe)                                                                   
+</span><span class="methodLine"><i>0639</i>         {                                                                                                   
+</span><span class="outsideLine"><i>0640</i>             // maybe some new numbering scheme in the 22nd century                                          
+</span><span class="methodLine"><i>0641</i>             return true;                                                                                    
+</span><span class="methodLine"><i>0642</i>         }                                                                                                   
+</span><span class="methodLine"><i>0643</i>     }</span>                                                                                                       
+</span><span class="outsideLine"><i>0644</i> }                                                                                                           
+</span><span class="outsideLine"><i>0645</i>                                                                                                             </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

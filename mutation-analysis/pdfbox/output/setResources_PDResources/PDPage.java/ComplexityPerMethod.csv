@@ -1,0 +1,49 @@
+PDPage.PDPage( );0;1;3
+PDPage.PDPage( COSDictionary pageDictionary );0;1;3
+PDPage.PDPage( COSDictionary pageDictionary , ResourceCache resourceCache );0;1;4
+PDPage.PDPage( PDRectangle mediaBox );1;1;5
+PDPage.accept( PDAnnotation annotation );3;1;3
+PDPage.clipToMediaBox( PDRectangle box );4;1;9
+PDPage.equals( Object other );5;2;3
+PDPage.getActions( );4;2;14
+PDPage.getAnnotations( );2;1;10
+PDPage.getAnnotations( AnnotationFilter annotationFilter );11;5;23
+PDPage.getArtBox( );4;2;11
+PDPage.getBBox( );2;1;3
+PDPage.getBleedBox( );4;2;11
+PDPage.getCOSObject( );2;1;3
+PDPage.getContentStreams( );9;5;18
+PDPage.getContents( );12;6;25
+PDPage.getCropBox( );4;2;11
+PDPage.getMatrix( );3;1;3
+PDPage.getMediaBox( );7;4;16
+PDPage.getMetadata( );3;2;9
+PDPage.getResourceCache( );2;1;3
+PDPage.getResources( );5;3;11
+PDPage.getRotation( );7;3;12
+PDPage.getStructParents( );2;1;3
+PDPage.getThreadBeads( );10;4;19
+PDPage.getTransition( );3;2;4
+PDPage.getTrimBox( );4;2;11
+PDPage.getUserUnit( );3;2;4
+PDPage.getViewports( );8;4;22
+PDPage.hasContents( );4;3;12
+PDPage.hashCode( );2;1;3
+PDPage.setActions( PDPageAdditionalActions actions );2;1;3
+PDPage.setAnnotations( List < PDAnnotation > annotations );2;1;3
+PDPage.setArtBox( PDRectangle artBox );4;2;10
+PDPage.setBleedBox( PDRectangle bleedBox );4;2;10
+PDPage.setContents( List < PDStream > contents );3;2;8
+PDPage.setContents( PDStream contents );2;1;3
+PDPage.setCropBox( PDRectangle cropBox );4;2;10
+PDPage.setMediaBox( PDRectangle mediaBox );4;2;11
+PDPage.setMetadata( PDMetadata meta );2;1;3
+PDPage.setResources( PDResources resources );4;2;11
+PDPage.setRotation( int rotation );1;1;3
+PDPage.setStructParents( int structParents );1;1;3
+PDPage.setThreadBeads( List < PDThreadBead > beads );2;1;3
+PDPage.setTransition( PDTransition transition );2;1;3
+PDPage.setTransition( PDTransition transition , float duration );3;1;4
+PDPage.setTrimBox( PDRectangle trimBox );4;2;10
+PDPage.setUserUnit( float userUnit );3;2;7
+PDPage.setViewports( List < PDViewportDictionary > viewports );5;3;13

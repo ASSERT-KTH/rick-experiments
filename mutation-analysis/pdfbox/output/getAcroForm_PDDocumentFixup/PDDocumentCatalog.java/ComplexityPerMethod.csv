@@ -1,0 +1,44 @@
+PDDocumentCatalog.PDDocumentCatalog( PDDocument doc );1;1;6
+PDDocumentCatalog.PDDocumentCatalog( PDDocument doc , COSDictionary rootDictionary );0;1;4
+PDDocumentCatalog.addOutputIntent( PDOutputIntent outputIntent );5;2;9
+PDDocumentCatalog.findNamedDestinationPage( PDNamedDestination namedDest );11;5;22
+PDDocumentCatalog.getAcroForm( );3;1;3
+PDDocumentCatalog.getAcroForm( PDDocumentFixup acroFormFixup );14;6;18
+PDDocumentCatalog.getActions( );6;2;9
+PDDocumentCatalog.getCOSObject( );2;1;3
+PDDocumentCatalog.getDests( );5;2;9
+PDDocumentCatalog.getDocumentOutline( );3;2;4
+PDDocumentCatalog.getLanguage( );3;1;3
+PDDocumentCatalog.getMarkInfo( );5;2;4
+PDDocumentCatalog.getMetadata( );4;2;8
+PDDocumentCatalog.getNames( );5;2;4
+PDDocumentCatalog.getOCProperties( );5;2;4
+PDDocumentCatalog.getOpenAction( );4;3;15
+PDDocumentCatalog.getOutputIntents( );6;4;17
+PDDocumentCatalog.getPageLabels( );5;2;4
+PDDocumentCatalog.getPageLayout( );5;2;11
+PDDocumentCatalog.getPageMode( );6;3;18
+PDDocumentCatalog.getPages( );3;1;3
+PDDocumentCatalog.getStructureTreeRoot( );5;2;4
+PDDocumentCatalog.getThreads( );10;3;14
+PDDocumentCatalog.getURI( );5;2;4
+PDDocumentCatalog.getVersion( );3;1;3
+PDDocumentCatalog.getViewerPreferences( );3;2;4
+PDDocumentCatalog.setAcroForm( PDAcroForm acroForm );2;1;4
+PDDocumentCatalog.setActions( PDDocumentCatalogAdditionalActions actions );2;1;3
+PDDocumentCatalog.setDocumentOutline( PDDocumentOutline outlines );2;1;3
+PDDocumentCatalog.setLanguage( String language );2;1;3
+PDDocumentCatalog.setMarkInfo( PDMarkInfo markInfo );2;1;3
+PDDocumentCatalog.setMetadata( PDMetadata meta );2;1;3
+PDDocumentCatalog.setNames( PDDocumentNameDictionary names );2;1;3
+PDDocumentCatalog.setOCProperties( PDOptionalContentProperties ocProperties );6;3;7
+PDDocumentCatalog.setOpenAction( PDDestinationOrAction action );2;1;3
+PDDocumentCatalog.setOutputIntents( List < PDOutputIntent > outputIntents );3;2;8
+PDDocumentCatalog.setPageLabels( PDPageLabels labels );2;1;3
+PDDocumentCatalog.setPageLayout( PageLayout layout );2;1;3
+PDDocumentCatalog.setPageMode( PageMode mode );2;1;3
+PDDocumentCatalog.setStructureTreeRoot( PDStructureTreeRoot treeRoot );2;1;3
+PDDocumentCatalog.setThreads( List < PDThread > threads );2;1;3
+PDDocumentCatalog.setURI( PDURIDictionary uri );2;1;3
+PDDocumentCatalog.setVersion( String version );2;1;3
+PDDocumentCatalog.setViewerPreferences( PDViewerPreferences prefs );2;1;3

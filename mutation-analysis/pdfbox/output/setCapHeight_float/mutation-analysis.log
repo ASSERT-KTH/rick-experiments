@@ -1,0 +1,1318 @@
+[LOG] Initiating analysis at 2023-06-04 19:18:40.899605
+---------------------------------------------------
+[LOG] Removing pre-existing mutants from current working directory
+[LOG] Cleaning up LittleDarwin results
+---------------------------------------------------
+[LOG] Working with setCapHeight_float
+[LOG] Generating mutants for its parent PDFontDescriptor.java
+---------------------------------------------------
+[LOG] Running littledarwin on /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/
+[LOG] Invoked LitteDarwin with ['python3', '-m', 'littledarwin', '-m', '-v', '-p', '/home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/', '--all']
+
+    __     _  __   __   __       ____                          _
+   / /    (_)/ /_ / /_ / /___   / __ \ ____ _ _____ _      __ (_)____
+  / /    / // __// __// // _ \ / / / // __ `// ___/| | /| / // // __ \
+ / /___ / // /_ / /_ / //  __// /_/ // /_/ // /    | |/ |/ // // / / /
+/_____//_/ \__/ \__//_/ \___//_____/ \__,_//_/     |__/|__//_//_/ /_/
+
+      _                     _                 ___
+     /_|  /|/|  _/__/'     /_|   _ /   _ ' _ (_  _ _ _  _      _ /
+    (  | /   |(//(///()/) (  |/)(/((/_) /_)  /  / (///)(-((/()/ /(
+                                  /
+
+
+    LittleDarwin version 0.10.7 Copyright (C) 2014-2020 Ali Parsai
+
+    LittleDarwin comes with ABSOLUTELY NO WARRANTY.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; run LittleDarwin --license for details.
+
+    
+Source Path:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font
+Target Path:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults
+Creating Mutation Database:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults/mutationdatabase
+
+(1/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/Subsetter.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(2/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType1FontEmbedder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  28
+----> RelationalOperatorReplacement : 3
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 1
+----> ConditionalOperatorDeletion : 2
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 5
+----> NullifyObjectInitialization : 7
+----> RemoveNullCheck : 1
+----> RemoveMethod : 5
+
+(3/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/FontCache.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  10
+----> RelationalOperatorReplacement : 1
+----> NullifyInputVariable : 3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 2
+----> RemoveNullCheck : 1
+----> RemoveMethod : 2
+
+(4/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDSimpleFont.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  98
+----> RelationalOperatorReplacement : 19
+----> ArithmeticOperatorReplacementBinary : 1
+----> ConditionalOperatorDeletion : 6
+----> NullifyInputVariable : 2
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 15
+----> NullifyObjectInitialization : 6
+----> RemoveNullCheck : 15
+----> ConditionalOperatorReplacement : 9
+----> RemoveMethod : 24
+
+(5/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDCIDFontType0.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  124
+----> RelationalOperatorReplacement : 30
+----> ConditionalOperatorDeletion : 1
+----> NullifyReturnValue : 20
+----> NullifyObjectInitialization : 10
+----> LogicalOperatorReplacement : 1
+----> RemoveNullCheck : 21
+----> ConditionalOperatorReplacement : 10
+----> RemoveMethod : 31
+
+(6/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDFontDescriptor.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  158
+----> RelationalOperatorReplacement : 14
+----> NullifyInputVariable : 9
+----> ArithmeticOperatorReplacementUnary : 2
+----> NullifyReturnValue : 13
+----> NullifyObjectInitialization : 9
+----> LogicalOperatorReplacement : 3
+----> RemoveNullCheck : 10
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 97
+
+(7/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType3CharProc.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  46
+----> RelationalOperatorReplacement : 4
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 2
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 11
+----> NullifyObjectInitialization : 9
+----> RemoveNullCheck : 2
+----> ConditionalOperatorReplacement : 2
+----> RemoveMethod : 12
+
+(8/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDTrueTypeFontEmbedder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  23
+----> RelationalOperatorReplacement : 3
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 7
+----> NullifyInputVariable : 5
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 2
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 3
+
+(9/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDFontFactory.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  39
+----> ConditionalOperatorDeletion : 2
+----> NullifyInputVariable : 5
+----> NullifyReturnValue : 12
+----> NullifyObjectInitialization : 14
+----> ConditionalOperatorReplacement : 2
+----> RemoveMethod : 4
+
+(10/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDCIDFont.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  105
+----> RelationalOperatorReplacement : 19
+----> ArithmeticOperatorReplacementShortcut : 16
+----> ArithmeticOperatorReplacementBinary : 7
+----> ConditionalOperatorDeletion : 3
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 9
+----> AssignmentOperatorReplacementShortcut : 2
+----> NullifyObjectInitialization : 8
+----> LogicalOperatorReplacement : 3
+----> RemoveNullCheck : 7
+----> ConditionalOperatorReplacement : 3
+----> ShiftOperatorReplacement : 1
+----> RemoveMethod : 26
+
+(11/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDCIDFontType2Embedder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  219
+----> RelationalOperatorReplacement : 46
+----> ArithmeticOperatorReplacementShortcut : 5
+----> ArithmeticOperatorReplacementBinary : 61
+----> ConditionalOperatorDeletion : 4
+----> NullifyInputVariable : 14
+----> ArithmeticOperatorReplacementUnary : 6
+----> NullifyReturnValue : 5
+----> AssignmentOperatorReplacementShortcut : 3
+----> NullifyObjectInitialization : 36
+----> LogicalOperatorReplacement : 2
+----> RemoveNullCheck : 5
+----> ConditionalOperatorReplacement : 14
+----> ShiftOperatorReplacement : 2
+----> RemoveMethod : 16
+
+(12/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/UniUtil.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  6
+----> NullifyReturnValue : 4
+----> RemoveMethod : 2
+
+(13/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDMMType1Font.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(14/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/Standard14Fonts.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  34
+----> RelationalOperatorReplacement : 4
+----> NullifyInputVariable : 7
+----> NullifyReturnValue : 4
+----> NullifyObjectInitialization : 6
+----> RemoveNullCheck : 4
+----> RemoveMethod : 9
+
+(15/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/CIDFontMapping.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  6
+----> RelationalOperatorReplacement : 1
+----> NullifyReturnValue : 1
+----> RemoveNullCheck : 1
+----> RemoveMethod : 3
+
+(16/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDVectorFont.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(17/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/ToUnicodeWriter.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  49
+----> RelationalOperatorReplacement : 11
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 12
+----> NullifyInputVariable : 4
+----> ArithmeticOperatorReplacementUnary : 2
+----> NullifyObjectInitialization : 8
+----> RemoveNullCheck : 1
+----> ConditionalOperatorReplacement : 5
+----> RemoveMethod : 4
+
+(18/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/FontProvider.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(19/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/CIDSystemInfo.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  13
+----> ArithmeticOperatorReplacementBinary : 2
+----> NullifyReturnValue : 3
+----> RemoveMethod : 8
+
+(20/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/FontMapper.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(21/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDPanoseClassification.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  25
+----> NullifyReturnValue : 1
+----> RemoveMethod : 24
+
+(22/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/FontMapperImpl.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  289
+----> RelationalOperatorReplacement : 56
+----> ArithmeticOperatorReplacementBinary : 16
+----> ConditionalOperatorDeletion : 5
+----> NullifyInputVariable : 27
+----> NullifyReturnValue : 32
+----> AssignmentOperatorReplacementShortcut : 18
+----> NullifyObjectInitialization : 36
+----> LogicalOperatorReplacement : 7
+----> RemoveNullCheck : 31
+----> ConditionalOperatorReplacement : 32
+----> ShiftOperatorReplacement : 5
+----> RemoveMethod : 24
+
+(23/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType3Font.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  115
+----> RelationalOperatorReplacement : 26
+----> ArithmeticOperatorReplacementBinary : 3
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 3
+----> ArithmeticOperatorReplacementUnary : 2
+----> NullifyReturnValue : 13
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 12
+----> RemoveNullCheck : 14
+----> ConditionalOperatorReplacement : 7
+----> RemoveMethod : 33
+
+(24/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType0Font.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  177
+----> RelationalOperatorReplacement : 15
+----> ArithmeticOperatorReplacementBinary : 7
+----> ConditionalOperatorDeletion : 7
+----> NullifyInputVariable : 17
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 24
+----> NullifyObjectInitialization : 23
+----> RemoveNullCheck : 11
+----> ConditionalOperatorReplacement : 11
+----> RemoveMethod : 61
+
+(25/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/FontInfo.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  16
+----> ArithmeticOperatorReplacementBinary : 4
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 1
+----> LogicalOperatorReplacement : 3
+----> ShiftOperatorReplacement : 1
+----> RemoveMethod : 6
+
+(26/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDPanose.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  7
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> LogicalOperatorReplacement : 1
+----> ShiftOperatorReplacement : 1
+----> RemoveMethod : 3
+
+(27/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/FontMappers.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  7
+----> RelationalOperatorReplacement : 1
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> RemoveNullCheck : 1
+----> RemoveMethod : 2
+
+(28/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/FileSystemFontProvider.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  209
+----> RelationalOperatorReplacement : 30
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 11
+----> ConditionalOperatorDeletion : 6
+----> NullifyInputVariable : 16
+----> ArithmeticOperatorReplacementUnary : 11
+----> NullifyReturnValue : 23
+----> NullifyObjectInitialization : 45
+----> LogicalOperatorReplacement : 3
+----> RemoveNullCheck : 18
+----> ConditionalOperatorReplacement : 9
+----> ShiftOperatorReplacement : 1
+----> RemoveMethod : 34
+
+(29/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/FontFormat.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(30/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDFontLike.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(31/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDCIDFontType2.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  108
+----> RelationalOperatorReplacement : 31
+----> ArithmeticOperatorReplacementBinary : 3
+----> ConditionalOperatorDeletion : 4
+----> ArithmeticOperatorReplacementUnary : 3
+----> NullifyReturnValue : 9
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 6
+----> LogicalOperatorReplacement : 2
+----> RemoveNullCheck : 19
+----> ConditionalOperatorReplacement : 7
+----> ShiftOperatorReplacement : 1
+----> RemoveMethod : 22
+
+(32/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/TrueTypeEmbedder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  98
+----> RelationalOperatorReplacement : 18
+----> ArithmeticOperatorReplacementBinary : 18
+----> ConditionalOperatorDeletion : 5
+----> NullifyInputVariable : 5
+----> NullifyReturnValue : 4
+----> NullifyObjectInitialization : 19
+----> LogicalOperatorReplacement : 5
+----> RemoveNullCheck : 7
+----> ConditionalOperatorReplacement : 3
+----> RemoveMethod : 14
+
+(33/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/FontMapping.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  4
+----> NullifyReturnValue : 1
+----> RemoveMethod : 3
+
+(34/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  205
+----> RelationalOperatorReplacement : 51
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 4
+----> ConditionalOperatorDeletion : 11
+----> NullifyInputVariable : 16
+----> NullifyReturnValue : 23
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 24
+----> RemoveNullCheck : 26
+----> ConditionalOperatorReplacement : 11
+----> RemoveMethod : 36
+
+(35/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/CMapManager.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  14
+----> RelationalOperatorReplacement : 2
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 3
+----> RemoveNullCheck : 2
+----> RemoveMethod : 2
+
+(36/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType1Font.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  213
+----> RelationalOperatorReplacement : 49
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 14
+----> ConditionalOperatorDeletion : 7
+----> NullifyInputVariable : 4
+----> NullifyReturnValue : 20
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 33
+----> LogicalOperatorReplacement : 1
+----> RemoveNullCheck : 18
+----> ConditionalOperatorReplacement : 27
+----> RemoveMethod : 37
+
+(37/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDCIDSystemInfo.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  16
+----> ArithmeticOperatorReplacementBinary : 2
+----> NullifyReturnValue : 4
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 9
+
+(38/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType1CFont.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  127
+----> RelationalOperatorReplacement : 22
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ConditionalOperatorDeletion : 6
+----> NullifyInputVariable : 5
+----> NullifyReturnValue : 20
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 10
+----> RemoveNullCheck : 14
+----> ConditionalOperatorReplacement : 11
+----> RemoveMethod : 37
+
+(39/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDFont.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  159
+----> RelationalOperatorReplacement : 33
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 4
+----> ConditionalOperatorDeletion : 2
+----> NullifyInputVariable : 6
+----> ArithmeticOperatorReplacementUnary : 5
+----> NullifyReturnValue : 21
+----> AssignmentOperatorReplacementShortcut : 4
+----> NullifyObjectInitialization : 14
+----> RemoveNullCheck : 18
+----> ConditionalOperatorReplacement : 13
+----> RemoveMethod : 38
+
+(40/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/encoding/MacOSRomanEncoding.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 1
+
+(41/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/encoding/DictionaryEncoding.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  29
+----> RelationalOperatorReplacement : 6
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ConditionalOperatorDeletion : 1
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 5
+----> NullifyObjectInitialization : 4
+----> RemoveNullCheck : 4
+----> RemoveMethod : 6
+
+(42/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/encoding/MacRomanEncoding.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  6
+----> NullifyReturnValue : 2
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 3
+
+(43/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/encoding/SymbolEncoding.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  6
+----> NullifyReturnValue : 2
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 3
+
+(44/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/encoding/MacExpertEncoding.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  6
+----> NullifyReturnValue : 2
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 3
+
+(45/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/encoding/ZapfDingbatsEncoding.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  6
+----> NullifyReturnValue : 2
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 3
+
+(46/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/encoding/BuiltInEncoding.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  5
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 3
+
+(47/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/encoding/Type1Encoding.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  9
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+
+(48/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/encoding/Encoding.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  35
+----> RelationalOperatorReplacement : 4
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 4
+----> NullifyReturnValue : 9
+----> NullifyObjectInitialization : 2
+----> RemoveNullCheck : 3
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 11
+
+(49/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/encoding/GlyphList.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  82
+----> RelationalOperatorReplacement : 18
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 2
+----> ConditionalOperatorDeletion : 2
+----> NullifyInputVariable : 4
+----> NullifyReturnValue : 10
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 15
+----> RemoveNullCheck : 9
+----> ConditionalOperatorReplacement : 10
+----> RemoveMethod : 10
+
+(50/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/encoding/StandardEncoding.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  6
+----> NullifyReturnValue : 2
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 3
+
+(51/51) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/encoding/WinAnsiEncoding.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  9
+----> RelationalOperatorReplacement : 1
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ConditionalOperatorDeletion : 1
+----> NullifyReturnValue : 2
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 3
+
+Total mutations found:  2949
+--> RelationalOperatorReplacement: 518
+--> ArithmeticOperatorReplacementShortcut: 39
+--> ArithmeticOperatorReplacementBinary: 181
+--> ConditionalOperatorDeletion: 78
+--> NullifyInputVariable: 164
+--> ArithmeticOperatorReplacementUnary: 36
+--> NullifyReturnValue: 346
+--> AssignmentOperatorReplacementShortcut: 33
+--> NullifyObjectInitialization: 375
+--> LogicalOperatorReplacement: 31
+--> RemoveNullCheck: 263
+--> ConditionalOperatorReplacement: 189
+--> ShiftOperatorReplacement: 12
+--> RemoveMethod: 684
+
+
+---------------------------------------------------
+[LOG] Copying mutants of PDFontDescriptor.java
+---------------------------------------------------
+[LOG] Generated 158 mutants
+---------------------------------------------------
+[LOG] Backing up original RICK test as ./PDFontDescriptor.java/original-test.java
+[LOG] Invoking cp /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java ./PDFontDescriptor.java/original-test.java
+---------------------------------------------------
+[LOG] Generating variants of original RICK test
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-po.java
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-all.java
+---------------------------------------------------
+[LOG] Replacing originalPDFontDescriptor.java with ./PDFontDescriptor.java/96.java
+[LOG] Invoking cp ./PDFontDescriptor.java/96.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDFontDescriptor.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.apache.pdfbox:pdfbox >----------------------
+[INFO] Building Apache PDFBox 2.0.24
+[INFO] -------------------------------[ bundle ]-------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ pdfbox ---
+[INFO] Deleting /home/dee/dev/rick-major-review/pdfbox/pdfbox/target
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (default) @ pdfbox ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ pdfbox ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ pdfbox ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ pdfbox ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 21 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ pdfbox ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 609 source files to /home/dee/dev/rick-major-review/pdfbox/pdfbox/target/classes
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+/home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/PDDocument.java:[471,96] [deprecation] toList() in COSArrayList has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/PDDocument.java:[471,45] [deprecation] toList() in COSArrayList has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType3Font.java:[196,17] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/text/LegacyPDFStreamEngine.java:[152,19] [deprecation] showGlyph(Matrix,PDFont,int,String,Vector) in PDFStreamEngine has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.java:[375,17] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType0Font.java:[414,17] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType0Font.java:[416,29] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/TrueTypeEmbedder.java:[120,18] [deprecation] getUnicodeCmap() in TrueTypeFont has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType1Font.java:[395,17] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/UnmodifiableCOSDictionary.java:[286,16] [deprecation] mergeInto(COSDictionary) in COSDictionary has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDCIDFontType0.java:[439,17] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDType1CFont.java:[304,17] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDCIDFontType2.java:[312,17] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-1031-1) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-1031-2) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-1065-1) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-1065-2) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-1100-1) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-1100-2) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3208) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3656) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3682) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3940) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3783) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3785) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3947) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3948) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3949) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3950) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3951) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3964) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3977) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (Genko) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-3999) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4106) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4106b) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4115) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4197) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4184) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4184-2) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4308) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4338) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4339) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4408) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4418-1) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4418-2) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4423) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4517) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4750) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4153) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-4490) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- download-maven-plugin:1.5.1:wget (PDFBOX-5196) @ pdfbox ---
+[INFO] maven-download-plugin:wget skipped
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ pdfbox ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 229 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ pdfbox ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 115 source files to /home/dee/dev/rick-major-review/pdfbox/pdfbox/target/test-classes
+[WARNING] To suppress warnings about obsolete options, use -Xlint:-options.
+/home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/common/COSArrayListTest.java:[27,22] [deprecation] Assert in junit.framework has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/interactive/form/PDButtonTest.java:[109,19] [deprecation] setPushButton(boolean) in PDButton has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/interactive/form/PDButtonTest.java:[125,19] [deprecation] setRadioButton(boolean) in PDButton has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/io/UnmodifiableCOSDictionaryTest.java:[66,37] [deprecation] mergeInto(COSDictionary) in COSDictionary has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStream.java:[98,21] [deprecation] setNonStrokingColor(int,int,int) in PDPageContentStream has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStream.java:[100,21] [deprecation] setNonStrokingColor(int) in PDPageContentStream has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStream.java:[128,21] [deprecation] setStrokingColor(int,int,int) in PDPageContentStream has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStream.java:[130,21] [deprecation] setStrokingColor(int) in PDPageContentStream has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/font/PDFontTest.java:[288,36] [deprecation] getHeight(int) in PDFontLike has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/PageModeTest.java:[27,55] [deprecation] none() in ExpectedException has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/cos/TestCOSInteger.java:[106,54] [deprecation] doubleValue() in COSInteger has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/graphics/state/RenderingIntentTest.java:[27,55] [deprecation] none() in ExpectedException has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/cos/TestCOSFloat.java:[187,78] [deprecation] doubleValue() in COSFloat has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/common/COSArrayListTest.java:[46,55] [deprecation] none() in ExpectedException has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdmodel/PageLayoutTest.java:[52,55] [deprecation] none() in ExpectedException has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/pdfwriter/COSWriterXRefEntryTest.java:[27,55] [deprecation] none() in ExpectedException has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[180,26] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[189,19] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[199,19] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[208,19] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[218,9] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[226,9] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[234,9] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/util/MatrixTest.java:[242,9] [deprecation] multiply(Matrix,Matrix) in Matrix has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/test/java/org/apache/pdfbox/cos/COSObjectKeyTest.java:[27,55] [deprecation] none() in ExpectedException has been deprecated
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ pdfbox ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ pdfbox ---
+[INFO] Signature checking is skipped.
+[INFO] 
+[INFO] --- maven-bundle-plugin:3.5.1:bundle (default-bundle) @ pdfbox ---
+[INFO] 
+[INFO] --- maven-site-plugin:3.7:attach-descriptor (attach-descriptor) @ pdfbox ---
+[INFO] Skipping because packaging 'bundle' is not pom.
+[INFO] 
+[INFO] >>> maven-source-plugin:3.0.1:jar (attach-sources) > generate-sources @ pdfbox >>>
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (default) @ pdfbox ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ pdfbox ---
+[INFO] 
+[INFO] <<< maven-source-plugin:3.0.1:jar (attach-sources) < generate-sources @ pdfbox <<<
+[INFO] 
+[INFO] 
+[INFO] --- maven-source-plugin:3.0.1:jar (attach-sources) @ pdfbox ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/pdfbox/pdfbox/target/pdfbox-2.0.24-sources.jar
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ pdfbox ---
+[INFO] Installing /home/dee/dev/rick-major-review/pdfbox/pdfbox/target/pdfbox-2.0.24.jar to /home/dee/.m2/repository/org/apache/pdfbox/pdfbox/2.0.24/pdfbox-2.0.24.jar
+[INFO] Installing /home/dee/dev/rick-major-review/pdfbox/pdfbox/pom.xml to /home/dee/.m2/repository/org/apache/pdfbox/pdfbox/2.0.24/pdfbox-2.0.24.pom
+[INFO] Installing /home/dee/dev/rick-major-review/pdfbox/pdfbox/target/pdfbox-2.0.24-sources.jar to /home/dee/.m2/repository/org/apache/pdfbox/pdfbox/2.0.24/pdfbox-2.0.24-sources.jar
+[INFO] 
+[INFO] --- maven-bundle-plugin:3.5.1:install (default-install) @ pdfbox ---
+[INFO] Installing org/apache/pdfbox/pdfbox/2.0.24/pdfbox-2.0.24.jar
+[INFO] Writing OBR metadata
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  40.734 s
+[INFO] Finished at: 2023-06-04T19:20:04+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenSetCapHeight']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (default) @ rick-major ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ rick-major ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ rick-major ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 69 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 38 source files to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.852 s - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.684 s
+[INFO] Finished at: 2023-06-04T19:20:25+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/pdfbox/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.290 s
+[INFO] Finished at: 2023-06-04T19:20:30+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
+[LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenSetCapHeight']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (default) @ rick-major ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ rick-major ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ rick-major ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 69 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 38 source files to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.892 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
+[ERROR] test_setCapHeight_PO_e67dd33358c54b2d9a83c11d36e60618  Time elapsed: 0.216 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+cOSDictionary.setFloat(
+    <any org.apache.pdfbox.cos.COSName>,
+    662.0f
+);
+-> at org.apache.pdfbox.cos.COSDictionary.setFloat(COSDictionary.java:523)
+Actually, there were zero interactions with this mock.
+
+	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight.test_setCapHeight_PO_e67dd33358c54b2d9a83c11d36e60618(TestPDFontDescriptorRickGenSetCapHeight.java:54)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestPDFontDescriptorRickGenSetCapHeight.test_setCapHeight_PO_e67dd33358c54b2d9a83c11d36e60618:54 
+Wanted but not invoked:
+cOSDictionary.setFloat(
+    <any org.apache.pdfbox.cos.COSName>,
+    662.0f
+);
+-> at org.apache.pdfbox.cos.COSDictionary.setFloat(COSDictionary.java:523)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.029 s
+[INFO] Finished at: 2023-06-04T19:20:49+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/pdfbox/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.390 s
+[INFO] Finished at: 2023-06-04T19:20:54+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
+[LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenSetCapHeight']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (default) @ rick-major ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ rick-major ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ rick-major ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 69 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 38 source files to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.083 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
+[ERROR] test_setCapHeight_CO_e67dd33358c54b2d9a83c11d36e60618  Time elapsed: 3.34 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+cOSDictionary.setFloat(<any>, <any float>);
+-> at org.apache.pdfbox.cos.COSDictionary.setFloat(COSDictionary.java:523)
+Actually, there were zero interactions with this mock.
+
+	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight.test_setCapHeight_CO_e67dd33358c54b2d9a83c11d36e60618(TestPDFontDescriptorRickGenSetCapHeight.java:67)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestPDFontDescriptorRickGenSetCapHeight.test_setCapHeight_CO_e67dd33358c54b2d9a83c11d36e60618:67 
+Wanted but not invoked:
+cOSDictionary.setFloat(<any>, <any float>);
+-> at org.apache.pdfbox.cos.COSDictionary.setFloat(COSDictionary.java:523)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.156 s
+[INFO] Finished at: 2023-06-04T19:21:14+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/pdfbox/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.264 s
+[INFO] Finished at: 2023-06-04T19:21:18+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
+[LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
+[LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenSetCapHeight']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (default) @ rick-major ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ rick-major ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ rick-major ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 69 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 38 source files to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.932 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
+[ERROR] test_setCapHeight_CO_e67dd33358c54b2d9a83c11d36e60618  Time elapsed: 3.167 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+cOSDictionary.setFloat(<any>, <any float>);
+-> at org.apache.pdfbox.cos.COSDictionary.setFloat(COSDictionary.java:523)
+Actually, there were zero interactions with this mock.
+
+	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight.test_setCapHeight_CO_e67dd33358c54b2d9a83c11d36e60618(TestPDFontDescriptorRickGenSetCapHeight.java:67)
+
+[ERROR] test_setCapHeight_PO_e67dd33358c54b2d9a83c11d36e60618  Time elapsed: 0.051 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+cOSDictionary.setFloat(
+    <any org.apache.pdfbox.cos.COSName>,
+    662.0f
+);
+-> at org.apache.pdfbox.cos.COSDictionary.setFloat(COSDictionary.java:523)
+Actually, there were zero interactions with this mock.
+
+	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight.test_setCapHeight_PO_e67dd33358c54b2d9a83c11d36e60618(TestPDFontDescriptorRickGenSetCapHeight.java:54)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestPDFontDescriptorRickGenSetCapHeight.test_setCapHeight_CO_e67dd33358c54b2d9a83c11d36e60618:67 
+Wanted but not invoked:
+cOSDictionary.setFloat(<any>, <any float>);
+-> at org.apache.pdfbox.cos.COSDictionary.setFloat(COSDictionary.java:523)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestPDFontDescriptorRickGenSetCapHeight.test_setCapHeight_PO_e67dd33358c54b2d9a83c11d36e60618:54 
+Wanted but not invoked:
+cOSDictionary.setFloat(
+    <any org.apache.pdfbox.cos.COSName>,
+    662.0f
+);
+-> at org.apache.pdfbox.cos.COSDictionary.setFloat(COSDictionary.java:523)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.951 s
+[INFO] Finished at: 2023-06-04T19:21:38+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-major >--------------------
+[INFO] Building rick-major 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/pdfbox/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.263 s
+[INFO] Finished at: 2023-06-04T19:21:42+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting PDFontDescriptor.java to original
+[LOG] Invoking cp ./PDFontDescriptor.java/original.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDFontDescriptor.java
+---------------------------------------------------
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/PDFontDescriptor.java', '/home/dee/dev/rick-major-review/finches/output/setCapHeight_float/']
+
+
+---------------------------------------------------
+[LOG] Finishing analysis at 2023-06-04 19:21:42.961394
+====== END OF THE LINE ======

@@ -1,0 +1,1444 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.68</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                                     
+</span><span class="outsideLine"><i>0002</i>  * Licensed to the Apache Software Foundation (ASF) under one or more                                  
+</span><span class="outsideLine"><i>0003</i>  * contributor license agreements.  See the NOTICE file distributed with                               
+</span><span class="outsideLine"><i>0004</i>  * this work for additional information regarding copyright ownership.                                 
+</span><span class="outsideLine"><i>0005</i>  * The ASF licenses this file to You under the Apache License, Version 2.0                             
+</span><span class="outsideLine"><i>0006</i>  * (the "License"); you may not use this file except in compliance with                                
+</span><span class="outsideLine"><i>0007</i>  * the License.  You may obtain a copy of the License at                                               
+</span><span class="outsideLine"><i>0008</i>  *                                                                                                     
+</span><span class="outsideLine"><i>0009</i>  *      http://www.apache.org/licenses/LICENSE-2.0                                                     
+</span><span class="outsideLine"><i>0010</i>  *                                                                                                     
+</span><span class="outsideLine"><i>0011</i>  * Unless required by applicable law or agreed to in writing, software                                 
+</span><span class="outsideLine"><i>0012</i>  * distributed under the License is distributed on an "AS IS" BASIS,                                   
+</span><span class="outsideLine"><i>0013</i>  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                            
+</span><span class="outsideLine"><i>0014</i>  * See the License for the specific language governing permissions and                                 
+</span><span class="outsideLine"><i>0015</i>  * limitations under the License.                                                                      
+</span><span class="outsideLine"><i>0016</i>  */                                                                                                    
+</span><span class="outsideLine"><i>0017</i> package org.apache.pdfbox.pdmodel;                                                                     
+</span><span class="outsideLine"><i>0018</i>                                                                                                        
+</span><span class="outsideLine"><i>0019</i> import java.io.IOException;                                                                            
+</span><span class="outsideLine"><i>0020</i> import java.lang.ref.SoftReference;                                                                    
+</span><span class="outsideLine"><i>0021</i> import java.util.Collections;                                                                          
+</span><span class="outsideLine"><i>0022</i> import java.util.HashMap;                                                                              
+</span><span class="outsideLine"><i>0023</i> import java.util.Map;                                                                                  
+</span><span class="outsideLine"><i>0024</i>                                                                                                        
+</span><span class="outsideLine"><i>0025</i> import org.apache.pdfbox.cos.COSBase;                                                                  
+</span><span class="outsideLine"><i>0026</i> import org.apache.pdfbox.cos.COSDictionary;                                                            
+</span><span class="outsideLine"><i>0027</i> import org.apache.pdfbox.cos.COSName;                                                                  
+</span><span class="outsideLine"><i>0028</i> import org.apache.pdfbox.cos.COSObject;                                                                
+</span><span class="outsideLine"><i>0029</i> import org.apache.pdfbox.cos.COSStream;                                                                
+</span><span class="outsideLine"><i>0030</i> import org.apache.pdfbox.pdmodel.common.COSObjectable;                                                 
+</span><span class="outsideLine"><i>0031</i> import org.apache.pdfbox.pdmodel.documentinterchange.markedcontent.PDPropertyList;                     
+</span><span class="outsideLine"><i>0032</i> import org.apache.pdfbox.pdmodel.font.PDFont;                                                          
+</span><span class="outsideLine"><i>0033</i> import org.apache.pdfbox.pdmodel.font.PDFontFactory;                                                   
+</span><span class="outsideLine"><i>0034</i> import org.apache.pdfbox.pdmodel.graphics.color.PDPattern;                                             
+</span><span class="outsideLine"><i>0035</i> import org.apache.pdfbox.pdmodel.graphics.form.PDFormXObject;                                          
+</span><span class="outsideLine"><i>0036</i> import org.apache.pdfbox.pdmodel.graphics.optionalcontent.PDOptionalContentGroup;                      
+</span><span class="outsideLine"><i>0037</i> import org.apache.pdfbox.pdmodel.graphics.state.PDExtendedGraphicsState;                               
+</span><span class="outsideLine"><i>0038</i> import org.apache.pdfbox.pdmodel.graphics.color.PDColorSpace;                                          
+</span><span class="outsideLine"><i>0039</i> import org.apache.pdfbox.pdmodel.graphics.pattern.PDAbstractPattern;                                   
+</span><span class="outsideLine"><i>0040</i> import org.apache.pdfbox.pdmodel.graphics.shading.PDShading;                                           
+</span><span class="outsideLine"><i>0041</i> import org.apache.pdfbox.pdmodel.graphics.image.PDImageXObject;                                        
+</span><span class="outsideLine"><i>0042</i> import org.apache.pdfbox.pdmodel.graphics.PDXObject;                                                   
+</span><span class="outsideLine"><i>0043</i>                                                                                                        
+</span><span class="outsideLine"><i>0044</i> /**                                                                                                    
+</span><span class="outsideLine"><i>0045</i>  * A set of resources available at the page/pages/stream level.                                        
+</span><span class="outsideLine"><i>0046</i>  *                                                                                                     
+</span><span class="outsideLine"><i>0047</i>  * @author Ben Litchfield                                                                              
+</span><span class="outsideLine"><i>0048</i>  * @author John Hewson                                                                                 
+</span><span class="outsideLine"><i>0049</i>  */                                                                                                    
+</span><span class="outsideLine"><i>0050</i> public final class PDResources implements COSObjectable                                                
+</span><span class="outsideLine"><i>0051</i> {                                                                                                      
+</span><span class="outsideLine"><i>0052</i>     private final COSDictionary resources;                                                             
+</span><span class="outsideLine"><i>0053</i>     private final ResourceCache cache;                                                                 
+</span><span class="outsideLine"><i>0054</i>                                                                                                        
+</span><span class="outsideLine"><i>0055</i>     // PDFBOX-3442 cache fonts that are not indirect objects, as these aren't cached in ResourceCache  
+</span><span class="outsideLine"><i>0056</i>     // and this would result in huge memory footprint in text extraction                               
+</span><span class="outsideLine"><i>0057</i>     private final Map <COSName,SoftReference<PDFont>> directFontCache =                                
+</span><span class="outsideLine"><i>0058</i>             <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1663</span>new HashMap<COSName, SoftReference<PDFont>>()</span>;                                             
+</span><span class="outsideLine"><i>0059</i>                                                                                                        
+</span><span class="outsideLine"><i>0060</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0061</i>      * Constructor for embedding.                                                                      
+</span><span class="outsideLine"><i>0062</i>      */                                                                                                
+</span><span class="outsideLine"><i>0063</i>     public PDResources()                                                                               
+</span><span class="methodLine"><i>0064</i>     {                                                                                                  
+</span><span class="methodLine"><i>0065</i>         resources = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2980</span>new COSDictionary()</span>;                                                               
+</span><span class="methodLine"><i>0066</i>         cache = null;                                                                                  
+</span><span class="methodLine"><i>0067</i>     }                                                                                                  
+</span><span class="outsideLine"><i>0068</i>                                                                                                        
+</span><span class="outsideLine"><i>0069</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0070</i>      * Constructor for reading.                                                                        
+</span><span class="outsideLine"><i>0071</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0072</i>      * @param resourceDictionary The cos dictionary for this resource.                                 
+</span><span class="outsideLine"><i>0073</i>      */                                                                                                
+</span><span class="outsideLine"><i>0074</i>     public PDResources(COSDictionary resourceDictionary)                                               
+</span><span class="methodLine"><i>0075</i>     {                                                                                                  
+</span><span class="methodLine"><i>0076</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2101</span>resourceDictionary <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2101</span>==</span> null</span>)                                                                
+</span><span class="methodLine"><i>0077</i>         {                                                                                              
+</span><span class="methodLine"><i>0078</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3931</span>new IllegalArgumentException("resourceDictionary is null")</span>;                          
+</span><span class="methodLine"><i>0079</i>         }                                                                                              
+</span><span class="methodLine"><i>0080</i>         resources = resourceDictionary;                                                                
+</span><span class="methodLine"><i>0081</i>         cache = null;                                                                                  
+</span><span class="methodLine"><i>0082</i>     }                                                                                                  
+</span><span class="outsideLine"><i>0083</i>                                                                                                        
+</span><span class="outsideLine"><i>0084</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0085</i>      * Constructor for reading.                                                                        
+</span><span class="outsideLine"><i>0086</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0087</i>      * @param resourceDictionary The cos dictionary for this resource.                                 
+</span><span class="outsideLine"><i>0088</i>      * @param resourceCache The document's resource cache, may be null.                                
+</span><span class="outsideLine"><i>0089</i>      */                                                                                                
+</span><span class="outsideLine"><i>0090</i>     public PDResources(COSDictionary resourceDictionary, ResourceCache resourceCache)                  
+</span><span class="methodLine"><i>0091</i>     {                                                                                                  
+</span><span class="methodLine"><i>0092</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2109</span>resourceDictionary <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2109</span>==</span> null</span>)                                                                
+</span><span class="methodLine"><i>0093</i>         {                                                                                              
+</span><span class="methodLine"><i>0094</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3935</span>new IllegalArgumentException("resourceDictionary is null")</span>;                          
+</span><span class="methodLine"><i>0095</i>         }                                                                                              
+</span><span class="methodLine"><i>0096</i>         resources = resourceDictionary;                                                                
+</span><span class="methodLine"><i>0097</i>         cache = resourceCache;                                                                         
+</span><span class="methodLine"><i>0098</i>     }                                                                                                  
+</span><span class="outsideLine"><i>0099</i>                                                                                                        
+</span><span class="outsideLine"><i>0100</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0101</i>      * Returns the underlying dictionary.                                                              
+</span><span class="outsideLine"><i>0102</i>      */                                                                                                
+</span><span class="outsideLine"><i>0103</i>     @Override                                                                                          
+</span><span class="outsideLine"><i>0104</i>     public COSDictionary getCOSObject()                                                                
+</span><span class="methodLine"><i>0105</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 635</span>{                                                                                                  
+</span><span class="methodLine"><i>0106</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1429</span>return resources;</span>                                                                              
+</span><span class="methodLine"><i>0107</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0108</i>                                                                                                        
+</span><span class="outsideLine"><i>0109</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0110</i>      * Returns the font resource with the given name, or null if none exists.                          
+</span><span class="outsideLine"><i>0111</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0112</i>      * @param name Name of the font resource.                                                          
+</span><span class="outsideLine"><i>0113</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0114</i>      * @return the font resource with the given name.                                                  
+</span><span class="outsideLine"><i>0115</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0116</i>      * @throws IOException if something went wrong.                                                    
+</span><span class="outsideLine"><i>0117</i>      */                                                                                                
+</span><span class="outsideLine"><i>0118</i>     public PDFont getFont(COSName name) throws IOException                                             
+</span><span class="methodLine"><i>0119</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 642</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0120</i>         COSObject indirect = getIndirect(COSName.FONT, name);                                          
+</span><span class="methodLine"><i>0121</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2530</span>cache <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2530</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2119</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2532</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2532</span>!=</span> null</span>)                                                         
+</span><span class="methodLine"><i>0122</i>         {                                                                                              
+</span><span class="methodLine"><i>0123</i>             PDFont cached = cache.getFont(indirect);                                                   
+</span><span class="methodLine"><i>0124</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3947</span>cached <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3947</span>!=</span> null</span>)                                                                        
+</span><span class="methodLine"><i>0125</i>             {                                                                                          
+</span><span class="methodLine"><i>0126</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 4671</span>return cached;</span>                                                                         
+</span><span class="methodLine"><i>0127</i>             }                                                                                          
+</span><span class="methodLine"><i>0128</i>         }                                                                                              
+</span><span class="methodLine"><i>0129</i>         else if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2538</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2538</span>==</span> null</span>)                                                                     
+</span><span class="methodLine"><i>0130</i>         {                                                                                              
+</span><span class="methodLine"><i>0131</i>             SoftReference<PDFont> ref = directFontCache.get(name);                                     
+</span><span class="methodLine"><i>0132</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 4327</span>ref <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4327</span>!=</span> null</span>)                                                                           
+</span><span class="methodLine"><i>0133</i>             {                                                                                          
+</span><span class="methodLine"><i>0134</i>                 PDFont cached = ref.get();                                                             
+</span><span class="methodLine"><i>0135</i>                 if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 5485</span>cached <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 5485</span>!=</span> null</span>)                                                                    
+</span><span class="methodLine"><i>0136</i>                 {                                                                                      
+</span><span class="methodLine"><i>0137</i>                     <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 5718</span>return cached;</span>                                                                     
+</span><span class="methodLine"><i>0138</i>                 }                                                                                      
+</span><span class="methodLine"><i>0139</i>             }                                                                                          
+</span><span class="methodLine"><i>0140</i>         }                                                                                              
+</span><span class="outsideLine"><i>0141</i>                                                                                                        
+</span><span class="methodLine"><i>0142</i>         PDFont font = null;                                                                            
+</span><span class="methodLine"><i>0143</i>         COSBase base = get(COSName.FONT, name);                                                        
+</span><span class="methodLine"><i>0144</i>         if (base instanceof COSDictionary)                                                             
+</span><span class="methodLine"><i>0145</i>         {                                                                                              
+</span><span class="methodLine"><i>0146</i>             font = PDFontFactory.createFont((COSDictionary) base, cache);                              
+</span><span class="methodLine"><i>0147</i>         }                                                                                              
+</span><span class="outsideLine"><i>0148</i>                                                                                                        
+</span><span class="methodLine"><i>0149</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2551</span>cache <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2551</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2134</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2553</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2553</span>!=</span> null</span>)                                                         
+</span><span class="methodLine"><i>0150</i>         {                                                                                              
+</span><span class="methodLine"><i>0151</i>             cache.put(indirect, font);                                                                 
+</span><span class="methodLine"><i>0152</i>         }                                                                                              
+</span><span class="methodLine"><i>0153</i>         else if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2558</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2558</span>==</span> null</span>)                                                                     
+</span><span class="methodLine"><i>0154</i>         {                                                                                              
+</span><span class="methodLine"><i>0155</i>             directFontCache.put(name, <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5294</span>new SoftReference<PDFont>(font)</span>);                                
+</span><span class="methodLine"><i>0156</i>         }                                                                                              
+</span><span class="methodLine"><i>0157</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1438</span>return font;</span>                                                                                   
+</span><span class="methodLine"><i>0158</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0159</i>                                                                                                        
+</span><span class="outsideLine"><i>0160</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0161</i>      * Returns the color space resource with the given name, or null if none exists.                   
+</span><span class="outsideLine"><i>0162</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0163</i>      * @param name Name of the color space resource.                                                   
+</span><span class="outsideLine"><i>0164</i>      * @return a new color space.                                                                      
+</span><span class="outsideLine"><i>0165</i>      * @throws IOException if something went wrong.                                                    
+</span><span class="outsideLine"><i>0166</i>      */                                                                                                
+</span><span class="outsideLine"><i>0167</i>     public PDColorSpace getColorSpace(COSName name) throws IOException                                 
+</span><span class="methodLine"><i>0168</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 649</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0169</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1441</span>return getColorSpace(name, false);</span>                                                             
+</span><span class="methodLine"><i>0170</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0171</i>                                                                                                        
+</span><span class="outsideLine"><i>0172</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0173</i>      * Returns the color space resource with the given name, or null if none exists. This method is    
+</span><span class="outsideLine"><i>0174</i>      * for PDFBox internal use only, others should use {@link #getColorSpace(COSName)}.                
+</span><span class="outsideLine"><i>0175</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0176</i>      * @param name Name of the color space resource.                                                   
+</span><span class="outsideLine"><i>0177</i>      * @param wasDefault if current color space was used by a default color space. This parameter is   
+</span><span class="outsideLine"><i>0178</i>      * to                                                                                              
+</span><span class="outsideLine"><i>0179</i>      * @return a new color space.                                                                      
+</span><span class="outsideLine"><i>0180</i>      * @throws IOException if something went wrong.                                                    
+</span><span class="outsideLine"><i>0181</i>      */                                                                                                
+</span><span class="outsideLine"><i>0182</i>     public PDColorSpace getColorSpace(COSName name, boolean wasDefault) throws IOException             
+</span><span class="methodLine"><i>0183</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 656</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0184</i>         COSObject indirect = getIndirect(COSName.COLORSPACE, name);                                    
+</span><span class="methodLine"><i>0185</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2568</span>cache <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2568</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2151</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2570</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2570</span>!=</span> null</span>)                                                         
+</span><span class="methodLine"><i>0186</i>         {                                                                                              
+</span><span class="methodLine"><i>0187</i>             PDColorSpace cached = cache.getColorSpace(indirect);                                       
+</span><span class="methodLine"><i>0188</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3984</span>cached <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3984</span>!=</span> null</span>)                                                                        
+</span><span class="methodLine"><i>0189</i>             {                                                                                          
+</span><span class="methodLine"><i>0190</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 4713</span>return cached;</span>                                                                         
+</span><span class="methodLine"><i>0191</i>             }                                                                                          
+</span><span class="methodLine"><i>0192</i>         }                                                                                              
+</span><span class="outsideLine"><i>0193</i>                                                                                                        
+</span><span class="outsideLine"><i>0194</i>         // get the instance                                                                            
+</span><span class="methodLine"><i>0195</i>         PDColorSpace colorSpace;                                                                       
+</span><span class="methodLine"><i>0196</i>         COSBase object = get(COSName.COLORSPACE, name);                                                
+</span><span class="methodLine"><i>0197</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2159</span>object <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2159</span>!=</span> null</span>)                                                                            
+</span><span class="methodLine"><i>0198</i>         {                                                                                              
+</span><span class="methodLine"><i>0199</i>             colorSpace = PDColorSpace.create(object, this, wasDefault);                                
+</span><span class="methodLine"><i>0200</i>         }                                                                                              
+</span><span class="methodLine"><i>0201</i>         else                                                                                           
+</span><span class="methodLine"><i>0202</i>         {                                                                                              
+</span><span class="methodLine"><i>0203</i>             colorSpace = PDColorSpace.create(name, this, wasDefault);                                  
+</span><span class="methodLine"><i>0204</i>         }                                                                                              
+</span><span class="outsideLine"><i>0205</i>                                                                                                        
+</span><span class="outsideLine"><i>0206</i>         // we can't cache PDPattern, because it holds page resources, see PDFBOX-2370                  
+</span><span class="methodLine"><i>0207</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3065</span>cache <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3065</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2588</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3067</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3067</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2164</span>&&</span> <span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2590</span>!</span>(colorSpace instanceof PDPattern))                   
+</span><span class="methodLine"><i>0208</i>         {                                                                                              
+</span><span class="methodLine"><i>0209</i>             cache.put(indirect, colorSpace);                                                           
+</span><span class="methodLine"><i>0210</i>         }                                                                                              
+</span><span class="methodLine"><i>0211</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1452</span>return colorSpace;</span>                                                                             
+</span><span class="methodLine"><i>0212</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0213</i>                                                                                                        
+</span><span class="outsideLine"><i>0214</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0215</i>      * Returns true if the given color space name exists in these resources.                           
+</span><span class="outsideLine"><i>0216</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0217</i>      * @param name Name of the color space resource.                                                   
+</span><span class="outsideLine"><i>0218</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0219</i>      * @return true if the color space with the given name exists.                                     
+</span><span class="outsideLine"><i>0220</i>      */                                                                                                
+</span><span class="outsideLine"><i>0221</i>     public boolean hasColorSpace(COSName name)                                                         
+</span><span class="methodLine"><i>0222</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 661</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0223</i>         return <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1747</span>get(COSName.COLORSPACE, name) <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1747</span>!=</span> null</span>;                                                  
+</span><span class="methodLine"><i>0224</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0225</i>                                                                                                        
+</span><span class="outsideLine"><i>0226</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0227</i>      * Returns the extended graphics state resource with the given name, or null if none exists.       
+</span><span class="outsideLine"><i>0228</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0229</i>      * @param name Name of the graphics state resource.                                                
+</span><span class="outsideLine"><i>0230</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0231</i>      * @return the extended graphics state resource with the given name.                               
+</span><span class="outsideLine"><i>0232</i>      */                                                                                                
+</span><span class="outsideLine"><i>0233</i>     public PDExtendedGraphicsState getExtGState(COSName name)                                          
+</span><span class="methodLine"><i>0234</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 666</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0235</i>         COSObject indirect = getIndirect(COSName.EXT_G_STATE, name);                                   
+</span><span class="methodLine"><i>0236</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2602</span>cache <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2602</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2176</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2604</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2604</span>!=</span> null</span>)                                                         
+</span><span class="methodLine"><i>0237</i>         {                                                                                              
+</span><span class="methodLine"><i>0238</i>             PDExtendedGraphicsState cached = cache.getExtGState(indirect);                             
+</span><span class="methodLine"><i>0239</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 4015</span>cached <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4015</span>!=</span> null</span>)                                                                        
+</span><span class="methodLine"><i>0240</i>             {                                                                                          
+</span><span class="methodLine"><i>0241</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 4750</span>return cached;</span>                                                                         
+</span><span class="methodLine"><i>0242</i>             }                                                                                          
+</span><span class="methodLine"><i>0243</i>         }                                                                                              
+</span><span class="outsideLine"><i>0244</i>                                                                                                        
+</span><span class="outsideLine"><i>0245</i>         // get the instance                                                                            
+</span><span class="methodLine"><i>0246</i>         PDExtendedGraphicsState extGState = null;                                                      
+</span><span class="methodLine"><i>0247</i>         COSBase base = get(COSName.EXT_G_STATE, name);                                                 
+</span><span class="methodLine"><i>0248</i>         if (base instanceof COSDictionary)                                                             
+</span><span class="methodLine"><i>0249</i>         {                                                                                              
+</span><span class="methodLine"><i>0250</i>             extGState = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4759</span>new PDExtendedGraphicsState((COSDictionary) base)</span>;                             
+</span><span class="methodLine"><i>0251</i>         }                                                                                              
+</span><span class="outsideLine"><i>0252</i>                                                                                                        
+</span><span class="methodLine"><i>0253</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2619</span>cache <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2619</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2188</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2621</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2621</span>!=</span> null</span>)                                                         
+</span><span class="methodLine"><i>0254</i>         {                                                                                              
+</span><span class="methodLine"><i>0255</i>             cache.put(indirect, extGState);                                                            
+</span><span class="methodLine"><i>0256</i>         }                                                                                              
+</span><span class="methodLine"><i>0257</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1464</span>return extGState;</span>                                                                              
+</span><span class="methodLine"><i>0258</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0259</i>                                                                                                        
+</span><span class="outsideLine"><i>0260</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0261</i>      * Returns the shading resource with the given name, or null if none exists.                       
+</span><span class="outsideLine"><i>0262</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0263</i>      * @param name Name of the shading resource.                                                       
+</span><span class="outsideLine"><i>0264</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0265</i>      * @return the shading resource of the given name.                                                 
+</span><span class="outsideLine"><i>0266</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0267</i>      * @throws IOException if something went wrong.                                                    
+</span><span class="outsideLine"><i>0268</i>      */                                                                                                
+</span><span class="outsideLine"><i>0269</i>     public PDShading getShading(COSName name) throws IOException                                       
+</span><span class="methodLine"><i>0270</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 673</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0271</i>         COSObject indirect = getIndirect(COSName.SHADING, name);                                       
+</span><span class="methodLine"><i>0272</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2628</span>cache <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2628</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2196</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2630</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2630</span>!=</span> null</span>)                                                         
+</span><span class="methodLine"><i>0273</i>         {                                                                                              
+</span><span class="methodLine"><i>0274</i>             PDShading cached = cache.getShading(indirect);                                             
+</span><span class="methodLine"><i>0275</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 4040</span>cached <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4040</span>!=</span> null</span>)                                                                        
+</span><span class="methodLine"><i>0276</i>             {                                                                                          
+</span><span class="methodLine"><i>0277</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 4777</span>return cached;</span>                                                                         
+</span><span class="methodLine"><i>0278</i>             }                                                                                          
+</span><span class="methodLine"><i>0279</i>         }                                                                                              
+</span><span class="outsideLine"><i>0280</i>                                                                                                        
+</span><span class="outsideLine"><i>0281</i>         // get the instance                                                                            
+</span><span class="methodLine"><i>0282</i>         PDShading shading = null;                                                                      
+</span><span class="methodLine"><i>0283</i>         COSBase base = get(COSName.SHADING, name);                                                     
+</span><span class="methodLine"><i>0284</i>         if (base instanceof COSDictionary)                                                             
+</span><span class="methodLine"><i>0285</i>         {                                                                                              
+</span><span class="methodLine"><i>0286</i>             shading = PDShading.create((COSDictionary) base);                                          
+</span><span class="methodLine"><i>0287</i>         }                                                                                              
+</span><span class="outsideLine"><i>0288</i>                                                                                                        
+</span><span class="methodLine"><i>0289</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2645</span>cache <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2645</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2208</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2647</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2647</span>!=</span> null</span>)                                                         
+</span><span class="methodLine"><i>0290</i>         {                                                                                              
+</span><span class="methodLine"><i>0291</i>             cache.put(indirect, shading);                                                              
+</span><span class="methodLine"><i>0292</i>         }                                                                                              
+</span><span class="methodLine"><i>0293</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1473</span>return shading;</span>                                                                                
+</span><span class="methodLine"><i>0294</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0295</i>                                                                                                        
+</span><span class="outsideLine"><i>0296</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0297</i>      * Returns the pattern resource with the given name, or null if none exists.                       
+</span><span class="outsideLine"><i>0298</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0299</i>      * @param name Name of the pattern resource.                                                       
+</span><span class="outsideLine"><i>0300</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0301</i>      * @return the pattern resource of the given name.                                                 
+</span><span class="outsideLine"><i>0302</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0303</i>      * @throws IOException if something went wrong.                                                    
+</span><span class="outsideLine"><i>0304</i>      */                                                                                                
+</span><span class="outsideLine"><i>0305</i>     public PDAbstractPattern getPattern(COSName name) throws IOException                               
+</span><span class="methodLine"><i>0306</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 680</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0307</i>         COSObject indirect = getIndirect(COSName.PATTERN, name);                                       
+</span><span class="methodLine"><i>0308</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2654</span>cache <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2654</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2216</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2656</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2656</span>!=</span> null</span>)                                                         
+</span><span class="methodLine"><i>0309</i>         {                                                                                              
+</span><span class="methodLine"><i>0310</i>             PDAbstractPattern cached = cache.getPattern(indirect);                                     
+</span><span class="methodLine"><i>0311</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 4065</span>cached <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4065</span>!=</span> null</span>)                                                                        
+</span><span class="methodLine"><i>0312</i>             {                                                                                          
+</span><span class="methodLine"><i>0313</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 4806</span>return cached;</span>                                                                         
+</span><span class="methodLine"><i>0314</i>             }                                                                                          
+</span><span class="methodLine"><i>0315</i>         }                                                                                              
+</span><span class="outsideLine"><i>0316</i>                                                                                                        
+</span><span class="outsideLine"><i>0317</i>         // get the instance                                                                            
+</span><span class="methodLine"><i>0318</i>         PDAbstractPattern pattern = null;                                                              
+</span><span class="methodLine"><i>0319</i>         COSBase base = get(COSName.PATTERN, name);                                                     
+</span><span class="methodLine"><i>0320</i>         if (base instanceof COSDictionary)                                                             
+</span><span class="methodLine"><i>0321</i>         {                                                                                              
+</span><span class="methodLine"><i>0322</i>             pattern = PDAbstractPattern.create((COSDictionary) base, getResourceCache());              
+</span><span class="methodLine"><i>0323</i>         }                                                                                              
+</span><span class="outsideLine"><i>0324</i>                                                                                                        
+</span><span class="methodLine"><i>0325</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2671</span>cache <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2671</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2228</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2673</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2673</span>!=</span> null</span>)                                                         
+</span><span class="methodLine"><i>0326</i>         {                                                                                              
+</span><span class="methodLine"><i>0327</i>             cache.put(indirect, pattern);                                                              
+</span><span class="methodLine"><i>0328</i>         }                                                                                              
+</span><span class="methodLine"><i>0329</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1482</span>return pattern;</span>                                                                                
+</span><span class="methodLine"><i>0330</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0331</i>                                                                                                        
+</span><span class="outsideLine"><i>0332</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0333</i>      * Returns the property list resource with the given name, or null if none exists.                 
+</span><span class="outsideLine"><i>0334</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0335</i>      * @param name Name of the property list resource.                                                 
+</span><span class="outsideLine"><i>0336</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0337</i>      * @return the property list resource of the given name.                                           
+</span><span class="outsideLine"><i>0338</i>      */                                                                                                
+</span><span class="outsideLine"><i>0339</i>     public PDPropertyList getProperties(COSName name)                                                  
+</span><span class="methodLine"><i>0340</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 685</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0341</i>         COSObject indirect = getIndirect(COSName.PROPERTIES, name);                                    
+</span><span class="methodLine"><i>0342</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2680</span>cache <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2680</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2236</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2682</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2682</span>!=</span> null</span>)                                                         
+</span><span class="methodLine"><i>0343</i>         {                                                                                              
+</span><span class="methodLine"><i>0344</i>             PDPropertyList cached = cache.getProperties(indirect);                                     
+</span><span class="methodLine"><i>0345</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 4090</span>cached <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4090</span>!=</span> null</span>)                                                                        
+</span><span class="methodLine"><i>0346</i>             {                                                                                          
+</span><span class="methodLine"><i>0347</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 4835</span>return cached;</span>                                                                         
+</span><span class="methodLine"><i>0348</i>             }                                                                                          
+</span><span class="methodLine"><i>0349</i>         }                                                                                              
+</span><span class="outsideLine"><i>0350</i>                                                                                                        
+</span><span class="outsideLine"><i>0351</i>         // get the instance                                                                            
+</span><span class="methodLine"><i>0352</i>         PDPropertyList propertyList = null;                                                            
+</span><span class="methodLine"><i>0353</i>         COSBase base = get(COSName.PROPERTIES, name);                                                  
+</span><span class="methodLine"><i>0354</i>         if (base instanceof COSDictionary)                                                             
+</span><span class="methodLine"><i>0355</i>         {                                                                                              
+</span><span class="methodLine"><i>0356</i>             propertyList = PDPropertyList.create((COSDictionary) base);                                
+</span><span class="methodLine"><i>0357</i>         }                                                                                              
+</span><span class="outsideLine"><i>0358</i>                                                                                                        
+</span><span class="methodLine"><i>0359</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2697</span>cache <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2697</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2248</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2699</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2699</span>!=</span> null</span>)                                                         
+</span><span class="methodLine"><i>0360</i>         {                                                                                              
+</span><span class="methodLine"><i>0361</i>             cache.put(indirect, propertyList);                                                         
+</span><span class="methodLine"><i>0362</i>         }                                                                                              
+</span><span class="methodLine"><i>0363</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1491</span>return propertyList;</span>                                                                           
+</span><span class="methodLine"><i>0364</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0365</i>                                                                                                        
+</span><span class="outsideLine"><i>0366</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0367</i>      * Tells whether the XObject resource with the given name is an image.                             
+</span><span class="outsideLine"><i>0368</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0369</i>      * @param name Name of the XObject resource.                                                       
+</span><span class="outsideLine"><i>0370</i>      * @return true if it is an image XObject, false if not.                                           
+</span><span class="outsideLine"><i>0371</i>      */                                                                                                
+</span><span class="outsideLine"><i>0372</i>     public boolean isImageXObject(COSName name)                                                        
+</span><span class="methodLine"><i>0373</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 690</span>{</span>                                                                                                  
+</span><span class="outsideLine"><i>0374</i>         // get the instance                                                                            
+</span><span class="methodLine"><i>0375</i>         COSBase value = get(COSName.XOBJECT, name);                                                    
+</span><span class="methodLine"><i>0376</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2256</span>value <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2256</span>==</span> null</span>)                                                                             
+</span><span class="methodLine"><i>0377</i>         {                                                                                              
+</span><span class="methodLine"><i>0378</i>             return false;                                                                              
+</span><span class="methodLine"><i>0379</i>         }                                                                                              
+</span><span class="methodLine"><i>0380</i>         else if (value instanceof COSObject)                                                           
+</span><span class="methodLine"><i>0381</i>         {                                                                                              
+</span><span class="methodLine"><i>0382</i>             value = ((COSObject) value).getObject();                                                   
+</span><span class="methodLine"><i>0383</i>         }                                                                                              
+</span><span class="methodLine"><i>0384</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2263</span>!</span>(value instanceof COSStream))                                                             
+</span><span class="methodLine"><i>0385</i>         {                                                                                              
+</span><span class="methodLine"><i>0386</i>             return false;                                                                              
+</span><span class="methodLine"><i>0387</i>         }                                                                                              
+</span><span class="methodLine"><i>0388</i>         COSStream stream = (COSStream) value;                                                          
+</span><span class="methodLine"><i>0389</i>         return COSName.IMAGE.equals(stream.getCOSName(COSName.SUBTYPE));                               
+</span><span class="methodLine"><i>0390</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0391</i>                                                                                                        
+</span><span class="outsideLine"><i>0392</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0393</i>      * Returns the XObject resource with the given name, or null if none exists.                       
+</span><span class="outsideLine"><i>0394</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0395</i>      * @param name Name of the XObject resource.                                                       
+</span><span class="outsideLine"><i>0396</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0397</i>      * @return the XObject resource of the given name.                                                 
+</span><span class="outsideLine"><i>0398</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0399</i>      * @throws IOException if something went wrong.                                                    
+</span><span class="outsideLine"><i>0400</i>      */                                                                                                
+</span><span class="outsideLine"><i>0401</i>     public PDXObject getXObject(COSName name) throws IOException                                       
+</span><span class="methodLine"><i>0402</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 697</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0403</i>         COSObject indirect = getIndirect(COSName.XOBJECT, name);                                       
+</span><span class="methodLine"><i>0404</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2729</span>cache <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2729</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2276</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2731</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2731</span>!=</span> null</span>)                                                         
+</span><span class="methodLine"><i>0405</i>         {                                                                                              
+</span><span class="methodLine"><i>0406</i>             PDXObject cached = cache.getXObject(indirect);                                             
+</span><span class="methodLine"><i>0407</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 4138</span>cached <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4138</span>!=</span> null</span>)                                                                        
+</span><span class="methodLine"><i>0408</i>             {                                                                                          
+</span><span class="methodLine"><i>0409</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 4879</span>return cached;</span>                                                                         
+</span><span class="methodLine"><i>0410</i>             }                                                                                          
+</span><span class="methodLine"><i>0411</i>         }                                                                                              
+</span><span class="outsideLine"><i>0412</i>                                                                                                        
+</span><span class="outsideLine"><i>0413</i>         // get the instance                                                                            
+</span><span class="methodLine"><i>0414</i>         PDXObject xobject;                                                                             
+</span><span class="methodLine"><i>0415</i>         COSBase value = get(COSName.XOBJECT, name);                                                    
+</span><span class="methodLine"><i>0416</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2284</span>value <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2284</span>==</span> null</span>)                                                                             
+</span><span class="methodLine"><i>0417</i>         {                                                                                              
+</span><span class="methodLine"><i>0418</i>             xobject = null;                                                                            
+</span><span class="methodLine"><i>0419</i>         }                                                                                              
+</span><span class="methodLine"><i>0420</i>         else if (value instanceof COSObject)                                                           
+</span><span class="methodLine"><i>0421</i>         {                                                                                              
+</span><span class="methodLine"><i>0422</i>             xobject = PDXObject.createXObject(((COSObject) value).getObject(), this);                  
+</span><span class="methodLine"><i>0423</i>         }                                                                                              
+</span><span class="methodLine"><i>0424</i>         else                                                                                           
+</span><span class="methodLine"><i>0425</i>         {                                                                                              
+</span><span class="methodLine"><i>0426</i>             xobject = PDXObject.createXObject(value, this);                                            
+</span><span class="methodLine"><i>0427</i>         }                                                                                              
+</span><span class="methodLine"><i>0428</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3252</span>cache <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3252</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2751</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3254</span>indirect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3254</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2293</span>&&</span> isAllowedCache(xobject))                              
+</span><span class="methodLine"><i>0429</i>         {                                                                                              
+</span><span class="methodLine"><i>0430</i>             cache.put(indirect, xobject);                                                              
+</span><span class="methodLine"><i>0431</i>         }                                                                                              
+</span><span class="methodLine"><i>0432</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1507</span>return xobject;</span>                                                                                
+</span><span class="methodLine"><i>0433</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0434</i>                                                                                                        
+</span><span class="outsideLine"><i>0435</i>     private boolean isAllowedCache(PDXObject xobject)                                                  
+</span><span class="methodLine"><i>0436</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 702</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0437</i>         if (xobject instanceof PDImageXObject)                                                         
+</span><span class="methodLine"><i>0438</i>         {                                                                                              
+</span><span class="methodLine"><i>0439</i>             COSBase colorSpace = xobject.getCOSObject().getDictionaryObject(COSName.COLORSPACE);       
+</span><span class="methodLine"><i>0440</i>             if (colorSpace instanceof COSName)                                                         
+</span><span class="methodLine"><i>0441</i>             {                                                                                          
+</span><span class="outsideLine"><i>0442</i>                 // don't cache if it might use page resources, see PDFBOX-2370 and PDFBOX-3484         
+</span><span class="methodLine"><i>0443</i>                 COSName colorSpaceName = (COSName) colorSpace;                                         
+</span><span class="methodLine"><i>0444</i>                 if (colorSpaceName.equals(COSName.DEVICECMYK) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 5416</span>&&</span> hasColorSpace(COSName.DEFAULT_CMYK))  
+</span><span class="methodLine"><i>0445</i>                 {                                                                                      
+</span><span class="methodLine"><i>0446</i>                     return false;                                                                      
+</span><span class="methodLine"><i>0447</i>                 }                                                                                      
+</span><span class="methodLine"><i>0448</i>                 if (colorSpaceName.equals(COSName.DEVICERGB) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 5420</span>&&</span> hasColorSpace(COSName.DEFAULT_RGB))    
+</span><span class="methodLine"><i>0449</i>                 {                                                                                      
+</span><span class="methodLine"><i>0450</i>                     return false;                                                                      
+</span><span class="methodLine"><i>0451</i>                 }                                                                                      
+</span><span class="methodLine"><i>0452</i>                 if (colorSpaceName.equals(COSName.DEVICEGRAY) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 5424</span>&&</span> hasColorSpace(COSName.DEFAULT_GRAY))  
+</span><span class="methodLine"><i>0453</i>                 {                                                                                      
+</span><span class="methodLine"><i>0454</i>                     return false;                                                                      
+</span><span class="methodLine"><i>0455</i>                 }                                                                                      
+</span><span class="methodLine"><i>0456</i>                 if (hasColorSpace(colorSpaceName))                                                     
+</span><span class="methodLine"><i>0457</i>                 {                                                                                      
+</span><span class="methodLine"><i>0458</i>                     return false;                                                                      
+</span><span class="methodLine"><i>0459</i>                 }                                                                                      
+</span><span class="methodLine"><i>0460</i>             }                                                                                          
+</span><span class="methodLine"><i>0461</i>         }                                                                                              
+</span><span class="methodLine"><i>0462</i>         return true;                                                                                   
+</span><span class="methodLine"><i>0463</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0464</i>                                                                                                        
+</span><span class="outsideLine"><i>0465</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0466</i>      * Returns the resource with the given name and kind as an indirect object, or null.               
+</span><span class="outsideLine"><i>0467</i>      */                                                                                                
+</span><span class="outsideLine"><i>0468</i>     private COSObject getIndirect(COSName kind, COSName name)                                          
+</span><span class="methodLine"><i>0469</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 707</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0470</i>         COSDictionary dict = (COSDictionary)resources.getDictionaryObject(kind);                       
+</span><span class="methodLine"><i>0471</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2308</span>dict <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2308</span>==</span> null</span>)                                                                              
+</span><span class="methodLine"><i>0472</i>         {                                                                                              
+</span><span class="methodLine"><i>0473</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3271</span>return null;</span>                                                                               
+</span><span class="methodLine"><i>0474</i>         }                                                                                              
+</span><span class="methodLine"><i>0475</i>         COSBase base = dict.getItem(name);                                                             
+</span><span class="methodLine"><i>0476</i>         if (base instanceof COSObject)                                                                 
+</span><span class="methodLine"><i>0477</i>         {                                                                                              
+</span><span class="methodLine"><i>0478</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3278</span>return (COSObject)base;</span>                                                                    
+</span><span class="methodLine"><i>0479</i>         }                                                                                              
+</span><span class="outsideLine"><i>0480</i>         // not an indirect object. Resource may have been added at runtime.                            
+</span><span class="methodLine"><i>0481</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1520</span>return null;</span>                                                                                   
+</span><span class="methodLine"><i>0482</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0483</i>                                                                                                        
+</span><span class="outsideLine"><i>0484</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0485</i>      * Returns the resource with the given name and kind, or null.                                     
+</span><span class="outsideLine"><i>0486</i>      */                                                                                                
+</span><span class="outsideLine"><i>0487</i>     private COSBase get(COSName kind, COSName name)                                                    
+</span><span class="methodLine"><i>0488</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 712</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0489</i>         COSDictionary dict = (COSDictionary)resources.getDictionaryObject(kind);                       
+</span><span class="methodLine"><i>0490</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2323</span>dict <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2323</span>==</span> null</span>)                                                                              
+</span><span class="methodLine"><i>0491</i>         {                                                                                              
+</span><span class="methodLine"><i>0492</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3286</span>return null;</span>                                                                               
+</span><span class="methodLine"><i>0493</i>         }                                                                                              
+</span><span class="methodLine"><i>0494</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1527</span>return dict.getDictionaryObject(name);</span>                                                         
+</span><span class="methodLine"><i>0495</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0496</i>                                                                                                        
+</span><span class="outsideLine"><i>0497</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0498</i>      * Returns the names of the color space resources, if any.                                         
+</span><span class="outsideLine"><i>0499</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0500</i>      * @return the names of all color space resources.                                                 
+</span><span class="outsideLine"><i>0501</i>      */                                                                                                
+</span><span class="outsideLine"><i>0502</i>     public Iterable<COSName> getColorSpaceNames()                                                      
+</span><span class="methodLine"><i>0503</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 717</span>{                                                                                                  
+</span><span class="methodLine"><i>0504</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1531</span>return getNames(COSName.COLORSPACE);</span>                                                           
+</span><span class="methodLine"><i>0505</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0506</i>                                                                                                        
+</span><span class="outsideLine"><i>0507</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0508</i>      * Returns the names of the XObject resources, if any.                                             
+</span><span class="outsideLine"><i>0509</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0510</i>      * @return the names of all XObject resources.                                                     
+</span><span class="outsideLine"><i>0511</i>      */                                                                                                
+</span><span class="outsideLine"><i>0512</i>     public Iterable<COSName> getXObjectNames()                                                         
+</span><span class="methodLine"><i>0513</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 722</span>{                                                                                                  
+</span><span class="methodLine"><i>0514</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1535</span>return getNames(COSName.XOBJECT);</span>                                                              
+</span><span class="methodLine"><i>0515</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0516</i>                                                                                                        
+</span><span class="outsideLine"><i>0517</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0518</i>      * Returns the names of the font resources, if any.                                                
+</span><span class="outsideLine"><i>0519</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0520</i>      * @return the names of all font resources.                                                        
+</span><span class="outsideLine"><i>0521</i>      */                                                                                                
+</span><span class="outsideLine"><i>0522</i>     public Iterable<COSName> getFontNames()                                                            
+</span><span class="methodLine"><i>0523</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 727</span>{                                                                                                  
+</span><span class="methodLine"><i>0524</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1539</span>return getNames(COSName.FONT);</span>                                                                 
+</span><span class="methodLine"><i>0525</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0526</i>                                                                                                        
+</span><span class="outsideLine"><i>0527</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0528</i>      * Returns the names of the property list resources, if any.                                       
+</span><span class="outsideLine"><i>0529</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0530</i>      * @return the names of all property list resources.                                               
+</span><span class="outsideLine"><i>0531</i>      */                                                                                                
+</span><span class="outsideLine"><i>0532</i>     public Iterable<COSName> getPropertiesNames()                                                      
+</span><span class="methodLine"><i>0533</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 732</span>{                                                                                                  
+</span><span class="methodLine"><i>0534</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1543</span>return getNames(COSName.PROPERTIES);</span>                                                           
+</span><span class="methodLine"><i>0535</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0536</i>                                                                                                        
+</span><span class="outsideLine"><i>0537</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0538</i>      * Returns the names of the shading resources, if any.                                             
+</span><span class="outsideLine"><i>0539</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0540</i>      * @return the names of all shading resources.                                                     
+</span><span class="outsideLine"><i>0541</i>      */                                                                                                
+</span><span class="outsideLine"><i>0542</i>     public Iterable<COSName> getShadingNames()                                                         
+</span><span class="methodLine"><i>0543</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 737</span>{                                                                                                  
+</span><span class="methodLine"><i>0544</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1547</span>return getNames(COSName.SHADING);</span>                                                              
+</span><span class="methodLine"><i>0545</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0546</i>                                                                                                        
+</span><span class="outsideLine"><i>0547</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0548</i>      * Returns the names of the pattern resources, if any.                                             
+</span><span class="outsideLine"><i>0549</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0550</i>      * @return the names of all pattern resources.                                                     
+</span><span class="outsideLine"><i>0551</i>      */                                                                                                
+</span><span class="outsideLine"><i>0552</i>     public Iterable<COSName> getPatternNames()                                                         
+</span><span class="methodLine"><i>0553</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 742</span>{                                                                                                  
+</span><span class="methodLine"><i>0554</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1551</span>return getNames(COSName.PATTERN);</span>                                                              
+</span><span class="methodLine"><i>0555</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0556</i>                                                                                                        
+</span><span class="outsideLine"><i>0557</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0558</i>      * Returns the names of the extended graphics state resources, if any.                             
+</span><span class="outsideLine"><i>0559</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0560</i>      * @return the names of all extended graphics state resources.                                     
+</span><span class="outsideLine"><i>0561</i>      */                                                                                                
+</span><span class="outsideLine"><i>0562</i>     public Iterable<COSName> getExtGStateNames()                                                       
+</span><span class="methodLine"><i>0563</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 747</span>{                                                                                                  
+</span><span class="methodLine"><i>0564</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1555</span>return getNames(COSName.EXT_G_STATE);</span>                                                          
+</span><span class="methodLine"><i>0565</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0566</i>                                                                                                        
+</span><span class="outsideLine"><i>0567</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0568</i>      * Returns the resource names of the given kind.                                                   
+</span><span class="outsideLine"><i>0569</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0570</i>      * @return the names of all resources of the given kind.                                           
+</span><span class="outsideLine"><i>0571</i>      */                                                                                                
+</span><span class="outsideLine"><i>0572</i>     private Iterable<COSName> getNames(COSName kind)                                                   
+</span><span class="methodLine"><i>0573</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 752</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0574</i>         COSDictionary dict = (COSDictionary)resources.getDictionaryObject(kind);                       
+</span><span class="methodLine"><i>0575</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2370</span>dict <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2370</span>==</span> null</span>)                                                                              
+</span><span class="methodLine"><i>0576</i>         {                                                                                              
+</span><span class="methodLine"><i>0577</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3331</span>return Collections.emptySet();</span>                                                             
+</span><span class="methodLine"><i>0578</i>         }                                                                                              
+</span><span class="methodLine"><i>0579</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1563</span>return dict.keySet();</span>                                                                          
+</span><span class="methodLine"><i>0580</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0581</i>                                                                                                        
+</span><span class="outsideLine"><i>0582</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0583</i>      * Adds the given font to the resources of the current page and returns the name for the           
+</span><span class="outsideLine"><i>0584</i>      * new resources. Returns the existing resource name if the given item already exists.             
+</span><span class="outsideLine"><i>0585</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0586</i>      * @param font the font to add                                                                     
+</span><span class="outsideLine"><i>0587</i>      * @return the name of the resource in the resources dictionary                                    
+</span><span class="outsideLine"><i>0588</i>      */                                                                                                
+</span><span class="outsideLine"><i>0589</i>     public COSName add(PDFont font)                                                                    
+</span><span class="methodLine"><i>0590</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 757</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0591</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1566</span>return add(COSName.FONT, "F", font);</span>                                                           
+</span><span class="methodLine"><i>0592</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0593</i>                                                                                                        
+</span><span class="outsideLine"><i>0594</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0595</i>      * Adds the given color space to the resources of the current page and returns the name for the    
+</span><span class="outsideLine"><i>0596</i>      * new resources. Returns the existing resource name if the given item already exists.             
+</span><span class="outsideLine"><i>0597</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0598</i>      * @param colorSpace the color space to add                                                        
+</span><span class="outsideLine"><i>0599</i>      * @return the name of the resource in the resources dictionary                                    
+</span><span class="outsideLine"><i>0600</i>      */                                                                                                
+</span><span class="outsideLine"><i>0601</i>     public COSName add(PDColorSpace colorSpace)                                                        
+</span><span class="methodLine"><i>0602</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 762</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0603</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1569</span>return add(COSName.COLORSPACE, "cs", colorSpace);</span>                                              
+</span><span class="methodLine"><i>0604</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0605</i>                                                                                                        
+</span><span class="outsideLine"><i>0606</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0607</i>      * Adds the given extended graphics state to the resources of the current page and returns the     
+</span><span class="outsideLine"><i>0608</i>      * name for the new resources. Returns the existing resource name if the given item already exists.
+</span><span class="outsideLine"><i>0609</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0610</i>      * @param extGState the extended graphics state to add                                             
+</span><span class="outsideLine"><i>0611</i>      * @return the name of the resource in the resources dictionary                                    
+</span><span class="outsideLine"><i>0612</i>      */                                                                                                
+</span><span class="outsideLine"><i>0613</i>     public COSName add(PDExtendedGraphicsState extGState)                                              
+</span><span class="methodLine"><i>0614</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 767</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0615</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1572</span>return add(COSName.EXT_G_STATE, "gs", extGState);</span>                                              
+</span><span class="methodLine"><i>0616</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0617</i>                                                                                                        
+</span><span class="outsideLine"><i>0618</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0619</i>      * Adds the given shading to the resources of the current page and returns the name for the        
+</span><span class="outsideLine"><i>0620</i>      * new resources. Returns the existing resource name if the given item already exists.             
+</span><span class="outsideLine"><i>0621</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0622</i>      * @param shading the shading to add                                                               
+</span><span class="outsideLine"><i>0623</i>      * @return the name of the resource in the resources dictionary                                    
+</span><span class="outsideLine"><i>0624</i>      */                                                                                                
+</span><span class="outsideLine"><i>0625</i>     public COSName add(PDShading shading)                                                              
+</span><span class="methodLine"><i>0626</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 772</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0627</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1575</span>return add(COSName.SHADING, "sh", shading);</span>                                                    
+</span><span class="methodLine"><i>0628</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0629</i>                                                                                                        
+</span><span class="outsideLine"><i>0630</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0631</i>      * Adds the given pattern to the resources of the current page and returns the name for the        
+</span><span class="outsideLine"><i>0632</i>      * new resources. Returns the existing resource name if the given item already exists.             
+</span><span class="outsideLine"><i>0633</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0634</i>      * @param pattern the pattern to add                                                               
+</span><span class="outsideLine"><i>0635</i>      * @return the name of the resource in the resources dictionary                                    
+</span><span class="outsideLine"><i>0636</i>      */                                                                                                
+</span><span class="outsideLine"><i>0637</i>     public COSName add(PDAbstractPattern pattern)                                                      
+</span><span class="methodLine"><i>0638</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 777</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0639</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1578</span>return add(COSName.PATTERN, "p", pattern);</span>                                                     
+</span><span class="methodLine"><i>0640</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0641</i>                                                                                                        
+</span><span class="outsideLine"><i>0642</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0643</i>      * Adds the given property list to the resources of the current page and returns the name for      
+</span><span class="outsideLine"><i>0644</i>      * the new resources. Returns the existing resource name if the given item already exists.         
+</span><span class="outsideLine"><i>0645</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0646</i>      * @param properties the property list to add                                                      
+</span><span class="outsideLine"><i>0647</i>      * @return the name of the resource in the resources dictionary                                    
+</span><span class="outsideLine"><i>0648</i>      */                                                                                                
+</span><span class="outsideLine"><i>0649</i>     public COSName add(PDPropertyList properties)                                                      
+</span><span class="methodLine"><i>0650</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 782</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0651</i>         if (properties instanceof PDOptionalContentGroup)                                              
+</span><span class="methodLine"><i>0652</i>         {                                                                                              
+</span><span class="methodLine"><i>0653</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3365</span>return add(COSName.PROPERTIES, "oc", properties);</span>                                          
+</span><span class="methodLine"><i>0654</i>         }                                                                                              
+</span><span class="methodLine"><i>0655</i>         else                                                                                           
+</span><span class="methodLine"><i>0656</i>         {                                                                                              
+</span><span class="methodLine"><i>0657</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3366</span>return add(COSName.PROPERTIES, "Prop", properties);</span>                                        
+</span><span class="methodLine"><i>0658</i>         }                                                                                              
+</span><span class="methodLine"><i>0659</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0660</i>                                                                                                        
+</span><span class="outsideLine"><i>0661</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0662</i>      * Adds the given image to the resources of the current page and returns the name for the          
+</span><span class="outsideLine"><i>0663</i>      * new resources. Returns the existing resource name if the given item already exists.             
+</span><span class="outsideLine"><i>0664</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0665</i>      * @param image the image to add                                                                   
+</span><span class="outsideLine"><i>0666</i>      * @return the name of the resource in the resources dictionary                                    
+</span><span class="outsideLine"><i>0667</i>      */                                                                                                
+</span><span class="outsideLine"><i>0668</i>     public COSName add(PDImageXObject image)                                                           
+</span><span class="methodLine"><i>0669</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 787</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0670</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1584</span>return add(COSName.XOBJECT, "Im", image);</span>                                                      
+</span><span class="methodLine"><i>0671</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0672</i>                                                                                                        
+</span><span class="outsideLine"><i>0673</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0674</i>      * Adds the given form to the resources of the current page and returns the name for the           
+</span><span class="outsideLine"><i>0675</i>      * new resources. Returns the existing resource name if the given item already exists.             
+</span><span class="outsideLine"><i>0676</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0677</i>      * @param form the form to add                                                                     
+</span><span class="outsideLine"><i>0678</i>      * @return the name of the resource in the resources dictionary                                    
+</span><span class="outsideLine"><i>0679</i>      */                                                                                                
+</span><span class="outsideLine"><i>0680</i>     public COSName add(PDFormXObject form)                                                             
+</span><span class="methodLine"><i>0681</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 792</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0682</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1587</span>return add(COSName.XOBJECT, "Form", form);</span>                                                     
+</span><span class="methodLine"><i>0683</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0684</i>                                                                                                        
+</span><span class="outsideLine"><i>0685</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0686</i>      * Adds the given XObject to the resources of the current page and returns the name for the        
+</span><span class="outsideLine"><i>0687</i>      * new resources. Returns the existing resource name if the given item already exists.             
+</span><span class="outsideLine"><i>0688</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0689</i>      * @param xobject the XObject to add                                                               
+</span><span class="outsideLine"><i>0690</i>      * @param prefix the prefix to be used when creating the resource name                             
+</span><span class="outsideLine"><i>0691</i>      * @return the name of the resource in the resources dictionary                                    
+</span><span class="outsideLine"><i>0692</i>      */                                                                                                
+</span><span class="outsideLine"><i>0693</i>     public COSName add(PDXObject xobject, String prefix)                                               
+</span><span class="methodLine"><i>0694</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 797</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0695</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1592</span>return add(COSName.XOBJECT, prefix, xobject);</span>                                                  
+</span><span class="methodLine"><i>0696</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0697</i>                                                                                                        
+</span><span class="outsideLine"><i>0698</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0699</i>      * Adds the given resource if it does not already exist.                                           
+</span><span class="outsideLine"><i>0700</i>      */                                                                                                
+</span><span class="outsideLine"><i>0701</i>     private COSName add(COSName kind, String prefix, COSObjectable object)                             
+</span><span class="methodLine"><i>0702</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 802</span>{</span>                                                                                                  
+</span><span class="outsideLine"><i>0703</i>         // return the existing key if the item exists already                                          
+</span><span class="methodLine"><i>0704</i>         COSDictionary dict = (COSDictionary)resources.getDictionaryObject(kind);                       
+</span><span class="methodLine"><i>0705</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2887</span>dict <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2887</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2429</span>&&</span> dict.containsValue(object.getCOSObject()))                                 
+</span><span class="methodLine"><i>0706</i>         {                                                                                              
+</span><span class="methodLine"><i>0707</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3396</span>return dict.getKeyForValue(object.getCOSObject());</span>                                         
+</span><span class="methodLine"><i>0708</i>         }                                                                                              
+</span><span class="outsideLine"><i>0709</i>                                                                                                        
+</span><span class="outsideLine"><i>0710</i>         // PDFBOX-4509: It could exist as an indirect object, happens when a font is taken from the    
+</span><span class="outsideLine"><i>0711</i>         // AcroForm default resources of a loaded PDF.                                                 
+</span><span class="methodLine"><i>0712</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2893</span>dict <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2893</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2433</span>&&</span> COSName.FONT.equals(kind))                                                 
+</span><span class="methodLine"><i>0713</i>         {                                                                                              
+</span><span class="methodLine"><i>0714</i>             for (Map.Entry<COSName, COSBase> entry : dict.entrySet())                                  
+</span><span class="methodLine"><i>0715</i>             {                                                                                          
+</span><span class="methodLine"><i>0716</i>                 if (entry.getValue() instanceof COSObject <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 5451</span>&&</span>                                           
+</span><span class="methodLine"><i>0717</i>                     object.getCOSObject() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 5593</span>==</span> ((COSObject) entry.getValue()).getObject())               
+</span><span class="methodLine"><i>0718</i>                 {                                                                                      
+</span><span class="methodLine"><i>0719</i>                     <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 5703</span>return entry.getKey();</span>                                                             
+</span><span class="methodLine"><i>0720</i>                 }                                                                                      
+</span><span class="methodLine"><i>0721</i>             }                                                                                          
+</span><span class="methodLine"><i>0722</i>         }                                                                                              
+</span><span class="outsideLine"><i>0723</i>                                                                                                        
+</span><span class="outsideLine"><i>0724</i>         // add the item with a new key                                                                 
+</span><span class="methodLine"><i>0725</i>         COSName name = createKey(kind, prefix);                                                        
+</span><span class="methodLine"><i>0726</i>         put(kind, name, object);                                                                       
+</span><span class="methodLine"><i>0727</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1604</span>return name;</span>                                                                                   
+</span><span class="methodLine"><i>0728</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0729</i>                                                                                                        
+</span><span class="outsideLine"><i>0730</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0731</i>      * Returns a unique key for a new resource.                                                        
+</span><span class="outsideLine"><i>0732</i>      */                                                                                                
+</span><span class="outsideLine"><i>0733</i>     private COSName createKey(COSName kind, String prefix)                                             
+</span><span class="methodLine"><i>0734</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 807</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0735</i>         COSDictionary dict = (COSDictionary)resources.getDictionaryObject(kind);                       
+</span><span class="methodLine"><i>0736</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2445</span>dict <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2445</span>==</span> null</span>)                                                                              
+</span><span class="methodLine"><i>0737</i>         {                                                                                              
+</span><span class="methodLine"><i>0738</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3421</span>return COSName.getPDFName(prefix <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4625</span>+</span> 1);</span>                                                     
+</span><span class="methodLine"><i>0739</i>         }                                                                                              
+</span><span class="outsideLine"><i>0740</i>                                                                                                        
+</span><span class="outsideLine"><i>0741</i>         // find a unique key                                                                           
+</span><span class="methodLine"><i>0742</i>         String key;                                                                                    
+</span><span class="methodLine"><i>0743</i>         int n = dict.keySet().size();                                                                  
+</span><span class="methodLine"><i>0744</i>         do                                                                                             
+</span><span class="methodLine"><i>0745</i>         {                                                                                              
+</span><span class="methodLine"><i>0746</i>             <span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 4265</span>++</span>n;                                                                                       
+</span><span class="methodLine"><i>0747</i>             key = prefix <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4633</span>+</span> n;                                                                          
+</span><span class="methodLine"><i>0748</i>         }                                                                                              
+</span><span class="methodLine"><i>0749</i>         while (dict.containsKey(key));                                                                 
+</span><span class="methodLine"><i>0750</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1614</span>return COSName.getPDFName(key);</span>                                                                
+</span><span class="methodLine"><i>0751</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0752</i>                                                                                                        
+</span><span class="outsideLine"><i>0753</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0754</i>      * Sets the value of a given named resource.                                                       
+</span><span class="outsideLine"><i>0755</i>      */                                                                                                
+</span><span class="outsideLine"><i>0756</i>     private void put(COSName kind, COSName name, COSObjectable object)                                 
+</span><span class="methodLine"><i>0757</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 812</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0758</i>         COSDictionary dict = (COSDictionary)resources.getDictionaryObject(kind);                       
+</span><span class="methodLine"><i>0759</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2466</span>dict <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2466</span>==</span> null</span>)                                                                              
+</span><span class="methodLine"><i>0760</i>         {                                                                                              
+</span><span class="methodLine"><i>0761</i>             dict = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4990</span>new COSDictionary()</span>;                                                                
+</span><span class="methodLine"><i>0762</i>             resources.setItem(kind, dict);                                                             
+</span><span class="methodLine"><i>0763</i>         }                                                                                              
+</span><span class="methodLine"><i>0764</i>         dict.setItem(name, object);                                                                    
+</span><span class="methodLine"><i>0765</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0766</i>                                                                                                        
+</span><span class="outsideLine"><i>0767</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0768</i>      * Sets the font resource with the given name.                                                     
+</span><span class="outsideLine"><i>0769</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0770</i>      * @param name the name of the resource                                                            
+</span><span class="outsideLine"><i>0771</i>      * @param font the font to be added                                                                
+</span><span class="outsideLine"><i>0772</i>      */                                                                                                
+</span><span class="outsideLine"><i>0773</i>     public void put(COSName name, PDFont font)                                                         
+</span><span class="methodLine"><i>0774</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 817</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0775</i>         put(COSName.FONT, name, font);                                                                 
+</span><span class="methodLine"><i>0776</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0777</i>                                                                                                        
+</span><span class="outsideLine"><i>0778</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0779</i>      * Sets the color space resource with the given name.                                              
+</span><span class="outsideLine"><i>0780</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0781</i>      * @param name the name of the resource                                                            
+</span><span class="outsideLine"><i>0782</i>      * @param colorSpace the color space to be added                                                   
+</span><span class="outsideLine"><i>0783</i>      */                                                                                                
+</span><span class="outsideLine"><i>0784</i>     public void put(COSName name, PDColorSpace colorSpace)                                             
+</span><span class="methodLine"><i>0785</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 822</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0786</i>         put(COSName.COLORSPACE, name, colorSpace);                                                     
+</span><span class="methodLine"><i>0787</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0788</i>                                                                                                        
+</span><span class="outsideLine"><i>0789</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0790</i>      * Sets the extended graphics state resource with the given name.                                  
+</span><span class="outsideLine"><i>0791</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0792</i>      * @param name the name of the resource                                                            
+</span><span class="outsideLine"><i>0793</i>      * @param extGState the extended graphics state to be added                                        
+</span><span class="outsideLine"><i>0794</i>      */                                                                                                
+</span><span class="outsideLine"><i>0795</i>     public void put(COSName name, PDExtendedGraphicsState extGState)                                   
+</span><span class="methodLine"><i>0796</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 827</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0797</i>         put(COSName.EXT_G_STATE, name, extGState);                                                     
+</span><span class="methodLine"><i>0798</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0799</i>                                                                                                        
+</span><span class="outsideLine"><i>0800</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0801</i>      * Sets the shading resource with the given name.                                                  
+</span><span class="outsideLine"><i>0802</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0803</i>      * @param name the name of the resource                                                            
+</span><span class="outsideLine"><i>0804</i>      * @param shading the shading to be added                                                          
+</span><span class="outsideLine"><i>0805</i>      */                                                                                                
+</span><span class="outsideLine"><i>0806</i>     public void put(COSName name, PDShading shading)                                                   
+</span><span class="methodLine"><i>0807</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 832</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0808</i>         put(COSName.SHADING, name, shading);                                                           
+</span><span class="methodLine"><i>0809</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0810</i>                                                                                                        
+</span><span class="outsideLine"><i>0811</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0812</i>      * Sets the pattern resource with the given name.                                                  
+</span><span class="outsideLine"><i>0813</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0814</i>      * @param name the name of the resource                                                            
+</span><span class="outsideLine"><i>0815</i>      * @param pattern the pattern to be added                                                          
+</span><span class="outsideLine"><i>0816</i>      */                                                                                                
+</span><span class="outsideLine"><i>0817</i>     public void put(COSName name, PDAbstractPattern pattern)                                           
+</span><span class="methodLine"><i>0818</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 837</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0819</i>         put(COSName.PATTERN, name, pattern);                                                           
+</span><span class="methodLine"><i>0820</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0821</i>                                                                                                        
+</span><span class="outsideLine"><i>0822</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0823</i>      * Sets the property list resource with the given name.                                            
+</span><span class="outsideLine"><i>0824</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0825</i>      * @param name the name of the resource                                                            
+</span><span class="outsideLine"><i>0826</i>      * @param properties the property list to be added                                                 
+</span><span class="outsideLine"><i>0827</i>      */                                                                                                
+</span><span class="outsideLine"><i>0828</i>     public void put(COSName name, PDPropertyList properties)                                           
+</span><span class="methodLine"><i>0829</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 842</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0830</i>         put(COSName.PROPERTIES, name, properties);                                                     
+</span><span class="methodLine"><i>0831</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0832</i>                                                                                                        
+</span><span class="outsideLine"><i>0833</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0834</i>      * Sets the XObject resource with the given name.                                                  
+</span><span class="outsideLine"><i>0835</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0836</i>      * @param name the name of the resource                                                            
+</span><span class="outsideLine"><i>0837</i>      * @param xobject the XObject to be added                                                          
+</span><span class="outsideLine"><i>0838</i>      */                                                                                                
+</span><span class="outsideLine"><i>0839</i>     public void put(COSName name, PDXObject xobject)                                                   
+</span><span class="methodLine"><i>0840</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 847</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0841</i>         put(COSName.XOBJECT, name, xobject);                                                           
+</span><span class="methodLine"><i>0842</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0843</i>                                                                                                        
+</span><span class="outsideLine"><i>0844</i>     /**                                                                                                
+</span><span class="outsideLine"><i>0845</i>      * Returns the resource cache associated with the Resources, or null if there is none.             
+</span><span class="outsideLine"><i>0846</i>      *                                                                                                 
+</span><span class="outsideLine"><i>0847</i>      * @return the resource cache associated with the resources.                                       
+</span><span class="outsideLine"><i>0848</i>      */                                                                                                
+</span><span class="outsideLine"><i>0849</i>     public ResourceCache getResourceCache()                                                            
+</span><span class="methodLine"><i>0850</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 852</span>{                                                                                                  
+</span><span class="methodLine"><i>0851</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1659</span>return cache;</span>                                                                                  
+</span><span class="methodLine"><i>0852</i>     }</span>                                                                                                  
+</span><span class="outsideLine"><i>0853</i> }                                                                                                      
+</span><span class="outsideLine"><i>0854</i>                                                                                                        </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

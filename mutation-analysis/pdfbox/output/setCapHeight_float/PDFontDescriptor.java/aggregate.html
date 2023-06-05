@@ -1,0 +1,1314 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.49</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                          
+</span><span class="outsideLine"><i>0002</i>  * Licensed to the Apache Software Foundation (ASF) under one or more                       
+</span><span class="outsideLine"><i>0003</i>  * contributor license agreements.  See the NOTICE file distributed with                    
+</span><span class="outsideLine"><i>0004</i>  * this work for additional information regarding copyright ownership.                      
+</span><span class="outsideLine"><i>0005</i>  * The ASF licenses this file to You under the Apache License, Version 2.0                  
+</span><span class="outsideLine"><i>0006</i>  * (the "License"); you may not use this file except in compliance with                     
+</span><span class="outsideLine"><i>0007</i>  * the License.  You may obtain a copy of the License at                                    
+</span><span class="outsideLine"><i>0008</i>  *                                                                                          
+</span><span class="outsideLine"><i>0009</i>  *      http://www.apache.org/licenses/LICENSE-2.0                                          
+</span><span class="outsideLine"><i>0010</i>  *                                                                                          
+</span><span class="outsideLine"><i>0011</i>  * Unless required by applicable law or agreed to in writing, software                      
+</span><span class="outsideLine"><i>0012</i>  * distributed under the License is distributed on an "AS IS" BASIS,                        
+</span><span class="outsideLine"><i>0013</i>  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                 
+</span><span class="outsideLine"><i>0014</i>  * See the License for the specific language governing permissions and                      
+</span><span class="outsideLine"><i>0015</i>  * limitations under the License.                                                           
+</span><span class="outsideLine"><i>0016</i>  */                                                                                         
+</span><span class="outsideLine"><i>0017</i> package org.apache.pdfbox.pdmodel.font;                                                     
+</span><span class="outsideLine"><i>0018</i>                                                                                             
+</span><span class="outsideLine"><i>0019</i> import org.apache.pdfbox.cos.COSArray;                                                      
+</span><span class="outsideLine"><i>0020</i> import org.apache.pdfbox.cos.COSBase;                                                       
+</span><span class="outsideLine"><i>0021</i> import org.apache.pdfbox.cos.COSDictionary;                                                 
+</span><span class="outsideLine"><i>0022</i> import org.apache.pdfbox.cos.COSName;                                                       
+</span><span class="outsideLine"><i>0023</i> import org.apache.pdfbox.cos.COSStream;                                                     
+</span><span class="outsideLine"><i>0024</i> import org.apache.pdfbox.cos.COSString;                                                     
+</span><span class="outsideLine"><i>0025</i> import org.apache.pdfbox.pdmodel.common.COSObjectable;                                      
+</span><span class="outsideLine"><i>0026</i> import org.apache.pdfbox.pdmodel.common.PDRectangle;                                        
+</span><span class="outsideLine"><i>0027</i> import org.apache.pdfbox.pdmodel.common.PDStream;                                           
+</span><span class="outsideLine"><i>0028</i>                                                                                             
+</span><span class="outsideLine"><i>0029</i> /**                                                                                         
+</span><span class="outsideLine"><i>0030</i>  * A font descriptor.                                                                       
+</span><span class="outsideLine"><i>0031</i>  *                                                                                          
+</span><span class="outsideLine"><i>0032</i>  * @author Ben Litchfield                                                                   
+</span><span class="outsideLine"><i>0033</i>  */                                                                                         
+</span><span class="outsideLine"><i>0034</i> public final class PDFontDescriptor implements COSObjectable                                
+</span><span class="outsideLine"><i>0035</i> {                                                                                           
+</span><span class="outsideLine"><i>0036</i>     private static final int FLAG_FIXED_PITCH = 1;                                          
+</span><span class="outsideLine"><i>0037</i>     private static final int FLAG_SERIF = 2;                                                
+</span><span class="outsideLine"><i>0038</i>     private static final int FLAG_SYMBOLIC = 4;                                             
+</span><span class="outsideLine"><i>0039</i>     private static final int FLAG_SCRIPT = 8;                                               
+</span><span class="outsideLine"><i>0040</i>     private static final int FLAG_NON_SYMBOLIC = 32;                                        
+</span><span class="outsideLine"><i>0041</i>     private static final int FLAG_ITALIC = 64;                                              
+</span><span class="outsideLine"><i>0042</i>     private static final int FLAG_ALL_CAP = 65536;                                          
+</span><span class="outsideLine"><i>0043</i>     private static final int FLAG_SMALL_CAP = 131072;                                       
+</span><span class="outsideLine"><i>0044</i>     private static final int FLAG_FORCE_BOLD = 262144;                                      
+</span><span class="outsideLine"><i>0045</i>                                                                                             
+</span><span class="outsideLine"><i>0046</i>     private final COSDictionary dic;                                                        
+</span><span class="outsideLine"><i>0047</i>     private float xHeight = Float.NEGATIVE_INFINITY;                                        
+</span><span class="outsideLine"><i>0048</i>     private float capHeight = Float.NEGATIVE_INFINITY;                                      
+</span><span class="outsideLine"><i>0049</i>     private int flags = <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 1739</span>-</span>1;                                                                 
+</span><span class="outsideLine"><i>0050</i>                                                                                             
+</span><span class="outsideLine"><i>0051</i>                                                                                             
+</span><span class="outsideLine"><i>0052</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0053</i>      * Package-private constructor, for embedding.                                          
+</span><span class="outsideLine"><i>0054</i>      */                                                                                     
+</span><span class="outsideLine"><i>0055</i>     PDFontDescriptor()                                                                      
+</span><span class="methodLine"><i>0056</i>     {                                                                                       
+</span><span class="methodLine"><i>0057</i>         dic = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3049</span>new COSDictionary()</span>;                                                          
+</span><span class="methodLine"><i>0058</i>         dic.setItem( COSName.TYPE, COSName.FONT_DESC );                                     
+</span><span class="methodLine"><i>0059</i>     }                                                                                       
+</span><span class="outsideLine"><i>0060</i>                                                                                             
+</span><span class="outsideLine"><i>0061</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0062</i>      * Creates a PDFontDescriptor from a COS dictionary.                                    
+</span><span class="outsideLine"><i>0063</i>      *                                                                                      
+</span><span class="outsideLine"><i>0064</i>      * @param desc The wrapped COS Dictionary.                                              
+</span><span class="outsideLine"><i>0065</i>      */                                                                                     
+</span><span class="outsideLine"><i>0066</i>     public PDFontDescriptor( COSDictionary desc )                                           
+</span><span class="methodLine"><i>0067</i>     {                                                                                       
+</span><span class="methodLine"><i>0068</i>         dic = desc;                                                                         
+</span><span class="methodLine"><i>0069</i>     }                                                                                       
+</span><span class="outsideLine"><i>0070</i>                                                                                             
+</span><span class="outsideLine"><i>0071</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0072</i>      * A convenience method that checks the flag bit.                                       
+</span><span class="outsideLine"><i>0073</i>      *                                                                                      
+</span><span class="outsideLine"><i>0074</i>      * @return The flag value.                                                              
+</span><span class="outsideLine"><i>0075</i>      */                                                                                     
+</span><span class="outsideLine"><i>0076</i>     public boolean isFixedPitch()                                                           
+</span><span class="methodLine"><i>0077</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 690</span>{                                                                                       
+</span><span class="methodLine"><i>0078</i>         return isFlagBitOn( FLAG_FIXED_PITCH );                                             
+</span><span class="methodLine"><i>0079</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0080</i>                                                                                             
+</span><span class="outsideLine"><i>0081</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0082</i>      * A convenience method that sets the flag bit.                                         
+</span><span class="outsideLine"><i>0083</i>      *                                                                                      
+</span><span class="outsideLine"><i>0084</i>      * @param flag The flag value.                                                          
+</span><span class="outsideLine"><i>0085</i>      */                                                                                     
+</span><span class="outsideLine"><i>0086</i>     public void setFixedPitch( boolean flag )                                               
+</span><span class="methodLine"><i>0087</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 695</span>{                                                                                       
+</span><span class="methodLine"><i>0088</i>         setFlagBit( FLAG_FIXED_PITCH, flag );                                               
+</span><span class="methodLine"><i>0089</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0090</i>                                                                                             
+</span><span class="outsideLine"><i>0091</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0092</i>      * A convenience method that checks the flag bit.                                       
+</span><span class="outsideLine"><i>0093</i>      *                                                                                      
+</span><span class="outsideLine"><i>0094</i>      * @return The flag value.                                                              
+</span><span class="outsideLine"><i>0095</i>      */                                                                                     
+</span><span class="outsideLine"><i>0096</i>     public boolean isSerif()                                                                
+</span><span class="methodLine"><i>0097</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 700</span>{                                                                                       
+</span><span class="methodLine"><i>0098</i>         return isFlagBitOn( FLAG_SERIF );                                                   
+</span><span class="methodLine"><i>0099</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0100</i>                                                                                             
+</span><span class="outsideLine"><i>0101</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0102</i>      * A convenience method that sets the flag bit.                                         
+</span><span class="outsideLine"><i>0103</i>      *                                                                                      
+</span><span class="outsideLine"><i>0104</i>      * @param flag The flag value.                                                          
+</span><span class="outsideLine"><i>0105</i>      */                                                                                     
+</span><span class="outsideLine"><i>0106</i>     public void setSerif( boolean flag )                                                    
+</span><span class="methodLine"><i>0107</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 705</span>{                                                                                       
+</span><span class="methodLine"><i>0108</i>         setFlagBit( FLAG_SERIF, flag );                                                     
+</span><span class="methodLine"><i>0109</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0110</i>                                                                                             
+</span><span class="outsideLine"><i>0111</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0112</i>      * A convenience method that checks the flag bit.                                       
+</span><span class="outsideLine"><i>0113</i>      *                                                                                      
+</span><span class="outsideLine"><i>0114</i>      * @return The flag value.                                                              
+</span><span class="outsideLine"><i>0115</i>      */                                                                                     
+</span><span class="outsideLine"><i>0116</i>     public boolean isSymbolic()                                                             
+</span><span class="methodLine"><i>0117</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 710</span>{                                                                                       
+</span><span class="methodLine"><i>0118</i>         return isFlagBitOn( FLAG_SYMBOLIC );                                                
+</span><span class="methodLine"><i>0119</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0120</i>                                                                                             
+</span><span class="outsideLine"><i>0121</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0122</i>      * A convenience method that sets the flag bit.                                         
+</span><span class="outsideLine"><i>0123</i>      *                                                                                      
+</span><span class="outsideLine"><i>0124</i>      * @param flag The flag value.                                                          
+</span><span class="outsideLine"><i>0125</i>      */                                                                                     
+</span><span class="outsideLine"><i>0126</i>     public void setSymbolic( boolean flag )                                                 
+</span><span class="methodLine"><i>0127</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 715</span>{                                                                                       
+</span><span class="methodLine"><i>0128</i>         setFlagBit( FLAG_SYMBOLIC, flag );                                                  
+</span><span class="methodLine"><i>0129</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0130</i>                                                                                             
+</span><span class="outsideLine"><i>0131</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0132</i>      * A convenience method that checks the flag bit.                                       
+</span><span class="outsideLine"><i>0133</i>      *                                                                                      
+</span><span class="outsideLine"><i>0134</i>      * @return The flag value.                                                              
+</span><span class="outsideLine"><i>0135</i>      */                                                                                     
+</span><span class="outsideLine"><i>0136</i>     public boolean isScript()                                                               
+</span><span class="methodLine"><i>0137</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 720</span>{                                                                                       
+</span><span class="methodLine"><i>0138</i>         return isFlagBitOn( FLAG_SCRIPT );                                                  
+</span><span class="methodLine"><i>0139</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0140</i>                                                                                             
+</span><span class="outsideLine"><i>0141</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0142</i>      * A convenience method that sets the flag bit.                                         
+</span><span class="outsideLine"><i>0143</i>      *                                                                                      
+</span><span class="outsideLine"><i>0144</i>      * @param flag The flag value.                                                          
+</span><span class="outsideLine"><i>0145</i>      */                                                                                     
+</span><span class="outsideLine"><i>0146</i>     public void setScript( boolean flag )                                                   
+</span><span class="methodLine"><i>0147</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 725</span>{                                                                                       
+</span><span class="methodLine"><i>0148</i>         setFlagBit( FLAG_SCRIPT, flag );                                                    
+</span><span class="methodLine"><i>0149</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0150</i>                                                                                             
+</span><span class="outsideLine"><i>0151</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0152</i>      * A convenience method that checks the flag bit.                                       
+</span><span class="outsideLine"><i>0153</i>      *                                                                                      
+</span><span class="outsideLine"><i>0154</i>      * @return The flag value.                                                              
+</span><span class="outsideLine"><i>0155</i>      */                                                                                     
+</span><span class="outsideLine"><i>0156</i>     public boolean isNonSymbolic()                                                          
+</span><span class="methodLine"><i>0157</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 730</span>{                                                                                       
+</span><span class="methodLine"><i>0158</i>         return isFlagBitOn( FLAG_NON_SYMBOLIC );                                            
+</span><span class="methodLine"><i>0159</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0160</i>                                                                                             
+</span><span class="outsideLine"><i>0161</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0162</i>      * A convenience method that sets the flag bit.                                         
+</span><span class="outsideLine"><i>0163</i>      *                                                                                      
+</span><span class="outsideLine"><i>0164</i>      * @param flag The flag value.                                                          
+</span><span class="outsideLine"><i>0165</i>      */                                                                                     
+</span><span class="outsideLine"><i>0166</i>     public void setNonSymbolic( boolean flag )                                              
+</span><span class="methodLine"><i>0167</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 735</span>{                                                                                       
+</span><span class="methodLine"><i>0168</i>         setFlagBit( FLAG_NON_SYMBOLIC, flag );                                              
+</span><span class="methodLine"><i>0169</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0170</i>                                                                                             
+</span><span class="outsideLine"><i>0171</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0172</i>      * A convenience method that checks the flag bit.                                       
+</span><span class="outsideLine"><i>0173</i>      *                                                                                      
+</span><span class="outsideLine"><i>0174</i>      * @return The flag value.                                                              
+</span><span class="outsideLine"><i>0175</i>      */                                                                                     
+</span><span class="outsideLine"><i>0176</i>     public boolean isItalic()                                                               
+</span><span class="methodLine"><i>0177</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 740</span>{                                                                                       
+</span><span class="methodLine"><i>0178</i>         return isFlagBitOn( FLAG_ITALIC );                                                  
+</span><span class="methodLine"><i>0179</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0180</i>                                                                                             
+</span><span class="outsideLine"><i>0181</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0182</i>      * A convenience method that sets the flag bit.                                         
+</span><span class="outsideLine"><i>0183</i>      *                                                                                      
+</span><span class="outsideLine"><i>0184</i>      * @param flag The flag value.                                                          
+</span><span class="outsideLine"><i>0185</i>      */                                                                                     
+</span><span class="outsideLine"><i>0186</i>     public void setItalic( boolean flag )                                                   
+</span><span class="methodLine"><i>0187</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 745</span>{                                                                                       
+</span><span class="methodLine"><i>0188</i>         setFlagBit( FLAG_ITALIC, flag );                                                    
+</span><span class="methodLine"><i>0189</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0190</i>                                                                                             
+</span><span class="outsideLine"><i>0191</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0192</i>      * A convenience method that checks the flag bit.                                       
+</span><span class="outsideLine"><i>0193</i>      *                                                                                      
+</span><span class="outsideLine"><i>0194</i>      * @return The flag value.                                                              
+</span><span class="outsideLine"><i>0195</i>      */                                                                                     
+</span><span class="outsideLine"><i>0196</i>     public boolean isAllCap()                                                               
+</span><span class="methodLine"><i>0197</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 750</span>{                                                                                       
+</span><span class="methodLine"><i>0198</i>         return isFlagBitOn( FLAG_ALL_CAP);                                                  
+</span><span class="methodLine"><i>0199</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0200</i>                                                                                             
+</span><span class="outsideLine"><i>0201</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0202</i>      * A convenience method that sets the flag bit.                                         
+</span><span class="outsideLine"><i>0203</i>      *                                                                                      
+</span><span class="outsideLine"><i>0204</i>      * @param flag The flag value.                                                          
+</span><span class="outsideLine"><i>0205</i>      */                                                                                     
+</span><span class="outsideLine"><i>0206</i>     public void setAllCap( boolean flag )                                                   
+</span><span class="methodLine"><i>0207</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 755</span>{                                                                                       
+</span><span class="methodLine"><i>0208</i>         setFlagBit( FLAG_ALL_CAP, flag );                                                   
+</span><span class="methodLine"><i>0209</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0210</i>                                                                                             
+</span><span class="outsideLine"><i>0211</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0212</i>      * A convenience method that checks the flag bit.                                       
+</span><span class="outsideLine"><i>0213</i>      *                                                                                      
+</span><span class="outsideLine"><i>0214</i>      * @return The flag value.                                                              
+</span><span class="outsideLine"><i>0215</i>      */                                                                                     
+</span><span class="outsideLine"><i>0216</i>     public boolean isSmallCap()                                                             
+</span><span class="methodLine"><i>0217</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 760</span>{                                                                                       
+</span><span class="methodLine"><i>0218</i>         return isFlagBitOn( FLAG_SMALL_CAP );                                               
+</span><span class="methodLine"><i>0219</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0220</i>                                                                                             
+</span><span class="outsideLine"><i>0221</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0222</i>      * A convenience method that sets the flag bit.                                         
+</span><span class="outsideLine"><i>0223</i>      *                                                                                      
+</span><span class="outsideLine"><i>0224</i>      * @param flag The flag value.                                                          
+</span><span class="outsideLine"><i>0225</i>      */                                                                                     
+</span><span class="outsideLine"><i>0226</i>     public void setSmallCap( boolean flag )                                                 
+</span><span class="methodLine"><i>0227</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 765</span>{                                                                                       
+</span><span class="methodLine"><i>0228</i>         setFlagBit( FLAG_SMALL_CAP, flag );                                                 
+</span><span class="methodLine"><i>0229</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0230</i>                                                                                             
+</span><span class="outsideLine"><i>0231</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0232</i>      * A convenience method that checks the flag bit.                                       
+</span><span class="outsideLine"><i>0233</i>      *                                                                                      
+</span><span class="outsideLine"><i>0234</i>      * @return The flag value.                                                              
+</span><span class="outsideLine"><i>0235</i>      */                                                                                     
+</span><span class="outsideLine"><i>0236</i>     public boolean isForceBold()                                                            
+</span><span class="methodLine"><i>0237</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 770</span>{                                                                                       
+</span><span class="methodLine"><i>0238</i>         return isFlagBitOn( FLAG_FORCE_BOLD );                                              
+</span><span class="methodLine"><i>0239</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0240</i>                                                                                             
+</span><span class="outsideLine"><i>0241</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0242</i>      * A convenience method that sets the flag bit.                                         
+</span><span class="outsideLine"><i>0243</i>      *                                                                                      
+</span><span class="outsideLine"><i>0244</i>      * @param flag The flag value.                                                          
+</span><span class="outsideLine"><i>0245</i>      */                                                                                     
+</span><span class="outsideLine"><i>0246</i>     public void setForceBold( boolean flag )                                                
+</span><span class="methodLine"><i>0247</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 775</span>{                                                                                       
+</span><span class="methodLine"><i>0248</i>         setFlagBit( FLAG_FORCE_BOLD, flag );                                                
+</span><span class="methodLine"><i>0249</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0250</i>                                                                                             
+</span><span class="outsideLine"><i>0251</i>     private boolean isFlagBitOn( int bit )                                                  
+</span><span class="methodLine"><i>0252</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 780</span>{                                                                                       
+</span><span class="methodLine"><i>0253</i>         return (getFlags() <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: | 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 3113</span>&</span> bit) <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2019</span>!=</span> 0;                                                     
+</span><span class="methodLine"><i>0254</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0255</i>                                                                                             
+</span><span class="outsideLine"><i>0256</i>     private void setFlagBit( int bit, boolean value )                                       
+</span><span class="methodLine"><i>0257</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 785</span>{                                                                                       
+</span><span class="methodLine"><i>0258</i>         int flags = getFlags();                                                             
+</span><span class="methodLine"><i>0259</i>         if( value )                                                                         
+</span><span class="methodLine"><i>0260</i>         {                                                                                   
+</span><span class="methodLine"><i>0261</i>             flags = flags <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: ^ 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 4052</span>|</span> bit;                                                            
+</span><span class="methodLine"><i>0262</i>         }                                                                                   
+</span><span class="methodLine"><i>0263</i>         else                                                                                
+</span><span class="methodLine"><i>0264</i>         {                                                                                   
+</span><span class="methodLine"><i>0265</i>             flags = flags <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: | 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 4055</span>&</span> (~bit);                                                         
+</span><span class="methodLine"><i>0266</i>         }                                                                                   
+</span><span class="methodLine"><i>0267</i>         setFlags( flags );                                                                  
+</span><span class="methodLine"><i>0268</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0269</i>                                                                                             
+</span><span class="outsideLine"><i>0270</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0271</i>      * Convert this standard java object to a COS object.                                   
+</span><span class="outsideLine"><i>0272</i>      *                                                                                      
+</span><span class="outsideLine"><i>0273</i>      * @return The cos object that matches this Java object.                                
+</span><span class="outsideLine"><i>0274</i>      */                                                                                     
+</span><span class="outsideLine"><i>0275</i>     @Override                                                                               
+</span><span class="outsideLine"><i>0276</i>     public COSDictionary getCOSObject()                                                     
+</span><span class="methodLine"><i>0277</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 791</span>{                                                                                       
+</span><span class="methodLine"><i>0278</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1792</span>return dic;</span>                                                                         
+</span><span class="methodLine"><i>0279</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0280</i>                                                                                             
+</span><span class="outsideLine"><i>0281</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0282</i>      * Get the font name.                                                                   
+</span><span class="outsideLine"><i>0283</i>      *                                                                                      
+</span><span class="outsideLine"><i>0284</i>      * @return The name of the font.                                                        
+</span><span class="outsideLine"><i>0285</i>      */                                                                                     
+</span><span class="outsideLine"><i>0286</i>     public String getFontName()                                                             
+</span><span class="methodLine"><i>0287</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 796</span>{                                                                                       
+</span><span class="methodLine"><i>0288</i>         String retval = null;                                                               
+</span><span class="methodLine"><i>0289</i>         COSBase base = dic.getDictionaryObject(COSName.FONT_NAME);                          
+</span><span class="methodLine"><i>0290</i>         if (base instanceof COSName)                                                        
+</span><span class="methodLine"><i>0291</i>         {                                                                                   
+</span><span class="methodLine"><i>0292</i>             retval = ((COSName) base).getName();                                            
+</span><span class="methodLine"><i>0293</i>         }                                                                                   
+</span><span class="methodLine"><i>0294</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1796</span>return retval;</span>                                                                      
+</span><span class="methodLine"><i>0295</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0296</i>                                                                                             
+</span><span class="outsideLine"><i>0297</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0298</i>      * This will set the font name.                                                         
+</span><span class="outsideLine"><i>0299</i>      *                                                                                      
+</span><span class="outsideLine"><i>0300</i>      * @param fontName The new name for the font.                                           
+</span><span class="outsideLine"><i>0301</i>      */                                                                                     
+</span><span class="outsideLine"><i>0302</i>     public void setFontName( String fontName )                                              
+</span><span class="methodLine"><i>0303</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 801</span>{</span>                                                                                       
+</span><span class="methodLine"><i>0304</i>         COSName name = null;                                                                
+</span><span class="methodLine"><i>0305</i>         if( <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2404</span>fontName <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2404</span>!=</span> null</span> )                                                              
+</span><span class="methodLine"><i>0306</i>         {                                                                                   
+</span><span class="methodLine"><i>0307</i>             name = COSName.getPDFName( fontName );                                          
+</span><span class="methodLine"><i>0308</i>         }                                                                                   
+</span><span class="methodLine"><i>0309</i>         dic.setItem( COSName.FONT_NAME, name );                                             
+</span><span class="methodLine"><i>0310</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0311</i>                                                                                             
+</span><span class="outsideLine"><i>0312</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0313</i>      * A string representing the preferred font family.                                     
+</span><span class="outsideLine"><i>0314</i>      *                                                                                      
+</span><span class="outsideLine"><i>0315</i>      * @return The font family.                                                             
+</span><span class="outsideLine"><i>0316</i>      */                                                                                     
+</span><span class="outsideLine"><i>0317</i>     public String getFontFamily()                                                           
+</span><span class="methodLine"><i>0318</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 806</span>{                                                                                       
+</span><span class="methodLine"><i>0319</i>         String retval = null;                                                               
+</span><span class="methodLine"><i>0320</i>         COSString name = (COSString)dic.getDictionaryObject( COSName.FONT_FAMILY );         
+</span><span class="methodLine"><i>0321</i>         if( <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2413</span>name <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2413</span>!=</span> null</span> )                                                                  
+</span><span class="methodLine"><i>0322</i>         {                                                                                   
+</span><span class="methodLine"><i>0323</i>             retval = name.getString();                                                      
+</span><span class="methodLine"><i>0324</i>         }                                                                                   
+</span><span class="methodLine"><i>0325</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1805</span>return retval;</span>                                                                      
+</span><span class="methodLine"><i>0326</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0327</i>                                                                                             
+</span><span class="outsideLine"><i>0328</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0329</i>      * This will set the font family.                                                       
+</span><span class="outsideLine"><i>0330</i>      *                                                                                      
+</span><span class="outsideLine"><i>0331</i>      * @param fontFamily The font family.                                                   
+</span><span class="outsideLine"><i>0332</i>      */                                                                                     
+</span><span class="outsideLine"><i>0333</i>     public void setFontFamily( String fontFamily )                                          
+</span><span class="methodLine"><i>0334</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 811</span>{</span>                                                                                       
+</span><span class="methodLine"><i>0335</i>         COSString name = null;                                                              
+</span><span class="methodLine"><i>0336</i>         if( <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2421</span>fontFamily <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2421</span>!=</span> null</span> )                                                            
+</span><span class="methodLine"><i>0337</i>         {                                                                                   
+</span><span class="methodLine"><i>0338</i>             name = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4234</span>new COSString( fontFamily )</span>;                                             
+</span><span class="methodLine"><i>0339</i>         }                                                                                   
+</span><span class="methodLine"><i>0340</i>         dic.setItem( COSName.FONT_FAMILY, name );                                           
+</span><span class="methodLine"><i>0341</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0342</i>                                                                                             
+</span><span class="outsideLine"><i>0343</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0344</i>      * The weight of the font.  According to the PDF spec "possible values are              
+</span><span class="outsideLine"><i>0345</i>      * 100, 200, 300, 400, 500, 600, 700, 800 or 900"  Where a higher number is             
+</span><span class="outsideLine"><i>0346</i>      * more weight and appears to be more bold.                                             
+</span><span class="outsideLine"><i>0347</i>      *                                                                                      
+</span><span class="outsideLine"><i>0348</i>      * @return The font weight.                                                             
+</span><span class="outsideLine"><i>0349</i>      */                                                                                     
+</span><span class="outsideLine"><i>0350</i>     public float getFontWeight()                                                            
+</span><span class="methodLine"><i>0351</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 816</span>{                                                                                       
+</span><span class="methodLine"><i>0352</i>         return dic.getFloat( COSName.FONT_WEIGHT,0 );                                       
+</span><span class="methodLine"><i>0353</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0354</i>                                                                                             
+</span><span class="outsideLine"><i>0355</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0356</i>      * Set the weight of the font.                                                          
+</span><span class="outsideLine"><i>0357</i>      *                                                                                      
+</span><span class="outsideLine"><i>0358</i>      * @param fontWeight The new weight of the font.                                        
+</span><span class="outsideLine"><i>0359</i>      */                                                                                     
+</span><span class="outsideLine"><i>0360</i>     public void setFontWeight( float fontWeight )                                           
+</span><span class="methodLine"><i>0361</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 821</span>{                                                                                       
+</span><span class="methodLine"><i>0362</i>         dic.setFloat( COSName.FONT_WEIGHT, fontWeight );                                    
+</span><span class="methodLine"><i>0363</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0364</i>                                                                                             
+</span><span class="outsideLine"><i>0365</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0366</i>      * A string representing the preferred font stretch.                                    
+</span><span class="outsideLine"><i>0367</i>      * According to the PDF Spec:                                                           
+</span><span class="outsideLine"><i>0368</i>      * The font stretch value; it must be one of the following (ordered from                
+</span><span class="outsideLine"><i>0369</i>      * narrowest to widest): UltraCondensed, ExtraCondensed, Condensed, SemiCondensed,      
+</span><span class="outsideLine"><i>0370</i>      * Normal, SemiExpanded, Expanded, ExtraExpanded or UltraExpanded.                      
+</span><span class="outsideLine"><i>0371</i>      *                                                                                      
+</span><span class="outsideLine"><i>0372</i>      * @return The stretch of the font.                                                     
+</span><span class="outsideLine"><i>0373</i>      */                                                                                     
+</span><span class="outsideLine"><i>0374</i>     public String getFontStretch()                                                          
+</span><span class="methodLine"><i>0375</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 826</span>{                                                                                       
+</span><span class="methodLine"><i>0376</i>         String retval = null;                                                               
+</span><span class="methodLine"><i>0377</i>         COSName name = (COSName)dic.getDictionaryObject( COSName.FONT_STRETCH );            
+</span><span class="methodLine"><i>0378</i>         if( <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2436</span>name <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2436</span>!=</span> null</span> )                                                                  
+</span><span class="methodLine"><i>0379</i>         {                                                                                   
+</span><span class="methodLine"><i>0380</i>             retval = name.getName();                                                        
+</span><span class="methodLine"><i>0381</i>         }                                                                                   
+</span><span class="methodLine"><i>0382</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1818</span>return retval;</span>                                                                      
+</span><span class="methodLine"><i>0383</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0384</i>                                                                                             
+</span><span class="outsideLine"><i>0385</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0386</i>      * This will set the font stretch.                                                      
+</span><span class="outsideLine"><i>0387</i>      *                                                                                      
+</span><span class="outsideLine"><i>0388</i>      * @param fontStretch The new stretch for the font.                                     
+</span><span class="outsideLine"><i>0389</i>      */                                                                                     
+</span><span class="outsideLine"><i>0390</i>     public void setFontStretch( String fontStretch )                                        
+</span><span class="methodLine"><i>0391</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 831</span>{</span>                                                                                       
+</span><span class="methodLine"><i>0392</i>         COSName name = null;                                                                
+</span><span class="methodLine"><i>0393</i>         if( <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2444</span>fontStretch <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2444</span>!=</span> null</span> )                                                           
+</span><span class="methodLine"><i>0394</i>         {                                                                                   
+</span><span class="methodLine"><i>0395</i>             name = COSName.getPDFName( fontStretch );                                       
+</span><span class="methodLine"><i>0396</i>         }                                                                                   
+</span><span class="methodLine"><i>0397</i>         dic.setItem( COSName.FONT_STRETCH, name );                                          
+</span><span class="methodLine"><i>0398</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0399</i>                                                                                             
+</span><span class="outsideLine"><i>0400</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0401</i>      * This will get the font flags.                                                        
+</span><span class="outsideLine"><i>0402</i>      *                                                                                      
+</span><span class="outsideLine"><i>0403</i>      * @return The font flags.                                                              
+</span><span class="outsideLine"><i>0404</i>      */                                                                                     
+</span><span class="outsideLine"><i>0405</i>     public int getFlags()                                                                   
+</span><span class="methodLine"><i>0406</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 836</span>{                                                                                       
+</span><span class="methodLine"><i>0407</i>         if (flags <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2449</span>==</span> <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 2789</span>-</span>1)                                                                    
+</span><span class="methodLine"><i>0408</i>         {                                                                                   
+</span><span class="methodLine"><i>0409</i>             flags = dic.getInt( COSName.FLAGS, 0 );                                         
+</span><span class="methodLine"><i>0410</i>         }                                                                                   
+</span><span class="methodLine"><i>0411</i>         return flags;                                                                       
+</span><span class="methodLine"><i>0412</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0413</i>                                                                                             
+</span><span class="outsideLine"><i>0414</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0415</i>      * This will set the font flags.                                                        
+</span><span class="outsideLine"><i>0416</i>      *                                                                                      
+</span><span class="outsideLine"><i>0417</i>      * @param flags The new font flags.                                                     
+</span><span class="outsideLine"><i>0418</i>      */                                                                                     
+</span><span class="outsideLine"><i>0419</i>     public void setFlags( int flags )                                                       
+</span><span class="methodLine"><i>0420</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 841</span>{                                                                                       
+</span><span class="methodLine"><i>0421</i>         dic.setInt( COSName.FLAGS, flags );                                                 
+</span><span class="methodLine"><i>0422</i>         this.flags = flags;                                                                 
+</span><span class="methodLine"><i>0423</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0424</i>                                                                                             
+</span><span class="outsideLine"><i>0425</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0426</i>      * This will get the fonts bounding box.                                                
+</span><span class="outsideLine"><i>0427</i>      *                                                                                      
+</span><span class="outsideLine"><i>0428</i>      * @return The fonts bounding box.                                                      
+</span><span class="outsideLine"><i>0429</i>      */                                                                                     
+</span><span class="outsideLine"><i>0430</i>     public PDRectangle getFontBoundingBox()                                                 
+</span><span class="methodLine"><i>0431</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 846</span>{                                                                                       
+</span><span class="methodLine"><i>0432</i>         COSArray rect = dic.getCOSArray(COSName.FONT_BBOX);                                 
+</span><span class="methodLine"><i>0433</i>         PDRectangle retval = null;                                                          
+</span><span class="methodLine"><i>0434</i>         if( <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2461</span>rect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2461</span>!=</span> null</span> )                                                                  
+</span><span class="methodLine"><i>0435</i>         {                                                                                   
+</span><span class="methodLine"><i>0436</i>             retval = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4263</span>new PDRectangle( rect )</span>;                                               
+</span><span class="methodLine"><i>0437</i>         }                                                                                   
+</span><span class="methodLine"><i>0438</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1833</span>return retval;</span>                                                                      
+</span><span class="methodLine"><i>0439</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0440</i>                                                                                             
+</span><span class="outsideLine"><i>0441</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0442</i>      * Set the fonts bounding box.                                                          
+</span><span class="outsideLine"><i>0443</i>      *                                                                                      
+</span><span class="outsideLine"><i>0444</i>      * @param rect The new bounding box.                                                    
+</span><span class="outsideLine"><i>0445</i>      */                                                                                     
+</span><span class="outsideLine"><i>0446</i>     public void setFontBoundingBox( PDRectangle rect )                                      
+</span><span class="methodLine"><i>0447</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 851</span>{</span>                                                                                       
+</span><span class="methodLine"><i>0448</i>         COSArray array = null;                                                              
+</span><span class="methodLine"><i>0449</i>         if( <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2469</span>rect <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2469</span>!=</span> null</span> )                                                                  
+</span><span class="methodLine"><i>0450</i>         {                                                                                   
+</span><span class="methodLine"><i>0451</i>             array = rect.getCOSArray();                                                     
+</span><span class="methodLine"><i>0452</i>         }                                                                                   
+</span><span class="methodLine"><i>0453</i>         dic.setItem( COSName.FONT_BBOX, array );                                            
+</span><span class="methodLine"><i>0454</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0455</i>                                                                                             
+</span><span class="outsideLine"><i>0456</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0457</i>      * This will get the italic angle for the font.                                         
+</span><span class="outsideLine"><i>0458</i>      *                                                                                      
+</span><span class="outsideLine"><i>0459</i>      * @return The italic angle.                                                            
+</span><span class="outsideLine"><i>0460</i>      */                                                                                     
+</span><span class="outsideLine"><i>0461</i>     public float getItalicAngle()                                                           
+</span><span class="methodLine"><i>0462</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 856</span>{                                                                                       
+</span><span class="methodLine"><i>0463</i>         return dic.getFloat( COSName.ITALIC_ANGLE, 0 );                                     
+</span><span class="methodLine"><i>0464</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0465</i>                                                                                             
+</span><span class="outsideLine"><i>0466</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0467</i>      * This will set the italic angle for the font.                                         
+</span><span class="outsideLine"><i>0468</i>      *                                                                                      
+</span><span class="outsideLine"><i>0469</i>      * @param angle The new italic angle for the font.                                      
+</span><span class="outsideLine"><i>0470</i>      */                                                                                     
+</span><span class="outsideLine"><i>0471</i>     public void setItalicAngle( float angle )                                               
+</span><span class="methodLine"><i>0472</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 861</span>{                                                                                       
+</span><span class="methodLine"><i>0473</i>         dic.setFloat( COSName.ITALIC_ANGLE, angle );                                        
+</span><span class="methodLine"><i>0474</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0475</i>                                                                                             
+</span><span class="outsideLine"><i>0476</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0477</i>      * This will get the ascent for the font.                                               
+</span><span class="outsideLine"><i>0478</i>      *                                                                                      
+</span><span class="outsideLine"><i>0479</i>      * @return The ascent.                                                                  
+</span><span class="outsideLine"><i>0480</i>      */                                                                                     
+</span><span class="outsideLine"><i>0481</i>     public float getAscent()                                                                
+</span><span class="methodLine"><i>0482</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 866</span>{                                                                                       
+</span><span class="methodLine"><i>0483</i>         return dic.getFloat( COSName.ASCENT, 0 );                                           
+</span><span class="methodLine"><i>0484</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0485</i>                                                                                             
+</span><span class="outsideLine"><i>0486</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0487</i>      * This will set the ascent for the font.                                               
+</span><span class="outsideLine"><i>0488</i>      *                                                                                      
+</span><span class="outsideLine"><i>0489</i>      * @param ascent The new ascent for the font.                                           
+</span><span class="outsideLine"><i>0490</i>      */                                                                                     
+</span><span class="outsideLine"><i>0491</i>     public void setAscent( float ascent )                                                   
+</span><span class="methodLine"><i>0492</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 871</span>{                                                                                       
+</span><span class="methodLine"><i>0493</i>         dic.setFloat( COSName.ASCENT, ascent );                                             
+</span><span class="methodLine"><i>0494</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0495</i>                                                                                             
+</span><span class="outsideLine"><i>0496</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0497</i>      * This will get the descent for the font.                                              
+</span><span class="outsideLine"><i>0498</i>      *                                                                                      
+</span><span class="outsideLine"><i>0499</i>      * @return The descent.                                                                 
+</span><span class="outsideLine"><i>0500</i>      */                                                                                     
+</span><span class="outsideLine"><i>0501</i>     public float getDescent()                                                               
+</span><span class="methodLine"><i>0502</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 876</span>{                                                                                       
+</span><span class="methodLine"><i>0503</i>         return dic.getFloat( COSName.DESCENT, 0 );                                          
+</span><span class="methodLine"><i>0504</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0505</i>                                                                                             
+</span><span class="outsideLine"><i>0506</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0507</i>      * This will set the descent for the font.                                              
+</span><span class="outsideLine"><i>0508</i>      *                                                                                      
+</span><span class="outsideLine"><i>0509</i>      * @param descent The new descent for the font.                                         
+</span><span class="outsideLine"><i>0510</i>      */                                                                                     
+</span><span class="outsideLine"><i>0511</i>     public void setDescent( float descent )                                                 
+</span><span class="methodLine"><i>0512</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 881</span>{                                                                                       
+</span><span class="methodLine"><i>0513</i>         dic.setFloat( COSName.DESCENT, descent );                                           
+</span><span class="methodLine"><i>0514</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0515</i>                                                                                             
+</span><span class="outsideLine"><i>0516</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0517</i>      * This will get the leading for the font.                                              
+</span><span class="outsideLine"><i>0518</i>      *                                                                                      
+</span><span class="outsideLine"><i>0519</i>      * @return The leading.                                                                 
+</span><span class="outsideLine"><i>0520</i>      */                                                                                     
+</span><span class="outsideLine"><i>0521</i>     public float getLeading()                                                               
+</span><span class="methodLine"><i>0522</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 886</span>{                                                                                       
+</span><span class="methodLine"><i>0523</i>         return dic.getFloat( COSName.LEADING, 0 );                                          
+</span><span class="methodLine"><i>0524</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0525</i>                                                                                             
+</span><span class="outsideLine"><i>0526</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0527</i>      * This will set the leading for the font.                                              
+</span><span class="outsideLine"><i>0528</i>      *                                                                                      
+</span><span class="outsideLine"><i>0529</i>      * @param leading The new leading for the font.                                         
+</span><span class="outsideLine"><i>0530</i>      */                                                                                     
+</span><span class="outsideLine"><i>0531</i>     public void setLeading( float leading )                                                 
+</span><span class="methodLine"><i>0532</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 891</span>{                                                                                       
+</span><span class="methodLine"><i>0533</i>         dic.setFloat( COSName.LEADING, leading );                                           
+</span><span class="methodLine"><i>0534</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0535</i>                                                                                             
+</span><span class="outsideLine"><i>0536</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0537</i>      * This will get the CapHeight for the font.                                            
+</span><span class="outsideLine"><i>0538</i>      *                                                                                      
+</span><span class="outsideLine"><i>0539</i>      * @return The cap height.                                                              
+</span><span class="outsideLine"><i>0540</i>      */                                                                                     
+</span><span class="outsideLine"><i>0541</i>     public float getCapHeight()                                                             
+</span><span class="methodLine"><i>0542</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 896</span>{                                                                                       
+</span><span class="methodLine"><i>0543</i>         if(capHeight<span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2498</span>==</span>Float.NEGATIVE_INFINITY)                                              
+</span><span class="methodLine"><i>0544</i>         {                                                                                   
+</span><span class="outsideLine"><i>0545</i>             /* We observed a negative value being returned with                             
+</span><span class="outsideLine"><i>0546</i>              * the Scheherazade font. PDFBOX-429 was logged for this.                       
+</span><span class="outsideLine"><i>0547</i>              * We are not sure if returning the absolute value                              
+</span><span class="outsideLine"><i>0548</i>              * is the correct fix, but it seems to work.  */                                
+</span><span class="methodLine"><i>0549</i>             capHeight = java.lang.Math.abs(dic.getFloat( COSName.CAP_HEIGHT, 0 ));          
+</span><span class="methodLine"><i>0550</i>         }                                                                                   
+</span><span class="methodLine"><i>0551</i>         return capHeight;                                                                   
+</span><span class="methodLine"><i>0552</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0553</i>                                                                                             
+</span><span class="outsideLine"><i>0554</i>                                                                                             
+</span><span class="outsideLine"><i>0555</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0556</i>      * This will set the cap height for the font.                                           
+</span><span class="outsideLine"><i>0557</i>      *                                                                                      
+</span><span class="outsideLine"><i>0558</i>      * @param capHeight The new cap height for the font.                                    
+</span><span class="outsideLine"><i>0559</i>      */                                                                                     
+</span><span class="outsideLine"><i>0560</i>     public void setCapHeight( float capHeight )                                             
+</span><span class="methodLine"><i>0561</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 901</span>{                                                                                       
+</span><span class="methodLine"><i>0562</i>         dic.setFloat( COSName.CAP_HEIGHT, capHeight );                                      
+</span><span class="methodLine"><i>0563</i>         this.capHeight = capHeight;                                                         
+</span><span class="methodLine"><i>0564</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0565</i>                                                                                             
+</span><span class="outsideLine"><i>0566</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0567</i>      * This will get the x height for the font.                                             
+</span><span class="outsideLine"><i>0568</i>      *                                                                                      
+</span><span class="outsideLine"><i>0569</i>      * @return The x height.                                                                
+</span><span class="outsideLine"><i>0570</i>      */                                                                                     
+</span><span class="outsideLine"><i>0571</i>     public float getXHeight()                                                               
+</span><span class="methodLine"><i>0572</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 906</span>{                                                                                       
+</span><span class="methodLine"><i>0573</i>         if(xHeight<span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2506</span>==</span>Float.NEGATIVE_INFINITY)                                                
+</span><span class="methodLine"><i>0574</i>         {                                                                                   
+</span><span class="outsideLine"><i>0575</i>             /* We observed a negative value being returned with                             
+</span><span class="outsideLine"><i>0576</i>              * the Scheherazade font. PDFBOX-429 was logged for this.                       
+</span><span class="outsideLine"><i>0577</i>              * We are not sure if returning the absolute value                              
+</span><span class="outsideLine"><i>0578</i>              * is the correct fix, but it seems to work.  */                                
+</span><span class="methodLine"><i>0579</i>             xHeight = java.lang.Math.abs(dic.getFloat( COSName.XHEIGHT, 0 ));               
+</span><span class="methodLine"><i>0580</i>         }                                                                                   
+</span><span class="methodLine"><i>0581</i>         return xHeight;                                                                     
+</span><span class="methodLine"><i>0582</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0583</i>                                                                                             
+</span><span class="outsideLine"><i>0584</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0585</i>      * This will set the x height for the font.                                             
+</span><span class="outsideLine"><i>0586</i>      *                                                                                      
+</span><span class="outsideLine"><i>0587</i>      * @param xHeight The new x height for the font.                                        
+</span><span class="outsideLine"><i>0588</i>      */                                                                                     
+</span><span class="outsideLine"><i>0589</i>     public void setXHeight( float xHeight )                                                 
+</span><span class="methodLine"><i>0590</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 911</span>{                                                                                       
+</span><span class="methodLine"><i>0591</i>         dic.setFloat( COSName.XHEIGHT, xHeight );                                           
+</span><span class="methodLine"><i>0592</i>         this.xHeight = xHeight;                                                             
+</span><span class="methodLine"><i>0593</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0594</i>                                                                                             
+</span><span class="outsideLine"><i>0595</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0596</i>      * This will get the stemV for the font.                                                
+</span><span class="outsideLine"><i>0597</i>      *                                                                                      
+</span><span class="outsideLine"><i>0598</i>      * @return The stem v value.                                                            
+</span><span class="outsideLine"><i>0599</i>      */                                                                                     
+</span><span class="outsideLine"><i>0600</i>     public float getStemV()                                                                 
+</span><span class="methodLine"><i>0601</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 916</span>{                                                                                       
+</span><span class="methodLine"><i>0602</i>         return dic.getFloat( COSName.STEM_V, 0 );                                           
+</span><span class="methodLine"><i>0603</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0604</i>                                                                                             
+</span><span class="outsideLine"><i>0605</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0606</i>      * This will set the stem V for the font.                                               
+</span><span class="outsideLine"><i>0607</i>      *                                                                                      
+</span><span class="outsideLine"><i>0608</i>      * @param stemV The new stem v for the font.                                            
+</span><span class="outsideLine"><i>0609</i>      */                                                                                     
+</span><span class="outsideLine"><i>0610</i>     public void setStemV( float stemV )                                                     
+</span><span class="methodLine"><i>0611</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 921</span>{                                                                                       
+</span><span class="methodLine"><i>0612</i>         dic.setFloat( COSName.STEM_V, stemV );                                              
+</span><span class="methodLine"><i>0613</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0614</i>                                                                                             
+</span><span class="outsideLine"><i>0615</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0616</i>      * This will get the stemH for the font.                                                
+</span><span class="outsideLine"><i>0617</i>      *                                                                                      
+</span><span class="outsideLine"><i>0618</i>      * @return The stem h value.                                                            
+</span><span class="outsideLine"><i>0619</i>      */                                                                                     
+</span><span class="outsideLine"><i>0620</i>     public float getStemH()                                                                 
+</span><span class="methodLine"><i>0621</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 926</span>{                                                                                       
+</span><span class="methodLine"><i>0622</i>         return dic.getFloat( COSName.STEM_H, 0 );                                           
+</span><span class="methodLine"><i>0623</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0624</i>                                                                                             
+</span><span class="outsideLine"><i>0625</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0626</i>      * This will set the stem H for the font.                                               
+</span><span class="outsideLine"><i>0627</i>      *                                                                                      
+</span><span class="outsideLine"><i>0628</i>      * @param stemH The new stem h for the font.                                            
+</span><span class="outsideLine"><i>0629</i>      */                                                                                     
+</span><span class="outsideLine"><i>0630</i>     public void setStemH( float stemH )                                                     
+</span><span class="methodLine"><i>0631</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 931</span>{                                                                                       
+</span><span class="methodLine"><i>0632</i>         dic.setFloat( COSName.STEM_H, stemH );                                              
+</span><span class="methodLine"><i>0633</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0634</i>                                                                                             
+</span><span class="outsideLine"><i>0635</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0636</i>      * This will get the average width for the font.                                        
+</span><span class="outsideLine"><i>0637</i>      *                                                                                      
+</span><span class="outsideLine"><i>0638</i>      * @return The average width value.                                                     
+</span><span class="outsideLine"><i>0639</i>      */                                                                                     
+</span><span class="outsideLine"><i>0640</i>     public float getAverageWidth()                                                          
+</span><span class="methodLine"><i>0641</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 936</span>{                                                                                       
+</span><span class="methodLine"><i>0642</i>         return dic.getFloat( COSName.AVG_WIDTH, 0 );                                        
+</span><span class="methodLine"><i>0643</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0644</i>                                                                                             
+</span><span class="outsideLine"><i>0645</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0646</i>      * This will set the average width for the font.                                        
+</span><span class="outsideLine"><i>0647</i>      *                                                                                      
+</span><span class="outsideLine"><i>0648</i>      * @param averageWidth The new average width for the font.                              
+</span><span class="outsideLine"><i>0649</i>      */                                                                                     
+</span><span class="outsideLine"><i>0650</i>     public void setAverageWidth( float averageWidth )                                       
+</span><span class="methodLine"><i>0651</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 941</span>{                                                                                       
+</span><span class="methodLine"><i>0652</i>         dic.setFloat( COSName.AVG_WIDTH, averageWidth );                                    
+</span><span class="methodLine"><i>0653</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0654</i>                                                                                             
+</span><span class="outsideLine"><i>0655</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0656</i>      * This will get the max width for the font.                                            
+</span><span class="outsideLine"><i>0657</i>      *                                                                                      
+</span><span class="outsideLine"><i>0658</i>      * @return The max width value.                                                         
+</span><span class="outsideLine"><i>0659</i>      */                                                                                     
+</span><span class="outsideLine"><i>0660</i>     public float getMaxWidth()                                                              
+</span><span class="methodLine"><i>0661</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 946</span>{                                                                                       
+</span><span class="methodLine"><i>0662</i>         return dic.getFloat( COSName.MAX_WIDTH, 0 );                                        
+</span><span class="methodLine"><i>0663</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0664</i>                                                                                             
+</span><span class="outsideLine"><i>0665</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0666</i>      * This will set the max width for the font.                                            
+</span><span class="outsideLine"><i>0667</i>      *                                                                                      
+</span><span class="outsideLine"><i>0668</i>      * @param maxWidth The new max width for the font.                                      
+</span><span class="outsideLine"><i>0669</i>      */                                                                                     
+</span><span class="outsideLine"><i>0670</i>     public void setMaxWidth( float maxWidth )                                               
+</span><span class="methodLine"><i>0671</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 951</span>{                                                                                       
+</span><span class="methodLine"><i>0672</i>         dic.setFloat( COSName.MAX_WIDTH, maxWidth );                                        
+</span><span class="methodLine"><i>0673</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0674</i>                                                                                             
+</span><span class="outsideLine"><i>0675</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0676</i>      * Returns true if widths are present in the font descriptor.                           
+</span><span class="outsideLine"><i>0677</i>      */                                                                                     
+</span><span class="outsideLine"><i>0678</i>     public boolean hasWidths()                                                              
+</span><span class="methodLine"><i>0679</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 956</span>{                                                                                       
+</span><span class="methodLine"><i>0680</i>         return dic.containsKey(COSName.WIDTHS) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2213</span>||</span> dic.containsKey(COSName.MISSING_WIDTH);   
+</span><span class="methodLine"><i>0681</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0682</i>                                                                                             
+</span><span class="outsideLine"><i>0683</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0684</i>      * Returns true if the missing widths entry is present in the font descriptor.          
+</span><span class="outsideLine"><i>0685</i>      */                                                                                     
+</span><span class="outsideLine"><i>0686</i>     public boolean hasMissingWidth()                                                        
+</span><span class="methodLine"><i>0687</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 961</span>{                                                                                       
+</span><span class="methodLine"><i>0688</i>         return dic.containsKey(COSName.MISSING_WIDTH);                                      
+</span><span class="methodLine"><i>0689</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0690</i>                                                                                             
+</span><span class="outsideLine"><i>0691</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0692</i>      * This will get the missing width for the font from the /MissingWidth dictionary entry.
+</span><span class="outsideLine"><i>0693</i>      *                                                                                      
+</span><span class="outsideLine"><i>0694</i>      * @return The missing width value, or 0 if there is no such dictionary entry.          
+</span><span class="outsideLine"><i>0695</i>      */                                                                                     
+</span><span class="outsideLine"><i>0696</i>     public float getMissingWidth()                                                          
+</span><span class="methodLine"><i>0697</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 966</span>{                                                                                       
+</span><span class="methodLine"><i>0698</i>         return dic.getFloat( COSName.MISSING_WIDTH, 0 );                                    
+</span><span class="methodLine"><i>0699</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0700</i>                                                                                             
+</span><span class="outsideLine"><i>0701</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0702</i>      * This will set the missing width for the font.                                        
+</span><span class="outsideLine"><i>0703</i>      *                                                                                      
+</span><span class="outsideLine"><i>0704</i>      * @param missingWidth The new missing width for the font.                              
+</span><span class="outsideLine"><i>0705</i>      */                                                                                     
+</span><span class="outsideLine"><i>0706</i>     public void setMissingWidth( float missingWidth )                                       
+</span><span class="methodLine"><i>0707</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 971</span>{                                                                                       
+</span><span class="methodLine"><i>0708</i>         dic.setFloat( COSName.MISSING_WIDTH, missingWidth );                                
+</span><span class="methodLine"><i>0709</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0710</i>                                                                                             
+</span><span class="outsideLine"><i>0711</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0712</i>      * This will get the character set for the font.                                        
+</span><span class="outsideLine"><i>0713</i>      *                                                                                      
+</span><span class="outsideLine"><i>0714</i>      * @return The character set value.                                                     
+</span><span class="outsideLine"><i>0715</i>      */                                                                                     
+</span><span class="outsideLine"><i>0716</i>     public String getCharSet()                                                              
+</span><span class="methodLine"><i>0717</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 976</span>{                                                                                       
+</span><span class="methodLine"><i>0718</i>         String retval = null;                                                               
+</span><span class="methodLine"><i>0719</i>         COSString name = (COSString)dic.getDictionaryObject( COSName.CHAR_SET );            
+</span><span class="methodLine"><i>0720</i>         if( <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2555</span>name <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2555</span>!=</span> null</span> )                                                                  
+</span><span class="methodLine"><i>0721</i>         {                                                                                   
+</span><span class="methodLine"><i>0722</i>             retval = name.getString();                                                      
+</span><span class="methodLine"><i>0723</i>         }                                                                                   
+</span><span class="methodLine"><i>0724</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1892</span>return retval;</span>                                                                      
+</span><span class="methodLine"><i>0725</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0726</i>                                                                                             
+</span><span class="outsideLine"><i>0727</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0728</i>      * This will set the character set for the font.                                        
+</span><span class="outsideLine"><i>0729</i>      *                                                                                      
+</span><span class="outsideLine"><i>0730</i>      * @param charSet The new character set for the font.                                   
+</span><span class="outsideLine"><i>0731</i>      */                                                                                     
+</span><span class="outsideLine"><i>0732</i>     public void setCharacterSet( String charSet )                                           
+</span><span class="methodLine"><i>0733</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 981</span>{</span>                                                                                       
+</span><span class="methodLine"><i>0734</i>         COSString name = null;                                                              
+</span><span class="methodLine"><i>0735</i>         if( <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2563</span>charSet <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2563</span>!=</span> null</span> )                                                               
+</span><span class="methodLine"><i>0736</i>         {                                                                                   
+</span><span class="methodLine"><i>0737</i>             name = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4292</span>new COSString( charSet )</span>;                                                
+</span><span class="methodLine"><i>0738</i>         }                                                                                   
+</span><span class="methodLine"><i>0739</i>         dic.setItem( COSName.CHAR_SET, name );                                              
+</span><span class="methodLine"><i>0740</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0741</i>                                                                                             
+</span><span class="outsideLine"><i>0742</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0743</i>      * A stream containing a Type 1 font program.                                           
+</span><span class="outsideLine"><i>0744</i>      *                                                                                      
+</span><span class="outsideLine"><i>0745</i>      * @return A stream containing a Type 1 font program.                                   
+</span><span class="outsideLine"><i>0746</i>      */                                                                                     
+</span><span class="outsideLine"><i>0747</i>     public PDStream getFontFile()                                                           
+</span><span class="methodLine"><i>0748</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 986</span>{                                                                                       
+</span><span class="methodLine"><i>0749</i>         PDStream retval = null;                                                             
+</span><span class="methodLine"><i>0750</i>         COSBase obj = dic.getDictionaryObject(COSName.FONT_FILE);                           
+</span><span class="methodLine"><i>0751</i>         if (obj instanceof COSStream)                                                       
+</span><span class="methodLine"><i>0752</i>         {                                                                                   
+</span><span class="methodLine"><i>0753</i>             retval = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4300</span>new PDStream((COSStream) obj)</span>;                                         
+</span><span class="methodLine"><i>0754</i>         }                                                                                   
+</span><span class="methodLine"><i>0755</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1901</span>return retval;</span>                                                                      
+</span><span class="methodLine"><i>0756</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0757</i>                                                                                             
+</span><span class="outsideLine"><i>0758</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0759</i>      * Set the type 1 font program.                                                         
+</span><span class="outsideLine"><i>0760</i>      *                                                                                      
+</span><span class="outsideLine"><i>0761</i>      * @param type1Stream The type 1 stream.                                                
+</span><span class="outsideLine"><i>0762</i>      */                                                                                     
+</span><span class="outsideLine"><i>0763</i>     public void setFontFile( PDStream type1Stream )                                         
+</span><span class="methodLine"><i>0764</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 991</span>{</span>                                                                                       
+</span><span class="methodLine"><i>0765</i>         dic.setItem( COSName.FONT_FILE, type1Stream );                                      
+</span><span class="methodLine"><i>0766</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0767</i>                                                                                             
+</span><span class="outsideLine"><i>0768</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0769</i>      * A stream containing a true type font program.                                        
+</span><span class="outsideLine"><i>0770</i>      *                                                                                      
+</span><span class="outsideLine"><i>0771</i>      * @return A stream containing a true type font program.                                
+</span><span class="outsideLine"><i>0772</i>      */                                                                                     
+</span><span class="outsideLine"><i>0773</i>     public PDStream getFontFile2()                                                          
+</span><span class="methodLine"><i>0774</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 996</span>{                                                                                       
+</span><span class="methodLine"><i>0775</i>         PDStream retval = null;                                                             
+</span><span class="methodLine"><i>0776</i>         COSBase obj = dic.getDictionaryObject(COSName.FONT_FILE2);                          
+</span><span class="methodLine"><i>0777</i>         if (obj instanceof COSStream)                                                       
+</span><span class="methodLine"><i>0778</i>         {                                                                                   
+</span><span class="methodLine"><i>0779</i>             retval = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4308</span>new PDStream((COSStream) obj)</span>;                                         
+</span><span class="methodLine"><i>0780</i>         }                                                                                   
+</span><span class="methodLine"><i>0781</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1908</span>return retval;</span>                                                                      
+</span><span class="methodLine"><i>0782</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0783</i>                                                                                             
+</span><span class="outsideLine"><i>0784</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0785</i>      * Set the true type font program.                                                      
+</span><span class="outsideLine"><i>0786</i>      *                                                                                      
+</span><span class="outsideLine"><i>0787</i>      * @param ttfStream The true type stream.                                               
+</span><span class="outsideLine"><i>0788</i>      */                                                                                     
+</span><span class="outsideLine"><i>0789</i>     public void setFontFile2( PDStream ttfStream )                                          
+</span><span class="methodLine"><i>0790</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1001</span>{</span>                                                                                       
+</span><span class="methodLine"><i>0791</i>         dic.setItem( COSName.FONT_FILE2, ttfStream );                                       
+</span><span class="methodLine"><i>0792</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0793</i>                                                                                             
+</span><span class="outsideLine"><i>0794</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0795</i>      * A stream containing a font program that is not true type or type 1.                  
+</span><span class="outsideLine"><i>0796</i>      *                                                                                      
+</span><span class="outsideLine"><i>0797</i>      * @return A stream containing a font program.                                          
+</span><span class="outsideLine"><i>0798</i>      */                                                                                     
+</span><span class="outsideLine"><i>0799</i>     public PDStream getFontFile3()                                                          
+</span><span class="methodLine"><i>0800</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1006</span>{                                                                                       
+</span><span class="methodLine"><i>0801</i>         PDStream retval = null;                                                             
+</span><span class="methodLine"><i>0802</i>         COSBase obj = dic.getDictionaryObject(COSName.FONT_FILE3);                          
+</span><span class="methodLine"><i>0803</i>         if (obj instanceof COSStream)                                                       
+</span><span class="methodLine"><i>0804</i>         {                                                                                   
+</span><span class="methodLine"><i>0805</i>             retval = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4316</span>new PDStream((COSStream) obj)</span>;                                         
+</span><span class="methodLine"><i>0806</i>         }                                                                                   
+</span><span class="methodLine"><i>0807</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1915</span>return retval;</span>                                                                      
+</span><span class="methodLine"><i>0808</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0809</i>                                                                                             
+</span><span class="outsideLine"><i>0810</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0811</i>      * Set a stream containing a font program that is not true type or type 1.              
+</span><span class="outsideLine"><i>0812</i>      *                                                                                      
+</span><span class="outsideLine"><i>0813</i>      * @param stream The font program stream.                                               
+</span><span class="outsideLine"><i>0814</i>      */                                                                                     
+</span><span class="outsideLine"><i>0815</i>     public void setFontFile3( PDStream stream )                                             
+</span><span class="methodLine"><i>0816</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1011</span>{</span>                                                                                       
+</span><span class="methodLine"><i>0817</i>         dic.setItem( COSName.FONT_FILE3, stream );                                          
+</span><span class="methodLine"><i>0818</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0819</i>                                                                                             
+</span><span class="outsideLine"><i>0820</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0821</i>      * Get the CIDSet stream.                                                               
+</span><span class="outsideLine"><i>0822</i>      *                                                                                      
+</span><span class="outsideLine"><i>0823</i>      * @return A stream containing a CIDSet.                                                
+</span><span class="outsideLine"><i>0824</i>      */                                                                                     
+</span><span class="outsideLine"><i>0825</i>     public PDStream getCIDSet()                                                             
+</span><span class="methodLine"><i>0826</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1016</span>{                                                                                       
+</span><span class="methodLine"><i>0827</i>         COSObjectable cidSet = dic.getDictionaryObject(COSName.CID_SET);                    
+</span><span class="methodLine"><i>0828</i>         if (cidSet instanceof COSStream)                                                    
+</span><span class="methodLine"><i>0829</i>         {                                                                                   
+</span><span class="methodLine"><i>0830</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3468</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4028</span>new PDStream((COSStream) cidSet)</span>;</span>                                        
+</span><span class="methodLine"><i>0831</i>         }                                                                                   
+</span><span class="methodLine"><i>0832</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1921</span>return null;</span>                                                                        
+</span><span class="methodLine"><i>0833</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0834</i>                                                                                             
+</span><span class="outsideLine"><i>0835</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0836</i>      * Set a stream containing a CIDSet.                                                    
+</span><span class="outsideLine"><i>0837</i>      *                                                                                      
+</span><span class="outsideLine"><i>0838</i>      * @param stream The font program stream.                                               
+</span><span class="outsideLine"><i>0839</i>      */                                                                                     
+</span><span class="outsideLine"><i>0840</i>     public void setCIDSet( PDStream stream )                                                
+</span><span class="methodLine"><i>0841</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1021</span>{</span>                                                                                       
+</span><span class="methodLine"><i>0842</i>         dic.setItem( COSName.CID_SET, stream );                                             
+</span><span class="methodLine"><i>0843</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0844</i>                                                                                             
+</span><span class="outsideLine"><i>0845</i>     /**                                                                                     
+</span><span class="outsideLine"><i>0846</i>      * Returns the Panose entry of the Style dictionary, if any.                            
+</span><span class="outsideLine"><i>0847</i>      *                                                                                      
+</span><span class="outsideLine"><i>0848</i>      * @return A Panose wrapper object.                                                     
+</span><span class="outsideLine"><i>0849</i>      */                                                                                     
+</span><span class="outsideLine"><i>0850</i>     public PDPanose getPanose()                                                             
+</span><span class="methodLine"><i>0851</i>     <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1026</span>{                                                                                       
+</span><span class="methodLine"><i>0852</i>         COSDictionary style = (COSDictionary)dic.getDictionaryObject(COSName.STYLE);        
+</span><span class="methodLine"><i>0853</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2612</span>style <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2612</span>!=</span> null</span>)                                                                  
+</span><span class="methodLine"><i>0854</i>         {                                                                                   
+</span><span class="methodLine"><i>0855</i>             COSString panose = (COSString)style.getDictionaryObject(COSName.PANOSE);        
+</span><span class="methodLine"><i>0856</i>             byte[] bytes = panose.getBytes();                                               
+</span><span class="methodLine"><i>0857</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3484</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4042</span>new PDPanose(bytes)</span>;</span>                                                     
+</span><span class="methodLine"><i>0858</i>         }                                                                                   
+</span><span class="methodLine"><i>0859</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1927</span>return null;</span>                                                                        
+</span><span class="methodLine"><i>0860</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0861</i> }                                                                                           
+</span><span class="outsideLine"><i>0862</i>                                                                                             </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>
