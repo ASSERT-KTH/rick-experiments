@@ -1,0 +1,690 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.81</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                                                                                                       
+</span><span class="outsideLine"><i>0002</i>  *  Licensed to GraphHopper GmbH under one or more contributor                                                                                                           
+</span><span class="outsideLine"><i>0003</i>  *  license agreements. See the NOTICE file distributed with this work for                                                                                               
+</span><span class="outsideLine"><i>0004</i>  *  additional information regarding copyright ownership.                                                                                                                
+</span><span class="outsideLine"><i>0005</i>  *                                                                                                                                                                       
+</span><span class="outsideLine"><i>0006</i>  *  GraphHopper GmbH licenses this file to you under the Apache License,                                                                                                 
+</span><span class="outsideLine"><i>0007</i>  *  Version 2.0 (the "License"); you may not use this file except in                                                                                                     
+</span><span class="outsideLine"><i>0008</i>  *  compliance with the License. You may obtain a copy of the License at                                                                                                 
+</span><span class="outsideLine"><i>0009</i>  *                                                                                                                                                                       
+</span><span class="outsideLine"><i>0010</i>  *       http://www.apache.org/licenses/LICENSE-2.0                                                                                                                      
+</span><span class="outsideLine"><i>0011</i>  *                                                                                                                                                                       
+</span><span class="outsideLine"><i>0012</i>  *  Unless required by applicable law or agreed to in writing, software                                                                                                  
+</span><span class="outsideLine"><i>0013</i>  *  distributed under the License is distributed on an "AS IS" BASIS,                                                                                                    
+</span><span class="outsideLine"><i>0014</i>  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                                                                                             
+</span><span class="outsideLine"><i>0015</i>  *  See the License for the specific language governing permissions and                                                                                                  
+</span><span class="outsideLine"><i>0016</i>  *  limitations under the License.                                                                                                                                       
+</span><span class="outsideLine"><i>0017</i>  */                                                                                                                                                                      
+</span><span class="outsideLine"><i>0018</i>                                                                                                                                                                          
+</span><span class="outsideLine"><i>0019</i> package com.graphhopper.storage.index;                                                                                                                                   
+</span><span class="outsideLine"><i>0020</i>                                                                                                                                                                          
+</span><span class="outsideLine"><i>0021</i> import com.carrotsearch.hppc.IntArrayList;                                                                                                                               
+</span><span class="outsideLine"><i>0022</i> import com.carrotsearch.hppc.IntHashSet;                                                                                                                                 
+</span><span class="outsideLine"><i>0023</i> import com.graphhopper.geohash.SpatialKeyAlgo;                                                                                                                           
+</span><span class="outsideLine"><i>0024</i> import com.graphhopper.storage.DataAccess;                                                                                                                               
+</span><span class="outsideLine"><i>0025</i> import com.graphhopper.storage.Directory;                                                                                                                                
+</span><span class="outsideLine"><i>0026</i> import com.graphhopper.util.Constants;                                                                                                                                   
+</span><span class="outsideLine"><i>0027</i> import com.graphhopper.util.GHUtility;                                                                                                                                   
+</span><span class="outsideLine"><i>0028</i> import com.graphhopper.util.Helper;                                                                                                                                      
+</span><span class="outsideLine"><i>0029</i> import com.graphhopper.util.shapes.BBox;                                                                                                                                 
+</span><span class="outsideLine"><i>0030</i>                                                                                                                                                                          
+</span><span class="outsideLine"><i>0031</i> import java.util.function.IntConsumer;                                                                                                                                   
+</span><span class="outsideLine"><i>0032</i>                                                                                                                                                                          
+</span><span class="outsideLine"><i>0033</i> public class LineIntIndex {                                                                                                                                              
+</span><span class="outsideLine"><i>0034</i>     // do not start with 0 as a positive value means leaf and a negative means "entry with subentries"                                                                   
+</span><span class="outsideLine"><i>0035</i>     static final int START_POINTER = 1;                                                                                                                                  
+</span><span class="outsideLine"><i>0036</i>                                                                                                                                                                          
+</span><span class="outsideLine"><i>0037</i>     final DataAccess dataAccess;                                                                                                                                         
+</span><span class="outsideLine"><i>0038</i>     private final BBox bounds;                                                                                                                                           
+</span><span class="outsideLine"><i>0039</i>     private int minResolutionInMeter = 300;                                                                                                                              
+</span><span class="outsideLine"><i>0040</i>     private int size;                                                                                                                                                    
+</span><span class="outsideLine"><i>0041</i>     private int leafs;                                                                                                                                                   
+</span><span class="outsideLine"><i>0042</i>     private int checksum;                                                                                                                                                
+</span><span class="outsideLine"><i>0043</i>     private IndexStructureInfo indexStructureInfo;                                                                                                                       
+</span><span class="outsideLine"><i>0044</i>     private int[] entries;                                                                                                                                               
+</span><span class="outsideLine"><i>0045</i>     private byte[] shifts;                                                                                                                                               
+</span><span class="outsideLine"><i>0046</i>     private boolean initialized = false;                                                                                                                                 
+</span><span class="outsideLine"><i>0047</i>     private SpatialKeyAlgo keyAlgo;                                                                                                                                      
+</span><span class="outsideLine"><i>0048</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0049</i>     public LineIntIndex(BBox bBox, Directory dir, String name) {                                                                                                         
+</span><span class="methodLine"><i>0050</i>         this.bounds = bBox;                                                                                                                                              
+</span><span class="methodLine"><i>0051</i>         this.dataAccess = dir.create(name, dir.getDefaultType(name, true));                                                                                              
+</span><span class="methodLine"><i>0052</i>     }                                                                                                                                                                    
+</span><span class="outsideLine"><i>0053</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0054</i>     public boolean loadExisting() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 347</span>{                                                                                                                                      
+</span><span class="methodLine"><i>0055</i>         if (initialized)                                                                                                                                                 
+</span><span class="methodLine"><i>0056</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1158</span>new IllegalStateException("Call loadExisting only once")</span>;                                                                                              
+</span><span class="outsideLine"><i>0057</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0058</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 1013</span>!</span>dataAccess.loadExisting())                                                                                                                                  
+</span><span class="methodLine"><i>0059</i>             return false;                                                                                                                                                
+</span><span class="outsideLine"><i>0060</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0061</i>         GHUtility.checkDAVersion("location_index", Constants.VERSION_LOCATION_IDX, dataAccess.getHeader(0));                                                             
+</span><span class="methodLine"><i>0062</i>         checksum = dataAccess.getHeader(1 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1641</span>*</span> 4);                                                                                                                          
+</span><span class="methodLine"><i>0063</i>         minResolutionInMeter = dataAccess.getHeader(2 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1646</span>*</span> 4);                                                                                                              
+</span><span class="methodLine"><i>0064</i>         indexStructureInfo = IndexStructureInfo.create(bounds, minResolutionInMeter);                                                                                    
+</span><span class="methodLine"><i>0065</i>         keyAlgo = indexStructureInfo.getKeyAlgo();                                                                                                                       
+</span><span class="methodLine"><i>0066</i>         entries = indexStructureInfo.getEntries();                                                                                                                       
+</span><span class="methodLine"><i>0067</i>         shifts = indexStructureInfo.getShifts();                                                                                                                         
+</span><span class="methodLine"><i>0068</i>         initialized = true;                                                                                                                                              
+</span><span class="methodLine"><i>0069</i>         return true;                                                                                                                                                     
+</span><span class="methodLine"><i>0070</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0071</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0072</i>     public void store(InMemConstructionIndex inMem) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 352</span>{</span>                                                                                                                    
+</span><span class="methodLine"><i>0073</i>         indexStructureInfo = IndexStructureInfo.create(bounds, minResolutionInMeter);                                                                                    
+</span><span class="methodLine"><i>0074</i>         keyAlgo = indexStructureInfo.getKeyAlgo();                                                                                                                       
+</span><span class="methodLine"><i>0075</i>         entries = indexStructureInfo.getEntries();                                                                                                                       
+</span><span class="methodLine"><i>0076</i>         shifts = indexStructureInfo.getShifts();                                                                                                                         
+</span><span class="methodLine"><i>0077</i>         dataAccess.create(64 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1441</span>*</span> 1024);                                                                                                                                    
+</span><span class="methodLine"><i>0078</i>         try {                                                                                                                                                            
+</span><span class="methodLine"><i>0079</i>             store(inMem.root, START_POINTER);                                                                                                                            
+</span><span class="methodLine"><i>0080</i>         } catch (Exception ex) {                                                                                                                                         
+</span><span class="methodLine"><i>0081</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1945</span>new IllegalStateException("Problem while storing location index. " + Helper.getMemInfo(), ex)</span>;                                                         
+</span><span class="methodLine"><i>0082</i>         }                                                                                                                                                                
+</span><span class="methodLine"><i>0083</i>         initialized = true;                                                                                                                                              
+</span><span class="methodLine"><i>0084</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0085</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0086</i>     private int store(InMemConstructionIndex.InMemEntry entry, int intPointer) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 357</span>{</span>                                                                                         
+</span><span class="methodLine"><i>0087</i>         long pointer = (long) intPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1698</span>*</span> 4;                                                                                                                            
+</span><span class="methodLine"><i>0088</i>         if (entry.isLeaf()) {                                                                                                                                            
+</span><span class="methodLine"><i>0089</i>             InMemConstructionIndex.InMemLeafEntry leaf = ((InMemConstructionIndex.InMemLeafEntry) entry);                                                                
+</span><span class="methodLine"><i>0090</i>             IntArrayList entries = leaf.getResults();                                                                                                                    
+</span><span class="methodLine"><i>0091</i>             int len = entries.size();                                                                                                                                    
+</span><span class="methodLine"><i>0092</i>             if (len <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1958</span>==</span> 0) {                                                                                                                                              
+</span><span class="methodLine"><i>0093</i>                 return intPointer;                                                                                                                                       
+</span><span class="methodLine"><i>0094</i>             }                                                                                                                                                            
+</span><span class="methodLine"><i>0095</i>             size <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 1961</span>+=</span> len;                                                                                                                                                 
+</span><span class="methodLine"><i>0096</i>             intPointer<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1962</span>++</span>;                                                                                                                                                
+</span><span class="methodLine"><i>0097</i>             leafs<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1963</span>++</span>;                                                                                                                                                     
+</span><span class="methodLine"><i>0098</i>             dataAccess.ensureCapacity((long) (intPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3658</span>+</span> len <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3424</span>+</span> 1) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2460</span>*</span> 4);                                                                                                
+</span><span class="methodLine"><i>0099</i>             if (len <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1966</span>==</span> 1) {                                                                                                                                              
+</span><span class="outsideLine"><i>0100</i>                 // less disc space for single entries                                                                                                                    
+</span><span class="methodLine"><i>0101</i>                 dataAccess.setInt(pointer, <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 3663</span>-</span>entries.get(0) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3432</span>-</span> 1);                                                                                                         
+</span><span class="methodLine"><i>0102</i>             } else {                                                                                                                                                     
+</span><span class="methodLine"><i>0103</i>                 for (int index = 0; index <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2961</span><</span> len; index<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 3437</span>++</span>, intPointer<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 3439</span>++</span>) {                                                                                                
+</span><span class="methodLine"><i>0104</i>                     dataAccess.setInt((long) intPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4129</span>*</span> 4, entries.get(index));                                                                                        
+</span><span class="methodLine"><i>0105</i>                 }                                                                                                                                                        
+</span><span class="methodLine"><i>0106</i>                 dataAccess.setInt(pointer, intPointer);                                                                                                                  
+</span><span class="methodLine"><i>0107</i>             }                                                                                                                                                            
+</span><span class="methodLine"><i>0108</i>         } else {                                                                                                                                                         
+</span><span class="methodLine"><i>0109</i>             InMemConstructionIndex.InMemTreeEntry treeEntry = ((InMemConstructionIndex.InMemTreeEntry) entry);                                                           
+</span><span class="methodLine"><i>0110</i>             int len = treeEntry.subEntries.length;                                                                                                                       
+</span><span class="methodLine"><i>0111</i>             intPointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 1974</span>+=</span> len;                                                                                                                                           
+</span><span class="methodLine"><i>0112</i>             for (int subCounter = 0; subCounter <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1977</span><</span> len; subCounter<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 2482</span>++</span>, pointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 2484</span>+=</span> 4) {                                                                                     
+</span><span class="methodLine"><i>0113</i>                 InMemConstructionIndex.InMemEntry subEntry = treeEntry.subEntries[subCounter];                                                                           
+</span><span class="methodLine"><i>0114</i>                 if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2980</span>subEntry <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2980</span>==</span> null</span>) {                                                                                                                                  
+</span><span class="methodLine"><i>0115</i>                     continue;                                                                                                                                            
+</span><span class="methodLine"><i>0116</i>                 }                                                                                                                                                        
+</span><span class="methodLine"><i>0117</i>                 dataAccess.ensureCapacity((long) (intPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4136</span>+</span> 1) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3466</span>*</span> 4);                                                                                                  
+</span><span class="methodLine"><i>0118</i>                 int prevIntPointer = intPointer;                                                                                                                         
+</span><span class="methodLine"><i>0119</i>                 intPointer = store(subEntry, prevIntPointer);                                                                                                            
+</span><span class="methodLine"><i>0120</i>                 if (intPointer <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2988</span>==</span> prevIntPointer) {                                                                                                                      
+</span><span class="methodLine"><i>0121</i>                     dataAccess.setInt(pointer, 0);                                                                                                                       
+</span><span class="methodLine"><i>0122</i>                 } else {                                                                                                                                                 
+</span><span class="methodLine"><i>0123</i>                     dataAccess.setInt(pointer, prevIntPointer);                                                                                                          
+</span><span class="methodLine"><i>0124</i>                 }                                                                                                                                                        
+</span><span class="methodLine"><i>0125</i>             }                                                                                                                                                            
+</span><span class="methodLine"><i>0126</i>         }                                                                                                                                                                
+</span><span class="methodLine"><i>0127</i>         return intPointer;                                                                                                                                               
+</span><span class="methodLine"><i>0128</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0129</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0130</i>     private void fillIDs(long keyPart, IntConsumer consumer) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 362</span>{</span>                                                                                                           
+</span><span class="methodLine"><i>0131</i>         int intPointer = START_POINTER;                                                                                                                                  
+</span><span class="methodLine"><i>0132</i>         for (int depth = 0; depth <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1061</span><</span> entries.length; depth<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1478</span>++</span>) {                                                                                                           
+</span><span class="methodLine"><i>0133</i>             int offset = (int) (keyPart <span class="ShiftOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >> 
+Mutation Operator Type: ShiftOperatorReplacement 
+Node ID: 3482</span>>>></span> (64 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4025</span>-</span> shifts[depth]));                                                                                                       
+</span><span class="methodLine"><i>0134</i>             int nextIntPointer = dataAccess.getInt((long) (intPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4029</span>+</span> offset) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3245</span>*</span> 4);                                                                                    
+</span><span class="methodLine"><i>0135</i>             if (nextIntPointer <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1993</span><=</span> 0) {                                                                                                                                   
+</span><span class="outsideLine"><i>0136</i>                 // empty cell                                                                                                                                            
+</span><span class="methodLine"><i>0137</i>                 return;                                                                                                                                                  
+</span><span class="methodLine"><i>0138</i>             }                                                                                                                                                            
+</span><span class="methodLine"><i>0139</i>             keyPart = keyPart <span class="ShiftOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >> 
+Mutation Operator Type: ShiftOperatorReplacement 
+Node ID: 2259</span><<</span> shifts[depth];                                                                                                                          
+</span><span class="methodLine"><i>0140</i>             intPointer = nextIntPointer;                                                                                                                                 
+</span><span class="methodLine"><i>0141</i>         }                                                                                                                                                                
+</span><span class="methodLine"><i>0142</i>         int data = dataAccess.getInt((long) intPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2266</span>*</span> 4);                                                                                                             
+</span><span class="methodLine"><i>0143</i>         if (data <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1068</span><</span> 0) {                                                                                                                                                  
+</span><span class="outsideLine"><i>0144</i>             // single data entries (less disc space)                                                                                                                     
+</span><span class="methodLine"><i>0145</i>             int edgeId = <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 2778</span>-</span>(data <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3489</span>+</span> 1);                                                                                                                                    
+</span><span class="methodLine"><i>0146</i>             consumer.accept(edgeId);                                                                                                                                     
+</span><span class="methodLine"><i>0147</i>         } else {                                                                                                                                                         
+</span><span class="outsideLine"><i>0148</i>             // "data" is index of last data item                                                                                                                         
+</span><span class="methodLine"><i>0149</i>             for (int leafIndex = intPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3253</span>+</span> 1; leafIndex <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2008</span><</span> data; leafIndex<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 2526</span>++</span>) {                                                                                        
+</span><span class="methodLine"><i>0150</i>                 int edgeId = dataAccess.getInt((long) leafIndex <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4038</span>*</span> 4);                                                                                                    
+</span><span class="methodLine"><i>0151</i>                 consumer.accept(edgeId);                                                                                                                                 
+</span><span class="methodLine"><i>0152</i>             }                                                                                                                                                            
+</span><span class="methodLine"><i>0153</i>         }                                                                                                                                                                
+</span><span class="methodLine"><i>0154</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0155</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0156</i>     public void query(BBox queryShape, final LocationIndex.Visitor function) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 367</span>{</span>                                                                                           
+</span><span class="methodLine"><i>0157</i>         final IntHashSet set = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2013</span>new IntHashSet()</span>;                                                                                                                         
+</span><span class="methodLine"><i>0158</i>         query(START_POINTER, queryShape,                                                                                                                                 
+</span><span class="methodLine"><i>0159</i>                 bounds.minLat, bounds.minLon, bounds.maxLat <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1506</span>-</span> bounds.minLat, bounds.maxLon <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1508</span>-</span> bounds.minLon,                                                              
+</span><span class="methodLine"><i>0160</i>                 new LocationIndex.Visitor() {                                                                                                                            
+</span><span class="methodLine"><i>0161</i>                     @Override                                                                                                                                            
+</span><span class="methodLine"><i>0162</i>                     public boolean isTileInfo() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 3266</span>{                                                                                                                        
+</span><span class="methodLine"><i>0163</i>                         return function.isTileInfo();                                                                                                                    
+</span><span class="methodLine"><i>0164</i>                     }</span>                                                                                                                                                    
+</span><span class="outsideLine"><i>0165</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0166</i>                     @Override                                                                                                                                            
+</span><span class="methodLine"><i>0167</i>                     public void onTile(BBox bbox, int width) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 3272</span>{</span>                                                                                                           
+</span><span class="methodLine"><i>0168</i>                         function.onTile(bbox, width);                                                                                                                    
+</span><span class="methodLine"><i>0169</i>                     }</span>                                                                                                                                                    
+</span><span class="outsideLine"><i>0170</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0171</i>                     @Override                                                                                                                                            
+</span><span class="methodLine"><i>0172</i>                     public void onEdge(int edgeId) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 3278</span>{                                                                                                                     
+</span><span class="methodLine"><i>0173</i>                         if (set.add(edgeId))                                                                                                                             
+</span><span class="methodLine"><i>0174</i>                             function.onEdge(edgeId);                                                                                                                     
+</span><span class="methodLine"><i>0175</i>                     }</span>                                                                                                                                                    
+</span><span class="methodLine"><i>0176</i>                 }, 0);                                                                                                                                                   
+</span><span class="methodLine"><i>0177</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0178</i>                                                                                                                                                                          
+</span><span class="outsideLine"><i>0179</i>     private void query(int intPointer, BBox queryBBox,                                                                                                                   
+</span><span class="outsideLine"><i>0180</i>                        double minLat, double minLon,                                                                                                                     
+</span><span class="outsideLine"><i>0181</i>                        double deltaLatPerDepth, double deltaLonPerDepth,                                                                                                 
+</span><span class="methodLine"><i>0182</i>                        LocationIndex.Visitor function, int depth) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 372</span>{</span>                                                                                                      
+</span><span class="methodLine"><i>0183</i>         long pointer = (long) intPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1786</span>*</span> 4;                                                                                                                            
+</span><span class="methodLine"><i>0184</i>         if (depth <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1093</span>==</span> entries.length) {                                                                                                                                   
+</span><span class="methodLine"><i>0185</i>             int nextIntPointer = dataAccess.getInt(pointer);                                                                                                             
+</span><span class="methodLine"><i>0186</i>             if (nextIntPointer <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2040</span><</span> 0) {                                                                                                                                    
+</span><span class="outsideLine"><i>0187</i>                 // single data entries (less disc space)                                                                                                                 
+</span><span class="methodLine"><i>0188</i>                 function.onEdge(<span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 3525</span>-</span>(nextIntPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4054</span>+</span> 1));                                                                                                                  
+</span><span class="methodLine"><i>0189</i>             } else {                                                                                                                                                     
+</span><span class="methodLine"><i>0190</i>                 long maxPointer = (long) nextIntPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3749</span>*</span> 4;                                                                                                             
+</span><span class="outsideLine"><i>0191</i>                 // loop through every leaf entry => nextIntPointer is maxPointer                                                                                         
+</span><span class="methodLine"><i>0192</i>                 for (long leafPointer = pointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4062</span>+</span> 4; leafPointer <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3039</span><</span> maxPointer; leafPointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 3534</span>+=</span> 4) {                                                                       
+</span><span class="outsideLine"><i>0193</i>                     // we could read the whole info at once via getBytes instead of getInt                                                                               
+</span><span class="methodLine"><i>0194</i>                     function.onEdge(dataAccess.getInt(leafPointer));                                                                                                     
+</span><span class="methodLine"><i>0195</i>                 }                                                                                                                                                        
+</span><span class="methodLine"><i>0196</i>             }                                                                                                                                                            
+</span><span class="methodLine"><i>0197</i>             return;                                                                                                                                                      
+</span><span class="methodLine"><i>0198</i>         }                                                                                                                                                                
+</span><span class="methodLine"><i>0199</i>         int max = (1 <span class="ShiftOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >> 
+Mutation Operator Type: ShiftOperatorReplacement 
+Node ID: 2314</span><<</span> shifts[depth]);                                                                                                                                  
+</span><span class="methodLine"><i>0200</i>         int factor = max <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2045</span>==</span> 4 ? 2 : 4;                                                                                                                                   
+</span><span class="methodLine"><i>0201</i>         deltaLonPerDepth <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: *= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 1100</span>/=</span> factor;                                                                                                                                      
+</span><span class="methodLine"><i>0202</i>         deltaLatPerDepth <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: *= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 1101</span>/=</span> factor;                                                                                                                                      
+</span><span class="methodLine"><i>0203</i>         for (int cellIndex = 0; cellIndex <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1104</span><</span> max; cellIndex<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1540</span>++</span>) {                                                                                                          
+</span><span class="methodLine"><i>0204</i>             int nextIntPointer = dataAccess.getInt(pointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3303</span>+</span> cellIndex <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3539</span>*</span> 4);                                                                                             
+</span><span class="methodLine"><i>0205</i>             if (nextIntPointer <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2058</span><=</span> 0)                                                                                                                                     
+</span><span class="methodLine"><i>0206</i>                 continue;                                                                                                                                                
+</span><span class="methodLine"><i>0207</i>             int[] pixelXY = keyAlgo.decode(cellIndex);                                                                                                                   
+</span><span class="methodLine"><i>0208</i>             double tmpMinLon = minLon <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2835</span>+</span> deltaLonPerDepth <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3059</span>*</span> pixelXY[0];                                                                                                   
+</span><span class="methodLine"><i>0209</i>             double tmpMinLat = minLat <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2837</span>+</span> deltaLatPerDepth <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3062</span>*</span> pixelXY[1];                                                                                                   
+</span><span class="outsideLine"><i>0210</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0211</i>             BBox bbox = (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3772</span>queryBBox <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3772</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3555</span>||</span> function.isTileInfo()) ? <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3318</span>new BBox(tmpMinLon, tmpMinLon <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4080</span>+</span> deltaLonPerDepth, tmpMinLat, tmpMinLat <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4084</span>+</span> deltaLatPerDepth)</span> : null;
+</span><span class="methodLine"><i>0212</i>             if (function.isTileInfo())                                                                                                                                   
+</span><span class="methodLine"><i>0213</i>                 function.onTile(bbox, depth);                                                                                                                            
+</span><span class="methodLine"><i>0214</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2343</span>queryBBox <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2343</span>==</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2076</span>||</span> queryBBox.contains(bbox)) {                                                                                                         
+</span><span class="outsideLine"><i>0215</i>                 // fill without a restriction!                                                                                                                           
+</span><span class="methodLine"><i>0216</i>                 query(nextIntPointer, null, tmpMinLat, tmpMinLon, deltaLatPerDepth, deltaLonPerDepth, function, depth <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3575</span>+</span> 1);                                              
+</span><span class="methodLine"><i>0217</i>             } else if (queryBBox.intersects(bbox)) {                                                                                                                     
+</span><span class="methodLine"><i>0218</i>                 query(nextIntPointer, queryBBox, tmpMinLat, tmpMinLon, deltaLatPerDepth, deltaLonPerDepth, function, depth <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3804</span>+</span> 1);                                         
+</span><span class="methodLine"><i>0219</i>             }                                                                                                                                                            
+</span><span class="methodLine"><i>0220</i>         }                                                                                                                                                                
+</span><span class="methodLine"><i>0221</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0222</i>                                                                                                                                                                          
+</span><span class="outsideLine"><i>0223</i>     /**                                                                                                                                                                  
+</span><span class="outsideLine"><i>0224</i>      * This method collects edge ids from the neighborhood of a point and puts them into foundEntries.                                                                   
+</span><span class="outsideLine"><i>0225</i>      * <p>                                                                                                                                                               
+</span><span class="outsideLine"><i>0226</i>      * If it is called with iteration = 0, it just looks in the tile the query point is in.                                                                              
+</span><span class="outsideLine"><i>0227</i>      * If it is called with iteration = 0,1,2,.., it will look in additional tiles further and further                                                                   
+</span><span class="outsideLine"><i>0228</i>      * from the start tile. (In a square that grows by one pixel in all four directions per iteration).                                                                  
+</span><span class="outsideLine"><i>0229</i>      * <p>                                                                                                                                                               
+</span><span class="outsideLine"><i>0230</i>      * See discussion at issue #221.                                                                                                                                     
+</span><span class="outsideLine"><i>0231</i>      * <p>                                                                                                                                                               
+</span><span class="outsideLine"><i>0232</i>      */                                                                                                                                                                  
+</span><span class="methodLine"><i>0233</i>     public void findEdgeIdsInNeighborhood(double queryLat, double queryLon, int iteration, IntConsumer foundEntries) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 377</span>{</span>                                                   
+</span><span class="methodLine"><i>0234</i>         int x = keyAlgo.x(queryLon);                                                                                                                                     
+</span><span class="methodLine"><i>0235</i>         int y = keyAlgo.y(queryLat);                                                                                                                                     
+</span><span class="methodLine"><i>0236</i>         for (int yreg = <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 2362</span>-</span>iteration; yreg <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1118</span><=</span> iteration; yreg<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1561</span>++</span>) {                                                                                                         
+</span><span class="methodLine"><i>0237</i>             int subqueryY = y <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2866</span>+</span> yreg;                                                                                                                                    
+</span><span class="methodLine"><i>0238</i>             int subqueryXA = x <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2868</span>-</span> iteration;                                                                                                                              
+</span><span class="methodLine"><i>0239</i>             int subqueryXB = x <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2870</span>+</span> iteration;                                                                                                                              
+</span><span class="methodLine"><i>0240</i>             if (subqueryXA <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2871</span>>=</span> 0 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2625</span>&&</span> subqueryY <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2873</span>>=</span> 0 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2370</span>&&</span> subqueryXA <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2627</span><</span> indexStructureInfo.getParts() <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2102</span>&&</span> subqueryY <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2372</span><</span> indexStructureInfo.getParts()) {                          
+</span><span class="methodLine"><i>0241</i>                 long keyPart = keyAlgo.encode(subqueryXA, subqueryY) <span class="ShiftOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >> 
+Mutation Operator Type: ShiftOperatorReplacement 
+Node ID: 3809</span><<</span> (64 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4210</span>-</span> keyAlgo.getBits());                                                                        
+</span><span class="methodLine"><i>0242</i>                 fillIDs(keyPart, foundEntries);                                                                                                                          
+</span><span class="methodLine"><i>0243</i>             }                                                                                                                                                            
+</span><span class="methodLine"><i>0244</i>             if (iteration <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3108</span>></span> 0 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2885</span>&&</span> subqueryXB <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3110</span>>=</span> 0 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2633</span>&&</span> subqueryY <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2887</span>>=</span> 0 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2377</span>&&</span> subqueryXB <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2635</span><</span> indexStructureInfo.getParts() <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2106</span>&&</span> subqueryY <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2379</span><</span> indexStructureInfo.getParts()) {         
+</span><span class="methodLine"><i>0245</i>                 long keyPart = keyAlgo.encode(subqueryXB, subqueryY) <span class="ShiftOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >> 
+Mutation Operator Type: ShiftOperatorReplacement 
+Node ID: 3820</span><<</span> (64 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4219</span>-</span> keyAlgo.getBits());                                                                        
+</span><span class="methodLine"><i>0246</i>                 fillIDs(keyPart, foundEntries);                                                                                                                          
+</span><span class="methodLine"><i>0247</i>             }                                                                                                                                                            
+</span><span class="methodLine"><i>0248</i>         }                                                                                                                                                                
+</span><span class="outsideLine"><i>0249</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0250</i>         for (int xreg = <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 2641</span>-</span>iteration <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2385</span>+</span> 1; xreg <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1124</span><=</span> iteration <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1322</span>-</span> 1; xreg<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1573</span>++</span>) {                                                                                                 
+</span><span class="methodLine"><i>0251</i>             int subqueryX = x <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2903</span>+</span> xreg;                                                                                                                                    
+</span><span class="methodLine"><i>0252</i>             int subqueryYA = y <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2905</span>-</span> iteration;                                                                                                                              
+</span><span class="methodLine"><i>0253</i>             int subqueryYB = y <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2907</span>+</span> iteration;                                                                                                                              
+</span><span class="methodLine"><i>0254</i>             if (subqueryX <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2908</span>>=</span> 0 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2656</span>&&</span> subqueryYA <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2910</span>>=</span> 0 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2394</span>&&</span> subqueryX <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2658</span><</span> indexStructureInfo.getParts() <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2123</span>&&</span> subqueryYA <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2396</span><</span> indexStructureInfo.getParts()) {                          
+</span><span class="methodLine"><i>0255</i>                 long keyPart = keyAlgo.encode(subqueryX, subqueryYA) <span class="ShiftOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >> 
+Mutation Operator Type: ShiftOperatorReplacement 
+Node ID: 3828</span><<</span> (64 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4228</span>-</span> keyAlgo.getBits());                                                                        
+</span><span class="methodLine"><i>0256</i>                 fillIDs(keyPart, foundEntries);                                                                                                                          
+</span><span class="methodLine"><i>0257</i>             }                                                                                                                                                            
+</span><span class="methodLine"><i>0258</i>             if (subqueryX <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2922</span>>=</span> 0 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2664</span>&&</span> subqueryYB <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2924</span>>=</span> 0 <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2401</span>&&</span> subqueryX <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2666</span><</span> indexStructureInfo.getParts() <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2127</span>&&</span> subqueryYB <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2403</span><</span> indexStructureInfo.getParts()) {                          
+</span><span class="methodLine"><i>0259</i>                 long keyPart = keyAlgo.encode(subqueryX, subqueryYB) <span class="ShiftOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >> 
+Mutation Operator Type: ShiftOperatorReplacement 
+Node ID: 3836</span><<</span> (64 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4237</span>-</span> keyAlgo.getBits());                                                                        
+</span><span class="methodLine"><i>0260</i>                 fillIDs(keyPart, foundEntries);                                                                                                                          
+</span><span class="methodLine"><i>0261</i>             }                                                                                                                                                            
+</span><span class="methodLine"><i>0262</i>         }                                                                                                                                                                
+</span><span class="methodLine"><i>0263</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0264</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0265</i>     public int getChecksum() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 382</span>{                                                                                                                                           
+</span><span class="methodLine"><i>0266</i>         return checksum;                                                                                                                                                 
+</span><span class="methodLine"><i>0267</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0268</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0269</i>     public int getMinResolutionInMeter() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 387</span>{                                                                                                                               
+</span><span class="methodLine"><i>0270</i>         return minResolutionInMeter;                                                                                                                                     
+</span><span class="methodLine"><i>0271</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0272</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0273</i>     public void setMinResolutionInMeter(int minResolutionInMeter) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 392</span>{                                                                                                      
+</span><span class="methodLine"><i>0274</i>         this.minResolutionInMeter = minResolutionInMeter;                                                                                                                
+</span><span class="methodLine"><i>0275</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0276</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0277</i>     public void flush() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 397</span>{                                                                                                                                                
+</span><span class="methodLine"><i>0278</i>         dataAccess.setHeader(0, Constants.VERSION_LOCATION_IDX);                                                                                                         
+</span><span class="methodLine"><i>0279</i>         dataAccess.setHeader(1 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1592</span>*</span> 4, checksum);                                                                                                                           
+</span><span class="methodLine"><i>0280</i>         dataAccess.setHeader(2 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1598</span>*</span> 4, minResolutionInMeter);                                                                                                               
+</span><span class="outsideLine"><i>0281</i>                                                                                                                                                                          
+</span><span class="outsideLine"><i>0282</i>         // saving space not necessary: dataAccess.trimTo((lastPointer + 1) * 4);                                                                                         
+</span><span class="methodLine"><i>0283</i>         dataAccess.flush();                                                                                                                                              
+</span><span class="methodLine"><i>0284</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0285</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0286</i>     public void close() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 402</span>{                                                                                                                                                
+</span><span class="methodLine"><i>0287</i>         dataAccess.close();                                                                                                                                              
+</span><span class="methodLine"><i>0288</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0289</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0290</i>     public boolean isClosed() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 407</span>{                                                                                                                                          
+</span><span class="methodLine"><i>0291</i>         return dataAccess.isClosed();                                                                                                                                    
+</span><span class="methodLine"><i>0292</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0293</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0294</i>     public long getCapacity() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1L;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 412</span>{                                                                                                                                          
+</span><span class="methodLine"><i>0295</i>         return dataAccess.getCapacity();                                                                                                                                 
+</span><span class="methodLine"><i>0296</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0297</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0298</i>     public void setChecksum(int checksum) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 417</span>{                                                                                                                              
+</span><span class="methodLine"><i>0299</i>         this.checksum = checksum;                                                                                                                                        
+</span><span class="methodLine"><i>0300</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0301</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0302</i>     public int getSize() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 422</span>{                                                                                                                                               
+</span><span class="methodLine"><i>0303</i>         return size;                                                                                                                                                     
+</span><span class="methodLine"><i>0304</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0305</i>                                                                                                                                                                          
+</span><span class="methodLine"><i>0306</i>     public int getLeafs() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 427</span>{                                                                                                                                              
+</span><span class="methodLine"><i>0307</i>         return leafs;                                                                                                                                                    
+</span><span class="methodLine"><i>0308</i>     }</span>                                                                                                                                                                    
+</span><span class="outsideLine"><i>0309</i> }                                                                                                                                                                        
+</span><span class="outsideLine"><i>0310</i>                                                                                                                                                                          </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

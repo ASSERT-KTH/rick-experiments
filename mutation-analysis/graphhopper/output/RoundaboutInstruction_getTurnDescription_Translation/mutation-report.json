@@ -1,0 +1,88 @@
+{
+    "mut": "RoundaboutInstruction_getTurnDescription_Translation",
+    "CUT": "com.graphhopper.util.RoundaboutInstruction",
+    "mutant-file": "./RoundaboutInstruction.java/17.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.487 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.684 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.501 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.526 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.87 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen"
+},
+{
+    "mut": "RoundaboutInstruction_getTurnDescription_Translation",
+    "CUT": "com.graphhopper.util.RoundaboutInstruction",
+    "mutant-file": "./RoundaboutInstruction.java/21.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.374 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.598 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.494 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.509 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.669 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen"
+},
+{
+    "mut": "RoundaboutInstruction_getTurnDescription_Translation",
+    "CUT": "com.graphhopper.util.RoundaboutInstruction",
+    "mutant-file": "./RoundaboutInstruction.java/22.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.66 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.591 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.507 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.427 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.704 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen"
+},
+{
+    "mut": "RoundaboutInstruction_getTurnDescription_Translation",
+    "CUT": "com.graphhopper.util.RoundaboutInstruction",
+    "mutant-file": "./RoundaboutInstruction.java/3.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.965 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.746 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.751 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.318 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.498 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen"
+},
+{
+    "mut": "RoundaboutInstruction_getTurnDescription_Translation",
+    "CUT": "com.graphhopper.util.RoundaboutInstruction",
+    "mutant-file": "./RoundaboutInstruction.java/35.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.587 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.688 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.516 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.308 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.308 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen"
+},
+{
+    "mut": "RoundaboutInstruction_getTurnDescription_Translation",
+    "CUT": "com.graphhopper.util.RoundaboutInstruction",
+    "mutant-file": "./RoundaboutInstruction.java/5.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.63 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.415 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.509 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.764 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.45 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen"
+},
+{
+    "mut": "RoundaboutInstruction_getTurnDescription_Translation",
+    "CUT": "com.graphhopper.util.RoundaboutInstruction",
+    "mutant-file": "./RoundaboutInstruction.java/8.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.29 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.65 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.544 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.52 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.657 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen"
+},
+{
+    "mut": "RoundaboutInstruction_getTurnDescription_Translation",
+    "CUT": "com.graphhopper.util.RoundaboutInstruction",
+    "mutant-file": "./RoundaboutInstruction.java/9.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.083 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.298 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.335 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.299 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.587 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen"
+},

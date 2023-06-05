@@ -1,0 +1,3067 @@
+[LOG] Initiating analysis at 2023-06-05 16:51:30.493585
+---------------------------------------------------
+[LOG] Removing pre-existing mutants from current working directory
+[LOG] Cleaning up LittleDarwin results
+---------------------------------------------------
+[LOG] Working with get_BooleanEncodedValue
+[LOG] Generating mutants for its parent VirtualEdgeIteratorState.java
+---------------------------------------------------
+[LOG] Running littledarwin on /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/
+[LOG] Invoked LitteDarwin with ['python3', '-m', 'littledarwin', '-m', '-v', '-p', '/home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/', '--all']
+
+    __     _  __   __   __       ____                          _
+   / /    (_)/ /_ / /_ / /___   / __ \ ____ _ _____ _      __ (_)____
+  / /    / // __// __// // _ \ / / / // __ `// ___/| | /| / // // __ \
+ / /___ / // /_ / /_ / //  __// /_/ // /_/ // /    | |/ |/ // // / / /
+/_____//_/ \__/ \__//_/ \___//_____/ \__,_//_/     |__/|__//_//_/ /_/
+
+      _                     _                 ___
+     /_|  /|/|  _/__/'     /_|   _ /   _ ' _ (_  _ _ _  _      _ /
+    (  | /   |(//(///()/) (  |/)(/((/_) /_)  /  / (///)(-((/()/ /(
+                                  /
+
+
+    LittleDarwin version 0.10.7 Copyright (C) 2014-2020 Ali Parsai
+
+    LittleDarwin comes with ABSOLUTELY NO WARRANTY.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; run LittleDarwin --license for details.
+
+    
+Source Path:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph
+Target Path:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults
+Creating Mutation Database:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults/mutationdatabase
+
+(1/7) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/QueryOverlay.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  26
+----> RemoveMethod : 10
+----> ArithmeticOperatorReplacementBinary : 2
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 7
+----> NullifyObjectInitialization : 6
+
+(2/7) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/VirtualEdgeIterator.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  148
+----> ConditionalOperatorReplacement : 2
+----> RemoveMethod : 64
+----> RelationalOperatorReplacement : 4
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 39
+----> ArithmeticOperatorReplacementUnary : 2
+----> NullifyReturnValue : 33
+----> NullifyObjectInitialization : 1
+
+(3/7) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/QueryRoutingCHGraph.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  156
+----> RemoveNullCheck : 1
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 84
+----> RelationalOperatorReplacement : 11
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 13
+----> ConditionalOperatorDeletion : 5
+----> NullifyInputVariable : 7
+----> ArithmeticOperatorReplacementUnary : 2
+----> NullifyReturnValue : 20
+----> NullifyObjectInitialization : 10
+
+(4/7) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/QueryGraph.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  121
+----> RemoveNullCheck : 1
+----> ConditionalOperatorReplacement : 2
+----> RemoveMethod : 41
+----> RelationalOperatorReplacement : 10
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 14
+----> ConditionalOperatorDeletion : 4
+----> NullifyInputVariable : 12
+----> NullifyReturnValue : 24
+----> NullifyObjectInitialization : 12
+
+(5/7) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/QueryOverlayBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  75
+----> RemoveNullCheck : 2
+----> RemoveMethod : 12
+----> RelationalOperatorReplacement : 14
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 17
+----> ConditionalOperatorDeletion : 2
+----> NullifyInputVariable : 13
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 10
+
+(6/7) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/EdgeChangeBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  38
+----> RemoveNullCheck : 1
+----> RemoveMethod : 12
+----> RelationalOperatorReplacement : 3
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 9
+----> ConditionalOperatorDeletion : 3
+----> NullifyInputVariable : 3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 5
+
+(7/7) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/VirtualEdgeIteratorState.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  180
+----> RemoveMethod : 63
+----> RelationalOperatorReplacement : 10
+----> ArithmeticOperatorReplacementBinary : 4
+----> ConditionalOperatorDeletion : 20
+----> NullifyInputVariable : 39
+----> NullifyReturnValue : 35
+----> NullifyObjectInitialization : 9
+
+Total mutations found:  744
+--> RemoveNullCheck: 5
+--> ConditionalOperatorReplacement: 5
+--> RemoveMethod: 286
+--> RelationalOperatorReplacement: 52
+--> ArithmeticOperatorReplacementShortcut: 8
+--> ArithmeticOperatorReplacementBinary: 59
+--> ConditionalOperatorDeletion: 35
+--> NullifyInputVariable: 114
+--> ArithmeticOperatorReplacementUnary: 4
+--> NullifyReturnValue: 123
+--> NullifyObjectInitialization: 53
+
+
+---------------------------------------------------
+[LOG] Copying mutants of VirtualEdgeIteratorState.java
+---------------------------------------------------
+[LOG] Generated 180 mutants
+---------------------------------------------------
+[LOG] Backing up original RICK test as ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java ./VirtualEdgeIteratorState.java/original-test.java
+---------------------------------------------------
+[LOG] Generating variants of original RICK test
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-oo.java
+[LOG] Created OO test at /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-oo.java
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-po.java
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-all.java
+---------------------------------------------------
+[LOG] Replacing originalVirtualEdgeIteratorState.java with ./VirtualEdgeIteratorState.java/133.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/133.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/VirtualEdgeIteratorState.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.graphhopper:graphhopper-core >------------------
+[INFO] Building GraphHopper Core 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ graphhopper-core ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/core/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:3.0.0:revision (default) @ graphhopper-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 52 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 406 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 37 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 184 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:test-jar (default) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:integration-test (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:verify (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ graphhopper-core ---
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.jar
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/pom.xml to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.pom
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  48.154 s
+[INFO] Finished at: 2023-06-05T16:52:38+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.835 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.968 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:42)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.047 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:68)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.034 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:55)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987:68 » NullPointer
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987:42 » NullPointer
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987:55 » NullPointer
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.799 s
+[INFO] Finished at: 2023-06-05T16:52:59+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.947 s
+[INFO] Finished at: 2023-06-05T16:53:03+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[OO] Evaluating only OO
+[LOG] Replacing original RICK test with variant oo
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.989 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.101 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:42)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.053 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:68)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.044 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:55)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987:68 » NullPointer
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987:42 » NullPointer
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987:55 » NullPointer
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.538 s
+[INFO] Finished at: 2023-06-05T16:53:23+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.031 s
+[INFO] Finished at: 2023-06-05T16:53:28+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.79 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.915 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:42)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.042 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:68)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.034 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:55)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987:68 » NullPointer
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987:42 » NullPointer
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987:55 » NullPointer
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.545 s
+[INFO] Finished at: 2023-06-05T16:53:47+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.858 s
+[INFO] Finished at: 2023-06-05T16:53:52+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.737 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.919 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:42)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.032 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:68)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.028 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:55)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987:68 » NullPointer
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987:42 » NullPointer
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987:55 » NullPointer
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.618 s
+[INFO] Finished at: 2023-06-05T16:54:11+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.079 s
+[INFO] Finished at: 2023-06-05T16:54:16+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.981 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.131 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:42)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.034 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:68)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.029 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:55)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987:68 » NullPointer
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987:42 » NullPointer
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987:55 » NullPointer
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.498 s
+[INFO] Finished at: 2023-06-05T16:54:36+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.865 s
+[INFO] Finished at: 2023-06-05T16:54:40+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting VirtualEdgeIteratorState.java to original
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/VirtualEdgeIteratorState.java
+---------------------------------------------------
+[LOG] Replacing originalVirtualEdgeIteratorState.java with ./VirtualEdgeIteratorState.java/45.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/45.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/VirtualEdgeIteratorState.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.graphhopper:graphhopper-core >------------------
+[INFO] Building GraphHopper Core 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ graphhopper-core ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/core/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:3.0.0:revision (default) @ graphhopper-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 52 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 406 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 37 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 184 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:test-jar (default) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:integration-test (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:verify (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ graphhopper-core ---
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.jar
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/pom.xml to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.pom
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  47.601 s
+[INFO] Finished at: 2023-06-05T16:55:32+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.03 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.115 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.063 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.041 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.774 s
+[INFO] Finished at: 2023-06-05T16:55:51+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.924 s
+[INFO] Finished at: 2023-06-05T16:55:56+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[OO] Evaluating only OO
+[LOG] Replacing original RICK test with variant oo
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.8 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.894 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.057 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.044 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.395 s
+[INFO] Finished at: 2023-06-05T16:56:16+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.102 s
+[INFO] Finished at: 2023-06-05T16:56:21+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.873 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.972 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.041 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.06 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    true,
+    <any com.graphhopper.storage.IntsRef>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987:57 
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    true,
+    <any com.graphhopper.storage.IntsRef>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+Actually, there were zero interactions with this mock.
+
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.659 s
+[INFO] Finished at: 2023-06-05T16:56:40+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.836 s
+[INFO] Finished at: 2023-06-05T16:56:45+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.062 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.13 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.098 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    <any boolean>,
+    <any>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.042 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987:71 
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    <any boolean>,
+    <any>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+Actually, there were zero interactions with this mock.
+
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.585 s
+[INFO] Finished at: 2023-06-05T16:57:04+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.979 s
+[INFO] Finished at: 2023-06-05T16:57:09+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 3.882 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.988 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.081 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    <any boolean>,
+    <any>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.043 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    true,
+    <any com.graphhopper.storage.IntsRef>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987:71 
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    <any boolean>,
+    <any>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987:57 
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    true,
+    <any com.graphhopper.storage.IntsRef>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+Actually, there were zero interactions with this mock.
+
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 3, Failures: 2, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.617 s
+[INFO] Finished at: 2023-06-05T16:57:29+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.894 s
+[INFO] Finished at: 2023-06-05T16:57:34+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting VirtualEdgeIteratorState.java to original
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/VirtualEdgeIteratorState.java
+---------------------------------------------------
+[LOG] Replacing originalVirtualEdgeIteratorState.java with ./VirtualEdgeIteratorState.java/46.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/46.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/VirtualEdgeIteratorState.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.graphhopper:graphhopper-core >------------------
+[INFO] Building GraphHopper Core 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ graphhopper-core ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/core/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:3.0.0:revision (default) @ graphhopper-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 52 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 406 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 37 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 184 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:test-jar (default) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:integration-test (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:verify (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ graphhopper-core ---
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.jar
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/pom.xml to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.pom
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  45.646 s
+[INFO] Finished at: 2023-06-05T16:58:24+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.993 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.065 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.055 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.037 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.438 s
+[INFO] Finished at: 2023-06-05T16:58:43+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.011 s
+[INFO] Finished at: 2023-06-05T16:58:47+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[OO] Evaluating only OO
+[LOG] Replacing original RICK test with variant oo
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.993 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.079 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:44)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.047 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.049 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987:44 expected: <true> but was: <false>
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.456 s
+[INFO] Finished at: 2023-06-05T16:59:07+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.000 s
+[INFO] Finished at: 2023-06-05T16:59:12+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.114 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.1 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.053 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.073 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    true,
+    <any com.graphhopper.storage.IntsRef>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987:57 
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    true,
+    <any com.graphhopper.storage.IntsRef>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+Actually, there were zero interactions with this mock.
+
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.172 s
+[INFO] Finished at: 2023-06-05T16:59:30+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.957 s
+[INFO] Finished at: 2023-06-05T16:59:35+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.048 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.107 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.106 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    <any boolean>,
+    <any>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.039 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987:71 
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    <any boolean>,
+    <any>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+Actually, there were zero interactions with this mock.
+
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.679 s
+[INFO] Finished at: 2023-06-05T16:59:56+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.091 s
+[INFO] Finished at: 2023-06-05T17:00:01+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.934 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.972 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:44)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.089 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    <any boolean>,
+    <any>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.043 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    true,
+    <any com.graphhopper.storage.IntsRef>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987:71 
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    <any boolean>,
+    <any>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987:44 expected: <true> but was: <false>
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987:57 
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    true,
+    <any com.graphhopper.storage.IntsRef>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.404 s
+[INFO] Finished at: 2023-06-05T17:00:20+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.933 s
+[INFO] Finished at: 2023-06-05T17:00:25+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting VirtualEdgeIteratorState.java to original
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/VirtualEdgeIteratorState.java
+---------------------------------------------------
+[LOG] Replacing originalVirtualEdgeIteratorState.java with ./VirtualEdgeIteratorState.java/65.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/65.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/VirtualEdgeIteratorState.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.graphhopper:graphhopper-core >------------------
+[INFO] Building GraphHopper Core 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ graphhopper-core ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/core/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:3.0.0:revision (default) @ graphhopper-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 52 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 406 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 37 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 184 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:test-jar (default) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:integration-test (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:verify (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ graphhopper-core ---
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.jar
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/pom.xml to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.pom
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  48.068 s
+[INFO] Finished at: 2023-06-05T17:01:17+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.316 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.256 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.055 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.041 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.674 s
+[INFO] Finished at: 2023-06-05T17:01:39+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.145 s
+[INFO] Finished at: 2023-06-05T17:01:44+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[OO] Evaluating only OO
+[LOG] Replacing original RICK test with variant oo
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.046 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.092 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:44)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.052 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.037 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987:44 expected: <true> but was: <false>
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.949 s
+[INFO] Finished at: 2023-06-05T17:02:04+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.882 s
+[INFO] Finished at: 2023-06-05T17:02:09+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.997 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.05 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.053 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.079 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    true,
+    <any com.graphhopper.storage.IntsRef>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987:57 
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    true,
+    <any com.graphhopper.storage.IntsRef>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+Actually, there were zero interactions with this mock.
+
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.462 s
+[INFO] Finished at: 2023-06-05T17:02:28+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.882 s
+[INFO] Finished at: 2023-06-05T17:02:33+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.843 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.995 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.064 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    <any boolean>,
+    <any>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.028 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987:71 
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    <any boolean>,
+    <any>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+Actually, there were zero interactions with this mock.
+
+[ERROR] Errors: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.010 s
+[INFO] Finished at: 2023-06-05T17:02:52+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.090 s
+[INFO] Finished at: 2023-06-05T17:02:57+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.032 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:44)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.07 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    <any boolean>,
+    <any>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.043 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    true,
+    <any com.graphhopper.storage.IntsRef>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987:71 
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    <any boolean>,
+    <any>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987:44 expected: <true> but was: <false>
+[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987:57 
+Wanted but not invoked:
+booleanEncodedValue.getBool(
+    true,
+    <any com.graphhopper.storage.IntsRef>
+);
+-> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.635 s
+[INFO] Finished at: 2023-06-05T17:03:16+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.938 s
+[INFO] Finished at: 2023-06-05T17:03:21+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting VirtualEdgeIteratorState.java to original
+[LOG] Invoking cp ./VirtualEdgeIteratorState.java/original.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/VirtualEdgeIteratorState.java
+---------------------------------------------------
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/VirtualEdgeIteratorState.java', '/home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/']
+
+
+---------------------------------------------------
+[LOG] Finishing analysis at 2023-06-05 17:03:21.732182
+====== END OF THE LINE ======

@@ -1,0 +1,1624 @@
+[LOG] Initiating analysis at 2023-06-05 15:47:27.599252
+---------------------------------------------------
+[LOG] Removing pre-existing mutants from current working directory
+[LOG] Cleaning up LittleDarwin results
+---------------------------------------------------
+[LOG] Working with setMaxDistance_double
+[LOG] Generating mutants for its parent DouglasPeucker.java
+---------------------------------------------------
+[LOG] Running littledarwin on /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/
+[LOG] Invoked LitteDarwin with ['python3', '-m', 'littledarwin', '-m', '-v', '-p', '/home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/', '--all']
+
+    __     _  __   __   __       ____                          _
+   / /    (_)/ /_ / /_ / /___   / __ \ ____ _ _____ _      __ (_)____
+  / /    / // __// __// // _ \ / / / // __ `// ___/| | /| / // // __ \
+ / /___ / // /_ / /_ / //  __// /_/ // /_/ // /    | |/ |/ // // / / /
+/_____//_/ \__/ \__//_/ \___//_____/ \__,_//_/     |__/|__//_//_/ /_/
+
+      _                     _                 ___
+     /_|  /|/|  _/__/'     /_|   _ /   _ ' _ (_  _ _ _  _      _ /
+    (  | /   |(//(///()/) (  |/)(/((/_) /_)  /  / (///)(-((/()/ /(
+                                  /
+
+
+    LittleDarwin version 0.10.7 Copyright (C) 2014-2020 Ali Parsai
+
+    LittleDarwin comes with ABSOLUTELY NO WARRANTY.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; run LittleDarwin --license for details.
+
+    
+Source Path:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util
+Target Path:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults
+Creating Mutation Database:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults/mutationdatabase
+
+(1/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DepthFirstSearch.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  6
+----> NullifyInputVariable : 1
+----> NullifyObjectInitialization : 1
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 1
+----> RelationalOperatorReplacement : 1
+----> ConditionalOperatorDeletion : 1
+
+(2/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DistancePlaneProjection.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  29
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> ArithmeticOperatorReplacementBinary : 15
+----> RemoveMethod : 12
+
+(3/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/GHUtility.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  516
+----> NullifyInputVariable : 111
+----> ArithmeticOperatorReplacementUnary : 6
+----> NullifyReturnValue : 25
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 79
+----> RemoveNullCheck : 5
+----> ConditionalOperatorReplacement : 23
+----> ArithmeticOperatorReplacementBinary : 30
+----> ShiftOperatorReplacement : 2
+----> RemoveMethod : 145
+----> RelationalOperatorReplacement : 61
+----> ArithmeticOperatorReplacementShortcut : 12
+----> ConditionalOperatorDeletion : 16
+
+(4/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/BitUtil.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  77
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 6
+----> AssignmentOperatorReplacementShortcut : 2
+----> NullifyObjectInitialization : 5
+----> LogicalOperatorReplacement : 5
+----> ArithmeticOperatorReplacementBinary : 1
+----> ShiftOperatorReplacement : 4
+----> RemoveMethod : 46
+----> RelationalOperatorReplacement : 4
+----> ArithmeticOperatorReplacementShortcut : 2
+
+(5/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/StopWatch.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  68
+----> NullifyInputVariable : 2
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 13
+----> AssignmentOperatorReplacementShortcut : 2
+----> NullifyObjectInitialization : 1
+----> ConditionalOperatorReplacement : 1
+----> ArithmeticOperatorReplacementBinary : 19
+----> RemoveMethod : 19
+----> RelationalOperatorReplacement : 9
+----> ConditionalOperatorDeletion : 1
+
+(6/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/MiniPerfTest.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  46
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 5
+----> AssignmentOperatorReplacementShortcut : 2
+----> NullifyObjectInitialization : 1
+----> ArithmeticOperatorReplacementBinary : 10
+----> RemoveMethod : 18
+----> RelationalOperatorReplacement : 6
+----> ArithmeticOperatorReplacementShortcut : 2
+
+(7/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/EdgeExplorer.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(8/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/BitUtilBig.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  89
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 2
+----> AssignmentOperatorReplacementShortcut : 3
+----> NullifyObjectInitialization : 1
+----> LogicalOperatorReplacement : 15
+----> ConditionalOperatorReplacement : 1
+----> ArithmeticOperatorReplacementBinary : 6
+----> ShiftOperatorReplacement : 18
+----> RemoveMethod : 17
+----> RelationalOperatorReplacement : 7
+----> ArithmeticOperatorReplacementShortcut : 18
+
+(9/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DouglasPeucker.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  62
+----> NullifyInputVariable : 5
+----> ArithmeticOperatorReplacementUnary : 2
+----> NullifyReturnValue : 2
+----> AssignmentOperatorReplacementShortcut : 3
+----> NullifyObjectInitialization : 1
+----> ConditionalOperatorReplacement : 5
+----> ArithmeticOperatorReplacementBinary : 12
+----> RemoveMethod : 12
+----> RelationalOperatorReplacement : 10
+----> ArithmeticOperatorReplacementShortcut : 6
+----> ConditionalOperatorDeletion : 4
+
+(10/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/SimpleIntDeque.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  29
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 2
+----> ArithmeticOperatorReplacementBinary : 5
+----> RemoveMethod : 12
+----> RelationalOperatorReplacement : 6
+----> ArithmeticOperatorReplacementShortcut : 3
+
+(11/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DistanceCalcEuclidean.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  80
+----> NullifyReturnValue : 2
+----> NullifyObjectInitialization : 6
+----> ArithmeticOperatorReplacementBinary : 45
+----> RemoveMethod : 27
+
+(12/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/TranslationMap.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  81
+----> NullifyInputVariable : 11
+----> NullifyReturnValue : 13
+----> NullifyObjectInitialization : 15
+----> RemoveNullCheck : 5
+----> ConditionalOperatorReplacement : 4
+----> ArithmeticOperatorReplacementBinary : 1
+----> RemoveMethod : 21
+----> RelationalOperatorReplacement : 8
+----> ConditionalOperatorDeletion : 3
+
+(13/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/ArrayUtil.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  114
+----> NullifyInputVariable : 11
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 11
+----> AssignmentOperatorReplacementShortcut : 2
+----> NullifyObjectInitialization : 9
+----> ConditionalOperatorReplacement : 3
+----> ArithmeticOperatorReplacementBinary : 14
+----> RemoveMethod : 25
+----> RelationalOperatorReplacement : 23
+----> ArithmeticOperatorReplacementShortcut : 15
+
+(14/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/BitUtilLittle.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  93
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 2
+----> AssignmentOperatorReplacementShortcut : 3
+----> NullifyObjectInitialization : 1
+----> LogicalOperatorReplacement : 15
+----> ConditionalOperatorReplacement : 1
+----> ArithmeticOperatorReplacementBinary : 21
+----> ShiftOperatorReplacement : 18
+----> RemoveMethod : 17
+----> RelationalOperatorReplacement : 8
+----> ArithmeticOperatorReplacementShortcut : 6
+
+(15/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/Downloader.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  56
+----> NullifyInputVariable : 11
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 6
+----> NullifyObjectInitialization : 11
+----> RemoveNullCheck : 4
+----> ConditionalOperatorReplacement : 4
+----> ArithmeticOperatorReplacementBinary : 3
+----> RemoveMethod : 10
+----> RelationalOperatorReplacement : 6
+
+(16/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/Unzipper.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  38
+----> NullifyInputVariable : 8
+----> NullifyReturnValue : 1
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 7
+----> RemoveNullCheck : 2
+----> ConditionalOperatorReplacement : 2
+----> ArithmeticOperatorReplacementBinary : 4
+----> RemoveMethod : 5
+----> RelationalOperatorReplacement : 5
+----> ConditionalOperatorDeletion : 3
+
+(17/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DistanceCalc3D.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  9
+----> NullifyReturnValue : 1
+----> ArithmeticOperatorReplacementBinary : 4
+----> RemoveMethod : 4
+
+(18/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/PathMerger.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  84
+----> NullifyInputVariable : 10
+----> NullifyReturnValue : 7
+----> AssignmentOperatorReplacementShortcut : 5
+----> NullifyObjectInitialization : 7
+----> ConditionalOperatorReplacement : 11
+----> ArithmeticOperatorReplacementBinary : 12
+----> RemoveMethod : 9
+----> RelationalOperatorReplacement : 13
+----> ArithmeticOperatorReplacementShortcut : 3
+----> ConditionalOperatorDeletion : 7
+
+(19/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/FetchMode.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(20/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DistanceCalcEarth.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  246
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 8
+----> AssignmentOperatorReplacementShortcut : 2
+----> NullifyObjectInitialization : 9
+----> ConditionalOperatorReplacement : 5
+----> ArithmeticOperatorReplacementBinary : 171
+----> RemoveMethod : 34
+----> RelationalOperatorReplacement : 13
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ConditionalOperatorDeletion : 2
+
+(21/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/EdgeIterator.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  5
+----> ArithmeticOperatorReplacementUnary : 2
+----> RemoveMethod : 2
+----> RelationalOperatorReplacement : 1
+
+(22/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/EdgeIteratorState.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  18
+----> NullifyInputVariable : 3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 3
+----> RemoveMethod : 11
+
+(23/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/Constants.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  30
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 6
+----> RemoveNullCheck : 1
+----> ConditionalOperatorReplacement : 2
+----> ArithmeticOperatorReplacementBinary : 6
+----> RemoveMethod : 4
+----> RelationalOperatorReplacement : 8
+
+(24/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DistanceCalc.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(25/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/Instructions.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  23
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 3
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 1
+----> RelationalOperatorReplacement : 11
+----> ArithmeticOperatorReplacementShortcut : 5
+----> ConditionalOperatorDeletion : 1
+
+(26/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/AngleCalc.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  100
+----> ArithmeticOperatorReplacementUnary : 4
+----> NullifyReturnValue : 1
+----> AssignmentOperatorReplacementShortcut : 4
+----> NullifyObjectInitialization : 2
+----> ConditionalOperatorReplacement : 1
+----> ArithmeticOperatorReplacementBinary : 53
+----> RemoveMethod : 16
+----> RelationalOperatorReplacement : 19
+
+(27/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/XFirstSearch.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  5
+----> NullifyInputVariable : 1
+----> RemoveMethod : 4
+
+(28/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/PathSimplification.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  72
+----> NullifyInputVariable : 7
+----> NullifyReturnValue : 1
+----> AssignmentOperatorReplacementShortcut : 5
+----> NullifyObjectInitialization : 7
+----> ConditionalOperatorReplacement : 2
+----> ArithmeticOperatorReplacementBinary : 6
+----> RemoveMethod : 18
+----> RelationalOperatorReplacement : 17
+----> ArithmeticOperatorReplacementShortcut : 9
+
+(29/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/BreadthFirstSearch.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  7
+----> NullifyInputVariable : 1
+----> NullifyObjectInitialization : 1
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 1
+----> ConditionalOperatorDeletion : 3
+
+(30/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/GitInfo.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  17
+----> NullifyReturnValue : 5
+----> RemoveMethod : 12
+
+(31/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/EnumDetails.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  6
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 1
+----> RemoveMethod : 3
+----> RelationalOperatorReplacement : 1
+
+(32/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/PathDetailsBuilderFactory.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  25
+----> NullifyInputVariable : 3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 14
+----> ConditionalOperatorReplacement : 5
+----> RemoveMethod : 1
+----> RelationalOperatorReplacement : 1
+
+(33/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/AverageSpeedDetails.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  18
+----> NullifyInputVariable : 1
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 1
+----> RemoveNullCheck : 2
+----> ConditionalOperatorReplacement : 1
+----> ArithmeticOperatorReplacementBinary : 5
+----> RemoveMethod : 3
+----> RelationalOperatorReplacement : 4
+
+(34/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/PathDetailsFromEdges.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  20
+----> NullifyInputVariable : 6
+----> NullifyReturnValue : 3
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 3
+----> RemoveNullCheck : 1
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 3
+----> RelationalOperatorReplacement : 1
+----> ConditionalOperatorDeletion : 1
+
+(35/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/PathDetailsBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(36/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/EdgeIdDetails.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  10
+----> NullifyInputVariable : 2
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 1
+----> RemoveMethod : 5
+----> RelationalOperatorReplacement : 1
+
+(37/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/StringDetails.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  6
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 1
+----> RemoveMethod : 3
+----> RelationalOperatorReplacement : 1
+
+(38/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/AbstractPathDetailsBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  14
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 4
+----> RemoveMethod : 7
+
+(39/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/EdgeKeyDetails.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  12
+----> NullifyInputVariable : 2
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 1
+----> ArithmeticOperatorReplacementBinary : 2
+----> RemoveMethod : 5
+----> RelationalOperatorReplacement : 1
+
+(40/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/BooleanDetails.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  9
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 1
+----> RemoveNullCheck : 1
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 3
+----> RelationalOperatorReplacement : 2
+
+(41/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/TimeDetails.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  7
+----> NullifyInputVariable : 1
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 1
+----> RemoveMethod : 3
+----> RelationalOperatorReplacement : 1
+
+(42/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/StreetNameDetails.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  9
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 1
+----> RemoveNullCheck : 1
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 3
+----> RelationalOperatorReplacement : 1
+----> ConditionalOperatorDeletion : 1
+
+(43/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/DistanceDetails.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  7
+----> NullifyInputVariable : 1
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 1
+----> RemoveMethod : 3
+----> RelationalOperatorReplacement : 1
+
+(44/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/DecimalDetails.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  11
+----> NullifyInputVariable : 1
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 2
+----> ArithmeticOperatorReplacementBinary : 3
+----> RemoveMethod : 3
+----> RelationalOperatorReplacement : 1
+
+(45/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/IntDetails.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  7
+----> NullifyInputVariable : 1
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 1
+----> RemoveMethod : 3
+----> RelationalOperatorReplacement : 1
+
+(46/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/WeightDetails.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  6
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 1
+----> RemoveMethod : 3
+----> RelationalOperatorReplacement : 1
+
+(47/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/shapes/Circle.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  88
+----> NullifyInputVariable : 5
+----> NullifyReturnValue : 2
+----> NullifyObjectInitialization : 1
+----> LogicalOperatorReplacement : 3
+----> RemoveNullCheck : 1
+----> ConditionalOperatorReplacement : 7
+----> ArithmeticOperatorReplacementBinary : 14
+----> ShiftOperatorReplacement : 3
+----> RemoveMethod : 23
+----> RelationalOperatorReplacement : 28
+----> ArithmeticOperatorReplacementShortcut : 1
+
+(48/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/shapes/Polygon.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  57
+----> NullifyInputVariable : 3
+----> NullifyReturnValue : 4
+----> NullifyObjectInitialization : 16
+----> ArithmeticOperatorReplacementBinary : 8
+----> RemoveMethod : 19
+----> RelationalOperatorReplacement : 5
+----> ArithmeticOperatorReplacementShortcut : 2
+
+(49/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/shapes/Shape.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(50/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/shapes/BBox.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  169
+----> NullifyInputVariable : 11
+----> ArithmeticOperatorReplacementUnary : 8
+----> NullifyReturnValue : 14
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 16
+----> LogicalOperatorReplacement : 4
+----> RemoveNullCheck : 1
+----> ConditionalOperatorReplacement : 19
+----> ArithmeticOperatorReplacementBinary : 14
+----> ShiftOperatorReplacement : 4
+----> RemoveMethod : 36
+----> RelationalOperatorReplacement : 39
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ConditionalOperatorDeletion : 1
+
+Total mutations found:  2481
+--> NullifyInputVariable: 232
+--> ArithmeticOperatorReplacementUnary: 32
+--> NullifyReturnValue: 160
+--> AssignmentOperatorReplacementShortcut: 37
+--> NullifyObjectInitialization: 230
+--> LogicalOperatorReplacement: 42
+--> RemoveNullCheck: 24
+--> ConditionalOperatorReplacement: 103
+--> ArithmeticOperatorReplacementBinary: 484
+--> ShiftOperatorReplacement: 49
+--> RemoveMethod: 632
+--> RelationalOperatorReplacement: 326
+--> ArithmeticOperatorReplacementShortcut: 86
+--> ConditionalOperatorDeletion: 44
+
+
+---------------------------------------------------
+[LOG] Copying mutants of DouglasPeucker.java
+---------------------------------------------------
+[LOG] Generated 62 mutants
+---------------------------------------------------
+[LOG] Backing up original RICK test as ./DouglasPeucker.java/original-test.java
+[LOG] Invoking cp /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java ./DouglasPeucker.java/original-test.java
+---------------------------------------------------
+[LOG] Generating variants of original RICK test
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-po.java
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-all.java
+---------------------------------------------------
+[LOG] Replacing originalDouglasPeucker.java with ./DouglasPeucker.java/41.java
+[LOG] Invoking cp ./DouglasPeucker.java/41.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DouglasPeucker.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.graphhopper:graphhopper-core >------------------
+[INFO] Building GraphHopper Core 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ graphhopper-core ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/core/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:3.0.0:revision (default) @ graphhopper-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 52 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 406 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 37 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 184 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:test-jar (default) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:integration-test (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:verify (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ graphhopper-core ---
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.jar
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/pom.xml to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.pom
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  44.254 s
+[INFO] Finished at: 2023-06-05T15:48:42+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestDouglasPeuckerRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 4.081 s <<< FAILURE! - in com.graphhopper.util.TestDouglasPeuckerRickGen
+[ERROR] test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 3.11 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:56)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 0.016 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:43)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d » UnnecessaryStubbing
+[ERROR]   TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.613 s
+[INFO] Finished at: 2023-06-05T15:49:03+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.793 s
+[INFO] Finished at: 2023-06-05T15:49:08+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./DouglasPeucker.java/original-test.java
+[LOG] Invoking cp ./DouglasPeucker.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestDouglasPeuckerRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
+[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 3.526 s <<< FAILURE! - in com.graphhopper.util.TestDouglasPeuckerRickGen
+[ERROR] test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 2.7 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:56)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 0.031 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+distanceCalc.calcNormalizedDist(1.0d);
+-> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:47)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:47)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d:47 
+Wanted but not invoked:
+distanceCalc.calcNormalizedDist(1.0d);
+-> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:47)
+Actually, there were zero interactions with this mock.
+
+[ERROR] Errors: 
+[ERROR]   TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.197 s
+[INFO] Finished at: 2023-06-05T15:49:25+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.809 s
+[INFO] Finished at: 2023-06-05T15:49:30+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./DouglasPeucker.java/original-test.java
+[LOG] Invoking cp ./DouglasPeucker.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestDouglasPeuckerRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
+[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 4.321 s <<< FAILURE! - in com.graphhopper.util.TestDouglasPeuckerRickGen
+[ERROR] test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 3.426 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+distanceCalc.calcNormalizedDist(
+    <any double>
+);
+-> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:61)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:61)
+
+[ERROR] test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 0.016 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:43)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d:61 
+Wanted but not invoked:
+distanceCalc.calcNormalizedDist(
+    <any double>
+);
+-> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:61)
+Actually, there were zero interactions with this mock.
+
+[ERROR] Errors: 
+[ERROR]   TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d » UnnecessaryStubbing
+[INFO] 
+[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.974 s
+[INFO] Finished at: 2023-06-05T15:49:48+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.269 s
+[INFO] Finished at: 2023-06-05T15:49:54+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./DouglasPeucker.java/original-test.java
+[LOG] Invoking cp ./DouglasPeucker.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./DouglasPeucker.java/original-test.java
+[LOG] Invoking cp ./DouglasPeucker.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestDouglasPeuckerRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.416 s <<< FAILURE! - in com.graphhopper.util.TestDouglasPeuckerRickGen
+[ERROR] test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 2.682 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+distanceCalc.calcNormalizedDist(
+    <any double>
+);
+-> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:61)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:61)
+
+[ERROR] test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 0.017 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+distanceCalc.calcNormalizedDist(1.0d);
+-> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:47)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:47)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d:61 
+Wanted but not invoked:
+distanceCalc.calcNormalizedDist(
+    <any double>
+);
+-> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:61)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d:47 
+Wanted but not invoked:
+distanceCalc.calcNormalizedDist(1.0d);
+-> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:47)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.511 s
+[INFO] Finished at: 2023-06-05T15:50:13+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.821 s
+[INFO] Finished at: 2023-06-05T15:50:17+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting DouglasPeucker.java to original
+[LOG] Invoking cp ./DouglasPeucker.java/original.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DouglasPeucker.java
+---------------------------------------------------
+[LOG] Replacing originalDouglasPeucker.java with ./DouglasPeucker.java/9.java
+[LOG] Invoking cp ./DouglasPeucker.java/9.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DouglasPeucker.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.graphhopper:graphhopper-core >------------------
+[INFO] Building GraphHopper Core 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ graphhopper-core ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/core/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:3.0.0:revision (default) @ graphhopper-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 52 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 406 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 37 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 184 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:test-jar (default) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:integration-test (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:verify (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ graphhopper-core ---
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.jar
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/pom.xml to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.pom
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  40.741 s
+[INFO] Finished at: 2023-06-05T15:51:02+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestDouglasPeuckerRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.527 s - in com.graphhopper.util.TestDouglasPeuckerRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.765 s
+[INFO] Finished at: 2023-06-05T15:51:21+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.409 s
+[INFO] Finished at: 2023-06-05T15:51:26+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./DouglasPeucker.java/original-test.java
+[LOG] Invoking cp ./DouglasPeucker.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestDouglasPeuckerRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.309 s - in com.graphhopper.util.TestDouglasPeuckerRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13.789 s
+[INFO] Finished at: 2023-06-05T15:51:44+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.108 s
+[INFO] Finished at: 2023-06-05T15:51:48+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./DouglasPeucker.java/original-test.java
+[LOG] Invoking cp ./DouglasPeucker.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestDouglasPeuckerRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.185 s - in com.graphhopper.util.TestDouglasPeuckerRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.887 s
+[INFO] Finished at: 2023-06-05T15:52:09+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.984 s
+[INFO] Finished at: 2023-06-05T15:52:14+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./DouglasPeucker.java/original-test.java
+[LOG] Invoking cp ./DouglasPeucker.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./DouglasPeucker.java/original-test.java
+[LOG] Invoking cp ./DouglasPeucker.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestDouglasPeuckerRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.336 s - in com.graphhopper.util.TestDouglasPeuckerRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.086 s
+[INFO] Finished at: 2023-06-05T15:52:32+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.797 s
+[INFO] Finished at: 2023-06-05T15:52:37+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting DouglasPeucker.java to original
+[LOG] Invoking cp ./DouglasPeucker.java/original.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DouglasPeucker.java
+---------------------------------------------------
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/DouglasPeucker.java', '/home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/']
+
+
+---------------------------------------------------
+[LOG] Finishing analysis at 2023-06-05 15:52:37.338592
+====== END OF THE LINE ======

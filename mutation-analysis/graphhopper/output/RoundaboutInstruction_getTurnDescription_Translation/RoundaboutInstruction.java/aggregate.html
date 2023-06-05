@@ -1,0 +1,242 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.57</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                             
+</span><span class="outsideLine"><i>0002</i>  *  Licensed to GraphHopper GmbH under one or more contributor                                 
+</span><span class="outsideLine"><i>0003</i>  *  license agreements. See the NOTICE file distributed with this work for                     
+</span><span class="outsideLine"><i>0004</i>  *  additional information regarding copyright ownership.                                      
+</span><span class="outsideLine"><i>0005</i>  *                                                                                             
+</span><span class="outsideLine"><i>0006</i>  *  GraphHopper GmbH licenses this file to you under the Apache License,                       
+</span><span class="outsideLine"><i>0007</i>  *  Version 2.0 (the "License"); you may not use this file except in                           
+</span><span class="outsideLine"><i>0008</i>  *  compliance with the License. You may obtain a copy of the License at                       
+</span><span class="outsideLine"><i>0009</i>  *                                                                                             
+</span><span class="outsideLine"><i>0010</i>  *       http://www.apache.org/licenses/LICENSE-2.0                                            
+</span><span class="outsideLine"><i>0011</i>  *                                                                                             
+</span><span class="outsideLine"><i>0012</i>  *  Unless required by applicable law or agreed to in writing, software                        
+</span><span class="outsideLine"><i>0013</i>  *  distributed under the License is distributed on an "AS IS" BASIS,                          
+</span><span class="outsideLine"><i>0014</i>  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                   
+</span><span class="outsideLine"><i>0015</i>  *  See the License for the specific language governing permissions and                        
+</span><span class="outsideLine"><i>0016</i>  *  limitations under the License.                                                             
+</span><span class="outsideLine"><i>0017</i>  */                                                                                            
+</span><span class="outsideLine"><i>0018</i> package com.graphhopper.util;                                                                  
+</span><span class="outsideLine"><i>0019</i>                                                                                                
+</span><span class="outsideLine"><i>0020</i> import java.util.HashMap;                                                                      
+</span><span class="outsideLine"><i>0021</i> import java.util.Map;                                                                          
+</span><span class="outsideLine"><i>0022</i>                                                                                                
+</span><span class="outsideLine"><i>0023</i> /**                                                                                            
+</span><span class="outsideLine"><i>0024</i>  * @author jansoe                                                                              
+</span><span class="outsideLine"><i>0025</i>  */                                                                                            
+</span><span class="outsideLine"><i>0026</i> public class RoundaboutInstruction extends Instruction {                                       
+</span><span class="outsideLine"><i>0027</i>     private int exitNumber = 0;                                                                
+</span><span class="outsideLine"><i>0028</i>     // 0 undetermined, 1 clockwise, -1 counterclockwise, 2 inconsistent                        
+</span><span class="outsideLine"><i>0029</i>     private int clockwise = 0;                                                                 
+</span><span class="outsideLine"><i>0030</i>     private boolean exited = false;                                                            
+</span><span class="outsideLine"><i>0031</i>     private double radian = Double.NaN;                                                        
+</span><span class="outsideLine"><i>0032</i>                                                                                                
+</span><span class="methodLine"><i>0033</i>     public RoundaboutInstruction(int sign, String name, PointList pl) {                        
+</span><span class="methodLine"><i>0034</i>         super(sign, name, pl);                                                                 
+</span><span class="methodLine"><i>0035</i>     }                                                                                          
+</span><span class="outsideLine"><i>0036</i>                                                                                                
+</span><span class="methodLine"><i>0037</i>     public RoundaboutInstruction increaseExitNumber() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 146</span>{                                        
+</span><span class="methodLine"><i>0038</i>         this.exitNumber <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 502</span>+=</span> 1;                                                                  
+</span><span class="methodLine"><i>0039</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 357</span>return this;</span>                                                                           
+</span><span class="methodLine"><i>0040</i>     }</span>                                                                                          
+</span><span class="outsideLine"><i>0041</i>                                                                                                
+</span><span class="methodLine"><i>0042</i>     public RoundaboutInstruction setDirOfRotation(double deltaIn) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 151</span>{                            
+</span><span class="methodLine"><i>0043</i>         if (clockwise <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 506</span>==</span> 0) {                                                                  
+</span><span class="methodLine"><i>0044</i>             clockwise = deltaIn <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 938</span>></span> 0 ? 1 : <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 942</span>-</span>1;                                                  
+</span><span class="methodLine"><i>0045</i>         } else {                                                                               
+</span><span class="methodLine"><i>0046</i>             int clockwise2 = deltaIn <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1007</span>></span> 0 ? 1 : <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 1011</span>-</span>1;                                             
+</span><span class="methodLine"><i>0047</i>             if (clockwise <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 839</span>!=</span> clockwise2) {                                                     
+</span><span class="methodLine"><i>0048</i>                 clockwise = 2;                                                                 
+</span><span class="methodLine"><i>0049</i>             }                                                                                  
+</span><span class="methodLine"><i>0050</i>         }                                                                                      
+</span><span class="methodLine"><i>0051</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 361</span>return this;</span>                                                                           
+</span><span class="methodLine"><i>0052</i>     }</span>                                                                                          
+</span><span class="outsideLine"><i>0053</i>                                                                                                
+</span><span class="methodLine"><i>0054</i>     public RoundaboutInstruction setExited() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 156</span>{                                                 
+</span><span class="methodLine"><i>0055</i>         exited = true;                                                                         
+</span><span class="methodLine"><i>0056</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 363</span>return this;</span>                                                                           
+</span><span class="methodLine"><i>0057</i>     }</span>                                                                                          
+</span><span class="outsideLine"><i>0058</i>                                                                                                
+</span><span class="methodLine"><i>0059</i>     public boolean isExited() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 161</span>{                                                                
+</span><span class="methodLine"><i>0060</i>         return exited;                                                                         
+</span><span class="methodLine"><i>0061</i>     }</span>                                                                                          
+</span><span class="outsideLine"><i>0062</i>                                                                                                
+</span><span class="methodLine"><i>0063</i>     public int getExitNumber() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 166</span>{                                                               
+</span><span class="methodLine"><i>0064</i>         if (exited <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 515</span>&&</span> exitNumber <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 597</span>==</span> 0) {                                                       
+</span><span class="methodLine"><i>0065</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 846</span>new IllegalStateException("RoundaboutInstruction must contain exitNumber>0")</span>;
+</span><span class="methodLine"><i>0066</i>         }                                                                                      
+</span><span class="methodLine"><i>0067</i>         return exitNumber;                                                                     
+</span><span class="methodLine"><i>0068</i>     }</span>                                                                                          
+</span><span class="outsideLine"><i>0069</i>                                                                                                
+</span><span class="methodLine"><i>0070</i>     public RoundaboutInstruction setExitNumber(int exitNumber) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 171</span>{                               
+</span><span class="methodLine"><i>0071</i>         this.exitNumber = exitNumber;                                                          
+</span><span class="methodLine"><i>0072</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 370</span>return this;</span>                                                                           
+</span><span class="methodLine"><i>0073</i>     }</span>                                                                                          
+</span><span class="outsideLine"><i>0074</i>                                                                                                
+</span><span class="outsideLine"><i>0075</i>     /**                                                                                        
+</span><span class="outsideLine"><i>0076</i>      * @return radian of angle -2PI &lt; x &lt; 2PI between roundabout entrance and exit values
+</span><span class="outsideLine"><i>0077</i>      * <ul>                                                                                    
+</span><span class="outsideLine"><i>0078</i>      * <li>&gt; 0 is for clockwise rotation</li>                                               
+</span><span class="outsideLine"><i>0079</i>      * <li>&lt; 0 is for counterclockwise rotation</li>                                        
+</span><span class="outsideLine"><i>0080</i>      * <li>NaN if direction of rotation is unclear</li>                                        
+</span><span class="outsideLine"><i>0081</i>      * </ul>                                                                                   
+</span><span class="outsideLine"><i>0082</i>      */                                                                                        
+</span><span class="methodLine"><i>0083</i>     public double getTurnAngle() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 176</span>{                                                             
+</span><span class="methodLine"><i>0084</i>         if (Math.abs(clockwise) <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 523</span>!=</span> 1)                                                          
+</span><span class="methodLine"><i>0085</i>             return Double.NaN;                                                                 
+</span><span class="methodLine"><i>0086</i>         else                                                                                   
+</span><span class="methodLine"><i>0087</i>             return Math.PI <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 612</span>*</span> clockwise <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 529</span>-</span> radian;                                               
+</span><span class="methodLine"><i>0088</i>     }</span>                                                                                          
+</span><span class="outsideLine"><i>0089</i>                                                                                                
+</span><span class="outsideLine"><i>0090</i>     /**                                                                                        
+</span><span class="outsideLine"><i>0091</i>      * The radian value between entrance (in) and exit (out) of this roundabout.               
+</span><span class="outsideLine"><i>0092</i>      */                                                                                        
+</span><span class="methodLine"><i>0093</i>     public RoundaboutInstruction setRadian(double radian) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 181</span>{                                    
+</span><span class="methodLine"><i>0094</i>         this.radian = radian;                                                                  
+</span><span class="methodLine"><i>0095</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 375</span>return this;</span>                                                                           
+</span><span class="methodLine"><i>0096</i>     }</span>                                                                                          
+</span><span class="outsideLine"><i>0097</i>                                                                                                
+</span><span class="outsideLine"><i>0098</i>     @Override                                                                                  
+</span><span class="methodLine"><i>0099</i>     public Map<String, Object> getExtraInfoJSON() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 187</span>{                                            
+</span><span class="methodLine"><i>0100</i>         Map<String, Object> tmpMap = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 857</span>new HashMap<>(3)</span>;                                         
+</span><span class="methodLine"><i>0101</i>         tmpMap.put("exit_number", getExitNumber());                                            
+</span><span class="methodLine"><i>0102</i>         tmpMap.put("exited", this.exited);                                                     
+</span><span class="methodLine"><i>0103</i>         double tmpAngle = getTurnAngle();                                                      
+</span><span class="methodLine"><i>0104</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 543</span>!</span>Double.isNaN(tmpAngle))                                                           
+</span><span class="methodLine"><i>0105</i>             tmpMap.put("turn_angle", Helper.round(tmpAngle, 2));                               
+</span><span class="outsideLine"><i>0106</i>                                                                                                
+</span><span class="methodLine"><i>0107</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 387</span>return tmpMap;</span>                                                                         
+</span><span class="outsideLine"><i>0108</i>                                                                                                
+</span><span class="methodLine"><i>0109</i>     }</span>                                                                                          
+</span><span class="outsideLine"><i>0110</i>                                                                                                
+</span><span class="outsideLine"><i>0111</i>     @Override                                                                                  
+</span><span class="methodLine"><i>0112</i>     public String getTurnDescription(Translation tr) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 193</span>{</span>                                         
+</span><span class="methodLine"><i>0113</i>         if (rawName)                                                                           
+</span><span class="methodLine"><i>0114</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 479</span>return getName();</span>                                                                  
+</span><span class="outsideLine"><i>0115</i>                                                                                                
+</span><span class="methodLine"><i>0116</i>         String str;                                                                            
+</span><span class="methodLine"><i>0117</i>         String streetName = getName();                                                         
+</span><span class="methodLine"><i>0118</i>         int indi = getSign();                                                                  
+</span><span class="methodLine"><i>0119</i>         if (indi <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 562</span>==</span> Instruction.USE_ROUNDABOUT) {                                              
+</span><span class="methodLine"><i>0120</i>             if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 883</span>!</span>exited) {                                                                     
+</span><span class="methodLine"><i>0121</i>                 str = tr.tr("roundabout_enter");                                               
+</span><span class="methodLine"><i>0122</i>             } else {                                                                           
+</span><span class="methodLine"><i>0123</i>                 str = Helper.isEmpty(streetName) ? tr.tr("roundabout_exit", getExitNumber())   
+</span><span class="methodLine"><i>0124</i>                         : tr.tr("roundabout_exit_onto", getExitNumber(), streetName);          
+</span><span class="methodLine"><i>0125</i>             }                                                                                  
+</span><span class="methodLine"><i>0126</i>         } else {                                                                               
+</span><span class="methodLine"><i>0127</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 888</span>new IllegalStateException(indi + "no roundabout indication")</span>;                
+</span><span class="methodLine"><i>0128</i>         }                                                                                      
+</span><span class="methodLine"><i>0129</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 396</span>return str;</span>                                                                            
+</span><span class="methodLine"><i>0130</i>     }</span>                                                                                          
+</span><span class="outsideLine"><i>0131</i> }                                                                                              
+</span><span class="outsideLine"><i>0132</i>                                                                                                </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

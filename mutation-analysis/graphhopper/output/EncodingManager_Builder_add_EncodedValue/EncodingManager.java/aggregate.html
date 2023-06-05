@@ -1,0 +1,1358 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.75</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                                                                                                              
+</span><span class="outsideLine"><i>0002</i>  *  Licensed to GraphHopper GmbH under one or more contributor                                                                                                                  
+</span><span class="outsideLine"><i>0003</i>  *  license agreements. See the NOTICE file distributed with this work for                                                                                                      
+</span><span class="outsideLine"><i>0004</i>  *  additional information regarding copyright ownership.                                                                                                                       
+</span><span class="outsideLine"><i>0005</i>  *                                                                                                                                                                              
+</span><span class="outsideLine"><i>0006</i>  *  GraphHopper GmbH licenses this file to you under the Apache License,                                                                                                        
+</span><span class="outsideLine"><i>0007</i>  *  Version 2.0 (the "License"); you may not use this file except in                                                                                                            
+</span><span class="outsideLine"><i>0008</i>  *  compliance with the License. You may obtain a copy of the License at                                                                                                        
+</span><span class="outsideLine"><i>0009</i>  *                                                                                                                                                                              
+</span><span class="outsideLine"><i>0010</i>  *       http://www.apache.org/licenses/LICENSE-2.0                                                                                                                             
+</span><span class="outsideLine"><i>0011</i>  *                                                                                                                                                                              
+</span><span class="outsideLine"><i>0012</i>  *  Unless required by applicable law or agreed to in writing, software                                                                                                         
+</span><span class="outsideLine"><i>0013</i>  *  distributed under the License is distributed on an "AS IS" BASIS,                                                                                                           
+</span><span class="outsideLine"><i>0014</i>  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                                                                                                    
+</span><span class="outsideLine"><i>0015</i>  *  See the License for the specific language governing permissions and                                                                                                         
+</span><span class="outsideLine"><i>0016</i>  *  limitations under the License.                                                                                                                                              
+</span><span class="outsideLine"><i>0017</i>  */                                                                                                                                                                             
+</span><span class="outsideLine"><i>0018</i> package com.graphhopper.routing.util;                                                                                                                                           
+</span><span class="outsideLine"><i>0019</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0020</i> import com.graphhopper.reader.OSMTurnRelation;                                                                                                                                  
+</span><span class="outsideLine"><i>0021</i> import com.graphhopper.reader.ReaderRelation;                                                                                                                                   
+</span><span class="outsideLine"><i>0022</i> import com.graphhopper.reader.ReaderWay;                                                                                                                                        
+</span><span class="outsideLine"><i>0023</i> import com.graphhopper.reader.osm.conditional.DateRangeParser;                                                                                                                  
+</span><span class="outsideLine"><i>0024</i> import com.graphhopper.routing.ev.*;                                                                                                                                            
+</span><span class="outsideLine"><i>0025</i> import com.graphhopper.routing.util.parsers.*;                                                                                                                                  
+</span><span class="outsideLine"><i>0026</i> import com.graphhopper.storage.Graph;                                                                                                                                           
+</span><span class="outsideLine"><i>0027</i> import com.graphhopper.storage.IntsRef;                                                                                                                                         
+</span><span class="outsideLine"><i>0028</i> import com.graphhopper.storage.StorableProperties;                                                                                                                              
+</span><span class="outsideLine"><i>0029</i> import com.graphhopper.util.EdgeIteratorState;                                                                                                                                  
+</span><span class="outsideLine"><i>0030</i> import com.graphhopper.util.PMap;                                                                                                                                               
+</span><span class="outsideLine"><i>0031</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0032</i> import java.util.*;                                                                                                                                                             
+</span><span class="outsideLine"><i>0033</i> import java.util.stream.Collectors;                                                                                                                                             
+</span><span class="outsideLine"><i>0034</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0035</i> import static com.graphhopper.util.Helper.toLowerCase;                                                                                                                          
+</span><span class="outsideLine"><i>0036</i> import static java.util.Collections.emptyMap;                                                                                                                                   
+</span><span class="outsideLine"><i>0037</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0038</i> /**                                                                                                                                                                             
+</span><span class="outsideLine"><i>0039</i>  * Manager class to register encoder, assign their flag values and check objects with all encoders                                                                              
+</span><span class="outsideLine"><i>0040</i>  * during parsing. Create one via:                                                                                                                                              
+</span><span class="outsideLine"><i>0041</i>  * <p>                                                                                                                                                                          
+</span><span class="outsideLine"><i>0042</i>  * EncodingManager.start(4).add(new CarFlagEncoder()).build();                                                                                                                  
+</span><span class="outsideLine"><i>0043</i>  *                                                                                                                                                                              
+</span><span class="outsideLine"><i>0044</i>  * @author Peter Karich                                                                                                                                                         
+</span><span class="outsideLine"><i>0045</i>  * @author Nop                                                                                                                                                                  
+</span><span class="outsideLine"><i>0046</i>  */                                                                                                                                                                             
+</span><span class="outsideLine"><i>0047</i> public class EncodingManager implements EncodedValueLookup {                                                                                                                    
+</span><span class="outsideLine"><i>0048</i>     private final List<AbstractFlagEncoder> edgeEncoders = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1931</span>new ArrayList<>()</span>;                                                                                                   
+</span><span class="outsideLine"><i>0049</i>     private final Map<String, EncodedValue> encodedValueMap = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1935</span>new LinkedHashMap<>()</span>;                                                                                            
+</span><span class="outsideLine"><i>0050</i>     private final List<RelationTagParser> relationTagParsers = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1938</span>new ArrayList<>()</span>;                                                                                               
+</span><span class="outsideLine"><i>0051</i>     private final List<TagParser> edgeTagParsers = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1941</span>new ArrayList<>()</span>;                                                                                                           
+</span><span class="outsideLine"><i>0052</i>     private final Map<String, TurnCostParser> turnCostParsers = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1945</span>new LinkedHashMap<>()</span>;                                                                                          
+</span><span class="outsideLine"><i>0053</i>     private final EncodedValue.InitializerConfig turnCostConfig;                                                                                                                
+</span><span class="outsideLine"><i>0054</i>     private final EncodedValue.InitializerConfig relationConfig;                                                                                                                
+</span><span class="outsideLine"><i>0055</i>     private final EncodedValue.InitializerConfig edgeConfig;                                                                                                                    
+</span><span class="outsideLine"><i>0056</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0057</i>     /**                                                                                                                                                                         
+</span><span class="outsideLine"><i>0058</i>      * Instantiate manager with the given list of encoders. The manager knows several default                                                                                   
+</span><span class="outsideLine"><i>0059</i>      * encoders using DefaultFlagEncoderFactory.                                                                                                                                
+</span><span class="outsideLine"><i>0060</i>      */                                                                                                                                                                         
+</span><span class="methodLine"><i>0061</i>     public static EncodingManager create(String flagEncodersStr) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 616</span>{</span>                                                                                                              
+</span><span class="methodLine"><i>0062</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1639</span>return create(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3602</span>new DefaultFlagEncoderFactory()</span>, flagEncodersStr);</span>                                                                                                        
+</span><span class="methodLine"><i>0063</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0064</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0065</i>     public static EncodingManager create(FlagEncoderFactory factory, String flagEncodersStr) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 622</span>{</span>                                                                                  
+</span><span class="methodLine"><i>0066</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1644</span>return createBuilder(Arrays.stream(flagEncodersStr.split(",")).filter(s -> <span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 8270</span>!</span>s.trim().isEmpty()).                                                                        
+</span><span class="methodLine"><i>0067</i>                 map(s -> parseEncoderString(factory, s)).collect(Collectors.toList())).build();</span>                                                                                 
+</span><span class="methodLine"><i>0068</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0069</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0070</i>     /**                                                                                                                                                                         
+</span><span class="outsideLine"><i>0071</i>      * Instantiate manager with the given list of encoders.                                                                                                                     
+</span><span class="outsideLine"><i>0072</i>      */                                                                                                                                                                         
+</span><span class="methodLine"><i>0073</i>     public static EncodingManager create(FlagEncoder... flagEncoders) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 628</span>{</span>                                                                                                         
+</span><span class="methodLine"><i>0074</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1648</span>return create(Arrays.asList(flagEncoders));</span>                                                                                                                             
+</span><span class="methodLine"><i>0075</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0076</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0077</i>     /**                                                                                                                                                                         
+</span><span class="outsideLine"><i>0078</i>      * Instantiate manager with the given list of encoders.                                                                                                                     
+</span><span class="outsideLine"><i>0079</i>      */                                                                                                                                                                         
+</span><span class="methodLine"><i>0080</i>     public static EncodingManager create(List<? extends FlagEncoder> flagEncoders) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 634</span>{</span>                                                                                            
+</span><span class="methodLine"><i>0081</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1651</span>return createBuilder(flagEncoders).build();</span>                                                                                                                             
+</span><span class="methodLine"><i>0082</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0083</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0084</i>     private static EncodingManager.Builder createBuilder(List<? extends FlagEncoder> flagEncoders) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 640</span>{</span>                                                                            
+</span><span class="methodLine"><i>0085</i>         Builder builder = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4819</span>new Builder()</span>;                                                                                                                                        
+</span><span class="methodLine"><i>0086</i>         for (FlagEncoder flagEncoder : flagEncoders) {                                                                                                                          
+</span><span class="methodLine"><i>0087</i>             builder.add(flagEncoder);                                                                                                                                           
+</span><span class="methodLine"><i>0088</i>         }                                                                                                                                                                       
+</span><span class="methodLine"><i>0089</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1656</span>return builder;</span>                                                                                                                                                         
+</span><span class="methodLine"><i>0090</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0091</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0092</i>     /**                                                                                                                                                                         
+</span><span class="outsideLine"><i>0093</i>      * Create the EncodingManager from the provided GraphHopper location. Throws an                                                                                             
+</span><span class="outsideLine"><i>0094</i>      * IllegalStateException if it fails. Used if no EncodingManager specified on load.                                                                                         
+</span><span class="outsideLine"><i>0095</i>      */                                                                                                                                                                         
+</span><span class="methodLine"><i>0096</i>     public static EncodingManager create(EncodingManager.Builder builder, EncodedValueFactory evFactory, FlagEncoderFactory flagEncoderFactory, StorableProperties properties) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 646</span>{</span>
+</span><span class="methodLine"><i>0097</i>         String encodedValuesStr = properties.get("graph.encoded_values");                                                                                                       
+</span><span class="methodLine"><i>0098</i>         for (String evString : encodedValuesStr.split(",")) {                                                                                                                   
+</span><span class="methodLine"><i>0099</i>             builder.addIfAbsent(evFactory, evString);                                                                                                                           
+</span><span class="methodLine"><i>0100</i>         }                                                                                                                                                                       
+</span><span class="methodLine"><i>0101</i>         String flagEncoderValuesStr = properties.get("graph.flag_encoders");                                                                                                    
+</span><span class="methodLine"><i>0102</i>         for (String encoderString : flagEncoderValuesStr.split(",")) {                                                                                                          
+</span><span class="methodLine"><i>0103</i>             builder.addIfAbsent(flagEncoderFactory, encoderString);                                                                                                             
+</span><span class="methodLine"><i>0104</i>         }                                                                                                                                                                       
+</span><span class="methodLine"><i>0105</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1669</span>return builder.build();</span>                                                                                                                                                 
+</span><span class="methodLine"><i>0106</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0107</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0108</i>     /**                                                                                                                                                                         
+</span><span class="outsideLine"><i>0109</i>      * Starts the build process of an EncodingManager                                                                                                                           
+</span><span class="outsideLine"><i>0110</i>      */                                                                                                                                                                         
+</span><span class="methodLine"><i>0111</i>     public static Builder start() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 652</span>{                                                                                                                                             
+</span><span class="methodLine"><i>0112</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1670</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2542</span>new Builder()</span>;</span>                                                                                                                                                   
+</span><span class="methodLine"><i>0113</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0114</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0115</i>     private EncodingManager() {                                                                                                                                                 
+</span><span class="methodLine"><i>0116</i>         this.turnCostConfig = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3656</span>new EncodedValue.InitializerConfig()</span>;                                                                                                             
+</span><span class="methodLine"><i>0117</i>         this.relationConfig = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3661</span>new EncodedValue.InitializerConfig()</span>;                                                                                                             
+</span><span class="methodLine"><i>0118</i>         this.edgeConfig = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3666</span>new EncodedValue.InitializerConfig()</span>;                                                                                                                 
+</span><span class="methodLine"><i>0119</i>     }                                                                                                                                                                           
+</span><span class="outsideLine"><i>0120</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0121</i>     public void releaseParsers() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 661</span>{                                                                                                                                              
+</span><span class="methodLine"><i>0122</i>         turnCostParsers.clear();                                                                                                                                                
+</span><span class="methodLine"><i>0123</i>         edgeTagParsers.clear();                                                                                                                                                 
+</span><span class="methodLine"><i>0124</i>         relationTagParsers.clear();                                                                                                                                             
+</span><span class="methodLine"><i>0125</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0126</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0127</i>     public static class Builder {                                                                                                                                               
+</span><span class="outsideLine"><i>0128</i>         private EncodingManager em;                                                                                                                                             
+</span><span class="outsideLine"><i>0129</i>         private DateRangeParser dateRangeParser;                                                                                                                                
+</span><span class="outsideLine"><i>0130</i>         private final Map<String, AbstractFlagEncoder> flagEncoderMap = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4224</span>new LinkedHashMap<>()</span>;                                                                                  
+</span><span class="outsideLine"><i>0131</i>         private final Map<String, EncodedValue> encodedValueMap = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4228</span>new LinkedHashMap<>()</span>;                                                                                        
+</span><span class="outsideLine"><i>0132</i>         private final Set<TagParser> tagParserSet = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4231</span>new LinkedHashSet<>()</span>;                                                                                                      
+</span><span class="outsideLine"><i>0133</i>         private final List<TurnCostParser> turnCostParsers = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4234</span>new ArrayList<>()</span>;                                                                                                 
+</span><span class="outsideLine"><i>0134</i>         private final List<RelationTagParser> relationTagParsers = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4237</span>new ArrayList<>()</span>;                                                                                           
+</span><span class="outsideLine"><i>0135</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0136</i>         public Builder() {                                                                                                                                                      
+</span><span class="methodLine"><i>0137</i>             em = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 6050</span>new EncodingManager()</span>;                                                                                                                                         
+</span><span class="methodLine"><i>0138</i>         }                                                                                                                                                                       
+</span><span class="outsideLine"><i>0139</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0140</i>         public boolean addIfAbsent(FlagEncoderFactory factory, String flagEncoderString) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2061</span>{</span>                                                                                      
+</span><span class="methodLine"><i>0141</i>             check();                                                                                                                                                            
+</span><span class="methodLine"><i>0142</i>             String key = flagEncoderString.split("\\|")[0].trim();                                                                                                              
+</span><span class="methodLine"><i>0143</i>             if (flagEncoderMap.containsKey(key))                                                                                                                                
+</span><span class="methodLine"><i>0144</i>                 return false;                                                                                                                                                   
+</span><span class="methodLine"><i>0145</i>             FlagEncoder fe = parseEncoderString(factory, flagEncoderString);                                                                                                    
+</span><span class="methodLine"><i>0146</i>             flagEncoderMap.put(fe.toString(), (AbstractFlagEncoder) fe);                                                                                                        
+</span><span class="methodLine"><i>0147</i>             return true;                                                                                                                                                        
+</span><span class="methodLine"><i>0148</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0149</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0150</i>         public boolean addIfAbsent(EncodedValueFactory factory, String encodedValueString) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2066</span>{</span>                                                                                    
+</span><span class="methodLine"><i>0151</i>             check();                                                                                                                                                            
+</span><span class="methodLine"><i>0152</i>             String key = encodedValueString.split("\\|")[0].trim();                                                                                                             
+</span><span class="methodLine"><i>0153</i>             if (encodedValueMap.containsKey(key))                                                                                                                               
+</span><span class="methodLine"><i>0154</i>                 return false;                                                                                                                                                   
+</span><span class="methodLine"><i>0155</i>             EncodedValue ev = parseEncodedValueString(factory, encodedValueString);                                                                                             
+</span><span class="methodLine"><i>0156</i>             encodedValueMap.put(ev.getName(), ev);                                                                                                                              
+</span><span class="methodLine"><i>0157</i>             return true;                                                                                                                                                        
+</span><span class="methodLine"><i>0158</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0159</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0160</i>         public boolean addIfAbsent(TagParserFactory factory, String tagParserString) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2071</span>{</span>                                                                                          
+</span><span class="methodLine"><i>0161</i>             check();                                                                                                                                                            
+</span><span class="methodLine"><i>0162</i>             tagParserString = tagParserString.trim();                                                                                                                           
+</span><span class="methodLine"><i>0163</i>             if (tagParserString.isEmpty()) return false;                                                                                                                        
+</span><span class="outsideLine"><i>0164</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0165</i>             TagParser tagParser = em.parseEncodedValueString(factory, tagParserString);                                                                                         
+</span><span class="methodLine"><i>0166</i>             return tagParserSet.add(tagParser);                                                                                                                                 
+</span><span class="methodLine"><i>0167</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0168</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0169</i>         public Builder addTurnCostParser(TurnCostParser parser) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2076</span>{</span>                                                                                                               
+</span><span class="methodLine"><i>0170</i>             check();                                                                                                                                                            
+</span><span class="methodLine"><i>0171</i>             turnCostParsers.add(parser);                                                                                                                                        
+</span><span class="methodLine"><i>0172</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3741</span>return this;</span>                                                                                                                                                        
+</span><span class="methodLine"><i>0173</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0174</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0175</i>         public Builder addRelationTagParser(RelationTagParser tagParser) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2081</span>{</span>                                                                                                      
+</span><span class="methodLine"><i>0176</i>             check();                                                                                                                                                            
+</span><span class="methodLine"><i>0177</i>             relationTagParsers.add(tagParser);                                                                                                                                  
+</span><span class="methodLine"><i>0178</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3746</span>return this;</span>                                                                                                                                                        
+</span><span class="methodLine"><i>0179</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0180</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0181</i>         public Builder add(FlagEncoder encoder) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2086</span>{</span>                                                                                                                               
+</span><span class="methodLine"><i>0182</i>             check();                                                                                                                                                            
+</span><span class="methodLine"><i>0183</i>             if (flagEncoderMap.containsKey(encoder.toString()))                                                                                                                 
+</span><span class="methodLine"><i>0184</i>                 throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5452</span>new IllegalArgumentException("FlagEncoder already exists: " + encoder)</span>;                                                                                   
+</span><span class="methodLine"><i>0185</i>             flagEncoderMap.put(encoder.toString(), (AbstractFlagEncoder) encoder);                                                                                              
+</span><span class="methodLine"><i>0186</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3752</span>return this;</span>                                                                                                                                                        
+</span><span class="methodLine"><i>0187</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0188</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0189</i>         public Builder add(EncodedValue encodedValue) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2091</span>{</span>                                                                                                                         
+</span><span class="methodLine"><i>0190</i>             check();                                                                                                                                                            
+</span><span class="methodLine"><i>0191</i>             if (encodedValueMap.containsKey(encodedValue.getName()))                                                                                                            
+</span><span class="methodLine"><i>0192</i>                 throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5466</span>new IllegalArgumentException("EncodedValue already exists: " + encodedValue.getName())</span>;                                                                   
+</span><span class="methodLine"><i>0193</i>             encodedValueMap.put(encodedValue.getName(), encodedValue);                                                                                                          
+</span><span class="methodLine"><i>0194</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3758</span>return this;</span>                                                                                                                                                        
+</span><span class="methodLine"><i>0195</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0196</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0197</i>         /**                                                                                                                                                                     
+</span><span class="outsideLine"><i>0198</i>          * This method adds the specified TagParser and automatically adds EncodedValues as requested in                                                                        
+</span><span class="outsideLine"><i>0199</i>          * createEncodedValues.                                                                                                                                                 
+</span><span class="outsideLine"><i>0200</i>          */                                                                                                                                                                     
+</span><span class="methodLine"><i>0201</i>         public Builder add(TagParser tagParser) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2096</span>{</span>                                                                                                                               
+</span><span class="methodLine"><i>0202</i>             check();                                                                                                                                                            
+</span><span class="methodLine"><i>0203</i>             if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 4948</span>!</span>tagParserSet.add(tagParser))                                                                                                                                   
+</span><span class="methodLine"><i>0204</i>                 throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5478</span>new IllegalArgumentException("TagParser already exists: " + tagParser)</span>;                                                                                   
+</span><span class="outsideLine"><i>0205</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0206</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3763</span>return this;</span>                                                                                                                                                        
+</span><span class="methodLine"><i>0207</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0208</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0209</i>         public Builder setDateRangeParser(DateRangeParser dateRangeParser) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2101</span>{</span>                                                                                                    
+</span><span class="methodLine"><i>0210</i>             check();                                                                                                                                                            
+</span><span class="methodLine"><i>0211</i>             this.dateRangeParser = dateRangeParser;                                                                                                                             
+</span><span class="methodLine"><i>0212</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3768</span>return this;</span>                                                                                                                                                        
+</span><span class="methodLine"><i>0213</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0214</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0215</i>         private void check() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2106</span>{                                                                                                                                                  
+</span><span class="methodLine"><i>0216</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 4959</span>em <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4959</span>==</span> null</span>)                                                                                                                                                     
+</span><span class="methodLine"><i>0217</i>                 throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5491</span>new IllegalStateException("Cannot call method after Builder.build() was called")</span>;                                                                         
+</span><span class="methodLine"><i>0218</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0219</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0220</i>         private void _addEdgeTagParser(TagParser tagParser, boolean withNamespace) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2111</span>{</span>                                                                                            
+</span><span class="methodLine"><i>0221</i>             if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 4967</span>!</span>em.edgeEncoders.isEmpty())                                                                                                                                     
+</span><span class="methodLine"><i>0222</i>                 throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5495</span>new IllegalStateException("Avoid mixing encoded values from FlagEncoder with shared encoded values until we have a more clever mechanism, see #1862")</span>;    
+</span><span class="outsideLine"><i>0223</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0224</i>             List<EncodedValue> list = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 7251</span>new ArrayList<>()</span>;                                                                                                                        
+</span><span class="methodLine"><i>0225</i>             tagParser.createEncodedValues(em, list);                                                                                                                            
+</span><span class="methodLine"><i>0226</i>             for (EncodedValue ev : list) {                                                                                                                                      
+</span><span class="methodLine"><i>0227</i>                 em.addEncodedValue(ev, withNamespace);                                                                                                                          
+</span><span class="methodLine"><i>0228</i>             }                                                                                                                                                                   
+</span><span class="methodLine"><i>0229</i>             em.edgeTagParsers.add(tagParser);                                                                                                                                   
+</span><span class="methodLine"><i>0230</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0231</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0232</i>         private void _addRelationTagParser(RelationTagParser tagParser) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2116</span>{</span>                                                                                                       
+</span><span class="methodLine"><i>0233</i>             List<EncodedValue> list = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 7260</span>new ArrayList<>()</span>;                                                                                                                        
+</span><span class="methodLine"><i>0234</i>             tagParser.createRelationEncodedValues(em, list);                                                                                                                    
+</span><span class="methodLine"><i>0235</i>             for (EncodedValue ev : list) {                                                                                                                                      
+</span><span class="methodLine"><i>0236</i>                 ev.init(em.relationConfig);                                                                                                                                     
+</span><span class="methodLine"><i>0237</i>             }                                                                                                                                                                   
+</span><span class="methodLine"><i>0238</i>             em.relationTagParsers.add(tagParser);                                                                                                                               
+</span><span class="outsideLine"><i>0239</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0240</i>             _addEdgeTagParser(tagParser, false);                                                                                                                                
+</span><span class="methodLine"><i>0241</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0242</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0243</i>         private void _addTurnCostParser(TurnCostParser parser) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2121</span>{</span>                                                                                                                
+</span><span class="methodLine"><i>0244</i>             List<EncodedValue> list = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 7271</span>new ArrayList<>()</span>;                                                                                                                        
+</span><span class="methodLine"><i>0245</i>             parser.createTurnCostEncodedValues(em, list);                                                                                                                       
+</span><span class="methodLine"><i>0246</i>             for (EncodedValue ev : list) {                                                                                                                                      
+</span><span class="methodLine"><i>0247</i>                 ev.init(em.turnCostConfig);                                                                                                                                     
+</span><span class="methodLine"><i>0248</i>                 if (em.encodedValueMap.containsKey(ev.getName()))                                                                                                               
+</span><span class="methodLine"><i>0249</i>                     throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 7653</span>new IllegalArgumentException("Already defined: " + ev.getName() + ". Please note that " +                                                             
+</span><span class="methodLine"><i>0250</i>                             "EncodedValues for edges and turn cost are in the same namespace.")</span>;                                                                                
+</span><span class="methodLine"><i>0251</i>                 em.encodedValueMap.put(ev.getName(), ev);                                                                                                                       
+</span><span class="methodLine"><i>0252</i>             }                                                                                                                                                                   
+</span><span class="methodLine"><i>0253</i>             em.turnCostParsers.put(parser.getName(), parser);                                                                                                                   
+</span><span class="methodLine"><i>0254</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0255</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0256</i>         public EncodingManager build() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2126</span>{                                                                                                                                        
+</span><span class="methodLine"><i>0257</i>             check();                                                                                                                                                            
+</span><span class="outsideLine"><i>0258</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0259</i>             for (RelationTagParser tagParser : relationTagParsers) {                                                                                                            
+</span><span class="methodLine"><i>0260</i>                 _addRelationTagParser(tagParser);                                                                                                                               
+</span><span class="methodLine"><i>0261</i>             }                                                                                                                                                                   
+</span><span class="outsideLine"><i>0262</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0263</i>             for (TagParser tagParser : tagParserSet) {                                                                                                                          
+</span><span class="methodLine"><i>0264</i>                 _addEdgeTagParser(tagParser, false);                                                                                                                            
+</span><span class="methodLine"><i>0265</i>             }                                                                                                                                                                   
+</span><span class="outsideLine"><i>0266</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0267</i>             for (EncodedValue ev : encodedValueMap.values()) {                                                                                                                  
+</span><span class="methodLine"><i>0268</i>                 em.addEncodedValue(ev, false);                                                                                                                                  
+</span><span class="methodLine"><i>0269</i>             }                                                                                                                                                                   
+</span><span class="outsideLine"><i>0270</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0271</i>             if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 5001</span>!</span>em.hasEncodedValue(Roundabout.KEY))                                                                                                                            
+</span><span class="methodLine"><i>0272</i>                 _addEdgeTagParser(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 7298</span>new OSMRoundaboutParser()</span>, false);                                                                                                            
+</span><span class="methodLine"><i>0273</i>             if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 5006</span>!</span>em.hasEncodedValue(RoadClass.KEY))                                                                                                                             
+</span><span class="methodLine"><i>0274</i>                 _addEdgeTagParser(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 7306</span>new OSMRoadClassParser()</span>, false);                                                                                                             
+</span><span class="methodLine"><i>0275</i>             if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 5011</span>!</span>em.hasEncodedValue(RoadClassLink.KEY))                                                                                                                         
+</span><span class="methodLine"><i>0276</i>                 _addEdgeTagParser(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 7314</span>new OSMRoadClassLinkParser()</span>, false);                                                                                                         
+</span><span class="methodLine"><i>0277</i>             if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 5016</span>!</span>em.hasEncodedValue(RoadEnvironment.KEY))                                                                                                                       
+</span><span class="methodLine"><i>0278</i>                 _addEdgeTagParser(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 7322</span>new OSMRoadEnvironmentParser()</span>, false);                                                                                                       
+</span><span class="methodLine"><i>0279</i>             if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 5021</span>!</span>em.hasEncodedValue(MaxSpeed.KEY))                                                                                                                              
+</span><span class="methodLine"><i>0280</i>                 _addEdgeTagParser(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 7330</span>new OSMMaxSpeedParser()</span>, false);                                                                                                              
+</span><span class="methodLine"><i>0281</i>             if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 5026</span>!</span>em.hasEncodedValue(RoadAccess.KEY)) {                                                                                                                          
+</span><span class="outsideLine"><i>0282</i>                 // TODO introduce road_access for different vehicles? But how to create it in DefaultTagParserFactory?                                                          
+</span><span class="methodLine"><i>0283</i>                 _addEdgeTagParser(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 8174</span>new OSMRoadAccessParser()</span>, false);                                                                                                            
+</span><span class="methodLine"><i>0284</i>             }                                                                                                                                                                   
+</span><span class="outsideLine"><i>0285</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0286</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 5030</span>dateRangeParser <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 5030</span>==</span> null</span>)                                                                                                                                        
+</span><span class="methodLine"><i>0287</i>                 dateRangeParser = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 6864</span>new DateRangeParser(DateRangeParser.createCalendar())</span>;                                                                                        
+</span><span class="outsideLine"><i>0288</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0289</i>             for (AbstractFlagEncoder encoder : flagEncoderMap.values()) {                                                                                                       
+</span><span class="methodLine"><i>0290</i>                 if (encoder instanceof RoadsFlagEncoder) {                                                                                                                      
+</span><span class="outsideLine"><i>0291</i>                     // TODO Later these EncodedValues can be added independently of RoadsFlagEncoder. Maybe add a foot_access and hgv_access? and remove the others "xy$access" 
+</span><span class="methodLine"><i>0292</i>                     if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 8327</span>!</span>em.hasEncodedValue("car_access"))                                                                                                                      
+</span><span class="methodLine"><i>0293</i>                         _addEdgeTagParser(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 8744</span>new DefaultTagParserFactory()</span>.create("car_access", <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 8747</span>new PMap()</span>), false);                                                               
+</span><span class="methodLine"><i>0294</i>                     if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 8332</span>!</span>em.hasEncodedValue("bike_access"))                                                                                                                     
+</span><span class="methodLine"><i>0295</i>                         _addEdgeTagParser(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 8751</span>new DefaultTagParserFactory()</span>.create("bike_access", <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 8754</span>new PMap()</span>), false);                                                              
+</span><span class="methodLine"><i>0296</i>                 } else if (encoder instanceof BikeCommonFlagEncoder) {                                                                                                          
+</span><span class="methodLine"><i>0297</i>                     if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 8435</span>!</span>em.hasEncodedValue(RouteNetwork.key("bike")))                                                                                                          
+</span><span class="methodLine"><i>0298</i>                         _addRelationTagParser(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 8704</span>new OSMBikeNetworkTagParser()</span>);                                                                                                   
+</span><span class="methodLine"><i>0299</i>                     if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 8440</span>!</span>em.hasEncodedValue(GetOffBike.KEY))                                                                                                                    
+</span><span class="methodLine"><i>0300</i>                         _addEdgeTagParser(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 8711</span>new OSMGetOffBikeParser()</span>, false);                                                                                                    
+</span><span class="methodLine"><i>0301</i>                     if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 8445</span>!</span>em.hasEncodedValue(Smoothness.KEY))                                                                                                                    
+</span><span class="methodLine"><i>0302</i>                         _addEdgeTagParser(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 8719</span>new OSMSmoothnessParser()</span>, false);                                                                                                    
+</span><span class="methodLine"><i>0303</i>                 } else if (encoder instanceof FootFlagEncoder) {                                                                                                                
+</span><span class="methodLine"><i>0304</i>                     if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 8523</span>!</span>em.hasEncodedValue(RouteNetwork.key("foot")))                                                                                                          
+</span><span class="methodLine"><i>0305</i>                         _addRelationTagParser(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 8780</span>new OSMFootNetworkTagParser()</span>);                                                                                                   
+</span><span class="methodLine"><i>0306</i>                 }                                                                                                                                                               
+</span><span class="methodLine"><i>0307</i>             }                                                                                                                                                                   
+</span><span class="outsideLine"><i>0308</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0309</i>             for (AbstractFlagEncoder encoder : flagEncoderMap.values()) {                                                                                                       
+</span><span class="methodLine"><i>0310</i>                 encoder.init(dateRangeParser);                                                                                                                                  
+</span><span class="methodLine"><i>0311</i>                 em.addEncoder(encoder);                                                                                                                                         
+</span><span class="methodLine"><i>0312</i>             }                                                                                                                                                                   
+</span><span class="outsideLine"><i>0313</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0314</i>             for (TurnCostParser parser : turnCostParsers) {                                                                                                                     
+</span><span class="methodLine"><i>0315</i>                 _addTurnCostParser(parser);                                                                                                                                     
+</span><span class="methodLine"><i>0316</i>             }                                                                                                                                                                   
+</span><span class="outsideLine"><i>0317</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0318</i>             // FlagEncoder can demand TurnCostParsers => add them after the explicitly added ones                                                                               
+</span><span class="methodLine"><i>0319</i>             for (AbstractFlagEncoder encoder : flagEncoderMap.values()) {                                                                                                       
+</span><span class="methodLine"><i>0320</i>                 if (encoder.supportsTurnCosts() <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 7357</span>&&</span> <span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 7737</span>!</span>em.turnCostParsers.containsKey(encoder.toString()))                                                                         
+</span><span class="methodLine"><i>0321</i>                     _addTurnCostParser(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 8362</span>new OSMTurnRelationParser(encoder.toString(), encoder.getMaxTurnCosts(), encoder.getRestrictions())</span>);                                    
+</span><span class="methodLine"><i>0322</i>             }                                                                                                                                                                   
+</span><span class="outsideLine"><i>0323</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0324</i>             if (em.encodedValueMap.isEmpty())                                                                                                                                   
+</span><span class="methodLine"><i>0325</i>                 throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5634</span>new IllegalStateException("No EncodedValues found")</span>;                                                                                                      
+</span><span class="outsideLine"><i>0326</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0327</i>             EncodingManager tmp = em;                                                                                                                                           
+</span><span class="methodLine"><i>0328</i>             em = null;                                                                                                                                                          
+</span><span class="methodLine"><i>0329</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3810</span>return tmp;</span>                                                                                                                                                         
+</span><span class="methodLine"><i>0330</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0331</i>     }                                                                                                                                                                           
+</span><span class="outsideLine"><i>0332</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0333</i>     static FlagEncoder parseEncoderString(FlagEncoderFactory factory, String encoderString) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 671</span>{</span>                                                                                   
+</span><span class="methodLine"><i>0334</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2633</span>!</span>encoderString.equals(toLowerCase(encoderString)))                                                                                                                  
+</span><span class="methodLine"><i>0335</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3205</span>new IllegalArgumentException("An upper case name for the FlagEncoder is not allowed: " + encoderString)</span>;                                                      
+</span><span class="outsideLine"><i>0336</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0337</i>         encoderString = encoderString.trim();                                                                                                                                   
+</span><span class="methodLine"><i>0338</i>         if (encoderString.isEmpty())                                                                                                                                            
+</span><span class="methodLine"><i>0339</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3213</span>new IllegalArgumentException("FlagEncoder cannot be empty. " + encoderString)</span>;                                                                                
+</span><span class="outsideLine"><i>0340</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0341</i>         String entryVal = "";                                                                                                                                                   
+</span><span class="methodLine"><i>0342</i>         if (encoderString.contains("|")) {                                                                                                                                      
+</span><span class="methodLine"><i>0343</i>             entryVal = encoderString;                                                                                                                                           
+</span><span class="methodLine"><i>0344</i>             encoderString = encoderString.split("\\|")[0];                                                                                                                      
+</span><span class="methodLine"><i>0345</i>         }                                                                                                                                                                       
+</span><span class="methodLine"><i>0346</i>         PMap configuration = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5071</span>new PMap(entryVal)</span>;                                                                                                                                
+</span><span class="methodLine"><i>0347</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1736</span>return factory.createFlagEncoder(encoderString, configuration);</span>                                                                                                         
+</span><span class="methodLine"><i>0348</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0349</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0350</i>     static EncodedValue parseEncodedValueString(EncodedValueFactory factory, String encodedValueString) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 676</span>{</span>                                                                       
+</span><span class="methodLine"><i>0351</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2660</span>!</span>encodedValueString.equals(toLowerCase(encodedValueString)))                                                                                                        
+</span><span class="methodLine"><i>0352</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3235</span>new IllegalArgumentException("Use lower case for EncodedValues: " + encodedValueString)</span>;                                                                      
+</span><span class="outsideLine"><i>0353</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0354</i>         encodedValueString = encodedValueString.trim();                                                                                                                         
+</span><span class="methodLine"><i>0355</i>         if (encodedValueString.isEmpty())                                                                                                                                       
+</span><span class="methodLine"><i>0356</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3243</span>new IllegalArgumentException("EncodedValue cannot be empty. " + encodedValueString)</span>;                                                                          
+</span><span class="outsideLine"><i>0357</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0358</i>         EncodedValue evObject = factory.create(encodedValueString);                                                                                                             
+</span><span class="methodLine"><i>0359</i>         PMap map = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5090</span>new PMap(encodedValueString)</span>;                                                                                                                                
+</span><span class="methodLine"><i>0360</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2677</span>!</span>map.has("version"))                                                                                                                                                
+</span><span class="methodLine"><i>0361</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3251</span>new IllegalArgumentException("EncodedValue must have a version specified but it was " + encodedValueString)</span>;                                                  
+</span><span class="methodLine"><i>0362</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1747</span>return evObject;</span>                                                                                                                                                        
+</span><span class="methodLine"><i>0363</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0364</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0365</i>     private static TagParser parseEncodedValueString(TagParserFactory factory, String tagParserString) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 682</span>{</span>                                                                        
+</span><span class="methodLine"><i>0366</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2686</span>!</span>tagParserString.equals(toLowerCase(tagParserString)))                                                                                                              
+</span><span class="methodLine"><i>0367</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3256</span>new IllegalArgumentException("Use lower case for TagParser: " + tagParserString)</span>;                                                                             
+</span><span class="outsideLine"><i>0368</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0369</i>         PMap map = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5105</span>new PMap(tagParserString)</span>;                                                                                                                                   
+</span><span class="methodLine"><i>0370</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1754</span>return factory.create(tagParserString, map);</span>                                                                                                                            
+</span><span class="methodLine"><i>0371</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0372</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0373</i>     public int getIntsForFlags() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 687</span>{                                                                                                                                              
+</span><span class="methodLine"><i>0374</i>         return (int) Math.ceil((double) edgeConfig.getRequiredBits() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3889</span>/</span> 32.0);                                                                                                   
+</span><span class="methodLine"><i>0375</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0376</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0377</i>     private void addEncoder(AbstractFlagEncoder encoder) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 692</span>{</span>                                                                                                                      
+</span><span class="methodLine"><i>0378</i>         encoder.setEncodedValueLookup(this);                                                                                                                                    
+</span><span class="methodLine"><i>0379</i>         List<EncodedValue> list = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5116</span>new ArrayList<>()</span>;                                                                                                                            
+</span><span class="methodLine"><i>0380</i>         encoder.createEncodedValues(list);                                                                                                                                      
+</span><span class="methodLine"><i>0381</i>         for (EncodedValue ev : list)                                                                                                                                            
+</span><span class="methodLine"><i>0382</i>             addEncodedValue(ev, true);                                                                                                                                          
+</span><span class="methodLine"><i>0383</i>         edgeEncoders.add(encoder);                                                                                                                                              
+</span><span class="methodLine"><i>0384</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0385</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0386</i>     private void addEncodedValue(EncodedValue ev, boolean withNamespace) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 697</span>{</span>                                                                                                      
+</span><span class="methodLine"><i>0387</i>         String normalizedKey = ev.getName().replaceAll(SPECIAL_SEPARATOR, "_");                                                                                                 
+</span><span class="methodLine"><i>0388</i>         if (hasEncodedValue(normalizedKey))                                                                                                                                     
+</span><span class="methodLine"><i>0389</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3296</span>new IllegalStateException("EncodedValue " + ev.getName() + " collides with " + normalizedKey)</span>;                                                                
+</span><span class="methodLine"><i>0390</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 3297</span>!</span>withNamespace <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2721</span>&&</span> <span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 3299</span>!</span>isSharedEncodedValues(ev))                                                                                                                       
+</span><span class="methodLine"><i>0391</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3301</span>new IllegalArgumentException("EncodedValue " + ev.getName() + " must not contain namespace character '" + SPECIAL_SEPARATOR + "'")</span>;                           
+</span><span class="methodLine"><i>0392</i>         if (withNamespace <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2727</span>&&</span> isSharedEncodedValues(ev))                                                                                                                         
+</span><span class="methodLine"><i>0393</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3306</span>new IllegalArgumentException("EncodedValue " + ev.getName() + " must contain namespace character '" + SPECIAL_SEPARATOR + "'")</span>;                               
+</span><span class="methodLine"><i>0394</i>         ev.init(edgeConfig);                                                                                                                                                    
+</span><span class="methodLine"><i>0395</i>         encodedValueMap.put(ev.getName(), ev);                                                                                                                                  
+</span><span class="methodLine"><i>0396</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0397</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0398</i>     public boolean hasEncodedValue(String key) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 702</span>{</span>                                                                                                                                
+</span><span class="methodLine"><i>0399</i>         return <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2223</span>encodedValueMap.get(key) <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2223</span>!=</span> null</span>;                                                                                                                                
+</span><span class="methodLine"><i>0400</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0401</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0402</i>     /**                                                                                                                                                                         
+</span><span class="outsideLine"><i>0403</i>      * @return true if the specified encoder is found                                                                                                                           
+</span><span class="outsideLine"><i>0404</i>      */                                                                                                                                                                         
+</span><span class="methodLine"><i>0405</i>     public boolean hasEncoder(String encoder) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 707</span>{</span>                                                                                                                                 
+</span><span class="methodLine"><i>0406</i>         return <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2228</span>getEncoder(encoder, false) <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2228</span>!=</span> null</span>;                                                                                                                              
+</span><span class="methodLine"><i>0407</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0408</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0409</i>     public FlagEncoder getEncoder(String name) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 712</span>{</span>                                                                                                                                
+</span><span class="methodLine"><i>0410</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1781</span>return getEncoder(name, true);</span>                                                                                                                                          
+</span><span class="methodLine"><i>0411</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0412</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0413</i>     private FlagEncoder getEncoder(String name, boolean throwExc) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 717</span>{</span>                                                                                                             
+</span><span class="methodLine"><i>0414</i>         for (FlagEncoder encoder : edgeEncoders) {                                                                                                                              
+</span><span class="methodLine"><i>0415</i>             if (name.equalsIgnoreCase(encoder.toString()))                                                                                                                      
+</span><span class="methodLine"><i>0416</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 4589</span>return encoder;</span>                                                                                                                                                 
+</span><span class="methodLine"><i>0417</i>         }                                                                                                                                                                       
+</span><span class="methodLine"><i>0418</i>         if (throwExc)                                                                                                                                                           
+</span><span class="methodLine"><i>0419</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3338</span>new IllegalArgumentException("FlagEncoder for " + name + " not found. Existing: " + toFlagEncodersAsString())</span>;                                                
+</span><span class="methodLine"><i>0420</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1788</span>return null;</span>                                                                                                                                                            
+</span><span class="methodLine"><i>0421</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0422</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0423</i>     /**                                                                                                                                                                         
+</span><span class="outsideLine"><i>0424</i>      * Determine whether a way is routable for one of the added encoders.                                                                                                       
+</span><span class="outsideLine"><i>0425</i>      *                                                                                                                                                                          
+</span><span class="outsideLine"><i>0426</i>      * @return if at least one encoder consumes the specified way                                                                                                               
+</span><span class="outsideLine"><i>0427</i>      */                                                                                                                                                                         
+</span><span class="methodLine"><i>0428</i>     public boolean acceptWay(ReaderWay way) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 722</span>{</span>                                                                                                                                   
+</span><span class="methodLine"><i>0429</i>         return edgeEncoders.stream().anyMatch(encoder -> <span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 5166</span>!</span>encoder.getAccess(way).equals(Access.CAN_SKIP));                                                                      
+</span><span class="methodLine"><i>0430</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0431</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0432</i>     public enum Access {                                                                                                                                                        
+</span><span class="outsideLine"><i>0433</i>         WAY, FERRY, OTHER, CAN_SKIP;                                                                                                                                            
+</span><span class="outsideLine"><i>0434</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0435</i>         public boolean isFerry() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2259</span>{                                                                                                                                              
+</span><span class="methodLine"><i>0436</i>             return this.ordinal() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4599</span>==</span> FERRY.ordinal();                                                                                                                           
+</span><span class="methodLine"><i>0437</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0438</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0439</i>         public boolean isWay() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2264</span>{                                                                                                                                                
+</span><span class="methodLine"><i>0440</i>             return this.ordinal() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4602</span>==</span> WAY.ordinal();                                                                                                                             
+</span><span class="methodLine"><i>0441</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0442</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0443</i>         public boolean isOther() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2269</span>{                                                                                                                                              
+</span><span class="methodLine"><i>0444</i>             return this.ordinal() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4605</span>==</span> OTHER.ordinal();                                                                                                                           
+</span><span class="methodLine"><i>0445</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0446</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0447</i>         public boolean canSkip() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 2274</span>{                                                                                                                                              
+</span><span class="methodLine"><i>0448</i>             return this.ordinal() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4608</span>==</span> CAN_SKIP.ordinal();                                                                                                                        
+</span><span class="methodLine"><i>0449</i>         }</span>                                                                                                                                                                       
+</span><span class="outsideLine"><i>0450</i>     }                                                                                                                                                                           
+</span><span class="outsideLine"><i>0451</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0452</i>     public IntsRef handleRelationTags(ReaderRelation relation, IntsRef relFlags) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 734</span>{</span>                                                                                              
+</span><span class="methodLine"><i>0453</i>         for (RelationTagParser relParser : relationTagParsers) {                                                                                                                
+</span><span class="methodLine"><i>0454</i>             relParser.handleRelationTags(relFlags, relation);                                                                                                                   
+</span><span class="methodLine"><i>0455</i>         }                                                                                                                                                                       
+</span><span class="methodLine"><i>0456</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1805</span>return relFlags;</span>                                                                                                                                                        
+</span><span class="methodLine"><i>0457</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0458</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0459</i>     public void handleTurnRelationTags(OSMTurnRelation turnRelation, TurnCostParser.ExternalInternalMap map, Graph graph) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 739</span>{</span>                                                     
+</span><span class="methodLine"><i>0460</i>         for (TurnCostParser parser : turnCostParsers.values()) {                                                                                                                
+</span><span class="methodLine"><i>0461</i>             parser.handleTurnRelationTags(turnRelation, map, graph);                                                                                                            
+</span><span class="methodLine"><i>0462</i>         }                                                                                                                                                                       
+</span><span class="methodLine"><i>0463</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0464</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0465</i>     /**                                                                                                                                                                         
+</span><span class="outsideLine"><i>0466</i>      * Processes way properties of different kind to determine speed and direction.                                                                                             
+</span><span class="outsideLine"><i>0467</i>      *                                                                                                                                                                          
+</span><span class="outsideLine"><i>0468</i>      * @param relationFlags The preprocessed relation flags is used to influence the way properties.                                                                            
+</span><span class="outsideLine"><i>0469</i>      */                                                                                                                                                                         
+</span><span class="methodLine"><i>0470</i>     public IntsRef handleWayTags(ReaderWay way, IntsRef relationFlags) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 744</span>{</span>                                                                                                        
+</span><span class="methodLine"><i>0471</i>         IntsRef edgeFlags = createEdgeFlags();                                                                                                                                  
+</span><span class="methodLine"><i>0472</i>         for (TagParser parser : edgeTagParsers) {                                                                                                                               
+</span><span class="methodLine"><i>0473</i>             parser.handleWayTags(edgeFlags, way, relationFlags);                                                                                                                
+</span><span class="methodLine"><i>0474</i>         }                                                                                                                                                                       
+</span><span class="methodLine"><i>0475</i>         for (AbstractFlagEncoder encoder : edgeEncoders) {                                                                                                                      
+</span><span class="methodLine"><i>0476</i>             encoder.handleWayTags(edgeFlags, way);                                                                                                                              
+</span><span class="methodLine"><i>0477</i>             if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 5188</span>!</span>edgeFlags.isEmpty()) {                                                                                                                                         
+</span><span class="methodLine"><i>0478</i>                 Map<String, Object> nodeTags = way.getTag("node_tags", emptyMap());                                                                                             
+</span><span class="methodLine"><i>0479</i>                 encoder.handleNodeTags(edgeFlags, nodeTags);                                                                                                                    
+</span><span class="methodLine"><i>0480</i>             }                                                                                                                                                                   
+</span><span class="methodLine"><i>0481</i>         }                                                                                                                                                                       
+</span><span class="methodLine"><i>0482</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1820</span>return edgeFlags;</span>                                                                                                                                                       
+</span><span class="methodLine"><i>0483</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0484</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0485</i>     @Override                                                                                                                                                                   
+</span><span class="methodLine"><i>0486</i>     public String toString() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 750</span>{                                                                                                                                                  
+</span><span class="methodLine"><i>0487</i>         StringBuilder str = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5192</span>new StringBuilder()</span>;                                                                                                                                
+</span><span class="methodLine"><i>0488</i>         for (FlagEncoder encoder : edgeEncoders) {                                                                                                                              
+</span><span class="methodLine"><i>0489</i>             if (str.length() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 5194</span>></span> 0)                                                                                                                                               
+</span><span class="methodLine"><i>0490</i>                 str.append(",");                                                                                                                                                
+</span><span class="outsideLine"><i>0491</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0492</i>             str.append(encoder.toString());                                                                                                                                     
+</span><span class="methodLine"><i>0493</i>         }                                                                                                                                                                       
+</span><span class="outsideLine"><i>0494</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0495</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1824</span>return str.toString();</span>                                                                                                                                                  
+</span><span class="methodLine"><i>0496</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0497</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0498</i>     public String toFlagEncodersAsString() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 755</span>{                                                                                                                                    
+</span><span class="methodLine"><i>0499</i>         StringBuilder str = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5200</span>new StringBuilder()</span>;                                                                                                                                
+</span><span class="methodLine"><i>0500</i>         for (AbstractFlagEncoder encoder : edgeEncoders) {                                                                                                                      
+</span><span class="methodLine"><i>0501</i>             if (str.length() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 5202</span>></span> 0)                                                                                                                                               
+</span><span class="methodLine"><i>0502</i>                 str.append(",");                                                                                                                                                
+</span><span class="outsideLine"><i>0503</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0504</i>             str.append(encoder.toString())                                                                                                                                      
+</span><span class="methodLine"><i>0505</i>                     .append("|")                                                                                                                                                
+</span><span class="methodLine"><i>0506</i>                     .append(encoder.getPropertiesString());                                                                                                                     
+</span><span class="methodLine"><i>0507</i>         }                                                                                                                                                                       
+</span><span class="outsideLine"><i>0508</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0509</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1827</span>return str.toString();</span>                                                                                                                                                  
+</span><span class="methodLine"><i>0510</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0511</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0512</i>     public String toEncodedValuesAsString() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 760</span>{                                                                                                                                   
+</span><span class="methodLine"><i>0513</i>         StringBuilder str = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5208</span>new StringBuilder()</span>;                                                                                                                                
+</span><span class="methodLine"><i>0514</i>         for (EncodedValue ev : encodedValueMap.values()) {                                                                                                                      
+</span><span class="methodLine"><i>0515</i>             if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 5211</span>!</span>isSharedEncodedValues(ev))                                                                                                                                     
+</span><span class="methodLine"><i>0516</i>                 continue;                                                                                                                                                       
+</span><span class="outsideLine"><i>0517</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0518</i>             if (str.length() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 5216</span>></span> 0)                                                                                                                                               
+</span><span class="methodLine"><i>0519</i>                 str.append(",");                                                                                                                                                
+</span><span class="outsideLine"><i>0520</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0521</i>             str.append(ev.toString());                                                                                                                                          
+</span><span class="methodLine"><i>0522</i>         }                                                                                                                                                                       
+</span><span class="outsideLine"><i>0523</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0524</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1830</span>return str.toString();</span>                                                                                                                                                  
+</span><span class="methodLine"><i>0525</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0526</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0527</i>     // TODO hide IntsRef even more in a later version: https://gist.github.com/karussell/f4c2b2b1191be978d7ee9ec8dd2cd48f                                                       
+</span><span class="methodLine"><i>0528</i>     public IntsRef createEdgeFlags() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 765</span>{                                                                                                                                          
+</span><span class="methodLine"><i>0529</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1831</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2822</span>new IntsRef(getIntsForFlags())</span>;</span>                                                                                                                                  
+</span><span class="methodLine"><i>0530</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0531</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0532</i>     public IntsRef createRelationFlags() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 770</span>{                                                                                                                                      
+</span><span class="outsideLine"><i>0533</i>         // for backward compatibility use 2 ints                                                                                                                                
+</span><span class="methodLine"><i>0534</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1832</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2824</span>new IntsRef(2)</span>;</span>                                                                                                                                                  
+</span><span class="methodLine"><i>0535</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0536</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0537</i>     @Override                                                                                                                                                                   
+</span><span class="methodLine"><i>0538</i>     public boolean equals(Object o) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 776</span>{</span>                                                                                                                                           
+</span><span class="methodLine"><i>0539</i>         if (this <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2827</span>==</span> o) return true;                                                                                                                                             
+</span><span class="methodLine"><i>0540</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3441</span>o <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3441</span>==</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2833</span>||</span> getClass() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3443</span>!=</span> o.getClass()) return false;                                                                                                              
+</span><span class="methodLine"><i>0541</i>         EncodingManager that = (EncodingManager) o;                                                                                                                             
+</span><span class="methodLine"><i>0542</i>         return edgeEncoders.equals(that.edgeEncoders) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2364</span>&&</span>                                                                                                                        
+</span><span class="methodLine"><i>0543</i>                 encodedValueMap.equals(that.encodedValueMap);                                                                                                                   
+</span><span class="methodLine"><i>0544</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0545</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0546</i>     @Override                                                                                                                                                                   
+</span><span class="methodLine"><i>0547</i>     public int hashCode() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 782</span>{                                                                                                                                                     
+</span><span class="methodLine"><i>0548</i>         return Objects.hash(edgeEncoders, encodedValueMap);                                                                                                                     
+</span><span class="methodLine"><i>0549</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0550</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0551</i>     public void applyWayTags(ReaderWay way, EdgeIteratorState edge) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 787</span>{</span>                                                                                                           
+</span><span class="methodLine"><i>0552</i>         for (AbstractFlagEncoder encoder : edgeEncoders)                                                                                                                        
+</span><span class="methodLine"><i>0553</i>             encoder.applyWayTags(way, edge);                                                                                                                                    
+</span><span class="methodLine"><i>0554</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0555</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0556</i>     public List<FlagEncoder> fetchEdgeEncoders() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 792</span>{                                                                                                                              
+</span><span class="methodLine"><i>0557</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1850</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2854</span>new ArrayList<>(edgeEncoders)</span>;</span>                                                                                                                                   
+</span><span class="methodLine"><i>0558</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0559</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0560</i>     public boolean needsTurnCostsSupport() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 797</span>{                                                                                                                                    
+</span><span class="methodLine"><i>0561</i>         for (FlagEncoder encoder : edgeEncoders) {                                                                                                                              
+</span><span class="methodLine"><i>0562</i>             if (encoder.supportsTurnCosts())                                                                                                                                    
+</span><span class="methodLine"><i>0563</i>                 return true;                                                                                                                                                    
+</span><span class="methodLine"><i>0564</i>         }                                                                                                                                                                       
+</span><span class="methodLine"><i>0565</i>         return false;                                                                                                                                                           
+</span><span class="methodLine"><i>0566</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0567</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0568</i>     @Override                                                                                                                                                                   
+</span><span class="methodLine"><i>0569</i>     public List<EncodedValue> getEncodedValues() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 803</span>{                                                                                                                              
+</span><span class="methodLine"><i>0570</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1857</span>return Collections.unmodifiableList(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4078</span>new ArrayList<>(encodedValueMap.values())</span>);</span>                                                                                         
+</span><span class="methodLine"><i>0571</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0572</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0573</i>     @Override                                                                                                                                                                   
+</span><span class="methodLine"><i>0574</i>     public BooleanEncodedValue getBooleanEncodedValue(String key) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 809</span>{</span>                                                                                                             
+</span><span class="methodLine"><i>0575</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1861</span>return getEncodedValue(key, BooleanEncodedValue.class);</span>                                                                                                                 
+</span><span class="methodLine"><i>0576</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0577</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0578</i>     @Override                                                                                                                                                                   
+</span><span class="methodLine"><i>0579</i>     public IntEncodedValue getIntEncodedValue(String key) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 815</span>{</span>                                                                                                                     
+</span><span class="methodLine"><i>0580</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1865</span>return getEncodedValue(key, IntEncodedValue.class);</span>                                                                                                                     
+</span><span class="methodLine"><i>0581</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0582</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0583</i>     @Override                                                                                                                                                                   
+</span><span class="methodLine"><i>0584</i>     public DecimalEncodedValue getDecimalEncodedValue(String key) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 821</span>{</span>                                                                                                             
+</span><span class="methodLine"><i>0585</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1869</span>return getEncodedValue(key, DecimalEncodedValue.class);</span>                                                                                                                 
+</span><span class="methodLine"><i>0586</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0587</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0588</i>     @SuppressWarnings("unchecked")                                                                                                                                              
+</span><span class="outsideLine"><i>0589</i>     @Override                                                                                                                                                                   
+</span><span class="methodLine"><i>0590</i>     public <T extends Enum<?>> EnumEncodedValue<T> getEnumEncodedValue(String key, Class<T> type) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1130</span>{</span>                                                                             
+</span><span class="methodLine"><i>0591</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2418</span>return getEncodedValue(key, EnumEncodedValue.class);</span>                                                                                                                    
+</span><span class="methodLine"><i>0592</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0593</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0594</i>     @Override                                                                                                                                                                   
+</span><span class="methodLine"><i>0595</i>     public StringEncodedValue getStringEncodedValue(String key) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 832</span>{</span>                                                                                                               
+</span><span class="methodLine"><i>0596</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1885</span>return getEncodedValue(key, StringEncodedValue.class);</span>                                                                                                                  
+</span><span class="methodLine"><i>0597</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0598</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0599</i>     @Override                                                                                                                                                                   
+</span><span class="methodLine"><i>0600</i>     public <T extends EncodedValue> T getEncodedValue(String key, Class<T> encodedValueType) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1146</span>{</span>                                                                                  
+</span><span class="methodLine"><i>0601</i>         EncodedValue ev = encodedValueMap.get(key);                                                                                                                             
+</span><span class="methodLine"><i>0602</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3515</span>ev <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3515</span>==</span> null</span>)                                                                                                                                                         
+</span><span class="methodLine"><i>0603</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4109</span>new IllegalArgumentException("Cannot find EncodedValue " + key + " in collection: " + ev)</span>;                                                                    
+</span><span class="methodLine"><i>0604</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2431</span>return (T) ev;</span>                                                                                                                                                          
+</span><span class="methodLine"><i>0605</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0606</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0607</i>     private static final String SPECIAL_SEPARATOR = "$";                                                                                                                        
+</span><span class="outsideLine"><i>0608</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0609</i>     private static boolean isSharedEncodedValues(EncodedValue ev) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 848</span>{</span>                                                                                                             
+</span><span class="methodLine"><i>0610</i>         return isValidEncodedValue(ev.getName()) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2436</span>&&</span> <span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2911</span>!</span>ev.getName().contains(SPECIAL_SEPARATOR);                                                                                  
+</span><span class="methodLine"><i>0611</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0612</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0613</i>     /**                                                                                                                                                                         
+</span><span class="outsideLine"><i>0614</i>      * All EncodedValue names that are created from a FlagEncoder should use this method to mark them as                                                                        
+</span><span class="outsideLine"><i>0615</i>      * "none-shared" across the other FlagEncoders.                                                                                                                             
+</span><span class="outsideLine"><i>0616</i>      */                                                                                                                                                                         
+</span><span class="methodLine"><i>0617</i>     public static String getKey(FlagEncoder encoder, String str) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 854</span>{</span>                                                                                                              
+</span><span class="methodLine"><i>0618</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1906</span>return getKey(encoder.toString(), str);</span>                                                                                                                                 
+</span><span class="methodLine"><i>0619</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0620</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0621</i>     public static String getKey(String prefix, String str) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 860</span>{</span>                                                                                                                    
+</span><span class="methodLine"><i>0622</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1911</span>return prefix <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2920</span>+</span> SPECIAL_SEPARATOR <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2450</span>+</span> str;</span>                                                                                                                                
+</span><span class="methodLine"><i>0623</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0624</i>                                                                                                                                                                                 
+</span><span class="outsideLine"><i>0625</i>     // copied from janino                                                                                                                                                       
+</span><span class="outsideLine"><i>0626</i>     private static final Set<String> KEYWORDS = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2454</span>new HashSet<>(Arrays.asList(                                                                                                    
+</span><span class="outsideLine"><i>0627</i>             "first_match",                                                                                                                                                      
+</span><span class="outsideLine"><i>0628</i>             "abstract", "assert",                                                                                                                                               
+</span><span class="outsideLine"><i>0629</i>             "boolean", "break", "byte",                                                                                                                                         
+</span><span class="outsideLine"><i>0630</i>             "case", "catch", "char", "class", "const", "continue",                                                                                                              
+</span><span class="outsideLine"><i>0631</i>             "default", "do", "double",                                                                                                                                          
+</span><span class="outsideLine"><i>0632</i>             "else", "enum", "extends",                                                                                                                                          
+</span><span class="outsideLine"><i>0633</i>             "false", "final", "finally", "float", "for",                                                                                                                        
+</span><span class="outsideLine"><i>0634</i>             "goto",                                                                                                                                                             
+</span><span class="outsideLine"><i>0635</i>             "if", "implements", "import", "instanceof", "int", "interface",                                                                                                     
+</span><span class="outsideLine"><i>0636</i>             "long",                                                                                                                                                             
+</span><span class="outsideLine"><i>0637</i>             "native", "new", "non-sealed", "null",                                                                                                                              
+</span><span class="outsideLine"><i>0638</i>             "package", "permits", "private", "protected", "public",                                                                                                             
+</span><span class="outsideLine"><i>0639</i>             "record", "return",                                                                                                                                                 
+</span><span class="outsideLine"><i>0640</i>             "sealed", "short", "static", "strictfp", "super", "switch", "synchronized",                                                                                         
+</span><span class="outsideLine"><i>0641</i>             "this", "throw", "throws", "transient", "true", "try",                                                                                                              
+</span><span class="outsideLine"><i>0642</i>             "var", "void", "volatile",                                                                                                                                          
+</span><span class="outsideLine"><i>0643</i>             "while",                                                                                                                                                            
+</span><span class="outsideLine"><i>0644</i>             "yield",                                                                                                                                                            
+</span><span class="outsideLine"><i>0645</i>             "_"                                                                                                                                                                 
+</span><span class="outsideLine"><i>0646</i>     ))</span>;                                                                                                                                                                         
+</span><span class="outsideLine"><i>0647</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0648</i>     public static boolean isValidEncodedValue(String name) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 872</span>{</span>                                                                                                                    
+</span><span class="outsideLine"><i>0649</i>         // first character must be a lower case letter                                                                                                                          
+</span><span class="methodLine"><i>0650</i>         if (name.isEmpty() <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3543</span>||</span> <span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 4134</span>!</span>isLowerLetter(name.charAt(0)) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2928</span>||</span> KEYWORDS.contains(name)) return false;                                                                          
+</span><span class="outsideLine"><i>0651</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0652</i>         int dollarCount = 0, underscoreCount = 0;                                                                                                                               
+</span><span class="methodLine"><i>0653</i>         for (int i = 1; i <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2937</span><</span> name.length(); i<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 4153</span>++</span>) {                                                                                                                               
+</span><span class="methodLine"><i>0654</i>             char c = name.charAt(i);                                                                                                                                            
+</span><span class="methodLine"><i>0655</i>             if (c <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 5298</span>==</span> '$') {                                                                                                                                                     
+</span><span class="methodLine"><i>0656</i>                 if (dollarCount <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 7556</span>></span> 0) return false;                                                                                                                              
+</span><span class="methodLine"><i>0657</i>                 dollarCount<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 7561</span>++</span>;                                                                                                                                                  
+</span><span class="methodLine"><i>0658</i>             } else if (c <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 5982</span>==</span> '_') {                                                                                                                                              
+</span><span class="methodLine"><i>0659</i>                 if (underscoreCount <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 7827</span>></span> 0) return false;                                                                                                                          
+</span><span class="methodLine"><i>0660</i>                 underscoreCount<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 7832</span>++</span>;                                                                                                                                              
+</span><span class="methodLine"><i>0661</i>             } else if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 7142</span>!</span>isLowerLetter(c) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 6620</span>&&</span> <span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 7144</span>!</span>isNumber(c)) {                                                                                                                     
+</span><span class="methodLine"><i>0662</i>                 return false;                                                                                                                                                   
+</span><span class="methodLine"><i>0663</i>             } else {                                                                                                                                                            
+</span><span class="methodLine"><i>0664</i>                 underscoreCount = 0;                                                                                                                                            
+</span><span class="methodLine"><i>0665</i>             }                                                                                                                                                                   
+</span><span class="methodLine"><i>0666</i>         }                                                                                                                                                                       
+</span><span class="methodLine"><i>0667</i>         return true;                                                                                                                                                            
+</span><span class="methodLine"><i>0668</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0669</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0670</i>     private static boolean isNumber(char c) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 878</span>{                                                                                                                                   
+</span><span class="methodLine"><i>0671</i>         return c <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2943</span>>=</span> '0' <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2473</span>&&</span> c <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2945</span><=</span> '9';                                                                                                                                            
+</span><span class="methodLine"><i>0672</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0673</i>                                                                                                                                                                                 
+</span><span class="methodLine"><i>0674</i>     private static boolean isLowerLetter(char c) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 884</span>{                                                                                                                              
+</span><span class="methodLine"><i>0675</i>         return c <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2947</span>>=</span> 'a' <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2478</span>&&</span> c <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2949</span><=</span> 'z';                                                                                                                                            
+</span><span class="methodLine"><i>0676</i>     }</span>                                                                                                                                                                           
+</span><span class="outsideLine"><i>0677</i> }                                                                                                                                                                               </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

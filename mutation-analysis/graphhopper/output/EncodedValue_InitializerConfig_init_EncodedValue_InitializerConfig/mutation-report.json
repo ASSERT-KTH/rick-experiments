@@ -1,0 +1,55 @@
+{
+    "mut": "EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig",
+    "CUT": "com.graphhopper.routing.ev.IntEncodedValueImpl",
+    "mutant-file": "./IntEncodedValueImpl.java/156.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.576 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.648 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.911 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.861 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.385 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen"
+},
+{
+    "mut": "EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig",
+    "CUT": "com.graphhopper.routing.ev.IntEncodedValueImpl",
+    "mutant-file": "./IntEncodedValueImpl.java/157.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.571 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.724 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.747 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.648 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.908 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen"
+},
+{
+    "mut": "EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig",
+    "CUT": "com.graphhopper.routing.ev.IntEncodedValueImpl",
+    "mutant-file": "./IntEncodedValueImpl.java/58.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.059 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.585 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.678 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.648 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.563 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen"
+},
+{
+    "mut": "EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig",
+    "CUT": "com.graphhopper.routing.ev.IntEncodedValueImpl",
+    "mutant-file": "./IntEncodedValueImpl.java/73.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.836 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.032 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.49 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.579 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.696 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen"
+},
+{
+    "mut": "EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig",
+    "CUT": "com.graphhopper.routing.ev.IntEncodedValueImpl",
+    "mutant-file": "./IntEncodedValueImpl.java/88.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.706 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.713 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.752 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.602 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.801 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen"
+},

@@ -1,0 +1,18 @@
+***not in a method***;9;1;0
+Instruction.Instruction( int sign , String name , PointList pl );0;1;5
+Instruction.getDistance( );2;1;3
+Instruction.getExtraInfoJSON( );2;1;3
+Instruction.getLength( );2;1;3
+Instruction.getName( );3;1;3
+Instruction.getPoints( );2;1;3
+Instruction.getSign( );2;1;3
+Instruction.getTime( );2;1;3
+Instruction.getTurnDescription( Translation tr );11;20;58
+Instruction.setDistance( double distance );2;1;4
+Instruction.setExtraInfo( String key , Object value );3;1;3
+Instruction.setName( String name );2;1;3
+Instruction.setPoints( PointList points );2;1;3
+Instruction.setSign( int sign );1;1;3
+Instruction.setTime( long time );2;1;4
+Instruction.setUseRawName( );1;1;3
+Instruction.toString( );4;1;10

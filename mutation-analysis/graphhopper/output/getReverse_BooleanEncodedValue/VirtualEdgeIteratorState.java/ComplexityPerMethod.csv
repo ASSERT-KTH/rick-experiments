@@ -1,0 +1,46 @@
+VirtualEdgeIteratorState.VirtualEdgeIteratorState( int originalEdgeKey , int edgeKey , int baseNode , int adjNode , double distance , IntsRef edgeFlags , String name , PointList pointList , boolean reverse );0;1;11
+VirtualEdgeIteratorState.copyPropertiesFrom( EdgeIteratorState fromEdge );3;1;3
+VirtualEdgeIteratorState.detach( boolean reverse );3;2;10
+VirtualEdgeIteratorState.fetchWayGeometry( FetchMode mode );23;9;23
+VirtualEdgeIteratorState.get( BooleanEncodedValue property );4;2;5
+VirtualEdgeIteratorState.get( DecimalEncodedValue property );3;1;3
+VirtualEdgeIteratorState.get( EnumEncodedValue < T > property );3;1;3
+VirtualEdgeIteratorState.get( IntEncodedValue property );3;1;3
+VirtualEdgeIteratorState.get( StringEncodedValue property );4;1;3
+VirtualEdgeIteratorState.getAdjNode( );2;1;3
+VirtualEdgeIteratorState.getBaseNode( );2;1;3
+VirtualEdgeIteratorState.getDistance( );2;1;3
+VirtualEdgeIteratorState.getEdge( );2;1;3
+VirtualEdgeIteratorState.getEdgeKey( );2;1;3
+VirtualEdgeIteratorState.getFlags( );2;1;3
+VirtualEdgeIteratorState.getName( );3;1;3
+VirtualEdgeIteratorState.getOrigEdgeFirst( );2;1;3
+VirtualEdgeIteratorState.getOrigEdgeLast( );2;1;3
+VirtualEdgeIteratorState.getOriginalEdgeKey( );2;1;3
+VirtualEdgeIteratorState.getReverse( BooleanEncodedValue property );5;2;5
+VirtualEdgeIteratorState.getReverse( DecimalEncodedValue property );4;1;3
+VirtualEdgeIteratorState.getReverse( EnumEncodedValue < T > property );4;1;3
+VirtualEdgeIteratorState.getReverse( IntEncodedValue property );4;1;3
+VirtualEdgeIteratorState.getReverse( StringEncodedValue property );5;1;3
+VirtualEdgeIteratorState.set( BooleanEncodedValue property , boolean fwd , boolean bwd );6;2;7
+VirtualEdgeIteratorState.set( BooleanEncodedValue property , boolean value );3;1;4
+VirtualEdgeIteratorState.set( DecimalEncodedValue property , double fwd , double bwd );6;2;7
+VirtualEdgeIteratorState.set( DecimalEncodedValue property , double value );3;1;4
+VirtualEdgeIteratorState.set( EnumEncodedValue < T > property , T fwd , T bwd );8;2;7
+VirtualEdgeIteratorState.set( EnumEncodedValue < T > property , T value );4;1;4
+VirtualEdgeIteratorState.set( IntEncodedValue property , int fwd , int bwd );6;2;7
+VirtualEdgeIteratorState.set( IntEncodedValue property , int value );3;1;4
+VirtualEdgeIteratorState.set( StringEncodedValue property , String fwd , String bwd );8;2;7
+VirtualEdgeIteratorState.set( StringEncodedValue property , String value );4;1;4
+VirtualEdgeIteratorState.setDistance( double dist );2;1;4
+VirtualEdgeIteratorState.setFlags( IntsRef flags );3;1;4
+VirtualEdgeIteratorState.setName( String name );3;1;4
+VirtualEdgeIteratorState.setReverse( BooleanEncodedValue property , boolean value );4;1;4
+VirtualEdgeIteratorState.setReverse( DecimalEncodedValue property , double value );4;1;4
+VirtualEdgeIteratorState.setReverse( EnumEncodedValue < T > property , T value );5;1;4
+VirtualEdgeIteratorState.setReverse( IntEncodedValue property , int value );4;1;4
+VirtualEdgeIteratorState.setReverse( StringEncodedValue property , String value );5;1;4
+VirtualEdgeIteratorState.setReverseEdge( EdgeIteratorState reverseEdge );2;1;3
+VirtualEdgeIteratorState.setUnfavored( boolean unfavored );1;1;3
+VirtualEdgeIteratorState.setWayGeometry( PointList list );3;1;3
+VirtualEdgeIteratorState.toString( );4;1;3

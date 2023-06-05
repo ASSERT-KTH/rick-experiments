@@ -1,0 +1,20 @@
+***not in a method***;2;1;0
+IntEncodedValueImpl.IntEncodedValueImpl( String name , int bits , boolean storeTwoDirections );0;1;3
+IntEncodedValueImpl.IntEncodedValueImpl( String name , int bits , int minValue , boolean negateReverseDirection , boolean storeTwoDirections );17;9;18
+IntEncodedValueImpl.checkValue( int value );11;4;8
+IntEncodedValueImpl.equals( Object o );30;15;17
+IntEncodedValueImpl.getInt( boolean reverse , IntsRef ref );17;5;12
+IntEncodedValueImpl.getMaxInt( );2;1;3
+IntEncodedValueImpl.getName( );3;1;3
+IntEncodedValueImpl.getVersion( );6;3;6
+IntEncodedValueImpl.hashCode( );2;1;3
+IntEncodedValueImpl.init( EncodedValue . InitializerConfig init );5;4;15
+IntEncodedValueImpl.isInitialized( );3;1;3
+IntEncodedValueImpl.isStoreTwoDirections( );2;1;3
+IntEncodedValueImpl.setInt( boolean reverse , IntsRef ref , int value );2;1;4
+IntEncodedValueImpl.staticHashCode( Collection < String > vals );7;3;9
+IntEncodedValueImpl.staticHashCode( Enum < ? > ... vals );9;3;10
+IntEncodedValueImpl.staticHashCode( double val );4;1;4
+IntEncodedValueImpl.staticHashCode( int ... vals );8;3;10
+IntEncodedValueImpl.toString( );10;1;5
+IntEncodedValueImpl.uncheckedSet( boolean reverse , IntsRef ref , int value );17;6;19

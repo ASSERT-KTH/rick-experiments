@@ -1,0 +1,15 @@
+***not in a method***;6;1;0
+StringIndex.StringIndex( Directory dir , final int cacheSize , final int segmentSize );0;1;10
+StringIndex.add( Map < String , String > entryMap );35;13;60
+StringIndex.close( );1;1;4
+StringIndex.create( long initBytes );2;1;7
+StringIndex.flush( );5;2;19
+StringIndex.get( final long entryPointer , String key );33;10;37
+StringIndex.getAll( final long entryPointer );23;7;30
+StringIndex.getBytesForString( String info , String name );9;3;10
+StringIndex.getCapacity( );3;1;3
+StringIndex.getKeys( );2;1;3
+StringIndex.isClosed( );3;2;3
+StringIndex.loadExisting( );9;4;25
+StringIndex.putIntoMap( Map < String , String > map , long tmpPointer , int currentKeyIndex );7;2;14
+StringIndex.removeEldestEntry( Map . Entry < String , Long > entry );4;1;3

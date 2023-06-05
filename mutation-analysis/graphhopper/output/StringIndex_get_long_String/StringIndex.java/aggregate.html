@@ -1,0 +1,641 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.63</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                                                                                          
+</span><span class="outsideLine"><i>0002</i>  *  Licensed to GraphHopper GmbH under one or more contributor                                                                                              
+</span><span class="outsideLine"><i>0003</i>  *  license agreements. See the NOTICE file distributed with this work for                                                                                  
+</span><span class="outsideLine"><i>0004</i>  *  additional information regarding copyright ownership.                                                                                                   
+</span><span class="outsideLine"><i>0005</i>  *                                                                                                                                                          
+</span><span class="outsideLine"><i>0006</i>  *  GraphHopper GmbH licenses this file to you under the Apache License,                                                                                    
+</span><span class="outsideLine"><i>0007</i>  *  Version 2.0 (the "License"); you may not use this file except in                                                                                        
+</span><span class="outsideLine"><i>0008</i>  *  compliance with the License. You may obtain a copy of the License at                                                                                    
+</span><span class="outsideLine"><i>0009</i>  *                                                                                                                                                          
+</span><span class="outsideLine"><i>0010</i>  *       http://www.apache.org/licenses/LICENSE-2.0                                                                                                         
+</span><span class="outsideLine"><i>0011</i>  *                                                                                                                                                          
+</span><span class="outsideLine"><i>0012</i>  *  Unless required by applicable law or agreed to in writing, software                                                                                     
+</span><span class="outsideLine"><i>0013</i>  *  distributed under the License is distributed on an "AS IS" BASIS,                                                                                       
+</span><span class="outsideLine"><i>0014</i>  *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.                                                                                
+</span><span class="outsideLine"><i>0015</i>  *  See the License for the specific language governing permissions and                                                                                     
+</span><span class="outsideLine"><i>0016</i>  *  limitations under the License.                                                                                                                          
+</span><span class="outsideLine"><i>0017</i>  */                                                                                                                                                         
+</span><span class="outsideLine"><i>0018</i> package com.graphhopper.search;                                                                                                                             
+</span><span class="outsideLine"><i>0019</i>                                                                                                                                                             
+</span><span class="outsideLine"><i>0020</i> import com.graphhopper.storage.DataAccess;                                                                                                                  
+</span><span class="outsideLine"><i>0021</i> import com.graphhopper.storage.Directory;                                                                                                                   
+</span><span class="outsideLine"><i>0022</i> import com.graphhopper.util.BitUtil;                                                                                                                        
+</span><span class="outsideLine"><i>0023</i> import com.graphhopper.util.Constants;                                                                                                                      
+</span><span class="outsideLine"><i>0024</i> import com.graphhopper.util.GHUtility;                                                                                                                      
+</span><span class="outsideLine"><i>0025</i> import com.graphhopper.util.Helper;                                                                                                                         
+</span><span class="outsideLine"><i>0026</i>                                                                                                                                                             
+</span><span class="outsideLine"><i>0027</i> import java.util.*;                                                                                                                                         
+</span><span class="outsideLine"><i>0028</i>                                                                                                                                                             
+</span><span class="outsideLine"><i>0029</i> /**                                                                                                                                                         
+</span><span class="outsideLine"><i>0030</i>  * @author Peter Karich                                                                                                                                     
+</span><span class="outsideLine"><i>0031</i>  */                                                                                                                                                         
+</span><span class="outsideLine"><i>0032</i> public class StringIndex {                                                                                                                                  
+</span><span class="outsideLine"><i>0033</i>     private static final long EMPTY_POINTER = 0, START_POINTER = 1;                                                                                         
+</span><span class="outsideLine"><i>0034</i>     // Store the key index in 2 bytes. Use negative values for marking the value as duplicate.                                                              
+</span><span class="outsideLine"><i>0035</i>     static final int MAX_UNIQUE_KEYS = (1 <span class="ShiftOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >> 
+Mutation Operator Type: ShiftOperatorReplacement 
+Node ID: 966</span><<</span> 15);                                                                                                           
+</span><span class="outsideLine"><i>0036</i>     // Store string value as byte array and store the length into 1 byte                                                                                    
+</span><span class="outsideLine"><i>0037</i>     private static final int MAX_LENGTH = (1 <span class="ShiftOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >> 
+Mutation Operator Type: ShiftOperatorReplacement 
+Node ID: 1158</span><<</span> 8) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 614</span>-</span> 1;                                                                                                     
+</span><span class="outsideLine"><i>0038</i>     boolean throwExceptionIfTooLong = false;                                                                                                                
+</span><span class="outsideLine"><i>0039</i>     private final DataAccess keys;                                                                                                                          
+</span><span class="outsideLine"><i>0040</i>     // storage layout per entry:                                                                                                                            
+</span><span class="outsideLine"><i>0041</i>     // 1 byte    | 2 bytes  | 1 byte      | x    | 2 bytes  | 1 byte      | x    | 2 bytes  (dup example) | 4 bytes | ...                                   
+</span><span class="outsideLine"><i>0042</i>     // vals count| key_idx_0| val_length_0| val_0| key_idx_1| val_length_1| val_1| -key_idx_2             | delta_2 | key_idx_3 | val_length_3 | val_3      
+</span><span class="outsideLine"><i>0043</i>     // Drawback: we need to loop through the entries to get the start of val_x.                                                                             
+</span><span class="outsideLine"><i>0044</i>     // Note, that we detect duplicate values via smallCache and then use the negative key index as 'duplicate' marker.                                      
+</span><span class="outsideLine"><i>0045</i>     // We then store only the delta (signed int) instead the absolute unsigned long value to reduce memory usage when duplicate entries.                    
+</span><span class="outsideLine"><i>0046</i>     private final DataAccess vals;                                                                                                                          
+</span><span class="outsideLine"><i>0047</i>     // array.indexOf could be faster than hashmap.get if not too many keys or even sort keys and use binarySearch                                           
+</span><span class="outsideLine"><i>0048</i>     private final Map<String, Integer> keysInMem = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 757</span>new LinkedHashMap<>()</span>;                                                                                   
+</span><span class="outsideLine"><i>0049</i>     private final List<String> keyList = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 760</span>new ArrayList<>()</span>;                                                                                                 
+</span><span class="outsideLine"><i>0050</i>     private final Map<String, Long> smallCache;                                                                                                             
+</span><span class="outsideLine"><i>0051</i>     private long bytePointer = START_POINTER;                                                                                                               
+</span><span class="outsideLine"><i>0052</i>     private long lastEntryPointer = <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 640</span>-</span>1;                                                                                                                     
+</span><span class="outsideLine"><i>0053</i>     private Map<String, String> lastEntryMap;                                                                                                               
+</span><span class="outsideLine"><i>0054</i>                                                                                                                                                             
+</span><span class="outsideLine"><i>0055</i>     /**                                                                                                                                                     
+</span><span class="outsideLine"><i>0056</i>      * Specify a larger cacheSize to reduce disk usage. Note that this increases the memory usage of this object.                                           
+</span><span class="outsideLine"><i>0057</i>      */                                                                                                                                                     
+</span><span class="methodLine"><i>0058</i>     public StringIndex(Directory dir, final int cacheSize, final int segmentSize) {                                                                         
+</span><span class="methodLine"><i>0059</i>         keys = dir.create("string_index_keys", segmentSize);                                                                                                
+</span><span class="methodLine"><i>0060</i>         vals = dir.create("string_index_vals", segmentSize);                                                                                                
+</span><span class="methodLine"><i>0061</i>         smallCache = new LinkedHashMap<String, Long>(cacheSize, 0.75f, true) {                                                                              
+</span><span class="methodLine"><i>0062</i>             @Override                                                                                                                                       
+</span><span class="methodLine"><i>0063</i>             protected boolean removeEldestEntry(Map.Entry<String, Long> entry) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 3030</span>{</span>                                                                            
+</span><span class="methodLine"><i>0064</i>                 return size() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3948</span>></span> cacheSize;                                                                                                                  
+</span><span class="methodLine"><i>0065</i>             }</span>                                                                                                                                               
+</span><span class="methodLine"><i>0066</i>         };                                                                                                                                                  
+</span><span class="methodLine"><i>0067</i>     }                                                                                                                                                       
+</span><span class="outsideLine"><i>0068</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0069</i>     public StringIndex create(long initBytes) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 302</span>{                                                                                                             
+</span><span class="methodLine"><i>0070</i>         keys.create(initBytes);                                                                                                                             
+</span><span class="methodLine"><i>0071</i>         vals.create(initBytes);                                                                                                                             
+</span><span class="outsideLine"><i>0072</i>         // add special empty case to have a reliable duplicate detection via negative keyIndex                                                              
+</span><span class="methodLine"><i>0073</i>         keysInMem.put("", 0);                                                                                                                               
+</span><span class="methodLine"><i>0074</i>         keyList.add("");                                                                                                                                    
+</span><span class="methodLine"><i>0075</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 664</span>return this;</span>                                                                                                                                        
+</span><span class="methodLine"><i>0076</i>     }</span>                                                                                                                                                       
+</span><span class="outsideLine"><i>0077</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0078</i>     public boolean loadExisting() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 307</span>{                                                                                                                         
+</span><span class="methodLine"><i>0079</i>         if (vals.loadExisting()) {                                                                                                                          
+</span><span class="methodLine"><i>0080</i>             if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2038</span>!</span>keys.loadExisting())                                                                                                                       
+</span><span class="methodLine"><i>0081</i>                 throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2261</span>new IllegalStateException("Loaded values but cannot load keys")</span>;                                                                      
+</span><span class="methodLine"><i>0082</i>             int stringIndexKeysVersion = keys.getHeader(0);                                                                                                 
+</span><span class="methodLine"><i>0083</i>             int stringIndexValsVersion = vals.getHeader(0);                                                                                                 
+</span><span class="methodLine"><i>0084</i>             GHUtility.checkDAVersion(keys.getName(), Constants.VERSION_STRING_IDX, stringIndexKeysVersion);                                                 
+</span><span class="methodLine"><i>0085</i>             GHUtility.checkDAVersion(vals.getName(), Constants.VERSION_STRING_IDX, stringIndexValsVersion);                                                 
+</span><span class="methodLine"><i>0086</i>             bytePointer = BitUtil.LITTLE.combineIntsToLong(vals.getHeader(4), vals.getHeader(8));                                                           
+</span><span class="outsideLine"><i>0087</i>                                                                                                                                                             
+</span><span class="outsideLine"><i>0088</i>             // load keys into memory                                                                                                                        
+</span><span class="methodLine"><i>0089</i>             int count = keys.getShort(0);                                                                                                                   
+</span><span class="methodLine"><i>0090</i>             long keyBytePointer = 2;                                                                                                                        
+</span><span class="methodLine"><i>0091</i>             for (int i = 0; i <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2056</span><</span> count; i<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 2566</span>++</span>) {                                                                                                               
+</span><span class="methodLine"><i>0092</i>                 int keyLength = keys.getShort(keyBytePointer);                                                                                              
+</span><span class="methodLine"><i>0093</i>                 keyBytePointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 3078</span>+=</span> 2;                                                                                                                        
+</span><span class="outsideLine"><i>0094</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0095</i>                 byte[] keyBytes = new byte[keyLength];                                                                                                      
+</span><span class="methodLine"><i>0096</i>                 keys.getBytes(keyBytePointer, keyBytes, keyLength);                                                                                         
+</span><span class="methodLine"><i>0097</i>                 String valueStr = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3969</span>new String(keyBytes, Helper.UTF_CS)</span>;                                                                                      
+</span><span class="methodLine"><i>0098</i>                 keysInMem.put(valueStr, keysInMem.size());                                                                                                  
+</span><span class="methodLine"><i>0099</i>                 keyList.add(valueStr);                                                                                                                      
+</span><span class="methodLine"><i>0100</i>                 keyBytePointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 3086</span>+=</span> keyLength;                                                                                                                
+</span><span class="methodLine"><i>0101</i>             }                                                                                                                                               
+</span><span class="methodLine"><i>0102</i>             return true;                                                                                                                                    
+</span><span class="methodLine"><i>0103</i>         }                                                                                                                                                   
+</span><span class="outsideLine"><i>0104</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0105</i>         return false;                                                                                                                                       
+</span><span class="methodLine"><i>0106</i>     }</span>                                                                                                                                                       
+</span><span class="outsideLine"><i>0107</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0108</i>     Set<String> getKeys() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 311</span>{                                                                                                                                 
+</span><span class="methodLine"><i>0109</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 670</span>return keysInMem.keySet();</span>                                                                                                                          
+</span><span class="methodLine"><i>0110</i>     }</span>                                                                                                                                                       
+</span><span class="outsideLine"><i>0111</i>                                                                                                                                                             
+</span><span class="outsideLine"><i>0112</i>     /**                                                                                                                                                     
+</span><span class="outsideLine"><i>0113</i>      * This method writes the specified key-value pairs into the storage.                                                                                   
+</span><span class="outsideLine"><i>0114</i>      *                                                                                                                                                      
+</span><span class="outsideLine"><i>0115</i>      * @return entryPointer to later fetch the entryMap via get                                                                                             
+</span><span class="outsideLine"><i>0116</i>      */                                                                                                                                                     
+</span><span class="methodLine"><i>0117</i>     public long add(Map<String, String> entryMap) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1L;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 316</span>{</span>                                                                                                         
+</span><span class="methodLine"><i>0118</i>         if (entryMap.isEmpty())                                                                                                                             
+</span><span class="methodLine"><i>0119</i>             return EMPTY_POINTER;                                                                                                                           
+</span><span class="methodLine"><i>0120</i>         else if (entryMap.size() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1232</span>></span> 200)                                                                                                                     
+</span><span class="methodLine"><i>0121</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1529</span>new IllegalArgumentException("Cannot store more than 200 entries per entry")</span>;                                                             
+</span><span class="outsideLine"><i>0122</i>                                                                                                                                                             
+</span><span class="outsideLine"><i>0123</i>         // This is a very important compressing mechanism due to the nature of OSM. Make this faster via precalculated hastcodes?                           
+</span><span class="methodLine"><i>0124</i>         if (entryMap.equals(lastEntryMap))                                                                                                                  
+</span><span class="methodLine"><i>0125</i>             return lastEntryPointer;                                                                                                                        
+</span><span class="outsideLine"><i>0126</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0127</i>         lastEntryMap = entryMap;                                                                                                                            
+</span><span class="methodLine"><i>0128</i>         lastEntryPointer = bytePointer;                                                                                                                     
+</span><span class="outsideLine"><i>0129</i>         // while adding there could be exceptions and we need to avoid that the bytePointer is modified                                                     
+</span><span class="methodLine"><i>0130</i>         long currentPointer = bytePointer;                                                                                                                  
+</span><span class="outsideLine"><i>0131</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0132</i>         vals.ensureCapacity(currentPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1546</span>+</span> 1);                                                                                                            
+</span><span class="methodLine"><i>0133</i>         vals.setByte(currentPointer, (byte) entryMap.size());                                                                                               
+</span><span class="methodLine"><i>0134</i>         currentPointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 1028</span>+=</span> 1;                                                                                                                                
+</span><span class="methodLine"><i>0135</i>         for (Map.Entry<String, String> entry : entryMap.entrySet()) {                                                                                       
+</span><span class="methodLine"><i>0136</i>             String key = entry.getKey(), value = entry.getValue();                                                                                          
+</span><span class="methodLine"><i>0137</i>             Integer keyIndex = keysInMem.get(key);                                                                                                          
+</span><span class="methodLine"><i>0138</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2094</span>keyIndex <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2094</span>==</span> null</span>) {                                                                                                                         
+</span><span class="methodLine"><i>0139</i>                 keyIndex = keysInMem.size();                                                                                                                
+</span><span class="methodLine"><i>0140</i>                 if (keyIndex <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3103</span>>=</span> MAX_UNIQUE_KEYS)                                                                                                            
+</span><span class="methodLine"><i>0141</i>                     throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3329</span>new IllegalArgumentException("Cannot store more than " + MAX_UNIQUE_KEYS + " unique keys")</span>;                                       
+</span><span class="methodLine"><i>0142</i>                 keysInMem.put(key, keyIndex);                                                                                                               
+</span><span class="methodLine"><i>0143</i>                 keyList.add(key);                                                                                                                           
+</span><span class="methodLine"><i>0144</i>             }                                                                                                                                               
+</span><span class="outsideLine"><i>0145</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0146</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2329</span>value <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2329</span>==</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2098</span>||</span> value.isEmpty()) {                                                                                                         
+</span><span class="methodLine"><i>0147</i>                 vals.ensureCapacity(currentPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3578</span>+</span> 3);                                                                                                    
+</span><span class="methodLine"><i>0148</i>                 vals.setShort(currentPointer, keyIndex.shortValue());                                                                                       
+</span><span class="outsideLine"><i>0149</i>                 // ensure that also in case of MMap value is set to 0                                                                                       
+</span><span class="methodLine"><i>0150</i>                 vals.setByte(currentPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3588</span>+</span> 2, (byte) 0);                                                                                                 
+</span><span class="methodLine"><i>0151</i>                 currentPointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 3116</span>+=</span> 3;                                                                                                                        
+</span><span class="methodLine"><i>0152</i>             } else {                                                                                                                                        
+</span><span class="methodLine"><i>0153</i>                 Long existingRef = smallCache.get(value);                                                                                                   
+</span><span class="methodLine"><i>0154</i>                 if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3120</span>existingRef <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3120</span>!=</span> null</span>) {                                                                                                                  
+</span><span class="methodLine"><i>0155</i>                     long delta = lastEntryPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4366</span>-</span> existingRef;                                                                                            
+</span><span class="methodLine"><i>0156</i>                     if (delta <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4143</span><</span> Integer.MAX_VALUE <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 4008</span>&&</span> delta <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4145</span>></span> Integer.MIN_VALUE) {                                                                           
+</span><span class="methodLine"><i>0157</i>                         vals.ensureCapacity(currentPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4614</span>+</span> 2 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4565</span>+</span> 4);                                                                                        
+</span><span class="methodLine"><i>0158</i>                         vals.setShort(currentPointer, (short) <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 4622</span>-</span>keyIndex);                                                                                   
+</span><span class="methodLine"><i>0159</i>                         currentPointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 4461</span>+=</span> 2;                                                                                                                
+</span><span class="outsideLine"><i>0160</i>                         // do not store valueBytes.length as we know it already: it is 4!                                                                   
+</span><span class="methodLine"><i>0161</i>                         byte[] valueBytes = new byte[4];                                                                                                    
+</span><span class="methodLine"><i>0162</i>                         BitUtil.LITTLE.fromInt(valueBytes, (int) delta);                                                                                    
+</span><span class="methodLine"><i>0163</i>                         vals.setBytes(currentPointer, valueBytes, valueBytes.length);                                                                       
+</span><span class="methodLine"><i>0164</i>                         currentPointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 4466</span>+=</span> valueBytes.length;                                                                                                
+</span><span class="methodLine"><i>0165</i>                         continue;                                                                                                                           
+</span><span class="methodLine"><i>0166</i>                     } else {                                                                                                                                
+</span><span class="methodLine"><i>0167</i>                         smallCache.remove(value);                                                                                                           
+</span><span class="methodLine"><i>0168</i>                     }                                                                                                                                       
+</span><span class="methodLine"><i>0169</i>                 }                                                                                                                                           
+</span><span class="outsideLine"><i>0170</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0171</i>                 byte[] valueBytes = getBytesForString("Value for key" + key, value);                                                                        
+</span><span class="outsideLine"><i>0172</i>                 // only cache value if storing via duplicate marker is valuable (the delta costs 4 bytes minus 1 due to omitted valueBytes.length storage)  
+</span><span class="methodLine"><i>0173</i>                 if (valueBytes.length <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3126</span>></span> 3)                                                                                                                  
+</span><span class="methodLine"><i>0174</i>                     smallCache.put(value, currentPointer);                                                                                                  
+</span><span class="outsideLine"><i>0175</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0176</i>                 vals.ensureCapacity(currentPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4022</span>+</span> 2 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3838</span>+</span> 1 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3616</span>+</span> valueBytes.length);                                                                            
+</span><span class="methodLine"><i>0177</i>                 vals.setShort(currentPointer, keyIndex.shortValue());                                                                                       
+</span><span class="methodLine"><i>0178</i>                 currentPointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 3132</span>+=</span> 2;                                                                                                                        
+</span><span class="methodLine"><i>0179</i>                 vals.setByte(currentPointer, (byte) valueBytes.length);                                                                                     
+</span><span class="methodLine"><i>0180</i>                 currentPointer<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 3134</span>++</span>;                                                                                                                           
+</span><span class="methodLine"><i>0181</i>                 vals.setBytes(currentPointer, valueBytes, valueBytes.length);                                                                               
+</span><span class="methodLine"><i>0182</i>                 currentPointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 3136</span>+=</span> valueBytes.length;                                                                                                        
+</span><span class="methodLine"><i>0183</i>             }                                                                                                                                               
+</span><span class="methodLine"><i>0184</i>         }                                                                                                                                                   
+</span><span class="methodLine"><i>0185</i>         bytePointer = currentPointer;                                                                                                                       
+</span><span class="methodLine"><i>0186</i>         return lastEntryPointer;                                                                                                                            
+</span><span class="methodLine"><i>0187</i>     }</span>                                                                                                                                                       
+</span><span class="outsideLine"><i>0188</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0189</i>     public Map<String, String> getAll(final long entryPointer) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 321</span>{                                                                                            
+</span><span class="methodLine"><i>0190</i>         if (entryPointer <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1037</span><</span> 0)                                                                                                                               
+</span><span class="methodLine"><i>0191</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1281</span>new IllegalStateException("Pointer to access StringIndex cannot be negative:" + entryPointer)</span>;                                            
+</span><span class="outsideLine"><i>0192</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0193</i>         if (entryPointer <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1043</span>==</span> EMPTY_POINTER)                                                                                                                  
+</span><span class="methodLine"><i>0194</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 847</span>return Collections.emptyMap();</span>                                                                                                                  
+</span><span class="outsideLine"><i>0195</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0196</i>         int keyCount = vals.getByte(entryPointer) <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: | 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 1859</span>&</span> 0xFF;                                                                                                   
+</span><span class="methodLine"><i>0197</i>         if (keyCount <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1051</span>==</span> 0)                                                                                                                                  
+</span><span class="methodLine"><i>0198</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 852</span>return Collections.emptyMap();</span>                                                                                                                  
+</span><span class="outsideLine"><i>0199</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0200</i>         Map<String, String> map = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2115</span>new LinkedHashMap<>(keyCount)</span>;                                                                                            
+</span><span class="methodLine"><i>0201</i>         long tmpPointer = entryPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1871</span>+</span> 1;                                                                                                                 
+</span><span class="methodLine"><i>0202</i>         for (int i = 0; i <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1062</span><</span> keyCount; i<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1599</span>++</span>) {                                                                                                                
+</span><span class="methodLine"><i>0203</i>             int currentKeyIndex = vals.getShort(tmpPointer);                                                                                                
+</span><span class="methodLine"><i>0204</i>             tmpPointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 2126</span>+=</span> 2;                                                                                                                                
+</span><span class="outsideLine"><i>0205</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0206</i>             if (currentKeyIndex <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2128</span><</span> 0) {                                                                                                                      
+</span><span class="methodLine"><i>0207</i>                 currentKeyIndex = <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 3404</span>-</span>currentKeyIndex;                                                                                                         
+</span><span class="methodLine"><i>0208</i>                 byte[] valueBytes = new byte[4];                                                                                                            
+</span><span class="methodLine"><i>0209</i>                 vals.getBytes(tmpPointer, valueBytes, valueBytes.length);                                                                                   
+</span><span class="methodLine"><i>0210</i>                 tmpPointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 3153</span>+=</span> 4;                                                                                                                            
+</span><span class="outsideLine"><i>0211</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0212</i>                 long dupPointer = entryPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3878</span>-</span> BitUtil.LITTLE.toInt(valueBytes);                                                                          
+</span><span class="methodLine"><i>0213</i>                 dupPointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 3156</span>+=</span> 2;                                                                                                                            
+</span><span class="methodLine"><i>0214</i>                 if (dupPointer <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3158</span>></span> bytePointer)                                                                                                               
+</span><span class="methodLine"><i>0215</i>                     throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3425</span>new IllegalStateException("dup marker should exist but points into not yet allocated area " + dupPointer + " > " + bytePointer)</span>;  
+</span><span class="methodLine"><i>0216</i>                 putIntoMap(map, dupPointer, currentKeyIndex);                                                                                               
+</span><span class="methodLine"><i>0217</i>             } else {                                                                                                                                        
+</span><span class="methodLine"><i>0218</i>                 int valueLength = putIntoMap(map, tmpPointer, currentKeyIndex);                                                                             
+</span><span class="methodLine"><i>0219</i>                 tmpPointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 3166</span>+=</span> 1 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3434</span>+</span> valueLength;                                                                                                              
+</span><span class="methodLine"><i>0220</i>             }                                                                                                                                               
+</span><span class="methodLine"><i>0221</i>         }                                                                                                                                                   
+</span><span class="outsideLine"><i>0222</i>                                                                                                                                                             
+</span><span class="outsideLine"><i>0223</i>         // value for specified key does not existing for the specified pointer                                                                              
+</span><span class="methodLine"><i>0224</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 699</span>return map;</span>                                                                                                                                         
+</span><span class="methodLine"><i>0225</i>     }</span>                                                                                                                                                       
+</span><span class="outsideLine"><i>0226</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0227</i>     private int putIntoMap(Map<String, String> map, long tmpPointer, int currentKeyIndex) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 326</span>{</span>                                                                 
+</span><span class="methodLine"><i>0228</i>         int valueLength = vals.getByte(tmpPointer) <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: | 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 1890</span>&</span> 0xFF;                                                                                                  
+</span><span class="methodLine"><i>0229</i>         tmpPointer<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1073</span>++</span>;                                                                                                                                       
+</span><span class="methodLine"><i>0230</i>         String valueStr;                                                                                                                                    
+</span><span class="methodLine"><i>0231</i>         if (valueLength <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1077</span>==</span> 0) {                                                                                                                             
+</span><span class="methodLine"><i>0232</i>             valueStr = "";                                                                                                                                  
+</span><span class="methodLine"><i>0233</i>         } else {                                                                                                                                            
+</span><span class="methodLine"><i>0234</i>             byte[] valueBytes = new byte[valueLength];                                                                                                      
+</span><span class="methodLine"><i>0235</i>             vals.getBytes(tmpPointer, valueBytes, valueBytes.length);                                                                                       
+</span><span class="methodLine"><i>0236</i>             valueStr = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2675</span>new String(valueBytes, Helper.UTF_CS)</span>;                                                                                               
+</span><span class="methodLine"><i>0237</i>         }                                                                                                                                                   
+</span><span class="outsideLine"><i>0238</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0239</i>         map.put(keyList.get(currentKeyIndex), valueStr);                                                                                                    
+</span><span class="methodLine"><i>0240</i>         return valueLength;                                                                                                                                 
+</span><span class="methodLine"><i>0241</i>     }</span>                                                                                                                                                       
+</span><span class="outsideLine"><i>0242</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0243</i>     public String get(final long entryPointer, String key) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 331</span>{</span>                                                                                                
+</span><span class="methodLine"><i>0244</i>         if (entryPointer <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1086</span><</span> 0)                                                                                                                               
+</span><span class="methodLine"><i>0245</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1342</span>new IllegalStateException("Pointer to access StringIndex cannot be negative:" + entryPointer)</span>;                                            
+</span><span class="outsideLine"><i>0246</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0247</i>         if (entryPointer <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1092</span>==</span> EMPTY_POINTER)                                                                                                                  
+</span><span class="methodLine"><i>0248</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 897</span>return "";</span>                                                                                                                                      
+</span><span class="outsideLine"><i>0249</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0250</i>         int keyCount = vals.getByte(entryPointer) <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: | 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 1917</span>&</span> 0xFF;                                                                                                   
+</span><span class="methodLine"><i>0251</i>         if (keyCount <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1100</span>==</span> 0)                                                                                                                                  
+</span><span class="methodLine"><i>0252</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 902</span>return null;</span>                                                                                                                                    
+</span><span class="outsideLine"><i>0253</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0254</i>         Integer keyIndex = keysInMem.get(key);                                                                                                              
+</span><span class="outsideLine"><i>0255</i>         // specified key is not known to the StringIndex                                                                                                    
+</span><span class="methodLine"><i>0256</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1108</span>keyIndex <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1108</span>==</span> null</span>)                                                                                                                               
+</span><span class="methodLine"><i>0257</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 907</span>return null;</span>                                                                                                                                    
+</span><span class="outsideLine"><i>0258</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0259</i>         long tmpPointer = entryPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1927</span>+</span> 1;                                                                                                                 
+</span><span class="methodLine"><i>0260</i>         for (int i = 0; i <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1117</span><</span> keyCount; i<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1653</span>++</span>) {                                                                                                                
+</span><span class="methodLine"><i>0261</i>             int currentKeyIndex = vals.getShort(tmpPointer);                                                                                                
+</span><span class="methodLine"><i>0262</i>             tmpPointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 2172</span>+=</span> 2;                                                                                                                                
+</span><span class="methodLine"><i>0263</i>             if (Math.abs(currentKeyIndex) <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2174</span>==</span> keyIndex) {                                                                                                    
+</span><span class="methodLine"><i>0264</i>                 if (currentKeyIndex <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3191</span><</span> 0) {                                                                                                                  
+</span><span class="methodLine"><i>0265</i>                     byte[] valueBytes = new byte[4];                                                                                                        
+</span><span class="methodLine"><i>0266</i>                     vals.getBytes(tmpPointer, valueBytes, valueBytes.length);                                                                               
+</span><span class="methodLine"><i>0267</i>                     tmpPointer = entryPointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4202</span>-</span> BitUtil.LITTLE.toInt(valueBytes);                                                                           
+</span><span class="methodLine"><i>0268</i>                     tmpPointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 4077</span>+=</span> 2;                                                                                                                        
+</span><span class="methodLine"><i>0269</i>                     if (tmpPointer <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4079</span>></span> bytePointer)                                                                                                           
+</span><span class="methodLine"><i>0270</i>                         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4210</span>new IllegalStateException("dup marker " + bytePointer + " should exist but points into not yet allocated area " + tmpPointer)</span>;
+</span><span class="methodLine"><i>0271</i>                 }                                                                                                                                           
+</span><span class="outsideLine"><i>0272</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0273</i>                 int valueLength = vals.getByte(tmpPointer) <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: | 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 3916</span>&</span> 0xFF;                                                                                          
+</span><span class="methodLine"><i>0274</i>                 if (valueLength <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3197</span>==</span> 0)                                                                                                                       
+</span><span class="methodLine"><i>0275</i>                     <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2972</span>return "";</span>                                                                                                                              
+</span><span class="outsideLine"><i>0276</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0277</i>                 tmpPointer<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 3202</span>++</span>;                                                                                                                               
+</span><span class="methodLine"><i>0278</i>                 byte[] valueBytes = new byte[valueLength];                                                                                                  
+</span><span class="methodLine"><i>0279</i>                 vals.getBytes(tmpPointer, valueBytes, valueBytes.length);                                                                                   
+</span><span class="methodLine"><i>0280</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2708</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3207</span>new String(valueBytes, Helper.UTF_CS)</span>;</span>                                                                                               
+</span><span class="methodLine"><i>0281</i>             }                                                                                                                                               
+</span><span class="methodLine"><i>0282</i>             int valueLength = vals.getByte(tmpPointer) <span class="LogicalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: | 
+Mutation Operator Type: LogicalOperatorReplacement 
+Node ID: 2983</span>&</span> 0xFF;                                                                                              
+</span><span class="methodLine"><i>0283</i>             tmpPointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 2179</span>+=</span> 1 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2447</span>+</span> valueLength;                                                                                                                  
+</span><span class="methodLine"><i>0284</i>         }                                                                                                                                                   
+</span><span class="outsideLine"><i>0285</i>                                                                                                                                                             
+</span><span class="outsideLine"><i>0286</i>         // value for specified key does not exist for the specified pointer                                                                                 
+</span><span class="methodLine"><i>0287</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 725</span>return null;</span>                                                                                                                                        
+</span><span class="methodLine"><i>0288</i>     }</span>                                                                                                                                                       
+</span><span class="outsideLine"><i>0289</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0290</i>     private byte[] getBytesForString(String info, String name) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 336</span>{</span>                                                                                            
+</span><span class="methodLine"><i>0291</i>         byte[] bytes = name.getBytes(Helper.UTF_CS);                                                                                                        
+</span><span class="methodLine"><i>0292</i>         if (bytes.length <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1127</span>></span> MAX_LENGTH) {                                                                                                                    
+</span><span class="methodLine"><i>0293</i>             String newString = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3215</span>new String(bytes, 0, MAX_LENGTH, Helper.UTF_CS)</span>;                                                                             
+</span><span class="methodLine"><i>0294</i>             if (throwExceptionIfTooLong)                                                                                                                    
+</span><span class="methodLine"><i>0295</i>                 throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2456</span>new IllegalStateException(info + " is too long: " <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3938</span>+</span> name + " truncated to " <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3484</span>+</span> newString)</span>;                                             
+</span><span class="methodLine"><i>0296</i>             return newString.getBytes(Helper.UTF_CS);                                                                                                       
+</span><span class="methodLine"><i>0297</i>         }                                                                                                                                                   
+</span><span class="outsideLine"><i>0298</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0299</i>         return bytes;                                                                                                                                       
+</span><span class="methodLine"><i>0300</i>     }</span>                                                                                                                                                       
+</span><span class="outsideLine"><i>0301</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0302</i>     public void flush() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 341</span>{                                                                                                                                   
+</span><span class="methodLine"><i>0303</i>         keys.setHeader(0, Constants.VERSION_STRING_IDX);                                                                                                    
+</span><span class="methodLine"><i>0304</i>         keys.ensureCapacity(2);                                                                                                                             
+</span><span class="methodLine"><i>0305</i>         keys.setShort(0, (short) keysInMem.size());                                                                                                         
+</span><span class="methodLine"><i>0306</i>         long keyBytePointer = 2;                                                                                                                            
+</span><span class="methodLine"><i>0307</i>         for (String key : keysInMem.keySet()) {                                                                                                             
+</span><span class="methodLine"><i>0308</i>             byte[] keyBytes = getBytesForString("key", key);                                                                                                
+</span><span class="methodLine"><i>0309</i>             keys.ensureCapacity(keyBytePointer <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2999</span>+</span> 2 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2741</span>+</span> keyBytes.length);                                                                                      
+</span><span class="methodLine"><i>0310</i>             keys.setShort(keyBytePointer, (short) keyBytes.length);                                                                                         
+</span><span class="methodLine"><i>0311</i>             keyBytePointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 2214</span>+=</span> 2;                                                                                                                            
+</span><span class="outsideLine"><i>0312</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0313</i>             keys.setBytes(keyBytePointer, keyBytes, keyBytes.length);                                                                                       
+</span><span class="methodLine"><i>0314</i>             keyBytePointer <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 2216</span>+=</span> keyBytes.length;                                                                                                              
+</span><span class="methodLine"><i>0315</i>         }                                                                                                                                                   
+</span><span class="methodLine"><i>0316</i>         keys.flush();                                                                                                                                       
+</span><span class="outsideLine"><i>0317</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0318</i>         vals.setHeader(0, Constants.VERSION_STRING_IDX);                                                                                                    
+</span><span class="methodLine"><i>0319</i>         vals.setHeader(4, BitUtil.LITTLE.getIntLow(bytePointer));                                                                                           
+</span><span class="methodLine"><i>0320</i>         vals.setHeader(8, BitUtil.LITTLE.getIntHigh(bytePointer));                                                                                          
+</span><span class="methodLine"><i>0321</i>         vals.flush();                                                                                                                                       
+</span><span class="methodLine"><i>0322</i>     }</span>                                                                                                                                                       
+</span><span class="outsideLine"><i>0323</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0324</i>     public void close() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 346</span>{                                                                                                                                   
+</span><span class="methodLine"><i>0325</i>         keys.close();                                                                                                                                       
+</span><span class="methodLine"><i>0326</i>         vals.close();                                                                                                                                       
+</span><span class="methodLine"><i>0327</i>     }</span>                                                                                                                                                       
+</span><span class="outsideLine"><i>0328</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0329</i>     public boolean isClosed() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 351</span>{                                                                                                                             
+</span><span class="methodLine"><i>0330</i>         return vals.isClosed() <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 958</span>&&</span> keys.isClosed();                                                                                                          
+</span><span class="methodLine"><i>0331</i>     }</span>                                                                                                                                                       
+</span><span class="outsideLine"><i>0332</i>                                                                                                                                                             
+</span><span class="methodLine"><i>0333</i>     public long getCapacity() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1L;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 356</span>{                                                                                                                             
+</span><span class="methodLine"><i>0334</i>         return vals.getCapacity() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 961</span>+</span> keys.getCapacity();                                                                                                     
+</span><span class="methodLine"><i>0335</i>     }</span>                                                                                                                                                       
+</span><span class="outsideLine"><i>0336</i>                                                                                                                                                             
+</span><span class="outsideLine"><i>0337</i> }                                                                                                                                                           
+</span><span class="outsideLine"><i>0338</i>                                                                                                                                                             </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

@@ -1,0 +1,21 @@
+LineIntIndex.LineIntIndex( BBox bBox , Directory dir , String name );0;1;4
+LineIntIndex.close( );1;1;3
+LineIntIndex.fillIDs( long keyPart , IntConsumer consumer );18;5;22
+LineIntIndex.findEdgeIdsInNeighborhood( double queryLat , double queryLon , int iteration , IntConsumer foundEntries );54;20;30
+LineIntIndex.flush( );3;1;6
+LineIntIndex.getCapacity( );2;1;3
+LineIntIndex.getChecksum( );2;1;3
+LineIntIndex.getLeafs( );2;1;3
+LineIntIndex.getMinResolutionInMeter( );2;1;3
+LineIntIndex.getSize( );2;1;3
+LineIntIndex.isClosed( );2;1;3
+LineIntIndex.isTileInfo( );2;1;3
+LineIntIndex.loadExisting( );6;3;15
+LineIntIndex.onEdge( int edgeId );1;2;4
+LineIntIndex.onTile( BBox bbox , int width );2;1;3
+LineIntIndex.query( BBox queryShape , final LocationIndex . Visitor function );6;2;20
+LineIntIndex.query( int intPointer , BBox queryBBox , double minLat , double minLon , double deltaLatPerDepth , double deltaLonPerDepth , LocationIndex . Visitor function , int depth );36;13;35
+LineIntIndex.setChecksum( int checksum );1;1;3
+LineIntIndex.setMinResolutionInMeter( int minResolutionInMeter );1;1;3
+LineIntIndex.store( InMemConstructionIndex . InMemEntry entry , int intPointer );27;8;42
+LineIntIndex.store( InMemConstructionIndex inMem );4;2;13

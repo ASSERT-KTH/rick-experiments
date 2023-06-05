@@ -1,0 +1,86 @@
+***not in a method***;14;1;0
+GraphHopper._getOSMFile( );3;1;3
+GraphHopper.buildEncodingManager( GraphHopperConfig ghConfig );14;12;28
+GraphHopper.buildSubnetworkRemovalJobs( );5;2;8
+GraphHopper.checkProfilesConsistency( );32;22;60
+GraphHopper.clean( );3;2;6
+GraphHopper.cleanUp( );2;1;6
+GraphHopper.close( );5;4;12
+GraphHopper.createCHConfigs( List < CHProfile > chProfiles );6;3;12
+GraphHopper.createElevationProvider( GraphHopperConfig ghConfig );15;15;41
+GraphHopper.createLMConfigs( List < LMProfile > lmProfiles );6;3;11
+GraphHopper.createLocationIndex( Directory dir );5;2;10
+GraphHopper.createRouter( );11;5;10
+GraphHopper.createWeighting( Profile profile , PMap hints );4;1;3
+GraphHopper.createWeighting( Profile profile , PMap hints , boolean disableTurnCosts );4;1;3
+GraphHopper.createWeightingFactory( );3;1;3
+GraphHopper.doCreateRouter( GraphHopperStorage ghStorage , LocationIndex locationIndex , Map < String , Profile > profilesByName , PathDetailsBuilderFactory pathBuilderFactory , TranslationMap trMap , RouterConfig routerConfig , WeightingFactory weightingFactory , Map < String , RoutingCHGraph > chGraphs , Map < String , LandmarkStorage > landmarks );12;1;5
+GraphHopper.ensureNotLoaded( );2;2;4
+GraphHopper.ensureWriteAccess( );3;2;4
+GraphHopper.flush( );1;1;7
+GraphHopper.getCHGraphs( );2;1;3
+GraphHopper.getCHPreparationHandler( );2;1;3
+GraphHopper.getCHProfileVersion( String profile );4;1;3
+GraphHopper.getCountryRuleFactory( );2;1;3
+GraphHopper.getCustomAreasDirectory( );3;1;3
+GraphHopper.getElevationProvider( );2;1;3
+GraphHopper.getEncodedValueFactory( );2;1;3
+GraphHopper.getEncodingManager( );5;2;5
+GraphHopper.getEncodingManagerBuilder( );2;1;3
+GraphHopper.getFullyLoaded( );2;1;3
+GraphHopper.getGraphHopperLocation( );3;1;3
+GraphHopper.getGraphHopperStorage( );5;2;5
+GraphHopper.getLMPreparationHandler( );2;1;3
+GraphHopper.getLMProfileVersion( String profile );4;1;3
+GraphHopper.getLandmarks( );2;1;3
+GraphHopper.getLocationIndex( );5;2;5
+GraphHopper.getOSMFile( );3;1;3
+GraphHopper.getPathDetailsBuilderFactory( );2;1;3
+GraphHopper.getProfile( String profileName );3;1;3
+GraphHopper.getProfiles( );3;1;3
+GraphHopper.getReaderConfig( );2;1;3
+GraphHopper.getRouterConfig( );2;1;3
+GraphHopper.getTagParserFactory( );2;1;3
+GraphHopper.getTranslationMap( );2;1;3
+GraphHopper.hasElevation( );2;1;3
+GraphHopper.importAndClose( );2;2;10
+GraphHopper.importOSM( );10;5;28
+GraphHopper.importOrLoad( );3;2;9
+GraphHopper.importPublicTransit( );1;1;2
+GraphHopper.init( GraphHopperConfig ghConfig );26;20;74
+GraphHopper.initLocationIndex( );4;2;5
+GraphHopper.interpolateBridgesTunnelsAndFerries( );7;2;14
+GraphHopper.isAllowWrites( );2;1;3
+GraphHopper.load( );31;18;57
+GraphHopper.loadOrPrepareCH( boolean closeEarly );10;9;23
+GraphHopper.loadOrPrepareLM( boolean closeEarly );9;9;24
+GraphHopper.postImport( );1;3;10
+GraphHopper.postProcessing( boolean closeEarly );2;6;15
+GraphHopper.prepareCH( boolean closeEarly , List < CHConfig > configsToPrepare );4;2;6
+GraphHopper.prepareLM( boolean closeEarly , List < LMConfig > configsToPrepare );4;2;6
+GraphHopper.printInfo( );3;2;5
+GraphHopper.process( boolean closeEarly );9;5;22
+GraphHopper.readCustomAreas( );6;3;19
+GraphHopper.route( GHRequest request );3;1;3
+GraphHopper.setAllowWrites( boolean allowWrites );2;1;4
+GraphHopper.setCHProfileVersion( String profile , int version );2;1;3
+GraphHopper.setCountryRuleFactory( CountryRuleFactory countryRuleFactory );3;1;4
+GraphHopper.setCustomAreasDirectory( String customAreasDirectory );3;1;4
+GraphHopper.setElevation( boolean includeElevation );2;1;4
+GraphHopper.setElevationProvider( ElevationProvider eleProvider );7;3;8
+GraphHopper.setEncodedValueFactory( EncodedValueFactory factory );3;1;4
+GraphHopper.setFlagEncoderFactory( FlagEncoderFactory factory );3;1;4
+GraphHopper.setFullyLoaded( );1;1;3
+GraphHopper.setGraphHopperLocation( String ghLocation );6;2;7
+GraphHopper.setGraphHopperStorage( GraphHopperStorage ghStorage );2;1;4
+GraphHopper.setLMProfileVersion( String profile , int version );2;1;3
+GraphHopper.setLocationIndex( LocationIndex locationIndex );2;1;3
+GraphHopper.setMinNetworkSize( int minNetworkSize );2;1;5
+GraphHopper.setOSMFile( String osmFile );4;2;7
+GraphHopper.setPathDetailsBuilderFactory( PathDetailsBuilderFactory pathBuilderFactory );3;1;4
+GraphHopper.setPreciseIndexResolution( int precision );2;1;5
+GraphHopper.setProfiles( List < Profile > profiles );11;5;12
+GraphHopper.setProfiles( Profile ... profiles );3;1;3
+GraphHopper.setSortGraph( boolean sortGraph );2;1;5
+GraphHopper.setStoreOnFlush( boolean storeOnFlush );2;2;8
+GraphHopper.setTagParserFactory( TagParserFactory factory );3;1;4

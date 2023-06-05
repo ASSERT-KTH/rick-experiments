@@ -1,0 +1,11 @@
+RoundaboutInstruction.RoundaboutInstruction( int sign , String name , PointList pl );0;1;3
+RoundaboutInstruction.getExitNumber( );5;3;6
+RoundaboutInstruction.getExtraInfoJSON( );4;2;9
+RoundaboutInstruction.getTurnAngle( );5;2;6
+RoundaboutInstruction.getTurnDescription( Translation tr );8;5;18
+RoundaboutInstruction.increaseExitNumber( );3;1;4
+RoundaboutInstruction.isExited( );2;1;3
+RoundaboutInstruction.setDirOfRotation( double deltaIn );8;5;11
+RoundaboutInstruction.setExitNumber( int exitNumber );2;1;4
+RoundaboutInstruction.setExited( );2;1;4
+RoundaboutInstruction.setRadian( double radian );2;1;4

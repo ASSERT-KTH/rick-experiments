@@ -1,0 +1,66 @@
+***not in a method***;11;1;0
+Builder.Builder( );1;1;3
+Builder._addEdgeTagParser( TagParser tagParser , boolean withNamespace );5;3;10
+Builder._addRelationTagParser( RelationTagParser tagParser );3;2;9
+Builder._addTurnCostParser( TurnCostParser parser );4;3;12
+Builder.add( EncodedValue encodedValue );4;2;7
+Builder.add( FlagEncoder encoder );4;2;7
+Builder.add( TagParser tagParser );5;2;6
+Builder.addIfAbsent( EncodedValueFactory factory , String encodedValueString );4;2;9
+Builder.addIfAbsent( FlagEncoderFactory factory , String flagEncoderString );4;2;9
+Builder.addIfAbsent( TagParserFactory factory , String tagParserString );4;2;7
+Builder.addRelationTagParser( RelationTagParser tagParser );3;1;5
+Builder.addTurnCostParser( TurnCostParser parser );3;1;5
+Builder.build( );35;27;61
+Builder.check( );4;2;4
+Builder.setDateRangeParser( DateRangeParser dateRangeParser );3;1;5
+EncodingManager.EncodingManager( );3;1;5
+EncodingManager.acceptWay( ReaderWay way );4;1;3
+EncodingManager.addEncodedValue( EncodedValue ev , boolean withNamespace );9;6;11
+EncodingManager.addEncoder( AbstractFlagEncoder encoder );3;2;8
+EncodingManager.applyWayTags( ReaderWay way , EdgeIteratorState edge );3;2;4
+EncodingManager.canSkip( );3;1;3
+EncodingManager.create( EncodingManager . Builder builder , EncodedValueFactory evFactory , FlagEncoderFactory flagEncoderFactory , StorableProperties properties );6;3;11
+EncodingManager.create( FlagEncoder ... flagEncoders );3;1;3
+EncodingManager.create( FlagEncoderFactory factory , String flagEncodersStr );5;1;4
+EncodingManager.create( List < ? extends FlagEncoder > flagEncoders );3;1;3
+EncodingManager.create( String flagEncodersStr );4;1;3
+EncodingManager.createBuilder( List < ? extends FlagEncoder > flagEncoders );4;2;7
+EncodingManager.createEdgeFlags( );3;1;3
+EncodingManager.createRelationFlags( );3;1;3
+EncodingManager.equals( Object o );9;5;7
+EncodingManager.fetchEdgeEncoders( );3;1;3
+EncodingManager.getBooleanEncodedValue( String key );3;1;3
+EncodingManager.getDecimalEncodedValue( String key );3;1;3
+EncodingManager.getEncodedValue( String key , Class < T > encodedValueType );7;2;6
+EncodingManager.getEncodedValues( );3;1;3
+EncodingManager.getEncoder( String name );3;1;3
+EncodingManager.getEncoder( String name , boolean throwExc );5;4;9
+EncodingManager.getEnumEncodedValue( String key , Class < T > type );4;1;3
+EncodingManager.getIntEncodedValue( String key );3;1;3
+EncodingManager.getIntsForFlags( );3;1;3
+EncodingManager.getKey( FlagEncoder encoder , String str );5;1;3
+EncodingManager.getKey( String prefix , String str );7;1;3
+EncodingManager.getStringEncodedValue( String key );3;1;3
+EncodingManager.handleRelationTags( ReaderRelation relation , IntsRef relFlags );4;2;6
+EncodingManager.handleTurnRelationTags( OSMTurnRelation turnRelation , TurnCostParser . ExternalInternalMap map , Graph graph );4;2;5
+EncodingManager.handleWayTags( ReaderWay way , IntsRef relationFlags );5;4;14
+EncodingManager.hasEncodedValue( String key );5;1;3
+EncodingManager.hasEncoder( String encoder );5;1;3
+EncodingManager.hashCode( );2;1;3
+EncodingManager.isFerry( );3;1;3
+EncodingManager.isLowerLetter( char c );5;2;3
+EncodingManager.isNumber( char c );5;2;3
+EncodingManager.isOther( );3;1;3
+EncodingManager.isSharedEncodedValues( EncodedValue ev );5;2;3
+EncodingManager.isValidEncodedValue( String name );17;11;19
+EncodingManager.isWay( );3;1;3
+EncodingManager.needsTurnCostsSupport( );2;3;7
+EncodingManager.parseEncodedValueString( EncodedValueFactory factory , String encodedValueString );10;4;12
+EncodingManager.parseEncodedValueString( TagParserFactory factory , String tagParserString );7;2;6
+EncodingManager.parseEncoderString( FlagEncoderFactory factory , String encoderString );8;4;14
+EncodingManager.releaseParsers( );1;1;5
+EncodingManager.start( );3;1;3
+EncodingManager.toEncodedValuesAsString( );6;4;11
+EncodingManager.toFlagEncodersAsString( );5;3;11
+EncodingManager.toString( );5;3;9

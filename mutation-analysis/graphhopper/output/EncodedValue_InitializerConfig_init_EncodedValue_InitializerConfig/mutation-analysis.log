@@ -1,0 +1,3262 @@
+[LOG] Initiating analysis at 2023-06-05 21:12:46.931028
+---------------------------------------------------
+[LOG] Removing pre-existing mutants from current working directory
+[LOG] Cleaning up LittleDarwin results
+---------------------------------------------------
+[LOG] Working with EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig
+[LOG] Generating mutants for its parent IntEncodedValueImpl.java
+---------------------------------------------------
+[LOG] Running littledarwin on /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/
+[LOG] Invoked LitteDarwin with ['python3', '-m', 'littledarwin', '-m', '-v', '-p', '/home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/', '--all']
+
+    __     _  __   __   __       ____                          _
+   / /    (_)/ /_ / /_ / /___   / __ \ ____ _ _____ _      __ (_)____
+  / /    / // __// __// // _ \ / / / // __ `// ___/| | /| / // // __ \
+ / /___ / // /_ / /_ / //  __// /_/ // /_/ // /    | |/ |/ // // / / /
+/_____//_/ \__/ \__//_/ \___//_____/ \__,_//_/     |__/|__//_//_/ /_/
+
+      _                     _                 ___
+     /_|  /|/|  _/__/'     /_|   _ /   _ ' _ (_  _ _ _  _      _ /
+    (  | /   |(//(///()/) (  |/)(/((/_) /_)  /  / (///)(-((/()/ /(
+                                  /
+
+
+    LittleDarwin version 0.10.7 Copyright (C) 2014-2020 Ali Parsai
+
+    LittleDarwin comes with ABSOLUTELY NO WARRANTY.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; run LittleDarwin --license for details.
+
+    
+Source Path:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev
+Target Path:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults
+Creating Mutation Database:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults/mutationdatabase
+
+(1/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/Subnetwork.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  9
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 2
+----> NullifyObjectInitialization : 2
+----> RemoveMethod : 3
+
+(2/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/BikeNetwork.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(3/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/EncodedValueFactory.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(4/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/FootNetwork.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(5/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/EncodedValueLookup.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(6/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/RoadClass.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  11
+----> RelationalOperatorReplacement : 1
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 4
+----> RemoveNullCheck : 1
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 3
+
+(7/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/MaxWeight.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 1
+
+(8/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/DecimalEncodedValueImpl.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  69
+----> RelationalOperatorReplacement : 11
+----> ArithmeticOperatorReplacementBinary : 20
+----> ConditionalOperatorDeletion : 4
+----> NullifyInputVariable : 3
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 9
+----> ConditionalOperatorReplacement : 10
+----> RemoveMethod : 11
+
+(9/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/HikeRating.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 1
+
+(10/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/EnumEncodedValue.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  18
+----> ArithmeticOperatorReplacementBinary : 4
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 4
+----> NullifyReturnValue : 2
+----> RemoveMethod : 7
+
+(11/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/RoadClassLink.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(12/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/Toll.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> RemoveMethod : 2
+
+(13/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/MaxLength.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 1
+
+(14/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/TrackType.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 4
+----> RemoveMethod : 3
+
+(15/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/RouteNetwork.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  12
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 5
+----> RemoveMethod : 5
+
+(16/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/BooleanEncodedValue.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(17/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/Smoothness.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 4
+----> RemoveMethod : 3
+
+(18/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/HazmatWater.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> RemoveMethod : 2
+
+(19/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/Surface.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 4
+----> RemoveMethod : 3
+
+(20/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/MaxHeight.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 1
+
+(21/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/RoadAccess.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  10
+----> RelationalOperatorReplacement : 1
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 4
+----> RemoveNullCheck : 1
+----> RemoveMethod : 3
+
+(22/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/HorseRating.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 1
+
+(23/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/HazmatTunnel.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> RemoveMethod : 2
+
+(24/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/Country.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  9
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 5
+
+(25/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/DefaultEncodedValueFactory.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  22
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 18
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 1
+
+(26/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/MtbRating.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 1
+
+(27/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/Hazmat.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> RemoveMethod : 2
+
+(28/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/IntEncodedValueImpl.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  157
+----> RelationalOperatorReplacement : 25
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 36
+----> ConditionalOperatorDeletion : 3
+----> NullifyInputVariable : 7
+----> ArithmeticOperatorReplacementUnary : 5
+----> NullifyReturnValue : 2
+----> AssignmentOperatorReplacementShortcut : 3
+----> NullifyObjectInitialization : 9
+----> LogicalOperatorReplacement : 6
+----> RemoveNullCheck : 4
+----> ConditionalOperatorReplacement : 17
+----> ShiftOperatorReplacement : 7
+----> RemoveMethod : 31
+
+(29/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/Lanes.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 1
+
+(30/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/Roundabout.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 1
+
+(31/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/MaxSpeed.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 1
+
+(32/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/StringEncodedValue.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  44
+----> RelationalOperatorReplacement : 7
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 5
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 5
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 6
+----> RemoveNullCheck : 1
+----> ShiftOperatorReplacement : 2
+----> RemoveMethod : 12
+
+(33/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/SimpleBooleanEncodedValue.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  6
+----> RelationalOperatorReplacement : 1
+----> NullifyInputVariable : 2
+----> RemoveMethod : 3
+
+(34/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/IntEncodedValue.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(35/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/MaxWidth.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 1
+
+(36/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/EncodedValue.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  17
+----> RelationalOperatorReplacement : 1
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 9
+----> ArithmeticOperatorReplacementUnary : 1
+----> AssignmentOperatorReplacementShortcut : 1
+----> ShiftOperatorReplacement : 1
+----> RemoveMethod : 3
+
+(37/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/MaxAxleLoad.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 1
+
+(38/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/TurnCost.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  11
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 3
+----> NullifyObjectInitialization : 2
+----> RemoveMethod : 4
+
+(39/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/GetOffBike.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  3
+----> NullifyReturnValue : 1
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 1
+
+(40/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/DecimalEncodedValue.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(41/41) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/RoadEnvironment.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  10
+----> RelationalOperatorReplacement : 1
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 4
+----> RemoveNullCheck : 1
+----> RemoveMethod : 3
+
+Total mutations found:  477
+--> RelationalOperatorReplacement: 48
+--> ArithmeticOperatorReplacementShortcut: 4
+--> ArithmeticOperatorReplacementBinary: 74
+--> ConditionalOperatorDeletion: 9
+--> NullifyInputVariable: 34
+--> ArithmeticOperatorReplacementUnary: 7
+--> NullifyReturnValue: 61
+--> AssignmentOperatorReplacementShortcut: 5
+--> NullifyObjectInitialization: 59
+--> LogicalOperatorReplacement: 6
+--> RemoveNullCheck: 8
+--> ConditionalOperatorReplacement: 29
+--> ShiftOperatorReplacement: 10
+--> RemoveMethod: 123
+
+
+---------------------------------------------------
+[LOG] Copying mutants of IntEncodedValueImpl.java
+---------------------------------------------------
+[LOG] Generated 157 mutants
+---------------------------------------------------
+[LOG] Backing up original RICK test as ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java ./IntEncodedValueImpl.java/original-test.java
+---------------------------------------------------
+[LOG] Generating variants of original RICK test
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java
+[LOG] Created OO test at /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java
+[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-all.java
+---------------------------------------------------
+[LOG] Replacing originalIntEncodedValueImpl.java with ./IntEncodedValueImpl.java/156.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/156.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/IntEncodedValueImpl.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.graphhopper:graphhopper-core >------------------
+[INFO] Building GraphHopper Core 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ graphhopper-core ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/core/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:3.0.0:revision (default) @ graphhopper-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 52 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 406 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 37 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 184 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:test-jar (default) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:integration-test (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:verify (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ graphhopper-core ---
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.jar
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/pom.xml to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.pom
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  47.783 s
+[INFO] Finished at: 2023-06-05T21:13:46+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.576 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.445 s
+[INFO] Finished at: 2023-06-05T21:14:06+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.882 s
+[INFO] Finished at: 2023-06-05T21:14:10+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[OO] Evaluating only OO
+[LOG] Replacing original RICK test with variant oo
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.648 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.078 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:42)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053:42 expected: <1> but was: <0>
+[INFO] 
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.260 s
+[INFO] Finished at: 2023-06-05T21:14:29+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.932 s
+[INFO] Finished at: 2023-06-05T21:14:34+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.911 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.817 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+initializerConfig.next(1);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:54)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053:54 
+Wanted but not invoked:
+initializerConfig.next(1);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.454 s
+[INFO] Finished at: 2023-06-05T21:14:53+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.864 s
+[INFO] Finished at: 2023-06-05T21:14:58+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.861 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.18 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+initializerConfig.next(<any integer>);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:67)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053:67 
+Wanted but not invoked:
+initializerConfig.next(<any integer>);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.739 s
+[INFO] Finished at: 2023-06-05T21:15:18+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.151 s
+[INFO] Finished at: 2023-06-05T21:15:23+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.385 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 3.272 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+initializerConfig.next(1);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:54)
+
+[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.052 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:42)
+
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.051 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+initializerConfig.next(<any integer>);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:67)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053:67 
+Wanted but not invoked:
+initializerConfig.next(<any integer>);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053:42 expected: <1> but was: <0>
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053:54 
+Wanted but not invoked:
+initializerConfig.next(1);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.602 s
+[INFO] Finished at: 2023-06-05T21:15:44+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.901 s
+[INFO] Finished at: 2023-06-05T21:15:49+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting IntEncodedValueImpl.java to original
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/IntEncodedValueImpl.java
+---------------------------------------------------
+[LOG] Replacing originalIntEncodedValueImpl.java with ./IntEncodedValueImpl.java/157.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/157.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/IntEncodedValueImpl.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.graphhopper:graphhopper-core >------------------
+[INFO] Building GraphHopper Core 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ graphhopper-core ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/core/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:3.0.0:revision (default) @ graphhopper-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 52 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 406 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 37 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 184 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:test-jar (default) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:integration-test (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:verify (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ graphhopper-core ---
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.jar
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/pom.xml to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.pom
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  46.470 s
+[INFO] Finished at: 2023-06-05T21:16:40+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.571 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.291 s
+[INFO] Finished at: 2023-06-05T21:16:59+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.898 s
+[INFO] Finished at: 2023-06-05T21:17:04+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[OO] Evaluating only OO
+[LOG] Replacing original RICK test with variant oo
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.724 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.128 s
+[INFO] Finished at: 2023-06-05T21:17:23+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.947 s
+[INFO] Finished at: 2023-06-05T21:17:28+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.747 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.857 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+initializerConfig.next(1);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:54)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053:54 
+Wanted but not invoked:
+initializerConfig.next(1);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.605 s
+[INFO] Finished at: 2023-06-05T21:17:48+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.844 s
+[INFO] Finished at: 2023-06-05T21:17:53+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.648 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.198 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+initializerConfig.next(<any integer>);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:67)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053:67 
+Wanted but not invoked:
+initializerConfig.next(<any integer>);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.462 s
+[INFO] Finished at: 2023-06-05T21:18:12+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.944 s
+[INFO] Finished at: 2023-06-05T21:18:17+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.908 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.938 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+initializerConfig.next(1);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:54)
+
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.049 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+initializerConfig.next(<any integer>);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:67)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053:67 
+Wanted but not invoked:
+initializerConfig.next(<any integer>);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053:54 
+Wanted but not invoked:
+initializerConfig.next(1);
+-> at com.graphhopper.routing.ev.EncodedValue$InitializerConfig.next(EncodedValue.java:65)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 3, Failures: 2, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.310 s
+[INFO] Finished at: 2023-06-05T21:18:36+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.927 s
+[INFO] Finished at: 2023-06-05T21:18:41+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting IntEncodedValueImpl.java to original
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/IntEncodedValueImpl.java
+---------------------------------------------------
+[LOG] Replacing originalIntEncodedValueImpl.java with ./IntEncodedValueImpl.java/58.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/58.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/IntEncodedValueImpl.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.graphhopper:graphhopper-core >------------------
+[INFO] Building GraphHopper Core 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ graphhopper-core ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/core/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:3.0.0:revision (default) @ graphhopper-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 52 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 406 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 37 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 184 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:test-jar (default) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:integration-test (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:verify (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ graphhopper-core ---
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.jar
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/pom.xml to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.pom
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  47.751 s
+[INFO] Finished at: 2023-06-05T21:19:33+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.059 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.996 s
+[INFO] Finished at: 2023-06-05T21:19:53+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.020 s
+[INFO] Finished at: 2023-06-05T21:19:58+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[OO] Evaluating only OO
+[LOG] Replacing original RICK test with variant oo
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.585 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.125 s
+[INFO] Finished at: 2023-06-05T21:20:18+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.842 s
+[INFO] Finished at: 2023-06-05T21:20:22+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.678 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.386 s
+[INFO] Finished at: 2023-06-05T21:20:42+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.934 s
+[INFO] Finished at: 2023-06-05T21:20:46+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.648 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.154 s
+[INFO] Finished at: 2023-06-05T21:21:05+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.945 s
+[INFO] Finished at: 2023-06-05T21:21:10+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.563 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.321 s
+[INFO] Finished at: 2023-06-05T21:21:29+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.081 s
+[INFO] Finished at: 2023-06-05T21:21:34+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting IntEncodedValueImpl.java to original
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/IntEncodedValueImpl.java
+---------------------------------------------------
+[LOG] Replacing originalIntEncodedValueImpl.java with ./IntEncodedValueImpl.java/73.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/73.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/IntEncodedValueImpl.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.graphhopper:graphhopper-core >------------------
+[INFO] Building GraphHopper Core 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ graphhopper-core ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/core/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:3.0.0:revision (default) @ graphhopper-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 52 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 406 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 37 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 184 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:test-jar (default) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:integration-test (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:verify (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ graphhopper-core ---
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.jar
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/pom.xml to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.pom
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  47.227 s
+[INFO] Finished at: 2023-06-05T21:22:26+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.836 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.901 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:52)
+
+[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.026 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:40)
+
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.022 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:64)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053:64 » NullPointer
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053:40 » NullPointer
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053:52 » NullPointer
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.378 s
+[INFO] Finished at: 2023-06-05T21:22:46+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.932 s
+[INFO] Finished at: 2023-06-05T21:22:51+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[OO] Evaluating only OO
+[LOG] Replacing original RICK test with variant oo
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.032 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.981 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:52)
+
+[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.033 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:40)
+
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.022 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:64)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053:64 » NullPointer
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053:40 » NullPointer
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053:52 » NullPointer
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.940 s
+[INFO] Finished at: 2023-06-05T21:23:11+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.923 s
+[INFO] Finished at: 2023-06-05T21:23:15+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.49 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.637 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:52)
+
+[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.032 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:40)
+
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.021 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:64)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053:64 » NullPointer
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053:40 » NullPointer
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053:52 » NullPointer
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.255 s
+[INFO] Finished at: 2023-06-05T21:23:34+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.022 s
+[INFO] Finished at: 2023-06-05T21:23:39+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.579 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.691 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:52)
+
+[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.029 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:40)
+
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.023 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:64)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053:64 » NullPointer
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053:40 » NullPointer
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053:52 » NullPointer
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.566 s
+[INFO] Finished at: 2023-06-05T21:23:59+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.869 s
+[INFO] Finished at: 2023-06-05T21:24:03+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.696 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.741 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:52)
+
+[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.03 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:40)
+
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.023 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:64)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053:64 » NullPointer
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053:40 » NullPointer
+[ERROR]   TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053:52 » NullPointer
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.538 s
+[INFO] Finished at: 2023-06-05T21:24:23+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.824 s
+[INFO] Finished at: 2023-06-05T21:24:27+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting IntEncodedValueImpl.java to original
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/IntEncodedValueImpl.java
+---------------------------------------------------
+[LOG] Replacing originalIntEncodedValueImpl.java with ./IntEncodedValueImpl.java/88.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/88.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/IntEncodedValueImpl.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.graphhopper:graphhopper-core >------------------
+[INFO] Building GraphHopper Core 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ graphhopper-core ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/core/target
+[INFO] 
+[INFO] --- git-commit-id-plugin:3.0.0:revision (default) @ graphhopper-core ---
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 3 resources
+[INFO] Copying 52 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 406 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ graphhopper-core ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 37 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ graphhopper-core ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 184 source files to /home/dee/dev/rick-major-review/graphhopper/core/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:jar (default-jar) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.1:test-jar (default) @ graphhopper-core ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:integration-test (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-failsafe-plugin:2.22.2:verify (default) @ graphhopper-core ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ graphhopper-core ---
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.jar
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/pom.xml to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3.pom
+[INFO] Installing /home/dee/dev/rick-major-review/graphhopper/core/target/graphhopper-core-5.3-tests.jar to /home/dee/.m2/repository/com/graphhopper/graphhopper-core/5.3/graphhopper-core-5.3-tests.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  52.460 s
+[INFO] Finished at: 2023-06-05T21:25:24+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.706 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.545 s
+[INFO] Finished at: 2023-06-05T21:25:44+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.883 s
+[INFO] Finished at: 2023-06-05T21:25:48+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[OO] Evaluating only OO
+[LOG] Replacing original RICK test with variant oo
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.713 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.427 s
+[INFO] Finished at: 2023-06-05T21:26:07+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.128 s
+[INFO] Finished at: 2023-06-05T21:26:12+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.752 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.907 s
+[INFO] Finished at: 2023-06-05T21:26:32+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.904 s
+[INFO] Finished at: 2023-06-05T21:26:37+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.602 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.949 s
+[INFO] Finished at: 2023-06-05T21:26:56+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.870 s
+[INFO] Finished at: 2023-06-05T21:27:00+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.801 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.025 s
+[INFO] Finished at: 2023-06-05T21:27:20+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.834 s
+[INFO] Finished at: 2023-06-05T21:27:24+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting IntEncodedValueImpl.java to original
+[LOG] Invoking cp ./IntEncodedValueImpl.java/original.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/IntEncodedValueImpl.java
+---------------------------------------------------
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/IntEncodedValueImpl.java', '/home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/']
+
+
+---------------------------------------------------
+[LOG] Finishing analysis at 2023-06-05 21:27:25.096129
+====== END OF THE LINE ======

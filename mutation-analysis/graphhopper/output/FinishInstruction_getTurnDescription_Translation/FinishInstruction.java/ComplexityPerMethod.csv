@@ -1,0 +1,6 @@
+FinishInstruction.FinishInstruction( PointAccess pointAccess , int node );0;2;4
+FinishInstruction.FinishInstruction( String name , PointAccess pointAccess , int node );0;2;4
+FinishInstruction.FinishInstruction( String name , final double lat , final double lon , final double ele );1;1;7
+FinishInstruction.FinishInstruction( final double lat , final double lon , final double ele );1;1;7
+FinishInstruction.getLength( );2;1;3
+FinishInstruction.getTurnDescription( Translation tr );5;2;5

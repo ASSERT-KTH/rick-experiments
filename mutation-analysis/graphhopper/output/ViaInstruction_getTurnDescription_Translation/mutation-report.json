@@ -1,0 +1,55 @@
+{
+    "mut": "ViaInstruction_getTurnDescription_Translation",
+    "CUT": "com.graphhopper.util.ViaInstruction",
+    "mutant-file": "./ViaInstruction.java/1.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.369 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.542 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.204 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.987 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.038 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen"
+},
+{
+    "mut": "ViaInstruction_getTurnDescription_Translation",
+    "CUT": "com.graphhopper.util.ViaInstruction",
+    "mutant-file": "./ViaInstruction.java/3.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.132 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.318 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.214 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.238 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 5.008 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen"
+},
+{
+    "mut": "ViaInstruction_getTurnDescription_Translation",
+    "CUT": "com.graphhopper.util.ViaInstruction",
+    "mutant-file": "./ViaInstruction.java/4.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.963 s - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.1 s - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.97 s - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.816 s - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.701 s - in com.graphhopper.util.TestViaInstructionRickGen"
+},
+{
+    "mut": "ViaInstruction_getTurnDescription_Translation",
+    "CUT": "com.graphhopper.util.ViaInstruction",
+    "mutant-file": "./ViaInstruction.java/6.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.929 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.265 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.116 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.178 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.879 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen"
+},
+{
+    "mut": "ViaInstruction_getTurnDescription_Translation",
+    "CUT": "com.graphhopper.util.ViaInstruction",
+    "mutant-file": "./ViaInstruction.java/7.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.138 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.836 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.894 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.18 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.957 s <<< FAILURE! - in com.graphhopper.util.TestViaInstructionRickGen"
+},
