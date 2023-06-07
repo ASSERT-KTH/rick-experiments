@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-05 01:29:49.731887
+[LOG] Initiating analysis at 2023-06-06 23:45:17.973232
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -568,8 +568,8 @@ Total mutations found:  1150
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  41.755 s
-[INFO] Finished at: 2023-06-05T01:30:49+02:00
+[INFO] Total time:  45.453 s
+[INFO] Finished at: 2023-06-06T23:46:23+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -601,7 +601,7 @@ Total mutations found:  1150
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -614,31 +614,41 @@ Total mutations found:  1150
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.869 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.124 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.245 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 6.799 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.009 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:60)
+  2. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:61)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.46 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:45)
+  2. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:46)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164 » UnnecessaryStubbing
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164 » UnnecessaryStubbing
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.805 s
-[INFO] Finished at: 2023-06-05T01:31:09+02:00
+[INFO] Total time:  26.461 s
+[INFO] Finished at: 2023-06-06T23:46:54+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -652,6 +662,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -666,8 +677,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.423 s
-[INFO] Finished at: 2023-06-05T01:31:13+02:00
+[INFO] Total time:  1.469 s
+[INFO] Finished at: 2023-06-06T23:46:59+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -704,7 +715,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -717,31 +728,47 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.819 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.122 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 7.788 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 5.11 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.006 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:60)
+  2. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:61)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.958 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+writableRaster.getWidth();
+-> at java.desktop/java.awt.image.Raster.getWidth(Raster.java:1464)
+Actually, there were zero interactions with this mock.
+
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:50)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
+[ERROR] Failures: 
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:50 
+Wanted but not invoked:
+writableRaster.getWidth();
+-> at java.desktop/java.awt.image.Raster.getWidth(Raster.java:1464)
+Actually, there were zero interactions with this mock.
+
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.401 s
-[INFO] Finished at: 2023-06-05T01:31:32+02:00
+[INFO] Total time:  23.117 s
+[INFO] Finished at: 2023-06-06T23:47:27+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -755,6 +782,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -769,8 +797,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.241 s
-[INFO] Finished at: 2023-06-05T01:31:37+02:00
+[INFO] Total time:  2.409 s
+[INFO] Finished at: 2023-06-06T23:47:33+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -807,7 +835,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -820,31 +848,47 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.889 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.139 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 7.009 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.321 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.006 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+Wanted but not invoked:
+writableRaster.getWidth();
+-> at java.desktop/java.awt.image.Raster.getWidth(Raster.java:1464)
+Actually, there were zero interactions with this mock.
+
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:66)
+
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.995 s  <<< ERROR!
+org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:45)
+  2. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:46)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
 [INFO] 
+[ERROR] Failures: 
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:66 
+Wanted but not invoked:
+writableRaster.getWidth();
+-> at java.desktop/java.awt.image.Raster.getWidth(Raster.java:1464)
+Actually, there were zero interactions with this mock.
+
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.040 s
-[INFO] Finished at: 2023-06-05T01:31:55+02:00
+[INFO] Total time:  20.653 s
+[INFO] Finished at: 2023-06-06T23:47:58+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -858,6 +902,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -872,8 +917,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.256 s
-[INFO] Finished at: 2023-06-05T01:32:00+02:00
+[INFO] Total time:  1.789 s
+[INFO] Finished at: 2023-06-06T23:48:04+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -910,7 +955,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -923,31 +968,51 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.839 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.142 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.442 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.886 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.006 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+Wanted but not invoked:
+writableRaster.getWidth();
+-> at java.desktop/java.awt.image.Raster.getWidth(Raster.java:1464)
+Actually, there were zero interactions with this mock.
+
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:66)
+
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.85 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+writableRaster.getWidth();
+-> at java.desktop/java.awt.image.Raster.getWidth(Raster.java:1464)
+Actually, there were zero interactions with this mock.
+
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:50)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR] Failures: 
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:66 
+Wanted but not invoked:
+writableRaster.getWidth();
+-> at java.desktop/java.awt.image.Raster.getWidth(Raster.java:1464)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:50 
+Wanted but not invoked:
+writableRaster.getWidth();
+-> at java.desktop/java.awt.image.Raster.getWidth(Raster.java:1464)
+Actually, there were zero interactions with this mock.
+
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.221 s
-[INFO] Finished at: 2023-06-05T01:32:18+02:00
+[INFO] Total time:  22.364 s
+[INFO] Finished at: 2023-06-06T23:48:30+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -961,6 +1026,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -975,8 +1041,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.285 s
-[INFO] Finished at: 2023-06-05T01:32:23+02:00
+[INFO] Total time:  1.713 s
+[INFO] Finished at: 2023-06-06T23:48:36+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -1215,8 +1281,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.640 s
-[INFO] Finished at: 2023-06-05T01:33:06+02:00
+[INFO] Total time:  45.147 s
+[INFO] Finished at: 2023-06-06T23:49:25+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -1248,7 +1314,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1261,44 +1327,23 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.829 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.109 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
-
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.006 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.537 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.116 s
-[INFO] Finished at: 2023-06-05T01:33:25+02:00
+[INFO] Total time:  23.169 s
+[INFO] Finished at: 2023-06-06T23:49:52+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -1313,8 +1358,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.283 s
-[INFO] Finished at: 2023-06-05T01:33:30+02:00
+[INFO] Total time:  1.555 s
+[INFO] Finished at: 2023-06-06T23:49:58+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -1351,7 +1396,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1364,44 +1409,23 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.824 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.135 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
-
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.006 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.052 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.655 s
-[INFO] Finished at: 2023-06-05T01:33:47+02:00
+[INFO] Total time:  21.756 s
+[INFO] Finished at: 2023-06-06T23:50:23+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -1416,8 +1440,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.289 s
-[INFO] Finished at: 2023-06-05T01:33:52+02:00
+[INFO] Total time:  1.455 s
+[INFO] Finished at: 2023-06-06T23:50:28+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -1454,7 +1478,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1467,44 +1491,23 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.775 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.073 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
-
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.006 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.474 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.308 s
-[INFO] Finished at: 2023-06-05T01:34:10+02:00
+[INFO] Total time:  21.423 s
+[INFO] Finished at: 2023-06-06T23:50:53+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -1519,8 +1522,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.301 s
-[INFO] Finished at: 2023-06-05T01:34:15+02:00
+[INFO] Total time:  1.356 s
+[INFO] Finished at: 2023-06-06T23:50:58+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -1557,7 +1560,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1570,44 +1573,23 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.861 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.113 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
-
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.006 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.458 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.535 s
-[INFO] Finished at: 2023-06-05T01:34:35+02:00
+[INFO] Total time:  21.308 s
+[INFO] Finished at: 2023-06-06T23:51:22+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -1622,8 +1604,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.247 s
-[INFO] Finished at: 2023-06-05T01:34:39+02:00
+[INFO] Total time:  1.363 s
+[INFO] Finished at: 2023-06-06T23:51:27+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -1862,8 +1844,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.936 s
-[INFO] Finished at: 2023-06-05T01:35:23+02:00
+[INFO] Total time:  38.433 s
+[INFO] Finished at: 2023-06-06T23:52:09+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -1895,7 +1877,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1908,44 +1890,23 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.879 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.17 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
-
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.006 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.313 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.017 s
-[INFO] Finished at: 2023-06-05T01:35:41+02:00
+[INFO] Total time:  20.973 s
+[INFO] Finished at: 2023-06-06T23:52:34+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -1960,8 +1921,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.251 s
-[INFO] Finished at: 2023-06-05T01:35:46+02:00
+[INFO] Total time:  1.225 s
+[INFO] Finished at: 2023-06-06T23:52:38+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -1998,7 +1959,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2011,44 +1972,23 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.855 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.134 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
-
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.005 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.888 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.673 s
-[INFO] Finished at: 2023-06-05T01:36:04+02:00
+[INFO] Total time:  23.101 s
+[INFO] Finished at: 2023-06-06T23:53:05+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -2063,8 +2003,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.262 s
-[INFO] Finished at: 2023-06-05T01:36:08+02:00
+[INFO] Total time:  1.460 s
+[INFO] Finished at: 2023-06-06T23:53:10+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -2101,7 +2041,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2114,44 +2054,23 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.951 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.228 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
-
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.006 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.246 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.270 s
-[INFO] Finished at: 2023-06-05T01:36:28+02:00
+[INFO] Total time:  21.530 s
+[INFO] Finished at: 2023-06-06T23:53:35+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -2166,8 +2085,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.416 s
-[INFO] Finished at: 2023-06-05T01:36:33+02:00
+[INFO] Total time:  1.229 s
+[INFO] Finished at: 2023-06-06T23:53:40+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -2204,7 +2123,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2217,44 +2136,23 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.827 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.103 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
-
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.006 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.519 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.021 s
-[INFO] Finished at: 2023-06-05T01:36:51+02:00
+[INFO] Total time:  21.040 s
+[INFO] Finished at: 2023-06-06T23:54:04+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -2269,8 +2167,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.319 s
-[INFO] Finished at: 2023-06-05T01:36:56+02:00
+[INFO] Total time:  1.339 s
+[INFO] Finished at: 2023-06-06T23:54:09+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -2509,8 +2407,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  40.954 s
-[INFO] Finished at: 2023-06-05T01:37:40+02:00
+[INFO] Total time:  39.914 s
+[INFO] Finished at: 2023-06-06T23:54:52+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -2542,7 +2440,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2555,31 +2453,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.858 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.163 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.102 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 5.23 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.004 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.071 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » ArrayIndexOutOfBounds
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » ArrayIndexOutOfBounds
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.047 s
-[INFO] Finished at: 2023-06-05T01:37:59+02:00
+[INFO] Total time:  20.313 s
+[INFO] Finished at: 2023-06-06T23:55:16+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2593,6 +2489,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -2607,8 +2504,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.261 s
-[INFO] Finished at: 2023-06-05T01:38:04+02:00
+[INFO] Total time:  1.337 s
+[INFO] Finished at: 2023-06-06T23:55:21+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -2645,7 +2542,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2658,31 +2555,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.947 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.226 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.12 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.472 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.006 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.89 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » ArrayIndexOutOfBounds
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » ArrayIndexOutOfBounds
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.704 s
-[INFO] Finished at: 2023-06-05T01:38:23+02:00
+[INFO] Total time:  18.823 s
+[INFO] Finished at: 2023-06-06T23:55:43+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2696,6 +2591,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -2710,8 +2606,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.368 s
-[INFO] Finished at: 2023-06-05T01:38:27+02:00
+[INFO] Total time:  1.629 s
+[INFO] Finished at: 2023-06-06T23:55:48+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -2748,7 +2644,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2761,31 +2657,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.958 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.28 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.174 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.594 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.008 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.889 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » ArrayIndexOutOfBounds
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » ArrayIndexOutOfBounds
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.972 s
-[INFO] Finished at: 2023-06-05T01:38:46+02:00
+[INFO] Total time:  19.075 s
+[INFO] Finished at: 2023-06-06T23:56:10+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2799,6 +2693,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -2813,8 +2708,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.266 s
-[INFO] Finished at: 2023-06-05T01:38:50+02:00
+[INFO] Total time:  1.546 s
+[INFO] Finished at: 2023-06-06T23:56:15+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -2851,7 +2746,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2864,31 +2759,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.791 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.107 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.61 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 5.01 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.005 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.922 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » ArrayIndexOutOfBounds
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » ArrayIndexOutOfBounds
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.776 s
-[INFO] Finished at: 2023-06-05T01:39:08+02:00
+[INFO] Total time:  20.120 s
+[INFO] Finished at: 2023-06-06T23:56:38+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2902,6 +2795,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -2916,8 +2810,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.274 s
-[INFO] Finished at: 2023-06-05T01:39:13+02:00
+[INFO] Total time:  1.215 s
+[INFO] Finished at: 2023-06-06T23:56:43+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -3156,8 +3050,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  40.268 s
-[INFO] Finished at: 2023-06-05T01:39:57+02:00
+[INFO] Total time:  41.277 s
+[INFO] Finished at: 2023-06-06T23:57:28+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -3189,7 +3083,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3202,31 +3096,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.824 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.153 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.338 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.733 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.005 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.882 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » ArrayIndexOutOfBounds
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » ArrayIndexOutOfBounds
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.808 s
-[INFO] Finished at: 2023-06-05T01:40:15+02:00
+[INFO] Total time:  19.784 s
+[INFO] Finished at: 2023-06-06T23:57:51+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3240,6 +3132,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -3254,8 +3147,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.510 s
-[INFO] Finished at: 2023-06-05T01:40:21+02:00
+[INFO] Total time:  1.229 s
+[INFO] Finished at: 2023-06-06T23:57:55+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -3292,7 +3185,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3305,31 +3198,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.787 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.106 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.997 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.384 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.004 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.93 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » ArrayIndexOutOfBounds
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » ArrayIndexOutOfBounds
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.382 s
-[INFO] Finished at: 2023-06-05T01:40:39+02:00
+[INFO] Total time:  19.585 s
+[INFO] Finished at: 2023-06-06T23:58:18+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3343,6 +3234,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -3357,8 +3249,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.251 s
-[INFO] Finished at: 2023-06-05T01:40:44+02:00
+[INFO] Total time:  1.280 s
+[INFO] Finished at: 2023-06-06T23:58:23+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -3395,7 +3287,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3408,31 +3300,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.854 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.173 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.332 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.567 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.006 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.115 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » ArrayIndexOutOfBounds
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » ArrayIndexOutOfBounds
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.549 s
-[INFO] Finished at: 2023-06-05T01:41:02+02:00
+[INFO] Total time:  19.356 s
+[INFO] Finished at: 2023-06-06T23:58:46+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3446,6 +3336,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -3460,8 +3351,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.266 s
-[INFO] Finished at: 2023-06-05T01:41:07+02:00
+[INFO] Total time:  1.216 s
+[INFO] Finished at: 2023-06-06T23:58:50+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -3498,7 +3389,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3511,31 +3402,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.929 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.228 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.342 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.442 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.004 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.211 s  <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » ArrayIndexOutOfBounds
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » ArrayIndexOutOfBounds
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.431 s
-[INFO] Finished at: 2023-06-05T01:41:25+02:00
+[INFO] Total time:  19.874 s
+[INFO] Finished at: 2023-06-06T23:59:13+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3549,6 +3438,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -3563,8 +3453,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.354 s
-[INFO] Finished at: 2023-06-05T01:41:30+02:00
+[INFO] Total time:  1.411 s
+[INFO] Finished at: 2023-06-06T23:59:18+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -3803,8 +3693,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  40.485 s
-[INFO] Finished at: 2023-06-05T01:42:14+02:00
+[INFO] Total time:  39.136 s
+[INFO] Finished at: 2023-06-07T00:00:01+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -3836,7 +3726,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3849,31 +3739,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.876 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.165 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.152 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.586 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.005 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.799 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » NullPointer
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.685 s
-[INFO] Finished at: 2023-06-05T01:42:34+02:00
+[INFO] Total time:  18.751 s
+[INFO] Finished at: 2023-06-07T00:00:24+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3887,6 +3775,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -3901,8 +3790,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.363 s
-[INFO] Finished at: 2023-06-05T01:42:38+02:00
+[INFO] Total time:  1.291 s
+[INFO] Finished at: 2023-06-07T00:00:28+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -3939,7 +3828,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3952,31 +3841,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.878 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.177 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.202 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.697 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.006 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.812 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » NullPointer
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.611 s
-[INFO] Finished at: 2023-06-05T01:42:57+02:00
+[INFO] Total time:  19.808 s
+[INFO] Finished at: 2023-06-07T00:00:51+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3990,6 +3877,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -4004,8 +3892,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.397 s
-[INFO] Finished at: 2023-06-05T01:43:02+02:00
+[INFO] Total time:  1.287 s
+[INFO] Finished at: 2023-06-07T00:00:56+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -4042,7 +3930,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4055,31 +3943,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.874 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.142 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.522 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.585 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.004 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.118 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » NullPointer
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.094 s
-[INFO] Finished at: 2023-06-05T01:43:21+02:00
+[INFO] Total time:  20.309 s
+[INFO] Finished at: 2023-06-07T00:01:19+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4093,6 +3979,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -4107,8 +3994,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.485 s
-[INFO] Finished at: 2023-06-05T01:43:25+02:00
+[INFO] Total time:  1.211 s
+[INFO] Finished at: 2023-06-07T00:01:24+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -4145,7 +4032,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4158,31 +4045,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.772 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.099 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.927 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.419 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.004 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.809 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » NullPointer
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.280 s
-[INFO] Finished at: 2023-06-05T01:43:44+02:00
+[INFO] Total time:  18.952 s
+[INFO] Finished at: 2023-06-07T00:01:46+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4196,6 +4081,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -4210,8 +4096,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.308 s
-[INFO] Finished at: 2023-06-05T01:43:49+02:00
+[INFO] Total time:  1.243 s
+[INFO] Finished at: 2023-06-07T00:01:51+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -4450,8 +4336,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.995 s
-[INFO] Finished at: 2023-06-05T01:44:32+02:00
+[INFO] Total time:  37.792 s
+[INFO] Finished at: 2023-06-07T00:02:33+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -4483,7 +4369,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4496,44 +4382,23 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.854 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.128 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
-
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.005 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.758 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.139 s
-[INFO] Finished at: 2023-06-05T01:44:52+02:00
+[INFO] Total time:  22.460 s
+[INFO] Finished at: 2023-06-07T00:02:59+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -4548,8 +4413,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.526 s
-[INFO] Finished at: 2023-06-05T01:44:57+02:00
+[INFO] Total time:  1.215 s
+[INFO] Finished at: 2023-06-07T00:03:03+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -4586,7 +4451,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4599,44 +4464,23 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.888 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.133 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
-
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.008 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.89 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.500 s
-[INFO] Finished at: 2023-06-05T01:45:15+02:00
+[INFO] Total time:  22.513 s
+[INFO] Finished at: 2023-06-07T00:03:29+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -4651,8 +4495,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.269 s
-[INFO] Finished at: 2023-06-05T01:45:20+02:00
+[INFO] Total time:  1.224 s
+[INFO] Finished at: 2023-06-07T00:03:34+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -4689,7 +4533,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4702,44 +4546,23 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.855 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.153 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
-
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.008 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.62 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.889 s
-[INFO] Finished at: 2023-06-05T01:45:38+02:00
+[INFO] Total time:  21.394 s
+[INFO] Finished at: 2023-06-07T00:03:58+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -4754,8 +4577,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.362 s
-[INFO] Finished at: 2023-06-05T01:45:43+02:00
+[INFO] Total time:  1.420 s
+[INFO] Finished at: 2023-06-07T00:04:04+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -4792,7 +4615,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4805,44 +4628,23 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.899 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.168 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
-
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.009 s  <<< ERROR!
-java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.782 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.995 s
-[INFO] Finished at: 2023-06-05T01:46:01+02:00
+[INFO] Total time:  21.158 s
+[INFO] Finished at: 2023-06-07T00:04:28+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -4857,8 +4659,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.490 s
-[INFO] Finished at: 2023-06-05T01:46:06+02:00
+[INFO] Total time:  1.487 s
+[INFO] Finished at: 2023-06-07T00:04:33+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -5097,8 +4899,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  40.317 s
-[INFO] Finished at: 2023-06-05T01:46:50+02:00
+[INFO] Total time:  40.131 s
+[INFO] Finished at: 2023-06-07T00:05:17+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -5130,7 +4932,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5143,31 +4945,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.806 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.092 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.093 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.385 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.005 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.931 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » NullPointer
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.153 s
-[INFO] Finished at: 2023-06-05T01:47:09+02:00
+[INFO] Total time:  19.124 s
+[INFO] Finished at: 2023-06-07T00:05:39+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5181,6 +4981,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -5195,8 +4996,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.293 s
-[INFO] Finished at: 2023-06-05T01:47:13+02:00
+[INFO] Total time:  1.433 s
+[INFO] Finished at: 2023-06-07T00:05:44+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -5233,7 +5034,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5246,31 +5047,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.954 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.241 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.776 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.467 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.006 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.624 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » NullPointer
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.428 s
-[INFO] Finished at: 2023-06-05T01:47:32+02:00
+[INFO] Total time:  18.776 s
+[INFO] Finished at: 2023-06-07T00:06:06+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5284,6 +5083,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -5298,8 +5098,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.309 s
-[INFO] Finished at: 2023-06-05T01:47:36+02:00
+[INFO] Total time:  1.298 s
+[INFO] Finished at: 2023-06-07T00:06:11+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -5336,7 +5136,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5349,31 +5149,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.8 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.124 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.414 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.742 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.004 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.003 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » NullPointer
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.244 s
-[INFO] Finished at: 2023-06-05T01:47:55+02:00
+[INFO] Total time:  19.191 s
+[INFO] Finished at: 2023-06-07T00:06:33+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5387,6 +5185,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -5401,8 +5200,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.256 s
-[INFO] Finished at: 2023-06-05T01:47:59+02:00
+[INFO] Total time:  1.248 s
+[INFO] Finished at: 2023-06-07T00:06:38+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -5439,7 +5238,7 @@ java.lang.NullPointerException
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5452,31 +5251,29 @@ java.lang.NullPointerException
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.967 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.295 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.11 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.617 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:58)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 0.006 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.804 s  <<< ERROR!
 java.lang.NullPointerException
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.deserializeObjectFromFile(TestPDIndexedRickGen.java:27)
-	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:43)
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:58->deserializeObjectFromFile:27 NullPointer
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:43->deserializeObjectFromFile:27 NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164:63 » NullPointer
+[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164:48 » NullPointer
 [INFO] 
 [ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.476 s
-[INFO] Finished at: 2023-06-05T01:48:18+02:00
+[INFO] Total time:  19.160 s
+[INFO] Finished at: 2023-06-07T00:07:00+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5490,6 +5287,7 @@ java.lang.NullPointerException
 [ERROR] For more information about the errors and possible solutions, please read the following articles:
 [ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
+Security framework of XStream not initialized, XStream is probably vulnerable.
 
 ---------------------------------------------------
 [LOG] Cleaned targets with ['mvn', 'clean']
@@ -5504,8 +5302,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.302 s
-[INFO] Finished at: 2023-06-05T01:48:23+02:00
+[INFO] Total time:  1.198 s
+[INFO] Finished at: 2023-06-07T00:07:05+02:00
 [INFO] ------------------------------------------------------------------------
 
 
@@ -5521,5 +5319,5 @@ java.lang.NullPointerException
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-05 01:48:23.636084
+[LOG] Finishing analysis at 2023-06-07 00:07:05.477017
 ====== END OF THE LINE ======

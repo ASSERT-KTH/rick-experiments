@@ -3,86 +3,86 @@
     "CUT": "org.apache.pdfbox.pdmodel.graphics.color.PDIndexed",
     "mutant-file": "./PDIndexed.java/18.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.869 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.245 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.819 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.889 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.839 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 7.788 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 7.009 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.442 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
 },
 {
     "mut": "toRGBImage_WritableRaster",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.color.PDIndexed",
     "mutant-file": "./PDIndexed.java/35.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.829 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.537 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.824 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.775 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.861 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.052 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.474 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.458 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
 },
 {
     "mut": "toRGBImage_WritableRaster",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.color.PDIndexed",
     "mutant-file": "./PDIndexed.java/36.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.879 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.313 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.855 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.951 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.827 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.888 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.246 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.519 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
 },
 {
     "mut": "toRGBImage_WritableRaster",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.color.PDIndexed",
     "mutant-file": "./PDIndexed.java/45.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.858 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.102 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.947 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.958 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.791 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.12 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.174 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.61 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
 },
 {
     "mut": "toRGBImage_WritableRaster",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.color.PDIndexed",
     "mutant-file": "./PDIndexed.java/46.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.824 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.338 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.787 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.854 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.929 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.997 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.332 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.342 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
 },
 {
     "mut": "toRGBImage_WritableRaster",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.color.PDIndexed",
     "mutant-file": "./PDIndexed.java/68.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.876 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.152 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.878 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.874 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.772 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.202 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.522 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.927 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
 },
 {
     "mut": "toRGBImage_WritableRaster",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.color.PDIndexed",
     "mutant-file": "./PDIndexed.java/73.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.854 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.758 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.888 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.855 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.899 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.89 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.62 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.782 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
 },
 {
     "mut": "toRGBImage_WritableRaster",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.color.PDIndexed",
     "mutant-file": "./PDIndexed.java/80.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.806 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.093 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.954 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.8 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 2.967 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.776 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.414 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.11 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen"
 },
