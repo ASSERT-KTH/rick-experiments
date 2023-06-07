@@ -36,11 +36,11 @@
     "CUT": "org.gephi.preview.SVGRenderTargetBuilder",
     "mutant-file": "./SVGRenderTargetBuilder.java/58.java: INVALID MUTANT LEADS TO INFINITE LOOP",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.035 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
-    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.03 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.61 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.055 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.754 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen"
+    "result_baseline": "INVALID; Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.035 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-oo": "INVALID; Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.03 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-po": "INVALID; Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.61 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-co": "INVALID; Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.055 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-all": "INVALID; Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.754 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen"
 },
 {
     "mut": "SVGRenderTargetBuilder_SVGRenderTargetImpl_toHexString_Color",

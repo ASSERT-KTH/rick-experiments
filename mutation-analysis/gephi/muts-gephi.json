@@ -157,8 +157,8 @@
     },
     {
         "mut": "NodeDraft_addInterval_double_double",
-        "mut-start-line": 405,
-        "mut-end-line": 422,
+        "mut-start-line": 443,
+        "mut-end-line": 463,
         "parent-module-path": "/home/dee/dev/rick-major-review/gephi/modules/ImportAPI/",
         "parent-file": "ElementDraftImpl.java",
         "parent-fqn": "org.gephi.io.importer.impl.ElementDraftImpl",
