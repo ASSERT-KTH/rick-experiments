@@ -1,0 +1,2 @@
+NodesThread.NodesThread( Node [ ] nodes , int from , int to , boolean barnesHutOptimize , double barnesHutTheta , double gravity , RepulsionForce GravityForce , double scaling , Region rootRegion , RepulsionForce Repulsion );0;1;12
+NodesThread.run( );10;6;20

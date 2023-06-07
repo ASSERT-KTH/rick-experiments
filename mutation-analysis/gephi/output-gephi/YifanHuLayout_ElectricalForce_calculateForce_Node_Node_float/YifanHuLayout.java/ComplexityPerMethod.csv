@@ -1,0 +1,35 @@
+ElectricalForce.ElectricalForce( float relativeStrength , float optimalDistance );0;1;4
+ElectricalForce.calculateForce( Node node1 , Node node2 , float distance );14;3;10
+SpringForce.SpringForce( float optimalDistance );0;1;3
+SpringForce.calculateForce( Node node1 , Node node2 , float distance );8;1;6
+SpringForce.getOptimalDistance( );2;1;3
+SpringForce.setOptimalDistance( Float optimalDistance );2;1;3
+YifanHuLayout.YifanHuLayout( LayoutBuilder layoutBuilder , Displacement displacement );0;1;4
+YifanHuLayout.endAlgo( );1;2;10
+YifanHuLayout.getAverageEdgeLength( Graph graph );6;2;10
+YifanHuLayout.getBarnesHutTheta( );2;1;3
+YifanHuLayout.getConvergenceThreshold( );2;1;3
+YifanHuLayout.getDisplacement( );2;1;4
+YifanHuLayout.getEdgeForce( );3;1;3
+YifanHuLayout.getInitialStep( );2;1;3
+YifanHuLayout.getNodeForce( );3;1;3
+YifanHuLayout.getOptimalDistance( );2;1;3
+YifanHuLayout.getProperties( );3;2;66
+YifanHuLayout.getQuadTreeMaxLevel( );2;1;3
+YifanHuLayout.getRelativeStrength( );2;1;3
+YifanHuLayout.getStepRatio( );2;1;3
+YifanHuLayout.goAlgo( );11;10;49
+YifanHuLayout.initAlgo( );4;3;18
+YifanHuLayout.isAdaptiveCooling( );2;1;3
+YifanHuLayout.postAlgo( );4;2;6
+YifanHuLayout.resetPropertiesValues( );6;2;15
+YifanHuLayout.setAdaptiveCooling( Boolean adaptiveCooling );2;1;3
+YifanHuLayout.setBarnesHutTheta( Float barnesHutTheta );2;1;3
+YifanHuLayout.setConvergenceThreshold( Float convergenceThreshold );2;1;3
+YifanHuLayout.setInitialStep( Float initialStep );2;1;3
+YifanHuLayout.setOptimalDistance( Float optimalDistance );2;1;3
+YifanHuLayout.setQuadTreeMaxLevel( Integer quadTreeMaxLevel );2;1;3
+YifanHuLayout.setRelativeStrength( Float relativeStrength );2;1;3
+YifanHuLayout.setStep( Float step );2;1;3
+YifanHuLayout.setStepRatio( Float stepRatio );2;1;3
+YifanHuLayout.updateStep( );7;4;16

@@ -1,0 +1,48 @@
+AttributeColumnsControllerImpl.addAttributeColumn( Table table , String title , Class type );10;4;9
+AttributeColumnsControllerImpl.calculateColumnValuesFrequencies( Table table , Column column );6;3;13
+AttributeColumnsControllerImpl.canChangeColumnData( Column column );4;1;3
+AttributeColumnsControllerImpl.canClearColumnData( Column column );5;3;6
+AttributeColumnsControllerImpl.canConvertColumnToDynamic( Column column );6;6;16
+AttributeColumnsControllerImpl.canDeleteColumn( Column column );6;2;3
+AttributeColumnsControllerImpl.clearColumnData( Table table , Column column );3;3;7
+AttributeColumnsControllerImpl.clearEdgeData( Edge edge , Column [ ] columnsToClear );3;1;3
+AttributeColumnsControllerImpl.clearEdgesData( Edge [ ] edges , Column [ ] columnsToClear );3;2;5
+AttributeColumnsControllerImpl.clearNodeData( Node node , Column [ ] columnsToClear );3;1;3
+AttributeColumnsControllerImpl.clearNodesData( Node [ ] nodes , Column [ ] columnsToClear );3;2;5
+AttributeColumnsControllerImpl.clearRowData( Element row , Column [ ] columnsToClear );5;7;21
+AttributeColumnsControllerImpl.convertAttributeColumnToDynamic( Table table , Column column , double low , double high );4;1;3
+AttributeColumnsControllerImpl.convertAttributeColumnToNewDynamicColumn( Table table , Column column , double low , double high , String newColumnTitle );5;1;3
+AttributeColumnsControllerImpl.convertColumnToDynamic( Table table , Column column , double low , double high , String newColumnTitle );23;12;44
+AttributeColumnsControllerImpl.copyColumnDataToOtherColumn( Table table , Column sourceColumn , Column targetColumn );9;6;22
+AttributeColumnsControllerImpl.copyEdgeDataToOtherEdges( Edge edge , Edge [ ] otherEdges , Column [ ] columnsToCopy );4;1;3
+AttributeColumnsControllerImpl.copyNodeDataToOtherNodes( Node node , Node [ ] otherNodes , Column [ ] columnsToCopy );4;1;3
+AttributeColumnsControllerImpl.copyRowDataToOtherRows( Element row , Element [ ] otherRows , Column [ ] columnsToCopy );6;9;26
+AttributeColumnsControllerImpl.createBooleanMatchesColumn( Table table , Column column , String newColumnTitle , Pattern pattern );14;5;24
+AttributeColumnsControllerImpl.createFoundGroupsListColumn( Table table , Column column , String newColumnTitle , Pattern pattern );16;7;33
+AttributeColumnsControllerImpl.deleteAttributeColumn( Table table , Column column );3;2;5
+AttributeColumnsControllerImpl.detectNodeDuplicatesByColumn( Column column , boolean caseSensitive );10;7;31
+AttributeColumnsControllerImpl.duplicateColumn( Table table , Column column , String title , Class type );9;2;8
+AttributeColumnsControllerImpl.fillColumnWithValue( Table table , Column column , String value );4;3;7
+AttributeColumnsControllerImpl.fillEdgesColumnWithValue( Edge [ ] edges , Column column , String value );4;3;7
+AttributeColumnsControllerImpl.fillNodesColumnWithValue( Node [ ] nodes , Column column , String value );4;3;7
+AttributeColumnsControllerImpl.findEdge( Graph graph , String id , Node source , Node target , boolean directed );27;16;51
+AttributeColumnsControllerImpl.getArrayNumbers( Object arr );6;2;8
+AttributeColumnsControllerImpl.getColumnNumbers( Table table , Column column );4;1;3
+AttributeColumnsControllerImpl.getDynamicNumberColumnNumbers( Element row , Column column );17;7;23
+AttributeColumnsControllerImpl.getEdgesArray( );2;1;3
+AttributeColumnsControllerImpl.getNodesArray( );2;1;3
+AttributeColumnsControllerImpl.getNumberOrNumberListColumnStatistics( Table table , Column column );4;1;3
+AttributeColumnsControllerImpl.getRowNumbers( Element row , Column [ ] columns );12;7;26
+AttributeColumnsControllerImpl.getRowsColumnNumbers( Element [ ] rows , Column column );12;7;28
+AttributeColumnsControllerImpl.getTableAttributeRows( Table table );4;2;7
+AttributeColumnsControllerImpl.getTableRowsCount( Table table );3;2;7
+AttributeColumnsControllerImpl.isEdgeColumn( Column column );3;1;3
+AttributeColumnsControllerImpl.isEdgeTable( Table table );3;1;3
+AttributeColumnsControllerImpl.isNodeColumn( Column column );3;1;3
+AttributeColumnsControllerImpl.isNodeTable( Table table );3;1;3
+AttributeColumnsControllerImpl.isTableColumn( Table table , Column column );5;1;3
+AttributeColumnsControllerImpl.mergeRowsValues( Column [ ] columns , AttributeRowsMergeStrategy [ ] mergeStrategies , Element [ ] rows , Element selectedRow , Element resultRow );13;6;28
+AttributeColumnsControllerImpl.negateBooleanColumn( Table table , Column column );4;3;9
+AttributeColumnsControllerImpl.negateColumnBooleanType( Table table , Column column );6;3;11
+AttributeColumnsControllerImpl.negateColumnListBooleanType( Table table , Column column );8;4;15
+AttributeColumnsControllerImpl.setAttributeValue( Object value , Element row , Column column );16;9;31

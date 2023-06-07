@@ -1,0 +1,1033 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.42</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                                                                                      
+</span><span class="outsideLine"><i>0002</i>  Copyright 2008-2011 Gephi                                                                                                                              
+</span><span class="outsideLine"><i>0003</i>  Authors : Mathieu Jacomy <mathieu.jacomy@gmail.com>                                                                                                    
+</span><span class="outsideLine"><i>0004</i>  Website : http://www.gephi.org                                                                                                                         
+</span><span class="outsideLine"><i>0005</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0006</i>  This file is part of Gephi.                                                                                                                            
+</span><span class="outsideLine"><i>0007</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0008</i>  DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.                                                                                               
+</span><span class="outsideLine"><i>0009</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0010</i>  Copyright 2011 Gephi Consortium. All rights reserved.                                                                                                  
+</span><span class="outsideLine"><i>0011</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0012</i>  The contents of this file are subject to the terms of either the GNU                                                                                   
+</span><span class="outsideLine"><i>0013</i>  General Public License Version 3 only ("GPL") or the Common                                                                                            
+</span><span class="outsideLine"><i>0014</i>  Development and Distribution License("CDDL") (collectively, the                                                                                        
+</span><span class="outsideLine"><i>0015</i>  "License"). You may not use this file except in compliance with the                                                                                    
+</span><span class="outsideLine"><i>0016</i>  License. You can obtain a copy of the License at                                                                                                       
+</span><span class="outsideLine"><i>0017</i>  http://gephi.org/about/legal/license-notice/                                                                                                           
+</span><span class="outsideLine"><i>0018</i>  or /cddl-1.0.txt and /gpl-3.0.txt. See the License for the                                                                                             
+</span><span class="outsideLine"><i>0019</i>  specific language governing permissions and limitations under the                                                                                      
+</span><span class="outsideLine"><i>0020</i>  License.  When distributing the software, include this License Header                                                                                  
+</span><span class="outsideLine"><i>0021</i>  Notice in each file and include the License files at                                                                                                   
+</span><span class="outsideLine"><i>0022</i>  /cddl-1.0.txt and /gpl-3.0.txt. If applicable, add the following below the                                                                             
+</span><span class="outsideLine"><i>0023</i>  License Header, with the fields enclosed by brackets [] replaced by                                                                                    
+</span><span class="outsideLine"><i>0024</i>  your own identifying information:                                                                                                                      
+</span><span class="outsideLine"><i>0025</i>  "Portions Copyrighted [year] [name of copyright owner]"                                                                                                
+</span><span class="outsideLine"><i>0026</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0027</i>  If you wish your version of this file to be governed by only the CDDL                                                                                  
+</span><span class="outsideLine"><i>0028</i>  or only the GPL Version 3, indicate your decision by adding                                                                                            
+</span><span class="outsideLine"><i>0029</i>  "[Contributor] elects to include this software in this distribution                                                                                    
+</span><span class="outsideLine"><i>0030</i>  under the [CDDL or GPL Version 3] license." If you do not indicate a                                                                                   
+</span><span class="outsideLine"><i>0031</i>  single choice of license, a recipient has the option to distribute                                                                                     
+</span><span class="outsideLine"><i>0032</i>  your version of this file under either the CDDL, the GPL Version 3 or                                                                                  
+</span><span class="outsideLine"><i>0033</i>  to extend the choice of license to its licensees as provided above.                                                                                    
+</span><span class="outsideLine"><i>0034</i>  However, if you add GPL Version 3 code and therefore, elected the GPL                                                                                  
+</span><span class="outsideLine"><i>0035</i>  Version 3 license, then the option applies only if the new code is                                                                                     
+</span><span class="outsideLine"><i>0036</i>  made subject to such option by the copyright holder.                                                                                                   
+</span><span class="outsideLine"><i>0037</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0038</i>  Contributor(s):                                                                                                                                        
+</span><span class="outsideLine"><i>0039</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0040</i>  Portions Copyrighted 2011 Gephi Consortium.                                                                                                            
+</span><span class="outsideLine"><i>0041</i>  */                                                                                                                                                     
+</span><span class="outsideLine"><i>0042</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0043</i> package org.gephi.layout.plugin.forceAtlas2;                                                                                                            
+</span><span class="outsideLine"><i>0044</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0045</i> import java.util.ArrayList;                                                                                                                             
+</span><span class="outsideLine"><i>0046</i> import java.util.List;                                                                                                                                  
+</span><span class="outsideLine"><i>0047</i> import java.util.concurrent.ExecutorService;                                                                                                            
+</span><span class="outsideLine"><i>0048</i> import java.util.concurrent.Executors;                                                                                                                  
+</span><span class="outsideLine"><i>0049</i> import java.util.concurrent.Future;                                                                                                                     
+</span><span class="outsideLine"><i>0050</i> import org.gephi.graph.api.Edge;                                                                                                                        
+</span><span class="outsideLine"><i>0051</i> import org.gephi.graph.api.Graph;                                                                                                                       
+</span><span class="outsideLine"><i>0052</i> import org.gephi.graph.api.GraphModel;                                                                                                                  
+</span><span class="outsideLine"><i>0053</i> import org.gephi.graph.api.Interval;                                                                                                                    
+</span><span class="outsideLine"><i>0054</i> import org.gephi.graph.api.Node;                                                                                                                        
+</span><span class="outsideLine"><i>0055</i> import org.gephi.layout.plugin.AbstractLayout;                                                                                                          
+</span><span class="outsideLine"><i>0056</i> import org.gephi.layout.plugin.forceAtlas2.ForceFactory.AttractionForce;                                                                                
+</span><span class="outsideLine"><i>0057</i> import org.gephi.layout.plugin.forceAtlas2.ForceFactory.RepulsionForce;                                                                                 
+</span><span class="outsideLine"><i>0058</i> import org.gephi.layout.spi.Layout;                                                                                                                     
+</span><span class="outsideLine"><i>0059</i> import org.gephi.layout.spi.LayoutBuilder;                                                                                                              
+</span><span class="outsideLine"><i>0060</i> import org.gephi.layout.spi.LayoutProperty;                                                                                                             
+</span><span class="outsideLine"><i>0061</i> import org.openide.util.Exceptions;                                                                                                                     
+</span><span class="outsideLine"><i>0062</i> import org.openide.util.NbBundle;                                                                                                                       
+</span><span class="outsideLine"><i>0063</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0064</i> /**                                                                                                                                                     
+</span><span class="outsideLine"><i>0065</i>  * ForceAtlas 2 Layout, manages each step of the computations.                                                                                          
+</span><span class="outsideLine"><i>0066</i>  *                                                                                                                                                      
+</span><span class="outsideLine"><i>0067</i>  * @author Mathieu Jacomy                                                                                                                               
+</span><span class="outsideLine"><i>0068</i>  */                                                                                                                                                     
+</span><span class="outsideLine"><i>0069</i> public class ForceAtlas2 implements Layout {                                                                                                            
+</span><span class="outsideLine"><i>0070</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0071</i>     private final ForceAtlas2Builder layoutBuilder;                                                                                                     
+</span><span class="outsideLine"><i>0072</i>     double outboundAttCompensation = 1;                                                                                                                 
+</span><span class="outsideLine"><i>0073</i>     private GraphModel graphModel;                                                                                                                      
+</span><span class="outsideLine"><i>0074</i>     private Graph graph;                                                                                                                                
+</span><span class="outsideLine"><i>0075</i>     private double edgeWeightInfluence;                                                                                                                 
+</span><span class="outsideLine"><i>0076</i>     private double jitterTolerance;                                                                                                                     
+</span><span class="outsideLine"><i>0077</i>     private double scalingRatio;                                                                                                                        
+</span><span class="outsideLine"><i>0078</i>     private double gravity;                                                                                                                             
+</span><span class="outsideLine"><i>0079</i>     private double speed;                                                                                                                               
+</span><span class="outsideLine"><i>0080</i>     private double speedEfficiency;                                                                                                                     
+</span><span class="outsideLine"><i>0081</i>     private boolean outboundAttractionDistribution;                                                                                                     
+</span><span class="outsideLine"><i>0082</i>     private boolean adjustSizes;                                                                                                                        
+</span><span class="outsideLine"><i>0083</i>     private boolean barnesHutOptimize;                                                                                                                  
+</span><span class="outsideLine"><i>0084</i>     private double barnesHutTheta;                                                                                                                      
+</span><span class="outsideLine"><i>0085</i>     private boolean linLogMode;                                                                                                                         
+</span><span class="outsideLine"><i>0086</i>     private boolean normalizeEdgeWeights;                                                                                                               
+</span><span class="outsideLine"><i>0087</i>     private boolean strongGravityMode;                                                                                                                  
+</span><span class="outsideLine"><i>0088</i>     private int threadCount;                                                                                                                            
+</span><span class="outsideLine"><i>0089</i>     private int currentThreadCount;                                                                                                                     
+</span><span class="outsideLine"><i>0090</i>     private Region rootRegion;                                                                                                                          
+</span><span class="outsideLine"><i>0091</i>     private ExecutorService pool;                                                                                                                       
+</span><span class="outsideLine"><i>0092</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0093</i>     public ForceAtlas2(ForceAtlas2Builder layoutBuilder) {                                                                                              
+</span><span class="methodLine"><i>0094</i>         this.layoutBuilder = layoutBuilder;                                                                                                             
+</span><span class="methodLine"><i>0095</i>         this.threadCount = Math.min(4, Math.max(1, Runtime.getRuntime().availableProcessors() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2795</span>-</span> 1));                                                    
+</span><span class="methodLine"><i>0096</i>     }                                                                                                                                                   
+</span><span class="outsideLine"><i>0097</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0098</i>     @Override                                                                                                                                           
+</span><span class="methodLine"><i>0099</i>     public void initAlgo() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 638</span>{                                                                                                                            
+</span><span class="methodLine"><i>0100</i>         AbstractLayout.ensureSafeLayoutNodePositions(graphModel);                                                                                       
+</span><span class="outsideLine"><i>0101</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0102</i>         speed = 1.;                                                                                                                                     
+</span><span class="methodLine"><i>0103</i>         speedEfficiency = 1.;                                                                                                                           
+</span><span class="outsideLine"><i>0104</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0105</i>         graph = graphModel.getGraphVisible();                                                                                                           
+</span><span class="outsideLine"><i>0106</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0107</i>         graph.readLock();                                                                                                                               
+</span><span class="methodLine"><i>0108</i>         try {                                                                                                                                           
+</span><span class="methodLine"><i>0109</i>             Node[] nodes = graph.getNodes().toArray();                                                                                                  
+</span><span class="outsideLine"><i>0110</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0111</i>             // Initialise layout data                                                                                                                   
+</span><span class="methodLine"><i>0112</i>             for (Node n : nodes) {                                                                                                                      
+</span><span class="methodLine"><i>0113</i>                 if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3832</span>n.getLayoutData() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3832</span>==</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3407</span>||</span> <span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 3834</span>!</span>(n.getLayoutData() instanceof ForceAtlas2LayoutData)) {                                               
+</span><span class="methodLine"><i>0114</i>                     ForceAtlas2LayoutData nLayout = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5950</span>new ForceAtlas2LayoutData()</span>;                                                                        
+</span><span class="methodLine"><i>0115</i>                     n.setLayoutData(nLayout);                                                                                                           
+</span><span class="methodLine"><i>0116</i>                 }                                                                                                                                       
+</span><span class="methodLine"><i>0117</i>                 ForceAtlas2LayoutData nLayout = n.getLayoutData();                                                                                      
+</span><span class="methodLine"><i>0118</i>                 nLayout.mass = 1 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3843</span>+</span> graph.getDegree(n);                                                                                                  
+</span><span class="methodLine"><i>0119</i>                 nLayout.old_dx = 0;                                                                                                                     
+</span><span class="methodLine"><i>0120</i>                 nLayout.old_dy = 0;                                                                                                                     
+</span><span class="methodLine"><i>0121</i>                 nLayout.dx = 0;                                                                                                                         
+</span><span class="methodLine"><i>0122</i>                 nLayout.dy = 0;                                                                                                                         
+</span><span class="methodLine"><i>0123</i>             }                                                                                                                                           
+</span><span class="outsideLine"><i>0124</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0125</i>             pool = Executors.newFixedThreadPool(threadCount);                                                                                           
+</span><span class="methodLine"><i>0126</i>             currentThreadCount = threadCount;                                                                                                           
+</span><span class="methodLine"><i>0127</i>         } finally {                                                                                                                                     
+</span><span class="methodLine"><i>0128</i>             graph.readUnlockAll();                                                                                                                      
+</span><span class="methodLine"><i>0129</i>         }                                                                                                                                               
+</span><span class="methodLine"><i>0130</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0131</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0132</i>     private double getEdgeWeight(Edge edge, boolean isDynamicWeight, Interval interval) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { edge = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1063</span>{</span>                                                               
+</span><span class="methodLine"><i>0133</i>         if (isDynamicWeight) {                                                                                                                          
+</span><span class="methodLine"><i>0134</i>             return edge.getWeight(interval);                                                                                                            
+</span><span class="methodLine"><i>0135</i>         } else {                                                                                                                                        
+</span><span class="methodLine"><i>0136</i>             return edge.getWeight();                                                                                                                    
+</span><span class="methodLine"><i>0137</i>         }                                                                                                                                               
+</span><span class="methodLine"><i>0138</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0139</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0140</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0141</i>     @Override                                                                                                                                           
+</span><span class="methodLine"><i>0142</i>     public void goAlgo() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 649</span>{                                                                                                                              
+</span><span class="outsideLine"><i>0143</i>         // Initialize graph data                                                                                                                        
+</span><span class="methodLine"><i>0144</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1570</span>graphModel <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1570</span>==</span> null</span>) {                                                                                                                       
+</span><span class="methodLine"><i>0145</i>             return;                                                                                                                                     
+</span><span class="methodLine"><i>0146</i>         }                                                                                                                                               
+</span><span class="methodLine"><i>0147</i>         graph = graphModel.getGraphVisible();                                                                                                           
+</span><span class="methodLine"><i>0148</i>         graph.readLock();                                                                                                                               
+</span><span class="methodLine"><i>0149</i>         boolean isDynamicWeight = graphModel.getEdgeTable().getColumn("weight").isDynamic();                                                            
+</span><span class="methodLine"><i>0150</i>         Interval interval = graph.getView().getTimeInterval();                                                                                          
+</span><span class="outsideLine"><i>0151</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0152</i>         try {                                                                                                                                           
+</span><span class="methodLine"><i>0153</i>             Node[] nodes = graph.getNodes().toArray();                                                                                                  
+</span><span class="methodLine"><i>0154</i>             Edge[] edges = graph.getEdges().toArray();                                                                                                  
+</span><span class="outsideLine"><i>0155</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0156</i>             // Initialise layout data                                                                                                                   
+</span><span class="methodLine"><i>0157</i>             for (Node n : nodes) {                                                                                                                      
+</span><span class="methodLine"><i>0158</i>                 if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3870</span>n.getLayoutData() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3870</span>==</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3437</span>||</span> <span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 3872</span>!</span>(n.getLayoutData() instanceof ForceAtlas2LayoutData)) {                                               
+</span><span class="methodLine"><i>0159</i>                     ForceAtlas2LayoutData nLayout = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5955</span>new ForceAtlas2LayoutData()</span>;                                                                        
+</span><span class="methodLine"><i>0160</i>                     n.setLayoutData(nLayout);                                                                                                           
+</span><span class="methodLine"><i>0161</i>                 }                                                                                                                                       
+</span><span class="methodLine"><i>0162</i>                 ForceAtlas2LayoutData nLayout = n.getLayoutData();                                                                                      
+</span><span class="methodLine"><i>0163</i>                 nLayout.mass = 1 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3881</span>+</span> graph.getDegree(n);                                                                                                  
+</span><span class="methodLine"><i>0164</i>                 nLayout.old_dx = nLayout.dx;                                                                                                            
+</span><span class="methodLine"><i>0165</i>                 nLayout.old_dy = nLayout.dy;                                                                                                            
+</span><span class="methodLine"><i>0166</i>                 nLayout.dx = 0;                                                                                                                         
+</span><span class="methodLine"><i>0167</i>                 nLayout.dy = 0;                                                                                                                         
+</span><span class="methodLine"><i>0168</i>             }                                                                                                                                           
+</span><span class="outsideLine"><i>0169</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0170</i>             // If Barnes Hut active, initialize root region                                                                                             
+</span><span class="methodLine"><i>0171</i>             if (isBarnesHutOptimize()) {                                                                                                                
+</span><span class="methodLine"><i>0172</i>                 rootRegion = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4340</span>new Region(nodes)</span>;                                                                                                         
+</span><span class="methodLine"><i>0173</i>                 rootRegion.buildSubRegions();                                                                                                           
+</span><span class="methodLine"><i>0174</i>             }                                                                                                                                           
+</span><span class="outsideLine"><i>0175</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0176</i>             // If outboundAttractionDistribution active, compensate.                                                                                    
+</span><span class="methodLine"><i>0177</i>             if (isOutboundAttractionDistribution()) {                                                                                                   
+</span><span class="methodLine"><i>0178</i>                 outboundAttCompensation = 0;                                                                                                            
+</span><span class="methodLine"><i>0179</i>                 for (Node n : nodes) {                                                                                                                  
+</span><span class="methodLine"><i>0180</i>                     ForceAtlas2LayoutData nLayout = n.getLayoutData();                                                                                  
+</span><span class="methodLine"><i>0181</i>                     outboundAttCompensation <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 5183</span>+=</span> nLayout.mass;                                                                                            
+</span><span class="methodLine"><i>0182</i>                 }                                                                                                                                       
+</span><span class="methodLine"><i>0183</i>                 outboundAttCompensation <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: *= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 3452</span>/=</span> nodes.length;                                                                                                
+</span><span class="methodLine"><i>0184</i>             }                                                                                                                                           
+</span><span class="outsideLine"><i>0185</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0186</i>             // Repulsion (and gravity)                                                                                                                  
+</span><span class="outsideLine"><i>0187</i>             // NB: Muti-threaded                                                                                                                        
+</span><span class="methodLine"><i>0188</i>             RepulsionForce Repulsion = ForceFactory.builder.buildRepulsion(isAdjustSizes(), getScalingRatio());                                         
+</span><span class="outsideLine"><i>0189</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0190</i>             int taskCount = 8 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3179</span>*</span>                                                                                                                         
+</span><span class="methodLine"><i>0191</i>                 currentThreadCount;  // The threadPool Executor Service will manage the fetching of tasks and threads.                                  
+</span><span class="outsideLine"><i>0192</i>             // We make more tasks than threads because some tasks may need more time to compute.                                                        
+</span><span class="methodLine"><i>0193</i>             ArrayList<Future> threads = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3462</span>new ArrayList()</span>;                                                                                                
+</span><span class="methodLine"><i>0194</i>             for (int t = taskCount; t <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2318</span>></span> 0; t<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: ++ 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 2877</span>--</span>) {                                                                                                       
+</span><span class="methodLine"><i>0195</i>                 int from = (int) Math.floor(nodes.length <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 5803</span>*</span> (t <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6229</span>-</span> 1) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 5640</span>/</span> taskCount);                                                                        
+</span><span class="methodLine"><i>0196</i>                 int to = (int) Math.floor(nodes.length <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 5807</span>*</span> t <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 5645</span>/</span> taskCount);                                                                                
+</span><span class="methodLine"><i>0197</i>                 Future future = pool.submit(                                                                                                            
+</span><span class="methodLine"><i>0198</i>                     <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5648</span>new NodesThread(nodes, from, to, isBarnesHutOptimize(), getBarnesHutTheta(), getGravity(),                                          
+</span><span class="methodLine"><i>0199</i>                         (isStrongGravityMode()) ? (ForceFactory.builder.getStrongGravity(getScalingRatio())) :                                          
+</span><span class="methodLine"><i>0200</i>                             (Repulsion), getScalingRatio(), rootRegion, Repulsion)</span>);                                                                    
+</span><span class="methodLine"><i>0201</i>                 threads.add(future);                                                                                                                    
+</span><span class="methodLine"><i>0202</i>             }                                                                                                                                           
+</span><span class="methodLine"><i>0203</i>             for (Future future : threads) {                                                                                                             
+</span><span class="methodLine"><i>0204</i>                 try {                                                                                                                                   
+</span><span class="methodLine"><i>0205</i>                     future.get();                                                                                                                       
+</span><span class="methodLine"><i>0206</i>                 } catch (Exception e) {                                                                                                                 
+</span><span class="methodLine"><i>0207</i>                     throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5206</span>new RuntimeException("Unable to layout " + this.getClass().getSimpleName() + ".", e)</span>;                                         
+</span><span class="methodLine"><i>0208</i>                 }                                                                                                                                       
+</span><span class="methodLine"><i>0209</i>             }                                                                                                                                           
+</span><span class="outsideLine"><i>0210</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0211</i>             // Attraction                                                                                                                               
+</span><span class="methodLine"><i>0212</i>             AttractionForce Attraction = ForceFactory.builder                                                                                           
+</span><span class="methodLine"><i>0213</i>                 .buildAttraction(isLinLogMode(), isOutboundAttractionDistribution(), isAdjustSizes(),                                                   
+</span><span class="methodLine"><i>0214</i>                     1 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3952</span>*</span> ((isOutboundAttractionDistribution()) ? (outboundAttCompensation) : (1)));                                                      
+</span><span class="methodLine"><i>0215</i>             if (getEdgeWeightInfluence() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2327</span>==</span> 0) {                                                                                                        
+</span><span class="methodLine"><i>0216</i>                 for (Edge e : edges) {                                                                                                                  
+</span><span class="methodLine"><i>0217</i>                     Attraction.apply(e.getSource(), e.getTarget(), 1);                                                                                  
+</span><span class="methodLine"><i>0218</i>                 }                                                                                                                                       
+</span><span class="methodLine"><i>0219</i>             } else if (getEdgeWeightInfluence() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2605</span>==</span> 1) {                                                                                                 
+</span><span class="methodLine"><i>0220</i>                 if (isNormalizeEdgeWeights()) {                                                                                                         
+</span><span class="methodLine"><i>0221</i>                     Double w;                                                                                                                           
+</span><span class="methodLine"><i>0222</i>                     Double edgeWeightMin = Double.MAX_VALUE;                                                                                            
+</span><span class="methodLine"><i>0223</i>                     Double edgeWeightMax = Double.MIN_VALUE;                                                                                            
+</span><span class="methodLine"><i>0224</i>                     for (Edge e : edges) {                                                                                                              
+</span><span class="methodLine"><i>0225</i>                         w = getEdgeWeight(e, isDynamicWeight, interval);                                                                                
+</span><span class="methodLine"><i>0226</i>                         edgeWeightMin = Math.min(w, edgeWeightMin);                                                                                     
+</span><span class="methodLine"><i>0227</i>                         edgeWeightMax = Math.max(w, edgeWeightMax);                                                                                     
+</span><span class="methodLine"><i>0228</i>                     }                                                                                                                                   
+</span><span class="methodLine"><i>0229</i>                     if (edgeWeightMin <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 5471</span><</span> edgeWeightMax) {                                                                                                
+</span><span class="methodLine"><i>0230</i>                         for (Edge e : edges) {                                                                                                          
+</span><span class="methodLine"><i>0231</i>                             w = (getEdgeWeight(e, isDynamicWeight, interval) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7263</span>-</span> edgeWeightMin) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6921</span>/</span> (edgeWeightMax <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7266</span>-</span> edgeWeightMin);                        
+</span><span class="methodLine"><i>0232</i>                             Attraction.apply(e.getSource(), e.getTarget(), w);                                                                          
+</span><span class="methodLine"><i>0233</i>                         }                                                                                                                               
+</span><span class="methodLine"><i>0234</i>                     } else {                                                                                                                            
+</span><span class="methodLine"><i>0235</i>                         for (Edge e : edges) {                                                                                                          
+</span><span class="methodLine"><i>0236</i>                             Attraction.apply(e.getSource(), e.getTarget(), 1.);                                                                         
+</span><span class="methodLine"><i>0237</i>                         }                                                                                                                               
+</span><span class="methodLine"><i>0238</i>                     }                                                                                                                                   
+</span><span class="methodLine"><i>0239</i>                 } else {                                                                                                                                
+</span><span class="methodLine"><i>0240</i>                     for (Edge e : edges) {                                                                                                              
+</span><span class="methodLine"><i>0241</i>                         Attraction.apply(e.getSource(), e.getTarget(), getEdgeWeight(e, isDynamicWeight, interval));                                    
+</span><span class="methodLine"><i>0242</i>                     }                                                                                                                                   
+</span><span class="methodLine"><i>0243</i>                 }                                                                                                                                       
+</span><span class="methodLine"><i>0244</i>             } else {                                                                                                                                    
+</span><span class="methodLine"><i>0245</i>                 if (isNormalizeEdgeWeights()) {                                                                                                         
+</span><span class="methodLine"><i>0246</i>                     Double w;                                                                                                                           
+</span><span class="methodLine"><i>0247</i>                     Double edgeWeightMin = Double.MAX_VALUE;                                                                                            
+</span><span class="methodLine"><i>0248</i>                     Double edgeWeightMax = Double.MIN_VALUE;                                                                                            
+</span><span class="methodLine"><i>0249</i>                     for (Edge e : edges) {                                                                                                              
+</span><span class="methodLine"><i>0250</i>                         w = getEdgeWeight(e, isDynamicWeight, interval);                                                                                
+</span><span class="methodLine"><i>0251</i>                         edgeWeightMin = Math.min(w, edgeWeightMin);                                                                                     
+</span><span class="methodLine"><i>0252</i>                         edgeWeightMax = Math.max(w, edgeWeightMax);                                                                                     
+</span><span class="methodLine"><i>0253</i>                     }                                                                                                                                   
+</span><span class="methodLine"><i>0254</i>                     if (edgeWeightMin <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 5486</span><</span> edgeWeightMax) {                                                                                                
+</span><span class="methodLine"><i>0255</i>                         for (Edge e : edges) {                                                                                                          
+</span><span class="methodLine"><i>0256</i>                             w = (getEdgeWeight(e, isDynamicWeight, interval) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7285</span>-</span> edgeWeightMin) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6947</span>/</span> (edgeWeightMax <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7288</span>-</span> edgeWeightMin);                        
+</span><span class="methodLine"><i>0257</i>                             Attraction.apply(e.getSource(), e.getTarget(),                                                                              
+</span><span class="methodLine"><i>0258</i>                                 Math.pow(w, getEdgeWeightInfluence()));                                                                                 
+</span><span class="methodLine"><i>0259</i>                         }                                                                                                                               
+</span><span class="methodLine"><i>0260</i>                     } else {                                                                                                                            
+</span><span class="methodLine"><i>0261</i>                         for (Edge e : edges) {                                                                                                          
+</span><span class="methodLine"><i>0262</i>                             Attraction.apply(e.getSource(), e.getTarget(), 1.);                                                                         
+</span><span class="methodLine"><i>0263</i>                         }                                                                                                                               
+</span><span class="methodLine"><i>0264</i>                     }                                                                                                                                   
+</span><span class="methodLine"><i>0265</i>                 } else {                                                                                                                                
+</span><span class="methodLine"><i>0266</i>                     for (Edge e : edges) {                                                                                                              
+</span><span class="methodLine"><i>0267</i>                         Attraction.apply(e.getSource(), e.getTarget(),                                                                                  
+</span><span class="methodLine"><i>0268</i>                             Math.pow(getEdgeWeight(e, isDynamicWeight, interval), getEdgeWeightInfluence()));                                           
+</span><span class="methodLine"><i>0269</i>                     }                                                                                                                                   
+</span><span class="methodLine"><i>0270</i>                 }                                                                                                                                       
+</span><span class="methodLine"><i>0271</i>             }                                                                                                                                           
+</span><span class="outsideLine"><i>0272</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0273</i>             // Auto adjust speed                                                                                                                        
+</span><span class="methodLine"><i>0274</i>             double totalSwinging = 0d;  // How much irregular movement                                                                                  
+</span><span class="methodLine"><i>0275</i>             double totalEffectiveTraction = 0d;  // Hom much useful movement                                                                            
+</span><span class="methodLine"><i>0276</i>             for (Node n : nodes) {                                                                                                                      
+</span><span class="methodLine"><i>0277</i>                 ForceAtlas2LayoutData nLayout = n.getLayoutData();                                                                                      
+</span><span class="methodLine"><i>0278</i>                 if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 3510</span>!</span>n.isFixed()) {                                                                                                                     
+</span><span class="methodLine"><i>0279</i>                     double swinging =                                                                                                                   
+</span><span class="methodLine"><i>0280</i>                         Math.sqrt(Math.pow(nLayout.old_dx <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6674</span>-</span> nLayout.dx, 2) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6166</span>+</span> Math.pow(nLayout.old_dy <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6680</span>-</span> nLayout.dy, 2));                                 
+</span><span class="methodLine"><i>0281</i>                     totalSwinging <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 5266</span>+=</span> nLayout.mass <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 5500</span>*</span>                                                                                                     
+</span><span class="methodLine"><i>0282</i>                         swinging;   // If the node has a burst change of direction, then it's not converging.                                           
+</span><span class="methodLine"><i>0283</i>                     totalEffectiveTraction <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 5267</span>+=</span> nLayout.mass <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 5735</span>*</span> 0.5 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 5503</span>*</span>                                                                                      
+</span><span class="methodLine"><i>0284</i>                         Math.sqrt(Math.pow(nLayout.old_dx <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6513</span>+</span> nLayout.dx, 2) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6062</span>+</span> Math.pow(nLayout.old_dy <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6519</span>+</span> nLayout.dy, 2));                                 
+</span><span class="methodLine"><i>0285</i>                 }                                                                                                                                       
+</span><span class="methodLine"><i>0286</i>             }                                                                                                                                           
+</span><span class="outsideLine"><i>0287</i>             // We want that swingingMovement < tolerance * convergenceMovement                                                                          
+</span><span class="outsideLine"><i>0288</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0289</i>             // Optimize jitter tolerance                                                                                                                
+</span><span class="outsideLine"><i>0290</i>             // The 'right' jitter tolerance for this network. Bigger networks need more tolerance. Denser networks need less tolerance. Totally empiric.
+</span><span class="methodLine"><i>0291</i>             double estimatedOptimalJitterTolerance = 0.05 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3231</span>*</span> Math.sqrt(nodes.length);                                                                    
+</span><span class="methodLine"><i>0292</i>             double minJT = Math.sqrt(estimatedOptimalJitterTolerance);                                                                                  
+</span><span class="methodLine"><i>0293</i>             double maxJT = 10;                                                                                                                          
+</span><span class="methodLine"><i>0294</i>             double jt = jitterTolerance <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3237</span>*</span> Math.max(minJT,                                                                                               
+</span><span class="methodLine"><i>0295</i>                 Math.min(maxJT, estimatedOptimalJitterTolerance <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 5507</span>*</span> totalEffectiveTraction <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 5277</span>/</span> Math.pow(nodes.length, 2)));                                 
+</span><span class="outsideLine"><i>0296</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0297</i>             double minSpeedEfficiency = 0.05;                                                                                                           
+</span><span class="outsideLine"><i>0298</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0299</i>             // Protection against erratic behavior                                                                                                      
+</span><span class="methodLine"><i>0300</i>             if (totalSwinging <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2631</span>/</span> totalEffectiveTraction <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2352</span>></span> 2.0) {                                                                                         
+</span><span class="methodLine"><i>0301</i>                 if (speedEfficiency <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3529</span>></span> minSpeedEfficiency) {                                                                                             
+</span><span class="methodLine"><i>0302</i>                     speedEfficiency <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: /= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 5278</span>*=</span> 0.5;                                                                                                             
+</span><span class="methodLine"><i>0303</i>                 }                                                                                                                                       
+</span><span class="methodLine"><i>0304</i>                 jt = Math.max(jt, jitterTolerance);                                                                                                     
+</span><span class="methodLine"><i>0305</i>             }                                                                                                                                           
+</span><span class="outsideLine"><i>0306</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0307</i>             double targetSpeed = jt <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4008</span>*</span> speedEfficiency <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3533</span>*</span> totalEffectiveTraction <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3249</span>/</span> totalSwinging;                                                         
+</span><span class="outsideLine"><i>0308</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0309</i>             // Speed efficiency is how the speed really corresponds to the swinging vs. convergence tradeoff                                            
+</span><span class="outsideLine"><i>0310</i>             // We adjust it slowly and carefully                                                                                                        
+</span><span class="methodLine"><i>0311</i>             if (totalSwinging <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2358</span>></span> jt <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2642</span>*</span> totalEffectiveTraction) {                                                                                          
+</span><span class="methodLine"><i>0312</i>                 if (speedEfficiency <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3539</span>></span> minSpeedEfficiency) {                                                                                             
+</span><span class="methodLine"><i>0313</i>                     speedEfficiency <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: /= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 5284</span>*=</span> 0.7;                                                                                                             
+</span><span class="methodLine"><i>0314</i>                 }                                                                                                                                       
+</span><span class="methodLine"><i>0315</i>             } else if (speed <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2647</span><</span> 1000) {                                                                                                                  
+</span><span class="methodLine"><i>0316</i>                 speedEfficiency <span class="AssignmentOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: /= 
+Mutation Operator Type: AssignmentOperatorReplacementShortcut 
+Node ID: 4019</span>*=</span> 1.3;                                                                                                                 
+</span><span class="methodLine"><i>0317</i>             }                                                                                                                                           
+</span><span class="outsideLine"><i>0318</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0319</i>             // But the speed shoudn't rise too much too quickly, since it would make the convergence drop dramatically.                                 
+</span><span class="methodLine"><i>0320</i>             double maxRise = 0.5;   // Max rise: 50%                                                                                                    
+</span><span class="methodLine"><i>0321</i>             speed = speed <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2654</span>+</span> Math.min(targetSpeed <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3551</span>-</span> speed, maxRise <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3553</span>*</span> speed);                                                                             
+</span><span class="outsideLine"><i>0322</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0323</i>             // Apply forces                                                                                                                             
+</span><span class="methodLine"><i>0324</i>             if (isAdjustSizes()) {                                                                                                                      
+</span><span class="outsideLine"><i>0325</i>                 // If nodes overlap prevention is active, it's not possible to trust the swinging mesure.                                               
+</span><span class="methodLine"><i>0326</i>                 for (Node n : nodes) {                                                                                                                  
+</span><span class="methodLine"><i>0327</i>                     ForceAtlas2LayoutData nLayout = n.getLayoutData();                                                                                  
+</span><span class="methodLine"><i>0328</i>                     if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 5290</span>!</span>n.isFixed()) {                                                                                                                 
+</span><span class="outsideLine"><i>0329</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0330</i>                         // Adaptive auto-speed: the speed of each node is lowered                                                                       
+</span><span class="outsideLine"><i>0331</i>                         // when the node swings.                                                                                                        
+</span><span class="methodLine"><i>0332</i>                         double swinging = nLayout.mass <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6524</span>*</span> Math.sqrt(                                                                                     
+</span><span class="methodLine"><i>0333</i>                             (nLayout.old_dx <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7372</span>-</span> nLayout.dx) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7117</span>*</span> (nLayout.old_dx <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7375</span>-</span> nLayout.dx) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6992</span>+</span>                                                             
+</span><span class="methodLine"><i>0334</i>                                 (nLayout.old_dy <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7378</span>-</span> nLayout.dy) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7119</span>*</span> (nLayout.old_dy <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7381</span>-</span> nLayout.dy));                                                         
+</span><span class="methodLine"><i>0335</i>                         double factor = 0.1 <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6696</span>*</span> speed <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6526</span>/</span> (1f <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6996</span>+</span> Math.sqrt(speed <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7322</span>*</span> swinging));                                                               
+</span><span class="outsideLine"><i>0336</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0337</i>                         double df = Math.sqrt(Math.pow(nLayout.dx, 2) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6851</span>+</span> Math.pow(nLayout.dy, 2));                                                       
+</span><span class="methodLine"><i>0338</i>                         factor = Math.min(factor <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6706</span>*</span> df, 10.) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6189</span>/</span> df;                                                                                       
+</span><span class="outsideLine"><i>0339</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0340</i>                         double x = n.x() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6536</span>+</span> nLayout.dx <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6712</span>*</span> factor;                                                                                         
+</span><span class="methodLine"><i>0341</i>                         double y = n.y() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6538</span>+</span> nLayout.dy <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6715</span>*</span> factor;                                                                                         
+</span><span class="outsideLine"><i>0342</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0343</i>                         n.setX((float) x);                                                                                                              
+</span><span class="methodLine"><i>0344</i>                         n.setY((float) y);                                                                                                              
+</span><span class="methodLine"><i>0345</i>                     }                                                                                                                                   
+</span><span class="methodLine"><i>0346</i>                 }                                                                                                                                       
+</span><span class="methodLine"><i>0347</i>             } else {                                                                                                                                    
+</span><span class="methodLine"><i>0348</i>                 for (Node n : nodes) {                                                                                                                  
+</span><span class="methodLine"><i>0349</i>                     ForceAtlas2LayoutData nLayout = n.getLayoutData();                                                                                  
+</span><span class="methodLine"><i>0350</i>                     if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 5296</span>!</span>n.isFixed()) {                                                                                                                 
+</span><span class="outsideLine"><i>0351</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0352</i>                         // Adaptive auto-speed: the speed of each node is lowered                                                                       
+</span><span class="outsideLine"><i>0353</i>                         // when the node swings.                                                                                                        
+</span><span class="methodLine"><i>0354</i>                         double swinging = nLayout.mass <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6551</span>*</span> Math.sqrt(                                                                                     
+</span><span class="methodLine"><i>0355</i>                             (nLayout.old_dx <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7395</span>-</span> nLayout.dx) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7145</span>*</span> (nLayout.old_dx <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7398</span>-</span> nLayout.dx) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7024</span>+</span>                                                             
+</span><span class="methodLine"><i>0356</i>                                 (nLayout.old_dy <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7401</span>-</span> nLayout.dy) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7147</span>*</span> (nLayout.old_dy <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7404</span>-</span> nLayout.dy));                                                         
+</span><span class="outsideLine"><i>0357</i>                         //double factor = speed / (1f + Math.sqrt(speed * swinging));                                                                   
+</span><span class="methodLine"><i>0358</i>                         double factor = speed <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6553</span>/</span> (1f <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7027</span>+</span> Math.sqrt(speed <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7341</span>*</span> swinging));                                                                     
+</span><span class="outsideLine"><i>0359</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0360</i>                         double x = n.x() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6555</span>+</span> nLayout.dx <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6730</span>*</span> factor;                                                                                         
+</span><span class="methodLine"><i>0361</i>                         double y = n.y() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6557</span>+</span> nLayout.dy <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 6733</span>*</span> factor;                                                                                         
+</span><span class="outsideLine"><i>0362</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0363</i>                         n.setX((float) x);                                                                                                              
+</span><span class="methodLine"><i>0364</i>                         n.setY((float) y);                                                                                                              
+</span><span class="methodLine"><i>0365</i>                     }                                                                                                                                   
+</span><span class="methodLine"><i>0366</i>                 }                                                                                                                                       
+</span><span class="methodLine"><i>0367</i>             }                                                                                                                                           
+</span><span class="methodLine"><i>0368</i>         } finally {                                                                                                                                     
+</span><span class="methodLine"><i>0369</i>             graph.readUnlockAll();                                                                                                                      
+</span><span class="methodLine"><i>0370</i>         }                                                                                                                                               
+</span><span class="methodLine"><i>0371</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0372</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0373</i>     @Override                                                                                                                                           
+</span><span class="methodLine"><i>0374</i>     public boolean canAlgo() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 655</span>{                                                                                                                          
+</span><span class="methodLine"><i>0375</i>         return <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1396</span>graphModel <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1396</span>!=</span> null</span>;                                                                                                                      
+</span><span class="methodLine"><i>0376</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0377</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0378</i>     @Override                                                                                                                                           
+</span><span class="methodLine"><i>0379</i>     public void endAlgo() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 661</span>{                                                                                                                             
+</span><span class="methodLine"><i>0380</i>         graph.readLock();                                                                                                                               
+</span><span class="methodLine"><i>0381</i>         try {                                                                                                                                           
+</span><span class="methodLine"><i>0382</i>             for (Node n : graph.getNodes()) {                                                                                                           
+</span><span class="methodLine"><i>0383</i>                 n.setLayoutData(null);                                                                                                                  
+</span><span class="methodLine"><i>0384</i>             }                                                                                                                                           
+</span><span class="methodLine"><i>0385</i>             pool.shutdown();                                                                                                                            
+</span><span class="methodLine"><i>0386</i>         } finally {                                                                                                                                     
+</span><span class="methodLine"><i>0387</i>             graph.readUnlockAll();                                                                                                                      
+</span><span class="methodLine"><i>0388</i>         }                                                                                                                                               
+</span><span class="methodLine"><i>0389</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0390</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0391</i>     @Override                                                                                                                                           
+</span><span class="methodLine"><i>0392</i>     public LayoutProperty[] getProperties() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 667</span>{                                                                                                           
+</span><span class="methodLine"><i>0393</i>         List<LayoutProperty> properties = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2679</span>new ArrayList<>()</span>;                                                                                            
+</span><span class="methodLine"><i>0394</i>         final String FORCEATLAS2_TUNING = NbBundle.getMessage(getClass(), "ForceAtlas2.tuning");                                                        
+</span><span class="methodLine"><i>0395</i>         final String FORCEATLAS2_BEHAVIOR = NbBundle.getMessage(getClass(), "ForceAtlas2.behavior");                                                    
+</span><span class="methodLine"><i>0396</i>         final String FORCEATLAS2_PERFORMANCE = NbBundle.getMessage(getClass(), "ForceAtlas2.performance");                                              
+</span><span class="methodLine"><i>0397</i>         final String FORCEATLAS2_THREADS = NbBundle.getMessage(getClass(), "ForceAtlas2.threads");                                                      
+</span><span class="outsideLine"><i>0398</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0399</i>         try {                                                                                                                                           
+</span><span class="methodLine"><i>0400</i>             properties.add(LayoutProperty.createProperty(                                                                                               
+</span><span class="methodLine"><i>0401</i>                 this, Double.class,                                                                                                                     
+</span><span class="methodLine"><i>0402</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.scalingRatio.name"),                                                                       
+</span><span class="methodLine"><i>0403</i>                 FORCEATLAS2_TUNING,                                                                                                                     
+</span><span class="methodLine"><i>0404</i>                 "ForceAtlas2.scalingRatio.name",                                                                                                        
+</span><span class="methodLine"><i>0405</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.scalingRatio.desc"),                                                                       
+</span><span class="methodLine"><i>0406</i>                 "getScalingRatio", "setScalingRatio"));                                                                                                 
+</span><span class="outsideLine"><i>0407</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0408</i>             properties.add(LayoutProperty.createProperty(                                                                                               
+</span><span class="methodLine"><i>0409</i>                 this, Boolean.class,                                                                                                                    
+</span><span class="methodLine"><i>0410</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.strongGravityMode.name"),                                                                  
+</span><span class="methodLine"><i>0411</i>                 FORCEATLAS2_TUNING,                                                                                                                     
+</span><span class="methodLine"><i>0412</i>                 "ForceAtlas2.strongGravityMode.name",                                                                                                   
+</span><span class="methodLine"><i>0413</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.strongGravityMode.desc"),                                                                  
+</span><span class="methodLine"><i>0414</i>                 "isStrongGravityMode", "setStrongGravityMode"));                                                                                        
+</span><span class="outsideLine"><i>0415</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0416</i>             properties.add(LayoutProperty.createProperty(                                                                                               
+</span><span class="methodLine"><i>0417</i>                 this, Double.class,                                                                                                                     
+</span><span class="methodLine"><i>0418</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.gravity.name"),                                                                            
+</span><span class="methodLine"><i>0419</i>                 FORCEATLAS2_TUNING,                                                                                                                     
+</span><span class="methodLine"><i>0420</i>                 "ForceAtlas2.gravity.name",                                                                                                             
+</span><span class="methodLine"><i>0421</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.gravity.desc"),                                                                            
+</span><span class="methodLine"><i>0422</i>                 "getGravity", "setGravity"));                                                                                                           
+</span><span class="outsideLine"><i>0423</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0424</i>             properties.add(LayoutProperty.createProperty(                                                                                               
+</span><span class="methodLine"><i>0425</i>                 this, Boolean.class,                                                                                                                    
+</span><span class="methodLine"><i>0426</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.distributedAttraction.name"),                                                              
+</span><span class="methodLine"><i>0427</i>                 FORCEATLAS2_BEHAVIOR,                                                                                                                   
+</span><span class="methodLine"><i>0428</i>                 "ForceAtlas2.distributedAttraction.name",                                                                                               
+</span><span class="methodLine"><i>0429</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.distributedAttraction.desc"),                                                              
+</span><span class="methodLine"><i>0430</i>                 "isOutboundAttractionDistribution", "setOutboundAttractionDistribution"));                                                              
+</span><span class="outsideLine"><i>0431</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0432</i>             properties.add(LayoutProperty.createProperty(                                                                                               
+</span><span class="methodLine"><i>0433</i>                 this, Boolean.class,                                                                                                                    
+</span><span class="methodLine"><i>0434</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.linLogMode.name"),                                                                         
+</span><span class="methodLine"><i>0435</i>                 FORCEATLAS2_BEHAVIOR,                                                                                                                   
+</span><span class="methodLine"><i>0436</i>                 "ForceAtlas2.linLogMode.name",                                                                                                          
+</span><span class="methodLine"><i>0437</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.linLogMode.desc"),                                                                         
+</span><span class="methodLine"><i>0438</i>                 "isLinLogMode", "setLinLogMode"));                                                                                                      
+</span><span class="outsideLine"><i>0439</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0440</i>             properties.add(LayoutProperty.createProperty(                                                                                               
+</span><span class="methodLine"><i>0441</i>                 this, Boolean.class,                                                                                                                    
+</span><span class="methodLine"><i>0442</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.adjustSizes.name"),                                                                        
+</span><span class="methodLine"><i>0443</i>                 FORCEATLAS2_BEHAVIOR,                                                                                                                   
+</span><span class="methodLine"><i>0444</i>                 "ForceAtlas2.adjustSizes.name",                                                                                                         
+</span><span class="methodLine"><i>0445</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.adjustSizes.desc"),                                                                        
+</span><span class="methodLine"><i>0446</i>                 "isAdjustSizes", "setAdjustSizes"));                                                                                                    
+</span><span class="outsideLine"><i>0447</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0448</i>             properties.add(LayoutProperty.createProperty(                                                                                               
+</span><span class="methodLine"><i>0449</i>                 this, Double.class,                                                                                                                     
+</span><span class="methodLine"><i>0450</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.edgeWeightInfluence.name"),                                                                
+</span><span class="methodLine"><i>0451</i>                 FORCEATLAS2_BEHAVIOR,                                                                                                                   
+</span><span class="methodLine"><i>0452</i>                 "ForceAtlas2.edgeWeightInfluence.name",                                                                                                 
+</span><span class="methodLine"><i>0453</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.edgeWeightInfluence.desc"),                                                                
+</span><span class="methodLine"><i>0454</i>                 "getEdgeWeightInfluence", "setEdgeWeightInfluence"));                                                                                   
+</span><span class="outsideLine"><i>0455</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0456</i>             properties.add(LayoutProperty.createProperty(                                                                                               
+</span><span class="methodLine"><i>0457</i>                 this, Boolean.class,                                                                                                                    
+</span><span class="methodLine"><i>0458</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.normalizeEdgeWeights.name"),                                                               
+</span><span class="methodLine"><i>0459</i>                 FORCEATLAS2_BEHAVIOR,                                                                                                                   
+</span><span class="methodLine"><i>0460</i>                 "ForceAtlas2.normalizeEdgeWeights.name",                                                                                                
+</span><span class="methodLine"><i>0461</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.normalizeEdgeWeights.desc"),                                                               
+</span><span class="methodLine"><i>0462</i>                 "isNormalizeEdgeWeights", "setNormalizeEdgeWeights"));                                                                                  
+</span><span class="outsideLine"><i>0463</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0464</i>             properties.add(LayoutProperty.createProperty(                                                                                               
+</span><span class="methodLine"><i>0465</i>                 this, Double.class,                                                                                                                     
+</span><span class="methodLine"><i>0466</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.jitterTolerance.name"),                                                                    
+</span><span class="methodLine"><i>0467</i>                 FORCEATLAS2_PERFORMANCE,                                                                                                                
+</span><span class="methodLine"><i>0468</i>                 "ForceAtlas2.jitterTolerance.name",                                                                                                     
+</span><span class="methodLine"><i>0469</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.jitterTolerance.desc"),                                                                    
+</span><span class="methodLine"><i>0470</i>                 "getJitterTolerance", "setJitterTolerance"));                                                                                           
+</span><span class="outsideLine"><i>0471</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0472</i>             properties.add(LayoutProperty.createProperty(                                                                                               
+</span><span class="methodLine"><i>0473</i>                 this, Boolean.class,                                                                                                                    
+</span><span class="methodLine"><i>0474</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.barnesHutOptimization.name"),                                                              
+</span><span class="methodLine"><i>0475</i>                 FORCEATLAS2_PERFORMANCE,                                                                                                                
+</span><span class="methodLine"><i>0476</i>                 "ForceAtlas2.barnesHutOptimization.name",                                                                                               
+</span><span class="methodLine"><i>0477</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.barnesHutOptimization.desc"),                                                              
+</span><span class="methodLine"><i>0478</i>                 "isBarnesHutOptimize", "setBarnesHutOptimize"));                                                                                        
+</span><span class="outsideLine"><i>0479</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0480</i>             properties.add(LayoutProperty.createProperty(                                                                                               
+</span><span class="methodLine"><i>0481</i>                 this, Double.class,                                                                                                                     
+</span><span class="methodLine"><i>0482</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.barnesHutTheta.name"),                                                                     
+</span><span class="methodLine"><i>0483</i>                 FORCEATLAS2_PERFORMANCE,                                                                                                                
+</span><span class="methodLine"><i>0484</i>                 "ForceAtlas2.barnesHutTheta.name",                                                                                                      
+</span><span class="methodLine"><i>0485</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.barnesHutTheta.desc"),                                                                     
+</span><span class="methodLine"><i>0486</i>                 "getBarnesHutTheta", "setBarnesHutTheta"));                                                                                             
+</span><span class="outsideLine"><i>0487</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0488</i>             properties.add(LayoutProperty.createProperty(                                                                                               
+</span><span class="methodLine"><i>0489</i>                 this, Integer.class,                                                                                                                    
+</span><span class="methodLine"><i>0490</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.threads.name"),                                                                            
+</span><span class="methodLine"><i>0491</i>                 FORCEATLAS2_THREADS,                                                                                                                    
+</span><span class="methodLine"><i>0492</i>                 "ForceAtlas2.threads.name",                                                                                                             
+</span><span class="methodLine"><i>0493</i>                 NbBundle.getMessage(getClass(), "ForceAtlas2.threads.desc"),                                                                            
+</span><span class="methodLine"><i>0494</i>                 "getThreadsCount", "setThreadsCount"));                                                                                                 
+</span><span class="outsideLine"><i>0495</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0496</i>         } catch (Exception e) {                                                                                                                         
+</span><span class="methodLine"><i>0497</i>             Exceptions.printStackTrace(e);                                                                                                              
+</span><span class="methodLine"><i>0498</i>         }                                                                                                                                               
+</span><span class="outsideLine"><i>0499</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0500</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1279</span>return properties.toArray(new LayoutProperty[0]);</span>                                                                                               
+</span><span class="methodLine"><i>0501</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0502</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0503</i>     @Override                                                                                                                                           
+</span><span class="methodLine"><i>0504</i>     public void resetPropertiesValues() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 673</span>{                                                                                                               
+</span><span class="methodLine"><i>0505</i>         int nodesCount = 0;                                                                                                                             
+</span><span class="outsideLine"><i>0506</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0507</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1660</span>graphModel <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1660</span>!=</span> null</span>) {                                                                                                                       
+</span><span class="methodLine"><i>0508</i>             nodesCount = graphModel.getGraphVisible().getNodeCount();                                                                                   
+</span><span class="methodLine"><i>0509</i>         }                                                                                                                                               
+</span><span class="outsideLine"><i>0510</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0511</i>         // Tuning                                                                                                                                       
+</span><span class="methodLine"><i>0512</i>         if (nodesCount <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1664</span>>=</span> 100) {                                                                                                                        
+</span><span class="methodLine"><i>0513</i>             setScalingRatio(2.0);                                                                                                                       
+</span><span class="methodLine"><i>0514</i>         } else {                                                                                                                                        
+</span><span class="methodLine"><i>0515</i>             setScalingRatio(10.0);                                                                                                                      
+</span><span class="methodLine"><i>0516</i>         }                                                                                                                                               
+</span><span class="methodLine"><i>0517</i>         setStrongGravityMode(false);                                                                                                                    
+</span><span class="methodLine"><i>0518</i>         setGravity(1.);                                                                                                                                 
+</span><span class="outsideLine"><i>0519</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0520</i>         // Behavior                                                                                                                                     
+</span><span class="methodLine"><i>0521</i>         setOutboundAttractionDistribution(false);                                                                                                       
+</span><span class="methodLine"><i>0522</i>         setLinLogMode(false);                                                                                                                           
+</span><span class="methodLine"><i>0523</i>         setAdjustSizes(false);                                                                                                                          
+</span><span class="methodLine"><i>0524</i>         setEdgeWeightInfluence(1.);                                                                                                                     
+</span><span class="methodLine"><i>0525</i>         setNormalizeEdgeWeights(false);                                                                                                                 
+</span><span class="outsideLine"><i>0526</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0527</i>         // Performance                                                                                                                                  
+</span><span class="methodLine"><i>0528</i>         setJitterTolerance(1d);                                                                                                                         
+</span><span class="methodLine"><i>0529</i>         setBarnesHutOptimize(nodesCount <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2188</span>>=</span> 1000);                                                                                                       
+</span><span class="methodLine"><i>0530</i>         setBarnesHutTheta(1.2);                                                                                                                         
+</span><span class="methodLine"><i>0531</i>         setThreadsCount(Math.max(1, Runtime.getRuntime().availableProcessors() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2771</span>-</span> 1));                                                                   
+</span><span class="methodLine"><i>0532</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0533</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0534</i>     @Override                                                                                                                                           
+</span><span class="methodLine"><i>0535</i>     public LayoutBuilder getBuilder() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 679</span>{                                                                                                                 
+</span><span class="methodLine"><i>0536</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1296</span>return layoutBuilder;</span>                                                                                                                           
+</span><span class="methodLine"><i>0537</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0538</i>                                                                                                                                                         
+</span><span class="outsideLine"><i>0539</i>     @Override                                                                                                                                           
+</span><span class="methodLine"><i>0540</i>     public void setGraphModel(GraphModel graphModel) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { graphModel = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1120</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0541</i>         this.graphModel = graphModel;                                                                                                                   
+</span><span class="outsideLine"><i>0542</i>         // Trick: reset here to take the profile of the graph in account for default values                                                             
+</span><span class="methodLine"><i>0543</i>         resetPropertiesValues();                                                                                                                        
+</span><span class="methodLine"><i>0544</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0545</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0546</i>     public Double getBarnesHutTheta() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 690</span>{                                                                                                                 
+</span><span class="methodLine"><i>0547</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1302</span>return barnesHutTheta;</span>                                                                                                                          
+</span><span class="methodLine"><i>0548</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0549</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0550</i>     public void setBarnesHutTheta(Double barnesHutTheta) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { barnesHutTheta = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1129</span>{</span>                                                                                              
+</span><span class="methodLine"><i>0551</i>         this.barnesHutTheta = barnesHutTheta;                                                                                                           
+</span><span class="methodLine"><i>0552</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0553</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0554</i>     public Double getEdgeWeightInfluence() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 700</span>{                                                                                                            
+</span><span class="methodLine"><i>0555</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1306</span>return edgeWeightInfluence;</span>                                                                                                                     
+</span><span class="methodLine"><i>0556</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0557</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0558</i>     public void setEdgeWeightInfluence(Double edgeWeightInfluence) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { edgeWeightInfluence = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1137</span>{</span>                                                                                    
+</span><span class="methodLine"><i>0559</i>         this.edgeWeightInfluence = edgeWeightInfluence;                                                                                                 
+</span><span class="methodLine"><i>0560</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0561</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0562</i>     public Double getJitterTolerance() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 710</span>{                                                                                                                
+</span><span class="methodLine"><i>0563</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1310</span>return jitterTolerance;</span>                                                                                                                         
+</span><span class="methodLine"><i>0564</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0565</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0566</i>     public void setJitterTolerance(Double jitterTolerance) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { jitterTolerance = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1145</span>{</span>                                                                                            
+</span><span class="methodLine"><i>0567</i>         this.jitterTolerance = jitterTolerance;                                                                                                         
+</span><span class="methodLine"><i>0568</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0569</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0570</i>     public Boolean isLinLogMode() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 720</span>{                                                                                                                     
+</span><span class="methodLine"><i>0571</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1314</span>return linLogMode;</span>                                                                                                                              
+</span><span class="methodLine"><i>0572</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0573</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0574</i>     public void setLinLogMode(Boolean linLogMode) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { linLogMode = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1153</span>{</span>                                                                                                     
+</span><span class="methodLine"><i>0575</i>         this.linLogMode = linLogMode;                                                                                                                   
+</span><span class="methodLine"><i>0576</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0577</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0578</i>     public Boolean isNormalizeEdgeWeights() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 730</span>{                                                                                                           
+</span><span class="methodLine"><i>0579</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1318</span>return normalizeEdgeWeights;</span>                                                                                                                    
+</span><span class="methodLine"><i>0580</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0581</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0582</i>     public void setNormalizeEdgeWeights(Boolean normalizeEdgeWeights) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { normalizeEdgeWeights = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1161</span>{</span>                                                                                 
+</span><span class="methodLine"><i>0583</i>         this.normalizeEdgeWeights = normalizeEdgeWeights;                                                                                               
+</span><span class="methodLine"><i>0584</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0585</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0586</i>     public Double getScalingRatio() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 740</span>{                                                                                                                   
+</span><span class="methodLine"><i>0587</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1322</span>return scalingRatio;</span>                                                                                                                            
+</span><span class="methodLine"><i>0588</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0589</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0590</i>     public void setScalingRatio(Double scalingRatio) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { scalingRatio = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1169</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0591</i>         this.scalingRatio = scalingRatio;                                                                                                               
+</span><span class="methodLine"><i>0592</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0593</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0594</i>     public Boolean isStrongGravityMode() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 750</span>{                                                                                                              
+</span><span class="methodLine"><i>0595</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1326</span>return strongGravityMode;</span>                                                                                                                       
+</span><span class="methodLine"><i>0596</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0597</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0598</i>     public void setStrongGravityMode(Boolean strongGravityMode) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { strongGravityMode = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1177</span>{</span>                                                                                       
+</span><span class="methodLine"><i>0599</i>         this.strongGravityMode = strongGravityMode;                                                                                                     
+</span><span class="methodLine"><i>0600</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0601</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0602</i>     public Double getGravity() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 760</span>{                                                                                                                        
+</span><span class="methodLine"><i>0603</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1330</span>return gravity;</span>                                                                                                                                 
+</span><span class="methodLine"><i>0604</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0605</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0606</i>     public void setGravity(Double gravity) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { gravity = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1185</span>{</span>                                                                                                            
+</span><span class="methodLine"><i>0607</i>         this.gravity = gravity;                                                                                                                         
+</span><span class="methodLine"><i>0608</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0609</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0610</i>     public Integer getThreadsCount() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 770</span>{                                                                                                                  
+</span><span class="methodLine"><i>0611</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1334</span>return threadCount;</span>                                                                                                                             
+</span><span class="methodLine"><i>0612</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0613</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0614</i>     public void setThreadsCount(Integer threadCount) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { threadCount = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1193</span>{</span>                                                                                                  
+</span><span class="methodLine"><i>0615</i>         this.threadCount = Math.max(1, threadCount);                                                                                                    
+</span><span class="methodLine"><i>0616</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0617</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0618</i>     public Boolean isOutboundAttractionDistribution() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 780</span>{                                                                                                 
+</span><span class="methodLine"><i>0619</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1338</span>return outboundAttractionDistribution;</span>                                                                                                          
+</span><span class="methodLine"><i>0620</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0621</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0622</i>     public void setOutboundAttractionDistribution(Boolean outboundAttractionDistribution) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { outboundAttractionDistribution = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1201</span>{</span>                                                             
+</span><span class="methodLine"><i>0623</i>         this.outboundAttractionDistribution = outboundAttractionDistribution;                                                                           
+</span><span class="methodLine"><i>0624</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0625</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0626</i>     public Boolean isAdjustSizes() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 790</span>{                                                                                                                    
+</span><span class="methodLine"><i>0627</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1342</span>return adjustSizes;</span>                                                                                                                             
+</span><span class="methodLine"><i>0628</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0629</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0630</i>     public void setAdjustSizes(Boolean adjustSizes) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { adjustSizes = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1209</span>{</span>                                                                                                   
+</span><span class="methodLine"><i>0631</i>         this.adjustSizes = adjustSizes;                                                                                                                 
+</span><span class="methodLine"><i>0632</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0633</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0634</i>     public Boolean isBarnesHutOptimize() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 800</span>{                                                                                                              
+</span><span class="methodLine"><i>0635</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1346</span>return barnesHutOptimize;</span>                                                                                                                       
+</span><span class="methodLine"><i>0636</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0637</i>                                                                                                                                                         
+</span><span class="methodLine"><i>0638</i>     public void setBarnesHutOptimize(Boolean barnesHutOptimize) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { barnesHutOptimize = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1217</span>{</span>                                                                                       
+</span><span class="methodLine"><i>0639</i>         this.barnesHutOptimize = barnesHutOptimize;                                                                                                     
+</span><span class="methodLine"><i>0640</i>     }</span>                                                                                                                                                   
+</span><span class="outsideLine"><i>0641</i> }                                                                                                                                                       
+</span><span class="outsideLine"><i>0642</i>                                                                                                                                                         </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

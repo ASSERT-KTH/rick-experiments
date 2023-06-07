@@ -1,0 +1,163 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.78</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                          
+</span><span class="outsideLine"><i>0002</i> Copyright 2008-2011 Gephi                                                                   
+</span><span class="outsideLine"><i>0003</i> Authors : Mathieu Bastian                                                                   
+</span><span class="outsideLine"><i>0004</i> Website : http://www.gephi.org                                                              
+</span><span class="outsideLine"><i>0005</i>                                                                                             
+</span><span class="outsideLine"><i>0006</i> This file is part of Gephi.                                                                 
+</span><span class="outsideLine"><i>0007</i>                                                                                             
+</span><span class="outsideLine"><i>0008</i> DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.                                    
+</span><span class="outsideLine"><i>0009</i>                                                                                             
+</span><span class="outsideLine"><i>0010</i> Copyright 2011 Gephi Consortium. All rights reserved.                                       
+</span><span class="outsideLine"><i>0011</i>                                                                                             
+</span><span class="outsideLine"><i>0012</i> The contents of this file are subject to the terms of either the GNU                        
+</span><span class="outsideLine"><i>0013</i> General Public License Version 3 only ("GPL") or the Common                                 
+</span><span class="outsideLine"><i>0014</i> Development and Distribution License("CDDL") (collectively, the                             
+</span><span class="outsideLine"><i>0015</i> "License"). You may not use this file except in compliance with the                         
+</span><span class="outsideLine"><i>0016</i> License. You can obtain a copy of the License at                                            
+</span><span class="outsideLine"><i>0017</i> http://gephi.org/about/legal/license-notice/                                                
+</span><span class="outsideLine"><i>0018</i> or /cddl-1.0.txt and /gpl-3.0.txt. See the License for the                                  
+</span><span class="outsideLine"><i>0019</i> specific language governing permissions and limitations under the                           
+</span><span class="outsideLine"><i>0020</i> License.  When distributing the software, include this License Header                       
+</span><span class="outsideLine"><i>0021</i> Notice in each file and include the License files at                                        
+</span><span class="outsideLine"><i>0022</i> /cddl-1.0.txt and /gpl-3.0.txt. If applicable, add the following below the                  
+</span><span class="outsideLine"><i>0023</i> License Header, with the fields enclosed by brackets [] replaced by                         
+</span><span class="outsideLine"><i>0024</i> your own identifying information:                                                           
+</span><span class="outsideLine"><i>0025</i> "Portions Copyrighted [year] [name of copyright owner]"                                     
+</span><span class="outsideLine"><i>0026</i>                                                                                             
+</span><span class="outsideLine"><i>0027</i> If you wish your version of this file to be governed by only the CDDL                       
+</span><span class="outsideLine"><i>0028</i> or only the GPL Version 3, indicate your decision by adding                                 
+</span><span class="outsideLine"><i>0029</i> "[Contributor] elects to include this software in this distribution                         
+</span><span class="outsideLine"><i>0030</i> under the [CDDL or GPL Version 3] license." If you do not indicate a                        
+</span><span class="outsideLine"><i>0031</i> single choice of license, a recipient has the option to distribute                          
+</span><span class="outsideLine"><i>0032</i> your version of this file under either the CDDL, the GPL Version 3 or                       
+</span><span class="outsideLine"><i>0033</i> to extend the choice of license to its licensees as provided above.                         
+</span><span class="outsideLine"><i>0034</i> However, if you add GPL Version 3 code and therefore, elected the GPL                       
+</span><span class="outsideLine"><i>0035</i> Version 3 license, then the option applies only if the new code is                          
+</span><span class="outsideLine"><i>0036</i> made subject to such option by the copyright holder.                                        
+</span><span class="outsideLine"><i>0037</i>                                                                                             
+</span><span class="outsideLine"><i>0038</i> Contributor(s):                                                                             
+</span><span class="outsideLine"><i>0039</i>                                                                                             
+</span><span class="outsideLine"><i>0040</i> Portions Copyrighted 2011 Gephi Consortium.                                                 
+</span><span class="outsideLine"><i>0041</i>  */                                                                                         
+</span><span class="outsideLine"><i>0042</i>                                                                                             
+</span><span class="outsideLine"><i>0043</i> package org.gephi.preview.types;                                                            
+</span><span class="outsideLine"><i>0044</i>                                                                                             
+</span><span class="outsideLine"><i>0045</i> import java.awt.Color;                                                                      
+</span><span class="outsideLine"><i>0046</i>                                                                                             
+</span><span class="outsideLine"><i>0047</i> /**                                                                                         
+</span><span class="outsideLine"><i>0048</i>  * An edge color type. The color of an edge can be:                                         
+</span><span class="outsideLine"><i>0049</i>  * <ul>                                                                                     
+</span><span class="outsideLine"><i>0050</i>  * <li>SOURCE: The source node's color</li>                                                 
+</span><span class="outsideLine"><i>0051</i>  * <li>TARGET: The target node's color</li>                                                 
+</span><span class="outsideLine"><i>0052</i>  * <li>MIXED: An average of source and target color</li>                                    
+</span><span class="outsideLine"><i>0053</i>  * <li>CUSTOM: A custom color</li>                                                          
+</span><span class="outsideLine"><i>0054</i>  * <li>ORIGINAL: The original edge color, if exists</li></ul>                               
+</span><span class="outsideLine"><i>0055</i>  *                                                                                          
+</span><span class="outsideLine"><i>0056</i>  * @author Mathieu Bastian                                                                  
+</span><span class="outsideLine"><i>0057</i>  */                                                                                         
+</span><span class="outsideLine"><i>0058</i> public class EdgeColor {                                                                    
+</span><span class="outsideLine"><i>0059</i>                                                                                             
+</span><span class="outsideLine"><i>0060</i>     private final Mode mode;                                                                
+</span><span class="outsideLine"><i>0061</i>     private final Color customColor;                                                        
+</span><span class="outsideLine"><i>0062</i>                                                                                             
+</span><span class="methodLine"><i>0063</i>     public EdgeColor(Mode mode) {                                                           
+</span><span class="methodLine"><i>0064</i>         customColor = Color.BLACK;                                                          
+</span><span class="methodLine"><i>0065</i>         this.mode = mode;                                                                   
+</span><span class="methodLine"><i>0066</i>     }                                                                                       
+</span><span class="outsideLine"><i>0067</i>                                                                                             
+</span><span class="methodLine"><i>0068</i>     public EdgeColor(Color customColor) {                                                   
+</span><span class="methodLine"><i>0069</i>         this.customColor = customColor;                                                     
+</span><span class="methodLine"><i>0070</i>         this.mode = Mode.CUSTOM;                                                            
+</span><span class="methodLine"><i>0071</i>     }                                                                                       
+</span><span class="outsideLine"><i>0072</i>                                                                                             
+</span><span class="methodLine"><i>0073</i>     public Mode getMode() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 98</span>{                                                                 
+</span><span class="methodLine"><i>0074</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 196</span>return mode;</span>                                                                        
+</span><span class="methodLine"><i>0075</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0076</i>                                                                                             
+</span><span class="methodLine"><i>0077</i>     public Color getCustomColor() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 103</span>{                                                         
+</span><span class="methodLine"><i>0078</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 197</span>return customColor;</span>                                                                 
+</span><span class="methodLine"><i>0079</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0080</i>                                                                                             
+</span><span class="methodLine"><i>0081</i>     public Color getColor(Color edgeColor, Color sourceColor, Color targetColor) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { edgeColor = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 177</span>{</span>          
+</span><span class="methodLine"><i>0082</i>         switch (mode) {                                                                     
+</span><span class="methodLine"><i>0083</i>             case ORIGINAL:                                                                  
+</span><span class="methodLine"><i>0084</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 285</span>return <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 352</span>edgeColor <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 352</span>!=</span> null</span> ? edgeColor : Color.BLACK;</span>                         
+</span><span class="methodLine"><i>0085</i>             case SOURCE:                                                                    
+</span><span class="methodLine"><i>0086</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 289</span>return sourceColor;</span>                                                         
+</span><span class="methodLine"><i>0087</i>             case TARGET:                                                                    
+</span><span class="methodLine"><i>0088</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 293</span>return targetColor;</span>                                                         
+</span><span class="methodLine"><i>0089</i>             case MIXED:                                                                     
+</span><span class="methodLine"><i>0090</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 297</span>return <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 363</span>new Color((int) ((sourceColor.getRed() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 469</span>+</span> targetColor.getRed()) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 434</span>/</span> 2f),
+</span><span class="methodLine"><i>0091</i>                     (int) ((sourceColor.getGreen() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 473</span>+</span> targetColor.getGreen()) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 438</span>/</span> 2f),         
+</span><span class="methodLine"><i>0092</i>                     (int) ((sourceColor.getBlue() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 477</span>+</span> targetColor.getBlue()) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 442</span>/</span> 2f),           
+</span><span class="methodLine"><i>0093</i>                     (int) ((sourceColor.getAlpha() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 481</span>+</span> targetColor.getAlpha()) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 446</span>/</span> 2f))</span>;</span>        
+</span><span class="methodLine"><i>0094</i>             case CUSTOM:                                                                    
+</span><span class="methodLine"><i>0095</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 301</span>return customColor;</span>                                                         
+</span><span class="methodLine"><i>0096</i>         }                                                                                   
+</span><span class="methodLine"><i>0097</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 205</span>return null;</span>                                                                        
+</span><span class="methodLine"><i>0098</i>     }</span>                                                                                       
+</span><span class="outsideLine"><i>0099</i>                                                                                             
+</span><span class="outsideLine"><i>0100</i>     public enum Mode {                                                                      
+</span><span class="outsideLine"><i>0101</i>                                                                                             
+</span><span class="outsideLine"><i>0102</i>         SOURCE, TARGET, MIXED, CUSTOM, ORIGINAL                                             
+</span><span class="outsideLine"><i>0103</i>     }                                                                                       
+</span><span class="outsideLine"><i>0104</i> }                                                                                           
+</span><span class="outsideLine"><i>0105</i>                                                                                             </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

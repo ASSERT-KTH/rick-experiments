@@ -1,0 +1,4 @@
+ProportionalDisplacement.ProportionalDisplacement( float step );0;1;3
+ProportionalDisplacement.assertValue( float value );5;2;4
+ProportionalDisplacement.moveNode( Node node , ForceVector forceData );6;3;12
+ProportionalDisplacement.setStep( float step );1;1;3

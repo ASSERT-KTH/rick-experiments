@@ -1,0 +1,641 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.53</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                                                       
+</span><span class="outsideLine"><i>0002</i>  Copyright 2008-2010 Gephi                                                                                               
+</span><span class="outsideLine"><i>0003</i>  Authors : Mathieu Bastian <mathieu.bastian@gephi.org>                                                                   
+</span><span class="outsideLine"><i>0004</i>  Website : http://www.gephi.org                                                                                          
+</span><span class="outsideLine"><i>0005</i>                                                                                                                          
+</span><span class="outsideLine"><i>0006</i>  This file is part of Gephi.                                                                                             
+</span><span class="outsideLine"><i>0007</i>                                                                                                                          
+</span><span class="outsideLine"><i>0008</i>  DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.                                                                
+</span><span class="outsideLine"><i>0009</i>                                                                                                                          
+</span><span class="outsideLine"><i>0010</i>  Copyright 2011 Gephi Consortium. All rights reserved.                                                                   
+</span><span class="outsideLine"><i>0011</i>                                                                                                                          
+</span><span class="outsideLine"><i>0012</i>  The contents of this file are subject to the terms of either the GNU                                                    
+</span><span class="outsideLine"><i>0013</i>  General Public License Version 3 only ("GPL") or the Common                                                             
+</span><span class="outsideLine"><i>0014</i>  Development and Distribution License("CDDL") (collectively, the                                                         
+</span><span class="outsideLine"><i>0015</i>  "License"). You may not use this file except in compliance with the                                                     
+</span><span class="outsideLine"><i>0016</i>  License. You can obtain a copy of the License at                                                                        
+</span><span class="outsideLine"><i>0017</i>  http://gephi.org/about/legal/license-notice/                                                                            
+</span><span class="outsideLine"><i>0018</i>  or /cddl-1.0.txt and /gpl-3.0.txt. See the License for the                                                              
+</span><span class="outsideLine"><i>0019</i>  specific language governing permissions and limitations under the                                                       
+</span><span class="outsideLine"><i>0020</i>  License.  When distributing the software, include this License Header                                                   
+</span><span class="outsideLine"><i>0021</i>  Notice in each file and include the License files at                                                                    
+</span><span class="outsideLine"><i>0022</i>  /cddl-1.0.txt and /gpl-3.0.txt. If applicable, add the following below the                                              
+</span><span class="outsideLine"><i>0023</i>  License Header, with the fields enclosed by brackets [] replaced by                                                     
+</span><span class="outsideLine"><i>0024</i>  your own identifying information:                                                                                       
+</span><span class="outsideLine"><i>0025</i>  "Portions Copyrighted [year] [name of copyright owner]"                                                                 
+</span><span class="outsideLine"><i>0026</i>                                                                                                                          
+</span><span class="outsideLine"><i>0027</i>  If you wish your version of this file to be governed by only the CDDL                                                   
+</span><span class="outsideLine"><i>0028</i>  or only the GPL Version 3, indicate your decision by adding                                                             
+</span><span class="outsideLine"><i>0029</i>  "[Contributor] elects to include this software in this distribution                                                     
+</span><span class="outsideLine"><i>0030</i>  under the [CDDL or GPL Version 3] license." If you do not indicate a                                                    
+</span><span class="outsideLine"><i>0031</i>  single choice of license, a recipient has the option to distribute                                                      
+</span><span class="outsideLine"><i>0032</i>  your version of this file under either the CDDL, the GPL Version 3 or                                                   
+</span><span class="outsideLine"><i>0033</i>  to extend the choice of license to its licensees as provided above.                                                     
+</span><span class="outsideLine"><i>0034</i>  However, if you add GPL Version 3 code and therefore, elected the GPL                                                   
+</span><span class="outsideLine"><i>0035</i>  Version 3 license, then the option applies only if the new code is                                                      
+</span><span class="outsideLine"><i>0036</i>  made subject to such option by the copyright holder.                                                                    
+</span><span class="outsideLine"><i>0037</i>                                                                                                                          
+</span><span class="outsideLine"><i>0038</i>  Contributor(s):                                                                                                         
+</span><span class="outsideLine"><i>0039</i>                                                                                                                          
+</span><span class="outsideLine"><i>0040</i>  Portions Copyrighted 2011 Gephi Consortium.                                                                             
+</span><span class="outsideLine"><i>0041</i>  */                                                                                                                      
+</span><span class="outsideLine"><i>0042</i>                                                                                                                          
+</span><span class="outsideLine"><i>0043</i> package org.gephi.io.importer.impl;                                                                                      
+</span><span class="outsideLine"><i>0044</i>                                                                                                                          
+</span><span class="outsideLine"><i>0045</i> import java.io.File;                                                                                                     
+</span><span class="outsideLine"><i>0046</i> import java.io.FileNotFoundException;                                                                                    
+</span><span class="outsideLine"><i>0047</i> import java.io.FileOutputStream;                                                                                         
+</span><span class="outsideLine"><i>0048</i> import java.io.IOException;                                                                                              
+</span><span class="outsideLine"><i>0049</i> import java.io.InputStream;                                                                                              
+</span><span class="outsideLine"><i>0050</i> import java.io.Reader;                                                                                                   
+</span><span class="outsideLine"><i>0051</i> import java.util.ArrayList;                                                                                              
+</span><span class="outsideLine"><i>0052</i> import java.util.Arrays;                                                                                                 
+</span><span class="outsideLine"><i>0053</i> import java.util.stream.Collectors;                                                                                      
+</span><span class="outsideLine"><i>0054</i> import org.gephi.io.importer.api.Container;                                                                              
+</span><span class="outsideLine"><i>0055</i> import org.gephi.io.importer.api.ContainerUnloader;                                                                      
+</span><span class="outsideLine"><i>0056</i> import org.gephi.io.importer.api.Database;                                                                               
+</span><span class="outsideLine"><i>0057</i> import org.gephi.io.importer.api.FileType;                                                                               
+</span><span class="outsideLine"><i>0058</i> import org.gephi.io.importer.api.ImportController;                                                                       
+</span><span class="outsideLine"><i>0059</i> import org.gephi.io.importer.api.ImportUtils;                                                                            
+</span><span class="outsideLine"><i>0060</i> import org.gephi.io.importer.api.Report;                                                                                 
+</span><span class="outsideLine"><i>0061</i> import org.gephi.io.importer.spi.DatabaseImporter;                                                                       
+</span><span class="outsideLine"><i>0062</i> import org.gephi.io.importer.spi.DatabaseImporterBuilder;                                                                
+</span><span class="outsideLine"><i>0063</i> import org.gephi.io.importer.spi.FileImporter;                                                                           
+</span><span class="outsideLine"><i>0064</i> import org.gephi.io.importer.spi.FileImporterBuilder;                                                                    
+</span><span class="outsideLine"><i>0065</i> import org.gephi.io.importer.spi.Importer;                                                                               
+</span><span class="outsideLine"><i>0066</i> import org.gephi.io.importer.spi.ImporterUI;                                                                             
+</span><span class="outsideLine"><i>0067</i> import org.gephi.io.importer.spi.ImporterWizardUI;                                                                       
+</span><span class="outsideLine"><i>0068</i> import org.gephi.io.importer.spi.WizardImporter;                                                                         
+</span><span class="outsideLine"><i>0069</i> import org.gephi.io.importer.spi.WizardImporterBuilder;                                                                  
+</span><span class="outsideLine"><i>0070</i> import org.gephi.io.processor.spi.Processor;                                                                             
+</span><span class="outsideLine"><i>0071</i> import org.gephi.io.processor.spi.Scaler;                                                                                
+</span><span class="outsideLine"><i>0072</i> import org.gephi.project.api.Workspace;                                                                                  
+</span><span class="outsideLine"><i>0073</i> import org.gephi.utils.TempDirUtils;                                                                                     
+</span><span class="outsideLine"><i>0074</i> import org.openide.filesystems.FileObject;                                                                               
+</span><span class="outsideLine"><i>0075</i> import org.openide.filesystems.FileUtil;                                                                                 
+</span><span class="outsideLine"><i>0076</i> import org.openide.util.Lookup;                                                                                          
+</span><span class="outsideLine"><i>0077</i> import org.openide.util.io.ReaderInputStream;                                                                            
+</span><span class="outsideLine"><i>0078</i> import org.openide.util.lookup.ServiceProvider;                                                                          
+</span><span class="outsideLine"><i>0079</i>                                                                                                                          
+</span><span class="outsideLine"><i>0080</i> /**                                                                                                                      
+</span><span class="outsideLine"><i>0081</i>  * @author Mathieu Bastian                                                                                               
+</span><span class="outsideLine"><i>0082</i>  * @author Sebastien Heymann                                                                                             
+</span><span class="outsideLine"><i>0083</i>  */                                                                                                                      
+</span><span class="outsideLine"><i>0084</i> @ServiceProvider(service = ImportController.class)                                                                       
+</span><span class="outsideLine"><i>0085</i> public class ImportControllerImpl implements ImportController {                                                          
+</span><span class="outsideLine"><i>0086</i>                                                                                                                          
+</span><span class="outsideLine"><i>0087</i>     private final FileImporterBuilder[] fileImporterBuilders;                                                            
+</span><span class="outsideLine"><i>0088</i>     private final DatabaseImporterBuilder[] databaseImporterBuilders;                                                    
+</span><span class="outsideLine"><i>0089</i>     private final WizardImporterBuilder[] wizardImporterBuilders;                                                        
+</span><span class="outsideLine"><i>0090</i>     private final ImporterUI[] uis;                                                                                      
+</span><span class="outsideLine"><i>0091</i>     private final ImporterWizardUI[] wizardUis;                                                                          
+</span><span class="outsideLine"><i>0092</i>                                                                                                                          
+</span><span class="methodLine"><i>0093</i>     public ImportControllerImpl() {                                                                                      
+</span><span class="outsideLine"><i>0094</i>         //Get FileFormatImporters                                                                                        
+</span><span class="methodLine"><i>0095</i>         fileImporterBuilders =                                                                                           
+</span><span class="methodLine"><i>0096</i>             Lookup.getDefault().lookupAll(FileImporterBuilder.class).toArray(new FileImporterBuilder[0]);                
+</span><span class="outsideLine"><i>0097</i>                                                                                                                          
+</span><span class="outsideLine"><i>0098</i>         //Get DatabaseImporters                                                                                          
+</span><span class="methodLine"><i>0099</i>         databaseImporterBuilders =                                                                                       
+</span><span class="methodLine"><i>0100</i>             Lookup.getDefault().lookupAll(DatabaseImporterBuilder.class).toArray(new DatabaseImporterBuilder[0]);        
+</span><span class="outsideLine"><i>0101</i>                                                                                                                          
+</span><span class="outsideLine"><i>0102</i>         //Get Wizards                                                                                                    
+</span><span class="methodLine"><i>0103</i>         wizardImporterBuilders =                                                                                         
+</span><span class="methodLine"><i>0104</i>             Lookup.getDefault().lookupAll(WizardImporterBuilder.class).toArray(new WizardImporterBuilder[0]);            
+</span><span class="outsideLine"><i>0105</i>                                                                                                                          
+</span><span class="outsideLine"><i>0106</i>         //Get UIS                                                                                                        
+</span><span class="methodLine"><i>0107</i>         uis = Lookup.getDefault().lookupAll(ImporterUI.class).toArray(new ImporterUI[0]);                                
+</span><span class="methodLine"><i>0108</i>         wizardUis = Lookup.getDefault().lookupAll(ImporterWizardUI.class).toArray(new ImporterWizardUI[0]);              
+</span><span class="methodLine"><i>0109</i>     }                                                                                                                    
+</span><span class="outsideLine"><i>0110</i>                                                                                                                          
+</span><span class="outsideLine"><i>0111</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0112</i>     public FileImporter getFileImporter(File file) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { file = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 980</span>{</span>                                                                     
+</span><span class="methodLine"><i>0113</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1573</span>file <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1573</span>!=</span> null</span>) {                                                                                              
+</span><span class="methodLine"><i>0114</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2104</span>return getFileImporter(FileUtil.toFileObject(file));</span>                                                         
+</span><span class="methodLine"><i>0115</i>         }                                                                                                                
+</span><span class="outsideLine"><i>0116</i>                                                                                                                          
+</span><span class="methodLine"><i>0117</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1172</span>return null;</span>                                                                                                     
+</span><span class="methodLine"><i>0118</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0119</i>                                                                                                                          
+</span><span class="outsideLine"><i>0120</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0121</i>     public FileImporter getFileImporter(FileObject fileObject) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { fileObject = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 987</span>{</span>                                                         
+</span><span class="methodLine"><i>0122</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1579</span>fileObject <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1579</span>!=</span> null</span>) {                                                                                        
+</span><span class="methodLine"><i>0123</i>             fileObject = ImportUtils.getArchivedFile(fileObject);   //Unzip and return content file                      
+</span><span class="methodLine"><i>0124</i>             FileImporterBuilder builder = getMatchingImporter(fileObject);                                               
+</span><span class="methodLine"><i>0125</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2908</span>fileObject <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2908</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2647</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2910</span>builder <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2910</span>!=</span> null</span>) {                                                                 
+</span><span class="methodLine"><i>0126</i>                 FileImporter fi = builder.buildImporter();                                                               
+</span><span class="methodLine"><i>0127</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3208</span>return fi;</span>                                                                                               
+</span><span class="methodLine"><i>0128</i>             }                                                                                                            
+</span><span class="methodLine"><i>0129</i>         }                                                                                                                
+</span><span class="outsideLine"><i>0130</i>                                                                                                                          
+</span><span class="methodLine"><i>0131</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1177</span>return null;</span>                                                                                                     
+</span><span class="methodLine"><i>0132</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0133</i>                                                                                                                          
+</span><span class="outsideLine"><i>0134</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0135</i>     public FileImporter getFileImporter(String importerName) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { importerName = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 994</span>{</span>                                                           
+</span><span class="methodLine"><i>0136</i>         FileImporterBuilder builder = getMatchingImporter(importerName);                                                 
+</span><span class="methodLine"><i>0137</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1587</span>builder <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1587</span>!=</span> null</span>) {                                                                                           
+</span><span class="methodLine"><i>0138</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2118</span>return builder.buildImporter();</span>                                                                              
+</span><span class="methodLine"><i>0139</i>         }                                                                                                                
+</span><span class="methodLine"><i>0140</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1183</span>return null;</span>                                                                                                     
+</span><span class="methodLine"><i>0141</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0142</i>                                                                                                                          
+</span><span class="outsideLine"><i>0143</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0144</i>     public Container importFile(File file) throws FileNotFoundException <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { file = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1003</span>{</span>                                                
+</span><span class="methodLine"><i>0145</i>         FileObject fileObject = FileUtil.toFileObject(file);                                                             
+</span><span class="methodLine"><i>0146</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1595</span>fileObject <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1595</span>!=</span> null</span>) {                                                                                        
+</span><span class="methodLine"><i>0147</i>             fileObject = ImportUtils.getArchivedFile(fileObject);   //Unzip and return content file                      
+</span><span class="methodLine"><i>0148</i>             file = FileUtil.toFile(fileObject);                                                                          
+</span><span class="methodLine"><i>0149</i>             FileImporterBuilder builder = getMatchingImporter(fileObject);                                               
+</span><span class="methodLine"><i>0150</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2932</span>fileObject <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2932</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2668</span>&&</span> <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2934</span>builder <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2934</span>!=</span> null</span>) {                                                                 
+</span><span class="methodLine"><i>0151</i>                 Container c = importFile(fileObject.getInputStream(), builder.buildImporter(), file);                    
+</span><span class="methodLine"><i>0152</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3235</span>return c;</span>                                                                                                
+</span><span class="methodLine"><i>0153</i>             }                                                                                                            
+</span><span class="methodLine"><i>0154</i>         }                                                                                                                
+</span><span class="methodLine"><i>0155</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1189</span>return null;</span>                                                                                                     
+</span><span class="methodLine"><i>0156</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0157</i>                                                                                                                          
+</span><span class="outsideLine"><i>0158</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0159</i>     public Container importFile(File file, FileImporter importer) throws FileNotFoundException <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { file = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1014</span>{</span>                         
+</span><span class="methodLine"><i>0160</i>         FileObject fileObject = FileUtil.toFileObject(file);                                                             
+</span><span class="methodLine"><i>0161</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1604</span>fileObject <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1604</span>!=</span> null</span>) {                                                                                        
+</span><span class="methodLine"><i>0162</i>             fileObject = ImportUtils.getArchivedFile(fileObject);   //Unzip and return content file                      
+</span><span class="methodLine"><i>0163</i>             file = FileUtil.toFile(fileObject);                                                                          
+</span><span class="methodLine"><i>0164</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2679</span>fileObject <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2679</span>!=</span> null</span>) {                                                                                    
+</span><span class="methodLine"><i>0165</i>                 Container c = importFile(fileObject.getInputStream(), importer, file);                                   
+</span><span class="methodLine"><i>0166</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3251</span>return c;</span>                                                                                                
+</span><span class="methodLine"><i>0167</i>             }                                                                                                            
+</span><span class="methodLine"><i>0168</i>         }                                                                                                                
+</span><span class="methodLine"><i>0169</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1197</span>return null;</span>                                                                                                     
+</span><span class="methodLine"><i>0170</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0171</i>                                                                                                                          
+</span><span class="outsideLine"><i>0172</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0173</i>     public Container importFile(Reader reader, FileImporter importer) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { reader = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1024</span>{</span>                                                  
+</span><span class="methodLine"><i>0174</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1203</span>return importFile(reader, importer, null);</span>                                                                       
+</span><span class="methodLine"><i>0175</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0176</i>                                                                                                                          
+</span><span class="methodLine"><i>0177</i>     public Container importFile(Reader reader, FileImporter importer, File file) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { reader = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1033</span>{</span>                                       
+</span><span class="outsideLine"><i>0178</i>         //Create Container                                                                                               
+</span><span class="methodLine"><i>0179</i>         final Container container = Lookup.getDefault().lookup(Container.Factory.class).newContainer();                  
+</span><span class="outsideLine"><i>0180</i>                                                                                                                          
+</span><span class="outsideLine"><i>0181</i>         //Report                                                                                                         
+</span><span class="methodLine"><i>0182</i>         Report report = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2687</span>new Report()</span>;                                                                                    
+</span><span class="methodLine"><i>0183</i>         container.setReport(report);                                                                                     
+</span><span class="outsideLine"><i>0184</i>                                                                                                                          
+</span><span class="methodLine"><i>0185</i>         if (importer instanceof FileImporter.FileAware) {                                                                
+</span><span class="methodLine"><i>0186</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2691</span>file <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2691</span>==</span> null</span>) {                                                                                          
+</span><span class="outsideLine"><i>0187</i>                 //There is no source file but the importer needs it, create temporary copy:                              
+</span><span class="methodLine"><i>0188</i>                 try {                                                                                                    
+</span><span class="methodLine"><i>0189</i>                     file = TempDirUtils.createTempDir().createFile("file_copy");                                         
+</span><span class="methodLine"><i>0190</i>                     try (FileOutputStream fos = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4394</span>new FileOutputStream(file)</span>) {                                            
+</span><span class="methodLine"><i>0191</i>                         FileUtil.copy(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4523</span>new ReaderInputStream(reader, "UTF-8")</span>, fos);                                      
+</span><span class="methodLine"><i>0192</i>                     }                                                                                                    
+</span><span class="methodLine"><i>0193</i>                 } catch (IOException ex) {                                                                               
+</span><span class="methodLine"><i>0194</i>                     throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4259</span>new RuntimeException(ex)</span>;                                                                      
+</span><span class="methodLine"><i>0195</i>                 }                                                                                                        
+</span><span class="methodLine"><i>0196</i>             }                                                                                                            
+</span><span class="outsideLine"><i>0197</i>                                                                                                                          
+</span><span class="methodLine"><i>0198</i>             ((FileImporter.FileAware) importer).setFile(file);                                                           
+</span><span class="methodLine"><i>0199</i>         } else {                                                                                                         
+</span><span class="methodLine"><i>0200</i>             importer.setReader(reader);                                                                                  
+</span><span class="methodLine"><i>0201</i>         }                                                                                                                
+</span><span class="outsideLine"><i>0202</i>                                                                                                                          
+</span><span class="methodLine"><i>0203</i>         try {                                                                                                            
+</span><span class="methodLine"><i>0204</i>             if (importer.execute(container.getLoader())) {                                                               
+</span><span class="methodLine"><i>0205</i>                 if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3768</span>importer.getReport() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3768</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3546</span>&&</span> importer.getReport() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3770</span>!=</span> report) {                                    
+</span><span class="methodLine"><i>0206</i>                     report.append(importer.getReport());                                                                 
+</span><span class="methodLine"><i>0207</i>                 }                                                                                                        
+</span><span class="methodLine"><i>0208</i>                 report.close();                                                                                          
+</span><span class="methodLine"><i>0209</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2981</span>return container;</span>                                                                                        
+</span><span class="methodLine"><i>0210</i>             }                                                                                                            
+</span><span class="methodLine"><i>0211</i>         } catch (RuntimeException ex) {                                                                                  
+</span><span class="methodLine"><i>0212</i>             throw ex;                                                                                                    
+</span><span class="methodLine"><i>0213</i>         } catch (Exception ex) {                                                                                         
+</span><span class="methodLine"><i>0214</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2707</span>new RuntimeException(ex)</span>;                                                                              
+</span><span class="methodLine"><i>0215</i>         } finally {                                                                                                      
+</span><span class="methodLine"><i>0216</i>             try {                                                                                                        
+</span><span class="methodLine"><i>0217</i>                 reader.close();                                                                                          
+</span><span class="methodLine"><i>0218</i>                 report.close();                                                                                          
+</span><span class="methodLine"><i>0219</i>             } catch (IOException ex) {                                                                                   
+</span><span class="outsideLine"><i>0220</i>                 //NOOP                                                                                                   
+</span><span class="methodLine"><i>0221</i>             }                                                                                                            
+</span><span class="methodLine"><i>0222</i>         }                                                                                                                
+</span><span class="methodLine"><i>0223</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1215</span>return null;</span>                                                                                                     
+</span><span class="methodLine"><i>0224</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0225</i>                                                                                                                          
+</span><span class="outsideLine"><i>0226</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0227</i>     public Container importFile(InputStream stream, FileImporter importer) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { stream = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1046</span>{</span>                                             
+</span><span class="methodLine"><i>0228</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1221</span>return importFile(stream, importer, null);</span>                                                                       
+</span><span class="methodLine"><i>0229</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0230</i>                                                                                                                          
+</span><span class="methodLine"><i>0231</i>     public Container importFile(InputStream stream, FileImporter importer, File file) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { stream = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1055</span>{</span>                                  
+</span><span class="methodLine"><i>0232</i>         try {                                                                                                            
+</span><span class="methodLine"><i>0233</i>             Reader reader = ImportUtils.getTextReader(stream);                                                           
+</span><span class="methodLine"><i>0234</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1893</span>return importFile(reader, importer, file);</span>                                                                   
+</span><span class="methodLine"><i>0235</i>         } catch (Exception ex) {                                                                                         
+</span><span class="methodLine"><i>0236</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2728</span>new RuntimeException(ex)</span>;                                                                              
+</span><span class="methodLine"><i>0237</i>         } finally {                                                                                                      
+</span><span class="methodLine"><i>0238</i>             try {                                                                                                        
+</span><span class="methodLine"><i>0239</i>                 stream.close();                                                                                          
+</span><span class="methodLine"><i>0240</i>             } catch (IOException ex) {                                                                                   
+</span><span class="methodLine"><i>0241</i>                 throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3794</span>new RuntimeException(ex)</span>;                                                                          
+</span><span class="methodLine"><i>0242</i>             }                                                                                                            
+</span><span class="methodLine"><i>0243</i>         }                                                                                                                
+</span><span class="methodLine"><i>0244</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0245</i>                                                                                                                          
+</span><span class="outsideLine"><i>0246</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0247</i>     public Container importDatabase(Database database, DatabaseImporter importer) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { database = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1063</span>{</span>                                      
+</span><span class="outsideLine"><i>0248</i>         //Create Container                                                                                               
+</span><span class="methodLine"><i>0249</i>         final Container container = Lookup.getDefault().lookup(Container.Factory.class).newContainer();                  
+</span><span class="outsideLine"><i>0250</i>                                                                                                                          
+</span><span class="outsideLine"><i>0251</i>         //Report                                                                                                         
+</span><span class="methodLine"><i>0252</i>         Report report = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2742</span>new Report()</span>;                                                                                    
+</span><span class="methodLine"><i>0253</i>         container.setReport(report);                                                                                     
+</span><span class="outsideLine"><i>0254</i>                                                                                                                          
+</span><span class="methodLine"><i>0255</i>         importer.setDatabase(database);                                                                                  
+</span><span class="outsideLine"><i>0256</i>                                                                                                                          
+</span><span class="methodLine"><i>0257</i>         try {                                                                                                            
+</span><span class="methodLine"><i>0258</i>             if (importer.execute(container.getLoader())) {                                                               
+</span><span class="methodLine"><i>0259</i>                 if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3800</span>importer.getReport() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3800</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3578</span>&&</span> importer.getReport() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3802</span>!=</span> report) {                                    
+</span><span class="methodLine"><i>0260</i>                     report.append(importer.getReport());                                                                 
+</span><span class="methodLine"><i>0261</i>                 }                                                                                                        
+</span><span class="methodLine"><i>0262</i>                 report.close();                                                                                          
+</span><span class="methodLine"><i>0263</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3016</span>return container;</span>                                                                                        
+</span><span class="methodLine"><i>0264</i>             }                                                                                                            
+</span><span class="methodLine"><i>0265</i>         } catch (RuntimeException ex) {                                                                                  
+</span><span class="methodLine"><i>0266</i>             throw ex;                                                                                                    
+</span><span class="methodLine"><i>0267</i>         } catch (Exception ex) {                                                                                         
+</span><span class="methodLine"><i>0268</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2758</span>new RuntimeException(ex)</span>;                                                                              
+</span><span class="methodLine"><i>0269</i>         } finally {                                                                                                      
+</span><span class="methodLine"><i>0270</i>             report.close();                                                                                              
+</span><span class="methodLine"><i>0271</i>         }                                                                                                                
+</span><span class="methodLine"><i>0272</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1239</span>return null;</span>                                                                                                     
+</span><span class="methodLine"><i>0273</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0274</i>                                                                                                                          
+</span><span class="outsideLine"><i>0275</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0276</i>     public Container importWizard(WizardImporter importer) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { importer = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1074</span>{</span>                                                             
+</span><span class="outsideLine"><i>0277</i>         //Create Container                                                                                               
+</span><span class="methodLine"><i>0278</i>         final Container container = Lookup.getDefault().lookup(Container.Factory.class).newContainer();                  
+</span><span class="outsideLine"><i>0279</i>                                                                                                                          
+</span><span class="outsideLine"><i>0280</i>         //Report                                                                                                         
+</span><span class="methodLine"><i>0281</i>         Report report = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2764</span>new Report()</span>;                                                                                    
+</span><span class="methodLine"><i>0282</i>         container.setReport(report);                                                                                     
+</span><span class="outsideLine"><i>0283</i>                                                                                                                          
+</span><span class="methodLine"><i>0284</i>         try {                                                                                                            
+</span><span class="methodLine"><i>0285</i>             if (importer.execute(container.getLoader())) {                                                               
+</span><span class="methodLine"><i>0286</i>                 if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3598</span>importer.getReport() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3598</span>!=</span> null</span>) {                                                                      
+</span><span class="methodLine"><i>0287</i>                     report.append(importer.getReport());                                                                 
+</span><span class="methodLine"><i>0288</i>                 }                                                                                                        
+</span><span class="methodLine"><i>0289</i>                 report.close();                                                                                          
+</span><span class="methodLine"><i>0290</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3034</span>return container;</span>                                                                                        
+</span><span class="methodLine"><i>0291</i>             }                                                                                                            
+</span><span class="methodLine"><i>0292</i>         } catch (RuntimeException ex) {                                                                                  
+</span><span class="methodLine"><i>0293</i>             throw ex;                                                                                                    
+</span><span class="methodLine"><i>0294</i>         } catch (Exception ex) {                                                                                         
+</span><span class="methodLine"><i>0295</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2778</span>new RuntimeException(ex)</span>;                                                                              
+</span><span class="methodLine"><i>0296</i>         }                                                                                                                
+</span><span class="methodLine"><i>0297</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1247</span>return null;</span>                                                                                                     
+</span><span class="methodLine"><i>0298</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0299</i>                                                                                                                          
+</span><span class="outsideLine"><i>0300</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0301</i>     public void process(Container container) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { container = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1083</span>{</span>                                                                           
+</span><span class="methodLine"><i>0302</i>         Processor processor = Lookup.getDefault().lookup(Processor.class);                                               
+</span><span class="methodLine"><i>0303</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1721</span>processor <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1721</span>==</span> null</span>) {                                                                                         
+</span><span class="methodLine"><i>0304</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2785</span>new RuntimeException("Impossible to find Default Processor")</span>;                                          
+</span><span class="methodLine"><i>0305</i>         }                                                                                                                
+</span><span class="methodLine"><i>0306</i>         process(container, processor, null);                                                                             
+</span><span class="methodLine"><i>0307</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0308</i>                                                                                                                          
+</span><span class="outsideLine"><i>0309</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0310</i>     public void process(Container container, Processor processor, Workspace workspace) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { container = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1094</span>{</span>                                 
+</span><span class="methodLine"><i>0311</i>         processor.setContainers(new ContainerUnloader[] {container.getUnloader()});                                      
+</span><span class="methodLine"><i>0312</i>         processor.setWorkspace(workspace);                                                                               
+</span><span class="outsideLine"><i>0313</i>                                                                                                                          
+</span><span class="methodLine"><i>0314</i>         container.setReport(processor.getReport());                                                                      
+</span><span class="methodLine"><i>0315</i>         container.closeLoader();                                                                                         
+</span><span class="methodLine"><i>0316</i>         if (container.getUnloader().isAutoScale()) {                                                                     
+</span><span class="methodLine"><i>0317</i>             Scaler scaler = Lookup.getDefault().lookup(Scaler.class);                                                    
+</span><span class="methodLine"><i>0318</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2805</span>scaler <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2805</span>!=</span> null</span>) {                                                                                        
+</span><span class="methodLine"><i>0319</i>                 scaler.doScale(container);                                                                               
+</span><span class="methodLine"><i>0320</i>             }                                                                                                            
+</span><span class="methodLine"><i>0321</i>         }                                                                                                                
+</span><span class="outsideLine"><i>0322</i>                                                                                                                          
+</span><span class="methodLine"><i>0323</i>         processor.process();                                                                                             
+</span><span class="methodLine"><i>0324</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0325</i>                                                                                                                          
+</span><span class="outsideLine"><i>0326</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0327</i>     public void process(Container[] containers, Processor processor, Workspace workspace) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { containers = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1108</span>{</span>                              
+</span><span class="methodLine"><i>0328</i>         processor.setContainers(Arrays.stream(containers).map(Container::getUnloader).toArray(ContainerUnloader[]::new));
+</span><span class="methodLine"><i>0329</i>         for (Container container : containers) {                                                                         
+</span><span class="methodLine"><i>0330</i>             container.setReport(processor.getReport());                                                                  
+</span><span class="methodLine"><i>0331</i>             container.closeLoader();                                                                                     
+</span><span class="methodLine"><i>0332</i>             if (container.getUnloader().isAutoScale()) {                                                                 
+</span><span class="methodLine"><i>0333</i>                 Scaler scaler = Lookup.getDefault().lookup(Scaler.class);                                                
+</span><span class="methodLine"><i>0334</i>                 if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3856</span>scaler <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3856</span>!=</span> null</span>) {                                                                                    
+</span><span class="methodLine"><i>0335</i>                     scaler.doScale(container);                                                                           
+</span><span class="methodLine"><i>0336</i>                 }                                                                                                        
+</span><span class="methodLine"><i>0337</i>             }                                                                                                            
+</span><span class="methodLine"><i>0338</i>         }                                                                                                                
+</span><span class="methodLine"><i>0339</i>         processor.setWorkspace(workspace);                                                                               
+</span><span class="methodLine"><i>0340</i>         processor.process();                                                                                             
+</span><span class="methodLine"><i>0341</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0342</i>                                                                                                                          
+</span><span class="methodLine"><i>0343</i>     private FileImporterBuilder getMatchingImporter(FileObject fileObject) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { fileObject = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1116</span>{</span>                                             
+</span><span class="methodLine"><i>0344</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1747</span>fileObject <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1747</span>==</span> null</span>) {                                                                                        
+</span><span class="methodLine"><i>0345</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2283</span>return null;</span>                                                                                                 
+</span><span class="methodLine"><i>0346</i>         }                                                                                                                
+</span><span class="methodLine"><i>0347</i>         for (FileImporterBuilder im : fileImporterBuilders) {                                                            
+</span><span class="methodLine"><i>0348</i>             if (im.isMatchingImporter(fileObject)) {                                                                     
+</span><span class="methodLine"><i>0349</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3382</span>return im;</span>                                                                                               
+</span><span class="methodLine"><i>0350</i>             }                                                                                                            
+</span><span class="methodLine"><i>0351</i>         }                                                                                                                
+</span><span class="methodLine"><i>0352</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1282</span>return null;</span>                                                                                                     
+</span><span class="methodLine"><i>0353</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0354</i>                                                                                                                          
+</span><span class="methodLine"><i>0355</i>     private FileImporterBuilder getMatchingImporter(String extension) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { extension = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1123</span>{</span>                                                  
+</span><span class="methodLine"><i>0356</i>         if (extension.startsWith(".")) {                                                                                 
+</span><span class="methodLine"><i>0357</i>             extension = extension.substring(1);                                                                          
+</span><span class="methodLine"><i>0358</i>         }                                                                                                                
+</span><span class="methodLine"><i>0359</i>         for (FileImporterBuilder im : fileImporterBuilders) {                                                            
+</span><span class="methodLine"><i>0360</i>             for (FileType ft : im.getFileTypes()) {                                                                      
+</span><span class="methodLine"><i>0361</i>                 for (String ext : ft.getExtensions()) {                                                                  
+</span><span class="methodLine"><i>0362</i>                     if (ext.startsWith(".")) {                                                                           
+</span><span class="methodLine"><i>0363</i>                         ext = ext.substring(1);                                                                          
+</span><span class="methodLine"><i>0364</i>                     }                                                                                                    
+</span><span class="methodLine"><i>0365</i>                     if (ext.equalsIgnoreCase(extension)) {                                                               
+</span><span class="methodLine"><i>0366</i>                         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 4428</span>return im;</span>                                                                                       
+</span><span class="methodLine"><i>0367</i>                     }                                                                                                    
+</span><span class="methodLine"><i>0368</i>                 }                                                                                                        
+</span><span class="methodLine"><i>0369</i>             }                                                                                                            
+</span><span class="methodLine"><i>0370</i>         }                                                                                                                
+</span><span class="methodLine"><i>0371</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1287</span>return null;</span>                                                                                                     
+</span><span class="methodLine"><i>0372</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0373</i>                                                                                                                          
+</span><span class="outsideLine"><i>0374</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0375</i>     public FileType[] getFileTypes() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 782</span>{                                                                                   
+</span><span class="methodLine"><i>0376</i>         ArrayList<FileType> list = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2836</span>new ArrayList<>()</span>;                                                                    
+</span><span class="methodLine"><i>0377</i>         for (FileImporterBuilder im : fileImporterBuilders) {                                                            
+</span><span class="methodLine"><i>0378</i>             for (FileType ft : im.getFileTypes()) {                                                                      
+</span><span class="methodLine"><i>0379</i>                 list.add(ft);                                                                                            
+</span><span class="methodLine"><i>0380</i>             }                                                                                                            
+</span><span class="methodLine"><i>0381</i>         }                                                                                                                
+</span><span class="methodLine"><i>0382</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1291</span>return list.toArray(new FileType[0]);</span>                                                                            
+</span><span class="methodLine"><i>0383</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0384</i>                                                                                                                          
+</span><span class="outsideLine"><i>0385</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0386</i>     public boolean isFileSupported(File file) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { file = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1138</span>{</span>                                                                          
+</span><span class="methodLine"><i>0387</i>         FileObject fileObject = FileUtil.toFileObject(file);                                                             
+</span><span class="methodLine"><i>0388</i>         for (FileImporterBuilder im : fileImporterBuilders) {                                                            
+</span><span class="methodLine"><i>0389</i>             if (im.isMatchingImporter(fileObject)) {                                                                     
+</span><span class="methodLine"><i>0390</i>                 return true;                                                                                             
+</span><span class="methodLine"><i>0391</i>             }                                                                                                            
+</span><span class="methodLine"><i>0392</i>         }                                                                                                                
+</span><span class="methodLine"><i>0393</i>         return fileObject.getExt().equalsIgnoreCase("zip")                                                               
+</span><span class="methodLine"><i>0394</i>             <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 1774</span>||</span> fileObject.getExt().equalsIgnoreCase("gz")                                                                
+</span><span class="methodLine"><i>0395</i>             <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 1544</span>||</span> fileObject.getExt().equalsIgnoreCase("bz2");                                                              
+</span><span class="methodLine"><i>0396</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0397</i>                                                                                                                          
+</span><span class="outsideLine"><i>0398</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0399</i>     public ImporterUI getUI(Importer importer) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { importer = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1146</span>{</span>                                                                         
+</span><span class="methodLine"><i>0400</i>         for (ImporterUI ui : uis) {                                                                                      
+</span><span class="methodLine"><i>0401</i>             if (ui.isUIForImporter(importer)) {                                                                          
+</span><span class="methodLine"><i>0402</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3421</span>return ui;</span>                                                                                               
+</span><span class="methodLine"><i>0403</i>             }                                                                                                            
+</span><span class="methodLine"><i>0404</i>         }                                                                                                                
+</span><span class="methodLine"><i>0405</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1302</span>return null;</span>                                                                                                     
+</span><span class="methodLine"><i>0406</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0407</i>                                                                                                                          
+</span><span class="outsideLine"><i>0408</i>     @Override                                                                                                            
+</span><span class="methodLine"><i>0409</i>     public ImporterWizardUI getWizardUI(Importer importer) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { importer = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1153</span>{</span>                                                             
+</span><span class="methodLine"><i>0410</i>         for (ImporterWizardUI ui : wizardUis) {                                                                          
+</span><span class="methodLine"><i>0411</i>             if (ui.isUIForImporter(importer)) {                                                                          
+</span><span class="methodLine"><i>0412</i>                 <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3426</span>return ui;</span>                                                                                               
+</span><span class="methodLine"><i>0413</i>             }                                                                                                            
+</span><span class="methodLine"><i>0414</i>         }                                                                                                                
+</span><span class="methodLine"><i>0415</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1307</span>return null;</span>                                                                                                     
+</span><span class="methodLine"><i>0416</i>     }</span>                                                                                                                    
+</span><span class="outsideLine"><i>0417</i> }                                                                                                                        
+</span><span class="outsideLine"><i>0418</i>                                                                                                                          </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

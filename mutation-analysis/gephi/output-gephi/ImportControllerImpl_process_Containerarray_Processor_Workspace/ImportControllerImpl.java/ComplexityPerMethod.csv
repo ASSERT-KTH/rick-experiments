@@ -1,0 +1,21 @@
+ImportControllerImpl.ImportControllerImpl( );0;1;10
+ImportControllerImpl.getFileImporter( File file );6;2;6
+ImportControllerImpl.getFileImporter( FileObject fileObject );11;4;11
+ImportControllerImpl.getFileImporter( String importerName );6;2;7
+ImportControllerImpl.getFileTypes( );3;3;9
+ImportControllerImpl.getMatchingImporter( FileObject fileObject );7;4;11
+ImportControllerImpl.getMatchingImporter( String extension );4;7;18
+ImportControllerImpl.getUI( Importer importer );4;3;8
+ImportControllerImpl.getWizardUI( Importer importer );4;3;8
+ImportControllerImpl.importDatabase( Database database , DatabaseImporter importer );11;6;22
+ImportControllerImpl.importFile( File file );11;4;13
+ImportControllerImpl.importFile( File file , FileImporter importer );9;3;12
+ImportControllerImpl.importFile( InputStream stream , FileImporter importer );4;1;3
+ImportControllerImpl.importFile( InputStream stream , FileImporter importer , File file );7;3;14
+ImportControllerImpl.importFile( Reader reader , FileImporter importer );4;1;3
+ImportControllerImpl.importFile( Reader reader , FileImporter importer , File file );17;10;40
+ImportControllerImpl.importWizard( WizardImporter importer );8;5;19
+ImportControllerImpl.isFileSupported( File file );5;5;11
+ImportControllerImpl.process( Container [ ] containers , Processor processor , Workspace workspace );6;4;15
+ImportControllerImpl.process( Container container );5;2;7
+ImportControllerImpl.process( Container container , Processor processor , Workspace workspace );6;3;13

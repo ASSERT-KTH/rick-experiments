@@ -1,0 +1,22 @@
+{
+    "mut": "ClusteringCoefficient_initStartValues_Graph",
+    "CUT": "org.gephi.statistics.plugin.ClusteringCoefficient",
+    "mutant-file": "./ClusteringCoefficient.java/237.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 4.618 s <<< FAILURE! - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 4.756 s <<< FAILURE! - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.655 s <<< FAILURE! - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.288 s <<< FAILURE! - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen"
+},
+{
+    "mut": "ClusteringCoefficient_initStartValues_Graph",
+    "CUT": "org.gephi.statistics.plugin.ClusteringCoefficient",
+    "mutant-file": "./ClusteringCoefficient.java/74.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 5.578 s <<< FAILURE! - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 7.242 s <<< FAILURE! - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 5.21 s <<< FAILURE! - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.287 s <<< FAILURE! - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen"
+},

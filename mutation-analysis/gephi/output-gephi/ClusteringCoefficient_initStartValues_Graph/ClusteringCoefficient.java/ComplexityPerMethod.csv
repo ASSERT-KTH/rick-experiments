@@ -1,0 +1,41 @@
+ArrayWrapper.ArrayWrapper( );0;1;2
+ArrayWrapper.ArrayWrapper( int ID , EdgeWrapper [ ] array );0;1;4
+ArrayWrapper.compareTo( Object o );6;3;10
+ArrayWrapper.get( int index );4;2;6
+ArrayWrapper.getArray( );2;1;3
+ArrayWrapper.getCount( int index );4;2;6
+ArrayWrapper.getID( );2;1;3
+ArrayWrapper.length( );2;1;3
+ArrayWrapper.setArray( EdgeWrapper [ ] array );2;1;3
+ArrayWrapper.setID( int ID );1;1;3
+ClusteringCoefficient.ClusteringCoefficient( );5;3;6
+ClusteringCoefficient.bruteForce( Graph graph );8;4;27
+ClusteringCoefficient.cancel( );2;1;4
+ClusteringCoefficient.closest_in_array( ArrayWrapper [ ] currentNetwork , int v );21;9;31
+ClusteringCoefficient.computeClusteringCoefficient( Graph graph , ArrayWrapper [ ] currentNetwork , int [ ] currentTriangles , double [ ] currentNodeClustering , boolean directed );6;2;12
+ClusteringCoefficient.computeNodeClusteringCoefficient( Graph graph , Node node , boolean directed );15;5;22
+ClusteringCoefficient.computeRemainingTrianles( Graph graph , ArrayWrapper [ ] currentNetwork , int [ ] currentTriangles , int currentProgress );13;6;17
+ClusteringCoefficient.computeResultValues( Graph graph , ArrayWrapper [ ] currentNetwork , int [ ] currentTriangles , double [ ] currentNodeClusterig , boolean directed , int currentProgress );20;5;29
+ClusteringCoefficient.computeTriangles( Graph graph , ArrayWrapper [ ] currentNetwork , int [ ] currentTriangles , double [ ] nodeClustering , boolean directed );15;5;38
+ClusteringCoefficient.createIndiciesMapAndInitNetwork( Graph graph , HashMap < Node , Integer > indicies , ArrayWrapper [ ] networks , int currentProgress );8;2;10
+ClusteringCoefficient.createNeighbourTable( Graph graph , Node node , HashMap < Node , Integer > indicies , ArrayWrapper [ ] networks , boolean directed );14;6;23
+ClusteringCoefficient.execute( Graph graph );11;8;33
+ClusteringCoefficient.execute( GraphModel graphModel );2;2;9
+ClusteringCoefficient.getAverageClusteringCoefficient( );2;1;3
+ClusteringCoefficient.getCoefficientReuslts( );5;3;9
+ClusteringCoefficient.getEdges( HashMap < Node , EdgeWrapper > neighborTable );4;2;9
+ClusteringCoefficient.getReport( );10;6;56
+ClusteringCoefficient.getTriangesReuslts( );5;3;9
+ClusteringCoefficient.increaseCCifNesessary( Graph graph , Node neighbor1 , Node neighbor2 , boolean directed , float nodeCC );9;6;18
+ClusteringCoefficient.initStartValues( Graph graph );2;1;7
+ClusteringCoefficient.initializeAttributeColunms( GraphModel graphModel );9;3;11
+ClusteringCoefficient.isDirected( );2;1;3
+ClusteringCoefficient.newVertex( ArrayWrapper [ ] currentNetwork , int [ ] currentTrianlgles , int v , int n );16;6;18
+ClusteringCoefficient.processNetwork( ArrayWrapper [ ] currentNetwork , int currentProgress );10;3;12
+ClusteringCoefficient.saveCalculatedValue( Node node , Column clusteringColumn , double nodeClusteringCoefficient );5;2;6
+ClusteringCoefficient.setDirected( boolean isDirected );1;1;3
+ClusteringCoefficient.setProgressTicket( ProgressTicket ProgressTicket );2;1;3
+ClusteringCoefficient.tr_link_nohigh( ArrayWrapper [ ] currentNetwork , int [ ] currentTriangles , int u , int v , int count , int k );13;6;17
+ClusteringCoefficient.triangles( Graph graph );2;1;7
+EdgeWrapper.EdgeWrapper( int count , ArrayWrapper wrapper );0;1;4
+Renumbering.compare( EdgeWrapper o1 , EdgeWrapper o2 );7;3;9

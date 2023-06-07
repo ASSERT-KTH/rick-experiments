@@ -1,0 +1,134 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.31</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                                                      
+</span><span class="outsideLine"><i>0002</i> Copyright 2008-2011 Gephi                                                                                               
+</span><span class="outsideLine"><i>0003</i> Authors : Mathieu Jacomy <mathieu.jacomy@gmail.com>                                                                     
+</span><span class="outsideLine"><i>0004</i> Website : http://www.gephi.org                                                                                          
+</span><span class="outsideLine"><i>0005</i>                                                                                                                         
+</span><span class="outsideLine"><i>0006</i> This file is part of Gephi.                                                                                             
+</span><span class="outsideLine"><i>0007</i>                                                                                                                         
+</span><span class="outsideLine"><i>0008</i> DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.                                                                
+</span><span class="outsideLine"><i>0009</i>                                                                                                                         
+</span><span class="outsideLine"><i>0010</i> Copyright 2011 Gephi Consortium. All rights reserved.                                                                   
+</span><span class="outsideLine"><i>0011</i>                                                                                                                         
+</span><span class="outsideLine"><i>0012</i> The contents of this file are subject to the terms of either the GNU                                                    
+</span><span class="outsideLine"><i>0013</i> General Public License Version 3 only ("GPL") or the Common                                                             
+</span><span class="outsideLine"><i>0014</i> Development and Distribution License("CDDL") (collectively, the                                                         
+</span><span class="outsideLine"><i>0015</i> "License"). You may not use this file except in compliance with the                                                     
+</span><span class="outsideLine"><i>0016</i> License. You can obtain a copy of the License at                                                                        
+</span><span class="outsideLine"><i>0017</i> http://gephi.org/about/legal/license-notice/                                                                            
+</span><span class="outsideLine"><i>0018</i> or /cddl-1.0.txt and /gpl-3.0.txt. See the License for the                                                              
+</span><span class="outsideLine"><i>0019</i> specific language governing permissions and limitations under the                                                       
+</span><span class="outsideLine"><i>0020</i> License.  When distributing the software, include this License Header                                                   
+</span><span class="outsideLine"><i>0021</i> Notice in each file and include the License files at                                                                    
+</span><span class="outsideLine"><i>0022</i> /cddl-1.0.txt and /gpl-3.0.txt. If applicable, add the following below the                                              
+</span><span class="outsideLine"><i>0023</i> License Header, with the fields enclosed by brackets [] replaced by                                                     
+</span><span class="outsideLine"><i>0024</i> your own identifying information:                                                                                       
+</span><span class="outsideLine"><i>0025</i> "Portions Copyrighted [year] [name of copyright owner]"                                                                 
+</span><span class="outsideLine"><i>0026</i>                                                                                                                         
+</span><span class="outsideLine"><i>0027</i> If you wish your version of this file to be governed by only the CDDL                                                   
+</span><span class="outsideLine"><i>0028</i> or only the GPL Version 3, indicate your decision by adding                                                             
+</span><span class="outsideLine"><i>0029</i> "[Contributor] elects to include this software in this distribution                                                     
+</span><span class="outsideLine"><i>0030</i> under the [CDDL or GPL Version 3] license." If you do not indicate a                                                    
+</span><span class="outsideLine"><i>0031</i> single choice of license, a recipient has the option to distribute                                                      
+</span><span class="outsideLine"><i>0032</i> your version of this file under either the CDDL, the GPL Version 3 or                                                   
+</span><span class="outsideLine"><i>0033</i> to extend the choice of license to its licensees as provided above.                                                     
+</span><span class="outsideLine"><i>0034</i> However, if you add GPL Version 3 code and therefore, elected the GPL                                                   
+</span><span class="outsideLine"><i>0035</i> Version 3 license, then the option applies only if the new code is                                                      
+</span><span class="outsideLine"><i>0036</i> made subject to such option by the copyright holder.                                                                    
+</span><span class="outsideLine"><i>0037</i>                                                                                                                         
+</span><span class="outsideLine"><i>0038</i> Contributor(s):                                                                                                         
+</span><span class="outsideLine"><i>0039</i>                                                                                                                         
+</span><span class="outsideLine"><i>0040</i> Portions Copyrighted 2011 Gephi Consortium.                                                                             
+</span><span class="outsideLine"><i>0041</i>  */                                                                                                                     
+</span><span class="outsideLine"><i>0042</i>                                                                                                                         
+</span><span class="outsideLine"><i>0043</i> package org.gephi.layout.plugin.forceAtlas2;                                                                            
+</span><span class="outsideLine"><i>0044</i>                                                                                                                         
+</span><span class="outsideLine"><i>0045</i> import org.gephi.graph.api.Node;                                                                                        
+</span><span class="outsideLine"><i>0046</i> import org.gephi.layout.plugin.forceAtlas2.ForceFactory.RepulsionForce;                                                 
+</span><span class="outsideLine"><i>0047</i>                                                                                                                         
+</span><span class="outsideLine"><i>0048</i> /**                                                                                                                     
+</span><span class="outsideLine"><i>0049</i>  * @author Mathieu Jacomy                                                                                               
+</span><span class="outsideLine"><i>0050</i>  */                                                                                                                     
+</span><span class="outsideLine"><i>0051</i> public class NodesThread implements Runnable {                                                                          
+</span><span class="outsideLine"><i>0052</i>                                                                                                                         
+</span><span class="outsideLine"><i>0053</i>     private final Node[] nodes;                                                                                         
+</span><span class="outsideLine"><i>0054</i>     private final int from;                                                                                             
+</span><span class="outsideLine"><i>0055</i>     private final int to;                                                                                               
+</span><span class="outsideLine"><i>0056</i>     private final Region rootRegion;                                                                                    
+</span><span class="outsideLine"><i>0057</i>     private final boolean barnesHutOptimize;                                                                            
+</span><span class="outsideLine"><i>0058</i>     private final RepulsionForce Repulsion;                                                                             
+</span><span class="outsideLine"><i>0059</i>     private final double barnesHutTheta;                                                                                
+</span><span class="outsideLine"><i>0060</i>     private final double gravity;                                                                                       
+</span><span class="outsideLine"><i>0061</i>     private final RepulsionForce GravityForce;                                                                          
+</span><span class="outsideLine"><i>0062</i>     private final double scaling;                                                                                       
+</span><span class="outsideLine"><i>0063</i>                                                                                                                         
+</span><span class="outsideLine"><i>0064</i>     public NodesThread(Node[] nodes, int from, int to, boolean barnesHutOptimize, double barnesHutTheta, double gravity,
+</span><span class="methodLine"><i>0065</i>                        RepulsionForce GravityForce, double scaling, Region rootRegion, RepulsionForce Repulsion) {      
+</span><span class="methodLine"><i>0066</i>         this.nodes = nodes;                                                                                             
+</span><span class="methodLine"><i>0067</i>         this.from = from;                                                                                               
+</span><span class="methodLine"><i>0068</i>         this.to = to;                                                                                                   
+</span><span class="methodLine"><i>0069</i>         this.rootRegion = rootRegion;                                                                                   
+</span><span class="methodLine"><i>0070</i>         this.barnesHutOptimize = barnesHutOptimize;                                                                     
+</span><span class="methodLine"><i>0071</i>         this.Repulsion = Repulsion;                                                                                     
+</span><span class="methodLine"><i>0072</i>         this.barnesHutTheta = barnesHutTheta;                                                                           
+</span><span class="methodLine"><i>0073</i>         this.gravity = gravity;                                                                                         
+</span><span class="methodLine"><i>0074</i>         this.GravityForce = GravityForce;                                                                               
+</span><span class="methodLine"><i>0075</i>         this.scaling = scaling;                                                                                         
+</span><span class="methodLine"><i>0076</i>     }                                                                                                                   
+</span><span class="outsideLine"><i>0077</i>                                                                                                                         
+</span><span class="outsideLine"><i>0078</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0079</i>     public void run() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 201</span>{                                                                                                 
+</span><span class="outsideLine"><i>0080</i>         // Repulsion                                                                                                    
+</span><span class="methodLine"><i>0081</i>         if (barnesHutOptimize) {                                                                                        
+</span><span class="methodLine"><i>0082</i>             for (int nIndex = from; nIndex <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 563</span><</span> to; nIndex<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 612</span>++</span>) {                                                            
+</span><span class="methodLine"><i>0083</i>                 Node n = nodes[nIndex];                                                                                 
+</span><span class="methodLine"><i>0084</i>                 rootRegion.applyForce(n, Repulsion, barnesHutTheta);                                                    
+</span><span class="methodLine"><i>0085</i>             }                                                                                                           
+</span><span class="methodLine"><i>0086</i>         } else {                                                                                                        
+</span><span class="methodLine"><i>0087</i>             for (int n1Index = from; n1Index <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 569</span><</span> to; n1Index<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 619</span>++</span>) {                                                         
+</span><span class="methodLine"><i>0088</i>                 Node n1 = nodes[n1Index];                                                                               
+</span><span class="methodLine"><i>0089</i>                 for (int n2Index = 0; n2Index <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 681</span><</span> n1Index; n2Index<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 742</span>++</span>) {                                                   
+</span><span class="methodLine"><i>0090</i>                     Node n2 = nodes[n2Index];                                                                           
+</span><span class="methodLine"><i>0091</i>                     Repulsion.apply(n1, n2);                                                                            
+</span><span class="methodLine"><i>0092</i>                 }                                                                                                       
+</span><span class="methodLine"><i>0093</i>             }                                                                                                           
+</span><span class="methodLine"><i>0094</i>         }                                                                                                               
+</span><span class="outsideLine"><i>0095</i>                                                                                                                         
+</span><span class="outsideLine"><i>0096</i>         // Gravity                                                                                                      
+</span><span class="methodLine"><i>0097</i>         for (int nIndex = from; nIndex <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 411</span><</span> to; nIndex<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 508</span>++</span>) {                                                                
+</span><span class="methodLine"><i>0098</i>             Node n = nodes[nIndex];                                                                                     
+</span><span class="methodLine"><i>0099</i>             GravityForce.apply(n, gravity <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 632</span>/</span> scaling);                                                                   
+</span><span class="methodLine"><i>0100</i>         }                                                                                                               
+</span><span class="methodLine"><i>0101</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0102</i> }                                                                                                                       
+</span><span class="outsideLine"><i>0103</i>                                                                                                                         </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

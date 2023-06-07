@@ -1,0 +1,88 @@
+{
+    "mut": "GraphDensity_calculateDensity_Graph_boolean",
+    "CUT": "org.gephi.statistics.plugin.GraphDensity",
+    "mutant-file": "./GraphDensity.java/17.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.595 s - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.535 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.545 s - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.193 s - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.323 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen"
+},
+{
+    "mut": "GraphDensity_calculateDensity_Graph_boolean",
+    "CUT": "org.gephi.statistics.plugin.GraphDensity",
+    "mutant-file": "./GraphDensity.java/18.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.979 s - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 16.175 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.516 s - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.012 s - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 14.3 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen"
+},
+{
+    "mut": "GraphDensity_calculateDensity_Graph_boolean",
+    "CUT": "org.gephi.statistics.plugin.GraphDensity",
+    "mutant-file": "./GraphDensity.java/19.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.503 s - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 14.251 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.985 s - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.559 s - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.065 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen"
+},
+{
+    "mut": "GraphDensity_calculateDensity_Graph_boolean",
+    "CUT": "org.gephi.statistics.plugin.GraphDensity",
+    "mutant-file": "./GraphDensity.java/20.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.38 s - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.544 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.069 s - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.569 s - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.119 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen"
+},
+{
+    "mut": "GraphDensity_calculateDensity_Graph_boolean",
+    "CUT": "org.gephi.statistics.plugin.GraphDensity",
+    "mutant-file": "./GraphDensity.java/21.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.445 s - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.429 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.572 s - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.074 s - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.547 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen"
+},
+{
+    "mut": "GraphDensity_calculateDensity_Graph_boolean",
+    "CUT": "org.gephi.statistics.plugin.GraphDensity",
+    "mutant-file": "./GraphDensity.java/22.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 14.915 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 14.342 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 14.776 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 14.887 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 15.299 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen"
+},
+{
+    "mut": "GraphDensity_calculateDensity_Graph_boolean",
+    "CUT": "org.gephi.statistics.plugin.GraphDensity",
+    "mutant-file": "./GraphDensity.java/7.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 15.419 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 14.794 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 15.045 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 15.064 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 16.516 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen"
+},
+{
+    "mut": "GraphDensity_calculateDensity_Graph_boolean",
+    "CUT": "org.gephi.statistics.plugin.GraphDensity",
+    "mutant-file": "./GraphDensity.java/8.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 20.294 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 14.361 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 14.754 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 15.241 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 16.495 s <<< FAILURE! - in org.gephi.statistics.plugin.TestGraphDensityRickGen"
+},

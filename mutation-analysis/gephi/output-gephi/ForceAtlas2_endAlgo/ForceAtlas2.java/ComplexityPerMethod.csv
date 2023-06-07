@@ -1,0 +1,34 @@
+ForceAtlas2.ForceAtlas2( ForceAtlas2Builder layoutBuilder );1;1;4
+ForceAtlas2.canAlgo( );4;1;3
+ForceAtlas2.endAlgo( );1;2;11
+ForceAtlas2.getBarnesHutTheta( );2;1;3
+ForceAtlas2.getBuilder( );2;1;3
+ForceAtlas2.getEdgeWeight( Edge edge , boolean isDynamicWeight , Interval interval );4;2;7
+ForceAtlas2.getEdgeWeightInfluence( );2;1;3
+ForceAtlas2.getGravity( );2;1;3
+ForceAtlas2.getJitterTolerance( );2;1;3
+ForceAtlas2.getProperties( );3;2;96
+ForceAtlas2.getScalingRatio( );2;1;3
+ForceAtlas2.getThreadsCount( );2;1;3
+ForceAtlas2.goAlgo( );102;40;185
+ForceAtlas2.initAlgo( );7;4;26
+ForceAtlas2.isAdjustSizes( );2;1;3
+ForceAtlas2.isBarnesHutOptimize( );2;1;3
+ForceAtlas2.isLinLogMode( );2;1;3
+ForceAtlas2.isNormalizeEdgeWeights( );2;1;3
+ForceAtlas2.isOutboundAttractionDistribution( );2;1;3
+ForceAtlas2.isStrongGravityMode( );2;1;3
+ForceAtlas2.resetPropertiesValues( );6;3;22
+ForceAtlas2.setAdjustSizes( Boolean adjustSizes );2;1;3
+ForceAtlas2.setBarnesHutOptimize( Boolean barnesHutOptimize );2;1;3
+ForceAtlas2.setBarnesHutTheta( Double barnesHutTheta );2;1;3
+ForceAtlas2.setEdgeWeightInfluence( Double edgeWeightInfluence );2;1;3
+ForceAtlas2.setGraphModel( GraphModel graphModel );2;1;4
+ForceAtlas2.setGravity( Double gravity );2;1;3
+ForceAtlas2.setJitterTolerance( Double jitterTolerance );2;1;3
+ForceAtlas2.setLinLogMode( Boolean linLogMode );2;1;3
+ForceAtlas2.setNormalizeEdgeWeights( Boolean normalizeEdgeWeights );2;1;3
+ForceAtlas2.setOutboundAttractionDistribution( Boolean outboundAttractionDistribution );2;1;3
+ForceAtlas2.setScalingRatio( Double scalingRatio );2;1;3
+ForceAtlas2.setStrongGravityMode( Boolean strongGravityMode );2;1;3
+ForceAtlas2.setThreadsCount( Integer threadCount );2;1;3

@@ -1,0 +1,16 @@
+***not in a method***;1;1;0
+SVGRenderTargetBuilder.buildRenderTarget( PreviewModel previewModel );4;1;8
+SVGRenderTargetBuilder.getName( );3;1;3
+SVGRenderTargetBuilder.toString( );7;6;15
+SVGRenderTargetImpl.SVGRenderTargetImpl( CanvasSize cs , boolean scaleStrokes );14;4;41
+SVGRenderTargetImpl.createElement( String qualifiedName );3;1;3
+SVGRenderTargetImpl.createTextNode( String data );3;1;3
+SVGRenderTargetImpl.getDocument( );2;1;3
+SVGRenderTargetImpl.getScaleRatio( );2;1;3
+SVGRenderTargetImpl.getTopElement( String name );5;2;10
+SVGRenderTargetImpl.toHexString( Color color );8;3;10
+SupportSize.SupportSize( float width , float height , LengthUnit lengthUnit );0;1;5
+SupportSize.getHeight( );4;1;3
+SupportSize.getHeightFloat( );2;1;3
+SupportSize.getWidth( );4;1;3
+SupportSize.getWidthFloat( );2;1;3

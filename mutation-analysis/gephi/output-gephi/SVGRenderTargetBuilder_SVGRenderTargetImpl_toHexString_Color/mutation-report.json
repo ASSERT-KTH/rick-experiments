@@ -1,0 +1,88 @@
+{
+    "mut": "SVGRenderTargetBuilder_SVGRenderTargetImpl_toHexString_Color",
+    "CUT": "org.gephi.preview.SVGRenderTargetBuilder",
+    "mutant-file": "./SVGRenderTargetBuilder.java/15.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.38 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 7.655 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.793 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.438 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.133 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen"
+},
+{
+    "mut": "SVGRenderTargetBuilder_SVGRenderTargetImpl_toHexString_Color",
+    "CUT": "org.gephi.preview.SVGRenderTargetBuilder",
+    "mutant-file": "./SVGRenderTargetBuilder.java/45.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.223 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 8.254 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 7.492 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 7.086 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 7.483 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen"
+},
+{
+    "mut": "SVGRenderTargetBuilder_SVGRenderTargetImpl_toHexString_Color",
+    "CUT": "org.gephi.preview.SVGRenderTargetBuilder",
+    "mutant-file": "./SVGRenderTargetBuilder.java/46.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.232 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 6.032 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 6.82 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.763 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 6.565 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen"
+},
+{
+    "mut": "SVGRenderTargetBuilder_SVGRenderTargetImpl_toHexString_Color",
+    "CUT": "org.gephi.preview.SVGRenderTargetBuilder",
+    "mutant-file": "./SVGRenderTargetBuilder.java/58.java: INVALID MUTANT LEADS TO INFINITE LOOP",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.035 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.03 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.61 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.055 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.754 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen"
+},
+{
+    "mut": "SVGRenderTargetBuilder_SVGRenderTargetImpl_toHexString_Color",
+    "CUT": "org.gephi.preview.SVGRenderTargetBuilder",
+    "mutant-file": "./SVGRenderTargetBuilder.java/59.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 10.169 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.086 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.064 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.37 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.999 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen"
+},
+{
+    "mut": "SVGRenderTargetBuilder_SVGRenderTargetImpl_toHexString_Color",
+    "CUT": "org.gephi.preview.SVGRenderTargetBuilder",
+    "mutant-file": "./SVGRenderTargetBuilder.java/63.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.926 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.791 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.169 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.143 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.355 s - in org.gephi.preview.TestSVGRenderTargetImplRickGen"
+},
+{
+    "mut": "SVGRenderTargetBuilder_SVGRenderTargetImpl_toHexString_Color",
+    "CUT": "org.gephi.preview.SVGRenderTargetBuilder",
+    "mutant-file": "./SVGRenderTargetBuilder.java/64.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.417 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.816 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.352 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 7.624 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.977 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen"
+},
+{
+    "mut": "SVGRenderTargetBuilder_SVGRenderTargetImpl_toHexString_Color",
+    "CUT": "org.gephi.preview.SVGRenderTargetBuilder",
+    "mutant-file": "./SVGRenderTargetBuilder.java/8.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.328 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.894 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.907 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.689 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.864 s <<< FAILURE! - in org.gephi.preview.TestSVGRenderTargetImplRickGen"
+},

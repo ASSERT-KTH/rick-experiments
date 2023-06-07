@@ -1,0 +1,84 @@
+***not in a method***;1;1;0
+ImportContainerImpl.ImportContainerImpl( );10;1;15
+ImportContainerImpl.addEdge( EdgeDraft edgeDraft );24;16;85
+ImportContainerImpl.addEdgeColumn( String key , Class typeClass );6;3;11
+ImportContainerImpl.addEdgeColumn( String key , Class typeClass , boolean dynamic );9;4;23
+ImportContainerImpl.addNode( NodeDraft nodeDraft );3;2;13
+ImportContainerImpl.addNodeColumn( String key , Class typeClass );6;3;11
+ImportContainerImpl.addNodeColumn( String key , Class typeClass , boolean dynamic );9;4;23
+ImportContainerImpl.allowAutoNode( );2;1;3
+ImportContainerImpl.allowParallelEdges( );2;1;3
+ImportContainerImpl.allowSelfLoop( );2;1;3
+ImportContainerImpl.checkColorAlpha( ObjectList < ? extends ElementDraft > objectList , String elementType );16;8;18
+ImportContainerImpl.checkElementDraftImpl( ElementDraft elmt );7;3;8
+ImportContainerImpl.checkId( String id );6;3;8
+ImportContainerImpl.closeLoader( );52;42;86
+ImportContainerImpl.compare( NodeDraftImpl o1 , NodeDraftImpl o2 );9;3;3
+ImportContainerImpl.containsAutoNodes( );2;1;3
+ImportContainerImpl.edgeExists( String id );3;1;4
+ImportContainerImpl.edgeExists( String source , String target );16;8;19
+ImportContainerImpl.ensureLongSetArraySize( int type );4;2;8
+ImportContainerImpl.factory( );2;1;3
+ImportContainerImpl.getEdge( String id );5;2;8
+ImportContainerImpl.getEdgeColumn( String key );3;1;3
+ImportContainerImpl.getEdgeColumns( );2;1;3
+ImportContainerImpl.getEdgeCount( );2;1;3
+ImportContainerImpl.getEdgeDefault( );2;1;3
+ImportContainerImpl.getEdgeType( Object type );25;16;34
+ImportContainerImpl.getEdgeTypeLabelClass( );2;1;3
+ImportContainerImpl.getEdges( );3;1;3
+ImportContainerImpl.getEdgesMergeStrategy( );2;1;3
+ImportContainerImpl.getElementIdType( );2;1;3
+ImportContainerImpl.getInterval( );2;1;3
+ImportContainerImpl.getLoader( );2;1;3
+ImportContainerImpl.getLongId( EdgeDraftImpl edge );3;1;4
+ImportContainerImpl.getLongId( NodeDraftImpl source , NodeDraftImpl target , boolean directed );8;2;12
+ImportContainerImpl.getMutualEdgeCount( );2;1;3
+ImportContainerImpl.getNode( String id );7;4;25
+ImportContainerImpl.getNodeColumn( String key );3;1;3
+ImportContainerImpl.getNodeColumns( );2;1;3
+ImportContainerImpl.getNodeCount( );2;1;3
+ImportContainerImpl.getNodes( );3;1;3
+ImportContainerImpl.getOpposite( EdgeDraftImpl edge );8;3;9
+ImportContainerImpl.getReport( );2;1;3
+ImportContainerImpl.getSource( );3;1;3
+ImportContainerImpl.getTimeFormat( );2;1;3
+ImportContainerImpl.getTimeRepresentation( );2;1;3
+ImportContainerImpl.getTimeZone( );2;1;3
+ImportContainerImpl.getTimestamp( );2;1;3
+ImportContainerImpl.getUnloader( );2;1;3
+ImportContainerImpl.hasDynamicAttributes( );2;1;3
+ImportContainerImpl.hasEdgeColumn( String key );3;1;3
+ImportContainerImpl.hasNodeColumn( String key );3;1;3
+ImportContainerImpl.hasSelfLoops( );3;1;3
+ImportContainerImpl.isAutoScale( );2;1;3
+ImportContainerImpl.isDynamicGraph( );2;1;3
+ImportContainerImpl.isEdgeDirected( EdgeDraft edgeDraft );6;3;5
+ImportContainerImpl.isFillLabelWithId( );2;1;3
+ImportContainerImpl.isMultiGraph( );3;1;3
+ImportContainerImpl.mergeDirectedEdges( EdgeDraftImpl source , EdgeDraftImpl dest );6;7;27
+ImportContainerImpl.nodeExists( String id );3;1;4
+ImportContainerImpl.removeEdge( EdgeDraft edgeDraft );11;8;38
+ImportContainerImpl.removeNode( NodeDraftImpl node );3;2;8
+ImportContainerImpl.setAllowAutoNode( boolean value );1;1;3
+ImportContainerImpl.setAllowParallelEdge( boolean value );1;1;3
+ImportContainerImpl.setAllowSelfLoop( boolean value );1;1;3
+ImportContainerImpl.setAutoScale( boolean autoscale );1;1;3
+ImportContainerImpl.setEdgeDefault( EdgeDirectionDefault edgeDefault );3;2;7
+ImportContainerImpl.setEdgesMergeStrategy( EdgeMergeStrategy edgesMergeStrategy );2;1;3
+ImportContainerImpl.setElementIdType( ElementIdType type );3;2;7
+ImportContainerImpl.setFillLabelWithId( boolean value );1;1;3
+ImportContainerImpl.setInterval( String startDateTime , String endDateTime );15;12;27
+ImportContainerImpl.setReport( Report report );2;1;3
+ImportContainerImpl.setSource( String source );2;1;3
+ImportContainerImpl.setTimeFormat( TimeFormat timeFormat );2;1;3
+ImportContainerImpl.setTimeRepresentation( TimeRepresentation timeRepresentation );2;1;3
+ImportContainerImpl.setTimeZone( DateTimeZone timeZone );2;1;3
+ImportContainerImpl.setTimestamp( String timestamp );3;3;13
+ImportContainerImpl.verify( );32;33;90
+NullFilterIterable.NullFilterIterable( Collection elementCollection );0;1;3
+NullFilterIterable.iterator( );3;1;3
+NullFilterIterator.NullFilterIterator( Collection < T > elementCollection );0;1;3
+NullFilterIterator.hasNext( );4;3;9
+NullFilterIterator.next( );2;1;3
+NullFilterIterator.remove( );2;1;3

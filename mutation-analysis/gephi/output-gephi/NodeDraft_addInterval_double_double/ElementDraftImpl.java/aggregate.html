@@ -1,0 +1,964 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.59</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                                                      
+</span><span class="outsideLine"><i>0002</i>  * Copyright 2008-2010 Gephi                                                                                            
+</span><span class="outsideLine"><i>0003</i>  * Authors : Cezary Bartosiak                                                                                           
+</span><span class="outsideLine"><i>0004</i>  *           Mathieu Bastian <mathieu.bastian@gephi.org>                                                                
+</span><span class="outsideLine"><i>0005</i>  * Website : http://www.gephi.org                                                                                       
+</span><span class="outsideLine"><i>0006</i>  *                                                                                                                      
+</span><span class="outsideLine"><i>0007</i>  * This file is part of Gephi.                                                                                          
+</span><span class="outsideLine"><i>0008</i>  *                                                                                                                      
+</span><span class="outsideLine"><i>0009</i>  DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.                                                               
+</span><span class="outsideLine"><i>0010</i>                                                                                                                         
+</span><span class="outsideLine"><i>0011</i>  Copyright 2011 Gephi Consortium. All rights reserved.                                                                  
+</span><span class="outsideLine"><i>0012</i>                                                                                                                         
+</span><span class="outsideLine"><i>0013</i>  The contents of this file are subject to the terms of either the GNU                                                   
+</span><span class="outsideLine"><i>0014</i>  General Public License Version 3 only ("GPL") or the Common                                                            
+</span><span class="outsideLine"><i>0015</i>  Development and Distribution License("CDDL") (collectively, the                                                        
+</span><span class="outsideLine"><i>0016</i>  "License"). You may not use this file except in compliance with the                                                    
+</span><span class="outsideLine"><i>0017</i>  License. You can obtain a copy of the License at                                                                       
+</span><span class="outsideLine"><i>0018</i>  http://gephi.org/about/legal/license-notice/                                                                           
+</span><span class="outsideLine"><i>0019</i>  or /cddl-1.0.txt and /gpl-3.0.txt. See the License for the                                                             
+</span><span class="outsideLine"><i>0020</i>  specific language governing permissions and limitations under the                                                      
+</span><span class="outsideLine"><i>0021</i>  License.  When distributing the software, include this License Header                                                  
+</span><span class="outsideLine"><i>0022</i>  Notice in each file and include the License files at                                                                   
+</span><span class="outsideLine"><i>0023</i>  /cddl-1.0.txt and /gpl-3.0.txt. If applicable, add the following below the                                             
+</span><span class="outsideLine"><i>0024</i>  License Header, with the fields enclosed by brackets [] replaced by                                                    
+</span><span class="outsideLine"><i>0025</i>  your own identifying information:                                                                                      
+</span><span class="outsideLine"><i>0026</i>  "Portions Copyrighted [year] [name of copyright owner]"                                                                
+</span><span class="outsideLine"><i>0027</i>                                                                                                                         
+</span><span class="outsideLine"><i>0028</i>  If you wish your version of this file to be governed by only the CDDL                                                  
+</span><span class="outsideLine"><i>0029</i>  or only the GPL Version 3, indicate your decision by adding                                                            
+</span><span class="outsideLine"><i>0030</i>  "[Contributor] elects to include this software in this distribution                                                    
+</span><span class="outsideLine"><i>0031</i>  under the [CDDL or GPL Version 3] license." If you do not indicate a                                                   
+</span><span class="outsideLine"><i>0032</i>  single choice of license, a recipient has the option to distribute                                                     
+</span><span class="outsideLine"><i>0033</i>  your version of this file under either the CDDL, the GPL Version 3 or                                                  
+</span><span class="outsideLine"><i>0034</i>  to extend the choice of license to its licensees as provided above.                                                    
+</span><span class="outsideLine"><i>0035</i>  However, if you add GPL Version 3 code and therefore, elected the GPL                                                  
+</span><span class="outsideLine"><i>0036</i>  Version 3 license, then the option applies only if the new code is                                                     
+</span><span class="outsideLine"><i>0037</i>  made subject to such option by the copyright holder.                                                                   
+</span><span class="outsideLine"><i>0038</i>                                                                                                                         
+</span><span class="outsideLine"><i>0039</i>  Contributor(s):                                                                                                        
+</span><span class="outsideLine"><i>0040</i>                                                                                                                         
+</span><span class="outsideLine"><i>0041</i>  Portions Copyrighted 2011 Gephi Consortium.                                                                            
+</span><span class="outsideLine"><i>0042</i>  */                                                                                                                     
+</span><span class="outsideLine"><i>0043</i>                                                                                                                         
+</span><span class="outsideLine"><i>0044</i> package org.gephi.io.importer.impl;                                                                                     
+</span><span class="outsideLine"><i>0045</i>                                                                                                                         
+</span><span class="outsideLine"><i>0046</i> import java.awt.Color;                                                                                                  
+</span><span class="outsideLine"><i>0047</i> import org.gephi.graph.api.AttributeUtils;                                                                              
+</span><span class="outsideLine"><i>0048</i> import org.gephi.graph.api.Interval;                                                                                    
+</span><span class="outsideLine"><i>0049</i> import org.gephi.graph.api.TimeFormat;                                                                                  
+</span><span class="outsideLine"><i>0050</i> import org.gephi.graph.api.TimeRepresentation;                                                                          
+</span><span class="outsideLine"><i>0051</i> import org.gephi.graph.api.types.IntervalMap;                                                                           
+</span><span class="outsideLine"><i>0052</i> import org.gephi.graph.api.types.IntervalSet;                                                                           
+</span><span class="outsideLine"><i>0053</i> import org.gephi.graph.api.types.TimeMap;                                                                               
+</span><span class="outsideLine"><i>0054</i> import org.gephi.graph.api.types.TimeSet;                                                                               
+</span><span class="outsideLine"><i>0055</i> import org.gephi.graph.api.types.TimestampMap;                                                                          
+</span><span class="outsideLine"><i>0056</i> import org.gephi.graph.api.types.TimestampSet;                                                                          
+</span><span class="outsideLine"><i>0057</i> import org.gephi.io.importer.api.ColumnDraft;                                                                           
+</span><span class="outsideLine"><i>0058</i> import org.gephi.io.importer.api.ElementDraft;                                                                          
+</span><span class="outsideLine"><i>0059</i> import org.gephi.io.importer.api.ImportUtils;                                                                           
+</span><span class="outsideLine"><i>0060</i> import org.gephi.io.importer.api.Issue;                                                                                 
+</span><span class="outsideLine"><i>0061</i> import org.openide.util.NbBundle;                                                                                       
+</span><span class="outsideLine"><i>0062</i>                                                                                                                         
+</span><span class="outsideLine"><i>0063</i> public abstract class ElementDraftImpl implements ElementDraft {                                                        
+</span><span class="outsideLine"><i>0064</i>                                                                                                                         
+</span><span class="outsideLine"><i>0065</i>     protected final ImportContainerImpl container;                                                                      
+</span><span class="outsideLine"><i>0066</i>     //Properties                                                                                                        
+</span><span class="outsideLine"><i>0067</i>     protected final String id;                                                                                          
+</span><span class="outsideLine"><i>0068</i>     protected String label;                                                                                             
+</span><span class="outsideLine"><i>0069</i>     //Viz                                                                                                               
+</span><span class="outsideLine"><i>0070</i>     protected Color color;                                                                                              
+</span><span class="outsideLine"><i>0071</i>     //Text                                                                                                              
+</span><span class="outsideLine"><i>0072</i>     protected Color labelColor;                                                                                         
+</span><span class="outsideLine"><i>0073</i>     protected float labelSize = <span class="ArithmeticOperatorReplacementUnary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementUnary 
+Node ID: 1674</span>-</span>1f;                                                                                    
+</span><span class="outsideLine"><i>0074</i>     protected boolean labelVisible = true;                                                                              
+</span><span class="outsideLine"><i>0075</i>     //Attributes                                                                                                        
+</span><span class="outsideLine"><i>0076</i>     protected Object[] attributes;                                                                                      
+</span><span class="outsideLine"><i>0077</i>     //Timestamps                                                                                                        
+</span><span class="outsideLine"><i>0078</i>     protected TimeSet timeSet;                                                                                          
+</span><span class="outsideLine"><i>0079</i>                                                                                                                         
+</span><span class="methodLine"><i>0080</i>     public ElementDraftImpl(ImportContainerImpl container, String id) {                                                 
+</span><span class="methodLine"><i>0081</i>         this.container = container;                                                                                     
+</span><span class="methodLine"><i>0082</i>         this.id = id;                                                                                                   
+</span><span class="methodLine"><i>0083</i>         this.attributes = new Object[0];                                                                                
+</span><span class="methodLine"><i>0084</i>     }                                                                                                                   
+</span><span class="outsideLine"><i>0085</i>                                                                                                                         
+</span><span class="methodLine"><i>0086</i>     private static Object parseValue(String value, Class type) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { value = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1290</span>{</span>                                                        
+</span><span class="methodLine"><i>0087</i>         value = value.replace("INF", "Infinity").replace("-INF", "-Infinity");                                          
+</span><span class="methodLine"><i>0088</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1691</span>return AttributeUtils.parse(value, type);</span>                                                                       
+</span><span class="methodLine"><i>0089</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0090</i>                                                                                                                         
+</span><span class="outsideLine"><i>0091</i>     abstract ColumnDraft getColumn(String key);                                                                         
+</span><span class="outsideLine"><i>0092</i>                                                                                                                         
+</span><span class="outsideLine"><i>0093</i>     abstract ColumnDraft getColumn(String key, Class type);                                                             
+</span><span class="outsideLine"><i>0094</i>                                                                                                                         
+</span><span class="outsideLine"><i>0095</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0096</i>     public Double getGraphTimestamp() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 691</span>{                                                                                 
+</span><span class="methodLine"><i>0097</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1699</span>return container.getTimestamp();</span>                                                                                
+</span><span class="methodLine"><i>0098</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0099</i>                                                                                                                         
+</span><span class="outsideLine"><i>0100</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0101</i>     public Interval getGraphInterval() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 697</span>{                                                                                
+</span><span class="methodLine"><i>0102</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1701</span>return container.getInterval();</span>                                                                                 
+</span><span class="methodLine"><i>0103</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0104</i>                                                                                                                         
+</span><span class="outsideLine"><i>0105</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0106</i>     public String getId() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 703</span>{                                                                                             
+</span><span class="methodLine"><i>0107</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1703</span>return id;</span>                                                                                                      
+</span><span class="methodLine"><i>0108</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0109</i>                                                                                                                         
+</span><span class="outsideLine"><i>0110</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0111</i>     public String getLabel() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 709</span>{                                                                                          
+</span><span class="methodLine"><i>0112</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1705</span>return label;</span>                                                                                                   
+</span><span class="methodLine"><i>0113</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0114</i>                                                                                                                         
+</span><span class="outsideLine"><i>0115</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0116</i>     public void setLabel(String label) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { label = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1322</span>{</span>                                                                                
+</span><span class="methodLine"><i>0117</i>         this.label = label;                                                                                             
+</span><span class="methodLine"><i>0118</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0119</i>                                                                                                                         
+</span><span class="outsideLine"><i>0120</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0121</i>     public Color getColor() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 721</span>{                                                                                           
+</span><span class="methodLine"><i>0122</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1711</span>return color;</span>                                                                                                   
+</span><span class="methodLine"><i>0123</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0124</i>                                                                                                                         
+</span><span class="outsideLine"><i>0125</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0126</i>     public void setColor(Color color) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { color = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1332</span>{</span>                                                                                 
+</span><span class="methodLine"><i>0127</i>         this.color = color;                                                                                             
+</span><span class="methodLine"><i>0128</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0129</i>                                                                                                                         
+</span><span class="outsideLine"><i>0130</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0131</i>     public void setColor(String color) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { color = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1337</span>{</span>                                                                                
+</span><span class="methodLine"><i>0132</i>         Color cl = ImportUtils.parseColor(color);                                                                       
+</span><span class="methodLine"><i>0133</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2489</span>cl <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2489</span>!=</span> null</span>) {                                                                                               
+</span><span class="methodLine"><i>0134</i>             setColor(cl);                                                                                               
+</span><span class="methodLine"><i>0135</i>         } else {                                                                                                        
+</span><span class="methodLine"><i>0136</i>             String message = NbBundle.getMessage(ElementDraftImpl.class, "ElementDraftException_ColorParse", color, id);
+</span><span class="methodLine"><i>0137</i>             container.getReport().logIssue(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5944</span>new Issue(message, Issue.Level.WARNING)</span>);                                    
+</span><span class="methodLine"><i>0138</i>         }                                                                                                               
+</span><span class="methodLine"><i>0139</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0140</i>                                                                                                                         
+</span><span class="outsideLine"><i>0141</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0142</i>     public boolean isLabelVisible() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 739</span>{                                                                                   
+</span><span class="methodLine"><i>0143</i>         return labelVisible;                                                                                            
+</span><span class="methodLine"><i>0144</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0145</i>                                                                                                                         
+</span><span class="outsideLine"><i>0146</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0147</i>     public void setLabelVisible(boolean labelVisible) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 745</span>{                                                                 
+</span><span class="methodLine"><i>0148</i>         this.labelVisible = labelVisible;                                                                               
+</span><span class="methodLine"><i>0149</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0150</i>                                                                                                                         
+</span><span class="outsideLine"><i>0151</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0152</i>     public float getLabelSize() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 751</span>{                                                                                       
+</span><span class="methodLine"><i>0153</i>         return labelSize;                                                                                               
+</span><span class="methodLine"><i>0154</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0155</i>                                                                                                                         
+</span><span class="outsideLine"><i>0156</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0157</i>     public void setLabelSize(float size) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 757</span>{                                                                              
+</span><span class="methodLine"><i>0158</i>         this.labelSize = size;                                                                                          
+</span><span class="methodLine"><i>0159</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0160</i>                                                                                                                         
+</span><span class="outsideLine"><i>0161</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0162</i>     public Color getLabelColor() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 763</span>{                                                                                      
+</span><span class="methodLine"><i>0163</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1734</span>return labelColor;</span>                                                                                              
+</span><span class="methodLine"><i>0164</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0165</i>                                                                                                                         
+</span><span class="outsideLine"><i>0166</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0167</i>     public void setLabelColor(Color color) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { color = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1368</span>{</span>                                                                            
+</span><span class="methodLine"><i>0168</i>         this.labelColor = color;                                                                                        
+</span><span class="methodLine"><i>0169</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0170</i>                                                                                                                         
+</span><span class="outsideLine"><i>0171</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0172</i>     public void setLabelColor(String color) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { color = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1373</span>{</span>                                                                           
+</span><span class="methodLine"><i>0173</i>         Color cl = ImportUtils.parseColor(color);                                                                       
+</span><span class="methodLine"><i>0174</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2506</span>cl <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2506</span>!=</span> null</span>) {                                                                                               
+</span><span class="methodLine"><i>0175</i>             setLabelColor(cl);                                                                                          
+</span><span class="methodLine"><i>0176</i>         } else {                                                                                                        
+</span><span class="methodLine"><i>0177</i>             String message =                                                                                            
+</span><span class="methodLine"><i>0178</i>                 NbBundle.getMessage(ElementDraftImpl.class, "ElementDraftException_LabelColorParse", color, id);        
+</span><span class="methodLine"><i>0179</i>             container.getReport().logIssue(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5955</span>new Issue(message, Issue.Level.WARNING)</span>);                                    
+</span><span class="methodLine"><i>0180</i>         }                                                                                                               
+</span><span class="methodLine"><i>0181</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0182</i>                                                                                                                         
+</span><span class="outsideLine"><i>0183</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0184</i>     public Object getValue(String key) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { key = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1380</span>{</span>                                                                                
+</span><span class="methodLine"><i>0185</i>         ColumnDraft column = getColumn(key);                                                                            
+</span><span class="methodLine"><i>0186</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2514</span>column <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2514</span>!=</span> null</span>) {                                                                                           
+</span><span class="methodLine"><i>0187</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3357</span>return getAttributeValue(((ColumnDraftImpl) column).getIndex());</span>                                            
+</span><span class="methodLine"><i>0188</i>         }                                                                                                               
+</span><span class="methodLine"><i>0189</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1749</span>return null;</span>                                                                                                    
+</span><span class="methodLine"><i>0190</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0191</i>                                                                                                                         
+</span><span class="outsideLine"><i>0192</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0193</i>     public void setColor(String r, String g, String b) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { r = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1391</span>{</span>                                                                
+</span><span class="methodLine"><i>0194</i>         setColor(Integer.parseInt(r), Integer.parseInt(g), Integer.parseInt(b));                                        
+</span><span class="methodLine"><i>0195</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0196</i>                                                                                                                         
+</span><span class="outsideLine"><i>0197</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0198</i>     public void setColor(float r, float g, float b) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 793</span>{                                                                   
+</span><span class="methodLine"><i>0199</i>         r = Math.max(Math.min(r, 1f), 0f);                                                                              
+</span><span class="methodLine"><i>0200</i>         g = Math.max(Math.min(g, 1f), 0f);                                                                              
+</span><span class="methodLine"><i>0201</i>         b = Math.max(Math.min(b, 1f), 0f);                                                                              
+</span><span class="methodLine"><i>0202</i>         setColor(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3877</span>new Color(r, g, b)</span>);                                                                                   
+</span><span class="methodLine"><i>0203</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0204</i>                                                                                                                         
+</span><span class="outsideLine"><i>0205</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0206</i>     public void setColor(int r, int g, int b) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 799</span>{                                                                         
+</span><span class="methodLine"><i>0207</i>         setColor(r <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3383</span>/</span> 255f, g <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3385</span>/</span> 255f, b <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3387</span>/</span> 255f);                                                                         
+</span><span class="methodLine"><i>0208</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0209</i>                                                                                                                         
+</span><span class="outsideLine"><i>0210</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0211</i>     public void setLabelColor(String r, String g, String b) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { r = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1421</span>{</span>                                                           
+</span><span class="methodLine"><i>0212</i>         setLabelColor(Integer.parseInt(r), Integer.parseInt(g), Integer.parseInt(b));                                   
+</span><span class="methodLine"><i>0213</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0214</i>                                                                                                                         
+</span><span class="outsideLine"><i>0215</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0216</i>     public void setLabelColor(float r, float g, float b) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 811</span>{                                                              
+</span><span class="methodLine"><i>0217</i>         r = Math.max(Math.min(r, 1f), 0f);                                                                              
+</span><span class="methodLine"><i>0218</i>         g = Math.max(Math.min(g, 1f), 0f);                                                                              
+</span><span class="methodLine"><i>0219</i>         b = Math.max(Math.min(b, 1f), 0f);                                                                              
+</span><span class="methodLine"><i>0220</i>         setLabelColor(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3924</span>new Color(r, g, b)</span>);                                                                              
+</span><span class="methodLine"><i>0221</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0222</i>                                                                                                                         
+</span><span class="outsideLine"><i>0223</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0224</i>     public void setLabelColor(int r, int g, int b) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 817</span>{                                                                    
+</span><span class="methodLine"><i>0225</i>         setLabelColor(r <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3412</span>/</span> 255f, g <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3414</span>/</span> 255f, b <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3416</span>/</span> 255f);                                                                    
+</span><span class="methodLine"><i>0226</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0227</i>                                                                                                                         
+</span><span class="outsideLine"><i>0228</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0229</i>     public void setValue(String key, Object value) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { key = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1449</span>{</span>                                                                    
+</span><span class="methodLine"><i>0230</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2551</span>value <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2551</span>==</span> null</span>) {                                                                                            
+</span><span class="methodLine"><i>0231</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4469</span>new NullPointerException("Value can't be null")</span>;                                                      
+</span><span class="methodLine"><i>0232</i>         }                                                                                                               
+</span><span class="outsideLine"><i>0233</i>                                                                                                                         
+</span><span class="methodLine"><i>0234</i>         Class type = value.getClass();                                                                                  
+</span><span class="methodLine"><i>0235</i>         if (AttributeUtils.isDynamicType(type) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2557</span>&&</span> <span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2953</span>!</span>TimeSet.class.isAssignableFrom(type)) {                              
+</span><span class="methodLine"><i>0236</i>             type = AttributeUtils.getStaticType(type);                                                                  
+</span><span class="methodLine"><i>0237</i>         }                                                                                                               
+</span><span class="methodLine"><i>0238</i>         ColumnDraft column = getColumn(key, type);                                                                      
+</span><span class="methodLine"><i>0239</i>         try {                                                                                                           
+</span><span class="methodLine"><i>0240</i>             setAttributeValue(column, value);                                                                           
+</span><span class="methodLine"><i>0241</i>         } catch (Exception ex) {                                                                                        
+</span><span class="methodLine"><i>0242</i>             String message = NbBundle                                                                                   
+</span><span class="methodLine"><i>0243</i>                 .getMessage(ElementDraftImpl.class, "ElementDraftException_SetValueError", value.toString(), id,        
+</span><span class="methodLine"><i>0244</i>                     ex.getMessage());                                                                                   
+</span><span class="methodLine"><i>0245</i>             container.getReport().logIssue(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 6008</span>new Issue(message, Issue.Level.SEVERE)</span>);                                     
+</span><span class="methodLine"><i>0246</i>         }                                                                                                               
+</span><span class="methodLine"><i>0247</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0248</i>                                                                                                                         
+</span><span class="outsideLine"><i>0249</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0250</i>     public void setValue(String key, Object value, String dateTime) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { key = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1462</span>{</span>                                                   
+</span><span class="methodLine"><i>0251</i>         setValue(key, value, container.getTimeFormat().equals(TimeFormat.DOUBLE) ? Double.parseDouble(dateTime) :       
+</span><span class="methodLine"><i>0252</i>             AttributeUtils.parseDateTime(dateTime, container.getTimeZone()));                                           
+</span><span class="methodLine"><i>0253</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0254</i>                                                                                                                         
+</span><span class="outsideLine"><i>0255</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0256</i>     public void setValue(String key, Object value, double timestamp) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { key = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1471</span>{</span>                                                  
+</span><span class="methodLine"><i>0257</i>         ColumnDraft column = getColumn(key, value.getClass());                                                          
+</span><span class="methodLine"><i>0258</i>         try {                                                                                                           
+</span><span class="methodLine"><i>0259</i>             setAttributeValue(column, value, timestamp);                                                                
+</span><span class="methodLine"><i>0260</i>         } catch (Exception ex) {                                                                                        
+</span><span class="methodLine"><i>0261</i>             String message = NbBundle                                                                                   
+</span><span class="methodLine"><i>0262</i>                 .getMessage(ElementDraftImpl.class, "ElementDraftException_SetValueTimestampError", value.toString(),   
+</span><span class="methodLine"><i>0263</i>                     id, timestamp, ex.getMessage());                                                                    
+</span><span class="methodLine"><i>0264</i>             container.getReport().logIssue(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 6033</span>new Issue(message, Issue.Level.SEVERE)</span>);                                     
+</span><span class="methodLine"><i>0265</i>         }                                                                                                               
+</span><span class="methodLine"><i>0266</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0267</i>                                                                                                                         
+</span><span class="outsideLine"><i>0268</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0269</i>     public void setValue(String key, Object value, String startDateTime, String endDateTime) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { key = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1483</span>{</span>                          
+</span><span class="methodLine"><i>0270</i>         double start, end;                                                                                              
+</span><span class="methodLine"><i>0271</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3976</span>startDateTime <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3976</span>==</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3458</span>||</span> startDateTime.isEmpty() <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2981</span>||</span> "-inf".equalsIgnoreCase(startDateTime) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2596</span>||</span>               
+</span><span class="methodLine"><i>0272</i>             "-infinity".equalsIgnoreCase(startDateTime)) {                                                              
+</span><span class="methodLine"><i>0273</i>             start = Double.NEGATIVE_INFINITY;                                                                           
+</span><span class="methodLine"><i>0274</i>         } else {                                                                                                        
+</span><span class="methodLine"><i>0275</i>             start = container.getTimeFormat().equals(TimeFormat.DOUBLE) ? Double.parseDouble(startDateTime) :           
+</span><span class="methodLine"><i>0276</i>                 AttributeUtils.parseDateTime(startDateTime, container.getTimeZone());                                   
+</span><span class="methodLine"><i>0277</i>         }                                                                                                               
+</span><span class="methodLine"><i>0278</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 3991</span>endDateTime <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3991</span>==</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3467</span>||</span> endDateTime.isEmpty() <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2990</span>||</span> "inf".equalsIgnoreCase(endDateTime) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2601</span>||</span>                      
+</span><span class="methodLine"><i>0279</i>             "infinity".equalsIgnoreCase(endDateTime)) {                                                                 
+</span><span class="methodLine"><i>0280</i>             end = Double.POSITIVE_INFINITY;                                                                             
+</span><span class="methodLine"><i>0281</i>         } else {                                                                                                        
+</span><span class="methodLine"><i>0282</i>             end = container.getTimeFormat().equals(TimeFormat.DOUBLE) ? Double.parseDouble(endDateTime) :               
+</span><span class="methodLine"><i>0283</i>                 AttributeUtils.parseDateTime(endDateTime, container.getTimeZone());                                     
+</span><span class="methodLine"><i>0284</i>         }                                                                                                               
+</span><span class="methodLine"><i>0285</i>         setValue(key, value, start, end);                                                                               
+</span><span class="methodLine"><i>0286</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0287</i>                                                                                                                         
+</span><span class="outsideLine"><i>0288</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0289</i>     public void setValue(String key, Object value, double start, double end) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { key = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1497</span>{</span>                                          
+</span><span class="methodLine"><i>0290</i>         ColumnDraft column = getColumn(key, value.getClass());                                                          
+</span><span class="methodLine"><i>0291</i>         try {                                                                                                           
+</span><span class="methodLine"><i>0292</i>             setAttributeValue(column, value, start, end);                                                               
+</span><span class="methodLine"><i>0293</i>         } catch (Exception ex) {                                                                                        
+</span><span class="methodLine"><i>0294</i>             String interval = "[" + start + "," + end + "]";                                                            
+</span><span class="methodLine"><i>0295</i>             String message = NbBundle                                                                                   
+</span><span class="methodLine"><i>0296</i>                 .getMessage(ElementDraftImpl.class, "ElementDraftException_SetValueIntervalError", value.toString(), id,
+</span><span class="methodLine"><i>0297</i>                     interval, ex.getMessage());                                                                         
+</span><span class="methodLine"><i>0298</i>             container.getReport().logIssue(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 6086</span>new Issue(message, Issue.Level.SEVERE)</span>);                                     
+</span><span class="methodLine"><i>0299</i>         }                                                                                                               
+</span><span class="methodLine"><i>0300</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0301</i>                                                                                                                         
+</span><span class="outsideLine"><i>0302</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0303</i>     public void parseAndSetValue(String key, String value) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { key = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1505</span>{</span>                                                            
+</span><span class="methodLine"><i>0304</i>         ColumnDraft column = getColumn(key);                                                                            
+</span><span class="methodLine"><i>0305</i>         if (column.isDynamic()) {                                                                                       
+</span><span class="methodLine"><i>0306</i>             if (container.getTimeRepresentation().equals(TimeRepresentation.INTERVAL)) {                                
+</span><span class="methodLine"><i>0307</i>                 if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 6481</span>container.getInterval() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 6481</span>!=</span> null</span>) {                                                                  
+</span><span class="methodLine"><i>0308</i>                     parseAndSetValue(key, value, container.getInterval().getLow(), container.getInterval().getHigh());  
+</span><span class="methodLine"><i>0309</i>                     return;                                                                                             
+</span><span class="methodLine"><i>0310</i>                 }                                                                                                       
+</span><span class="methodLine"><i>0311</i>             } else {                                                                                                    
+</span><span class="methodLine"><i>0312</i>                 if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 6485</span>container.getTimestamp() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 6485</span>!=</span> null</span>) {                                                                 
+</span><span class="methodLine"><i>0313</i>                     parseAndSetValue(key, value, container.getTimestamp());                                             
+</span><span class="methodLine"><i>0314</i>                     return;                                                                                             
+</span><span class="methodLine"><i>0315</i>                 }                                                                                                       
+</span><span class="methodLine"><i>0316</i>             }                                                                                                           
+</span><span class="methodLine"><i>0317</i>         }                                                                                                               
+</span><span class="outsideLine"><i>0318</i>                                                                                                                         
+</span><span class="methodLine"><i>0319</i>         setValue(key, parseValue(value, column.getResolvedTypeClass(container)));                                       
+</span><span class="methodLine"><i>0320</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0321</i>                                                                                                                         
+</span><span class="outsideLine"><i>0322</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0323</i>     public void parseAndSetValue(String key, String value, String dateTime) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { key = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1516</span>{</span>                                           
+</span><span class="methodLine"><i>0324</i>         parseAndSetValue(key, value,                                                                                    
+</span><span class="methodLine"><i>0325</i>             container.getTimeFormat().equals(TimeFormat.DOUBLE) ? Double.parseDouble(dateTime) :                        
+</span><span class="methodLine"><i>0326</i>                 AttributeUtils.parseDateTime(dateTime, container.getTimeZone()));                                       
+</span><span class="methodLine"><i>0327</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0328</i>                                                                                                                         
+</span><span class="outsideLine"><i>0329</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0330</i>     public void parseAndSetValue(String key, String value, double timestamp) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { key = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1525</span>{</span>                                          
+</span><span class="methodLine"><i>0331</i>         ColumnDraft column = getColumn(key);                                                                            
+</span><span class="methodLine"><i>0332</i>         setValue(key, parseValue(value, column.getTypeClass()), timestamp);                                             
+</span><span class="methodLine"><i>0333</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0334</i>                                                                                                                         
+</span><span class="outsideLine"><i>0335</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0336</i>     public void parseAndSetValue(String key, String value, String startDateTime, String endDateTime) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { key = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1537</span>{</span>                  
+</span><span class="methodLine"><i>0337</i>         double start, end;                                                                                              
+</span><span class="methodLine"><i>0338</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 4053</span>startDateTime <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4053</span>==</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3525</span>||</span> startDateTime.isEmpty() <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3038</span>||</span> "-inf".equalsIgnoreCase(startDateTime) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2647</span>||</span>               
+</span><span class="methodLine"><i>0339</i>             "-infinity".equalsIgnoreCase(startDateTime)) {                                                              
+</span><span class="methodLine"><i>0340</i>             start = Double.NEGATIVE_INFINITY;                                                                           
+</span><span class="methodLine"><i>0341</i>         } else {                                                                                                        
+</span><span class="methodLine"><i>0342</i>             start = container.getTimeFormat().equals(TimeFormat.DOUBLE) ? Double.parseDouble(startDateTime) :           
+</span><span class="methodLine"><i>0343</i>                 AttributeUtils.parseDateTime(startDateTime, container.getTimeZone());                                   
+</span><span class="methodLine"><i>0344</i>         }                                                                                                               
+</span><span class="methodLine"><i>0345</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 4068</span>endDateTime <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4068</span>==</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3534</span>||</span> endDateTime.isEmpty() <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3047</span>||</span> "inf".equalsIgnoreCase(endDateTime) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2652</span>||</span>                      
+</span><span class="methodLine"><i>0346</i>             "infinity".equalsIgnoreCase(endDateTime)) {                                                                 
+</span><span class="methodLine"><i>0347</i>             end = Double.POSITIVE_INFINITY;                                                                             
+</span><span class="methodLine"><i>0348</i>         } else {                                                                                                        
+</span><span class="methodLine"><i>0349</i>             end = container.getTimeFormat().equals(TimeFormat.DOUBLE) ? Double.parseDouble(endDateTime) :               
+</span><span class="methodLine"><i>0350</i>                 AttributeUtils.parseDateTime(endDateTime, container.getTimeZone());                                     
+</span><span class="methodLine"><i>0351</i>         }                                                                                                               
+</span><span class="methodLine"><i>0352</i>         parseAndSetValue(key, value, start, end);                                                                       
+</span><span class="methodLine"><i>0353</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0354</i>                                                                                                                         
+</span><span class="outsideLine"><i>0355</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0356</i>     public void parseAndSetValue(String key, String value, double start, double end) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { key = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1551</span>{</span>                                  
+</span><span class="methodLine"><i>0357</i>         ColumnDraft column = getColumn(key);                                                                            
+</span><span class="methodLine"><i>0358</i>         setValue(key, parseValue(value, column.getTypeClass()), start, end);                                            
+</span><span class="methodLine"><i>0359</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0360</i>                                                                                                                         
+</span><span class="outsideLine"><i>0361</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0362</i>     public void addTimestamp(String dateTime) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { dateTime = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1557</span>{</span>                                                                         
+</span><span class="methodLine"><i>0363</i>         addTimestamp(container.getTimeFormat().equals(TimeFormat.DOUBLE) ? Double.parseDouble(dateTime) :               
+</span><span class="methodLine"><i>0364</i>             AttributeUtils.parseDateTime(dateTime, container.getTimeZone()));                                           
+</span><span class="methodLine"><i>0365</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0366</i>                                                                                                                         
+</span><span class="outsideLine"><i>0367</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0368</i>     public void addTimestamp(double timestamp) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 889</span>{                                                                        
+</span><span class="methodLine"><i>0369</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2668</span>!</span>container.getTimeRepresentation().equals(TimeRepresentation.TIMESTAMP)) {                                  
+</span><span class="methodLine"><i>0370</i>             String message =                                                                                            
+</span><span class="methodLine"><i>0371</i>                 NbBundle.getMessage(ElementDraftImpl.class, "ElementDraftException_NotTimestampRepresentation", id);    
+</span><span class="methodLine"><i>0372</i>             container.getReport().logIssue(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 6171</span>new Issue(message, Issue.Level.SEVERE)</span>);                                     
+</span><span class="methodLine"><i>0373</i>             return;                                                                                                     
+</span><span class="methodLine"><i>0374</i>         }                                                                                                               
+</span><span class="methodLine"><i>0375</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2672</span>timeSet <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2672</span>==</span> null</span>) {                                                                                          
+</span><span class="methodLine"><i>0376</i>             timeSet = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5701</span>new TimestampSet()</span>;                                                                               
+</span><span class="methodLine"><i>0377</i>         }                                                                                                               
+</span><span class="methodLine"><i>0378</i>         timeSet.add(timestamp);                                                                                         
+</span><span class="methodLine"><i>0379</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0380</i>                                                                                                                         
+</span><span class="outsideLine"><i>0381</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0382</i>     public void addTimestamps(String timestamps) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { timestamps = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1569</span>{</span>                                                                      
+</span><span class="methodLine"><i>0383</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2678</span>!</span>container.getTimeRepresentation().equals(TimeRepresentation.TIMESTAMP)) {                                  
+</span><span class="methodLine"><i>0384</i>             String message =                                                                                            
+</span><span class="methodLine"><i>0385</i>                 NbBundle.getMessage(ElementDraftImpl.class, "ElementDraftException_NotTimestampRepresentation", id);    
+</span><span class="methodLine"><i>0386</i>             container.getReport().logIssue(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 6182</span>new Issue(message, Issue.Level.SEVERE)</span>);                                     
+</span><span class="methodLine"><i>0387</i>             return;                                                                                                     
+</span><span class="methodLine"><i>0388</i>         }                                                                                                               
+</span><span class="methodLine"><i>0389</i>         TimestampSet t = (TimestampSet) AttributeUtils.parse(timestamps, TimestampSet.class);                           
+</span><span class="methodLine"><i>0390</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2684</span>timeSet <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2684</span>==</span> null</span>) {                                                                                          
+</span><span class="methodLine"><i>0391</i>             timeSet = t;                                                                                                
+</span><span class="methodLine"><i>0392</i>         } else {                                                                                                        
+</span><span class="methodLine"><i>0393</i>             for (Double d : t.toArray()) {                                                                              
+</span><span class="methodLine"><i>0394</i>                 timeSet.add(d);                                                                                         
+</span><span class="methodLine"><i>0395</i>             }                                                                                                           
+</span><span class="methodLine"><i>0396</i>         }                                                                                                               
+</span><span class="methodLine"><i>0397</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0398</i>                                                                                                                         
+</span><span class="outsideLine"><i>0399</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0400</i>     public TimeSet getTimeSet() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 901</span>{                                                                                       
+</span><span class="methodLine"><i>0401</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1921</span>return timeSet;</span>                                                                                                 
+</span><span class="methodLine"><i>0402</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0403</i>                                                                                                                         
+</span><span class="outsideLine"><i>0404</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0405</i>     public void addInterval(String intervalStartDateTime, String intervalEndDateTime) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { intervalStartDateTime = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1583</span>{</span>                                 
+</span><span class="methodLine"><i>0406</i>         double start, end;                                                                                              
+</span><span class="methodLine"><i>0407</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 4143</span>intervalStartDateTime <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4143</span>==</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3597</span>||</span> intervalStartDateTime.isEmpty() <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3110</span>||</span>                                         
+</span><span class="methodLine"><i>0408</i>             "-inf".equalsIgnoreCase(intervalStartDateTime) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2694</span>||</span> "-infinity".equalsIgnoreCase(intervalStartDateTime)) {    
+</span><span class="methodLine"><i>0409</i>             start = Double.NEGATIVE_INFINITY;                                                                           
+</span><span class="methodLine"><i>0410</i>         } else {                                                                                                        
+</span><span class="methodLine"><i>0411</i>             start = container.getTimeFormat().equals(TimeFormat.DOUBLE) ? Double.parseDouble(intervalStartDateTime) :   
+</span><span class="methodLine"><i>0412</i>                 AttributeUtils.parseDateTime(intervalStartDateTime, container.getTimeZone());                           
+</span><span class="methodLine"><i>0413</i>         }                                                                                                               
+</span><span class="methodLine"><i>0414</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 4158</span>intervalEndDateTime <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4158</span>==</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3606</span>||</span> intervalEndDateTime.isEmpty() <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3119</span>||</span>                                             
+</span><span class="methodLine"><i>0415</i>             "inf".equalsIgnoreCase(intervalEndDateTime) <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: && 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2699</span>||</span> "infinity".equalsIgnoreCase(intervalEndDateTime)) {          
+</span><span class="methodLine"><i>0416</i>             end = Double.POSITIVE_INFINITY;                                                                             
+</span><span class="methodLine"><i>0417</i>         } else {                                                                                                        
+</span><span class="methodLine"><i>0418</i>             end = container.getTimeFormat().equals(TimeFormat.DOUBLE) ? Double.parseDouble(intervalEndDateTime) :       
+</span><span class="methodLine"><i>0419</i>                 AttributeUtils.parseDateTime(intervalEndDateTime, container.getTimeZone());                             
+</span><span class="methodLine"><i>0420</i>         }                                                                                                               
+</span><span class="methodLine"><i>0421</i>         addInterval(start, end);                                                                                        
+</span><span class="methodLine"><i>0422</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0423</i>                                                                                                                         
+</span><span class="outsideLine"><i>0424</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0425</i>     public void addIntervals(String intervals) <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { intervals = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1591</span>{</span>                                                                        
+</span><span class="methodLine"><i>0426</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2706</span>!</span>container.getTimeRepresentation().equals(TimeRepresentation.INTERVAL)) {                                   
+</span><span class="methodLine"><i>0427</i>             String message =                                                                                            
+</span><span class="methodLine"><i>0428</i>                 NbBundle.getMessage(ElementDraftImpl.class, "ElementDraftException_NotIntervalRepresentation", id);     
+</span><span class="methodLine"><i>0429</i>             container.getReport().logIssue(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 6237</span>new Issue(message, Issue.Level.SEVERE)</span>);                                     
+</span><span class="methodLine"><i>0430</i>             return;                                                                                                     
+</span><span class="methodLine"><i>0431</i>         }                                                                                                               
+</span><span class="methodLine"><i>0432</i>         IntervalSet s = (IntervalSet) AttributeUtils.parse(intervals, IntervalSet.class);                               
+</span><span class="methodLine"><i>0433</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2712</span>timeSet <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2712</span>==</span> null</span>) {                                                                                          
+</span><span class="methodLine"><i>0434</i>             timeSet = s;                                                                                                
+</span><span class="methodLine"><i>0435</i>         } else {                                                                                                        
+</span><span class="methodLine"><i>0436</i>             for (Interval i : s.toArray()) {                                                                            
+</span><span class="methodLine"><i>0437</i>                 timeSet.add(i);                                                                                         
+</span><span class="methodLine"><i>0438</i>             }                                                                                                           
+</span><span class="methodLine"><i>0439</i>         }                                                                                                               
+</span><span class="methodLine"><i>0440</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0441</i>                                                                                                                         
+</span><span class="outsideLine"><i>0442</i>     @Override                                                                                                           
+</span><span class="methodLine"><i>0443</i>     public void addInterval(double intervalStart, double intervalEnd) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 919</span>{                                                 
+</span><span class="methodLine"><i>0444</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2719</span>!</span>container.getTimeRepresentation().equals(TimeRepresentation.INTERVAL)) {                                   
+</span><span class="methodLine"><i>0445</i>             String message =                                                                                            
+</span><span class="methodLine"><i>0446</i>                 NbBundle.getMessage(ElementDraftImpl.class, "ElementDraftException_NotIntervalRepresentation", id);     
+</span><span class="methodLine"><i>0447</i>             container.getReport().logIssue(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 6256</span>new Issue(message, Issue.Level.SEVERE)</span>);                                     
+</span><span class="methodLine"><i>0448</i>             return;                                                                                                     
+</span><span class="methodLine"><i>0449</i>         }                                                                                                               
+</span><span class="methodLine"><i>0450</i>         try {                                                                                                           
+</span><span class="methodLine"><i>0451</i>             Interval interval = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 6258</span>new Interval(intervalStart, intervalEnd)</span>;                                               
+</span><span class="methodLine"><i>0452</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 4210</span>timeSet <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4210</span>==</span> null</span>) {                                                                                      
+</span><span class="methodLine"><i>0453</i>                 timeSet = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 6948</span>new IntervalSet()</span>;                                                                            
+</span><span class="methodLine"><i>0454</i>             }                                                                                                           
+</span><span class="methodLine"><i>0455</i>             timeSet.add(interval);                                                                                      
+</span><span class="methodLine"><i>0456</i>         } catch (Exception e) {                                                                                         
+</span><span class="methodLine"><i>0457</i>             String interval = "[" + intervalStart + "," + intervalEnd + "]";                                            
+</span><span class="methodLine"><i>0458</i>             String message = NbBundle                                                                                   
+</span><span class="methodLine"><i>0459</i>                 .getMessage(ElementDraftImpl.class, "ElementDraftException_IntervalSetError", interval, id,             
+</span><span class="methodLine"><i>0460</i>                     e.getMessage());                                                                                    
+</span><span class="methodLine"><i>0461</i>             container.getReport().logIssue(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 6271</span>new Issue(message, Issue.Level.SEVERE)</span>);                                     
+</span><span class="methodLine"><i>0462</i>         }                                                                                                               
+</span><span class="methodLine"><i>0463</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0464</i>                                                                                                                         
+</span><span class="methodLine"><i>0465</i>     public boolean isDynamic() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 924</span>{                                                                                        
+</span><span class="methodLine"><i>0466</i>         return <span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2733</span>timeSet <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2733</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 2358</span>&&</span> <span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2735</span>!</span>timeSet.isEmpty();                                                                   
+</span><span class="methodLine"><i>0467</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0468</i>                                                                                                                         
+</span><span class="methodLine"><i>0469</i>     public boolean hasDynamicAttributes() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 929</span>{                                                                             
+</span><span class="methodLine"><i>0470</i>         for (Object att : attributes) {                                                                                 
+</span><span class="methodLine"><i>0471</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: true 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 5295</span>att <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: == 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 5295</span>!=</span> null</span> <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 4761</span>&&</span> att instanceof TimeMap) {                                                                
+</span><span class="methodLine"><i>0472</i>                 if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 6632</span>!</span>((TimeMap) att).isEmpty()) {                                                                       
+</span><span class="methodLine"><i>0473</i>                     return true;                                                                                        
+</span><span class="methodLine"><i>0474</i>                 }                                                                                                       
+</span><span class="methodLine"><i>0475</i>             }                                                                                                           
+</span><span class="methodLine"><i>0476</i>         }                                                                                                               
+</span><span class="methodLine"><i>0477</i>         return false;                                                                                                   
+</span><span class="methodLine"><i>0478</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0479</i>                                                                                                                         
+</span><span class="outsideLine"><i>0480</i>     //UTILITY                                                                                                           
+</span><span class="methodLine"><i>0481</i>     protected void setAttributeValue(ColumnDraft column, Object value) throws Exception <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { column = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1617</span>{</span>                               
+</span><span class="methodLine"><i>0482</i>         int index = ((ColumnDraftImpl) column).getIndex();                                                              
+</span><span class="outsideLine"><i>0483</i>                                                                                                                         
+</span><span class="methodLine"><i>0484</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2744</span>!</span>(value instanceof TimeSet)) {                                                                              
+</span><span class="methodLine"><i>0485</i>             value = AttributeUtils.standardizeValue(value);                                                             
+</span><span class="methodLine"><i>0486</i>         }                                                                                                               
+</span><span class="outsideLine"><i>0487</i>                                                                                                                         
+</span><span class="methodLine"><i>0488</i>         Class typeClass = column.getResolvedTypeClass(container);                                                       
+</span><span class="outsideLine"><i>0489</i>                                                                                                                         
+</span><span class="methodLine"><i>0490</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2750</span>!</span>value.getClass().equals(typeClass)) {                                                                      
+</span><span class="methodLine"><i>0491</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4780</span>new RuntimeException("The expected value class was " + typeClass.getSimpleName() + " and " +          
+</span><span class="methodLine"><i>0492</i>                 value.getClass().getSimpleName() + " was found")</span>;                                                       
+</span><span class="methodLine"><i>0493</i>         }                                                                                                               
+</span><span class="outsideLine"><i>0494</i>                                                                                                                         
+</span><span class="methodLine"><i>0495</i>         if (index <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2754</span>>=</span> attributes.length) {                                                                               
+</span><span class="methodLine"><i>0496</i>             Object[] newArray = new Object[index <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7246</span>+</span> 1];                                                                  
+</span><span class="methodLine"><i>0497</i>             System.arraycopy(attributes, 0, newArray, 0, attributes.length);                                            
+</span><span class="methodLine"><i>0498</i>             attributes = newArray;                                                                                      
+</span><span class="methodLine"><i>0499</i>         }                                                                                                               
+</span><span class="outsideLine"><i>0500</i>                                                                                                                         
+</span><span class="methodLine"><i>0501</i>         attributes[index] = value;                                                                                      
+</span><span class="methodLine"><i>0502</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0503</i>                                                                                                                         
+</span><span class="methodLine"><i>0504</i>     protected void setAttributeValue(ColumnDraft column, Object value, double timestamp) throws Exception <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { column = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1631</span>{</span>             
+</span><span class="methodLine"><i>0505</i>         int index = ((ColumnDraftImpl) column).getIndex();                                                              
+</span><span class="methodLine"><i>0506</i>         Class typeClass = column.getTypeClass();                                                                        
+</span><span class="methodLine"><i>0507</i>         value = AttributeUtils.standardizeValue(value);                                                                 
+</span><span class="methodLine"><i>0508</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2767</span>!</span>value.getClass().equals(typeClass)) {                                                                      
+</span><span class="methodLine"><i>0509</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4801</span>new RuntimeException("The expected value class was " + typeClass.getSimpleName() + " and " +          
+</span><span class="methodLine"><i>0510</i>                 value.getClass().getSimpleName() + " was found")</span>;                                                       
+</span><span class="methodLine"><i>0511</i>         }                                                                                                               
+</span><span class="methodLine"><i>0512</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2771</span>!</span>column.isDynamic()) {                                                                                      
+</span><span class="methodLine"><i>0513</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4804</span>new RuntimeException("Can't set a dynamic value to a static column")</span>;                                 
+</span><span class="methodLine"><i>0514</i>         }                                                                                                               
+</span><span class="methodLine"><i>0515</i>         if (index <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2775</span>>=</span> attributes.length) {                                                                               
+</span><span class="methodLine"><i>0516</i>             Object[] newArray = new Object[index <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7257</span>+</span> 1];                                                                  
+</span><span class="methodLine"><i>0517</i>             System.arraycopy(attributes, 0, newArray, 0, attributes.length);                                            
+</span><span class="methodLine"><i>0518</i>             attributes = newArray;                                                                                      
+</span><span class="methodLine"><i>0519</i>         }                                                                                                               
+</span><span class="methodLine"><i>0520</i>         TimestampMap m = (TimestampMap) attributes[index];                                                              
+</span><span class="methodLine"><i>0521</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2781</span>m <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2781</span>==</span> null</span>) {                                                                                                
+</span><span class="methodLine"><i>0522</i>             m = AttributeUtils.getTimestampMapType(column.getTypeClass()).newInstance();                                
+</span><span class="methodLine"><i>0523</i>             attributes[index] = m;                                                                                      
+</span><span class="methodLine"><i>0524</i>         }                                                                                                               
+</span><span class="methodLine"><i>0525</i>         m.put(timestamp, value);                                                                                        
+</span><span class="methodLine"><i>0526</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0527</i>                                                                                                                         
+</span><span class="methodLine"><i>0528</i>     protected void setAttributeValue(ColumnDraft column, Object value, double start, double end) throws Exception <span class="NullifyInputVariable tooltip"><span class="tooltiptext">Mutated Text: { column = null; 
+Mutation Operator Type: NullifyInputVariable 
+Node ID: 1650</span>{</span>     
+</span><span class="methodLine"><i>0529</i>         int index = ((ColumnDraftImpl) column).getIndex();                                                              
+</span><span class="methodLine"><i>0530</i>         value = AttributeUtils.standardizeValue(value);                                                                 
+</span><span class="methodLine"><i>0531</i>         Class typeClass = column.getTypeClass();                                                                        
+</span><span class="methodLine"><i>0532</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2795</span>!</span>value.getClass().equals(typeClass)) {                                                                      
+</span><span class="methodLine"><i>0533</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4833</span>new RuntimeException("The expected value class was " + typeClass.getSimpleName() + " and " +          
+</span><span class="methodLine"><i>0534</i>                 value.getClass().getSimpleName() + " was found")</span>;                                                       
+</span><span class="methodLine"><i>0535</i>         }                                                                                                               
+</span><span class="methodLine"><i>0536</i>         if (<span class="ConditionalOperatorDeletion tooltip"><span class="tooltiptext">Mutated Text:   
+Mutation Operator Type: ConditionalOperatorDeletion 
+Node ID: 2799</span>!</span>column.isDynamic()) {                                                                                      
+</span><span class="methodLine"><i>0537</i>             throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4836</span>new RuntimeException("Can't set a dynamic value to a static column")</span>;                                 
+</span><span class="methodLine"><i>0538</i>         }                                                                                                               
+</span><span class="methodLine"><i>0539</i>         Interval interval = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4838</span>new Interval(start, end)</span>;                                                                   
+</span><span class="methodLine"><i>0540</i>         if (index <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: < 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2805</span>>=</span> attributes.length) {                                                                               
+</span><span class="methodLine"><i>0541</i>             Object[] newArray = new Object[index <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 7274</span>+</span> 1];                                                                  
+</span><span class="methodLine"><i>0542</i>             System.arraycopy(attributes, 0, newArray, 0, attributes.length);                                            
+</span><span class="methodLine"><i>0543</i>             attributes = newArray;                                                                                      
+</span><span class="methodLine"><i>0544</i>         }                                                                                                               
+</span><span class="methodLine"><i>0545</i>         IntervalMap m = (IntervalMap) attributes[index];                                                                
+</span><span class="methodLine"><i>0546</i>         if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 2811</span>m <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2811</span>==</span> null</span>) {                                                                                                
+</span><span class="methodLine"><i>0547</i>             m = AttributeUtils.getIntervalMapType(column.getTypeClass()).newInstance();                                 
+</span><span class="methodLine"><i>0548</i>             attributes[index] = m;                                                                                      
+</span><span class="methodLine"><i>0549</i>         }                                                                                                               
+</span><span class="methodLine"><i>0550</i>         m.put(interval, value);                                                                                         
+</span><span class="methodLine"><i>0551</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0552</i>                                                                                                                         
+</span><span class="methodLine"><i>0553</i>     protected Object getAttributeValue(int index) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 955</span>{                                                                     
+</span><span class="methodLine"><i>0554</i>         if (index <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 2817</span><</span> attributes.length) {                                                                                
+</span><span class="methodLine"><i>0555</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 3783</span>return attributes[index];</span>                                                                                   
+</span><span class="methodLine"><i>0556</i>         }                                                                                                               
+</span><span class="methodLine"><i>0557</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1993</span>return null;</span>                                                                                                    
+</span><span class="methodLine"><i>0558</i>     }</span>                                                                                                                   
+</span><span class="outsideLine"><i>0559</i> }                                                                                                                       
+</span><span class="outsideLine"><i>0560</i>                                                                                                                         </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

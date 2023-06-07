@@ -1,0 +1,425 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .GenericTraditionalMutationOperator { background: #FFFFF0; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .LogicalOperatorReplacement { background: #F0E68C; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.55</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                                 
+</span><span class="outsideLine"><i>0002</i> Copyright 2008-2011 Gephi                                                                          
+</span><span class="outsideLine"><i>0003</i> Authors : Yudi Xue <yudi.xue@usask.ca>, Mathieu Bastian                                            
+</span><span class="outsideLine"><i>0004</i> Website : http://www.gephi.org                                                                     
+</span><span class="outsideLine"><i>0005</i>                                                                                                    
+</span><span class="outsideLine"><i>0006</i> This file is part of Gephi.                                                                        
+</span><span class="outsideLine"><i>0007</i>                                                                                                    
+</span><span class="outsideLine"><i>0008</i> DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.                                           
+</span><span class="outsideLine"><i>0009</i>                                                                                                    
+</span><span class="outsideLine"><i>0010</i> Copyright 2011 Gephi Consortium. All rights reserved.                                              
+</span><span class="outsideLine"><i>0011</i>                                                                                                    
+</span><span class="outsideLine"><i>0012</i> The contents of this file are subject to the terms of either the GNU                               
+</span><span class="outsideLine"><i>0013</i> General Public License Version 3 only ("GPL") or the Common                                        
+</span><span class="outsideLine"><i>0014</i> Development and Distribution License("CDDL") (collectively, the                                    
+</span><span class="outsideLine"><i>0015</i> "License"). You may not use this file except in compliance with the                                
+</span><span class="outsideLine"><i>0016</i> License. You can obtain a copy of the License at                                                   
+</span><span class="outsideLine"><i>0017</i> http://gephi.org/about/legal/license-notice/                                                       
+</span><span class="outsideLine"><i>0018</i> or /cddl-1.0.txt and /gpl-3.0.txt. See the License for the                                         
+</span><span class="outsideLine"><i>0019</i> specific language governing permissions and limitations under the                                  
+</span><span class="outsideLine"><i>0020</i> License.  When distributing the software, include this License Header                              
+</span><span class="outsideLine"><i>0021</i> Notice in each file and include the License files at                                               
+</span><span class="outsideLine"><i>0022</i> /cddl-1.0.txt and /gpl-3.0.txt. If applicable, add the following below the                         
+</span><span class="outsideLine"><i>0023</i> License Header, with the fields enclosed by brackets [] replaced by                                
+</span><span class="outsideLine"><i>0024</i> your own identifying information:                                                                  
+</span><span class="outsideLine"><i>0025</i> "Portions Copyrighted [year] [name of copyright owner]"                                            
+</span><span class="outsideLine"><i>0026</i>                                                                                                    
+</span><span class="outsideLine"><i>0027</i> If you wish your version of this file to be governed by only the CDDL                              
+</span><span class="outsideLine"><i>0028</i> or only the GPL Version 3, indicate your decision by adding                                        
+</span><span class="outsideLine"><i>0029</i> "[Contributor] elects to include this software in this distribution                                
+</span><span class="outsideLine"><i>0030</i> under the [CDDL or GPL Version 3] license." If you do not indicate a                               
+</span><span class="outsideLine"><i>0031</i> single choice of license, a recipient has the option to distribute                                 
+</span><span class="outsideLine"><i>0032</i> your version of this file under either the CDDL, the GPL Version 3 or                              
+</span><span class="outsideLine"><i>0033</i> to extend the choice of license to its licensees as provided above.                                
+</span><span class="outsideLine"><i>0034</i> However, if you add GPL Version 3 code and therefore, elected the GPL                              
+</span><span class="outsideLine"><i>0035</i> Version 3 license, then the option applies only if the new code is                                 
+</span><span class="outsideLine"><i>0036</i> made subject to such option by the copyright holder.                                               
+</span><span class="outsideLine"><i>0037</i>                                                                                                    
+</span><span class="outsideLine"><i>0038</i> Contributor(s):                                                                                    
+</span><span class="outsideLine"><i>0039</i>                                                                                                    
+</span><span class="outsideLine"><i>0040</i> Portions Copyrighted 2011 Gephi Consortium.                                                        
+</span><span class="outsideLine"><i>0041</i>  */                                                                                                
+</span><span class="outsideLine"><i>0042</i>                                                                                                    
+</span><span class="outsideLine"><i>0043</i> package org.gephi.preview;                                                                         
+</span><span class="outsideLine"><i>0044</i>                                                                                                    
+</span><span class="outsideLine"><i>0045</i> import java.awt.Color;                                                                             
+</span><span class="outsideLine"><i>0046</i> import java.util.HashMap;                                                                          
+</span><span class="outsideLine"><i>0047</i> import java.util.Locale;                                                                           
+</span><span class="outsideLine"><i>0048</i> import java.util.Map;                                                                              
+</span><span class="outsideLine"><i>0049</i> import org.apache.batik.anim.dom.SVGDOMImplementation;                                             
+</span><span class="outsideLine"><i>0050</i> import org.apache.batik.bridge.BridgeContext;                                                      
+</span><span class="outsideLine"><i>0051</i> import org.apache.batik.bridge.DocumentLoader;                                                     
+</span><span class="outsideLine"><i>0052</i> import org.apache.batik.bridge.GVTBuilder;                                                         
+</span><span class="outsideLine"><i>0053</i> import org.apache.batik.bridge.UserAgent;                                                          
+</span><span class="outsideLine"><i>0054</i> import org.apache.batik.bridge.UserAgentAdapter;                                                   
+</span><span class="outsideLine"><i>0055</i> import org.gephi.preview.api.CanvasSize;                                                           
+</span><span class="outsideLine"><i>0056</i> import org.gephi.preview.api.PreviewModel;                                                         
+</span><span class="outsideLine"><i>0057</i> import org.gephi.preview.api.RenderTarget;                                                         
+</span><span class="outsideLine"><i>0058</i> import org.gephi.preview.api.SVGTarget;                                                            
+</span><span class="outsideLine"><i>0059</i> import org.gephi.preview.spi.RenderTargetBuilder;                                                  
+</span><span class="outsideLine"><i>0060</i> import org.openide.util.lookup.ServiceProvider;                                                    
+</span><span class="outsideLine"><i>0061</i> import org.w3c.dom.DOMImplementation;                                                              
+</span><span class="outsideLine"><i>0062</i> import org.w3c.dom.Document;                                                                       
+</span><span class="outsideLine"><i>0063</i> import org.w3c.dom.DocumentType;                                                                   
+</span><span class="outsideLine"><i>0064</i> import org.w3c.dom.Element;                                                                        
+</span><span class="outsideLine"><i>0065</i> import org.w3c.dom.Text;                                                                           
+</span><span class="outsideLine"><i>0066</i>                                                                                                    
+</span><span class="outsideLine"><i>0067</i> /**                                                                                                
+</span><span class="outsideLine"><i>0068</i>  * @author Mathieu Bastian                                                                         
+</span><span class="outsideLine"><i>0069</i>  */                                                                                                
+</span><span class="outsideLine"><i>0070</i> @ServiceProvider(service = RenderTargetBuilder.class)                                              
+</span><span class="outsideLine"><i>0071</i> public class SVGRenderTargetBuilder implements RenderTargetBuilder {                               
+</span><span class="outsideLine"><i>0072</i>                                                                                                    
+</span><span class="outsideLine"><i>0073</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0074</i>     public RenderTarget buildRenderTarget(PreviewModel previewModel) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 327</span>{</span>                             
+</span><span class="methodLine"><i>0075</i>         CanvasSize cs = previewModel.getGraphicsCanvasSize();                                      
+</span><span class="methodLine"><i>0076</i>         boolean scaleStrokes = previewModel.getProperties()                                        
+</span><span class="methodLine"><i>0077</i>             .getBooleanValue(SVGTarget.SCALE_STROKES);                                             
+</span><span class="outsideLine"><i>0078</i>                                                                                                    
+</span><span class="methodLine"><i>0079</i>         SVGRenderTargetImpl renderTarget                                                           
+</span><span class="methodLine"><i>0080</i>             = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1087</span>new SVGRenderTargetImpl(cs, scaleStrokes)</span>;                                           
+</span><span class="methodLine"><i>0081</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 485</span>return renderTarget;</span>                                                                       
+</span><span class="methodLine"><i>0082</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0083</i>                                                                                                    
+</span><span class="outsideLine"><i>0084</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0085</i>     public String getName() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 333</span>{                                                                      
+</span><span class="methodLine"><i>0086</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 487</span>return RenderTarget.SVG_TARGET;</span>                                                            
+</span><span class="methodLine"><i>0087</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0088</i>                                                                                                    
+</span><span class="outsideLine"><i>0089</i>     /**                                                                                            
+</span><span class="outsideLine"><i>0090</i>      * Enum representing a set of lenght units.                                                    
+</span><span class="outsideLine"><i>0091</i>      *                                                                                             
+</span><span class="outsideLine"><i>0092</i>      * @author Jérémy Subtil                                                                       
+</span><span class="outsideLine"><i>0093</i>      */                                                                                            
+</span><span class="outsideLine"><i>0094</i>     public enum LengthUnit {                                                                       
+</span><span class="outsideLine"><i>0095</i>                                                                                                    
+</span><span class="outsideLine"><i>0096</i>         CENTIMETER,                                                                                
+</span><span class="outsideLine"><i>0097</i>         MILLIMETER,                                                                                
+</span><span class="outsideLine"><i>0098</i>         INCH,                                                                                      
+</span><span class="outsideLine"><i>0099</i>         PIXELS,                                                                                    
+</span><span class="outsideLine"><i>0100</i>         PERCENTAGE;                                                                                
+</span><span class="outsideLine"><i>0101</i>                                                                                                    
+</span><span class="outsideLine"><i>0102</i>         @Override                                                                                  
+</span><span class="methodLine"><i>0103</i>         public String toString() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 559</span>{                                                                 
+</span><span class="methodLine"><i>0104</i>             switch (this) {                                                                        
+</span><span class="methodLine"><i>0105</i>                 case CENTIMETER:                                                                   
+</span><span class="methodLine"><i>0106</i>                     <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1208</span>return "cm";</span>                                                                   
+</span><span class="methodLine"><i>0107</i>                 case MILLIMETER:                                                                   
+</span><span class="methodLine"><i>0108</i>                     <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1212</span>return "mm";</span>                                                                   
+</span><span class="methodLine"><i>0109</i>                 case INCH:                                                                         
+</span><span class="methodLine"><i>0110</i>                     <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1216</span>return "in";</span>                                                                   
+</span><span class="methodLine"><i>0111</i>                 case PIXELS:                                                                       
+</span><span class="methodLine"><i>0112</i>                     <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1220</span>return "px";</span>                                                                   
+</span><span class="methodLine"><i>0113</i>                 default:                                                                           
+</span><span class="methodLine"><i>0114</i>                 case PERCENTAGE:                                                                   
+</span><span class="methodLine"><i>0115</i>                     <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 1226</span>return "%";</span>                                                                    
+</span><span class="methodLine"><i>0116</i>             }                                                                                      
+</span><span class="methodLine"><i>0117</i>         }</span>                                                                                          
+</span><span class="outsideLine"><i>0118</i>     }                                                                                              
+</span><span class="outsideLine"><i>0119</i>                                                                                                    
+</span><span class="outsideLine"><i>0120</i>     public static class SVGRenderTargetImpl                                                        
+</span><span class="outsideLine"><i>0121</i>         extends AbstractRenderTarget implements SVGTarget {                                        
+</span><span class="outsideLine"><i>0122</i>                                                                                                    
+</span><span class="outsideLine"><i>0123</i>         private final Document document;                                                           
+</span><span class="outsideLine"><i>0124</i>         private final Map<String, Element> topElements = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 968</span>new HashMap<>()</span>;                          
+</span><span class="outsideLine"><i>0125</i>         private float scaleRatio = 1f;                                                             
+</span><span class="outsideLine"><i>0126</i>                                                                                                    
+</span><span class="methodLine"><i>0127</i>         public SVGRenderTargetImpl(CanvasSize cs, boolean scaleStrokes) {                          
+</span><span class="methodLine"><i>0128</i>             DOMImplementation impl = SVGDOMImplementation.getDOMImplementation();                  
+</span><span class="methodLine"><i>0129</i>             DocumentType doctype = impl.createDocumentType(                                        
+</span><span class="methodLine"><i>0130</i>                 "svg",                                                                             
+</span><span class="methodLine"><i>0131</i>                 "-//W3C//DTD SVG 1.1//EN",                                                         
+</span><span class="methodLine"><i>0132</i>                 "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd");                               
+</span><span class="methodLine"><i>0133</i>             document = impl.createDocument(SVGDOMImplementation.SVG_NAMESPACE_URI, "svg", doctype);
+</span><span class="outsideLine"><i>0134</i>                                                                                                    
+</span><span class="outsideLine"><i>0135</i>             // initializes CSS and SVG specific DOM interfaces                                     
+</span><span class="methodLine"><i>0136</i>             UserAgent userAgent = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1701</span>new UserAgentAdapter()</span>;                                          
+</span><span class="methodLine"><i>0137</i>             DocumentLoader loader = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1703</span>new DocumentLoader(userAgent)</span>;                                 
+</span><span class="methodLine"><i>0138</i>             BridgeContext ctx = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1705</span>new BridgeContext(userAgent, loader)</span>;                              
+</span><span class="methodLine"><i>0139</i>             ctx.setDynamicState(BridgeContext.DYNAMIC);                                            
+</span><span class="methodLine"><i>0140</i>             GVTBuilder builder = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1709</span>new GVTBuilder()</span>;                                                 
+</span><span class="methodLine"><i>0141</i>             builder.build(ctx, document);                                                          
+</span><span class="outsideLine"><i>0142</i>                                                                                                    
+</span><span class="outsideLine"><i>0143</i>             //Dimension                                                                            
+</span><span class="methodLine"><i>0144</i>             SupportSize ss = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1714</span>new SupportSize(595F, 841F, LengthUnit.PIXELS)</span>;                       
+</span><span class="methodLine"><i>0145</i>             if (cs.getWidth() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1127</span>></span> cs.getHeight()) {                                                  
+</span><span class="methodLine"><i>0146</i>                 ss = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 1936</span>new SupportSize(                                                              
+</span><span class="methodLine"><i>0147</i>                     cs.getWidth() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2173</span>*</span> ss.getHeightFloat() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2157</span>/</span> cs.getHeight(),                          
+</span><span class="methodLine"><i>0148</i>                     ss.getHeightFloat(),                                                           
+</span><span class="methodLine"><i>0149</i>                     LengthUnit.PIXELS)</span>;                                                            
+</span><span class="methodLine"><i>0150</i>             } else if (cs.getHeight() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1265</span>></span> cs.getWidth()) {                                           
+</span><span class="methodLine"><i>0151</i>                 ss = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 2031</span>new SupportSize(                                                              
+</span><span class="methodLine"><i>0152</i>                     ss.getWidthFloat(),                                                            
+</span><span class="methodLine"><i>0153</i>                     cs.getHeight() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2200</span>*</span> ss.getWidthFloat() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 2184</span>/</span> cs.getWidth(),                           
+</span><span class="methodLine"><i>0154</i>                     LengthUnit.PIXELS)</span>;                                                            
+</span><span class="methodLine"><i>0155</i>             }                                                                                      
+</span><span class="outsideLine"><i>0156</i>                                                                                                    
+</span><span class="outsideLine"><i>0157</i>             // root element                                                                        
+</span><span class="methodLine"><i>0158</i>             Element svgRoot = document.getDocumentElement();                                       
+</span><span class="methodLine"><i>0159</i>             svgRoot.setAttributeNS(null, "width", cs.getWidth() + "");                             
+</span><span class="methodLine"><i>0160</i>             svgRoot.setAttributeNS(null, "height", cs.getHeight() + "");                           
+</span><span class="methodLine"><i>0161</i>             svgRoot.setAttributeNS(null, "version", "1.1");                                        
+</span><span class="methodLine"><i>0162</i>             svgRoot.setAttributeNS(                                                                
+</span><span class="methodLine"><i>0163</i>                 null,                                                                              
+</span><span class="methodLine"><i>0164</i>                 "viewBox",                                                                         
+</span><span class="methodLine"><i>0165</i>                 String.format(Locale.ENGLISH, "%f %f %f %f",                                       
+</span><span class="methodLine"><i>0166</i>                     cs.getX(),                                                                     
+</span><span class="methodLine"><i>0167</i>                     cs.getY(),                                                                     
+</span><span class="methodLine"><i>0168</i>                     cs.getWidth(),                                                                 
+</span><span class="methodLine"><i>0169</i>                     cs.getHeight()));                                                              
+</span><span class="outsideLine"><i>0170</i>                                                                                                    
+</span><span class="outsideLine"><i>0171</i>             //Scale & ratio                                                                        
+</span><span class="methodLine"><i>0172</i>             if (scaleStrokes) {                                                                    
+</span><span class="methodLine"><i>0173</i>                 scaleRatio = ss.getWidthFloat() <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1879</span>/</span> cs.getWidth();                                   
+</span><span class="methodLine"><i>0174</i>             }                                                                                      
+</span><span class="methodLine"><i>0175</i>         }                                                                                          
+</span><span class="outsideLine"><i>0176</i>                                                                                                    
+</span><span class="outsideLine"><i>0177</i>         @Override                                                                                  
+</span><span class="methodLine"><i>0178</i>         public Element getTopElement(String name) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 583</span>{</span>                                                
+</span><span class="methodLine"><i>0179</i>             Element topElement = topElements.get(name);                                            
+</span><span class="methodLine"><i>0180</i>             if (<span class="RemoveNullCheck tooltip"><span class="tooltiptext">Mutated Text: false 
+Mutation Operator Type: RemoveNullCheck 
+Node ID: 1147</span>topElement <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1147</span>==</span> null</span>) {                                                              
+</span><span class="methodLine"><i>0181</i>                 topElement = createElement("g");                                                   
+</span><span class="methodLine"><i>0182</i>                 topElement.setAttribute("id", name);                                               
+</span><span class="methodLine"><i>0183</i>                 topElements.put(name, topElement);                                                 
+</span><span class="methodLine"><i>0184</i>                 document.getDocumentElement().appendChild(topElement);                             
+</span><span class="methodLine"><i>0185</i>             }                                                                                      
+</span><span class="methodLine"><i>0186</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 914</span>return topElement;</span>                                                                     
+</span><span class="methodLine"><i>0187</i>         }</span>                                                                                          
+</span><span class="outsideLine"><i>0188</i>                                                                                                    
+</span><span class="outsideLine"><i>0189</i>         @Override                                                                                  
+</span><span class="methodLine"><i>0190</i>         public Document getDocument() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 589</span>{                                                            
+</span><span class="methodLine"><i>0191</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 916</span>return document;</span>                                                                       
+</span><span class="methodLine"><i>0192</i>         }</span>                                                                                          
+</span><span class="outsideLine"><i>0193</i>                                                                                                    
+</span><span class="outsideLine"><i>0194</i>         @Override                                                                                  
+</span><span class="methodLine"><i>0195</i>         public float getScaleRatio() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 595</span>{                                                             
+</span><span class="methodLine"><i>0196</i>             return scaleRatio;                                                                     
+</span><span class="methodLine"><i>0197</i>         }</span>                                                                                          
+</span><span class="outsideLine"><i>0198</i>                                                                                                    
+</span><span class="outsideLine"><i>0199</i>         @Override                                                                                  
+</span><span class="methodLine"><i>0200</i>         public Element createElement(String qualifiedName) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 601</span>{</span>                                       
+</span><span class="methodLine"><i>0201</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 922</span>return document.createElementNS(SVGDOMImplementation.SVG_NAMESPACE_URI, qualifiedName);</span>
+</span><span class="methodLine"><i>0202</i>         }</span>                                                                                          
+</span><span class="outsideLine"><i>0203</i>                                                                                                    
+</span><span class="outsideLine"><i>0204</i>         @Override                                                                                  
+</span><span class="methodLine"><i>0205</i>         public Text createTextNode(String data) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 607</span>{</span>                                                  
+</span><span class="methodLine"><i>0206</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 926</span>return document.createTextNode(data);</span>                                                  
+</span><span class="methodLine"><i>0207</i>         }</span>                                                                                          
+</span><span class="outsideLine"><i>0208</i>                                                                                                    
+</span><span class="outsideLine"><i>0209</i>         @Override                                                                                  
+</span><span class="methodLine"><i>0210</i>         public String toHexString(Color color) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 613</span>{</span>                                                   
+</span><span class="methodLine"><i>0211</i>             String str = Integer.toHexString(color.getRGB());                                      
+</span><span class="outsideLine"><i>0212</i>                                                                                                    
+</span><span class="methodLine"><i>0213</i>             for (int i = str.length(); i <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: <= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1168</span>></span> 6; i<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: ++ 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1508</span>--</span>) {                                               
+</span><span class="methodLine"><i>0214</i>                 str = str.substring(1);                                                            
+</span><span class="methodLine"><i>0215</i>             }                                                                                      
+</span><span class="outsideLine"><i>0216</i>                                                                                                    
+</span><span class="methodLine"><i>0217</i>             for (int i = str.length(); i <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: >= 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 1174</span><</span> 6; i<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 1514</span>++</span>) {                                               
+</span><span class="methodLine"><i>0218</i>                 str = "0" + str;                                                                   
+</span><span class="methodLine"><i>0219</i>             }                                                                                      
+</span><span class="outsideLine"><i>0220</i>                                                                                                    
+</span><span class="methodLine"><i>0221</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 933</span>return "#" + str;</span>                                                                      
+</span><span class="methodLine"><i>0222</i>         }</span>                                                                                          
+</span><span class="outsideLine"><i>0223</i>     }                                                                                              
+</span><span class="outsideLine"><i>0224</i>                                                                                                    
+</span><span class="outsideLine"><i>0225</i>     /**                                                                                            
+</span><span class="outsideLine"><i>0226</i>      * Implementation of the size of an export support.                                            
+</span><span class="outsideLine"><i>0227</i>      *                                                                                             
+</span><span class="outsideLine"><i>0228</i>      * @author Jérémy Subtil                                                                       
+</span><span class="outsideLine"><i>0229</i>      */                                                                                            
+</span><span class="outsideLine"><i>0230</i>     public static class SupportSize {                                                              
+</span><span class="outsideLine"><i>0231</i>                                                                                                    
+</span><span class="outsideLine"><i>0232</i>         private final float width;                                                                 
+</span><span class="outsideLine"><i>0233</i>         private final float height;                                                                
+</span><span class="outsideLine"><i>0234</i>         private final LengthUnit lengthUnit;                                                       
+</span><span class="outsideLine"><i>0235</i>                                                                                                    
+</span><span class="outsideLine"><i>0236</i>         /**                                                                                        
+</span><span class="outsideLine"><i>0237</i>          * Constructor.                                                                            
+</span><span class="outsideLine"><i>0238</i>          *                                                                                         
+</span><span class="outsideLine"><i>0239</i>          * @param width      the support's width                                                   
+</span><span class="outsideLine"><i>0240</i>          * @param height     the support's height                                                  
+</span><span class="outsideLine"><i>0241</i>          * @param lengthUnit the lenght unit                                                       
+</span><span class="outsideLine"><i>0242</i>          */                                                                                        
+</span><span class="methodLine"><i>0243</i>         public SupportSize(float width, float height, LengthUnit lengthUnit) {                     
+</span><span class="methodLine"><i>0244</i>             this.width = width;                                                                    
+</span><span class="methodLine"><i>0245</i>             this.height = height;                                                                  
+</span><span class="methodLine"><i>0246</i>             this.lengthUnit = lengthUnit;                                                          
+</span><span class="methodLine"><i>0247</i>         }                                                                                          
+</span><span class="outsideLine"><i>0248</i>                                                                                                    
+</span><span class="methodLine"><i>0249</i>         public float getWidthFloat() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 637</span>{                                                             
+</span><span class="methodLine"><i>0250</i>             return width;                                                                          
+</span><span class="methodLine"><i>0251</i>         }</span>                                                                                          
+</span><span class="outsideLine"><i>0252</i>                                                                                                    
+</span><span class="methodLine"><i>0253</i>         public float getHeightFloat() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 642</span>{                                                            
+</span><span class="methodLine"><i>0254</i>             return height;                                                                         
+</span><span class="methodLine"><i>0255</i>         }</span>                                                                                          
+</span><span class="outsideLine"><i>0256</i>                                                                                                    
+</span><span class="outsideLine"><i>0257</i>         /**                                                                                        
+</span><span class="outsideLine"><i>0258</i>          * Returns the support's width.                                                            
+</span><span class="outsideLine"><i>0259</i>          *                                                                                         
+</span><span class="outsideLine"><i>0260</i>          * @return the support's width                                                             
+</span><span class="outsideLine"><i>0261</i>          */                                                                                        
+</span><span class="methodLine"><i>0262</i>         public String getWidth() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 647</span>{                                                                 
+</span><span class="methodLine"><i>0263</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 948</span>return width <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1074</span>+</span> lengthUnit.toString();</span>                                                  
+</span><span class="methodLine"><i>0264</i>         }</span>                                                                                          
+</span><span class="outsideLine"><i>0265</i>                                                                                                    
+</span><span class="outsideLine"><i>0266</i>         /**                                                                                        
+</span><span class="outsideLine"><i>0267</i>          * Returns the support's height.                                                           
+</span><span class="outsideLine"><i>0268</i>          *                                                                                         
+</span><span class="outsideLine"><i>0269</i>          * @return the support's height                                                            
+</span><span class="outsideLine"><i>0270</i>          */                                                                                        
+</span><span class="methodLine"><i>0271</i>         public String getHeight() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 652</span>{                                                                
+</span><span class="methodLine"><i>0272</i>             <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 949</span>return height <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 1077</span>+</span> lengthUnit.toString();</span>                                                 
+</span><span class="methodLine"><i>0273</i>         }</span>                                                                                          
+</span><span class="outsideLine"><i>0274</i>     }                                                                                              
+</span><span class="outsideLine"><i>0275</i> }                                                                                                  
+</span><span class="outsideLine"><i>0276</i>                                                                                                    </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>

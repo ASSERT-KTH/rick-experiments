@@ -1,0 +1,5 @@
+EdgeColor.EdgeColor( Color customColor );0;1;4
+EdgeColor.EdgeColor( Mode mode );0;1;4
+EdgeColor.getColor( Color edgeColor , Color sourceColor , Color targetColor );21;7;18
+EdgeColor.getCustomColor( );2;1;3
+EdgeColor.getMode( );2;1;3

@@ -1,0 +1,66 @@
+{
+    "mut": "AttributeColumnsControllerImpl_canConvertColumnToDynamic_Column",
+    "CUT": "org.gephi.datalab.impl.AttributeColumnsControllerImpl",
+    "mutant-file": "./AttributeColumnsControllerImpl.java/175.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.534 s - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.415 s - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.728 s - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.909 s - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.875 s - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic"
+},
+{
+    "mut": "AttributeColumnsControllerImpl_canConvertColumnToDynamic_Column",
+    "CUT": "org.gephi.datalab.impl.AttributeColumnsControllerImpl",
+    "mutant-file": "./AttributeColumnsControllerImpl.java/208.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.26 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.809 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.938 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.748 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.47 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic"
+},
+{
+    "mut": "AttributeColumnsControllerImpl_canConvertColumnToDynamic_Column",
+    "CUT": "org.gephi.datalab.impl.AttributeColumnsControllerImpl",
+    "mutant-file": "./AttributeColumnsControllerImpl.java/38.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.106 s - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.092 s - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.212 s - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.375 s - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.879 s - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic"
+},
+{
+    "mut": "AttributeColumnsControllerImpl_canConvertColumnToDynamic_Column",
+    "CUT": "org.gephi.datalab.impl.AttributeColumnsControllerImpl",
+    "mutant-file": "./AttributeColumnsControllerImpl.java/39.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.309 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 6.128 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 6.257 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 6.632 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.971 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic"
+},
+{
+    "mut": "AttributeColumnsControllerImpl_canConvertColumnToDynamic_Column",
+    "CUT": "org.gephi.datalab.impl.AttributeColumnsControllerImpl",
+    "mutant-file": "./AttributeColumnsControllerImpl.java/58.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.921 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.174 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.226 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.149 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 5.923 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic"
+},
+{
+    "mut": "AttributeColumnsControllerImpl_canConvertColumnToDynamic_Column",
+    "CUT": "org.gephi.datalab.impl.AttributeColumnsControllerImpl",
+    "mutant-file": "./AttributeColumnsControllerImpl.java/59.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.896 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.229 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.552 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.529 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 6.015 s <<< FAILURE! - in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGenCanConvertColumnToDynamic"
+},

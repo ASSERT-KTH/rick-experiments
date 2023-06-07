@@ -1,0 +1,48 @@
+***not in a method***;1;1;0
+ElementDraftImpl.ElementDraftImpl( ImportContainerImpl container , String id );0;1;5
+ElementDraftImpl.addInterval( String intervalStartDateTime , String intervalEndDateTime );13;11;18
+ElementDraftImpl.addInterval( double intervalStart , double intervalEnd );8;4;21
+ElementDraftImpl.addIntervals( String intervals );6;4;16
+ElementDraftImpl.addTimestamp( String dateTime );2;2;4
+ElementDraftImpl.addTimestamp( double timestamp );6;3;12
+ElementDraftImpl.addTimestamps( String timestamps );6;4;16
+ElementDraftImpl.getAttributeValue( int index );4;2;6
+ElementDraftImpl.getColor( );2;1;3
+ElementDraftImpl.getGraphInterval( );2;1;3
+ElementDraftImpl.getGraphTimestamp( );2;1;3
+ElementDraftImpl.getId( );3;1;3
+ElementDraftImpl.getLabel( );3;1;3
+ElementDraftImpl.getLabelColor( );2;1;3
+ElementDraftImpl.getLabelSize( );2;1;3
+ElementDraftImpl.getTimeSet( );2;1;3
+ElementDraftImpl.getValue( String key );6;2;7
+ElementDraftImpl.hasDynamicAttributes( );6;5;10
+ElementDraftImpl.isDynamic( );6;2;3
+ElementDraftImpl.isLabelVisible( );2;1;3
+ElementDraftImpl.parseAndSetValue( String key , String value );7;5;17
+ElementDraftImpl.parseAndSetValue( String key , String value , String dateTime );4;2;5
+ElementDraftImpl.parseAndSetValue( String key , String value , String startDateTime , String endDateTime );15;11;18
+ElementDraftImpl.parseAndSetValue( String key , String value , double start , double end );3;1;4
+ElementDraftImpl.parseAndSetValue( String key , String value , double timestamp );3;1;4
+ElementDraftImpl.parseValue( String value , Class type );4;1;4
+ElementDraftImpl.setAttributeValue( ColumnDraft column , Object value );8;4;17
+ElementDraftImpl.setAttributeValue( ColumnDraft column , Object value , double start , double end );12;5;24
+ElementDraftImpl.setAttributeValue( ColumnDraft column , Object value , double timestamp );11;5;23
+ElementDraftImpl.setColor( Color color );2;1;3
+ElementDraftImpl.setColor( String color );5;2;9
+ElementDraftImpl.setColor( String r , String g , String b );4;1;3
+ElementDraftImpl.setColor( float r , float g , float b );2;1;6
+ElementDraftImpl.setColor( int r , int g , int b );4;1;3
+ElementDraftImpl.setLabel( String label );2;1;3
+ElementDraftImpl.setLabelColor( Color color );2;1;3
+ElementDraftImpl.setLabelColor( String color );5;2;10
+ElementDraftImpl.setLabelColor( String r , String g , String b );4;1;3
+ElementDraftImpl.setLabelColor( float r , float g , float b );2;1;6
+ElementDraftImpl.setLabelColor( int r , int g , int b );4;1;3
+ElementDraftImpl.setLabelSize( float size );1;1;3
+ElementDraftImpl.setLabelVisible( boolean labelVisible );1;1;3
+ElementDraftImpl.setValue( String key , Object value );9;5;18
+ElementDraftImpl.setValue( String key , Object value , String dateTime );4;2;4
+ElementDraftImpl.setValue( String key , Object value , String startDateTime , String endDateTime );15;11;18
+ElementDraftImpl.setValue( String key , Object value , double start , double end );4;2;12
+ElementDraftImpl.setValue( String key , Object value , double timestamp );4;2;11

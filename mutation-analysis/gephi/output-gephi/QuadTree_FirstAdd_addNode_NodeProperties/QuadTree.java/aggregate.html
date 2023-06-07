@@ -1,0 +1,1146 @@
+<!DOCTYPE html><head><title>LittleDarwin Aggregate Mutation Report</title> <style type='text/css'> body { font-family: "Carlito", "Calibri", "Helvetica Neue", sans-serif;}
+                    .code { font-family: monospace; font-size: medium; }
+                    .methodLine { background: white; }
+                    .outsideLine { background: lightgray; } 
+                    .tooltip { position: relative; display: inline-block; }
+                    .tooltip .tooltiptext { visibility: hidden; display: block;
+                        background-color: #006400; color: #ffffff; text-align: left;
+                        border-radius: 0.3em; padding: 0.5em 0.5em; position: absolute; top: 125%; z-index: 200;}
+                    .tooltip:hover .tooltiptext { visibility: visible; } .ConditionalOperatorDeletion { background: #FFD700; } .NullifyInputVariable { background: #90EE90; } .ArithmeticOperatorReplacementUnary { background: #DDA0DD; } .NullifyReturnValue { background: #E0FFFF; } .AssignmentOperatorReplacementShortcut { background: #B0C4DE; } .NullifyObjectInitialization { background: #F08080; } .LogicalOperatorReplacement { background: #F0E68C; } .ArithmeticOperatorReplacementBinary { background: #FFB6C1; } .RemoveNullCheck { background: #ADD8E6; } .ConditionalOperatorReplacement { background: #87CEFA; } .ShiftOperatorReplacement { background: #9ACD32; } .RemoveMethod { background: #FF00D4; } .RelationalOperatorReplacement { background: #FFA07A; } .ArithmeticOperatorReplacementShortcut { background: #FF00FF; } .GenericTraditionalMutationOperator { background: #FFFFF0; } </style></head><body><h1>LittleDarwin Aggregate Mutation Report</h1><p>Average Density: 0.88</p><div><pre class="code"><span class="outsideLine"><i>0001</i> /*                                                                                                 
+</span><span class="outsideLine"><i>0002</i>  Copyright 2008-2010 Gephi                                                                         
+</span><span class="outsideLine"><i>0003</i>  Authors : Helder Suzuki <heldersuzuki@gephi.org>                                                  
+</span><span class="outsideLine"><i>0004</i>  Website : http://www.gephi.org                                                                    
+</span><span class="outsideLine"><i>0005</i>                                                                                                    
+</span><span class="outsideLine"><i>0006</i>  This file is part of Gephi.                                                                       
+</span><span class="outsideLine"><i>0007</i>                                                                                                    
+</span><span class="outsideLine"><i>0008</i>  DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.                                          
+</span><span class="outsideLine"><i>0009</i>                                                                                                    
+</span><span class="outsideLine"><i>0010</i>  Copyright 2011 Gephi Consortium. All rights reserved.                                             
+</span><span class="outsideLine"><i>0011</i>                                                                                                    
+</span><span class="outsideLine"><i>0012</i>  The contents of this file are subject to the terms of either the GNU                              
+</span><span class="outsideLine"><i>0013</i>  General Public License Version 3 only ("GPL") or the Common                                       
+</span><span class="outsideLine"><i>0014</i>  Development and Distribution License("CDDL") (collectively, the                                   
+</span><span class="outsideLine"><i>0015</i>  "License"). You may not use this file except in compliance with the                               
+</span><span class="outsideLine"><i>0016</i>  License. You can obtain a copy of the License at                                                  
+</span><span class="outsideLine"><i>0017</i>  http://gephi.org/about/legal/license-notice/                                                      
+</span><span class="outsideLine"><i>0018</i>  or /cddl-1.0.txt and /gpl-3.0.txt. See the License for the                                        
+</span><span class="outsideLine"><i>0019</i>  specific language governing permissions and limitations under the                                 
+</span><span class="outsideLine"><i>0020</i>  License.  When distributing the software, include this License Header                             
+</span><span class="outsideLine"><i>0021</i>  Notice in each file and include the License files at                                              
+</span><span class="outsideLine"><i>0022</i>  /cddl-1.0.txt and /gpl-3.0.txt. If applicable, add the following below the                        
+</span><span class="outsideLine"><i>0023</i>  License Header, with the fields enclosed by brackets [] replaced by                               
+</span><span class="outsideLine"><i>0024</i>  your own identifying information:                                                                 
+</span><span class="outsideLine"><i>0025</i>  "Portions Copyrighted [year] [name of copyright owner]"                                           
+</span><span class="outsideLine"><i>0026</i>                                                                                                    
+</span><span class="outsideLine"><i>0027</i>  If you wish your version of this file to be governed by only the CDDL                             
+</span><span class="outsideLine"><i>0028</i>  or only the GPL Version 3, indicate your decision by adding                                       
+</span><span class="outsideLine"><i>0029</i>  "[Contributor] elects to include this software in this distribution                               
+</span><span class="outsideLine"><i>0030</i>  under the [CDDL or GPL Version 3] license." If you do not indicate a                              
+</span><span class="outsideLine"><i>0031</i>  single choice of license, a recipient has the option to distribute                                
+</span><span class="outsideLine"><i>0032</i>  your version of this file under either the CDDL, the GPL Version 3 or                             
+</span><span class="outsideLine"><i>0033</i>  to extend the choice of license to its licensees as provided above.                               
+</span><span class="outsideLine"><i>0034</i>  However, if you add GPL Version 3 code and therefore, elected the GPL                             
+</span><span class="outsideLine"><i>0035</i>  Version 3 license, then the option applies only if the new code is                                
+</span><span class="outsideLine"><i>0036</i>  made subject to such option by the copyright holder.                                              
+</span><span class="outsideLine"><i>0037</i>                                                                                                    
+</span><span class="outsideLine"><i>0038</i>  Contributor(s):                                                                                   
+</span><span class="outsideLine"><i>0039</i>                                                                                                    
+</span><span class="outsideLine"><i>0040</i>  Portions Copyrighted 2011 Gephi Consortium.                                                       
+</span><span class="outsideLine"><i>0041</i>  */                                                                                                
+</span><span class="outsideLine"><i>0042</i>                                                                                                    
+</span><span class="outsideLine"><i>0043</i> package org.gephi.layout.plugin.force.quadtree;                                                    
+</span><span class="outsideLine"><i>0044</i>                                                                                                    
+</span><span class="outsideLine"><i>0045</i> import java.awt.Color;                                                                             
+</span><span class="outsideLine"><i>0046</i> import java.util.ArrayList;                                                                        
+</span><span class="outsideLine"><i>0047</i> import java.util.List;                                                                             
+</span><span class="outsideLine"><i>0048</i> import java.util.Map;                                                                              
+</span><span class="outsideLine"><i>0049</i> import java.util.Set;                                                                              
+</span><span class="outsideLine"><i>0050</i> import org.gephi.graph.api.Column;                                                                 
+</span><span class="outsideLine"><i>0051</i> import org.gephi.graph.api.ColumnIterable;                                                         
+</span><span class="outsideLine"><i>0052</i> import org.gephi.graph.api.Graph;                                                                  
+</span><span class="outsideLine"><i>0053</i> import org.gephi.graph.api.GraphView;                                                              
+</span><span class="outsideLine"><i>0054</i> import org.gephi.graph.api.Interval;                                                               
+</span><span class="outsideLine"><i>0055</i> import org.gephi.graph.api.Node;                                                                   
+</span><span class="outsideLine"><i>0056</i> import org.gephi.graph.api.NodeProperties;                                                         
+</span><span class="outsideLine"><i>0057</i> import org.gephi.graph.api.Table;                                                                  
+</span><span class="outsideLine"><i>0058</i> import org.gephi.graph.api.TextProperties;                                                         
+</span><span class="outsideLine"><i>0059</i> import org.gephi.graph.spi.LayoutData;                                                             
+</span><span class="outsideLine"><i>0060</i>                                                                                                    
+</span><span class="outsideLine"><i>0061</i> interface AddBehaviour {                                                                           
+</span><span class="outsideLine"><i>0062</i>                                                                                                    
+</span><span class="outsideLine"><i>0063</i>     boolean addNode(NodeProperties node);                                                          
+</span><span class="outsideLine"><i>0064</i> }                                                                                                  
+</span><span class="outsideLine"><i>0065</i>                                                                                                    
+</span><span class="outsideLine"><i>0066</i> /**                                                                                                
+</span><span class="outsideLine"><i>0067</i>  * @author Helder Suzuki                                                                           
+</span><span class="outsideLine"><i>0068</i>  */                                                                                                
+</span><span class="outsideLine"><i>0069</i> public class QuadTree implements Node {                                                            
+</span><span class="outsideLine"><i>0070</i>                                                                                                    
+</span><span class="outsideLine"><i>0071</i>     public static final float eps = (float) 1e-6;                                                  
+</span><span class="outsideLine"><i>0072</i>     private final float posX;                                                                      
+</span><span class="outsideLine"><i>0073</i>     private final float posY;                                                                      
+</span><span class="outsideLine"><i>0074</i>     private final float size;                                                                      
+</span><span class="outsideLine"><i>0075</i>     private final int maxLevel;                                                                    
+</span><span class="outsideLine"><i>0076</i>     private float centerMassX;  // X and Y position of the center of mass                          
+</span><span class="outsideLine"><i>0077</i>     private float centerMassY;                                                                     
+</span><span class="outsideLine"><i>0078</i>     private int mass;  // Mass of this tree (the number of nodes it contains)                      
+</span><span class="outsideLine"><i>0079</i>     private AddBehaviour add;                                                                      
+</span><span class="outsideLine"><i>0080</i>     private List<QuadTree> children;                                                               
+</span><span class="outsideLine"><i>0081</i>     private boolean isLeaf;                                                                        
+</span><span class="outsideLine"><i>0082</i>                                                                                                    
+</span><span class="methodLine"><i>0083</i>     public QuadTree(float posX, float posY, float size, int maxLevel) {                            
+</span><span class="methodLine"><i>0084</i>         this.posX = posX;                                                                          
+</span><span class="methodLine"><i>0085</i>         this.posY = posY;                                                                          
+</span><span class="methodLine"><i>0086</i>         this.size = size;                                                                          
+</span><span class="methodLine"><i>0087</i>         this.maxLevel = maxLevel;                                                                  
+</span><span class="methodLine"><i>0088</i>         this.isLeaf = true;                                                                        
+</span><span class="methodLine"><i>0089</i>         mass = 0;                                                                                  
+</span><span class="methodLine"><i>0090</i>         add = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3700</span>new FirstAdd()</span>;                                                                      
+</span><span class="methodLine"><i>0091</i>     }                                                                                              
+</span><span class="outsideLine"><i>0092</i>                                                                                                    
+</span><span class="methodLine"><i>0093</i>     public static QuadTree buildTree(Graph graph, int maxLevel) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 861</span>{</span>                                  
+</span><span class="methodLine"><i>0094</i>         float minX = Float.POSITIVE_INFINITY;                                                      
+</span><span class="methodLine"><i>0095</i>         float maxX = Float.NEGATIVE_INFINITY;                                                      
+</span><span class="methodLine"><i>0096</i>         float minY = Float.POSITIVE_INFINITY;                                                      
+</span><span class="methodLine"><i>0097</i>         float maxY = Float.NEGATIVE_INFINITY;                                                      
+</span><span class="outsideLine"><i>0098</i>                                                                                                    
+</span><span class="methodLine"><i>0099</i>         for (Node node : graph.getNodes()) {                                                       
+</span><span class="methodLine"><i>0100</i>             minX = Math.min(minX, node.x());                                                       
+</span><span class="methodLine"><i>0101</i>             maxX = Math.max(maxX, node.x());                                                       
+</span><span class="methodLine"><i>0102</i>             minY = Math.min(minY, node.y());                                                       
+</span><span class="methodLine"><i>0103</i>             maxY = Math.max(maxY, node.y());                                                       
+</span><span class="methodLine"><i>0104</i>         }                                                                                          
+</span><span class="outsideLine"><i>0105</i>                                                                                                    
+</span><span class="methodLine"><i>0106</i>         float size = Math.max(maxY <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4463</span>-</span> minY, maxX <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4465</span>-</span> minX);                                           
+</span><span class="methodLine"><i>0107</i>         QuadTree tree = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4292</span>new QuadTree(minX, minY, size, maxLevel)</span>;                                  
+</span><span class="methodLine"><i>0108</i>         for (Node node : graph.getNodes()) {                                                       
+</span><span class="methodLine"><i>0109</i>             tree.addNode(node);                                                                    
+</span><span class="methodLine"><i>0110</i>         }                                                                                          
+</span><span class="outsideLine"><i>0111</i>                                                                                                    
+</span><span class="methodLine"><i>0112</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2357</span>return tree;</span>                                                                               
+</span><span class="methodLine"><i>0113</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0114</i>                                                                                                    
+</span><span class="outsideLine"><i>0115</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0116</i>     public float size() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 867</span>{                                                                          
+</span><span class="methodLine"><i>0117</i>         return size;                                                                               
+</span><span class="methodLine"><i>0118</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0119</i>                                                                                                    
+</span><span class="methodLine"><i>0120</i>     private void divideTree() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 872</span>{                                                                    
+</span><span class="methodLine"><i>0121</i>         float childSize = size <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3987</span>/</span> 2;                                                                
+</span><span class="outsideLine"><i>0122</i>                                                                                                    
+</span><span class="methodLine"><i>0123</i>         children = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3746</span>new ArrayList<>()</span>;                                                              
+</span><span class="methodLine"><i>0124</i>         children.add(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3993</span>new QuadTree(posX <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4851</span>+</span> childSize, posY <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4853</span>+</span> childSize,                              
+</span><span class="methodLine"><i>0125</i>             childSize, maxLevel <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4857</span>-</span> 1)</span>);                                                             
+</span><span class="methodLine"><i>0126</i>         children.add(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3996</span>new QuadTree(posX, posY <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4860</span>+</span> childSize,                                          
+</span><span class="methodLine"><i>0127</i>             childSize, maxLevel <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4864</span>-</span> 1)</span>);                                                             
+</span><span class="methodLine"><i>0128</i>         children.add(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3999</span>new QuadTree(posX, posY, childSize, maxLevel <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4871</span>-</span> 1)</span>);                           
+</span><span class="methodLine"><i>0129</i>         children.add(<span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4002</span>new QuadTree(posX <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4872</span>+</span> childSize, posY,                                          
+</span><span class="methodLine"><i>0130</i>             childSize, maxLevel <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: + 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4878</span>-</span> 1)</span>);                                                             
+</span><span class="outsideLine"><i>0131</i>                                                                                                    
+</span><span class="methodLine"><i>0132</i>         isLeaf = false;                                                                            
+</span><span class="methodLine"><i>0133</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0134</i>                                                                                                    
+</span><span class="methodLine"><i>0135</i>     private boolean addToChildren(NodeProperties node) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 877</span>{</span>                                           
+</span><span class="methodLine"><i>0136</i>         for (QuadTree q : children) {                                                              
+</span><span class="methodLine"><i>0137</i>             if (q.addNode(node)) {                                                                 
+</span><span class="methodLine"><i>0138</i>                 return true;                                                                       
+</span><span class="methodLine"><i>0139</i>             }                                                                                      
+</span><span class="methodLine"><i>0140</i>         }                                                                                          
+</span><span class="methodLine"><i>0141</i>         return false;                                                                              
+</span><span class="methodLine"><i>0142</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0143</i>                                                                                                    
+</span><span class="methodLine"><i>0144</i>     private void assimilateNode(NodeProperties node) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 882</span>{</span>                                             
+</span><span class="methodLine"><i>0145</i>         centerMassX = (mass <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4494</span>*</span> centerMassX <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4319</span>+</span> node.x()) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3494</span>/</span> (mass <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4322</span>+</span> 1);                                
+</span><span class="methodLine"><i>0146</i>         centerMassY = (mass <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: / 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4500</span>*</span> centerMassY <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4325</span>+</span> node.y()) <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: * 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3497</span>/</span> (mass <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4328</span>+</span> 1);                                
+</span><span class="methodLine"><i>0147</i>         mass<span class="ArithmeticOperatorReplacementShortcut tooltip"><span class="tooltiptext">Mutated Text: -- 
+Mutation Operator Type: ArithmeticOperatorReplacementShortcut 
+Node ID: 3172</span>++</span>;                                                                                    
+</span><span class="methodLine"><i>0148</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0149</i>                                                                                                    
+</span><span class="methodLine"><i>0150</i>     public Iterable<QuadTree> getChildren() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 887</span>{                                                      
+</span><span class="methodLine"><i>0151</i>         <span class="NullifyReturnValue tooltip"><span class="tooltiptext">Mutated Text: return null; 
+Mutation Operator Type: NullifyReturnValue 
+Node ID: 2379</span>return children;</span>                                                                           
+</span><span class="methodLine"><i>0152</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0153</i>                                                                                                    
+</span><span class="outsideLine"><i>0154</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0155</i>     public float x() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 893</span>{                                                                             
+</span><span class="methodLine"><i>0156</i>         return centerMassX;                                                                        
+</span><span class="methodLine"><i>0157</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0158</i>                                                                                                    
+</span><span class="outsideLine"><i>0159</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0160</i>     public float y() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 899</span>{                                                                             
+</span><span class="methodLine"><i>0161</i>         return centerMassY;                                                                        
+</span><span class="methodLine"><i>0162</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0163</i>                                                                                                    
+</span><span class="methodLine"><i>0164</i>     public int mass() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 904</span>{                                                                            
+</span><span class="methodLine"><i>0165</i>         return mass;                                                                               
+</span><span class="methodLine"><i>0166</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0167</i>                                                                                                    
+</span><span class="outsideLine"><i>0168</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0169</i>     public float z() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 910</span>{                                                                             
+</span><span class="methodLine"><i>0170</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3179</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0171</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0172</i>                                                                                                    
+</span><span class="methodLine"><i>0173</i>     public boolean addNode(NodeProperties node) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 915</span>{</span>                                                  
+</span><span class="methodLine"><i>0174</i>         if (posX <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4020</span><=</span> node.x() <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3782</span>&&</span> node.x() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4022</span><=</span> posX <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 4336</span>+</span> size                                            
+</span><span class="methodLine"><i>0175</i>             <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3507</span>&&</span> posY <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3784</span><=</span> node.y() <span class="ConditionalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: || 
+Mutation Operator Type: ConditionalOperatorReplacement 
+Node ID: 3182</span>&&</span> node.y() <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: > 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 3509</span><=</span> posY <span class="ArithmeticOperatorReplacementBinary tooltip"><span class="tooltiptext">Mutated Text: - 
+Mutation Operator Type: ArithmeticOperatorReplacementBinary 
+Node ID: 3787</span>+</span> size) {                                      
+</span><span class="methodLine"><i>0176</i>             return add.addNode(node);                                                              
+</span><span class="methodLine"><i>0177</i>         } else {                                                                                   
+</span><span class="methodLine"><i>0178</i>             return false;                                                                          
+</span><span class="methodLine"><i>0179</i>         }                                                                                          
+</span><span class="methodLine"><i>0180</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0181</i>                                                                                                    
+</span><span class="outsideLine"><i>0182</i>     /**                                                                                            
+</span><span class="outsideLine"><i>0183</i>      * @return the isLeaf                                                                          
+</span><span class="outsideLine"><i>0184</i>      */                                                                                            
+</span><span class="methodLine"><i>0185</i>     public boolean isIsLeaf() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 920</span>{                                                                    
+</span><span class="methodLine"><i>0186</i>         return isLeaf;                                                                             
+</span><span class="methodLine"><i>0187</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0188</i>                                                                                                    
+</span><span class="outsideLine"><i>0189</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0190</i>     public float r() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 926</span>{                                                                             
+</span><span class="methodLine"><i>0191</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3188</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0192</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0193</i>                                                                                                    
+</span><span class="outsideLine"><i>0194</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0195</i>     public float g() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 932</span>{                                                                             
+</span><span class="methodLine"><i>0196</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3190</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0197</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0198</i>                                                                                                    
+</span><span class="outsideLine"><i>0199</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0200</i>     public float b() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 938</span>{                                                                             
+</span><span class="methodLine"><i>0201</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3192</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0202</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0203</i>                                                                                                    
+</span><span class="outsideLine"><i>0204</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0205</i>     public int getRGBA() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 944</span>{                                                                         
+</span><span class="methodLine"><i>0206</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3194</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0207</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0208</i>                                                                                                    
+</span><span class="outsideLine"><i>0209</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0210</i>     public Color getColor() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 950</span>{                                                                      
+</span><span class="methodLine"><i>0211</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3196</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0212</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0213</i>                                                                                                    
+</span><span class="outsideLine"><i>0214</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0215</i>     public void setColor(Color color) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 956</span>{</span>                                                            
+</span><span class="methodLine"><i>0216</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3199</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0217</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0218</i>                                                                                                    
+</span><span class="outsideLine"><i>0219</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0220</i>     public float alpha() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1F;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 962</span>{                                                                         
+</span><span class="methodLine"><i>0221</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3201</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0222</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0223</i>                                                                                                    
+</span><span class="outsideLine"><i>0224</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0225</i>     public boolean isFixed() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 968</span>{                                                                     
+</span><span class="methodLine"><i>0226</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3203</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0227</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0228</i>                                                                                                    
+</span><span class="outsideLine"><i>0229</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0230</i>     public void setFixed(boolean fixed) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 974</span>{                                                          
+</span><span class="methodLine"><i>0231</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3206</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0232</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0233</i>                                                                                                    
+</span><span class="outsideLine"><i>0234</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0235</i>     public <T extends LayoutData> T getLayoutData() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1455</span>{                                              
+</span><span class="methodLine"><i>0236</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3536</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0237</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0238</i>                                                                                                    
+</span><span class="outsideLine"><i>0239</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0240</i>     public void setLayoutData(LayoutData layoutData) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 984</span>{</span>                                             
+</span><span class="methodLine"><i>0241</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3213</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0242</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0243</i>                                                                                                    
+</span><span class="outsideLine"><i>0244</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0245</i>     public TextProperties getTextProperties() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 990</span>{                                                    
+</span><span class="methodLine"><i>0246</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3215</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0247</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0248</i>                                                                                                    
+</span><span class="outsideLine"><i>0249</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0250</i>     public int getStoreId() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 996</span>{                                                                      
+</span><span class="methodLine"><i>0251</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3217</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0252</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0253</i>                                                                                                    
+</span><span class="outsideLine"><i>0254</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0255</i>     public void setX(float x) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1002</span>{                                                                    
+</span><span class="methodLine"><i>0256</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3220</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0257</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0258</i>                                                                                                    
+</span><span class="outsideLine"><i>0259</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0260</i>     public void setY(float y) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1008</span>{                                                                    
+</span><span class="methodLine"><i>0261</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3223</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0262</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0263</i>                                                                                                    
+</span><span class="outsideLine"><i>0264</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0265</i>     public void setZ(float z) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1014</span>{                                                                    
+</span><span class="methodLine"><i>0266</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3226</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0267</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0268</i>                                                                                                    
+</span><span class="outsideLine"><i>0269</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0270</i>     public void setPosition(float x, float y) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1020</span>{                                                    
+</span><span class="methodLine"><i>0271</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3230</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0272</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0273</i>                                                                                                    
+</span><span class="outsideLine"><i>0274</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0275</i>     public void setPosition(float x, float y, float z) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1026</span>{                                           
+</span><span class="methodLine"><i>0276</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3235</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0277</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0278</i>                                                                                                    
+</span><span class="outsideLine"><i>0279</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0280</i>     public void setR(float r) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1032</span>{                                                                    
+</span><span class="methodLine"><i>0281</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3238</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0282</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0283</i>                                                                                                    
+</span><span class="outsideLine"><i>0284</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0285</i>     public void setG(float g) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1038</span>{                                                                    
+</span><span class="methodLine"><i>0286</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3241</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0287</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0288</i>                                                                                                    
+</span><span class="outsideLine"><i>0289</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0290</i>     public void setB(float b) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1044</span>{                                                                    
+</span><span class="methodLine"><i>0291</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3244</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0292</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0293</i>                                                                                                    
+</span><span class="outsideLine"><i>0294</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0295</i>     public void setAlpha(float a) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1050</span>{                                                                
+</span><span class="methodLine"><i>0296</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3247</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0297</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0298</i>                                                                                                    
+</span><span class="outsideLine"><i>0299</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0300</i>     public void setSize(float size) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1056</span>{                                                              
+</span><span class="methodLine"><i>0301</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3250</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0302</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0303</i>                                                                                                    
+</span><span class="outsideLine"><i>0304</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0305</i>     public Object getId() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1062</span>{                                                                        
+</span><span class="methodLine"><i>0306</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3252</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0307</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0308</i>                                                                                                    
+</span><span class="outsideLine"><i>0309</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0310</i>     public String getLabel() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return "A";
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1068</span>{                                                                     
+</span><span class="methodLine"><i>0311</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3254</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0312</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0313</i>                                                                                                    
+</span><span class="outsideLine"><i>0314</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0315</i>     public void setLabel(String label) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1074</span>{</span>                                                           
+</span><span class="methodLine"><i>0316</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3257</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0317</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0318</i>                                                                                                    
+</span><span class="outsideLine"><i>0319</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0320</i>     public Object getAttribute(String key) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1080</span>{</span>                                                       
+</span><span class="methodLine"><i>0321</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3260</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0322</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0323</i>                                                                                                    
+</span><span class="outsideLine"><i>0324</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0325</i>     public Object getAttribute(Column column) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1086</span>{</span>                                                    
+</span><span class="methodLine"><i>0326</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3263</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0327</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0328</i>                                                                                                    
+</span><span class="outsideLine"><i>0329</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0330</i>     public Object[] getAttributes() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1092</span>{                                                              
+</span><span class="methodLine"><i>0331</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3265</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0332</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0333</i>                                                                                                    
+</span><span class="outsideLine"><i>0334</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0335</i>     public Set<String> getAttributeKeys() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1098</span>{                                                        
+</span><span class="methodLine"><i>0336</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3268</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0337</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0338</i>                                                                                                    
+</span><span class="outsideLine"><i>0339</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0340</i>     public ColumnIterable getAttributeColumns() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1104</span>{                                                  
+</span><span class="methodLine"><i>0341</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3270</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0342</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0343</i>                                                                                                    
+</span><span class="outsideLine"><i>0344</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0345</i>     public Object removeAttribute(String key) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1110</span>{</span>                                                    
+</span><span class="methodLine"><i>0346</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3273</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0347</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0348</i>                                                                                                    
+</span><span class="outsideLine"><i>0349</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0350</i>     public Object removeAttribute(Column column) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1116</span>{</span>                                                 
+</span><span class="methodLine"><i>0351</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3276</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0352</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0353</i>                                                                                                    
+</span><span class="outsideLine"><i>0354</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0355</i>     public void setAttribute(String key, Object value) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1122</span>{</span>                                           
+</span><span class="methodLine"><i>0356</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3280</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0357</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0358</i>                                                                                                    
+</span><span class="outsideLine"><i>0359</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0360</i>     public void setAttribute(Column column, Object value) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1128</span>{</span>                                        
+</span><span class="methodLine"><i>0361</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3284</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0362</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0363</i>                                                                                                    
+</span><span class="outsideLine"><i>0364</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0365</i>     public void setAttribute(String key, Object value, double timestamp) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1134</span>{</span>                         
+</span><span class="methodLine"><i>0366</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3289</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0367</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0368</i>                                                                                                    
+</span><span class="outsideLine"><i>0369</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0370</i>     public void setAttribute(Column column, Object value, double timestamp) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1140</span>{</span>                      
+</span><span class="methodLine"><i>0371</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3294</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0372</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0373</i>                                                                                                    
+</span><span class="outsideLine"><i>0374</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0375</i>     public boolean addTimestamp(double timestamp) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1146</span>{                                                
+</span><span class="methodLine"><i>0376</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3297</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0377</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0378</i>                                                                                                    
+</span><span class="outsideLine"><i>0379</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0380</i>     public boolean removeTimestamp(double timestamp) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1152</span>{                                             
+</span><span class="methodLine"><i>0381</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3300</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0382</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0383</i>                                                                                                    
+</span><span class="outsideLine"><i>0384</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0385</i>     public double[] getTimestamps() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return 0.1;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1158</span>{                                                              
+</span><span class="methodLine"><i>0386</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3302</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0387</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0388</i>                                                                                                    
+</span><span class="outsideLine"><i>0389</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0390</i>     public Interval getTimeBounds() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1164</span>{                                                              
+</span><span class="methodLine"><i>0391</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3304</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0392</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0393</i>                                                                                                    
+</span><span class="outsideLine"><i>0394</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0395</i>     public void clearAttributes() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1170</span>{                                                                
+</span><span class="methodLine"><i>0396</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3306</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0397</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0398</i>                                                                                                    
+</span><span class="outsideLine"><i>0399</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0400</i>     public Object getAttribute(String key, double timestamp) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1176</span>{</span>                                     
+</span><span class="methodLine"><i>0401</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3310</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0402</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0403</i>                                                                                                    
+</span><span class="outsideLine"><i>0404</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0405</i>     public Object getAttribute(Column column, double timestamp) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1182</span>{</span>                                  
+</span><span class="methodLine"><i>0406</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3314</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0407</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0408</i>                                                                                                    
+</span><span class="outsideLine"><i>0409</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0410</i>     public Object getAttribute(String key, GraphView view) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1188</span>{</span>                                       
+</span><span class="methodLine"><i>0411</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3318</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0412</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0413</i>                                                                                                    
+</span><span class="outsideLine"><i>0414</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0415</i>     public Object getAttribute(Column column, GraphView view) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1194</span>{</span>                                    
+</span><span class="methodLine"><i>0416</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3322</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0417</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0418</i>                                                                                                    
+</span><span class="outsideLine"><i>0419</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0420</i>     public boolean hasTimestamp(double timestamp) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1200</span>{                                                
+</span><span class="methodLine"><i>0421</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3325</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0422</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0423</i>                                                                                                    
+</span><span class="outsideLine"><i>0424</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0425</i>     public Object getAttribute(String key, Interval interval) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1206</span>{</span>                                    
+</span><span class="methodLine"><i>0426</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3329</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0427</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0428</i>                                                                                                    
+</span><span class="outsideLine"><i>0429</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0430</i>     public Object getAttribute(Column column, Interval interval) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1212</span>{</span>                                 
+</span><span class="methodLine"><i>0431</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3333</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0432</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0433</i>                                                                                                    
+</span><span class="outsideLine"><i>0434</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0435</i>     public Iterable<Map.Entry> getAttributes(Column column) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1218</span>{</span>                                      
+</span><span class="methodLine"><i>0436</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3337</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0437</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0438</i>                                                                                                    
+</span><span class="outsideLine"><i>0439</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0440</i>     public Object removeAttribute(String key, double timestamp) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1224</span>{</span>                                  
+</span><span class="methodLine"><i>0441</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3341</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0442</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0443</i>                                                                                                    
+</span><span class="outsideLine"><i>0444</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0445</i>     public Object removeAttribute(Column column, double timestamp) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1230</span>{</span>                               
+</span><span class="methodLine"><i>0446</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3345</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0447</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0448</i>                                                                                                    
+</span><span class="outsideLine"><i>0449</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0450</i>     public Object removeAttribute(String key, Interval interval) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1236</span>{</span>                                 
+</span><span class="methodLine"><i>0451</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3349</span>new UnsupportedOperationException(                                                   
+</span><span class="methodLine"><i>0452</i>             "Not supported yet.")</span>; //To change body of generated methods, choose Tools | Templates.
+</span><span class="methodLine"><i>0453</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0454</i>                                                                                                    
+</span><span class="outsideLine"><i>0455</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0456</i>     public Object removeAttribute(Column column, Interval interval) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1242</span>{</span>                              
+</span><span class="methodLine"><i>0457</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3353</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0458</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0459</i>                                                                                                    
+</span><span class="outsideLine"><i>0460</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0461</i>     public void setAttribute(String key, Object value, Interval interval) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1248</span>{</span>                        
+</span><span class="methodLine"><i>0462</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3358</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0463</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0464</i>                                                                                                    
+</span><span class="outsideLine"><i>0465</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0466</i>     public void setAttribute(Column column, Object value, Interval interval) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+// void -- no return //
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1254</span>{</span>                     
+</span><span class="methodLine"><i>0467</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3363</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0468</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0469</i>                                                                                                    
+</span><span class="outsideLine"><i>0470</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0471</i>     public boolean addInterval(Interval interval) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1260</span>{</span>                                                
+</span><span class="methodLine"><i>0472</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3366</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0473</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0474</i>                                                                                                    
+</span><span class="outsideLine"><i>0475</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0476</i>     public boolean removeInterval(Interval interval) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1266</span>{</span>                                             
+</span><span class="methodLine"><i>0477</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3369</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0478</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0479</i>                                                                                                    
+</span><span class="outsideLine"><i>0480</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0481</i>     public boolean hasInterval(Interval interval) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1272</span>{</span>                                                
+</span><span class="methodLine"><i>0482</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3372</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0483</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0484</i>                                                                                                    
+</span><span class="outsideLine"><i>0485</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0486</i>     public Interval[] getIntervals() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1278</span>{                                                             
+</span><span class="methodLine"><i>0487</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3374</span>new UnsupportedOperationException("Not supported.")</span>;                                 
+</span><span class="methodLine"><i>0488</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0489</i>                                                                                                    
+</span><span class="outsideLine"><i>0490</i>     @Override                                                                                      
+</span><span class="methodLine"><i>0491</i>     public Table getTable() <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return null;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 1284</span>{                                                                      
+</span><span class="methodLine"><i>0492</i>         throw <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 3376</span>new UnsupportedOperationException(                                                   
+</span><span class="methodLine"><i>0493</i>             "Not supported yet.")</span>; //To change body of generated methods, choose Tools | Templates.
+</span><span class="methodLine"><i>0494</i>     }</span>                                                                                              
+</span><span class="outsideLine"><i>0495</i>                                                                                                    
+</span><span class="outsideLine"><i>0496</i>     class FirstAdd implements AddBehaviour {                                                       
+</span><span class="outsideLine"><i>0497</i>                                                                                                    
+</span><span class="outsideLine"><i>0498</i>         @Override                                                                                  
+</span><span class="methodLine"><i>0499</i>         public boolean addNode(NodeProperties node) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 3103</span>{</span>                                              
+</span><span class="methodLine"><i>0500</i>             mass = 1;                                                                              
+</span><span class="methodLine"><i>0501</i>             centerMassX = node.x();                                                                
+</span><span class="methodLine"><i>0502</i>             centerMassY = node.y();                                                                
+</span><span class="outsideLine"><i>0503</i>                                                                                                    
+</span><span class="methodLine"><i>0504</i>             if (maxLevel <span class="RelationalOperatorReplacement tooltip"><span class="tooltiptext">Mutated Text: != 
+Mutation Operator Type: RelationalOperatorReplacement 
+Node ID: 4419</span>==</span> 0) {                                                                   
+</span><span class="methodLine"><i>0505</i>                 add = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5177</span>new LeafAdd()</span>;                                                               
+</span><span class="methodLine"><i>0506</i>             } else {                                                                               
+</span><span class="methodLine"><i>0507</i>                 add = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 5180</span>new SecondAdd()</span>;                                                             
+</span><span class="methodLine"><i>0508</i>             }                                                                                      
+</span><span class="outsideLine"><i>0509</i>                                                                                                    
+</span><span class="methodLine"><i>0510</i>             return true;                                                                           
+</span><span class="methodLine"><i>0511</i>         }</span>                                                                                          
+</span><span class="outsideLine"><i>0512</i>     }                                                                                              
+</span><span class="outsideLine"><i>0513</i>                                                                                                    
+</span><span class="outsideLine"><i>0514</i>     class SecondAdd implements AddBehaviour {                                                      
+</span><span class="outsideLine"><i>0515</i>                                                                                                    
+</span><span class="outsideLine"><i>0516</i>         @Override                                                                                  
+</span><span class="methodLine"><i>0517</i>         public boolean addNode(NodeProperties node) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 3109</span>{</span>                                              
+</span><span class="methodLine"><i>0518</i>             divideTree();                                                                          
+</span><span class="methodLine"><i>0519</i>             add = <span class="NullifyObjectInitialization tooltip"><span class="tooltiptext">Mutated Text: null 
+Mutation Operator Type: NullifyObjectInitialization 
+Node ID: 4800</span>new RootAdd()</span>;                                                                   
+</span><span class="outsideLine"><i>0520</i>             /* This QuadTree represents one node, add it to a child accordingly                    
+</span><span class="outsideLine"><i>0521</i>              */                                                                                    
+</span><span class="methodLine"><i>0522</i>             addToChildren(QuadTree.this);                                                          
+</span><span class="methodLine"><i>0523</i>             return add.addNode(node);                                                              
+</span><span class="methodLine"><i>0524</i>         }</span>                                                                                          
+</span><span class="outsideLine"><i>0525</i>     }                                                                                              
+</span><span class="outsideLine"><i>0526</i>                                                                                                    
+</span><span class="outsideLine"><i>0527</i>     class LeafAdd implements AddBehaviour {                                                        
+</span><span class="outsideLine"><i>0528</i>                                                                                                    
+</span><span class="outsideLine"><i>0529</i>         @Override                                                                                  
+</span><span class="methodLine"><i>0530</i>         public boolean addNode(NodeProperties node) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 3115</span>{</span>                                              
+</span><span class="methodLine"><i>0531</i>             assimilateNode(node);                                                                  
+</span><span class="methodLine"><i>0532</i>             return true;                                                                           
+</span><span class="methodLine"><i>0533</i>         }</span>                                                                                          
+</span><span class="outsideLine"><i>0534</i>     }                                                                                              
+</span><span class="outsideLine"><i>0535</i>                                                                                                    
+</span><span class="outsideLine"><i>0536</i>     class RootAdd implements AddBehaviour {                                                        
+</span><span class="outsideLine"><i>0537</i>                                                                                                    
+</span><span class="outsideLine"><i>0538</i>         @Override                                                                                  
+</span><span class="methodLine"><i>0539</i>         public boolean addNode(NodeProperties node) <span class="RemoveMethod tooltip"><span class="tooltiptext">Mutated Text: {
+    return false;
+}
+ 
+Mutation Operator Type: RemoveMethod 
+Node ID: 3121</span>{</span>                                              
+</span><span class="methodLine"><i>0540</i>             assimilateNode(node);                                                                  
+</span><span class="methodLine"><i>0541</i>             return addToChildren(node);                                                            
+</span><span class="methodLine"><i>0542</i>         }</span>                                                                                          
+</span><span class="outsideLine"><i>0543</i>     }                                                                                              
+</span><span class="outsideLine"><i>0544</i> }                                                                                                  
+</span><span class="outsideLine"><i>0545</i>                                                                                                    </pre></div><footer><p style="font-size: small">Report generated by LittleDarwin 0.10.7 </p></footer></body></html>
