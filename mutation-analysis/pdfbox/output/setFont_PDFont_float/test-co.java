@@ -44,7 +44,7 @@ public class TestPDPageContentStreamRickGen {
         Object[] paramObjects = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.PDPageContentStream.setFont1-params.xml");
         float paramObject2 = (Float) paramObjects[1];
         PDFont mockPDFont = Mockito.mock(PDFont.class);
-        Mockito.when(mockPDFont.willBeSubset()).thenReturn(false);
+        Mockito.lenient().when(mockPDFont.willBeSubset()).thenReturn(false);
         // Act
         receivingObject.setFont(mockPDFont, paramObject2);
         // Assert
@@ -59,7 +59,7 @@ public class TestPDPageContentStreamRickGen {
         Object[] paramObjects = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.PDPageContentStream.setFont1-params.xml");
         float paramObject2 = (Float) paramObjects[1];
         PDFont mockPDFont = Mockito.mock(PDFont.class);
-        Mockito.when(mockPDFont.willBeSubset()).thenReturn(false);
+        Mockito.lenient().when(mockPDFont.willBeSubset()).thenReturn(false);
         // Act
         receivingObject.setFont(mockPDFont, paramObject2);
         // Assert

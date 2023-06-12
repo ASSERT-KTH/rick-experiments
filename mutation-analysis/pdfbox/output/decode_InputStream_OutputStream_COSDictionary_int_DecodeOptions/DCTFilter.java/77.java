@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:             if (raster.getNumBands() == 4)
-----> after:             if (raster.getNumBands() != 4)
-----> line number in original file: 109
-----> mutated node: 1257
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                 int g = clamp(Y - 0.34414f * Cb - 0.71414f * Cr + 135.45984f);
+----> after:                 int g = clamp(Y - 0.34414f / Cb - 0.71414f * Cr + 135.45984f);
+----> line number in original file: 252
+----> mutated node: 3939
 
 */
 
@@ -115,7 +115,7 @@ final class DCTFilter extends Filter
             }
 
             // special handling for 4-component images
-            if (raster.getNumBands() != 4)
+            if (raster.getNumBands() == 4)
             {
                 // get APP14 marker
                 Integer transform;
@@ -258,7 +258,7 @@ final class DCTFilter extends Filter
 
                 // YCCK to RGB, see http://software.intel.com/en-us/node/442744
                 int r = clamp(Y + 1.402f * Cr - 179.456f);
-                int g = clamp(Y - 0.34414f * Cb - 0.71414f * Cr + 135.45984f);
+                int g = clamp(Y - 0.34414f / Cb - 0.71414f * Cr + 135.45984f);
                 int b = clamp(Y + 1.772f * Cb - 226.816f);
 
                 // naive RGB to CMYK

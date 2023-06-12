@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                 int cyan = 255 - r;
-----> after:                 int cyan = 255 + r;
-----> line number in original file: 294
-----> mutated node: 3344
+mutant type: RemoveMethod
+----> before:     {
+----> after:     {
+----> line number in original file: 311
+----> mutated node: 371
 
 */
 
@@ -300,7 +300,7 @@ final class DCTFilter extends Filter
                 int b = clamp( (1.164f * (Y-16)) + (2.017f * (Cb-128)));
 
                 // naive RGB to CMYK
-                int cyan = 255 + r;
+                int cyan = 255 - r;
                 int magenta = 255 - g;
                 int yellow = 255 - b;
 
@@ -318,26 +318,9 @@ final class DCTFilter extends Filter
     // converts from BGR to RGB
     private WritableRaster fromBGRtoRGB(Raster raster)
     {
-        WritableRaster writableRaster = raster.createCompatibleWritableRaster();
+    return null;
+}
 
-        int width = raster.getWidth();
-        int height = raster.getHeight();
-        int w3 = width * 3;
-        int[] tab = new int[w3];
-        //BEWARE: handling the full image at a time is slower than one line at a time        
-        for (int y = 0; y < height; y++)
-        {
-            raster.getPixels(0, y, width, 1, tab);
-            for (int off = 0; off < w3; off += 3)
-            {
-                int tmp = tab[off];
-                tab[off] = tab[off + 2];
-                tab[off + 2] = tmp;
-            }
-            writableRaster.setPixels(0, y, width, 1, tab);
-        }
-        return writableRaster;
-    }
     
     // returns the number of channels as a string, or an empty string if there is an error getting the meta data
     private String getNumChannels(ImageReader reader)

@@ -3,174 +3,174 @@
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/131.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.966 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.174 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.428 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.458 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.83 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.248 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.939 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.674 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },
 {
     "mut": "getShading_COSName",
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/132.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.527 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.781 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.02 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.441 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.95 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.022 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.376 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.903 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },
 {
     "mut": "getShading_COSName",
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/133.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.695 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.52 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 14.481 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 13.23 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 9.402 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.751 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.792 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 11.822 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },
 {
     "mut": "getShading_COSName",
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/134.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.216 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.113 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.792 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.382 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.722 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.259 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.732 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.823 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },
 {
     "mut": "getShading_COSName",
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/135.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.159 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.511 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.038 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.37 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.318 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.786 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.46 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.567 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },
 {
     "mut": "getShading_COSName",
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/172.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.982 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.123 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.375 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.594 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.696 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.267 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.045 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.965 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },
 {
     "mut": "getShading_COSName",
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/173.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.614 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.892 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.134 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.241 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.371 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.33 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.264 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.536 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },
 {
     "mut": "getShading_COSName",
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/218.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.463 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.767 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.259 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.708 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.1 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.145 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.386 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.095 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },
 {
     "mut": "getShading_COSName",
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/251.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.782 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.272 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.1 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.822 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 9.28 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.622 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.292 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.549 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },
 {
     "mut": "getShading_COSName",
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/252.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.513 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.432 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.877 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.919 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.391 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.725 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.508 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.127 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },
 {
     "mut": "getShading_COSName",
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/253.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.363 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.928 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.47 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.588 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 9.769 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.659 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.864 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.797 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },
 {
     "mut": "getShading_COSName",
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/254.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.217 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.37 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.984 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.763 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.745 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.75 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.801 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.033 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },
 {
     "mut": "getShading_COSName",
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/255.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.625 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.317 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.633 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.005 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.01 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.036 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.363 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.673 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },
 {
     "mut": "getShading_COSName",
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/47.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.601 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.077 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.063 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.515 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 9.239 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.295 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.21 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 9.62 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },
 {
     "mut": "getShading_COSName",
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/89.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.95 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.792 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.974 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.987 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.436 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.887 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.957 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.444 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },
 {
     "mut": "getShading_COSName",
     "CUT": "org.apache.pdfbox.pdmodel.PDResources",
     "mutant-file": "./PDResources.java/90.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.222 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.218 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.41 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.569 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.436 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.604 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.521 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.596 s - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGenGetShading"
 },

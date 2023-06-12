@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                 int r = clamp( (1.164f * (Y-16)) + (1.596f * (Cr - 128)) );
-----> after:                 int r = clamp( (1.164f * (Y-16)) - (1.596f * (Cr - 128)) );
-----> line number in original file: 289
-----> mutated node: 3704
+mutant type: RelationalOperatorReplacement
+----> before:             for (int x = 0, width = raster.getWidth(); x < width; x++)
+----> after:             for (int x = 0, width = raster.getWidth(); x >= width; x++)
+----> line number in original file: 278
+----> mutated node: 1547
 
 */
 
@@ -284,7 +284,7 @@ final class DCTFilter extends Filter
         int[] value = new int[4];
         for (int y = 0, height = raster.getHeight(); y < height; y++)
         {
-            for (int x = 0, width = raster.getWidth(); x < width; x++)
+            for (int x = 0, width = raster.getWidth(); x >= width; x++)
             {
                 raster.getPixel(x, y, value);
 
@@ -295,7 +295,7 @@ final class DCTFilter extends Filter
                 float K = value[3];
 
                 // YCbCr to RGB, see http://www.equasys.de/colorconversion.html
-                int r = clamp( (1.164f * (Y-16)) - (1.596f * (Cr - 128)) );
+                int r = clamp( (1.164f * (Y-16)) + (1.596f * (Cr - 128)) );
                 int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
                 int b = clamp( (1.164f * (Y-16)) + (2.017f * (Cb-128)));
 

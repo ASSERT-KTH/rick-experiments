@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                 int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
-----> after:                 int g = clamp( (1.164f * (Y+16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
-----> line number in original file: 290
-----> mutated node: 4102
+mutant type: RelationalOperatorReplacement
+----> before:         for (int y = 0; y < height; y++)
+----> after:         for (int y = 0; y >= height; y++)
+----> line number in original file: 319
+----> mutated node: 880
 
 */
 
@@ -296,7 +296,7 @@ final class DCTFilter extends Filter
 
                 // YCbCr to RGB, see http://www.equasys.de/colorconversion.html
                 int r = clamp( (1.164f * (Y-16)) + (1.596f * (Cr - 128)) );
-                int g = clamp( (1.164f * (Y+16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
+                int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
                 int b = clamp( (1.164f * (Y-16)) + (2.017f * (Cb-128)));
 
                 // naive RGB to CMYK
@@ -325,7 +325,7 @@ final class DCTFilter extends Filter
         int w3 = width * 3;
         int[] tab = new int[w3];
         //BEWARE: handling the full image at a time is slower than one line at a time        
-        for (int y = 0; y < height; y++)
+        for (int y = 0; y >= height; y++)
         {
             raster.getPixels(0, y, width, 1, tab);
             for (int off = 0; off < w3; off += 3)

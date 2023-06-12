@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
 mutant type: RemoveNullCheck
-----> before:         if (glyphs != null && glyphs[gid] != null)
-----> after:         if (true && glyphs[gid] != null)
-----> line number in original file: 162
-----> mutated node: 528
+----> before:         int leftSideBearing = hmt == null ? 0 : hmt.getLeftSideBearing(gid);
+----> after:         int leftSideBearing = false ? 0 : hmt.getLeftSideBearing(gid);
+----> line number in original file: 211
+----> mutated node: 817
 
 */
 
@@ -168,7 +168,7 @@ public class GlyphTable extends TTFTable
             return null;
         }
         
-        if (true && glyphs[gid] != null)
+        if (glyphs != null && glyphs[gid] != null)
         {
             return glyphs[gid];
         }
@@ -217,7 +217,7 @@ public class GlyphTable extends TTFTable
     {
         GlyphData glyph = new GlyphData();
         HorizontalMetricsTable hmt = font.getHorizontalMetrics();
-        int leftSideBearing = hmt == null ? 0 : hmt.getLeftSideBearing(gid);
+        int leftSideBearing = false ? 0 : hmt.getLeftSideBearing(gid);
         glyph.initData(this, data, leftSideBearing);
         // resolve composite glyph
         if (glyph.getDescription().isComposite())

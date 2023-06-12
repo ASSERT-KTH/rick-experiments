@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                 if (len >= POS_TRANSFORM + 1)
-----> after:                 if (len >= POS_TRANSFORM - 1)
-----> line number in original file: 213
-----> mutated node: 2784
+mutant type: ArithmeticOperatorReplacementShortcut
+----> before:         for (int y = 0, height = raster.getHeight(); y < height; y++)
+----> after:         for (int y = 0, height = raster.getHeight(); y < height; y--)
+----> line number in original file: 238
+----> mutated node: 1161
 
 */
 
@@ -219,7 +219,7 @@ final class DCTFilter extends Filter
                     continue;
                 }
                 int len = iis.readUnsignedShort();
-                if (len >= POS_TRANSFORM - 1)
+                if (len >= POS_TRANSFORM + 1)
                 {
                     byte[] app14 = new byte[Math.max(len, POS_TRANSFORM + 1)];
                     if (iis.read(app14) >= POS_TRANSFORM + 1)
@@ -244,7 +244,7 @@ final class DCTFilter extends Filter
         WritableRaster writableRaster = raster.createCompatibleWritableRaster();
 
         int[] value = new int[4];
-        for (int y = 0, height = raster.getHeight(); y < height; y++)
+        for (int y = 0, height = raster.getHeight(); y < height; y--)
         {
             for (int x = 0, width = raster.getWidth(); x < width; x++)
             {

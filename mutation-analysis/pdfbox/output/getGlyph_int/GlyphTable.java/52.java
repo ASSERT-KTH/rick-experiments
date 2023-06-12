@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                 if (offsets[gid + 1] <= offsets[gid])
-----> after:                 if (offsets[gid - 1] <= offsets[gid])
-----> line number in original file: 118
-----> mutated node: 1181
+mutant type: ArithmeticOperatorReplacementShortcut
+----> before:             for (int gid = 0; gid < numGlyphs; gid++)
+----> after:             for (int gid = 0; gid < numGlyphs; gid--)
+----> line number in original file: 109
+----> mutated node: 854
 
 */
 
@@ -115,7 +115,7 @@ public class GlyphTable extends TTFTable
                 glyphs = new GlyphData[numGlyphs];
             }
          
-            for (int gid = 0; gid < numGlyphs; gid++)
+            for (int gid = 0; gid < numGlyphs; gid--)
             {
                 // end of glyphs reached?
                 if (endOfGlyphs != 0 && endOfGlyphs == offsets[gid])
@@ -124,7 +124,7 @@ public class GlyphTable extends TTFTable
                 }
                 // the current glyph isn't defined
                 // if the next offset is equal or smaller to the current offset
-                if (offsets[gid - 1] <= offsets[gid])
+                if (offsets[gid + 1] <= offsets[gid])
                 {
                     continue;
                 }

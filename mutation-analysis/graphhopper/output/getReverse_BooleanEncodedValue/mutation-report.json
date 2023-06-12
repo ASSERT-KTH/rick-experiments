@@ -3,53 +3,53 @@
     "CUT": "com.graphhopper.routing.querygraph.VirtualEdgeIteratorState",
     "mutant-file": "./VirtualEdgeIteratorState.java/131.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.061 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.366 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.309 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.14 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.846 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.573 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.595 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.507 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.501 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.809 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse"
 },
 {
     "mut": "getReverse_BooleanEncodedValue",
     "CUT": "com.graphhopper.routing.querygraph.VirtualEdgeIteratorState",
     "mutant-file": "./VirtualEdgeIteratorState.java/42.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.827 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.255 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.038 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.926 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-all": "Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 4.285 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.512 s - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.752 s - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.608 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.838 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 4.703 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse"
 },
 {
     "mut": "getReverse_BooleanEncodedValue",
     "CUT": "com.graphhopper.routing.querygraph.VirtualEdgeIteratorState",
     "mutant-file": "./VirtualEdgeIteratorState.java/43.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.328 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.445 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.343 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.933 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.192 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.542 s - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.565 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.639 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.136 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.177 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse"
 },
 {
     "mut": "getReverse_BooleanEncodedValue",
     "CUT": "com.graphhopper.routing.querygraph.VirtualEdgeIteratorState",
     "mutant-file": "./VirtualEdgeIteratorState.java/64.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.046 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.07 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.502 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.883 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.566 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.357 s - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.263 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.518 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.103 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 6.468 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse"
 },
 {
     "mut": "getReverse_BooleanEncodedValue",
     "CUT": "com.graphhopper.routing.querygraph.VirtualEdgeIteratorState",
     "mutant-file": "./VirtualEdgeIteratorState.java/97.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.309 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.431 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.585 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.045 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.636 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.622 s - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.379 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.563 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.869 s - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 5.459 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGetReverse"
 },

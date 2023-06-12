@@ -3,53 +3,53 @@
     "CUT": "org.apache.pdfbox.pdfwriter.COSWriter",
     "mutant-file": "./COSWriter.java/170.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.635 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.94 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.685 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.817 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.723 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.87 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.978 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.08 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose"
 },
 {
     "mut": "close",
     "CUT": "org.apache.pdfbox.pdfwriter.COSWriter",
     "mutant-file": "./COSWriter.java/171.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.592 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.181 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.633 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.706 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.669 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.863 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.854 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.613 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose"
 },
 {
     "mut": "close",
     "CUT": "org.apache.pdfbox.pdfwriter.COSWriter",
     "mutant-file": "./COSWriter.java/253.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.475 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.746 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.689 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.761 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
-    "result-all": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.945 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 7.947 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.718 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
+    "result-all": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.924 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose"
 },
 {
     "mut": "close",
     "CUT": "org.apache.pdfbox.pdfwriter.COSWriter",
     "mutant-file": "./COSWriter.java/308.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.431 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.78 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 7.333 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.521 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
-    "result-all": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.785 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.753 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.903 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
+    "result-all": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 7.003 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose"
 },
 {
     "mut": "close",
     "CUT": "org.apache.pdfbox.pdfwriter.COSWriter",
     "mutant-file": "./COSWriter.java/309.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.106 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.742 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.752 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.609 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.65 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.994 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.862 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.715 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenClose"
 },

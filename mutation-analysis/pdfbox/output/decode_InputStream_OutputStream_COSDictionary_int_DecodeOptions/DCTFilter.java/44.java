@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RemoveMethod
-----> before:     {
-----> after:     {
-----> line number in original file: 363
-----> mutated node: 381
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                 tab[off] = tab[off + 2];
+----> after:                 tab[off] = tab[off - 2];
+----> line number in original file: 325
+----> mutated node: 3183
 
 */
 
@@ -331,7 +331,7 @@ final class DCTFilter extends Filter
             for (int off = 0; off < w3; off += 3)
             {
                 int tmp = tab[off];
-                tab[off] = tab[off + 2];
+                tab[off] = tab[off - 2];
                 tab[off + 2] = tmp;
             }
             writableRaster.setPixels(0, y, width, 1, tab);
@@ -370,9 +370,8 @@ final class DCTFilter extends Filter
     // clamps value to 0-255 range
     private int clamp(float value)
     {
-    return 0;
-}
-
+        return (int)((value < 0) ? 0 : ((value > 255) ? 255 : value));
+    }
 
     @Override
     protected void encode(InputStream input, OutputStream encoded, COSDictionary parameters)

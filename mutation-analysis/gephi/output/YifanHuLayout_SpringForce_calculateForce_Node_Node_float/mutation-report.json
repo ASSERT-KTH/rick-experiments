@@ -1,0 +1,88 @@
+{
+    "mut": "YifanHuLayout_SpringForce_calculateForce_Node_Node_float",
+    "CUT": "org.gephi.layout.plugin.force.yifanHu.YifanHuLayout",
+    "mutant-file": "./YifanHuLayout.java/23.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.226 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.502 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.301 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.563 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen"
+},
+{
+    "mut": "YifanHuLayout_SpringForce_calculateForce_Node_Node_float",
+    "CUT": "org.gephi.layout.plugin.force.yifanHu.YifanHuLayout",
+    "mutant-file": "./YifanHuLayout.java/39.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 21.278 s <<< FAILURE! - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 20.372 s <<< FAILURE! - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 21.956 s <<< FAILURE! - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 19.311 s <<< FAILURE! - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen"
+},
+{
+    "mut": "YifanHuLayout_SpringForce_calculateForce_Node_Node_float",
+    "CUT": "org.gephi.layout.plugin.force.yifanHu.YifanHuLayout",
+    "mutant-file": "./YifanHuLayout.java/52.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.819 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.384 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.138 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.239 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen"
+},
+{
+    "mut": "YifanHuLayout_SpringForce_calculateForce_Node_Node_float",
+    "CUT": "org.gephi.layout.plugin.force.yifanHu.YifanHuLayout",
+    "mutant-file": "./YifanHuLayout.java/53.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.384 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.64 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.622 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.074 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen"
+},
+{
+    "mut": "YifanHuLayout_SpringForce_calculateForce_Node_Node_float",
+    "CUT": "org.gephi.layout.plugin.force.yifanHu.YifanHuLayout",
+    "mutant-file": "./YifanHuLayout.java/54.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.341 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.473 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.961 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.474 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen"
+},
+{
+    "mut": "YifanHuLayout_SpringForce_calculateForce_Node_Node_float",
+    "CUT": "org.gephi.layout.plugin.force.yifanHu.YifanHuLayout",
+    "mutant-file": "./YifanHuLayout.java/7.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 19.618 s <<< FAILURE! - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 21.846 s <<< FAILURE! - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 20.6 s <<< FAILURE! - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 21.577 s <<< FAILURE! - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen"
+},
+{
+    "mut": "YifanHuLayout_SpringForce_calculateForce_Node_Node_float",
+    "CUT": "org.gephi.layout.plugin.force.yifanHu.YifanHuLayout",
+    "mutant-file": "./YifanHuLayout.java/73.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 20.765 s - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 22.332 s <<< FAILURE! - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 21.297 s <<< FAILURE! - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 19.791 s <<< FAILURE! - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen"
+},
+{
+    "mut": "YifanHuLayout_SpringForce_calculateForce_Node_Node_float",
+    "CUT": "org.gephi.layout.plugin.force.yifanHu.YifanHuLayout",
+    "mutant-file": "./YifanHuLayout.java/8.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 22.441 s <<< FAILURE! - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 21.548 s <<< FAILURE! - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 21.207 s <<< FAILURE! - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 21.284 s <<< FAILURE! - in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen"
+},

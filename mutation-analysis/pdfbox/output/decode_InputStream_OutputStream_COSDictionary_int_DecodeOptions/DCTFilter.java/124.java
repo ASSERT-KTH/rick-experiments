@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                     byte[] app14 = new byte[Math.max(len, POS_TRANSFORM + 1)];
-----> after:                     byte[] app14 = new byte[Math.max(len, POS_TRANSFORM - 1)];
-----> line number in original file: 215
-----> mutated node: 4090
+mutant type: ArithmeticOperatorReplacementShortcut
+----> before:             for (int x = 0, width = raster.getWidth(); x < width; x++)
+----> after:             for (int x = 0, width = raster.getWidth(); x < width; x--)
+----> line number in original file: 240
+----> mutated node: 2023
 
 */
 
@@ -221,7 +221,7 @@ final class DCTFilter extends Filter
                 int len = iis.readUnsignedShort();
                 if (len >= POS_TRANSFORM + 1)
                 {
-                    byte[] app14 = new byte[Math.max(len, POS_TRANSFORM - 1)];
+                    byte[] app14 = new byte[Math.max(len, POS_TRANSFORM + 1)];
                     if (iis.read(app14) >= POS_TRANSFORM + 1)
                     {
                         return app14[POS_TRANSFORM];
@@ -246,7 +246,7 @@ final class DCTFilter extends Filter
         int[] value = new int[4];
         for (int y = 0, height = raster.getHeight(); y < height; y++)
         {
-            for (int x = 0, width = raster.getWidth(); x < width; x++)
+            for (int x = 0, width = raster.getWidth(); x < width; x--)
             {
                 raster.getPixel(x, y, value);
 

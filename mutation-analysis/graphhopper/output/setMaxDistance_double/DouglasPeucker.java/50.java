@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:         if (lastIndex - fromIndex < 2) {
-----> after:         if (lastIndex - fromIndex >= 2) {
-----> line number in original file: 119
-----> mutated node: 542
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                     lat, lon, ele * elevationFactor,
+----> after:                     lat, lon, ele / elevationFactor,
+----> line number in original file: 140
+----> mutated node: 1597
 
 */
 
@@ -125,7 +125,7 @@ public class DouglasPeucker {
 
     // keep the points of fromIndex and lastIndex
     int subSimplify(PointList points, int fromIndex, int lastIndex) {
-        if (lastIndex - fromIndex >= 2) {
+        if (lastIndex - fromIndex < 2) {
             return 0;
         }
         int indexWithMaxDist = -1;
@@ -146,7 +146,7 @@ public class DouglasPeucker {
             double ele = points.getEle(i);
             double dist = (points.is3D() && elevationMaxDistance < Double.MAX_VALUE && !Double.isNaN(firstEle) && !Double.isNaN(lastEle) && !Double.isNaN(ele))
                     ? calc.calcNormalizedEdgeDistance3D(
-                    lat, lon, ele * elevationFactor,
+                    lat, lon, ele / elevationFactor,
                     firstLat, firstLon, firstEle * elevationFactor,
                     lastLat, lastLon, lastEle * elevationFactor)
                     : calc.calcNormalizedEdgeDistance(lat, lon, firstLat, firstLon, lastLat, lastLon);

@@ -3,405 +3,405 @@
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/1.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.085 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.073 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.921 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.846 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.058 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.786 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.412 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/10.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.936 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.091 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.487 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.505 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.829 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.192 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.178 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.13 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/2.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.855 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.043 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.183 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.993 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.746 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.22 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.883 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.214 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/21.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.427 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.604 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.865 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.437 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.861 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.087 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.894 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.227 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/26.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.823 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.01 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.795 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.896 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.196 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.43 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.011 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.251 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/27.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.605 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.116 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.96 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.785 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.433 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.884 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.017 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.077 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/28.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.635 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.361 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.706 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.996 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.156 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.498 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.535 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.651 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/29.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.06 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.191 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.147 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.006 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.644 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.355 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.396 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.28 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/3.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.287 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.76 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.027 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.133 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.068 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.062 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.602 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.496 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/30.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.068 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.13 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.864 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.938 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.162 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.089 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.407 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.56 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/31.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.282 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.374 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.57 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.927 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.929 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.282 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.473 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.405 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/32.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.646 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.688 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.299 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.016 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.819 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.85 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.893 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.221 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/33.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.817 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.965 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.522 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.824 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.608 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.5 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.1 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.824 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/39.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.648 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.015 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.375 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.584 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.112 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.47 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.075 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.736 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/40.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.185 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.77 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.74 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.651 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.508 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.839 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.231 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.764 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/42.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.676 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.125 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.752 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.753 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.671 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.255 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.328 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.541 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/43.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.963 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.019 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.971 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.771 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.611 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.74 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.05 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.932 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/44.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.633 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.455 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.58 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.721 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.906 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.916 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.92 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.777 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/45.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.779 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.295 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.846 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.98 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.255 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.295 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.355 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.398 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/46.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.811 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.849 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.802 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.08 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.855 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.704 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.029 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.196 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/47.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.926 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.083 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.869 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.942 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.149 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.873 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.356 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.901 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/48.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.105 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.098 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.41 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.983 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.894 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.38 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.367 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.718 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/49.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.808 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.704 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.152 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.963 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.667 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.524 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.095 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.469 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/5.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.243 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.235 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.82 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.077 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.896 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.086 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.766 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.423 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/50.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.774 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.498 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.17 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.938 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.069 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.633 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.351 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.74 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/51.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.741 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.703 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.279 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.074 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.005 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.281 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.351 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.382 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/52.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.336 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.21 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
     "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.099 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.159 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.21 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.086 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.505 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/53.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.965 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.298 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.912 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.801 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.042 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.055 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.035 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.019 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/54.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.958 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.061 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.36 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.873 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.033 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.14 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.328 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.691 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/55.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.859 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.621 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.962 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.984 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.923 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.343 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.219 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.094 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/56.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.156 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.954 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.696 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.681 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.709 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.189 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.817 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.823 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/57.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.845 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.478 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.99 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.62 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.529 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.973 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.964 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.887 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/6.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.713 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.797 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.136 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.014 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.773 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.414 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.181 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.255 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/7.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.659 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.831 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.987 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.969 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.953 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.607 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.118 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.419 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/71.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.658 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.819 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.148 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.09 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.085 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.422 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.305 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.538 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/8.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.881 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.386 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.168 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.386 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.744 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.255 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.043 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.473 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },
 {
     "mut": "getRaster_int_int_int_int",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.shading.AxialShadingContext",
     "mutant-file": "./AxialShadingContext.java/9.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.986 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.245 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.269 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.305 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.439 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.406 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.015 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.242 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen"
 },

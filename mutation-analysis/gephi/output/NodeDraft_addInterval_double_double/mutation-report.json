@@ -1,0 +1,88 @@
+{
+    "mut": "NodeDraft_addInterval_double_double",
+    "CUT": "org.gephi.io.importer.impl.ElementDraftImpl",
+    "mutant-file": "./ElementDraftImpl.java/115.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.24 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.184 s <<< FAILURE! - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.85 s <<< FAILURE! - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 5.421 s <<< FAILURE! - in org.gephi.importer.impl.TestElementDraftImplRickGen"
+},
+{
+    "mut": "NodeDraft_addInterval_double_double",
+    "CUT": "org.gephi.io.importer.impl.ElementDraftImpl",
+    "mutant-file": "./ElementDraftImpl.java/190.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.355 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.321 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.185 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.196 s - in org.gephi.importer.impl.TestElementDraftImplRickGen"
+},
+{
+    "mut": "NodeDraft_addInterval_double_double",
+    "CUT": "org.gephi.io.importer.impl.ElementDraftImpl",
+    "mutant-file": "./ElementDraftImpl.java/191.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.058 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.539 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.501 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.679 s - in org.gephi.importer.impl.TestElementDraftImplRickGen"
+},
+{
+    "mut": "NodeDraft_addInterval_double_double",
+    "CUT": "org.gephi.io.importer.impl.ElementDraftImpl",
+    "mutant-file": "./ElementDraftImpl.java/192.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.191 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.451 s <<< FAILURE! - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.221 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-all": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.967 s <<< FAILURE! - in org.gephi.importer.impl.TestElementDraftImplRickGen"
+},
+{
+    "mut": "NodeDraft_addInterval_double_double",
+    "CUT": "org.gephi.io.importer.impl.ElementDraftImpl",
+    "mutant-file": "./ElementDraftImpl.java/193.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.341 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.841 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.42 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.934 s - in org.gephi.importer.impl.TestElementDraftImplRickGen"
+},
+{
+    "mut": "NodeDraft_addInterval_double_double",
+    "CUT": "org.gephi.io.importer.impl.ElementDraftImpl",
+    "mutant-file": "./ElementDraftImpl.java/210.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.905 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.996 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.887 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.294 s - in org.gephi.importer.impl.TestElementDraftImplRickGen"
+},
+{
+    "mut": "NodeDraft_addInterval_double_double",
+    "CUT": "org.gephi.io.importer.impl.ElementDraftImpl",
+    "mutant-file": "./ElementDraftImpl.java/30.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.05 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.214 s <<< FAILURE! - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.315 s <<< FAILURE! - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.801 s <<< FAILURE! - in org.gephi.importer.impl.TestElementDraftImplRickGen"
+},
+{
+    "mut": "NodeDraft_addInterval_double_double",
+    "CUT": "org.gephi.io.importer.impl.ElementDraftImpl",
+    "mutant-file": "./ElementDraftImpl.java/82.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.63 s - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.46 s <<< FAILURE! - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.699 s <<< FAILURE! - in org.gephi.importer.impl.TestElementDraftImplRickGen",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 5.965 s <<< FAILURE! - in org.gephi.importer.impl.TestElementDraftImplRickGen"
+},

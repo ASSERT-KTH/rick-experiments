@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:                 int colorTransform = transform != null ? transform : 0;
-----> after:                 int colorTransform = transform == null ? transform : 0;
-----> line number in original file: 127
-----> mutated node: 3217
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                 int g = clamp(Y - 0.34414f * Cb - 0.71414f * Cr + 135.45984f);
+----> after:                 int g = clamp(Y + 0.34414f * Cb - 0.71414f * Cr + 135.45984f);
+----> line number in original file: 252
+----> mutated node: 3883
 
 */
 
@@ -133,7 +133,7 @@ final class DCTFilter extends Filter
                     // we really tried asking nicely, now we're using brute force.
                     transform = getAdobeTransformByBruteForce(iis);
                 }
-                int colorTransform = transform == null ? transform : 0;
+                int colorTransform = transform != null ? transform : 0;
 
                 // 0 = Unknown (RGB or CMYK), 1 = YCbCr, 2 = YCCK
                 switch (colorTransform)
@@ -258,7 +258,7 @@ final class DCTFilter extends Filter
 
                 // YCCK to RGB, see http://software.intel.com/en-us/node/442744
                 int r = clamp(Y + 1.402f * Cr - 179.456f);
-                int g = clamp(Y - 0.34414f * Cb - 0.71414f * Cr + 135.45984f);
+                int g = clamp(Y + 0.34414f * Cb - 0.71414f * Cr + 135.45984f);
                 int b = clamp(Y + 1.772f * Cb - 226.816f);
 
                 // naive RGB to CMYK

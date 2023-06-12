@@ -36,7 +36,7 @@ public class TestFinishInstructionRickGen {
         // Arrange
         FinishInstruction receivingObject = deserializeObjectFromFile("com.graphhopper.util.FinishInstruction.getTurnDescription1-receiving.xml");
         Translation mockTranslation = Mockito.mock(Translation.class);
-        Mockito.when(mockTranslation.tr(eq("finish"),   (Object[]) any())).thenReturn("arrive at destination");
+        Mockito.lenient().when(mockTranslation.tr(eq("finish"),   (Object[]) any())).thenReturn("arrive at destination");
         // Act
         String actual = receivingObject.getTurnDescription(mockTranslation);
         // Assert
@@ -49,7 +49,7 @@ public class TestFinishInstructionRickGen {
         // Arrange
         FinishInstruction receivingObject = deserializeObjectFromFile("com.graphhopper.util.FinishInstruction.getTurnDescription1-receiving.xml");
         Translation mockTranslation = Mockito.mock(Translation.class);
-        Mockito.when(mockTranslation.tr(eq("finish"),   (Object[]) any())).thenReturn("arrive at destination");
+        Mockito.lenient().when(mockTranslation.tr(eq("finish"),   (Object[]) any())).thenReturn("arrive at destination");
         // Act
         receivingObject.getTurnDescription(mockTranslation);
         // Assert
@@ -62,7 +62,7 @@ public class TestFinishInstructionRickGen {
         // Arrange
         FinishInstruction receivingObject = deserializeObjectFromFile("com.graphhopper.util.FinishInstruction.getTurnDescription1-receiving.xml");
         Translation mockTranslation = Mockito.mock(Translation.class);
-        Mockito.when(mockTranslation.tr(eq("finish"),   (Object[]) any())).thenReturn("arrive at destination");
+        Mockito.lenient().when(mockTranslation.tr(eq("finish"),   (Object[]) any())).thenReturn("arrive at destination");
         // Act
         receivingObject.getTurnDescription(mockTranslation);
         // Assert

@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RemoveMethod
-----> before:     {
-----> after:     {
-----> line number in original file: 156
-----> mutated node: 185
+mutant type: ConditionalOperatorReplacement
+----> before:         if (glyphs != null && glyphs[gid] != null)
+----> after:         if (glyphs != null || glyphs[gid] != null)
+----> line number in original file: 162
+----> mutated node: 458
 
 */
 
@@ -163,9 +163,55 @@ public class GlyphTable extends TTFTable
      */
     public GlyphData getGlyph(int gid) throws IOException
     {
-    return null;
-}
+        if (gid < 0 || gid >= numGlyphs)
+        {
+            return null;
+        }
+        
+        if (glyphs != null || glyphs[gid] != null)
+        {
+            return glyphs[gid];
+        }
 
+        GlyphData glyph;
+
+        // PDFBOX-4219: synchronize on data because it is accessed by several threads
+        // when PDFBox is accessing a standard 14 font for the first time
+        synchronized (data)
+        {
+            // read a single glyph
+            long[] offsets = loca.getOffsets();
+
+            if (offsets[gid] == offsets[gid + 1])
+            {
+                // no outline
+                // PDFBOX-5135: can't return null, must return an empty glyph because
+                // sometimes this is used in a composite glyph.
+                glyph = new GlyphData();
+                glyph.initEmptyData();
+            }
+            else
+            {
+                // save
+                long currentPosition = data.getCurrentPosition();
+
+                data.seek(getOffset() + offsets[gid]);
+
+                glyph = getGlyphData(gid);
+
+                // restore
+                data.seek(currentPosition);
+            }
+
+            if (glyphs != null && glyphs[gid] == null && cached < MAX_CACHED_GLYPHS)
+            {
+                glyphs[gid] = glyph;
+                ++cached;
+            }
+
+            return glyph;
+        }
+    }
 
     private GlyphData getGlyphData(int gid) throws IOException
     {

@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:         double elevationFactor = maxDistance / elevationMaxDistance;
-----> after:         double elevationFactor = maxDistance * elevationMaxDistance;
-----> line number in original file: 124
-----> mutated node: 936
+mutant type: RemoveMethod
+----> before:     public int simplify(PointList points, int fromIndex, int lastIndex) {
+----> after:     public int simplify(PointList points, int fromIndex, int lastIndex) {
+----> line number in original file: 80
+----> mutated node: 137
 
 */
 
@@ -87,8 +87,9 @@ public class DouglasPeucker {
     }
 
     public int simplify(PointList points, int fromIndex, int lastIndex) {
-        return simplify(points, fromIndex, lastIndex, true);
-    }
+    return 0;
+}
+
 
     /**
      * Simplifies a part of the <code>points</code>. The <code>fromIndex</code> and <code>lastIndex</code>
@@ -130,7 +131,7 @@ public class DouglasPeucker {
         }
         int indexWithMaxDist = -1;
         double maxDist = -1;
-        double elevationFactor = maxDistance * elevationMaxDistance;
+        double elevationFactor = maxDistance / elevationMaxDistance;
         double firstLat = points.getLat(fromIndex);
         double firstLon = points.getLon(fromIndex);
         double firstEle = points.getEle(fromIndex);

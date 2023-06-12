@@ -1,0 +1,66 @@
+{
+    "mut": "ImportControllerImpl_process_Containerarray_Processor_Workspace",
+    "CUT": "org.gephi.io.importer.impl.ImportControllerImpl",
+    "mutant-file": "./ImportControllerImpl.java/122.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.744 s - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.335 s - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.954 s - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.187 s - in org.gephi.importer.impl.TestImportControllerImplRickGen"
+},
+{
+    "mut": "ImportControllerImpl_process_Containerarray_Processor_Workspace",
+    "CUT": "org.gephi.io.importer.impl.ImportControllerImpl",
+    "mutant-file": "./ImportControllerImpl.java/14.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.645 s - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.339 s <<< FAILURE! - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.334 s <<< FAILURE! - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 5.855 s <<< FAILURE! - in org.gephi.importer.impl.TestImportControllerImplRickGen"
+},
+{
+    "mut": "ImportControllerImpl_process_Containerarray_Processor_Workspace",
+    "CUT": "org.gephi.io.importer.impl.ImportControllerImpl",
+    "mutant-file": "./ImportControllerImpl.java/29.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.338 s - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.175 s - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.213 s - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.569 s - in org.gephi.importer.impl.TestImportControllerImplRickGen"
+},
+{
+    "mut": "ImportControllerImpl_process_Containerarray_Processor_Workspace",
+    "CUT": "org.gephi.io.importer.impl.ImportControllerImpl",
+    "mutant-file": "./ImportControllerImpl.java/53.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.505 s - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.639 s <<< FAILURE! - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.291 s - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-all": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.871 s <<< FAILURE! - in org.gephi.importer.impl.TestImportControllerImplRickGen"
+},
+{
+    "mut": "ImportControllerImpl_process_Containerarray_Processor_Workspace",
+    "CUT": "org.gephi.io.importer.impl.ImportControllerImpl",
+    "mutant-file": "./ImportControllerImpl.java/54.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 5.86 s <<< FAILURE! - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.593 s <<< FAILURE! - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.214 s <<< FAILURE! - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.194 s <<< FAILURE! - in org.gephi.importer.impl.TestImportControllerImplRickGen"
+},
+{
+    "mut": "ImportControllerImpl_process_Containerarray_Processor_Workspace",
+    "CUT": "org.gephi.io.importer.impl.ImportControllerImpl",
+    "mutant-file": "./ImportControllerImpl.java/55.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 5.594 s <<< FAILURE! - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 5.878 s <<< FAILURE! - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.119 s <<< FAILURE! - in org.gephi.importer.impl.TestImportControllerImplRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 5.774 s <<< FAILURE! - in org.gephi.importer.impl.TestImportControllerImplRickGen"
+},

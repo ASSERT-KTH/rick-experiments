@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementShortcut
-----> before:         for (int i = fromIndex + 1; i < lastIndex; i++) {
-----> after:         for (int i = fromIndex + 1; i < lastIndex; i--) {
-----> line number in original file: 131
-----> mutated node: 831
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:         int size = lastIndex - fromIndex;
+----> after:         int size = lastIndex + fromIndex;
+----> line number in original file: 97
+----> mutated node: 906
 
 */
 
@@ -103,7 +103,7 @@ public class DouglasPeucker {
      */
     public int simplify(PointList points, int fromIndex, int lastIndex, boolean compress) {
         int removed = 0;
-        int size = lastIndex - fromIndex;
+        int size = lastIndex + fromIndex;
         if (approx) {
             int delta = 500;
             int segments = size / delta + 1;
@@ -137,7 +137,7 @@ public class DouglasPeucker {
         double lastLat = points.getLat(lastIndex);
         double lastLon = points.getLon(lastIndex);
         double lastEle = points.getEle(lastIndex);
-        for (int i = fromIndex + 1; i < lastIndex; i--) {
+        for (int i = fromIndex + 1; i < lastIndex; i++) {
             double lat = points.getLat(i);
             if (Double.isNaN(lat)) {
                 continue;

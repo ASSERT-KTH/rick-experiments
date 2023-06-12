@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-05 01:19:43.839459
+[LOG] Initiating analysis at 2023-06-10 21:09:05.957640
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -632,15 +632,15 @@ Total mutations found:  2949
 [LOG] Invoking cp /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java ./PDFontDescriptor.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-oo.java
-[LOG] Created OO test at /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-oo.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-oo.java
+[LOG] Created OO test at /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-oo.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalPDFontDescriptor.java with ./PDFontDescriptor.java/5.java
 [LOG] Invoking cp ./PDFontDescriptor.java/5.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDFontDescriptor.java
@@ -870,15 +870,15 @@ Total mutations found:  2949
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  41.047 s
-[INFO] Finished at: 2023-06-05T01:21:16+02:00
+[INFO] Total time:  44.121 s
+[INFO] Finished at: 2023-06-10T21:10:41+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenGetCapHeight']
 [INFO] Scanning for projects...
@@ -903,7 +903,7 @@ Total mutations found:  2949
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -916,61 +916,21 @@ Total mutations found:  2949
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 7.77 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.769 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.751 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.517 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.842 s - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.103 s
-[INFO] Finished at: 2023-06-05T01:21:40+02:00
+[INFO] Total time:  22.266 s
+[INFO] Finished at: 2023-06-10T21:11:07+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -987,20 +947,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.302 s
-[INFO] Finished at: 2023-06-05T01:21:45+02:00
+[INFO] Total time:  1.376 s
+[INFO] Finished at: 2023-06-10T21:11:12+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenGetCapHeight']
 [INFO] Scanning for projects...
@@ -1025,7 +985,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1038,45 +998,24 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.711 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.674 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.102 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
+[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.753 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <718.0> but was: <-Infinity>
 	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:57)
-
-[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.785 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.552 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
 [ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40:57 expected: <718.0> but was: <-Infinity>
-[ERROR] Errors: 
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.374 s
-[INFO] Finished at: 2023-06-05T01:22:08+02:00
+[INFO] Total time:  20.808 s
+[INFO] Finished at: 2023-06-10T21:11:36+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1105,20 +1044,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.286 s
-[INFO] Finished at: 2023-06-05T01:22:13+02:00
+[INFO] Total time:  1.355 s
+[INFO] Finished at: 2023-06-10T21:11:41+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenGetCapHeight']
 [INFO] Scanning for projects...
@@ -1143,7 +1082,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1156,26 +1095,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.964 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.645 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.916 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.664 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.083 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
+[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.794 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1201,17 +1122,14 @@ cOSDictionary.getFloat(
 -> at org.apache.pdfbox.cos.COSDictionary.getFloat(COSDictionary.java:1300)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.571 s
-[INFO] Finished at: 2023-06-05T01:22:37+02:00
+[INFO] Total time:  21.166 s
+[INFO] Finished at: 2023-06-10T21:12:06+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1240,20 +1158,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.627 s
-[INFO] Finished at: 2023-06-05T01:22:42+02:00
+[INFO] Total time:  1.390 s
+[INFO] Finished at: 2023-06-10T21:12:11+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenGetCapHeight']
 [INFO] Scanning for projects...
@@ -1278,7 +1196,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1291,17 +1209,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.906 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.834 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.701 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.25 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
+[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 2.066 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1310,15 +1219,6 @@ cOSDictionary.getFloat(<any>, <any float>);
 Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:84)
-
-[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.663 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -1330,17 +1230,14 @@ cOSDictionary.getFloat(<any>, <any float>);
 -> at org.apache.pdfbox.cos.COSDictionary.getFloat(COSDictionary.java:1300)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.654 s
-[INFO] Finished at: 2023-06-05T01:23:06+02:00
+[INFO] Total time:  20.372 s
+[INFO] Finished at: 2023-06-10T21:12:35+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1369,13 +1266,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.266 s
-[INFO] Finished at: 2023-06-05T01:23:10+02:00
+[INFO] Total time:  1.345 s
+[INFO] Finished at: 2023-06-10T21:12:40+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
@@ -1407,7 +1304,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1420,12 +1317,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 8.224 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 5.163 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 8.075 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
+[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.907 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <718.0> but was: <-Infinity>
 	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:57)
 
-[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.686 s  <<< FAILURE!
+[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.871 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1435,7 +1332,7 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:84)
 
-[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.583 s  <<< FAILURE!
+[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.558 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1474,8 +1371,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.427 s
-[INFO] Finished at: 2023-06-05T01:23:35+02:00
+[INFO] Total time:  20.966 s
+[INFO] Finished at: 2023-06-10T21:13:05+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1504,13 +1401,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.255 s
-[INFO] Finished at: 2023-06-05T01:23:40+02:00
+[INFO] Total time:  1.374 s
+[INFO] Finished at: 2023-06-10T21:13:10+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDFontDescriptor.java to original
@@ -1744,15 +1641,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  40.776 s
-[INFO] Finished at: 2023-06-05T01:24:24+02:00
+[INFO] Total time:  42.807 s
+[INFO] Finished at: 2023-06-10T21:13:56+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenGetCapHeight']
 [INFO] Scanning for projects...
@@ -1777,7 +1674,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1790,61 +1687,21 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 8.324 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.941 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 2.005 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.598 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.608 s - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.554 s
-[INFO] Finished at: 2023-06-05T01:24:48+02:00
+[INFO] Total time:  22.901 s
+[INFO] Finished at: 2023-06-10T21:14:25+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -1861,20 +1718,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.507 s
-[INFO] Finished at: 2023-06-05T01:24:53+02:00
+[INFO] Total time:  1.289 s
+[INFO] Finished at: 2023-06-10T21:14:30+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenGetCapHeight']
 [INFO] Scanning for projects...
@@ -1899,7 +1756,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1912,45 +1769,24 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.659 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.695 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.924 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
+[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.698 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <718.0> but was: <0.0>
 	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:57)
-
-[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.757 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.539 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
 [ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40:57 expected: <718.0> but was: <0.0>
-[ERROR] Errors: 
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.648 s
-[INFO] Finished at: 2023-06-05T01:25:16+02:00
+[INFO] Total time:  20.791 s
+[INFO] Finished at: 2023-06-10T21:14:54+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1979,20 +1815,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.424 s
-[INFO] Finished at: 2023-06-05T01:25:21+02:00
+[INFO] Total time:  1.552 s
+[INFO] Finished at: 2023-06-10T21:14:59+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenGetCapHeight']
 [INFO] Scanning for projects...
@@ -2017,7 +1853,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2030,26 +1866,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.593 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.501 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.855 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.564 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.984 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
+[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.674 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2075,17 +1893,14 @@ cOSDictionary.getFloat(
 -> at org.apache.pdfbox.cos.COSDictionary.getFloat(COSDictionary.java:1300)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.626 s
-[INFO] Finished at: 2023-06-05T01:25:44+02:00
+[INFO] Total time:  20.540 s
+[INFO] Finished at: 2023-06-10T21:15:23+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2114,20 +1929,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.382 s
-[INFO] Finished at: 2023-06-05T01:25:49+02:00
+[INFO] Total time:  1.607 s
+[INFO] Finished at: 2023-06-10T21:15:28+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenGetCapHeight']
 [INFO] Scanning for projects...
@@ -2152,7 +1967,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2165,17 +1980,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.916 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.714 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.94 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.96 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
+[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.808 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2184,15 +1990,6 @@ cOSDictionary.getFloat(<any>, <any float>);
 Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:84)
-
-[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.584 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -2204,17 +2001,14 @@ cOSDictionary.getFloat(<any>, <any float>);
 -> at org.apache.pdfbox.cos.COSDictionary.getFloat(COSDictionary.java:1300)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.492 s
-[INFO] Finished at: 2023-06-05T01:26:13+02:00
+[INFO] Total time:  20.157 s
+[INFO] Finished at: 2023-06-10T21:15:52+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2243,13 +2037,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.263 s
-[INFO] Finished at: 2023-06-05T01:26:17+02:00
+[INFO] Total time:  1.273 s
+[INFO] Finished at: 2023-06-10T21:15:56+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
@@ -2281,7 +2075,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2294,12 +2088,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 7.606 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.643 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 8.167 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
+[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.862 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <718.0> but was: <0.0>
 	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:57)
 
-[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.679 s  <<< FAILURE!
+[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.965 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2309,7 +2103,7 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:84)
 
-[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.54 s  <<< FAILURE!
+[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.573 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2348,8 +2142,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.168 s
-[INFO] Finished at: 2023-06-05T01:26:41+02:00
+[INFO] Total time:  21.031 s
+[INFO] Finished at: 2023-06-10T21:16:21+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2378,13 +2172,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.232 s
-[INFO] Finished at: 2023-06-05T01:26:45+02:00
+[INFO] Total time:  1.304 s
+[INFO] Finished at: 2023-06-10T21:16:26+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDFontDescriptor.java to original
@@ -2618,15 +2412,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.115 s
-[INFO] Finished at: 2023-06-05T01:27:28+02:00
+[INFO] Total time:  41.958 s
+[INFO] Finished at: 2023-06-10T21:17:12+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenGetCapHeight']
 [INFO] Scanning for projects...
@@ -2651,7 +2445,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2664,61 +2458,21 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 7.941 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.764 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.768 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.686 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.704 s - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.761 s
-[INFO] Finished at: 2023-06-05T01:27:51+02:00
+[INFO] Total time:  22.924 s
+[INFO] Finished at: 2023-06-10T21:17:38+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -2735,20 +2489,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.480 s
-[INFO] Finished at: 2023-06-05T01:27:56+02:00
+[INFO] Total time:  1.867 s
+[INFO] Finished at: 2023-06-10T21:17:44+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenGetCapHeight']
 [INFO] Scanning for projects...
@@ -2773,7 +2527,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2786,45 +2540,24 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 8.415 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.925 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.666 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
+[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.709 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <718.0> but was: <0.10000000149011612>
 	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:57)
-
-[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 2.209 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.546 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
 [ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40:57 expected: <718.0> but was: <0.10000000149011612>
-[ERROR] Errors: 
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.467 s
-[INFO] Finished at: 2023-06-05T01:28:19+02:00
+[INFO] Total time:  21.055 s
+[INFO] Finished at: 2023-06-10T21:18:09+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2853,20 +2586,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.252 s
-[INFO] Finished at: 2023-06-05T01:28:24+02:00
+[INFO] Total time:  1.615 s
+[INFO] Finished at: 2023-06-10T21:18:14+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenGetCapHeight']
 [INFO] Scanning for projects...
@@ -2891,7 +2624,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2904,26 +2637,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.835 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.707 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.86 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.587 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.824 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
+[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.681 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2949,17 +2664,14 @@ cOSDictionary.getFloat(
 -> at org.apache.pdfbox.cos.COSDictionary.getFloat(COSDictionary.java:1300)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.643 s
-[INFO] Finished at: 2023-06-05T01:28:48+02:00
+[INFO] Total time:  20.830 s
+[INFO] Finished at: 2023-06-10T21:18:38+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2988,20 +2700,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.261 s
-[INFO] Finished at: 2023-06-05T01:28:53+02:00
+[INFO] Total time:  1.545 s
+[INFO] Finished at: 2023-06-10T21:18:43+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getCapHeight/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenGetCapHeight']
 [INFO] Scanning for projects...
@@ -3026,7 +2738,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3039,17 +2751,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.761 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.642 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.805 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.211 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
+[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.911 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -3058,15 +2761,6 @@ cOSDictionary.getFloat(<any>, <any float>);
 Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:84)
-
-[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.615 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -3078,17 +2772,14 @@ cOSDictionary.getFloat(<any>, <any float>);
 -> at org.apache.pdfbox.cos.COSDictionary.getFloat(COSDictionary.java:1300)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
-[ERROR]   TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.333 s
-[INFO] Finished at: 2023-06-05T01:29:16+02:00
+[INFO] Total time:  21.070 s
+[INFO] Finished at: 2023-06-10T21:19:08+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3117,13 +2808,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.284 s
-[INFO] Finished at: 2023-06-05T01:29:21+02:00
+[INFO] Total time:  1.311 s
+[INFO] Finished at: 2023-06-10T21:19:12+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenGetCapHeight.java
@@ -3155,7 +2846,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3168,12 +2859,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 8.077 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
-[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.79 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 8.126 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight
+[ERROR] test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 4.899 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <718.0> but was: <0.10000000149011612>
 	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_OO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:57)
 
-[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.976 s  <<< FAILURE!
+[ERROR] test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 1.83 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -3183,7 +2874,7 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight.test_getCapHeight_CO_1f685d88d35a4c82b40d11344f161e40(TestPDFontDescriptorRickGenGetCapHeight.java:84)
 
-[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.612 s  <<< FAILURE!
+[ERROR] test_getCapHeight_PO_1f685d88d35a4c82b40d11344f161e40  Time elapsed: 0.633 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -3222,8 +2913,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.109 s
-[INFO] Finished at: 2023-06-05T01:29:44+02:00
+[INFO] Total time:  21.002 s
+[INFO] Finished at: 2023-06-10T21:19:37+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3252,22 +2943,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.263 s
-[INFO] Finished at: 2023-06-05T01:29:49+02:00
+[INFO] Total time:  1.352 s
+[INFO] Finished at: 2023-06-10T21:19:42+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDFontDescriptor.java to original
 [LOG] Invoking cp ./PDFontDescriptor.java/original.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDFontDescriptor.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/getCapHeight/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/PDFontDescriptor.java', '/home/dee/dev/rick-major-review/finches/output/getCapHeight/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/PDFontDescriptor.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/getCapHeight/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-05 01:29:49.729184
+[LOG] Finishing analysis at 2023-06-10 21:19:42.476909
 ====== END OF THE LINE ======

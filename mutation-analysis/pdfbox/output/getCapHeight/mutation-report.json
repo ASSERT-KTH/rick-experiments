@@ -3,31 +3,31 @@
     "CUT": "org.apache.pdfbox.pdmodel.font.PDFontDescriptor",
     "mutant-file": "./PDFontDescriptor.java/5.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 7.77 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.711 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.964 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.906 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
-    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 8.224 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.842 s - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.102 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.083 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.25 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 8.075 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight"
 },
 {
     "mut": "getCapHeight",
     "CUT": "org.apache.pdfbox.pdmodel.font.PDFontDescriptor",
     "mutant-file": "./PDFontDescriptor.java/97.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 8.324 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.659 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.593 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.916 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
-    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 7.606 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.608 s - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.924 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.984 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.96 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 8.167 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight"
 },
 {
     "mut": "getCapHeight",
     "CUT": "org.apache.pdfbox.pdmodel.font.PDFontDescriptor",
     "mutant-file": "./PDFontDescriptor.java/98.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 7.941 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 8.415 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.835 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.761 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
-    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 8.077 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.704 s - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.666 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.824 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.211 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 8.126 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenGetCapHeight"
 },

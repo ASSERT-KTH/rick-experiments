@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:         float pos2YTop = pos2YBottom - pos2.getHeightDir();
-----> after:         float pos2YTop = pos2YBottom + pos2.getHeightDir();
-----> line number in original file: 50
-----> mutated node: 258
+mutant type: ConditionalOperatorReplacement
+----> before:         if (yDifference < .1 ||
+----> after:         if (yDifference < .1 &&
+----> line number in original file: 55
+----> mutated node: 178
 
 */
 
@@ -56,12 +56,12 @@ public class TextPositionComparator implements Comparator<TextPosition>
 
         // note that the coordinates have been adjusted so 0,0 is in upper left
         float pos1YTop = pos1YBottom - pos1.getHeightDir();
-        float pos2YTop = pos2YBottom + pos2.getHeightDir();
+        float pos2YTop = pos2YBottom - pos2.getHeightDir();
 
         float yDifference = Math.abs(pos1YBottom - pos2YBottom);
 
         // we will do a simple tolerance comparison
-        if (yDifference < .1 ||
+        if (yDifference < .1 &&
             pos2YBottom >= pos1YTop && pos2YBottom <= pos1YBottom ||
             pos1YBottom >= pos2YTop && pos1YBottom <= pos2YBottom)
         {

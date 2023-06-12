@@ -41,7 +41,7 @@ public class TestPDFStreamEngineRickGen {
         // Arrange
         org.apache.pdfbox.rendering.PageDrawer receivingObject = deserializeObjectFromFile("org.apache.pdfbox.contentstream.PDFStreamEngine.addOperator1-receiving.xml");
         OperatorProcessor mockOperatorProcessor = Mockito.mock(OperatorProcessor.class);
-        Mockito.when(mockOperatorProcessor.getName()).thenReturn("b");
+        Mockito.lenient().when(mockOperatorProcessor.getName()).thenReturn("b");
         // Act
         receivingObject.addOperator(mockOperatorProcessor);
         // Assert
@@ -54,7 +54,7 @@ public class TestPDFStreamEngineRickGen {
         // Arrange
         org.apache.pdfbox.rendering.PageDrawer receivingObject = deserializeObjectFromFile("org.apache.pdfbox.contentstream.PDFStreamEngine.addOperator1-receiving.xml");
         OperatorProcessor mockOperatorProcessor = Mockito.mock(OperatorProcessor.class);
-        Mockito.when(mockOperatorProcessor.getName()).thenReturn("b");
+        Mockito.lenient().when(mockOperatorProcessor.getName()).thenReturn("b");
         // Act
         receivingObject.addOperator(mockOperatorProcessor);
         // Assert

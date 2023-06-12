@@ -50,7 +50,7 @@ public class TestPDColorRickGen {
         // Arrange
         PDColor receivingObject = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.graphics.color.PDColor.getComponents1-receiving.xml");
         PDColorSpace mockPDColorSpace = insertPrivateMockField_colorSpace_InPDColor(receivingObject);
-        Mockito.when(mockPDColorSpace.getNumberOfComponents()).thenReturn(3);
+        Mockito.lenient().when(mockPDColorSpace.getNumberOfComponents()).thenReturn(3);
         // Act
         receivingObject.getComponents();
         // Assert
@@ -63,7 +63,7 @@ public class TestPDColorRickGen {
         // Arrange
         PDColor receivingObject = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.graphics.color.PDColor.getComponents1-receiving.xml");
         PDColorSpace mockPDColorSpace = insertPrivateMockField_colorSpace_InPDColor(receivingObject);
-        Mockito.when(mockPDColorSpace.getNumberOfComponents()).thenReturn(3);
+        Mockito.lenient().when(mockPDColorSpace.getNumberOfComponents()).thenReturn(3);
         // Act
         receivingObject.getComponents();
         // Assert

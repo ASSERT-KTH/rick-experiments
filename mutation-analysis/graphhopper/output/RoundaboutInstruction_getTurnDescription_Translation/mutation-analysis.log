@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-05 17:55:31.523215
+[LOG] Initiating analysis at 2023-06-11 13:13:12.515347
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -310,15 +310,15 @@ Total mutations found:  1002
 [LOG] Invoking cp /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java ./RoundaboutInstruction.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java
-[LOG] Created OO test at /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java
+[LOG] Created OO test at /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalRoundaboutInstruction.java with ./RoundaboutInstruction.java/17.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/17.java /home/dee/dev/rick-major-review/graphhopper/web-api/src/main/java/com/graphhopper/util/RoundaboutInstruction.java
@@ -366,15 +366,15 @@ Total mutations found:  1002
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.455 s
-[INFO] Finished at: 2023-06-05T17:56:03+02:00
+[INFO] Total time:  17.913 s
+[INFO] Finished at: 2023-06-11T13:13:52+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -412,7 +412,7 @@ Total mutations found:  1002
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.487 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.77 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -421,8 +421,8 @@ Total mutations found:  1002
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.734 s
-[INFO] Finished at: 2023-06-05T17:56:23+02:00
+[INFO] Total time:  18.921 s
+[INFO] Finished at: 2023-06-11T13:14:16+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -448,20 +448,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.923 s
-[INFO] Finished at: 2023-06-05T17:56:28+02:00
+[INFO] Total time:  0.835 s
+[INFO] Finished at: 2023-06-11T13:14:21+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -499,7 +499,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.684 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.837 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -508,8 +508,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.231 s
-[INFO] Finished at: 2023-06-05T17:56:48+02:00
+[INFO] Total time:  19.717 s
+[INFO] Finished at: 2023-06-11T13:14:45+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -535,20 +535,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.060 s
-[INFO] Finished at: 2023-06-05T17:56:53+02:00
+[INFO] Total time:  0.991 s
+[INFO] Finished at: 2023-06-11T13:14:50+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -586,7 +586,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.501 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.761 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -595,8 +595,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.803 s
-[INFO] Finished at: 2023-06-05T17:57:13+02:00
+[INFO] Total time:  19.859 s
+[INFO] Finished at: 2023-06-11T13:15:15+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -622,20 +622,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.962 s
-[INFO] Finished at: 2023-06-05T17:57:18+02:00
+[INFO] Total time:  1.135 s
+[INFO] Finished at: 2023-06-11T13:15:20+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -673,7 +673,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.526 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.217 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -682,8 +682,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  17.063 s
-[INFO] Finished at: 2023-06-05T17:57:38+02:00
+[INFO] Total time:  17.188 s
+[INFO] Finished at: 2023-06-11T13:15:41+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -709,13 +709,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.828 s
-[INFO] Finished at: 2023-06-05T17:57:43+02:00
+[INFO] Total time:  0.980 s
+[INFO] Finished at: 2023-06-11T13:15:46+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
@@ -760,7 +760,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.87 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.919 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -769,8 +769,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.059 s
-[INFO] Finished at: 2023-06-05T17:58:03+02:00
+[INFO] Total time:  18.209 s
+[INFO] Finished at: 2023-06-11T13:16:08+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -796,13 +796,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.082 s
-[INFO] Finished at: 2023-06-05T17:58:08+02:00
+[INFO] Total time:  1.222 s
+[INFO] Finished at: 2023-06-11T13:16:13+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting RoundaboutInstruction.java to original
@@ -854,15 +854,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.532 s
-[INFO] Finished at: 2023-06-05T17:58:25+02:00
+[INFO] Total time:  16.729 s
+[INFO] Finished at: 2023-06-11T13:16:35+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -900,61 +900,18 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.374 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.103 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:52)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.343 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:39)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.176 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:65)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.102 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.994 s
-[INFO] Finished at: 2023-06-05T17:58:45+02:00
+[INFO] Total time:  14.954 s
+[INFO] Finished at: 2023-06-11T13:16:54+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -979,20 +936,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.991 s
-[INFO] Finished at: 2023-06-05T17:58:50+02:00
+[INFO] Total time:  1.123 s
+[INFO] Finished at: 2023-06-11T13:16:58+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -1030,45 +987,24 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.598 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.065 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:52)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.426 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.311 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.315 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <At roundabout, take exit 2 onto Kungsgatan> but was: <>
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:43)
-
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.15 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:65)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
 [ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f:43 expected: <At roundabout, take exit 2 onto Kungsgatan> but was: <>
-[ERROR] Errors: 
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.829 s
-[INFO] Finished at: 2023-06-05T17:59:09+02:00
+[INFO] Total time:  15.398 s
+[INFO] Finished at: 2023-06-11T13:17:17+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1105,20 +1041,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.043 s
-[INFO] Finished at: 2023-06-05T17:59:14+02:00
+[INFO] Total time:  0.912 s
+[INFO] Finished at: 2023-06-11T13:17:22+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -1156,8 +1092,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.494 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.132 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.234 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.021 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1169,24 +1105,6 @@ translation.tr(
 Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:56)
-
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.399 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:39)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.186 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:65)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -1201,17 +1119,14 @@ translation.tr(
 -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:56)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.222 s
-[INFO] Finished at: 2023-06-05T17:59:34+02:00
+[INFO] Total time:  15.921 s
+[INFO] Finished at: 2023-06-11T13:17:41+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1248,20 +1163,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.936 s
-[INFO] Finished at: 2023-06-05T17:59:39+02:00
+[INFO] Total time:  0.932 s
+[INFO] Finished at: 2023-06-11T13:17:46+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -1299,26 +1214,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.509 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.079 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:52)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.342 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:39)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.217 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.258 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.224 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1338,17 +1235,14 @@ translation.tr(<any string>, <any>);
 -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:70)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.213 s
-[INFO] Finished at: 2023-06-05T17:59:59+02:00
+[INFO] Total time:  15.240 s
+[INFO] Finished at: 2023-06-11T13:18:05+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1385,13 +1279,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.116 s
-[INFO] Finished at: 2023-06-05T18:00:03+02:00
+[INFO] Total time:  0.893 s
+[INFO] Finished at: 2023-06-11T13:18:10+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
@@ -1436,8 +1330,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.669 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.164 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.485 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.294 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1450,11 +1344,11 @@ Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:56)
 
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.365 s  <<< FAILURE!
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.307 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <At roundabout, take exit 2 onto Kungsgatan> but was: <>
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:43)
 
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.217 s  <<< FAILURE!
+[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.14 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1490,8 +1384,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.615 s
-[INFO] Finished at: 2023-06-05T18:00:24+02:00
+[INFO] Total time:  15.749 s
+[INFO] Finished at: 2023-06-11T13:18:29+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1528,13 +1422,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.905 s
-[INFO] Finished at: 2023-06-05T18:00:29+02:00
+[INFO] Total time:  0.979 s
+[INFO] Finished at: 2023-06-11T13:18:34+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting RoundaboutInstruction.java to original
@@ -1586,15 +1480,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.951 s
-[INFO] Finished at: 2023-06-05T18:00:47+02:00
+[INFO] Total time:  14.250 s
+[INFO] Finished at: 2023-06-11T13:18:51+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -1632,61 +1526,18 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.66 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.314 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:52)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.368 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:39)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.156 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:65)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.23 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.926 s
-[INFO] Finished at: 2023-06-05T18:01:06+02:00
+[INFO] Total time:  15.438 s
+[INFO] Finished at: 2023-06-11T13:19:10+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -1711,20 +1562,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.848 s
-[INFO] Finished at: 2023-06-05T18:01:11+02:00
+[INFO] Total time:  0.866 s
+[INFO] Finished at: 2023-06-11T13:19:15+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -1762,45 +1613,24 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.591 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.216 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:52)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.365 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.112 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.349 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <At roundabout, take exit 2 onto Kungsgatan> but was: <A>
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:43)
-
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.186 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:65)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
 [ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f:43 expected: <At roundabout, take exit 2 onto Kungsgatan> but was: <A>
-[ERROR] Errors: 
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.943 s
-[INFO] Finished at: 2023-06-05T18:01:31+02:00
+[INFO] Total time:  15.091 s
+[INFO] Finished at: 2023-06-11T13:19:34+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1837,20 +1667,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.030 s
-[INFO] Finished at: 2023-06-05T18:01:36+02:00
+[INFO] Total time:  0.847 s
+[INFO] Finished at: 2023-06-11T13:19:38+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -1888,8 +1718,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.507 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.004 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.24 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.128 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1901,24 +1731,6 @@ translation.tr(
 Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:56)
-
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.529 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:39)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.203 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:65)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -1933,17 +1745,14 @@ translation.tr(
 -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:56)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.180 s
-[INFO] Finished at: 2023-06-05T18:01:56+02:00
+[INFO] Total time:  14.795 s
+[INFO] Finished at: 2023-06-11T13:19:57+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1980,20 +1789,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.079 s
-[INFO] Finished at: 2023-06-05T18:02:00+02:00
+[INFO] Total time:  0.838 s
+[INFO] Finished at: 2023-06-11T13:20:01+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -2031,26 +1840,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.427 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.063 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:52)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.257 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:39)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.223 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.593 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.185 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2070,17 +1861,14 @@ translation.tr(<any string>, <any>);
 -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:70)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.791 s
-[INFO] Finished at: 2023-06-05T18:02:20+02:00
+[INFO] Total time:  17.373 s
+[INFO] Finished at: 2023-06-11T13:20:22+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2117,13 +1905,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.937 s
-[INFO] Finished at: 2023-06-05T18:02:25+02:00
+[INFO] Total time:  0.860 s
+[INFO] Finished at: 2023-06-11T13:20:26+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
@@ -2168,8 +1956,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.704 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.399 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.567 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 2.983 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2182,11 +1970,11 @@ Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:56)
 
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.345 s  <<< FAILURE!
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.373 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <At roundabout, take exit 2 onto Kungsgatan> but was: <A>
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:43)
 
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.176 s  <<< FAILURE!
+[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.134 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2222,8 +2010,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.750 s
-[INFO] Finished at: 2023-06-05T18:02:45+02:00
+[INFO] Total time:  17.161 s
+[INFO] Finished at: 2023-06-11T13:20:48+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2260,13 +2048,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.001 s
-[INFO] Finished at: 2023-06-05T18:02:50+02:00
+[INFO] Total time:  0.850 s
+[INFO] Finished at: 2023-06-11T13:20:52+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting RoundaboutInstruction.java to original
@@ -2318,15 +2106,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.706 s
-[INFO] Finished at: 2023-06-05T18:03:09+02:00
+[INFO] Total time:  14.765 s
+[INFO] Finished at: 2023-06-11T13:21:11+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -2364,94 +2152,18 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.965 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.535 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'tr' method:
-    translation.tr("roundabout_enter");
-    -> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
- - has following stubbing(s) with different arguments:
-    1. translation.tr(null, null);
-      -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:52)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:54)
-
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.422 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'tr' method:
-    translation.tr("roundabout_enter");
-    -> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
- - has following stubbing(s) with different arguments:
-    1. translation.tr(null, null);
-      -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:39)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:41)
-
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.136 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'tr' method:
-    translation.tr("roundabout_enter");
-    -> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
- - has following stubbing(s) with different arguments:
-    1. translation.tr(null, null);
-      -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:65)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:67)
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.169 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f:67 » PotentialStubbingProblem
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f:41 » PotentialStubbingProblem
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f:54 » PotentialStubbingProblem
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.736 s
-[INFO] Finished at: 2023-06-05T18:03:29+02:00
+[INFO] Total time:  15.429 s
+[INFO] Finished at: 2023-06-11T13:21:30+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -2476,20 +2188,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.979 s
-[INFO] Finished at: 2023-06-05T18:03:34+02:00
+[INFO] Total time:  0.834 s
+[INFO] Finished at: 2023-06-11T13:21:35+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -2527,82 +2239,24 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.746 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.476 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'tr' method:
-    translation.tr("roundabout_enter");
-    -> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
- - has following stubbing(s) with different arguments:
-    1. translation.tr(null, null);
-      -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:52)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:54)
-
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.319 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'tr' method:
-    translation.tr("roundabout_enter");
-    -> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
- - has following stubbing(s) with different arguments:
-    1. translation.tr(null, null);
-      -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:39)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:41)
-
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.128 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'tr' method:
-    translation.tr("roundabout_enter");
-    -> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
- - has following stubbing(s) with different arguments:
-    1. translation.tr(null, null);
-      -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:65)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:67)
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.074 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.284 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <At roundabout, take exit 2 onto Kungsgatan> but was: <null>
+	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:43)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f:67 » PotentialStubbingProblem
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f:41 » PotentialStubbingProblem
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f:54 » PotentialStubbingProblem
+[ERROR] Failures: 
+[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f:43 expected: <At roundabout, take exit 2 onto Kungsgatan> but was: <null>
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.690 s
-[INFO] Finished at: 2023-06-05T18:03:54+02:00
+[INFO] Total time:  15.376 s
+[INFO] Finished at: 2023-06-11T13:21:54+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2639,20 +2293,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.892 s
-[INFO] Finished at: 2023-06-05T18:03:58+02:00
+[INFO] Total time:  0.992 s
+[INFO] Finished at: 2023-06-11T13:21:58+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -2690,82 +2344,49 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.751 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.187 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.621 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.032 s  <<< FAILURE!
+org.mockito.exceptions.verification.opentest4j.ArgumentsAreDifferent: 
 
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'tr' method:
-    translation.tr("roundabout_enter");
-    -> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
- - has following stubbing(s) with different arguments:
-    1. translation.tr(null, null);
-      -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:52)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:54)
+Argument(s) are different! Wanted:
+translation.tr(
+    "roundabout_exit_onto",
+    <any>
+);
+-> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:56)
+Actual invocations have different arguments:
+translation.tr(
+    "roundabout_enter"
+);
+-> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
 
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.393 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'tr' method:
-    translation.tr("roundabout_enter");
-    -> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
- - has following stubbing(s) with different arguments:
-    1. translation.tr(null, null);
-      -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:39)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:41)
-
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.177 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'tr' method:
-    translation.tr("roundabout_enter");
-    -> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
- - has following stubbing(s) with different arguments:
-    1. translation.tr(null, null);
-      -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:65)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:67)
+	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:56)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f:67 » PotentialStubbingProblem
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f:41 » PotentialStubbingProblem
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f:54 » PotentialStubbingProblem
+[ERROR] Failures: 
+[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f:56 
+Argument(s) are different! Wanted:
+translation.tr(
+    "roundabout_exit_onto",
+    <any>
+);
+-> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:56)
+Actual invocations have different arguments:
+translation.tr(
+    "roundabout_enter"
+);
+-> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
+
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.273 s
-[INFO] Finished at: 2023-06-05T18:04:18+02:00
+[INFO] Total time:  15.497 s
+[INFO] Finished at: 2023-06-11T13:22:17+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2802,20 +2423,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.929 s
-[INFO] Finished at: 2023-06-05T18:04:23+02:00
+[INFO] Total time:  1.066 s
+[INFO] Finished at: 2023-06-11T13:22:22+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -2853,94 +2474,18 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.318 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.052 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'tr' method:
-    translation.tr("roundabout_enter");
-    -> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
- - has following stubbing(s) with different arguments:
-    1. translation.tr(null, null);
-      -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:52)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:54)
-
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.327 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'tr' method:
-    translation.tr("roundabout_enter");
-    -> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
- - has following stubbing(s) with different arguments:
-    1. translation.tr(null, null);
-      -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:39)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:41)
-
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.142 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'tr' method:
-    translation.tr("roundabout_enter");
-    -> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
- - has following stubbing(s) with different arguments:
-    1. translation.tr(null, null);
-      -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:65)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:67)
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.025 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f:67 » PotentialStubbingProblem
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f:41 » PotentialStubbingProblem
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f:54 » PotentialStubbingProblem
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.180 s
-[INFO] Finished at: 2023-06-05T18:04:43+02:00
+[INFO] Total time:  16.790 s
+[INFO] Finished at: 2023-06-11T13:22:42+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -2965,13 +2510,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.892 s
-[INFO] Finished at: 2023-06-05T18:04:48+02:00
+[INFO] Total time:  1.060 s
+[INFO] Finished at: 2023-06-11T13:22:47+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
@@ -3016,82 +2561,54 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.498 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.271 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
+[ERROR] Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 4.268 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.025 s  <<< FAILURE!
+org.mockito.exceptions.verification.opentest4j.ArgumentsAreDifferent: 
 
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'tr' method:
-    translation.tr("roundabout_enter");
-    -> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
- - has following stubbing(s) with different arguments:
-    1. translation.tr(null, null);
-      -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:52)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:54)
+Argument(s) are different! Wanted:
+translation.tr(
+    "roundabout_exit_onto",
+    <any>
+);
+-> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:56)
+Actual invocations have different arguments:
+translation.tr(
+    "roundabout_enter"
+);
+-> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
 
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.369 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
+	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:56)
 
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'tr' method:
-    translation.tr("roundabout_enter");
-    -> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
- - has following stubbing(s) with different arguments:
-    1. translation.tr(null, null);
-      -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:39)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:41)
-
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.122 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'tr' method:
-    translation.tr("roundabout_enter");
-    -> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
- - has following stubbing(s) with different arguments:
-    1. translation.tr(null, null);
-      -> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:65)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:67)
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.332 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <At roundabout, take exit 2 onto Kungsgatan> but was: <null>
+	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:43)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f:67 » PotentialStubbingProblem
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f:41 » PotentialStubbingProblem
-[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f:54 » PotentialStubbingProblem
+[ERROR] Failures: 
+[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f:43 expected: <At roundabout, take exit 2 onto Kungsgatan> but was: <null>
+[ERROR]   TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f:56 
+Argument(s) are different! Wanted:
+translation.tr(
+    "roundabout_exit_onto",
+    <any>
+);
+-> at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:56)
+Actual invocations have different arguments:
+translation.tr(
+    "roundabout_enter"
+);
+-> at com.graphhopper.util.RoundaboutInstruction.getTurnDescription(RoundaboutInstruction.java:130)
+
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[ERROR] Tests run: 3, Failures: 2, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.013 s
-[INFO] Finished at: 2023-06-05T18:05:08+02:00
+[INFO] Total time:  15.339 s
+[INFO] Finished at: 2023-06-11T13:23:06+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3128,13 +2645,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.090 s
-[INFO] Finished at: 2023-06-05T18:05:13+02:00
+[INFO] Total time:  0.823 s
+[INFO] Finished at: 2023-06-11T13:23:11+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting RoundaboutInstruction.java to original
@@ -3186,15 +2703,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.134 s
-[INFO] Finished at: 2023-06-05T18:05:31+02:00
+[INFO] Total time:  13.748 s
+[INFO] Finished at: 2023-06-11T13:23:29+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -3232,16 +2749,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.587 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.098 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.24 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.02 s  <<< ERROR!
 java.lang.IllegalStateException: 6no roundabout indication
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:54)
 
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.494 s  <<< ERROR!
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.21 s  <<< ERROR!
 java.lang.IllegalStateException: 6no roundabout indication
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:41)
 
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.174 s  <<< ERROR!
+[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.058 s  <<< ERROR!
 java.lang.IllegalStateException: 6no roundabout indication
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:67)
 
@@ -3258,8 +2775,8 @@ java.lang.IllegalStateException: 6no roundabout indication
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.776 s
-[INFO] Finished at: 2023-06-05T18:05:50+02:00
+[INFO] Total time:  14.953 s
+[INFO] Finished at: 2023-06-11T13:23:47+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3296,20 +2813,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.927 s
-[INFO] Finished at: 2023-06-05T18:05:55+02:00
+[INFO] Total time:  0.915 s
+[INFO] Finished at: 2023-06-11T13:23:52+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -3347,16 +2864,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.688 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.272 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.119 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 2.917 s  <<< ERROR!
 java.lang.IllegalStateException: 6no roundabout indication
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:54)
 
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.397 s  <<< ERROR!
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.295 s  <<< ERROR!
 java.lang.IllegalStateException: 6no roundabout indication
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:41)
 
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.172 s  <<< ERROR!
+[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.148 s  <<< ERROR!
 java.lang.IllegalStateException: 6no roundabout indication
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:67)
 
@@ -3373,8 +2890,8 @@ java.lang.IllegalStateException: 6no roundabout indication
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.441 s
-[INFO] Finished at: 2023-06-05T18:06:15+02:00
+[INFO] Total time:  15.223 s
+[INFO] Finished at: 2023-06-11T13:24:12+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3411,20 +2928,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.037 s
-[INFO] Finished at: 2023-06-05T18:06:20+02:00
+[INFO] Total time:  0.844 s
+[INFO] Finished at: 2023-06-11T13:24:16+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -3462,16 +2979,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.516 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.151 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.912 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.506 s  <<< ERROR!
 java.lang.IllegalStateException: 6no roundabout indication
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:54)
 
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.245 s  <<< ERROR!
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.417 s  <<< ERROR!
 java.lang.IllegalStateException: 6no roundabout indication
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:41)
 
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.132 s  <<< ERROR!
+[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.143 s  <<< ERROR!
 java.lang.IllegalStateException: 6no roundabout indication
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:67)
 
@@ -3488,8 +3005,8 @@ java.lang.IllegalStateException: 6no roundabout indication
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.558 s
-[INFO] Finished at: 2023-06-05T18:06:39+02:00
+[INFO] Total time:  16.160 s
+[INFO] Finished at: 2023-06-11T13:24:36+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3526,20 +3043,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.002 s
-[INFO] Finished at: 2023-06-05T18:06:44+02:00
+[INFO] Total time:  0.854 s
+[INFO] Finished at: 2023-06-11T13:24:41+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -3577,16 +3094,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.308 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.02 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.244 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.124 s  <<< ERROR!
 java.lang.IllegalStateException: 6no roundabout indication
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:54)
 
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.363 s  <<< ERROR!
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.291 s  <<< ERROR!
 java.lang.IllegalStateException: 6no roundabout indication
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:41)
 
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.157 s  <<< ERROR!
+[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.108 s  <<< ERROR!
 java.lang.IllegalStateException: 6no roundabout indication
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:67)
 
@@ -3603,8 +3120,8 @@ java.lang.IllegalStateException: 6no roundabout indication
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.753 s
-[INFO] Finished at: 2023-06-05T18:07:04+02:00
+[INFO] Total time:  15.271 s
+[INFO] Finished at: 2023-06-11T13:25:00+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3641,13 +3158,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.848 s
-[INFO] Finished at: 2023-06-05T18:07:08+02:00
+[INFO] Total time:  0.920 s
+[INFO] Finished at: 2023-06-11T13:25:05+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
@@ -3692,16 +3209,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.308 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.059 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.145 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 2.916 s  <<< ERROR!
 java.lang.IllegalStateException: 6no roundabout indication
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:54)
 
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.316 s  <<< ERROR!
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.308 s  <<< ERROR!
 java.lang.IllegalStateException: 6no roundabout indication
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:41)
 
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.151 s  <<< ERROR!
+[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.178 s  <<< ERROR!
 java.lang.IllegalStateException: 6no roundabout indication
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:67)
 
@@ -3718,8 +3235,8 @@ java.lang.IllegalStateException: 6no roundabout indication
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.414 s
-[INFO] Finished at: 2023-06-05T18:07:27+02:00
+[INFO] Total time:  15.151 s
+[INFO] Finished at: 2023-06-11T13:25:24+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3756,13 +3273,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.927 s
-[INFO] Finished at: 2023-06-05T18:07:33+02:00
+[INFO] Total time:  0.881 s
+[INFO] Finished at: 2023-06-11T13:25:29+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting RoundaboutInstruction.java to original
@@ -3814,15 +3331,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.608 s
-[INFO] Finished at: 2023-06-05T18:07:51+02:00
+[INFO] Total time:  14.799 s
+[INFO] Finished at: 2023-06-11T13:25:48+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -3860,16 +3377,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.63 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.487 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.074 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 2.931 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:54)
 
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.297 s  <<< ERROR!
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.264 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:41)
 
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.09 s  <<< ERROR!
+[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.084 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:67)
 
@@ -3886,8 +3403,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.634 s
-[INFO] Finished at: 2023-06-05T18:08:11+02:00
+[INFO] Total time:  15.285 s
+[INFO] Finished at: 2023-06-11T13:26:07+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3924,20 +3441,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.062 s
-[INFO] Finished at: 2023-06-05T18:08:16+02:00
+[INFO] Total time:  0.956 s
+[INFO] Finished at: 2023-06-11T13:26:11+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -3975,16 +3492,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.415 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 2.961 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.257 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.019 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:54)
 
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.515 s  <<< ERROR!
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.308 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:41)
 
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.167 s  <<< ERROR!
+[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.15 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:67)
 
@@ -4001,8 +3518,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.407 s
-[INFO] Finished at: 2023-06-05T18:08:35+02:00
+[INFO] Total time:  15.002 s
+[INFO] Finished at: 2023-06-11T13:26:30+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4039,20 +3556,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.125 s
-[INFO] Finished at: 2023-06-05T18:08:40+02:00
+[INFO] Total time:  1.094 s
+[INFO] Finished at: 2023-06-11T13:26:35+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -4090,16 +3607,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.509 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.094 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.278 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.045 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:54)
 
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.389 s  <<< ERROR!
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.346 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:41)
 
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.153 s  <<< ERROR!
+[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.131 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:67)
 
@@ -4116,8 +3633,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.638 s
-[INFO] Finished at: 2023-06-05T18:08:59+02:00
+[INFO] Total time:  16.005 s
+[INFO] Finished at: 2023-06-11T13:26:55+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4154,20 +3671,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.876 s
-[INFO] Finished at: 2023-06-05T18:09:04+02:00
+[INFO] Total time:  0.838 s
+[INFO] Finished at: 2023-06-11T13:27:00+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -4205,16 +3722,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.764 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.264 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.309 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.004 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:54)
 
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.309 s  <<< ERROR!
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.316 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:41)
 
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.21 s  <<< ERROR!
+[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.137 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:67)
 
@@ -4231,8 +3748,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.280 s
-[INFO] Finished at: 2023-06-05T18:09:24+02:00
+[INFO] Total time:  15.646 s
+[INFO] Finished at: 2023-06-11T13:27:19+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4269,13 +3786,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.931 s
-[INFO] Finished at: 2023-06-05T18:09:29+02:00
+[INFO] Total time:  0.956 s
+[INFO] Finished at: 2023-06-11T13:27:24+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
@@ -4320,16 +3837,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.45 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.152 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.664 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 3.216 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_PO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:54)
 
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.332 s  <<< ERROR!
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.39 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:41)
 
-[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.151 s  <<< ERROR!
+[ERROR] test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.224 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_CO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:67)
 
@@ -4346,8 +3863,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.531 s
-[INFO] Finished at: 2023-06-05T18:09:48+02:00
+[INFO] Total time:  15.827 s
+[INFO] Finished at: 2023-06-11T13:27:43+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4384,13 +3901,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.931 s
-[INFO] Finished at: 2023-06-05T18:09:53+02:00
+[INFO] Total time:  1.000 s
+[INFO] Finished at: 2023-06-11T13:27:49+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting RoundaboutInstruction.java to original
@@ -4442,15 +3959,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.185 s
-[INFO] Finished at: 2023-06-05T18:10:10+02:00
+[INFO] Total time:  14.219 s
+[INFO] Finished at: 2023-06-11T13:28:07+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -4488,7 +4005,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.29 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.393 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4497,8 +4014,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.480 s
-[INFO] Finished at: 2023-06-05T18:10:29+02:00
+[INFO] Total time:  16.322 s
+[INFO] Finished at: 2023-06-11T13:28:27+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4524,20 +4041,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.827 s
-[INFO] Finished at: 2023-06-05T18:10:34+02:00
+[INFO] Total time:  0.865 s
+[INFO] Finished at: 2023-06-11T13:28:32+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -4575,8 +4092,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.65 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.351 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.16 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.343 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <At roundabout, take exit 2 onto Kungsgatan> but was: <null>
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:43)
 
@@ -4591,8 +4108,8 @@ org.opentest4j.AssertionFailedError: expected: <At roundabout, take exit 2 onto 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.526 s
-[INFO] Finished at: 2023-06-05T18:10:53+02:00
+[INFO] Total time:  15.679 s
+[INFO] Finished at: 2023-06-11T13:28:51+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4629,20 +4146,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.090 s
-[INFO] Finished at: 2023-06-05T18:10:58+02:00
+[INFO] Total time:  0.864 s
+[INFO] Finished at: 2023-06-11T13:28:56+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -4680,7 +4197,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.544 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.273 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4689,8 +4206,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.669 s
-[INFO] Finished at: 2023-06-05T18:11:18+02:00
+[INFO] Total time:  14.741 s
+[INFO] Finished at: 2023-06-11T13:29:15+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4716,20 +4233,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.090 s
-[INFO] Finished at: 2023-06-05T18:11:23+02:00
+[INFO] Total time:  1.023 s
+[INFO] Finished at: 2023-06-11T13:29:19+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -4767,7 +4284,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.52 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.071 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4776,8 +4293,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.455 s
-[INFO] Finished at: 2023-06-05T18:11:42+02:00
+[INFO] Total time:  15.091 s
+[INFO] Finished at: 2023-06-11T13:29:38+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4803,13 +4320,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.088 s
-[INFO] Finished at: 2023-06-05T18:11:47+02:00
+[INFO] Total time:  0.848 s
+[INFO] Finished at: 2023-06-11T13:29:42+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
@@ -4854,8 +4371,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.657 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
-[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.346 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.499 s <<< FAILURE! - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[ERROR] test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f  Time elapsed: 0.359 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <At roundabout, take exit 2 onto Kungsgatan> but was: <null>
 	at com.graphhopper.util.TestRoundaboutInstructionRickGen.test_getTurnDescription_OO_d2827aeb41c446acb04843a63ab22e8f(TestRoundaboutInstructionRickGen.java:43)
 
@@ -4870,8 +4387,8 @@ org.opentest4j.AssertionFailedError: expected: <At roundabout, take exit 2 onto 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.553 s
-[INFO] Finished at: 2023-06-05T18:12:06+02:00
+[INFO] Total time:  15.316 s
+[INFO] Finished at: 2023-06-11T13:30:02+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4908,13 +4425,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.931 s
-[INFO] Finished at: 2023-06-05T18:12:11+02:00
+[INFO] Total time:  0.966 s
+[INFO] Finished at: 2023-06-11T13:30:06+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting RoundaboutInstruction.java to original
@@ -4966,15 +4483,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  12.983 s
-[INFO] Finished at: 2023-06-05T18:12:28+02:00
+[INFO] Total time:  15.575 s
+[INFO] Finished at: 2023-06-11T13:30:26+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -5012,7 +4529,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.083 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.823 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -5021,8 +4538,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.212 s
-[INFO] Finished at: 2023-06-05T18:12:48+02:00
+[INFO] Total time:  17.342 s
+[INFO] Finished at: 2023-06-11T13:30:47+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -5048,20 +4565,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.901 s
-[INFO] Finished at: 2023-06-05T18:12:53+02:00
+[INFO] Total time:  0.930 s
+[INFO] Finished at: 2023-06-11T13:30:52+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -5099,7 +4616,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.298 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.613 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -5108,8 +4625,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.259 s
-[INFO] Finished at: 2023-06-05T18:13:12+02:00
+[INFO] Total time:  16.427 s
+[INFO] Finished at: 2023-06-11T13:31:12+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -5135,20 +4652,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.997 s
-[INFO] Finished at: 2023-06-05T18:13:16+02:00
+[INFO] Total time:  1.149 s
+[INFO] Finished at: 2023-06-11T13:31:18+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -5186,7 +4703,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.335 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.557 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -5195,8 +4712,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.104 s
-[INFO] Finished at: 2023-06-05T18:13:36+02:00
+[INFO] Total time:  16.287 s
+[INFO] Finished at: 2023-06-11T13:31:38+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -5222,20 +4739,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.104 s
-[INFO] Finished at: 2023-06-05T18:13:41+02:00
+[INFO] Total time:  1.130 s
+[INFO] Finished at: 2023-06-11T13:31:43+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestRoundaboutInstructionRickGen']
 [INFO] Scanning for projects...
@@ -5273,7 +4790,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.299 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.554 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -5282,8 +4799,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.727 s
-[INFO] Finished at: 2023-06-05T18:14:01+02:00
+[INFO] Total time:  16.237 s
+[INFO] Finished at: 2023-06-11T13:32:03+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -5309,13 +4826,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.867 s
-[INFO] Finished at: 2023-06-05T18:14:06+02:00
+[INFO] Total time:  0.957 s
+[INFO] Finished at: 2023-06-11T13:32:08+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./RoundaboutInstruction.java/original-test.java
 [LOG] Invoking cp ./RoundaboutInstruction.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestRoundaboutInstructionRickGen.java
@@ -5360,7 +4877,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestRoundaboutInstructionRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.587 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.32 s - in com.graphhopper.util.TestRoundaboutInstructionRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -5369,8 +4886,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.777 s
-[INFO] Finished at: 2023-06-05T18:14:25+02:00
+[INFO] Total time:  16.638 s
+[INFO] Finished at: 2023-06-11T13:32:28+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -5396,22 +4913,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.845 s
-[INFO] Finished at: 2023-06-05T18:14:30+02:00
+[INFO] Total time:  0.947 s
+[INFO] Finished at: 2023-06-11T13:32:33+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting RoundaboutInstruction.java to original
 [LOG] Invoking cp ./RoundaboutInstruction.java/original.java /home/dee/dev/rick-major-review/graphhopper/web-api/src/main/java/com/graphhopper/util/RoundaboutInstruction.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/RoundaboutInstruction.java', '/home/dee/dev/rick-major-review/finches/output/RoundaboutInstruction_getTurnDescription_Translation/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/RoundaboutInstruction.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/RoundaboutInstruction_getTurnDescription_Translation/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-05 18:14:30.278050
+[LOG] Finishing analysis at 2023-06-11 13:32:33.995146
 ====== END OF THE LINE ======

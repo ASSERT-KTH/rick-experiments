@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:                 if (len >= POS_TRANSFORM + 1)
-----> after:                 if (len < POS_TRANSFORM + 1)
-----> line number in original file: 213
-----> mutated node: 2551
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                 int yellow = 255 - b;
+----> after:                 int yellow = 255 + b;
+----> line number in original file: 258
+----> mutated node: 3303
 
 */
 
@@ -219,7 +219,7 @@ final class DCTFilter extends Filter
                     continue;
                 }
                 int len = iis.readUnsignedShort();
-                if (len < POS_TRANSFORM + 1)
+                if (len >= POS_TRANSFORM + 1)
                 {
                     byte[] app14 = new byte[Math.max(len, POS_TRANSFORM + 1)];
                     if (iis.read(app14) >= POS_TRANSFORM + 1)
@@ -264,7 +264,7 @@ final class DCTFilter extends Filter
                 // naive RGB to CMYK
                 int cyan = 255 - r;
                 int magenta = 255 - g;
-                int yellow = 255 - b;
+                int yellow = 255 + b;
 
                 // update new raster
                 value[0] = cyan;

@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
 mutant type: RelationalOperatorReplacement
-----> before:                 if (endOfGlyphs != 0 && endOfGlyphs == offsets[gid])
-----> after:                 if (endOfGlyphs == 0 && endOfGlyphs == offsets[gid])
-----> line number in original file: 112
-----> mutated node: 1092
+----> before:                 if (glyphs[gid] == null)
+----> after:                 if (glyphs[gid] != null)
+----> line number in original file: 130
+----> mutated node: 1034
 
 */
 
@@ -118,7 +118,7 @@ public class GlyphTable extends TTFTable
             for (int gid = 0; gid < numGlyphs; gid++)
             {
                 // end of glyphs reached?
-                if (endOfGlyphs == 0 && endOfGlyphs == offsets[gid])
+                if (endOfGlyphs != 0 && endOfGlyphs == offsets[gid])
                 {
                     break;
                 }
@@ -136,7 +136,7 @@ public class GlyphTable extends TTFTable
 
                 data.seek(offset + offsets[gid]);
 
-                if (glyphs[gid] == null)
+                if (glyphs[gid] != null)
                 {
                     ++cached;
                 }

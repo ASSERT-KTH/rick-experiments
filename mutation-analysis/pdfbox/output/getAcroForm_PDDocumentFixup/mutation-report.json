@@ -3,152 +3,152 @@
     "CUT": "org.apache.pdfbox.pdmodel.PDDocumentCatalog",
     "mutant-file": "./PDDocumentCatalog.java/140.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.957 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.64 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.539 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.873 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.196 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.38 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.629 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.637 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
 },
 {
     "mut": "getAcroForm_PDDocumentFixup",
     "CUT": "org.apache.pdfbox.pdmodel.PDDocumentCatalog",
     "mutant-file": "./PDDocumentCatalog.java/163.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.126 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.806 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.805 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.985 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.71 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.64 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.032 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.756 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
 },
 {
     "mut": "getAcroForm_PDDocumentFixup",
     "CUT": "org.apache.pdfbox.pdmodel.PDDocumentCatalog",
     "mutant-file": "./PDDocumentCatalog.java/164.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.238 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.157 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.091 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.154 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.245 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.52 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.228 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.624 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
 },
 {
     "mut": "getAcroForm_PDDocumentFixup",
     "CUT": "org.apache.pdfbox.pdmodel.PDDocumentCatalog",
     "mutant-file": "./PDDocumentCatalog.java/165.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.317 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.323 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.192 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.12 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.693 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.905 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.525 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.73 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
 },
 {
     "mut": "getAcroForm_PDDocumentFixup",
     "CUT": "org.apache.pdfbox.pdmodel.PDDocumentCatalog",
     "mutant-file": "./PDDocumentCatalog.java/166.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.264 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.184 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.85 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.299 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 9.573 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.541 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.76 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.315 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
 },
 {
     "mut": "getAcroForm_PDDocumentFixup",
     "CUT": "org.apache.pdfbox.pdmodel.PDDocumentCatalog",
     "mutant-file": "./PDDocumentCatalog.java/167.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.726 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.181 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.874 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.767 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.168 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.78 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.449 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.11 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
 },
 {
     "mut": "getAcroForm_PDDocumentFixup",
     "CUT": "org.apache.pdfbox.pdmodel.PDDocumentCatalog",
     "mutant-file": "./PDDocumentCatalog.java/21.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.131 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.683 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.193 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.447 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.332 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.591 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.206 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 8.413 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
 },
 {
     "mut": "getAcroForm_PDDocumentFixup",
     "CUT": "org.apache.pdfbox.pdmodel.PDDocumentCatalog",
     "mutant-file": "./PDDocumentCatalog.java/48.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.996 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.673 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.387 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.981 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.175 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.813 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.529 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.404 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
 },
 {
     "mut": "getAcroForm_PDDocumentFixup",
     "CUT": "org.apache.pdfbox.pdmodel.PDDocumentCatalog",
     "mutant-file": "./PDDocumentCatalog.java/72.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.887 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.214 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.173 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.025 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.34 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.231 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.726 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.385 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
 },
 {
     "mut": "getAcroForm_PDDocumentFixup",
     "CUT": "org.apache.pdfbox.pdmodel.PDDocumentCatalog",
     "mutant-file": "./PDDocumentCatalog.java/93.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.194 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.497 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.832 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.517 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.286 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.026 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.984 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.05 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
 },
 {
     "mut": "getAcroForm_PDDocumentFixup",
     "CUT": "org.apache.pdfbox.pdmodel.PDDocumentCatalog",
     "mutant-file": "./PDDocumentCatalog.java/94.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.661 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.08 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.915 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.26 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.09 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.261 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.238 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.434 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
 },
 {
     "mut": "getAcroForm_PDDocumentFixup",
     "CUT": "org.apache.pdfbox.pdmodel.PDDocumentCatalog",
     "mutant-file": "./PDDocumentCatalog.java/95.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.134 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.306 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.129 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.863 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.123 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.607 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.321 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.216 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
 },
 {
     "mut": "getAcroForm_PDDocumentFixup",
     "CUT": "org.apache.pdfbox.pdmodel.PDDocumentCatalog",
     "mutant-file": "./PDDocumentCatalog.java/96.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.966 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.035 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.951 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.092 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.015 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.894 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.192 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.466 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
 },
 {
     "mut": "getAcroForm_PDDocumentFixup",
     "CUT": "org.apache.pdfbox.pdmodel.PDDocumentCatalog",
     "mutant-file": "./PDDocumentCatalog.java/98.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.508 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.512 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.896 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.255 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.325 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.18 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.296 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.607 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGenGetAcroForm"
 },

@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RemoveNullCheck
-----> before:         if (glyphs != null && glyphs[gid] != null)
-----> after:         if (glyphs != null && true)
-----> line number in original file: 162
-----> mutated node: 530
+mutant type: NullifyObjectInitialization
+----> before:                 glyph = new GlyphData();
+----> after:                 glyph = null;
+----> line number in original file: 181
+----> mutated node: 1216
 
 */
 
@@ -168,7 +168,7 @@ public class GlyphTable extends TTFTable
             return null;
         }
         
-        if (glyphs != null && true)
+        if (glyphs != null && glyphs[gid] != null)
         {
             return glyphs[gid];
         }
@@ -187,7 +187,7 @@ public class GlyphTable extends TTFTable
                 // no outline
                 // PDFBOX-5135: can't return null, must return an empty glyph because
                 // sometimes this is used in a composite glyph.
-                glyph = new GlyphData();
+                glyph = null;
                 glyph.initEmptyData();
             }
             else

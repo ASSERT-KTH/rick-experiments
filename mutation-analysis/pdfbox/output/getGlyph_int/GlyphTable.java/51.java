@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                 data.seek(offset + offsets[gid]);
-----> after:                 data.seek(offset - offsets[gid]);
-----> line number in original file: 128
-----> mutated node: 1197
+mutant type: ArithmeticOperatorReplacementShortcut
+----> before:                     ++cached;
+----> after:                     --cached;
+----> line number in original file: 132
+----> mutated node: 1337
 
 */
 
@@ -134,11 +134,11 @@ public class GlyphTable extends TTFTable
                     continue;
                 }
 
-                data.seek(offset - offsets[gid]);
+                data.seek(offset + offsets[gid]);
 
                 if (glyphs[gid] == null)
                 {
-                    ++cached;
+                    --cached;
                 }
                 glyphs[gid] = getGlyphData(gid);
             }

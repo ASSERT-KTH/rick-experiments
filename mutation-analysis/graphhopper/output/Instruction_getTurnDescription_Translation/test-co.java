@@ -36,7 +36,7 @@ public class TestInstructionRickGen {
         // Arrange
         Instruction receivingObject = deserializeObjectFromFile("com.graphhopper.util.Instruction.getTurnDescription1-receiving.xml");
         Translation mockTranslation = Mockito.mock(Translation.class);
-        Mockito.when(mockTranslation.tr(eq("continue_onto"),   (Object[]) any())).thenReturn("continue onto Kungsgatan");
+        Mockito.lenient().when(mockTranslation.tr(eq("continue_onto"),   (Object[]) any())).thenReturn("continue onto Kungsgatan");
         // Act
         String actual = receivingObject.getTurnDescription(mockTranslation);
         // Assert
@@ -49,7 +49,7 @@ public class TestInstructionRickGen {
         // Arrange
         Instruction receivingObject = deserializeObjectFromFile("com.graphhopper.util.Instruction.getTurnDescription1-receiving.xml");
         Translation mockTranslation = Mockito.mock(Translation.class);
-        Mockito.when(mockTranslation.tr(eq("continue_onto"),   (Object[]) any())).thenReturn("continue onto Kungsgatan");
+        Mockito.lenient().when(mockTranslation.tr(eq("continue_onto"),   (Object[]) any())).thenReturn("continue onto Kungsgatan");
         // Act
         receivingObject.getTurnDescription(mockTranslation);
         // Assert
@@ -62,7 +62,7 @@ public class TestInstructionRickGen {
         // Arrange
         Instruction receivingObject = deserializeObjectFromFile("com.graphhopper.util.Instruction.getTurnDescription1-receiving.xml");
         Translation mockTranslation = Mockito.mock(Translation.class);
-        Mockito.when(mockTranslation.tr(eq("continue_onto"),   (Object[]) any())).thenReturn("continue onto Kungsgatan");
+        Mockito.lenient().when(mockTranslation.tr(eq("continue_onto"),   (Object[]) any())).thenReturn("continue onto Kungsgatan");
         // Act
         receivingObject.getTurnDescription(mockTranslation);
         // Assert

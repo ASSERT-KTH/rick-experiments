@@ -1,0 +1,66 @@
+{
+    "mut": "ProportionalDisplacement_moveNode_Node_ForceVector",
+    "CUT": "org.gephi.layout.plugin.force.ProportionalDisplacement",
+    "mutant-file": "./ProportionalDisplacement.java/1.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 1, Skipped: 1, Time elapsed: 9.823 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 1, Skipped: 1, Time elapsed: 9.6 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 1, Skipped: 1, Time elapsed: 9.171 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 1, Skipped: 1, Time elapsed: 11.023 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen"
+},
+{
+    "mut": "ProportionalDisplacement_moveNode_Node_ForceVector",
+    "CUT": "org.gephi.layout.plugin.force.ProportionalDisplacement",
+    "mutant-file": "./ProportionalDisplacement.java/11.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 1, Skipped: 1, Time elapsed: 9.872 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 1, Skipped: 1, Time elapsed: 10.771 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 1, Skipped: 1, Time elapsed: 9.113 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 1, Skipped: 1, Time elapsed: 10.624 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen"
+},
+{
+    "mut": "ProportionalDisplacement_moveNode_Node_ForceVector",
+    "CUT": "org.gephi.layout.plugin.force.ProportionalDisplacement",
+    "mutant-file": "./ProportionalDisplacement.java/12.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 1, Skipped: 1, Time elapsed: 9.263 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 1, Skipped: 1, Time elapsed: 10.984 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 1, Skipped: 1, Time elapsed: 9.007 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 1, Skipped: 1, Time elapsed: 9.987 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen"
+},
+{
+    "mut": "ProportionalDisplacement_moveNode_Node_ForceVector",
+    "CUT": "org.gephi.layout.plugin.force.ProportionalDisplacement",
+    "mutant-file": "./ProportionalDisplacement.java/3.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 12.507 s - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 9.777 s - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 9.467 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-all": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 8.384 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen"
+},
+{
+    "mut": "ProportionalDisplacement_moveNode_Node_ForceVector",
+    "CUT": "org.gephi.layout.plugin.force.ProportionalDisplacement",
+    "mutant-file": "./ProportionalDisplacement.java/7.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 9.54 s - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 9.434 s - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 10.918 s - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 8.091 s - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen"
+},
+{
+    "mut": "ProportionalDisplacement_moveNode_Node_ForceVector",
+    "CUT": "org.gephi.layout.plugin.force.ProportionalDisplacement",
+    "mutant-file": "./ProportionalDisplacement.java/8.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 8.332 s - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 10.195 s - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 9.127 s - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 8.182 s - in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen"
+},

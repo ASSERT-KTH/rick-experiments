@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:             double dist = (points.is3D() && elevationMaxDistance < Double.MAX_VALUE && !Double.isNaN(firstEle) && !Double.isNaN(lastEle) && !Double.isNaN(ele))
-----> after:             double dist = (points.is3D() && elevationMaxDistance >= Double.MAX_VALUE && !Double.isNaN(firstEle) && !Double.isNaN(lastEle) && !Double.isNaN(ele))
-----> line number in original file: 138
-----> mutated node: 1847
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                     lastLat, lastLon, lastEle * elevationFactor)
+----> after:                     lastLat, lastLon, lastEle / elevationFactor)
+----> line number in original file: 142
+----> mutated node: 1609
 
 */
 
@@ -144,11 +144,11 @@ public class DouglasPeucker {
             }
             double lon = points.getLon(i);
             double ele = points.getEle(i);
-            double dist = (points.is3D() && elevationMaxDistance >= Double.MAX_VALUE && !Double.isNaN(firstEle) && !Double.isNaN(lastEle) && !Double.isNaN(ele))
+            double dist = (points.is3D() && elevationMaxDistance < Double.MAX_VALUE && !Double.isNaN(firstEle) && !Double.isNaN(lastEle) && !Double.isNaN(ele))
                     ? calc.calcNormalizedEdgeDistance3D(
                     lat, lon, ele * elevationFactor,
                     firstLat, firstLon, firstEle * elevationFactor,
-                    lastLat, lastLon, lastEle * elevationFactor)
+                    lastLat, lastLon, lastEle / elevationFactor)
                     : calc.calcNormalizedEdgeDistance(lat, lon, firstLat, firstLon, lastLat, lastLon);
             if (maxDist < dist) {
                 indexWithMaxDist = i;

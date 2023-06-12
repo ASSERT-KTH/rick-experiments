@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                 int b = clamp( (1.164f * (Y-16)) + (2.017f * (Cb-128)));
-----> after:                 int b = clamp( (1.164f * (Y-16)) + (2.017f * (Cb+128)));
-----> line number in original file: 291
-----> mutated node: 4083
+mutant type: RemoveMethod
+----> before:     {
+----> after:     {
+----> line number in original file: 189
+----> mutated node: 356
 
 */
 
@@ -196,45 +196,9 @@ final class DCTFilter extends Filter
     // com.twelvemonkeys.imageio.plugins.jpeg.AdobeDCT class for structure of APP14 segment
     private int getAdobeTransformByBruteForce(ImageInputStream iis) throws IOException
     {
-        int a = 0;
-        iis.seek(0);
-        int by;
-        while ((by = iis.read()) != -1)
-        {
-            if (ADOBE.charAt(a) == by)
-            {
-                ++a;
-                if (a != ADOBE.length())
-                {
-                    continue;
-                }
-                // match
-                a = 0;
-                long afterAdobePos = iis.getStreamPosition();
-                iis.seek(iis.getStreamPosition() - 9);
-                int tag = iis.readUnsignedShort();
-                if (tag != 0xFFEE)
-                {
-                    iis.seek(afterAdobePos);
-                    continue;
-                }
-                int len = iis.readUnsignedShort();
-                if (len >= POS_TRANSFORM + 1)
-                {
-                    byte[] app14 = new byte[Math.max(len, POS_TRANSFORM + 1)];
-                    if (iis.read(app14) >= POS_TRANSFORM + 1)
-                    {
-                        return app14[POS_TRANSFORM];
-                    }
-                }
-            }
-            else
-            {
-                a = 0;
-            }
-        }
-        return 0;
-    }
+    return 0;
+}
+
 
     // converts YCCK image to CMYK. YCCK is an equivalent encoding for
     // CMYK data, so no color management code is needed here, nor does the
@@ -297,7 +261,7 @@ final class DCTFilter extends Filter
                 // YCbCr to RGB, see http://www.equasys.de/colorconversion.html
                 int r = clamp( (1.164f * (Y-16)) + (1.596f * (Cr - 128)) );
                 int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
-                int b = clamp( (1.164f * (Y-16)) + (2.017f * (Cb+128)));
+                int b = clamp( (1.164f * (Y-16)) + (2.017f * (Cb-128)));
 
                 // naive RGB to CMYK
                 int cyan = 255 - r;

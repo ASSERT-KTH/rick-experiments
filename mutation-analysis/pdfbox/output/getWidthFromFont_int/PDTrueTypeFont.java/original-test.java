@@ -47,8 +47,8 @@ public class TestPDTrueTypeFontRickGen {
         // Arrange
         PDTrueTypeFont receivingObject = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.font.PDTrueTypeFont.getWidthFromFont1-receiving.xml");
         TrueTypeFont mockTrueTypeFont = insertPrivateMockField_ttf_InPDTrueTypeFont(receivingObject);
-        Mockito.when(mockTrueTypeFont.getAdvanceWidth(0)).thenReturn(1536);
-        Mockito.when(mockTrueTypeFont.getUnitsPerEm()).thenReturn(2048);
+        Mockito.lenient().when(mockTrueTypeFont.getAdvanceWidth(0)).thenReturn(1536);
+        Mockito.lenient().when(mockTrueTypeFont.getUnitsPerEm()).thenReturn(2048);
         // Act
         float actual = receivingObject.getWidthFromFont(32);
         // Assert
@@ -61,8 +61,8 @@ public class TestPDTrueTypeFontRickGen {
         // Arrange
         PDTrueTypeFont receivingObject = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.font.PDTrueTypeFont.getWidthFromFont1-receiving.xml");
         TrueTypeFont mockTrueTypeFont = insertPrivateMockField_ttf_InPDTrueTypeFont(receivingObject);
-        Mockito.when(mockTrueTypeFont.getAdvanceWidth(0)).thenReturn(1536);
-        Mockito.when(mockTrueTypeFont.getUnitsPerEm()).thenReturn(2048);
+        Mockito.lenient().when(mockTrueTypeFont.getAdvanceWidth(0)).thenReturn(1536);
+        Mockito.lenient().when(mockTrueTypeFont.getUnitsPerEm()).thenReturn(2048);
         // Act
         receivingObject.getWidthFromFont(32);
         // Assert
@@ -76,8 +76,8 @@ public class TestPDTrueTypeFontRickGen {
         // Arrange
         PDTrueTypeFont receivingObject = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.font.PDTrueTypeFont.getWidthFromFont1-receiving.xml");
         TrueTypeFont mockTrueTypeFont = insertPrivateMockField_ttf_InPDTrueTypeFont(receivingObject);
-        Mockito.when(mockTrueTypeFont.getAdvanceWidth(0)).thenReturn(1536);
-        Mockito.when(mockTrueTypeFont.getUnitsPerEm()).thenReturn(2048);
+        Mockito.lenient().when(mockTrueTypeFont.getAdvanceWidth(0)).thenReturn(1536);
+        Mockito.lenient().when(mockTrueTypeFont.getUnitsPerEm()).thenReturn(2048);
         // Act
         receivingObject.getWidthFromFont(32);
         // Assert

@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-05 16:06:33.839258
+[LOG] Initiating analysis at 2023-06-11 11:19:19.155592
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -577,15 +577,15 @@ Total mutations found:  2755
 [LOG] Invoking cp /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java ./StorableProperties.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-oo.java
-[LOG] Created OO test at /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-oo.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-oo.java
+[LOG] Created OO test at /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-oo.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalStorableProperties.java with ./StorableProperties.java/27.java
 [LOG] Invoking cp ./StorableProperties.java/27.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/storage/StorableProperties.java
@@ -640,15 +640,15 @@ Total mutations found:  2755
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  43.123 s
-[INFO] Finished at: 2023-06-05T16:07:51+02:00
+[INFO] Total time:  45.299 s
+[INFO] Finished at: 2023-06-11T11:20:40+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -686,7 +686,7 @@ Total mutations found:  2755
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.586 s - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4 s - in com.graphhopper.storage.TestStorablePropertiesRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -695,8 +695,8 @@ Total mutations found:  2755
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.465 s
-[INFO] Finished at: 2023-06-05T16:08:09+02:00
+[INFO] Total time:  14.360 s
+[INFO] Finished at: 2023-06-11T11:20:59+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -722,20 +722,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.816 s
-[INFO] Finished at: 2023-06-05T16:08:13+02:00
+[INFO] Total time:  0.839 s
+[INFO] Finished at: 2023-06-11T11:21:03+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -773,7 +773,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.581 s - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.791 s - in com.graphhopper.storage.TestStorablePropertiesRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -782,8 +782,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.722 s
-[INFO] Finished at: 2023-06-05T16:08:30+02:00
+[INFO] Total time:  14.560 s
+[INFO] Finished at: 2023-06-11T11:21:21+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -809,20 +809,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.805 s
-[INFO] Finished at: 2023-06-05T16:08:34+02:00
+[INFO] Total time:  0.830 s
+[INFO] Finished at: 2023-06-11T11:21:25+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -860,7 +860,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.43 s - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.042 s - in com.graphhopper.storage.TestStorablePropertiesRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -869,8 +869,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.826 s
-[INFO] Finished at: 2023-06-05T16:08:54+02:00
+[INFO] Total time:  14.785 s
+[INFO] Finished at: 2023-06-11T11:21:44+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -896,20 +896,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.073 s
-[INFO] Finished at: 2023-06-05T16:09:00+02:00
+[INFO] Total time:  1.002 s
+[INFO] Finished at: 2023-06-11T11:21:48+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -947,7 +947,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.7 s - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.69 s - in com.graphhopper.storage.TestStorablePropertiesRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -956,8 +956,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.679 s
-[INFO] Finished at: 2023-06-05T16:09:21+02:00
+[INFO] Total time:  14.307 s
+[INFO] Finished at: 2023-06-11T11:22:06+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -983,13 +983,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.820 s
-[INFO] Finished at: 2023-06-05T16:09:25+02:00
+[INFO] Total time:  0.889 s
+[INFO] Finished at: 2023-06-11T11:22:11+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
@@ -1034,7 +1034,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.178 s - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.805 s - in com.graphhopper.storage.TestStorablePropertiesRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1043,8 +1043,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.069 s
-[INFO] Finished at: 2023-06-05T16:09:44+02:00
+[INFO] Total time:  14.329 s
+[INFO] Finished at: 2023-06-11T11:22:29+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1070,13 +1070,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.938 s
-[INFO] Finished at: 2023-06-05T16:09:49+02:00
+[INFO] Total time:  0.828 s
+[INFO] Finished at: 2023-06-11T11:22:33+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting StorableProperties.java to original
@@ -1135,15 +1135,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  42.122 s
-[INFO] Finished at: 2023-06-05T16:10:35+02:00
+[INFO] Total time:  44.554 s
+[INFO] Finished at: 2023-06-11T11:23:22+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -1181,357 +1181,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.696 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.841 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.677 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.818 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:51)
 
 [ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.024 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:81)
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.032 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:65)
-
-[INFO] 
-[INFO] Results:
-[INFO] 
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19:81 » NullPointer
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19:51 » NullPointer
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19:65 » NullPointer
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.659 s
-[INFO] Finished at: 2023-06-05T16:10:53+02:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-
-Security framework of XStream not initialized, XStream is probably vulnerable.
-
----------------------------------------------------
-[LOG] Cleaned targets with ['mvn', 'clean']
-[INFO] Scanning for projects...
-[WARNING] 
-[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
-[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
-[WARNING] 
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING] 
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING] 
-[INFO] 
-[INFO] ---------------------< com.graphhopper:rick-major >---------------------
-[INFO] Building rick-major 5.3
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
-[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.815 s
-[INFO] Finished at: 2023-06-05T16:10:57+02:00
-[INFO] ------------------------------------------------------------------------
-
-
----------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
----------------------------------------------------
-[LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
-[LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
----------------------------------------------------
-[OO] Evaluating only OO
-[LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
-[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
-[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
-[INFO] Scanning for projects...
-[WARNING] 
-[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
-[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
-[WARNING] 
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING] 
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING] 
-[INFO] 
-[INFO] ---------------------< com.graphhopper:rick-major >---------------------
-[INFO] Building rick-major 5.3
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 0 resource
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
-[INFO] Nothing to compile - all classes are up to date
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 26 resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
-[INFO] 
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.645 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.861 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:51)
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.021 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:81)
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.021 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:65)
-
-[INFO] 
-[INFO] Results:
-[INFO] 
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19:81 » NullPointer
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19:51 » NullPointer
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19:65 » NullPointer
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.107 s
-[INFO] Finished at: 2023-06-05T16:11:14+02:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-
-Security framework of XStream not initialized, XStream is probably vulnerable.
-
----------------------------------------------------
-[LOG] Cleaned targets with ['mvn', 'clean']
-[INFO] Scanning for projects...
-[WARNING] 
-[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
-[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
-[WARNING] 
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING] 
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING] 
-[INFO] 
-[INFO] ---------------------< com.graphhopper:rick-major >---------------------
-[INFO] Building rick-major 5.3
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
-[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.854 s
-[INFO] Finished at: 2023-06-05T16:11:19+02:00
-[INFO] ------------------------------------------------------------------------
-
-
----------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
----------------------------------------------------
-[LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
-[LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
----------------------------------------------------
-[PO] Evaluating only PO
-[LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
-[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
-[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
-[INFO] Scanning for projects...
-[WARNING] 
-[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
-[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
-[WARNING] 
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING] 
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING] 
-[INFO] 
-[INFO] ---------------------< com.graphhopper:rick-major >---------------------
-[INFO] Building rick-major 5.3
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 0 resource
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
-[INFO] Nothing to compile - all classes are up to date
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 26 resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
-[INFO] 
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.068 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 3.906 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:51)
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.036 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:81)
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.031 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:65)
-
-[INFO] 
-[INFO] Results:
-[INFO] 
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19:81 » NullPointer
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19:51 » NullPointer
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19:65 » NullPointer
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.462 s
-[INFO] Finished at: 2023-06-05T16:11:39+02:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-
-Security framework of XStream not initialized, XStream is probably vulnerable.
-
----------------------------------------------------
-[LOG] Cleaned targets with ['mvn', 'clean']
-[INFO] Scanning for projects...
-[WARNING] 
-[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
-[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
-[WARNING] 
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING] 
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING] 
-[INFO] 
-[INFO] ---------------------< com.graphhopper:rick-major >---------------------
-[INFO] Building rick-major 5.3
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
-[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.001 s
-[INFO] Finished at: 2023-06-05T16:11:44+02:00
-[INFO] ------------------------------------------------------------------------
-
-
----------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
----------------------------------------------------
-[LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
-[LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
----------------------------------------------------
-[CO] Evaluating only CO
-[LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
-[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
-[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
-[INFO] Scanning for projects...
-[WARNING] 
-[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
-[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
-[WARNING] 
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING] 
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING] 
-[INFO] 
-[INFO] ---------------------< com.graphhopper:rick-major >---------------------
-[INFO] Building rick-major 5.3
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 0 resource
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
-[INFO] Nothing to compile - all classes are up to date
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 26 resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
-[INFO] 
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.71 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.812 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:51)
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.023 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:81)
 
@@ -1552,8 +1207,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.955 s
-[INFO] Finished at: 2023-06-05T16:12:01+02:00
+[INFO] Total time:  14.182 s
+[INFO] Finished at: 2023-06-11T11:23:40+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1590,13 +1245,358 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.810 s
-[INFO] Finished at: 2023-06-05T16:12:05+02:00
+[INFO] Total time:  0.863 s
+[INFO] Finished at: 2023-06-11T11:23:44+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
+[LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+---------------------------------------------------
+[OO] Evaluating only OO
+[LOG] Replacing original RICK test with variant oo
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.764 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.956 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:51)
+
+[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.029 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:81)
+
+[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.026 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:65)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19:81 » NullPointer
+[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19:51 » NullPointer
+[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19:65 » NullPointer
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  15.271 s
+[INFO] Finished at: 2023-06-11T11:24:03+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.838 s
+[INFO] Finished at: 2023-06-11T11:24:07+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
+[LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.734 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.895 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:51)
+
+[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.025 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:81)
+
+[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.019 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:65)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19:81 » NullPointer
+[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19:51 » NullPointer
+[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19:65 » NullPointer
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.276 s
+[INFO] Finished at: 2023-06-11T11:24:25+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.813 s
+[INFO] Finished at: 2023-06-11T11:24:30+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
+[LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.809 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.993 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:51)
+
+[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.031 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:81)
+
+[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.027 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:65)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19:81 » NullPointer
+[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19:51 » NullPointer
+[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19:65 » NullPointer
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  16.098 s
+[INFO] Finished at: 2023-06-11T11:24:49+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.828 s
+[INFO] Finished at: 2023-06-11T11:24:54+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
@@ -1641,16 +1641,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.738 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.984 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.677 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.835 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:51)
 
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.025 s  <<< ERROR!
+[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.022 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:81)
 
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.021 s  <<< ERROR!
+[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.017 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:65)
 
@@ -1667,8 +1667,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.115 s
-[INFO] Finished at: 2023-06-05T16:12:24+02:00
+[INFO] Total time:  14.789 s
+[INFO] Finished at: 2023-06-11T11:25:12+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1705,13 +1705,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.812 s
-[INFO] Finished at: 2023-06-05T16:12:28+02:00
+[INFO] Total time:  0.869 s
+[INFO] Finished at: 2023-06-11T11:25:17+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting StorableProperties.java to original
@@ -1770,15 +1770,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  44.347 s
-[INFO] Finished at: 2023-06-05T16:13:17+02:00
+[INFO] Total time:  44.165 s
+[INFO] Finished at: 2023-06-11T11:26:05+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -1816,8 +1816,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.653 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.876 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.772 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.897 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:51)
 
@@ -1825,7 +1825,7 @@ java.lang.NullPointerException
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:81)
 
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.024 s  <<< ERROR!
+[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.025 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:65)
 
@@ -1842,8 +1842,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.777 s
-[INFO] Finished at: 2023-06-05T16:13:35+02:00
+[INFO] Total time:  14.461 s
+[INFO] Finished at: 2023-06-11T11:26:23+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1880,20 +1880,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.854 s
-[INFO] Finished at: 2023-06-05T16:13:39+02:00
+[INFO] Total time:  0.848 s
+[INFO] Finished at: 2023-06-11T11:26:27+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -1931,16 +1931,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.545 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.759 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.766 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.924 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:51)
 
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.02 s  <<< ERROR!
+[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.029 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:81)
 
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.016 s  <<< ERROR!
+[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.026 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:65)
 
@@ -1957,8 +1957,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.968 s
-[INFO] Finished at: 2023-06-05T16:13:57+02:00
+[INFO] Total time:  15.558 s
+[INFO] Finished at: 2023-06-11T11:26:47+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1995,20 +1995,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.841 s
-[INFO] Finished at: 2023-06-05T16:14:01+02:00
+[INFO] Total time:  0.919 s
+[INFO] Finished at: 2023-06-11T11:26:51+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -2046,16 +2046,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.527 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.756 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.714 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.808 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:51)
 
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.025 s  <<< ERROR!
+[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.032 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:81)
 
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.019 s  <<< ERROR!
+[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.027 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:65)
 
@@ -2072,8 +2072,123 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.709 s
-[INFO] Finished at: 2023-06-05T16:14:18+02:00
+[INFO] Total time:  14.301 s
+[INFO] Finished at: 2023-06-11T11:27:09+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.165 s
+[INFO] Finished at: 2023-06-11T11:27:14+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
+[LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.877 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 3.021 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:51)
+
+[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.028 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:81)
+
+[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.025 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:65)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19:81 » NullPointer
+[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19:51 » NullPointer
+[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19:65 » NullPointer
+[INFO] 
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  14.618 s
+[INFO] Finished at: 2023-06-11T11:27:32+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2111,127 +2226,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
 [INFO] Total time:  0.818 s
-[INFO] Finished at: 2023-06-05T16:14:23+02:00
+[INFO] Finished at: 2023-06-11T11:27:36+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
----------------------------------------------------
-[LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
-[LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
----------------------------------------------------
-[CO] Evaluating only CO
-[LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
-[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
-[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
-[INFO] Scanning for projects...
-[WARNING] 
-[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
-[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
-[WARNING] 
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING] 
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING] 
-[INFO] 
-[INFO] ---------------------< com.graphhopper:rick-major >---------------------
-[INFO] Building rick-major 5.3
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 0 resource
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
-[INFO] Nothing to compile - all classes are up to date
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 26 resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
-[INFO] 
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.437 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.705 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:51)
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.022 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:81)
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.018 s  <<< ERROR!
-java.lang.NullPointerException
-	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:65)
-
-[INFO] 
-[INFO] Results:
-[INFO] 
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19:81 » NullPointer
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19:51 » NullPointer
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19:65 » NullPointer
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.585 s
-[INFO] Finished at: 2023-06-05T16:14:40+02:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-
-Security framework of XStream not initialized, XStream is probably vulnerable.
-
----------------------------------------------------
-[LOG] Cleaned targets with ['mvn', 'clean']
-[INFO] Scanning for projects...
-[WARNING] 
-[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
-[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
-[WARNING] 
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING] 
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING] 
-[INFO] 
-[INFO] ---------------------< com.graphhopper:rick-major >---------------------
-[INFO] Building rick-major 5.3
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
-[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.781 s
-[INFO] Finished at: 2023-06-05T16:14:44+02:00
-[INFO] ------------------------------------------------------------------------
-
-
----------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
@@ -2276,16 +2276,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.811 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.936 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.67 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.901 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:51)
 
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.022 s  <<< ERROR!
+[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.025 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:81)
 
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.02 s  <<< ERROR!
+[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.022 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:65)
 
@@ -2302,8 +2302,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.268 s
-[INFO] Finished at: 2023-06-05T16:15:02+02:00
+[INFO] Total time:  14.636 s
+[INFO] Finished at: 2023-06-11T11:27:55+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2340,13 +2340,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.794 s
-[INFO] Finished at: 2023-06-05T16:15:06+02:00
+[INFO] Total time:  0.838 s
+[INFO] Finished at: 2023-06-11T11:27:59+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting StorableProperties.java to original
@@ -2405,15 +2405,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  43.041 s
-[INFO] Finished at: 2023-06-05T16:15:53+02:00
+[INFO] Total time:  46.461 s
+[INFO] Finished at: 2023-06-11T11:28:50+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -2451,61 +2451,18 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.71 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.845 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:49)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.035 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.022 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:63)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.63 s - in com.graphhopper.storage.TestStorablePropertiesRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.677 s
-[INFO] Finished at: 2023-06-05T16:16:11+02:00
+[INFO] Total time:  14.365 s
+[INFO] Finished at: 2023-06-11T11:29:08+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -2530,20 +2487,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.981 s
-[INFO] Finished at: 2023-06-05T16:16:16+02:00
+[INFO] Total time:  0.865 s
+[INFO] Finished at: 2023-06-11T11:29:12+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -2581,45 +2538,24 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.623 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.849 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.857 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.993 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:53)
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.039 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.027 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:63)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
 [ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19:53 expected: <true> but was: <false>
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.717 s
-[INFO] Finished at: 2023-06-05T16:16:33+02:00
+[INFO] Total time:  14.625 s
+[INFO] Finished at: 2023-06-11T11:29:30+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2656,20 +2592,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.911 s
-[INFO] Finished at: 2023-06-05T16:16:37+02:00
+[INFO] Total time:  0.805 s
+[INFO] Finished at: 2023-06-11T11:29:34+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -2707,26 +2643,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.576 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.793 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:49)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.032 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.048 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.832 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.098 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2754,17 +2672,14 @@ dataAccess.loadExisting();
 -> at com.graphhopper.storage.StorableProperties.loadExisting(StorableProperties.java:58)
 
 
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.271 s
-[INFO] Finished at: 2023-06-05T16:16:55+02:00
+[INFO] Total time:  14.641 s
+[INFO] Finished at: 2023-06-11T11:29:53+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2801,20 +2716,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.803 s
-[INFO] Finished at: 2023-06-05T16:16:59+02:00
+[INFO] Total time:  0.799 s
+[INFO] Finished at: 2023-06-11T11:29:57+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -2852,17 +2767,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.662 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 3.726 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:49)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.069 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.859 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.098 s  <<< FAILURE!
 org.mockito.exceptions.verification.VerificationInOrderFailure: 
 
 Verification in order failure
@@ -2874,15 +2780,6 @@ dataAccess.loadExisting();
 -> at com.graphhopper.storage.StorableProperties.loadExisting(StorableProperties.java:58)
 
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:85)
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.024 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:63)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -2897,17 +2794,14 @@ Wanted anywhere AFTER following interaction:
 dataAccess.loadExisting();
 -> at com.graphhopper.storage.StorableProperties.loadExisting(StorableProperties.java:58)
 
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.791 s
-[INFO] Finished at: 2023-06-05T16:17:18+02:00
+[INFO] Total time:  14.406 s
+[INFO] Finished at: 2023-06-11T11:30:15+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2944,13 +2838,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.940 s
-[INFO] Finished at: 2023-06-05T16:17:23+02:00
+[INFO] Total time:  0.831 s
+[INFO] Finished at: 2023-06-11T11:30:19+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
@@ -2995,12 +2889,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.817 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.979 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.69 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.871 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:53)
 
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.062 s  <<< FAILURE!
+[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.064 s  <<< FAILURE!
 org.mockito.exceptions.verification.VerificationInOrderFailure: 
 
 Verification in order failure
@@ -3013,7 +2907,7 @@ dataAccess.loadExisting();
 
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:85)
 
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.034 s  <<< FAILURE!
+[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.025 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -3057,8 +2951,8 @@ dataAccess.loadExisting();
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.491 s
-[INFO] Finished at: 2023-06-05T16:17:42+02:00
+[INFO] Total time:  14.641 s
+[INFO] Finished at: 2023-06-11T11:30:38+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3095,13 +2989,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.832 s
-[INFO] Finished at: 2023-06-05T16:17:46+02:00
+[INFO] Total time:  0.844 s
+[INFO] Finished at: 2023-06-11T11:30:42+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting StorableProperties.java to original
@@ -3160,15 +3054,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  41.506 s
-[INFO] Finished at: 2023-06-05T16:18:32+02:00
+[INFO] Total time:  43.627 s
+[INFO] Finished at: 2023-06-11T11:31:30+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -3206,64 +3100,105 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.763 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.903 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:48)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:49)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.075 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:78)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.019 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:62)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:63)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.609 s - in com.graphhopper.storage.TestStorablePropertiesRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.327 s
-[INFO] Finished at: 2023-06-05T16:18:50+02:00
+[INFO] Total time:  14.632 s
+[INFO] Finished at: 2023-06-11T11:31:48+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
+[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.063 s
+[INFO] Finished at: 2023-06-11T11:31:53+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
+[LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+---------------------------------------------------
+[OO] Evaluating only OO
+[LOG] Replacing original RICK test with variant oo
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
+[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO] 
+[INFO] ---------------------< com.graphhopper:rick-major >---------------------
+[INFO] Building rick-major 5.3
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 26 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.817 s - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  13.985 s
+[INFO] Finished at: 2023-06-11T11:32:10+02:00
+[INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -3289,152 +3224,19 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
 [INFO] Total time:  0.820 s
-[INFO] Finished at: 2023-06-05T16:18:54+02:00
+[INFO] Finished at: 2023-06-11T11:32:15+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
----------------------------------------------------
-[LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
-[LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
----------------------------------------------------
-[OO] Evaluating only OO
-[LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
-[LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
-[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
-[INFO] Scanning for projects...
-[WARNING] 
-[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
-[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
-[WARNING] 
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING] 
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING] 
-[INFO] 
-[INFO] ---------------------< com.graphhopper:rick-major >---------------------
-[INFO] Building rick-major 5.3
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-major ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 0 resource
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ rick-major ---
-[INFO] Nothing to compile - all classes are up to date
-[INFO] 
-[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-major ---
-[INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 26 resources
-[INFO] 
-[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ rick-major ---
-[INFO] Changes detected - recompiling the module!
-[INFO] Compiling 15 source files to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/test-classes
-[INFO] 
-[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-major ---
-[INFO] 
-[INFO] -------------------------------------------------------
-[INFO]  T E S T S
-[INFO] -------------------------------------------------------
-[INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.665 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.897 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:48)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:49)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.03 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:78)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.019 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:62)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:63)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[INFO] 
-[INFO] Results:
-[INFO] 
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
-[INFO] 
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.718 s
-[INFO] Finished at: 2023-06-05T16:19:11+02:00
-[INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
-
-Security framework of XStream not initialized, XStream is probably vulnerable.
-
----------------------------------------------------
-[LOG] Cleaned targets with ['mvn', 'clean']
-[INFO] Scanning for projects...
-[WARNING] 
-[WARNING] Some problems were encountered while building the effective model for com.graphhopper:rick-major:jar:5.3
-[WARNING] 'dependencies.dependency.(groupId:artifactId:type:classifier)' must be unique: com.graphhopper:graphhopper-web:jar -> duplicate declaration of version 5.3 @ line 79, column 17
-[WARNING] 
-[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
-[WARNING] 
-[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
-[WARNING] 
-[INFO] 
-[INFO] ---------------------< com.graphhopper:rick-major >---------------------
-[INFO] Building rick-major 5.3
-[INFO] --------------------------------[ jar ]---------------------------------
-[INFO] 
-[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-major ---
-[INFO] Deleting /home/dee/dev/rick-major-review/graphhopper/rick-major/target
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD SUCCESS
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.803 s
-[INFO] Finished at: 2023-06-05T16:19:16+02:00
-[INFO] ------------------------------------------------------------------------
-
-
----------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -3472,28 +3274,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.684 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.851 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:48)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:49)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.033 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:78)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.053 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.856 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.099 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -3513,17 +3295,14 @@ dataAccess.loadExisting();
 -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:67)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.963 s
-[INFO] Finished at: 2023-06-05T16:19:34+02:00
+[INFO] Total time:  14.828 s
+[INFO] Finished at: 2023-06-11T11:32:33+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3560,20 +3339,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.863 s
-[INFO] Finished at: 2023-06-05T16:19:38+02:00
+[INFO] Total time:  1.023 s
+[INFO] Finished at: 2023-06-11T11:32:39+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -3611,18 +3390,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.697 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.888 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:48)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:49)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.057 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.846 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.11 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -3631,16 +3400,6 @@ dataAccess.loadExisting();
 Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:84)
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.028 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:62)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:63)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -3652,17 +3411,14 @@ dataAccess.loadExisting();
 -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:84)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.113 s
-[INFO] Finished at: 2023-06-05T16:19:56+02:00
+[INFO] Total time:  15.698 s
+[INFO] Finished at: 2023-06-11T11:32:58+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3699,13 +3455,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.867 s
-[INFO] Finished at: 2023-06-05T16:20:00+02:00
+[INFO] Total time:  0.811 s
+[INFO] Finished at: 2023-06-11T11:33:03+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
@@ -3750,18 +3506,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 3.629 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.778 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:48)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:49)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.054 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.715 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.09 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -3771,7 +3517,7 @@ Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:84)
 
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.02 s  <<< FAILURE!
+[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.022 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -3797,16 +3543,14 @@ dataAccess.loadExisting();
 -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:67)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 2, Errors: 1, Skipped: 0
+[ERROR] Tests run: 3, Failures: 2, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.288 s
-[INFO] Finished at: 2023-06-05T16:20:19+02:00
+[INFO] Total time:  14.798 s
+[INFO] Finished at: 2023-06-11T11:33:21+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3843,13 +3587,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.847 s
-[INFO] Finished at: 2023-06-05T16:20:23+02:00
+[INFO] Total time:  1.071 s
+[INFO] Finished at: 2023-06-11T11:33:26+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting StorableProperties.java to original
@@ -3908,15 +3652,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  41.478 s
-[INFO] Finished at: 2023-06-05T16:21:09+02:00
+[INFO] Total time:  44.531 s
+[INFO] Finished at: 2023-06-11T11:34:14+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -3954,64 +3698,18 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.077 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 3.27 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:48)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:49)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.033 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:78)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.029 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:62)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:63)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.547 s - in com.graphhopper.storage.TestStorablePropertiesRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.755 s
-[INFO] Finished at: 2023-06-05T16:21:27+02:00
+[INFO] Total time:  13.913 s
+[INFO] Finished at: 2023-06-11T11:34:32+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -4036,20 +3734,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.815 s
-[INFO] Finished at: 2023-06-05T16:21:32+02:00
+[INFO] Total time:  1.153 s
+[INFO] Finished at: 2023-06-11T11:34:37+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -4087,47 +3785,24 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.816 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.896 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.052 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 3.235 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:53)
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.041 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:78)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.043 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:62)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:63)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
 [ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19:53 expected: <true> but was: <false>
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.527 s
-[INFO] Finished at: 2023-06-05T16:21:50+02:00
+[INFO] Total time:  14.539 s
+[INFO] Finished at: 2023-06-11T11:34:56+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4164,20 +3839,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.005 s
-[INFO] Finished at: 2023-06-05T16:21:55+02:00
+[INFO] Total time:  0.842 s
+[INFO] Finished at: 2023-06-11T11:35:00+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -4215,28 +3890,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.736 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.92 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:48)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:49)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.023 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:78)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:79)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.043 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.892 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.083 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -4256,17 +3911,14 @@ dataAccess.loadExisting();
 -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:67)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.684 s
-[INFO] Finished at: 2023-06-05T16:22:15+02:00
+[INFO] Total time:  14.591 s
+[INFO] Finished at: 2023-06-11T11:35:18+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4303,20 +3955,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.950 s
-[INFO] Finished at: 2023-06-05T16:22:20+02:00
+[INFO] Total time:  0.826 s
+[INFO] Finished at: 2023-06-11T11:35:22+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStorablePropertiesRickGen']
 [INFO] Scanning for projects...
@@ -4354,18 +4006,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.813 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.98 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:48)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:49)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.046 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.766 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.093 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -4374,16 +4016,6 @@ dataAccess.loadExisting();
 Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:84)
-
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.026 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:62)
-  2. -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:63)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -4395,17 +4027,14 @@ dataAccess.loadExisting();
 -> at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:84)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
-[ERROR]   TestStorablePropertiesRickGen.test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.956 s
-[INFO] Finished at: 2023-06-05T16:22:37+02:00
+[INFO] Total time:  14.471 s
+[INFO] Finished at: 2023-06-11T11:35:41+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4442,13 +4071,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.015 s
-[INFO] Finished at: 2023-06-05T16:22:42+02:00
+[INFO] Total time:  0.825 s
+[INFO] Finished at: 2023-06-11T11:35:45+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./StorableProperties.java/original-test.java
 [LOG] Invoking cp ./StorableProperties.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/storage/TestStorablePropertiesRickGen.java
@@ -4493,12 +4122,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.628 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
-[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.793 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.646 s <<< FAILURE! - in com.graphhopper.storage.TestStorablePropertiesRickGen
+[ERROR] test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 2.802 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_OO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:53)
 
-[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.064 s  <<< FAILURE!
+[ERROR] test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.066 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -4508,7 +4137,7 @@ Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.storage.TestStorablePropertiesRickGen.test_loadExisting_CO_9fe924f02b9c47f19d107f0c29bd5f19(TestStorablePropertiesRickGen.java:84)
 
-[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.03 s  <<< FAILURE!
+[ERROR] test_loadExisting_PO_9fe924f02b9c47f19d107f0c29bd5f19  Time elapsed: 0.032 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -4541,8 +4170,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.694 s
-[INFO] Finished at: 2023-06-05T16:23:00+02:00
+[INFO] Total time:  15.335 s
+[INFO] Finished at: 2023-06-11T11:36:04+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4579,22 +4208,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.932 s
-[INFO] Finished at: 2023-06-05T16:23:04+02:00
+[INFO] Total time:  0.957 s
+[INFO] Finished at: 2023-06-11T11:36:08+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting StorableProperties.java to original
 [LOG] Invoking cp ./StorableProperties.java/original.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/storage/StorableProperties.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/StorableProperties.java', '/home/dee/dev/rick-major-review/finches/output/StorableProperties_loadExisting/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/StorableProperties.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/StorableProperties_loadExisting/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-05 16:23:05.046700
+[LOG] Finishing analysis at 2023-06-11 11:36:08.888078
 ====== END OF THE LINE ======

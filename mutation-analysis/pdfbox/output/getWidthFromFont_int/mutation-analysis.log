@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-05 03:26:34.870819
+[LOG] Initiating analysis at 2023-06-10 23:26:55.511209
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -632,15 +632,15 @@ Total mutations found:  2949
 [LOG] Invoking cp /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java ./PDTrueTypeFont.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-oo.java
-[LOG] Created OO test at /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-oo.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-oo.java
+[LOG] Created OO test at /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-oo.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalPDTrueTypeFont.java with ./PDTrueTypeFont.java/108.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/108.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.java
@@ -870,15 +870,15 @@ Total mutations found:  2949
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  44.877 s
-[INFO] Finished at: 2023-06-05T03:28:04+02:00
+[INFO] Total time:  49.113 s
+[INFO] Finished at: 2023-06-10T23:28:34+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -903,7 +903,7 @@ Total mutations found:  2949
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -916,7 +916,7 @@ Total mutations found:  2949
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.997 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.552 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -928,8 +928,8 @@ Total mutations found:  2949
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.972 s
-[INFO] Finished at: 2023-06-05T03:28:32+02:00
+[INFO] Total time:  24.269 s
+[INFO] Finished at: 2023-06-10T23:29:02+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -947,20 +947,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.253 s
-[INFO] Finished at: 2023-06-05T03:28:36+02:00
+[INFO] Total time:  1.306 s
+[INFO] Finished at: 2023-06-10T23:29:07+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -985,7 +985,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -998,8 +998,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.271 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.403 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.335 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.554 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <750.0> but was: <3145.72802734375>
 	at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:55)
 
@@ -1014,8 +1014,8 @@ org.opentest4j.AssertionFailedError: expected: <750.0> but was: <3145.7280273437
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.653 s
-[INFO] Finished at: 2023-06-05T03:29:01+02:00
+[INFO] Total time:  21.824 s
+[INFO] Finished at: 2023-06-10T23:29:33+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1044,20 +1044,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.293 s
-[INFO] Finished at: 2023-06-05T03:29:06+02:00
+[INFO] Total time:  1.494 s
+[INFO] Finished at: 2023-06-10T23:29:38+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -1082,7 +1082,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1095,7 +1095,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.343 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.048 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1107,8 +1107,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.178 s
-[INFO] Finished at: 2023-06-05T03:29:33+02:00
+[INFO] Total time:  23.385 s
+[INFO] Finished at: 2023-06-10T23:30:05+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1126,20 +1126,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.258 s
-[INFO] Finished at: 2023-06-05T03:29:37+02:00
+[INFO] Total time:  1.345 s
+[INFO] Finished at: 2023-06-10T23:30:10+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -1164,7 +1164,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1177,7 +1177,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.133 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.344 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1189,8 +1189,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.177 s
-[INFO] Finished at: 2023-06-05T03:30:04+02:00
+[INFO] Total time:  23.183 s
+[INFO] Finished at: 2023-06-10T23:30:37+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1208,13 +1208,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.326 s
-[INFO] Finished at: 2023-06-05T03:30:08+02:00
+[INFO] Total time:  1.312 s
+[INFO] Finished at: 2023-06-10T23:30:41+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
@@ -1246,7 +1246,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1259,8 +1259,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.409 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.304 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.406 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.425 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <750.0> but was: <3145.72802734375>
 	at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:55)
 
@@ -1275,8 +1275,8 @@ org.opentest4j.AssertionFailedError: expected: <750.0> but was: <3145.7280273437
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.688 s
-[INFO] Finished at: 2023-06-05T03:30:34+02:00
+[INFO] Total time:  22.333 s
+[INFO] Finished at: 2023-06-10T23:31:07+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1305,13 +1305,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.389 s
-[INFO] Finished at: 2023-06-05T03:30:38+02:00
+[INFO] Total time:  1.496 s
+[INFO] Finished at: 2023-06-10T23:31:12+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDTrueTypeFont.java to original
@@ -1545,15 +1545,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.759 s
-[INFO] Finished at: 2023-06-05T03:31:22+02:00
+[INFO] Total time:  41.984 s
+[INFO] Finished at: 2023-06-10T23:31:58+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -1578,7 +1578,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1591,64 +1591,21 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 9.11 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 5.248 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:64)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:65)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.356 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:50)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:51)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 0.837 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:79)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:80)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.863 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.513 s
-[INFO] Finished at: 2023-06-05T03:31:47+02:00
+[INFO] Total time:  23.463 s
+[INFO] Finished at: 2023-06-10T23:32:25+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -1665,20 +1622,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.319 s
-[INFO] Finished at: 2023-06-05T03:31:51+02:00
+[INFO] Total time:  1.269 s
+[INFO] Finished at: 2023-06-10T23:32:30+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -1703,7 +1660,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1716,47 +1673,24 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 9.18 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 5.034 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:64)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:65)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.553 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.716 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.569 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <750.0> but was: <0.0>
 	at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:55)
-
-[ERROR] test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 0.897 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:79)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:80)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
 [ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3:55 expected: <750.0> but was: <0.0>
-[ERROR] Errors: 
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.136 s
-[INFO] Finished at: 2023-06-05T03:32:16+02:00
+[INFO] Total time:  24.688 s
+[INFO] Finished at: 2023-06-10T23:32:59+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1785,20 +1719,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.298 s
-[INFO] Finished at: 2023-06-05T03:32:21+02:00
+[INFO] Total time:  1.406 s
+[INFO] Finished at: 2023-06-10T23:33:04+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -1823,7 +1757,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1836,8 +1770,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 9.788 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 5.335 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.516 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[ERROR] test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 5.272 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1846,26 +1780,6 @@ trueTypeFont.getAdvanceWidth(0);
 Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:69)
-
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.926 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:50)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:51)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 0.835 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:79)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:80)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -1877,17 +1791,14 @@ trueTypeFont.getAdvanceWidth(0);
 -> at org.apache.fontbox.ttf.TrueTypeFont.getAdvanceWidth(TrueTypeFont.java:424)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.222 s
-[INFO] Finished at: 2023-06-05T03:32:46+02:00
+[INFO] Total time:  22.280 s
+[INFO] Finished at: 2023-06-10T23:33:30+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1916,20 +1827,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.291 s
-[INFO] Finished at: 2023-06-05T03:32:51+02:00
+[INFO] Total time:  1.352 s
+[INFO] Finished at: 2023-06-10T23:33:35+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -1954,7 +1865,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1967,28 +1878,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 9.308 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 5.24 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:64)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:65)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.487 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:50)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:51)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 0.903 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.461 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[ERROR] test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 0.942 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2008,17 +1899,14 @@ trueTypeFont.getAdvanceWidth(<any integer>);
 -> at org.apache.fontbox.ttf.TrueTypeFont.getAdvanceWidth(TrueTypeFont.java:424)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.934 s
-[INFO] Finished at: 2023-06-05T03:33:16+02:00
+[INFO] Total time:  23.946 s
+[INFO] Finished at: 2023-06-10T23:34:02+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2047,13 +1935,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.294 s
-[INFO] Finished at: 2023-06-05T03:33:21+02:00
+[INFO] Total time:  1.278 s
+[INFO] Finished at: 2023-06-10T23:34:07+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
@@ -2085,7 +1973,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2098,8 +1986,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 9.339 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 5.232 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 9.652 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[ERROR] test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 5.632 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2109,11 +1997,11 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:69)
 
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.52 s  <<< FAILURE!
+[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.451 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <750.0> but was: <0.0>
 	at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:55)
 
-[ERROR] test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 0.853 s  <<< FAILURE!
+[ERROR] test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 0.872 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2146,8 +2034,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.881 s
-[INFO] Finished at: 2023-06-05T03:33:46+02:00
+[INFO] Total time:  22.505 s
+[INFO] Finished at: 2023-06-10T23:34:33+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2176,13 +2064,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.306 s
-[INFO] Finished at: 2023-06-05T03:33:51+02:00
+[INFO] Total time:  1.435 s
+[INFO] Finished at: 2023-06-10T23:34:38+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDTrueTypeFont.java to original
@@ -2416,15 +2304,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.929 s
-[INFO] Finished at: 2023-06-05T03:34:34+02:00
+[INFO] Total time:  41.779 s
+[INFO] Finished at: 2023-06-10T23:35:23+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -2449,7 +2337,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2462,64 +2350,21 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 8.915 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 4.973 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:64)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:65)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.401 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:50)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:51)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 0.827 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:79)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:80)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.076 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.655 s
-[INFO] Finished at: 2023-06-05T03:34:58+02:00
+[INFO] Total time:  23.966 s
+[INFO] Finished at: 2023-06-10T23:35:51+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -2536,20 +2381,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.300 s
-[INFO] Finished at: 2023-06-05T03:35:03+02:00
+[INFO] Total time:  1.396 s
+[INFO] Finished at: 2023-06-10T23:35:56+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -2574,7 +2419,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2587,47 +2432,24 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 8.964 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 5.08 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:64)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:65)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.35 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.455 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.587 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <750.0> but was: <0.10000000149011612>
 	at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:55)
-
-[ERROR] test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 0.872 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:79)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:80)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
 [ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3:55 expected: <750.0> but was: <0.10000000149011612>
-[ERROR] Errors: 
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.584 s
-[INFO] Finished at: 2023-06-05T03:35:28+02:00
+[INFO] Total time:  21.617 s
+[INFO] Finished at: 2023-06-10T23:36:21+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2656,20 +2478,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.279 s
-[INFO] Finished at: 2023-06-05T03:35:32+02:00
+[INFO] Total time:  1.304 s
+[INFO] Finished at: 2023-06-10T23:36:26+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -2694,7 +2516,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2707,8 +2529,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 9.592 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 5.163 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.434 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[ERROR] test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 5.365 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2717,26 +2539,6 @@ trueTypeFont.getAdvanceWidth(0);
 Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:69)
-
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.85 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:50)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:51)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 0.876 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:79)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:80)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -2748,17 +2550,14 @@ trueTypeFont.getAdvanceWidth(0);
 -> at org.apache.fontbox.ttf.TrueTypeFont.getAdvanceWidth(TrueTypeFont.java:424)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.140 s
-[INFO] Finished at: 2023-06-05T03:35:58+02:00
+[INFO] Total time:  23.316 s
+[INFO] Finished at: 2023-06-10T23:36:53+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2787,20 +2586,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.256 s
-[INFO] Finished at: 2023-06-05T03:36:02+02:00
+[INFO] Total time:  1.620 s
+[INFO] Finished at: 2023-06-10T23:36:58+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -2825,7 +2624,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2838,28 +2637,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 9.516 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 5.48 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:64)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:65)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.507 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:50)
-  2. -> at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:51)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 0.831 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.184 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[ERROR] test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 0.886 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2879,17 +2658,14 @@ trueTypeFont.getAdvanceWidth(<any integer>);
 -> at org.apache.fontbox.ttf.TrueTypeFont.getAdvanceWidth(TrueTypeFont.java:424)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
-[ERROR]   TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.152 s
-[INFO] Finished at: 2023-06-05T03:36:28+02:00
+[INFO] Total time:  21.679 s
+[INFO] Finished at: 2023-06-10T23:37:24+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2918,13 +2694,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.365 s
-[INFO] Finished at: 2023-06-05T03:36:33+02:00
+[INFO] Total time:  1.602 s
+[INFO] Finished at: 2023-06-10T23:37:29+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
@@ -2956,7 +2732,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2969,8 +2745,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 9.231 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 5.371 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 9.868 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[ERROR] test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 5.403 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2980,11 +2756,11 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_PO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:69)
 
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.28 s  <<< FAILURE!
+[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.894 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <750.0> but was: <0.10000000149011612>
 	at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:55)
 
-[ERROR] test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 0.851 s  <<< FAILURE!
+[ERROR] test_getWidthFromFont_CO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 0.862 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -3017,8 +2793,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.151 s
-[INFO] Finished at: 2023-06-05T03:36:57+02:00
+[INFO] Total time:  22.932 s
+[INFO] Finished at: 2023-06-10T23:37:55+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3047,13 +2823,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.284 s
-[INFO] Finished at: 2023-06-05T03:37:02+02:00
+[INFO] Total time:  1.478 s
+[INFO] Finished at: 2023-06-10T23:38:00+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDTrueTypeFont.java to original
@@ -3287,15 +3063,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.243 s
-[INFO] Finished at: 2023-06-05T03:37:45+02:00
+[INFO] Total time:  43.695 s
+[INFO] Finished at: 2023-06-10T23:38:48+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -3320,7 +3096,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3333,7 +3109,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.129 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.676 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -3345,8 +3121,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.485 s
-[INFO] Finished at: 2023-06-05T03:38:11+02:00
+[INFO] Total time:  24.900 s
+[INFO] Finished at: 2023-06-10T23:39:16+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -3364,20 +3140,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.492 s
-[INFO] Finished at: 2023-06-05T03:38:16+02:00
+[INFO] Total time:  1.346 s
+[INFO] Finished at: 2023-06-10T23:39:21+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -3402,7 +3178,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3415,8 +3191,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.197 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.616 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.107 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.351 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <750.0> but was: <1536.0>
 	at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:55)
 
@@ -3431,8 +3207,8 @@ org.opentest4j.AssertionFailedError: expected: <750.0> but was: <1536.0>
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.662 s
-[INFO] Finished at: 2023-06-05T03:38:42+02:00
+[INFO] Total time:  21.627 s
+[INFO] Finished at: 2023-06-10T23:39:46+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3461,20 +3237,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.289 s
-[INFO] Finished at: 2023-06-05T03:38:46+02:00
+[INFO] Total time:  1.321 s
+[INFO] Finished at: 2023-06-10T23:39:51+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -3499,7 +3275,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3512,7 +3288,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.073 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.584 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -3524,8 +3300,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.443 s
-[INFO] Finished at: 2023-06-05T03:39:13+02:00
+[INFO] Total time:  24.305 s
+[INFO] Finished at: 2023-06-10T23:40:19+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -3543,20 +3319,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.321 s
-[INFO] Finished at: 2023-06-05T03:39:18+02:00
+[INFO] Total time:  1.399 s
+[INFO] Finished at: 2023-06-10T23:40:24+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -3581,7 +3357,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3594,7 +3370,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.089 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.099 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -3606,8 +3382,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.471 s
-[INFO] Finished at: 2023-06-05T03:39:45+02:00
+[INFO] Total time:  23.480 s
+[INFO] Finished at: 2023-06-10T23:40:51+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -3625,13 +3401,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.306 s
-[INFO] Finished at: 2023-06-05T03:39:49+02:00
+[INFO] Total time:  1.418 s
+[INFO] Finished at: 2023-06-10T23:40:56+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
@@ -3663,7 +3439,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3676,8 +3452,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.732 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.342 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.07 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.837 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <750.0> but was: <1536.0>
 	at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:55)
 
@@ -3692,8 +3468,8 @@ org.opentest4j.AssertionFailedError: expected: <750.0> but was: <1536.0>
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.336 s
-[INFO] Finished at: 2023-06-05T03:40:14+02:00
+[INFO] Total time:  23.097 s
+[INFO] Finished at: 2023-06-10T23:41:23+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3722,13 +3498,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.259 s
-[INFO] Finished at: 2023-06-05T03:40:18+02:00
+[INFO] Total time:  1.307 s
+[INFO] Finished at: 2023-06-10T23:41:27+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDTrueTypeFont.java to original
@@ -3962,15 +3738,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.682 s
-[INFO] Finished at: 2023-06-05T03:41:02+02:00
+[INFO] Total time:  42.257 s
+[INFO] Finished at: 2023-06-10T23:42:14+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -3995,7 +3771,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4008,7 +3784,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.163 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.204 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4020,8 +3796,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.966 s
-[INFO] Finished at: 2023-06-05T03:41:28+02:00
+[INFO] Total time:  25.804 s
+[INFO] Finished at: 2023-06-10T23:42:43+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4039,20 +3815,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.339 s
-[INFO] Finished at: 2023-06-05T03:41:33+02:00
+[INFO] Total time:  1.289 s
+[INFO] Finished at: 2023-06-10T23:42:48+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -4077,7 +3853,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4090,8 +3866,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.82 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.277 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.6 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.471 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <750.0> but was: <3.145728E9>
 	at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:55)
 
@@ -4106,8 +3882,8 @@ org.opentest4j.AssertionFailedError: expected: <750.0> but was: <3.145728E9>
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.161 s
-[INFO] Finished at: 2023-06-05T03:41:57+02:00
+[INFO] Total time:  22.352 s
+[INFO] Finished at: 2023-06-10T23:43:14+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4136,20 +3912,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.410 s
-[INFO] Finished at: 2023-06-05T03:42:02+02:00
+[INFO] Total time:  1.318 s
+[INFO] Finished at: 2023-06-10T23:43:19+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -4174,7 +3950,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4187,7 +3963,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.49 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.923 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4199,8 +3975,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.835 s
-[INFO] Finished at: 2023-06-05T03:42:29+02:00
+[INFO] Total time:  24.369 s
+[INFO] Finished at: 2023-06-10T23:43:47+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4218,20 +3994,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.284 s
-[INFO] Finished at: 2023-06-05T03:42:34+02:00
+[INFO] Total time:  1.310 s
+[INFO] Finished at: 2023-06-10T23:43:52+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDTrueTypeFontRickGen']
 [INFO] Scanning for projects...
@@ -4256,7 +4032,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4269,7 +4045,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.18 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.294 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4281,8 +4057,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.142 s
-[INFO] Finished at: 2023-06-05T03:43:00+02:00
+[INFO] Total time:  25.230 s
+[INFO] Finished at: 2023-06-10T23:44:21+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4300,13 +4076,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.465 s
-[INFO] Finished at: 2023-06-05T03:43:05+02:00
+[INFO] Total time:  1.335 s
+[INFO] Finished at: 2023-06-10T23:44:26+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDTrueTypeFont.java/original-test.java
 [LOG] Invoking cp ./PDTrueTypeFont.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDTrueTypeFontRickGen.java
@@ -4338,7 +4114,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4351,8 +4127,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.129 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
-[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.483 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.577 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[ERROR] test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3  Time elapsed: 2.501 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <750.0> but was: <3.145728E9>
 	at org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen.test_getWidthFromFont_OO_117429ea5b5c49138fef41471eaed9a3(TestPDTrueTypeFontRickGen.java:55)
 
@@ -4367,8 +4143,8 @@ org.opentest4j.AssertionFailedError: expected: <750.0> but was: <3.145728E9>
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.531 s
-[INFO] Finished at: 2023-06-05T03:43:30+02:00
+[INFO] Total time:  22.236 s
+[INFO] Finished at: 2023-06-10T23:44:52+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4397,22 +4173,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.283 s
-[INFO] Finished at: 2023-06-05T03:43:35+02:00
+[INFO] Total time:  1.326 s
+[INFO] Finished at: 2023-06-10T23:44:57+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDTrueTypeFont.java to original
 [LOG] Invoking cp ./PDTrueTypeFont.java/original.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDTrueTypeFont.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/PDTrueTypeFont.java', '/home/dee/dev/rick-major-review/finches/output/getWidthFromFont_int/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/PDTrueTypeFont.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/getWidthFromFont_int/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-05 03:43:35.348331
+[LOG] Finishing analysis at 2023-06-10 23:44:57.445110
 ====== END OF THE LINE ======

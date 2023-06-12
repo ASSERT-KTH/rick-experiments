@@ -37,7 +37,7 @@ public class TestVirtualEdgeIteratorStateRickGenGetReverse {
         // Arrange
         VirtualEdgeIteratorState receivingObject = deserializeObjectFromFile("com.graphhopper.routing.querygraph.VirtualEdgeIteratorState.getReverse_com.graphhopper.routing.ev.BooleanEncodedValue1-receiving.xml");
         BooleanEncodedValue mockBooleanEncodedValue = Mockito.mock(BooleanEncodedValue.class);
-        Mockito.when(mockBooleanEncodedValue.getBool(eq(false),   any(com.graphhopper.storage.IntsRef.class))).thenReturn(true);
+        Mockito.lenient().when(mockBooleanEncodedValue.getBool(eq(false),   any(com.graphhopper.storage.IntsRef.class))).thenReturn(true);
         // Act
         boolean actual = receivingObject.getReverse(mockBooleanEncodedValue);
         // Assert
@@ -50,7 +50,7 @@ public class TestVirtualEdgeIteratorStateRickGenGetReverse {
         // Arrange
         VirtualEdgeIteratorState receivingObject = deserializeObjectFromFile("com.graphhopper.routing.querygraph.VirtualEdgeIteratorState.getReverse_com.graphhopper.routing.ev.BooleanEncodedValue1-receiving.xml");
         BooleanEncodedValue mockBooleanEncodedValue = Mockito.mock(BooleanEncodedValue.class);
-        Mockito.when(mockBooleanEncodedValue.getBool(eq(false),   any(com.graphhopper.storage.IntsRef.class))).thenReturn(true);
+        Mockito.lenient().when(mockBooleanEncodedValue.getBool(eq(false),   any(com.graphhopper.storage.IntsRef.class))).thenReturn(true);
         // Act
         receivingObject.getReverse(mockBooleanEncodedValue);
         // Assert
@@ -63,7 +63,7 @@ public class TestVirtualEdgeIteratorStateRickGenGetReverse {
         // Arrange
         VirtualEdgeIteratorState receivingObject = deserializeObjectFromFile("com.graphhopper.routing.querygraph.VirtualEdgeIteratorState.getReverse_com.graphhopper.routing.ev.BooleanEncodedValue1-receiving.xml");
         BooleanEncodedValue mockBooleanEncodedValue = Mockito.mock(BooleanEncodedValue.class);
-        Mockito.when(mockBooleanEncodedValue.getBool(eq(false),   any(com.graphhopper.storage.IntsRef.class))).thenReturn(true);
+        Mockito.lenient().when(mockBooleanEncodedValue.getBool(eq(false),   any(com.graphhopper.storage.IntsRef.class))).thenReturn(true);
         // Act
         receivingObject.getReverse(mockBooleanEncodedValue);
         // Assert

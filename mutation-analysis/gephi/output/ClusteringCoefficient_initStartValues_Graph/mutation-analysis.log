@@ -1,0 +1,2219 @@
+[LOG] Initiating analysis at 2023-06-11 20:25:32.040118
+---------------------------------------------------
+[LOG] Removing pre-existing mutants from current working directory
+[LOG] Cleaning up LittleDarwin results
+---------------------------------------------------
+[LOG] Working with ClusteringCoefficient_initStartValues_Graph
+[LOG] Generating mutants for its parent ClusteringCoefficient.java
+---------------------------------------------------
+[LOG] Running littledarwin on /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/
+[LOG] Invoked LitteDarwin with ['python3', '-m', 'littledarwin', '-m', '-v', '-p', '/home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/', '--all']
+
+    __     _  __   __   __       ____                          _
+   / /    (_)/ /_ / /_ / /___   / __ \ ____ _ _____ _      __ (_)____
+  / /    / // __// __// // _ \ / / / // __ `// ___/| | /| / // // __ \
+ / /___ / // /_ / /_ / //  __// /_/ // /_/ // /    | |/ |/ // // / / /
+/_____//_/ \__/ \__//_/ \___//_____/ \__,_//_/     |__/|__//_//_/ /_/
+
+      _                     _                 ___
+     /_|  /|/|  _/__/'     /_|   _ /   _ ' _ (_  _ _ _  _      _ /
+    (  | /   |(//(///()/) (  |/)(/((/_) /_)  /  / (///)(-((/()/ /(
+                                  /
+
+
+    LittleDarwin version 0.10.7 Copyright (C) 2014-2020 Ali Parsai
+
+    LittleDarwin comes with ABSOLUTELY NO WARRANTY.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; run LittleDarwin --license for details.
+
+    
+Source Path:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin
+Target Path:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults
+Creating Mutation Database:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults/mutationdatabase
+
+(1/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/WeightedDegree.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  52
+----> AssignmentOperatorReplacementShortcut : 5
+----> NullifyObjectInitialization : 9
+----> RemoveMethod : 17
+----> ArithmeticOperatorReplacementBinary : 7
+----> ConditionalOperatorDeletion : 7
+----> NullifyInputVariable : 5
+----> NullifyReturnValue : 2
+
+(2/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/GraphDistance.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  119
+----> AssignmentOperatorReplacementShortcut : 10
+----> NullifyObjectInitialization : 11
+----> RemoveNullCheck : 2
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 31
+----> RelationalOperatorReplacement : 11
+----> ArithmeticOperatorReplacementShortcut : 6
+----> ArithmeticOperatorReplacementBinary : 13
+----> ConditionalOperatorDeletion : 8
+----> NullifyInputVariable : 19
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 6
+
+(3/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  338
+----> AssignmentOperatorReplacementShortcut : 71
+----> NullifyObjectInitialization : 29
+----> RemoveNullCheck : 3
+----> ConditionalOperatorReplacement : 5
+----> RemoveMethod : 39
+----> RelationalOperatorReplacement : 37
+----> ArithmeticOperatorReplacementShortcut : 11
+----> ArithmeticOperatorReplacementBinary : 108
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 22
+----> ArithmeticOperatorReplacementUnary : 4
+----> NullifyReturnValue : 8
+
+(4/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/GraphDensity.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  24
+----> NullifyObjectInitialization : 1
+----> RemoveNullCheck : 2
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 10
+----> RelationalOperatorReplacement : 2
+----> ArithmeticOperatorReplacementBinary : 4
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 1
+
+(5/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Degree.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  59
+----> AssignmentOperatorReplacementShortcut : 2
+----> NullifyObjectInitialization : 9
+----> RemoveMethod : 23
+----> ArithmeticOperatorReplacementBinary : 5
+----> ConditionalOperatorDeletion : 7
+----> NullifyInputVariable : 11
+----> NullifyReturnValue : 2
+
+(6/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/PageRank.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  99
+----> AssignmentOperatorReplacementShortcut : 7
+----> NullifyObjectInitialization : 8
+----> RemoveNullCheck : 3
+----> ConditionalOperatorReplacement : 2
+----> RemoveMethod : 31
+----> RelationalOperatorReplacement : 6
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 11
+----> ConditionalOperatorDeletion : 3
+----> NullifyInputVariable : 21
+----> NullifyReturnValue : 5
+
+(7/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Hits.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  83
+----> AssignmentOperatorReplacementShortcut : 4
+----> NullifyObjectInitialization : 7
+----> RemoveNullCheck : 2
+----> ConditionalOperatorReplacement : 4
+----> RemoveMethod : 22
+----> RelationalOperatorReplacement : 11
+----> ArithmeticOperatorReplacementShortcut : 6
+----> ArithmeticOperatorReplacementBinary : 8
+----> ConditionalOperatorDeletion : 5
+----> NullifyInputVariable : 12
+----> NullifyReturnValue : 2
+
+(8/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/EigenvectorCentrality.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  76
+----> AssignmentOperatorReplacementShortcut : 2
+----> NullifyObjectInitialization : 5
+----> RemoveNullCheck : 5
+----> ConditionalOperatorReplacement : 2
+----> RemoveMethod : 22
+----> RelationalOperatorReplacement : 11
+----> ArithmeticOperatorReplacementShortcut : 6
+----> ArithmeticOperatorReplacementBinary : 4
+----> NullifyInputVariable : 17
+----> NullifyReturnValue : 2
+
+(9/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  212
+----> AssignmentOperatorReplacementShortcut : 15
+----> NullifyObjectInitialization : 29
+----> RemoveNullCheck : 11
+----> ConditionalOperatorReplacement : 4
+----> RemoveMethod : 43
+----> RelationalOperatorReplacement : 34
+----> ArithmeticOperatorReplacementShortcut : 9
+----> ArithmeticOperatorReplacementBinary : 42
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 18
+----> NullifyReturnValue : 6
+
+(10/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ConnectedComponents.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  103
+----> NullifyObjectInitialization : 12
+----> RemoveNullCheck : 5
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 27
+----> RelationalOperatorReplacement : 15
+----> ArithmeticOperatorReplacementShortcut : 7
+----> ArithmeticOperatorReplacementBinary : 1
+----> ConditionalOperatorDeletion : 2
+----> NullifyInputVariable : 24
+----> ArithmeticOperatorReplacementUnary : 1
+----> NullifyReturnValue : 8
+
+(11/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ClusteringCoefficient.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  267
+----> AssignmentOperatorReplacementShortcut : 12
+----> NullifyObjectInitialization : 14
+----> RemoveNullCheck : 8
+----> ConditionalOperatorReplacement : 5
+----> RemoveMethod : 56
+----> RelationalOperatorReplacement : 52
+----> ArithmeticOperatorReplacementShortcut : 34
+----> ArithmeticOperatorReplacementBinary : 23
+----> ConditionalOperatorDeletion : 4
+----> NullifyInputVariable : 38
+----> ArithmeticOperatorReplacementUnary : 8
+----> NullifyReturnValue : 13
+
+(12/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ChartUtils.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  26
+----> NullifyObjectInitialization : 5
+----> RemoveMethod : 5
+----> ArithmeticOperatorReplacementBinary : 5
+----> NullifyInputVariable : 7
+----> ArithmeticOperatorReplacementUnary : 2
+----> NullifyReturnValue : 2
+
+(13/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ColumnUtils.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> RemoveNullCheck : 1
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 1
+----> RelationalOperatorReplacement : 1
+----> ConditionalOperatorDeletion : 1
+----> NullifyInputVariable : 3
+
+(14/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/builder/PageRankBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+----> NullifyReturnValue : 3
+
+(15/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/builder/ModularityBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+----> NullifyReturnValue : 3
+
+(16/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/builder/HitsBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+----> NullifyReturnValue : 3
+
+(17/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/builder/StatisticalInferenceBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+----> NullifyReturnValue : 3
+
+(18/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/builder/WeightedDegreeBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+----> NullifyReturnValue : 3
+
+(19/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/builder/ConnectedComponentsBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+----> NullifyReturnValue : 3
+
+(20/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/builder/ClusteringCoefficientBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+----> NullifyReturnValue : 3
+
+(21/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/builder/DensityBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+----> NullifyReturnValue : 3
+
+(22/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/builder/DegreeBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+----> NullifyReturnValue : 3
+
+(23/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/builder/EigenvectorCentralityBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+----> NullifyReturnValue : 3
+
+(24/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/builder/GraphDistanceBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+----> NullifyReturnValue : 3
+
+(25/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/dynamic/DynamicClusteringCoefficient.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  46
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 5
+----> RemoveNullCheck : 3
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 22
+----> RelationalOperatorReplacement : 3
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 1
+----> ConditionalOperatorDeletion : 2
+----> NullifyInputVariable : 5
+----> NullifyReturnValue : 2
+
+(26/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/dynamic/DynamicNbEdges.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  23
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 3
+----> RemoveMethod : 13
+----> NullifyInputVariable : 4
+----> NullifyReturnValue : 2
+
+(27/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/dynamic/DynamicDegree.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  54
+----> AssignmentOperatorReplacementShortcut : 2
+----> NullifyObjectInitialization : 6
+----> RemoveNullCheck : 5
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 22
+----> RelationalOperatorReplacement : 5
+----> ArithmeticOperatorReplacementBinary : 4
+----> ConditionalOperatorDeletion : 2
+----> NullifyInputVariable : 5
+----> NullifyReturnValue : 2
+
+(28/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/dynamic/DynamicNbNodes.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  23
+----> AssignmentOperatorReplacementShortcut : 1
+----> NullifyObjectInitialization : 3
+----> RemoveMethod : 13
+----> NullifyInputVariable : 4
+----> NullifyReturnValue : 2
+
+(29/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/dynamic/builder/DynamicClusteringCoefficientBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+----> NullifyReturnValue : 3
+
+(30/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/dynamic/builder/DynamicNbNodesBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+----> NullifyReturnValue : 3
+
+(31/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/dynamic/builder/DynamicNbEdgesBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+----> NullifyReturnValue : 3
+
+(32/32) Source file:  /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/dynamic/builder/DynamicDegreeBuilder.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  8
+----> NullifyObjectInitialization : 1
+----> RemoveMethod : 4
+----> NullifyReturnValue : 3
+
+Total mutations found:  1732
+--> AssignmentOperatorReplacementShortcut: 133
+--> NullifyObjectInitialization: 171
+--> RemoveNullCheck: 50
+--> ConditionalOperatorReplacement: 28
+--> RemoveMethod: 457
+--> RelationalOperatorReplacement: 188
+--> ArithmeticOperatorReplacementShortcut: 82
+--> ArithmeticOperatorReplacementBinary: 236
+--> ConditionalOperatorDeletion: 44
+--> NullifyInputVariable: 217
+--> ArithmeticOperatorReplacementUnary: 16
+--> NullifyReturnValue: 110
+
+
+---------------------------------------------------
+[LOG] Copying mutants of ClusteringCoefficient.java
+---------------------------------------------------
+[LOG] Generated 267 mutants
+---------------------------------------------------
+[LOG] Backing up original RICK test as ./ClusteringCoefficient.java/original-test.java
+[LOG] Invoking cp /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/statistics/plugin/TestClusteringCoefficientRickGen.java ./ClusteringCoefficient.java/original-test.java
+---------------------------------------------------
+[LOG] Generating variants of original RICK test
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/ClusteringCoefficient_initStartValues_Graph/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/ClusteringCoefficient_initStartValues_Graph/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/ClusteringCoefficient_initStartValues_Graph/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/ClusteringCoefficient_initStartValues_Graph/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/ClusteringCoefficient_initStartValues_Graph/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/ClusteringCoefficient_initStartValues_Graph/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/ClusteringCoefficient_initStartValues_Graph/test-all.java
+---------------------------------------------------
+[LOG] Replacing originalClusteringCoefficient.java with ./ClusteringCoefficient.java/237.java
+[LOG] Invoking cp ./ClusteringCoefficient.java/237.java /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ClusteringCoefficient.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.gephi:statistics-plugin >---------------------
+[INFO] Building StatisticsPlugin 0.9.6
+[INFO] --------------------------------[ nbm ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ statistics-plugin ---
+[INFO] Deleting /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.3.0:parse-version (parse-version) @ statistics-plugin ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.2:check (validate) @ statistics-plugin ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:copy-resources (generate-modules-xml) @ statistics-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ statistics-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 64 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.0:compile (default-compile) @ statistics-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 32 source files to /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target/classes
+[WARNING] No processor claimed any of these annotations: java.base/java.lang.Override
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/EigenvectorCentrality.java:[163,96] [deprecation] Double(double) in Double has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ChartUtils.java:[107,42] [rawtypes] found raw type: Map
+  missing type arguments for generic class Map<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Map
+    V extends Object declared in interface Map
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ChartUtils.java:[109,13] [rawtypes] found raw type: Iterator
+  missing type arguments for generic class Iterator<E>
+  where E is a type-variable:
+    E extends Object declared in interface Iterator
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ChartUtils.java:[110,15] [rawtypes] found raw type: Entry
+  missing type arguments for generic class Entry<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Entry
+    V extends Object declared in interface Entry
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[427,40] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[427,36] [unchecked] unchecked conversion
+  required: HashMap<Modularity.Community,Float>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[428,39] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[428,35] [unchecked] unchecked conversion
+  required: HashMap<Modularity.Community,Integer>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[431,27] [rawtypes] found raw type: ArrayList
+  missing type arguments for generic class ArrayList<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[431,23] [unchecked] unchecked conversion
+  required: List<Modularity.ModEdge>[]
+  found:    ArrayList[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[651,51] [rawtypes] found raw type: ArrayList
+  missing type arguments for generic class ArrayList<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[651,47] [unchecked] unchecked conversion
+  required: ArrayList<Modularity.ModEdge>[]
+  found:    ArrayList[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[654,40] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[654,36] [unchecked] unchecked conversion
+  required: HashMap<Modularity.Community,Float>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[655,39] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[655,35] [unchecked] unchecked conversion
+  required: HashMap<Modularity.Community,Integer>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/PageRank.java:[160,82] [deprecation] Double(double) in Double has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/dynamic/DynamicDegree.java:[116,12] [rawtypes] found raw type: Class
+  missing type arguments for generic class Class<T>
+  where T is a type-variable:
+    T extends Object declared in class Class
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ClusteringCoefficient.java:[118,30] [rawtypes] found raw type: Comparable
+  missing type arguments for generic class Comparable<T>
+  where T is a type-variable:
+    T extends Object declared in interface Comparable
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ClusteringCoefficient.java:[678,102] [deprecation] Double(double) in Double has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[604,40] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[604,36] [unchecked] unchecked conversion
+  required: HashMap<Community,Float>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[608,39] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[608,35] [unchecked] unchecked conversion
+  required: HashMap<Community,Integer>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[616,27] [rawtypes] found raw type: ArrayList
+  missing type arguments for generic class ArrayList<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[616,23] [unchecked] unchecked conversion
+  required: List<ComputationEdge>[]
+  found:    ArrayList[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[846,59] [rawtypes] found raw type: ArrayList
+  missing type arguments for generic class ArrayList<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[846,55] [unchecked] unchecked conversion
+  required: ArrayList<ComputationEdge>[]
+  found:    ArrayList[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[852,40] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[852,36] [unchecked] unchecked conversion
+  required: HashMap<Community,Float>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[853,39] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[853,35] [unchecked] unchecked conversion
+  required: HashMap<Community,Integer>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/GraphDistance.java:[226,39] [rawtypes] found raw type: LinkedList
+  missing type arguments for generic class LinkedList<E>
+  where E is a type-variable:
+    E extends Object declared in class LinkedList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/GraphDistance.java:[226,35] [unchecked] unchecked conversion
+  required: LinkedList<Node>[]
+  found:    LinkedList[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/GraphDistance.java:[332,76] [deprecation] Double(double) in Double has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/GraphDistance.java:[335,81] [deprecation] Double(double) in Double has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/GraphDistance.java:[338,99] [deprecation] Double(double) in Double has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/GraphDistance.java:[341,85] [deprecation] Double(double) in Double has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ColumnUtils.java:[16,69] [rawtypes] found raw type: Class
+  missing type arguments for generic class Class<T>
+  where T is a type-variable:
+    T extends Object declared in class Class
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/dynamic/DynamicClusteringCoefficient.java:[114,12] [rawtypes] found raw type: Class
+  missing type arguments for generic class Class<T>
+  where T is a type-variable:
+    T extends Object declared in class Class
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Hits.java:[163,69] [deprecation] Float(float) in Float has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Hits.java:[166,57] [deprecation] Float(float) in Float has been deprecated
+[INFO] 
+[INFO] --- nbm-maven-plugin:4.6:manifest (default-manifest) @ statistics-plugin ---
+[INFO] NBM Plugin generates manifest
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ statistics-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.0:testCompile (default-testCompile) @ statistics-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 13 source files to /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[69,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[69,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[70,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[70,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[92,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[92,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[93,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[93,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[116,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[116,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[117,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[117,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[140,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[140,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[141,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[141,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[190,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[190,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[191,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[191,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[241,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[241,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[242,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[242,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[290,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[290,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[291,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[291,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[314,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[314,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[315,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[315,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[363,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[363,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[364,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[364,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[409,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[409,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[410,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[410,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[436,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[436,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[437,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[437,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[31,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[31,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[48,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[48,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[66,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[66,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[84,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[84,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[102,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[102,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[160,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[160,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[218,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[218,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[268,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[268,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[290,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[290,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[336,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[336,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[378,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[378,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[420,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[420,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[462,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[462,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[846,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[865,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[884,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[903,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[922,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[941,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[960,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[979,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[998,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1017,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1039,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1061,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1083,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1102,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1121,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1140,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1194,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1249,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1305,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1360,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1421,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1476,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1535,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1592,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1651,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1671,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1690,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1712,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1734,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1756,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ statistics-plugin ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.2:jar (default-jar) @ statistics-plugin ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target/statistics-plugin-0.9.6.jar
+[INFO] 
+[INFO] --- nbm-maven-plugin:4.6:nbm (default-nbm) @ statistics-plugin ---
+[INFO] Copying module JAR to /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target/nbm/clusters/gephi/modules
+[INFO] Generating Auto Update information for org.gephi.statistics.plugin
+[WARNING] No updater.jar specified, cannot validate Info.xml against DTD
+[INFO] Building jar: /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target/nbm/statistics-plugin-0.9.6.nbm
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ statistics-plugin ---
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target/statistics-plugin-0.9.6.jar to /home/dee/.m2/repository/org/gephi/statistics-plugin/0.9.6/statistics-plugin-0.9.6.jar
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/pom.xml to /home/dee/.m2/repository/org/gephi/statistics-plugin/0.9.6/statistics-plugin-0.9.6.pom
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target/statistics-plugin-0.9.6.nbm to /home/dee/.m2/repository/org/gephi/statistics-plugin/0.9.6/statistics-plugin-0.9.6.nbm
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  38.166 s
+[INFO] Finished at: 2023-06-11T20:27:03+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/ClusteringCoefficient_initStartValues_Graph/test-baseline.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/statistics/plugin/TestClusteringCoefficientRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestClusteringCoefficientRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 5.46 s <<< FAILURE! - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc  Time elapsed: 4.534 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:37)
+
+[ERROR] test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc  Time elapsed: 0.022 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:50)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc:50 » NullPointer
+[ERROR]   TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc:37 » NullPointer
+[INFO] 
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  25.396 s
+[INFO] Finished at: 2023-06-11T20:27:33+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.019 s
+[INFO] Finished at: 2023-06-11T20:27:38+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./ClusteringCoefficient.java/original-test.java
+[LOG] Invoking cp ./ClusteringCoefficient.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/statistics/plugin/TestClusteringCoefficientRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/ClusteringCoefficient_initStartValues_Graph/test-po.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/statistics/plugin/TestClusteringCoefficientRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestClusteringCoefficientRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 5.51 s <<< FAILURE! - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc  Time elapsed: 4.334 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:37)
+
+[ERROR] test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc  Time elapsed: 0.016 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:50)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc:50 » NullPointer
+[ERROR]   TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc:37 » NullPointer
+[INFO] 
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  25.571 s
+[INFO] Finished at: 2023-06-11T20:28:08+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.258 s
+[INFO] Finished at: 2023-06-11T20:28:13+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./ClusteringCoefficient.java/original-test.java
+[LOG] Invoking cp ./ClusteringCoefficient.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/statistics/plugin/TestClusteringCoefficientRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/ClusteringCoefficient_initStartValues_Graph/test-co.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/statistics/plugin/TestClusteringCoefficientRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestClusteringCoefficientRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 5.445 s <<< FAILURE! - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc  Time elapsed: 4.638 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:37)
+
+[ERROR] test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc  Time elapsed: 0.018 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:50)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc:50 » NullPointer
+[ERROR]   TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc:37 » NullPointer
+[INFO] 
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  22.371 s
+[INFO] Finished at: 2023-06-11T20:28:40+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.072 s
+[INFO] Finished at: 2023-06-11T20:28:45+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./ClusteringCoefficient.java/original-test.java
+[LOG] Invoking cp ./ClusteringCoefficient.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/statistics/plugin/TestClusteringCoefficientRickGen.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./ClusteringCoefficient.java/original-test.java
+[LOG] Invoking cp ./ClusteringCoefficient.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/statistics/plugin/TestClusteringCoefficientRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestClusteringCoefficientRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 5.614 s <<< FAILURE! - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc  Time elapsed: 4.694 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:37)
+
+[ERROR] test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc  Time elapsed: 0.023 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:50)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc:50 » NullPointer
+[ERROR]   TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc:37 » NullPointer
+[INFO] 
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  24.574 s
+[INFO] Finished at: 2023-06-11T20:29:14+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.051 s
+[INFO] Finished at: 2023-06-11T20:29:19+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting ClusteringCoefficient.java to original
+[LOG] Invoking cp ./ClusteringCoefficient.java/original.java /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ClusteringCoefficient.java
+---------------------------------------------------
+[LOG] Replacing originalClusteringCoefficient.java with ./ClusteringCoefficient.java/74.java
+[LOG] Invoking cp ./ClusteringCoefficient.java/74.java /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ClusteringCoefficient.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.gephi:statistics-plugin >---------------------
+[INFO] Building StatisticsPlugin 0.9.6
+[INFO] --------------------------------[ nbm ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ statistics-plugin ---
+[INFO] Deleting /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.3.0:parse-version (parse-version) @ statistics-plugin ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.2:check (validate) @ statistics-plugin ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:copy-resources (generate-modules-xml) @ statistics-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ statistics-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 64 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.0:compile (default-compile) @ statistics-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 32 source files to /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target/classes
+[WARNING] No processor claimed any of these annotations: java.base/java.lang.Override
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/EigenvectorCentrality.java:[163,96] [deprecation] Double(double) in Double has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ChartUtils.java:[107,42] [rawtypes] found raw type: Map
+  missing type arguments for generic class Map<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Map
+    V extends Object declared in interface Map
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ChartUtils.java:[109,13] [rawtypes] found raw type: Iterator
+  missing type arguments for generic class Iterator<E>
+  where E is a type-variable:
+    E extends Object declared in interface Iterator
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ChartUtils.java:[110,15] [rawtypes] found raw type: Entry
+  missing type arguments for generic class Entry<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Entry
+    V extends Object declared in interface Entry
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[427,40] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[427,36] [unchecked] unchecked conversion
+  required: HashMap<Modularity.Community,Float>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[428,39] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[428,35] [unchecked] unchecked conversion
+  required: HashMap<Modularity.Community,Integer>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[431,27] [rawtypes] found raw type: ArrayList
+  missing type arguments for generic class ArrayList<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[431,23] [unchecked] unchecked conversion
+  required: List<Modularity.ModEdge>[]
+  found:    ArrayList[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[651,51] [rawtypes] found raw type: ArrayList
+  missing type arguments for generic class ArrayList<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[651,47] [unchecked] unchecked conversion
+  required: ArrayList<Modularity.ModEdge>[]
+  found:    ArrayList[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[654,40] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[654,36] [unchecked] unchecked conversion
+  required: HashMap<Modularity.Community,Float>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[655,39] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Modularity.java:[655,35] [unchecked] unchecked conversion
+  required: HashMap<Modularity.Community,Integer>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/PageRank.java:[160,82] [deprecation] Double(double) in Double has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/dynamic/DynamicDegree.java:[116,12] [rawtypes] found raw type: Class
+  missing type arguments for generic class Class<T>
+  where T is a type-variable:
+    T extends Object declared in class Class
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ClusteringCoefficient.java:[118,30] [rawtypes] found raw type: Comparable
+  missing type arguments for generic class Comparable<T>
+  where T is a type-variable:
+    T extends Object declared in interface Comparable
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ClusteringCoefficient.java:[675,102] [deprecation] Double(double) in Double has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[604,40] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[604,36] [unchecked] unchecked conversion
+  required: HashMap<Community,Float>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[608,39] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[608,35] [unchecked] unchecked conversion
+  required: HashMap<Community,Integer>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[616,27] [rawtypes] found raw type: ArrayList
+  missing type arguments for generic class ArrayList<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[616,23] [unchecked] unchecked conversion
+  required: List<ComputationEdge>[]
+  found:    ArrayList[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[846,59] [rawtypes] found raw type: ArrayList
+  missing type arguments for generic class ArrayList<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[846,55] [unchecked] unchecked conversion
+  required: ArrayList<ComputationEdge>[]
+  found:    ArrayList[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[852,40] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[852,36] [unchecked] unchecked conversion
+  required: HashMap<Community,Float>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[853,39] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/StatisticalInferenceClustering.java:[853,35] [unchecked] unchecked conversion
+  required: HashMap<Community,Integer>[]
+  found:    HashMap[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/GraphDistance.java:[226,39] [rawtypes] found raw type: LinkedList
+  missing type arguments for generic class LinkedList<E>
+  where E is a type-variable:
+    E extends Object declared in class LinkedList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/GraphDistance.java:[226,35] [unchecked] unchecked conversion
+  required: LinkedList<Node>[]
+  found:    LinkedList[]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/GraphDistance.java:[332,76] [deprecation] Double(double) in Double has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/GraphDistance.java:[335,81] [deprecation] Double(double) in Double has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/GraphDistance.java:[338,99] [deprecation] Double(double) in Double has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/GraphDistance.java:[341,85] [deprecation] Double(double) in Double has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ColumnUtils.java:[16,69] [rawtypes] found raw type: Class
+  missing type arguments for generic class Class<T>
+  where T is a type-variable:
+    T extends Object declared in class Class
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/dynamic/DynamicClusteringCoefficient.java:[114,12] [rawtypes] found raw type: Class
+  missing type arguments for generic class Class<T>
+  where T is a type-variable:
+    T extends Object declared in class Class
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Hits.java:[163,69] [deprecation] Float(float) in Float has been deprecated
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/Hits.java:[166,57] [deprecation] Float(float) in Float has been deprecated
+[INFO] 
+[INFO] --- nbm-maven-plugin:4.6:manifest (default-manifest) @ statistics-plugin ---
+[INFO] NBM Plugin generates manifest
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ statistics-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 5 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.0:testCompile (default-testCompile) @ statistics-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 13 source files to /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[69,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[69,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[70,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[70,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[92,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[92,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[93,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[93,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[116,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[116,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[117,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[117,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[140,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[140,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[141,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[141,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[190,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[190,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[191,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[191,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[241,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[241,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[242,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[242,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[290,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[290,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[291,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[291,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[314,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[314,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[315,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[315,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[363,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[363,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[364,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[364,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[409,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[409,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[410,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[410,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[436,46] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[436,42] [unchecked] unchecked conversion
+  required: HashMap<Integer,Node>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[437,49] [rawtypes] found raw type: HashMap
+  missing type arguments for generic class HashMap<K,V>
+  where K,V are type-variables:
+    K extends Object declared in class HashMap
+    V extends Object declared in class HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/EigenvectorCentralityTest.java:[437,45] [unchecked] unchecked conversion
+  required: HashMap<Node,Integer>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[31,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[31,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[48,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[48,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[66,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[66,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[84,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[84,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[102,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[102,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[160,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[160,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[218,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[218,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[268,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[268,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[290,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[290,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[336,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[336,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[378,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[378,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[420,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[420,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[462,8] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/ClusteringCoefficientTest.java:[462,37] auxiliary class ArrayWrapper in ClusteringCoefficient.java should not be accessed from outside its own source file
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[846,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[865,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[884,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[903,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[922,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[941,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[960,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[979,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[998,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1017,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1039,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1061,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1083,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1102,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1121,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1140,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1194,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1249,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1305,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1360,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1421,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1476,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1535,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1592,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1651,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1671,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1690,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1712,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1734,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/test/java/org/gephi/statistics/plugin/GraphDistanceTest.java:[1756,12] [unchecked] unchecked conversion
+  required: HashMap<String,double[]>
+  found:    HashMap
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ statistics-plugin ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.2:jar (default-jar) @ statistics-plugin ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target/statistics-plugin-0.9.6.jar
+[INFO] 
+[INFO] --- nbm-maven-plugin:4.6:nbm (default-nbm) @ statistics-plugin ---
+[INFO] Copying module JAR to /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target/nbm/clusters/gephi/modules
+[INFO] Generating Auto Update information for org.gephi.statistics.plugin
+[WARNING] No updater.jar specified, cannot validate Info.xml against DTD
+[INFO] Building jar: /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target/nbm/statistics-plugin-0.9.6.nbm
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ statistics-plugin ---
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target/statistics-plugin-0.9.6.jar to /home/dee/.m2/repository/org/gephi/statistics-plugin/0.9.6/statistics-plugin-0.9.6.jar
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/pom.xml to /home/dee/.m2/repository/org/gephi/statistics-plugin/0.9.6/statistics-plugin-0.9.6.pom
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/target/statistics-plugin-0.9.6.nbm to /home/dee/.m2/repository/org/gephi/statistics-plugin/0.9.6/statistics-plugin-0.9.6.nbm
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  26.866 s
+[INFO] Finished at: 2023-06-11T20:29:49+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/ClusteringCoefficient_initStartValues_Graph/test-baseline.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/statistics/plugin/TestClusteringCoefficientRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestClusteringCoefficientRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.524 s - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  19.643 s
+[INFO] Finished at: 2023-06-11T20:30:13+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.096 s
+[INFO] Finished at: 2023-06-11T20:30:17+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./ClusteringCoefficient.java/original-test.java
+[LOG] Invoking cp ./ClusteringCoefficient.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/statistics/plugin/TestClusteringCoefficientRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/ClusteringCoefficient_initStartValues_Graph/test-po.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/statistics/plugin/TestClusteringCoefficientRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestClusteringCoefficientRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.782 s <<< FAILURE! - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc  Time elapsed: 4.746 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:39)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:39)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc:39 
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:39)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  25.974 s
+[INFO] Finished at: 2023-06-11T20:30:47+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.124 s
+[INFO] Finished at: 2023-06-11T20:30:52+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./ClusteringCoefficient.java/original-test.java
+[LOG] Invoking cp ./ClusteringCoefficient.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/statistics/plugin/TestClusteringCoefficientRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/ClusteringCoefficient_initStartValues_Graph/test-co.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/statistics/plugin/TestClusteringCoefficientRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestClusteringCoefficientRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.238 s <<< FAILURE! - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc  Time elapsed: 0.141 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:53)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:53)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc:53 
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:53)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  24.403 s
+[INFO] Finished at: 2023-06-11T20:31:21+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.950 s
+[INFO] Finished at: 2023-06-11T20:31:27+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./ClusteringCoefficient.java/original-test.java
+[LOG] Invoking cp ./ClusteringCoefficient.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/statistics/plugin/TestClusteringCoefficientRickGen.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./ClusteringCoefficient.java/original-test.java
+[LOG] Invoking cp ./ClusteringCoefficient.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/statistics/plugin/TestClusteringCoefficientRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestClusteringCoefficientRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 6.256 s <<< FAILURE! - in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc  Time elapsed: 5.094 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:39)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:39)
+
+[ERROR] test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc  Time elapsed: 0.046 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:53)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:53)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc:53 
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:53)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc:39 
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:39)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  26.116 s
+[INFO] Finished at: 2023-06-11T20:31:57+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.020 s
+[INFO] Finished at: 2023-06-11T20:32:02+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting ClusteringCoefficient.java to original
+[LOG] Invoking cp ./ClusteringCoefficient.java/original.java /home/dee/dev/rick-major-review/gephi/modules/StatisticsPlugin/src/main/java/org/gephi/statistics/plugin/ClusteringCoefficient.java
+---------------------------------------------------
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/ClusteringCoefficient_initStartValues_Graph/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/ClusteringCoefficient.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/ClusteringCoefficient_initStartValues_Graph/']
+
+
+---------------------------------------------------
+[LOG] Finishing analysis at 2023-06-11 20:32:03.084066
+====== END OF THE LINE ======

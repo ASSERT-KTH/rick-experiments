@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-05 11:57:53.634702
+[LOG] Initiating analysis at 2023-06-11 08:21:16.014594
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -206,13 +206,13 @@ Total mutations found:  1171
 [LOG] Invoking cp /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java ./PageDrawer.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/strokePath/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/strokePath/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/strokePath/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/strokePath/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/strokePath/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/strokePath/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/strokePath/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/strokePath/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/strokePath/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/strokePath/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/strokePath/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/strokePath/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/strokePath/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/strokePath/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalPageDrawer.java with ./PageDrawer.java/385.java
 [LOG] Invoking cp ./PageDrawer.java/385.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/PageDrawer.java
@@ -442,15 +442,15 @@ Total mutations found:  1171
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  51.849 s
-[INFO] Finished at: 2023-06-05T11:59:19+02:00
+[INFO] Total time:  55.026 s
+[INFO] Finished at: 2023-06-11T08:22:46+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/strokePath/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/strokePath/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPageDrawerRickGen']
 [INFO] Scanning for projects...
@@ -475,7 +475,7 @@ Total mutations found:  1171
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -488,7 +488,7 @@ Total mutations found:  1171
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.rendering.TestPageDrawerRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 29.239 s - in org.apache.pdfbox.rendering.TestPageDrawerRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 28.81 s - in org.apache.pdfbox.rendering.TestPageDrawerRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -500,8 +500,8 @@ Total mutations found:  1171
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  47.099 s
-[INFO] Finished at: 2023-06-05T12:00:10+02:00
+[INFO] Total time:  47.640 s
+[INFO] Finished at: 2023-06-11T08:23:38+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -519,20 +519,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.840 s
-[INFO] Finished at: 2023-06-05T12:00:16+02:00
+[INFO] Total time:  1.778 s
+[INFO] Finished at: 2023-06-11T08:23:45+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PageDrawer.java/original-test.java
 [LOG] Invoking cp ./PageDrawer.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/strokePath/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/strokePath/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPageDrawerRickGen']
 [INFO] Scanning for projects...
@@ -557,7 +557,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -570,8 +570,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.rendering.TestPageDrawerRickGen
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 25.587 s <<< FAILURE! - in org.apache.pdfbox.rendering.TestPageDrawerRickGen
-[ERROR] test_strokePath_PO_555753857be74b738a876daa406fdfcf  Time elapsed: 11.613 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 26.101 s <<< FAILURE! - in org.apache.pdfbox.rendering.TestPageDrawerRickGen
+[ERROR] test_strokePath_PO_555753857be74b738a876daa406fdfcf  Time elapsed: 11.096 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -601,8 +601,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  41.303 s
-[INFO] Finished at: 2023-06-05T12:01:02+02:00
+[INFO] Total time:  43.469 s
+[INFO] Finished at: 2023-06-11T08:24:32+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -631,20 +631,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.408 s
-[INFO] Finished at: 2023-06-05T12:01:07+02:00
+[INFO] Total time:  1.867 s
+[INFO] Finished at: 2023-06-11T08:24:39+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PageDrawer.java/original-test.java
 [LOG] Invoking cp ./PageDrawer.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/strokePath/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/strokePath/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPageDrawerRickGen']
 [INFO] Scanning for projects...
@@ -669,7 +669,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -682,8 +682,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.rendering.TestPageDrawerRickGen
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 17.619 s <<< FAILURE! - in org.apache.pdfbox.rendering.TestPageDrawerRickGen
-[ERROR] test_strokePath_CO_555753857be74b738a876daa406fdfcf  Time elapsed: 10.161 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 18.096 s <<< FAILURE! - in org.apache.pdfbox.rendering.TestPageDrawerRickGen
+[ERROR] test_strokePath_CO_555753857be74b738a876daa406fdfcf  Time elapsed: 10.613 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -709,8 +709,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  29.887 s
-[INFO] Finished at: 2023-06-05T12:01:41+02:00
+[INFO] Total time:  31.804 s
+[INFO] Finished at: 2023-06-11T08:25:15+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -739,13 +739,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.411 s
-[INFO] Finished at: 2023-06-05T12:01:46+02:00
+[INFO] Total time:  1.266 s
+[INFO] Finished at: 2023-06-11T08:25:20+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PageDrawer.java/original-test.java
 [LOG] Invoking cp ./PageDrawer.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/rendering/TestPageDrawerRickGen.java
@@ -777,7 +777,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -790,8 +790,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.rendering.TestPageDrawerRickGen
-[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 17.576 s <<< FAILURE! - in org.apache.pdfbox.rendering.TestPageDrawerRickGen
-[ERROR] test_strokePath_CO_555753857be74b738a876daa406fdfcf  Time elapsed: 10.117 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 18.835 s <<< FAILURE! - in org.apache.pdfbox.rendering.TestPageDrawerRickGen
+[ERROR] test_strokePath_CO_555753857be74b738a876daa406fdfcf  Time elapsed: 10.984 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -801,7 +801,7 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_strokePath_CO_555753857be74b738a876daa406fdfcf(TestPageDrawerRickGen.java:85)
 
-[ERROR] test_strokePath_PO_555753857be74b738a876daa406fdfcf  Time elapsed: 6.734 s  <<< FAILURE!
+[ERROR] test_strokePath_PO_555753857be74b738a876daa406fdfcf  Time elapsed: 7.137 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -837,8 +837,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  30.254 s
-[INFO] Finished at: 2023-06-05T12:02:20+02:00
+[INFO] Total time:  32.191 s
+[INFO] Finished at: 2023-06-11T08:25:55+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -867,22 +867,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.262 s
-[INFO] Finished at: 2023-06-05T12:02:24+02:00
+[INFO] Total time:  1.353 s
+[INFO] Finished at: 2023-06-11T08:26:00+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PageDrawer.java to original
 [LOG] Invoking cp ./PageDrawer.java/original.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/rendering/PageDrawer.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/strokePath/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/PageDrawer.java', '/home/dee/dev/rick-major-review/finches/output/strokePath/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/strokePath/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/PageDrawer.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/strokePath/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-05 12:02:25.113027
+[LOG] Finishing analysis at 2023-06-11 08:26:01.195549
 ====== END OF THE LINE ======

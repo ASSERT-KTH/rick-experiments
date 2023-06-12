@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: NullifyReturnValue
-----> before:         return glyph;
-----> after:         return null;
-----> line number in original file: 218
-----> mutated node: 360
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                 data.seek(getOffset() + offsets[gid]);
+----> after:                 data.seek(getOffset() - offsets[gid]);
+----> line number in original file: 189
+----> mutated node: 1227
 
 */
 
@@ -195,7 +195,7 @@ public class GlyphTable extends TTFTable
                 // save
                 long currentPosition = data.getCurrentPosition();
 
-                data.seek(getOffset() + offsets[gid]);
+                data.seek(getOffset() - offsets[gid]);
 
                 glyph = getGlyphData(gid);
 
@@ -224,6 +224,6 @@ public class GlyphTable extends TTFTable
         {
             glyph.getDescription().resolve();
         }
-        return null;
+        return glyph;
     }
 }

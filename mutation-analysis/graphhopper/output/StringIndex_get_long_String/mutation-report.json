@@ -3,361 +3,361 @@
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/111.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.255 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.805 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.22 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.601 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 6.296 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.571 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.604 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 5.707 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/112.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.97 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.356 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.045 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.112 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.232 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.23 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.93 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.715 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/113.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.962 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.843 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.239 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.129 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.952 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.661 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.726 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 5.837 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/114.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.217 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.253 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.242 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.696 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 5.854 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.576 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.624 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 5.705 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/115.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.193 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.613 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 6.108 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 6.031 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 5.728 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.468 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.033 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 5.73 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/116.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.982 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.451 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 6.012 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 5.9 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 6.41 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.706 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.819 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 5.41 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/117.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.031 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.704 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 6.297 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 5.741 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 6.047 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.716 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.732 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 5.544 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/118.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.24 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.525 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 5.832 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 5.943 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 6.163 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.768 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.524 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 5.406 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/119.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.964 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.673 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.275 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.887 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.946 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.414 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.413 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.519 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/137.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.814 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.649 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.847 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.148 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.828 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.887 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.756 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.725 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/138.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.196 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.562 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.998 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.034 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.965 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.579 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.586 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.278 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/25.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.289 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.407 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 5.859 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 6.099 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 6.047 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.763 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.635 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 5.633 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/32.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.82 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.542 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.223 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.878 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.338 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.624 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.696 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.819 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/33.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.314 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.698 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.187 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.945 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.414 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.42 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.753 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.615 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/34.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.988 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.093 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.955 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.933 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.863 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.499 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.566 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.407 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/35.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.252 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.396 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.372 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.572 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.951 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.509 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.098 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.344 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/36.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.108 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.642 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.875 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.339 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.869 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.967 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.432 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.531 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/37.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.863 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.781 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.054 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.112 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.3 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.281 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.558 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.569 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/45.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.764 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.632 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.082 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.097 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.04 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.17 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.238 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.517 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/46.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.216 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.52 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.95 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.138 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.911 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 11.971 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 9.79 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 8.935 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/47.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.093 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.847 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.869 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.97 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.202 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 7.62 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 7.329 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 11.231 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/6.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.22 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 8.774 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.172 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.136 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.059 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 9.224 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.74 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.824 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/62.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.938 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.514 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.36 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.64 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.004 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.273 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.448 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.604 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/63.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.994 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.969 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.168 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.262 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.716 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.897 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.134 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.429 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/64.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.934 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.654 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.805 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.924 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.451 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.546 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.608 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.41 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/7.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.961 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.677 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.445 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.279 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.452 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.768 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.819 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.694 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/75.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.846 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.647 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.705 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.9 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.957 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.85 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.392 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.81 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/76.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.237 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.94 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.639 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.556 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.146 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.124 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.864 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.066 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/77.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.374 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.92 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.499 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.921 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.878 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.534 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.637 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.729 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/8.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.91 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 7.412 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.082 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 5.883 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.071 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 8 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 7.28 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 6.756 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/80.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.18 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.663 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.101 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 5.898 s - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.095 s - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.613 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.479 s - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.395 s - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/97.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 6.3 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.43 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 6.285 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 6.216 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 6.128 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.216 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.426 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 6.449 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
 },
 {
     "mut": "StringIndex_get_long_String",
     "CUT": "com.graphhopper.search.StringIndex",
     "mutant-file": "./StringIndex.java/98.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 7.055 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 6.178 s - in com.graphhopper.search.TestStringIndexRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 6.19 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 1, Skipped: 1, Time elapsed: 5.991 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
-    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 6.318 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 6.853 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 5.677 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 6.292 s <<< FAILURE! - in com.graphhopper.search.TestStringIndexRickGen"
 },

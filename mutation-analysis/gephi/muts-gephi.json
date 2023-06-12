@@ -182,7 +182,7 @@
         "test-module-path": "/home/dee/dev/rick-major-review/rick-tests/"
     },
     {
-        "mut": "TODO: SVGRenderTargetBuilder_SVGRenderTargetImpl_toHexString_Color",
+        "mut": "SVGRenderTargetBuilder_SVGRenderTargetImpl_toHexString_Color",
         "mut-start-line": 210,
         "mut-end-line": 222,
         "parent-module-path": "/home/dee/dev/rick-major-review/gephi/modules/PreviewAPI/",

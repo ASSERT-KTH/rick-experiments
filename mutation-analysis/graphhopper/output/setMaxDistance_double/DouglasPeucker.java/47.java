@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:             if (maxDist < dist) {
-----> after:             if (maxDist >= dist) {
-----> line number in original file: 144
-----> mutated node: 1094
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:             for (int i = fromIndex + 1; i < lastIndex; i++) {
+----> after:             for (int i = fromIndex - 1; i < lastIndex; i++) {
+----> line number in original file: 156
+----> mutated node: 1544
 
 */
 
@@ -150,7 +150,7 @@ public class DouglasPeucker {
                     firstLat, firstLon, firstEle * elevationFactor,
                     lastLat, lastLon, lastEle * elevationFactor)
                     : calc.calcNormalizedEdgeDistance(lat, lon, firstLat, firstLon, lastLat, lastLon);
-            if (maxDist >= dist) {
+            if (maxDist < dist) {
                 indexWithMaxDist = i;
                 maxDist = dist;
             }
@@ -162,7 +162,7 @@ public class DouglasPeucker {
 
         int counter = 0;
         if (maxDist < normedMaxDist) {
-            for (int i = fromIndex + 1; i < lastIndex; i++) {
+            for (int i = fromIndex - 1; i < lastIndex; i++) {
                 points.set(i, Double.NaN, Double.NaN, Double.NaN);
                 counter++;
             }

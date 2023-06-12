@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-05 15:47:27.599252
+[LOG] Initiating analysis at 2023-06-11 11:00:40.990004
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -49,8 +49,8 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 --> Mutations found:  29
 ----> NullifyReturnValue : 1
 ----> NullifyObjectInitialization : 1
-----> ArithmeticOperatorReplacementBinary : 15
 ----> RemoveMethod : 12
+----> ArithmeticOperatorReplacementBinary : 15
 
 (3/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/GHUtility.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -63,11 +63,11 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyObjectInitialization : 79
 ----> RemoveNullCheck : 5
 ----> ConditionalOperatorReplacement : 23
-----> ArithmeticOperatorReplacementBinary : 30
 ----> ShiftOperatorReplacement : 2
 ----> RemoveMethod : 145
 ----> RelationalOperatorReplacement : 61
 ----> ArithmeticOperatorReplacementShortcut : 12
+----> ArithmeticOperatorReplacementBinary : 30
 ----> ConditionalOperatorDeletion : 16
 
 (4/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/BitUtil.java
@@ -79,11 +79,11 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> AssignmentOperatorReplacementShortcut : 2
 ----> NullifyObjectInitialization : 5
 ----> LogicalOperatorReplacement : 5
-----> ArithmeticOperatorReplacementBinary : 1
 ----> ShiftOperatorReplacement : 4
 ----> RemoveMethod : 46
 ----> RelationalOperatorReplacement : 4
 ----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 1
 
 (5/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/StopWatch.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -95,9 +95,9 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> AssignmentOperatorReplacementShortcut : 2
 ----> NullifyObjectInitialization : 1
 ----> ConditionalOperatorReplacement : 1
-----> ArithmeticOperatorReplacementBinary : 19
 ----> RemoveMethod : 19
 ----> RelationalOperatorReplacement : 9
+----> ArithmeticOperatorReplacementBinary : 19
 ----> ConditionalOperatorDeletion : 1
 
 (6/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/MiniPerfTest.java
@@ -108,10 +108,10 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyReturnValue : 5
 ----> AssignmentOperatorReplacementShortcut : 2
 ----> NullifyObjectInitialization : 1
-----> ArithmeticOperatorReplacementBinary : 10
 ----> RemoveMethod : 18
 ----> RelationalOperatorReplacement : 6
 ----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 10
 
 (7/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/EdgeExplorer.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -128,11 +128,11 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyObjectInitialization : 1
 ----> LogicalOperatorReplacement : 15
 ----> ConditionalOperatorReplacement : 1
-----> ArithmeticOperatorReplacementBinary : 6
 ----> ShiftOperatorReplacement : 18
 ----> RemoveMethod : 17
 ----> RelationalOperatorReplacement : 7
 ----> ArithmeticOperatorReplacementShortcut : 18
+----> ArithmeticOperatorReplacementBinary : 6
 
 (9/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DouglasPeucker.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -144,10 +144,10 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> AssignmentOperatorReplacementShortcut : 3
 ----> NullifyObjectInitialization : 1
 ----> ConditionalOperatorReplacement : 5
-----> ArithmeticOperatorReplacementBinary : 12
 ----> RemoveMethod : 12
 ----> RelationalOperatorReplacement : 10
 ----> ArithmeticOperatorReplacementShortcut : 6
+----> ArithmeticOperatorReplacementBinary : 12
 ----> ConditionalOperatorDeletion : 4
 
 (10/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/SimpleIntDeque.java
@@ -156,10 +156,10 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 --> Mutations found:  29
 ----> NullifyReturnValue : 1
 ----> NullifyObjectInitialization : 2
-----> ArithmeticOperatorReplacementBinary : 5
 ----> RemoveMethod : 12
 ----> RelationalOperatorReplacement : 6
 ----> ArithmeticOperatorReplacementShortcut : 3
+----> ArithmeticOperatorReplacementBinary : 5
 
 (11/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DistanceCalcEuclidean.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -167,8 +167,8 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 --> Mutations found:  80
 ----> NullifyReturnValue : 2
 ----> NullifyObjectInitialization : 6
-----> ArithmeticOperatorReplacementBinary : 45
 ----> RemoveMethod : 27
+----> ArithmeticOperatorReplacementBinary : 45
 
 (12/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/TranslationMap.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -179,9 +179,9 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyObjectInitialization : 15
 ----> RemoveNullCheck : 5
 ----> ConditionalOperatorReplacement : 4
-----> ArithmeticOperatorReplacementBinary : 1
 ----> RemoveMethod : 21
 ----> RelationalOperatorReplacement : 8
+----> ArithmeticOperatorReplacementBinary : 1
 ----> ConditionalOperatorDeletion : 3
 
 (13/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/ArrayUtil.java
@@ -194,10 +194,10 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> AssignmentOperatorReplacementShortcut : 2
 ----> NullifyObjectInitialization : 9
 ----> ConditionalOperatorReplacement : 3
-----> ArithmeticOperatorReplacementBinary : 14
 ----> RemoveMethod : 25
 ----> RelationalOperatorReplacement : 23
 ----> ArithmeticOperatorReplacementShortcut : 15
+----> ArithmeticOperatorReplacementBinary : 14
 
 (14/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/BitUtilLittle.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -209,11 +209,11 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyObjectInitialization : 1
 ----> LogicalOperatorReplacement : 15
 ----> ConditionalOperatorReplacement : 1
-----> ArithmeticOperatorReplacementBinary : 21
 ----> ShiftOperatorReplacement : 18
 ----> RemoveMethod : 17
 ----> RelationalOperatorReplacement : 8
 ----> ArithmeticOperatorReplacementShortcut : 6
+----> ArithmeticOperatorReplacementBinary : 21
 
 (15/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/Downloader.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -225,9 +225,9 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyObjectInitialization : 11
 ----> RemoveNullCheck : 4
 ----> ConditionalOperatorReplacement : 4
-----> ArithmeticOperatorReplacementBinary : 3
 ----> RemoveMethod : 10
 ----> RelationalOperatorReplacement : 6
+----> ArithmeticOperatorReplacementBinary : 3
 
 (16/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/Unzipper.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -239,9 +239,9 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyObjectInitialization : 7
 ----> RemoveNullCheck : 2
 ----> ConditionalOperatorReplacement : 2
-----> ArithmeticOperatorReplacementBinary : 4
 ----> RemoveMethod : 5
 ----> RelationalOperatorReplacement : 5
+----> ArithmeticOperatorReplacementBinary : 4
 ----> ConditionalOperatorDeletion : 3
 
 (17/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DistanceCalc3D.java
@@ -249,8 +249,8 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 --> Mutations found:  9
 ----> NullifyReturnValue : 1
-----> ArithmeticOperatorReplacementBinary : 4
 ----> RemoveMethod : 4
+----> ArithmeticOperatorReplacementBinary : 4
 
 (18/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/PathMerger.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -261,10 +261,10 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> AssignmentOperatorReplacementShortcut : 5
 ----> NullifyObjectInitialization : 7
 ----> ConditionalOperatorReplacement : 11
-----> ArithmeticOperatorReplacementBinary : 12
 ----> RemoveMethod : 9
 ----> RelationalOperatorReplacement : 13
 ----> ArithmeticOperatorReplacementShortcut : 3
+----> ArithmeticOperatorReplacementBinary : 12
 ----> ConditionalOperatorDeletion : 7
 
 (19/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/FetchMode.java
@@ -281,10 +281,10 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> AssignmentOperatorReplacementShortcut : 2
 ----> NullifyObjectInitialization : 9
 ----> ConditionalOperatorReplacement : 5
-----> ArithmeticOperatorReplacementBinary : 171
 ----> RemoveMethod : 34
 ----> RelationalOperatorReplacement : 13
 ----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 171
 ----> ConditionalOperatorDeletion : 2
 
 (21/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/EdgeIterator.java
@@ -312,9 +312,9 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyObjectInitialization : 6
 ----> RemoveNullCheck : 1
 ----> ConditionalOperatorReplacement : 2
-----> ArithmeticOperatorReplacementBinary : 6
 ----> RemoveMethod : 4
 ----> RelationalOperatorReplacement : 8
+----> ArithmeticOperatorReplacementBinary : 6
 
 (24/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DistanceCalc.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -342,9 +342,9 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> AssignmentOperatorReplacementShortcut : 4
 ----> NullifyObjectInitialization : 2
 ----> ConditionalOperatorReplacement : 1
-----> ArithmeticOperatorReplacementBinary : 53
 ----> RemoveMethod : 16
 ----> RelationalOperatorReplacement : 19
+----> ArithmeticOperatorReplacementBinary : 53
 
 (27/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/XFirstSearch.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -362,10 +362,10 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> AssignmentOperatorReplacementShortcut : 5
 ----> NullifyObjectInitialization : 7
 ----> ConditionalOperatorReplacement : 2
-----> ArithmeticOperatorReplacementBinary : 6
 ----> RemoveMethod : 18
 ----> RelationalOperatorReplacement : 17
 ----> ArithmeticOperatorReplacementShortcut : 9
+----> ArithmeticOperatorReplacementBinary : 6
 
 (29/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/BreadthFirstSearch.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -413,9 +413,9 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyReturnValue : 1
 ----> RemoveNullCheck : 2
 ----> ConditionalOperatorReplacement : 1
-----> ArithmeticOperatorReplacementBinary : 5
 ----> RemoveMethod : 3
 ----> RelationalOperatorReplacement : 4
+----> ArithmeticOperatorReplacementBinary : 5
 
 (34/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/PathDetailsFromEdges.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -470,9 +470,9 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyInputVariable : 2
 ----> ArithmeticOperatorReplacementUnary : 1
 ----> NullifyReturnValue : 1
-----> ArithmeticOperatorReplacementBinary : 2
 ----> RemoveMethod : 5
 ----> RelationalOperatorReplacement : 1
+----> ArithmeticOperatorReplacementBinary : 2
 
 (40/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/BooleanDetails.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -524,9 +524,9 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyInputVariable : 1
 ----> ArithmeticOperatorReplacementUnary : 1
 ----> NullifyReturnValue : 2
-----> ArithmeticOperatorReplacementBinary : 3
 ----> RemoveMethod : 3
 ----> RelationalOperatorReplacement : 1
+----> ArithmeticOperatorReplacementBinary : 3
 
 (45/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/details/IntDetails.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -557,11 +557,11 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> LogicalOperatorReplacement : 3
 ----> RemoveNullCheck : 1
 ----> ConditionalOperatorReplacement : 7
-----> ArithmeticOperatorReplacementBinary : 14
 ----> ShiftOperatorReplacement : 3
 ----> RemoveMethod : 23
 ----> RelationalOperatorReplacement : 28
 ----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 14
 
 (48/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/shapes/Polygon.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -570,10 +570,10 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyInputVariable : 3
 ----> NullifyReturnValue : 4
 ----> NullifyObjectInitialization : 16
-----> ArithmeticOperatorReplacementBinary : 8
 ----> RemoveMethod : 19
 ----> RelationalOperatorReplacement : 5
 ----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 8
 
 (49/50) Source file:  /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/shapes/Shape.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -592,11 +592,11 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> LogicalOperatorReplacement : 4
 ----> RemoveNullCheck : 1
 ----> ConditionalOperatorReplacement : 19
-----> ArithmeticOperatorReplacementBinary : 14
 ----> ShiftOperatorReplacement : 4
 ----> RemoveMethod : 36
 ----> RelationalOperatorReplacement : 39
 ----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 14
 ----> ConditionalOperatorDeletion : 1
 
 Total mutations found:  2481
@@ -608,11 +608,11 @@ Total mutations found:  2481
 --> LogicalOperatorReplacement: 42
 --> RemoveNullCheck: 24
 --> ConditionalOperatorReplacement: 103
---> ArithmeticOperatorReplacementBinary: 484
 --> ShiftOperatorReplacement: 49
 --> RemoveMethod: 632
 --> RelationalOperatorReplacement: 326
 --> ArithmeticOperatorReplacementShortcut: 86
+--> ArithmeticOperatorReplacementBinary: 484
 --> ConditionalOperatorDeletion: 44
 
 
@@ -625,16 +625,16 @@ Total mutations found:  2481
 [LOG] Invoking cp /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java ./DouglasPeucker.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setMaxDistance_double/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/setMaxDistance_double/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setMaxDistance_double/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/setMaxDistance_double/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setMaxDistance_double/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/setMaxDistance_double/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/setMaxDistance_double/test-all.java
 ---------------------------------------------------
-[LOG] Replacing originalDouglasPeucker.java with ./DouglasPeucker.java/41.java
-[LOG] Invoking cp ./DouglasPeucker.java/41.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DouglasPeucker.java
+[LOG] Replacing originalDouglasPeucker.java with ./DouglasPeucker.java/29.java
+[LOG] Invoking cp ./DouglasPeucker.java/29.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DouglasPeucker.java
 [LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
 [INFO] Scanning for projects...
 [INFO] 
@@ -686,15 +686,15 @@ Total mutations found:  2481
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  44.254 s
-[INFO] Finished at: 2023-06-05T15:48:42+02:00
+[INFO] Total time:  43.752 s
+[INFO] Finished at: 2023-06-11T11:01:58+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMaxDistance_double/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestDouglasPeuckerRickGen']
 [INFO] Scanning for projects...
@@ -732,51 +732,18 @@ Total mutations found:  2481
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 4.081 s <<< FAILURE! - in com.graphhopper.util.TestDouglasPeuckerRickGen
-[ERROR] test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 3.11 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:56)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 0.016 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:43)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.507 s - in com.graphhopper.util.TestDouglasPeuckerRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d » UnnecessaryStubbing
-[ERROR]   TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d » UnnecessaryStubbing
-[INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  17.613 s
-[INFO] Finished at: 2023-06-05T15:49:03+02:00
+[INFO] Total time:  13.669 s
+[INFO] Finished at: 2023-06-11T11:02:15+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -801,20 +768,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.793 s
-[INFO] Finished at: 2023-06-05T15:49:08+02:00
+[INFO] Total time:  0.816 s
+[INFO] Finished at: 2023-06-11T11:02:19+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./DouglasPeucker.java/original-test.java
 [LOG] Invoking cp ./DouglasPeucker.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMaxDistance_double/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestDouglasPeuckerRickGen']
 [INFO] Scanning for projects...
@@ -852,17 +819,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 3.526 s <<< FAILURE! - in com.graphhopper.util.TestDouglasPeuckerRickGen
-[ERROR] test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 2.7 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:56)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 0.031 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.231 s <<< FAILURE! - in com.graphhopper.util.TestDouglasPeuckerRickGen
+[ERROR] test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 0.097 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -882,16 +840,14 @@ distanceCalc.calcNormalizedDist(1.0d);
 -> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:47)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.197 s
-[INFO] Finished at: 2023-06-05T15:49:25+02:00
+[INFO] Total time:  14.694 s
+[INFO] Finished at: 2023-06-11T11:02:38+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -928,20 +884,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.809 s
-[INFO] Finished at: 2023-06-05T15:49:30+02:00
+[INFO] Total time:  0.867 s
+[INFO] Finished at: 2023-06-11T11:02:42+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./DouglasPeucker.java/original-test.java
 [LOG] Invoking cp ./DouglasPeucker.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMaxDistance_double/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestDouglasPeuckerRickGen']
 [INFO] Scanning for projects...
@@ -979,8 +935,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 4.321 s <<< FAILURE! - in com.graphhopper.util.TestDouglasPeuckerRickGen
-[ERROR] test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 3.426 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.699 s <<< FAILURE! - in com.graphhopper.util.TestDouglasPeuckerRickGen
+[ERROR] test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 2.976 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -991,15 +947,6 @@ distanceCalc.calcNormalizedDist(
 Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:61)
-
-[ERROR] test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 0.016 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:43)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -1013,16 +960,14 @@ distanceCalc.calcNormalizedDist(
 -> at com.graphhopper.util.TestDouglasPeuckerRickGen.test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d(TestDouglasPeuckerRickGen.java:61)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestDouglasPeuckerRickGen.test_setMaxDistance_PO_a4b39cb5299f4c66a7bb90424b460f7d » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.974 s
-[INFO] Finished at: 2023-06-05T15:49:48+02:00
+[INFO] Total time:  14.259 s
+[INFO] Finished at: 2023-06-11T11:03:00+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1059,13 +1004,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.269 s
-[INFO] Finished at: 2023-06-05T15:49:54+02:00
+[INFO] Total time:  1.024 s
+[INFO] Finished at: 2023-06-11T11:03:05+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./DouglasPeucker.java/original-test.java
 [LOG] Invoking cp ./DouglasPeucker.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
@@ -1110,8 +1055,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
-[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.416 s <<< FAILURE! - in com.graphhopper.util.TestDouglasPeuckerRickGen
-[ERROR] test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 2.682 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.511 s <<< FAILURE! - in com.graphhopper.util.TestDouglasPeuckerRickGen
+[ERROR] test_setMaxDistance_CO_a4b39cb5299f4c66a7bb90424b460f7d  Time elapsed: 2.759 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1157,8 +1102,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.511 s
-[INFO] Finished at: 2023-06-05T15:50:13+02:00
+[INFO] Total time:  13.790 s
+[INFO] Finished at: 2023-06-11T11:03:23+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1195,13 +1140,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.821 s
-[INFO] Finished at: 2023-06-05T15:50:17+02:00
+[INFO] Total time:  0.825 s
+[INFO] Finished at: 2023-06-11T11:03:27+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting DouglasPeucker.java to original
@@ -1260,15 +1205,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  40.741 s
-[INFO] Finished at: 2023-06-05T15:51:02+02:00
+[INFO] Total time:  42.975 s
+[INFO] Finished at: 2023-06-11T11:04:14+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMaxDistance_double/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestDouglasPeuckerRickGen']
 [INFO] Scanning for projects...
@@ -1306,7 +1251,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.527 s - in com.graphhopper.util.TestDouglasPeuckerRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.465 s - in com.graphhopper.util.TestDouglasPeuckerRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1315,8 +1260,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.765 s
-[INFO] Finished at: 2023-06-05T15:51:21+02:00
+[INFO] Total time:  14.489 s
+[INFO] Finished at: 2023-06-11T11:04:32+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1342,20 +1287,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.409 s
-[INFO] Finished at: 2023-06-05T15:51:26+02:00
+[INFO] Total time:  1.203 s
+[INFO] Finished at: 2023-06-11T11:04:37+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./DouglasPeucker.java/original-test.java
 [LOG] Invoking cp ./DouglasPeucker.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMaxDistance_double/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestDouglasPeuckerRickGen']
 [INFO] Scanning for projects...
@@ -1393,7 +1338,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.309 s - in com.graphhopper.util.TestDouglasPeuckerRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.364 s - in com.graphhopper.util.TestDouglasPeuckerRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1402,8 +1347,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  13.789 s
-[INFO] Finished at: 2023-06-05T15:51:44+02:00
+[INFO] Total time:  13.925 s
+[INFO] Finished at: 2023-06-11T11:04:55+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1429,20 +1374,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.108 s
-[INFO] Finished at: 2023-06-05T15:51:48+02:00
+[INFO] Total time:  1.013 s
+[INFO] Finished at: 2023-06-11T11:05:00+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./DouglasPeucker.java/original-test.java
 [LOG] Invoking cp ./DouglasPeucker.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMaxDistance_double/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestDouglasPeuckerRickGen']
 [INFO] Scanning for projects...
@@ -1480,7 +1425,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.185 s - in com.graphhopper.util.TestDouglasPeuckerRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.572 s - in com.graphhopper.util.TestDouglasPeuckerRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1489,8 +1434,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.887 s
-[INFO] Finished at: 2023-06-05T15:52:09+02:00
+[INFO] Total time:  14.402 s
+[INFO] Finished at: 2023-06-11T11:05:18+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1516,13 +1461,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.984 s
-[INFO] Finished at: 2023-06-05T15:52:14+02:00
+[INFO] Total time:  0.906 s
+[INFO] Finished at: 2023-06-11T11:05:22+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./DouglasPeucker.java/original-test.java
 [LOG] Invoking cp ./DouglasPeucker.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/util/TestDouglasPeuckerRickGen.java
@@ -1567,7 +1512,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.util.TestDouglasPeuckerRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.336 s - in com.graphhopper.util.TestDouglasPeuckerRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.45 s - in com.graphhopper.util.TestDouglasPeuckerRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1576,8 +1521,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.086 s
-[INFO] Finished at: 2023-06-05T15:52:32+02:00
+[INFO] Total time:  14.573 s
+[INFO] Finished at: 2023-06-11T11:05:40+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1603,22 +1548,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.797 s
-[INFO] Finished at: 2023-06-05T15:52:37+02:00
+[INFO] Total time:  0.892 s
+[INFO] Finished at: 2023-06-11T11:05:45+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting DouglasPeucker.java to original
 [LOG] Invoking cp ./DouglasPeucker.java/original.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/util/DouglasPeucker.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/DouglasPeucker.java', '/home/dee/dev/rick-major-review/finches/output/setMaxDistance_double/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/setMaxDistance_double/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/DouglasPeucker.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/setMaxDistance_double/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-05 15:52:37.338592
+[LOG] Finishing analysis at 2023-06-11 11:05:45.426803
 ====== END OF THE LINE ======

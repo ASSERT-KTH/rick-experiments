@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                 int b = clamp( (1.164f * (Y-16)) + (2.017f * (Cb-128)));
-----> after:                 int b = clamp( (1.164f * (Y+16)) + (2.017f * (Cb-128)));
-----> line number in original file: 291
-----> mutated node: 4079
+mutant type: RemoveMethod
+----> before:     {
+----> after:     {
+----> line number in original file: 174
+----> mutated node: 349
 
 */
 
@@ -181,16 +181,9 @@ final class DCTFilter extends Filter
     // reads the APP14 Adobe transform tag and returns its value, or 0 if unknown
     private Integer getAdobeTransform(IIOMetadata metadata)
     {
-        Element tree = (Element)metadata.getAsTree("javax_imageio_jpeg_image_1.0");
-        Element markerSequence = (Element)tree.getElementsByTagName("markerSequence").item(0);
-        NodeList app14AdobeNodeList = markerSequence.getElementsByTagName("app14Adobe");
-        if (app14AdobeNodeList != null && app14AdobeNodeList.getLength() > 0)
-        {
-            Element adobe = (Element) app14AdobeNodeList.item(0);
-            return Integer.parseInt(adobe.getAttribute("transform"));
-        }
-        return 0;
-    }
+    return null;
+}
+
 
     // See in https://github.com/haraldk/TwelveMonkeys
     // com.twelvemonkeys.imageio.plugins.jpeg.AdobeDCT class for structure of APP14 segment
@@ -297,7 +290,7 @@ final class DCTFilter extends Filter
                 // YCbCr to RGB, see http://www.equasys.de/colorconversion.html
                 int r = clamp( (1.164f * (Y-16)) + (1.596f * (Cr - 128)) );
                 int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
-                int b = clamp( (1.164f * (Y+16)) + (2.017f * (Cb-128)));
+                int b = clamp( (1.164f * (Y-16)) + (2.017f * (Cb-128)));
 
                 // naive RGB to CMYK
                 int cyan = 255 - r;

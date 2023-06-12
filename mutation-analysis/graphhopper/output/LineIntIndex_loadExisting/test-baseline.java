@@ -46,10 +46,10 @@ public class TestLineIntIndexRickGen {
         // Arrange
         LineIntIndex receivingObject = deserializeObjectFromFile("com.graphhopper.storage.index.LineIntIndex.loadExisting1-receiving.xml");
         DataAccess mockDataAccess = insertMockField_dataAccess_InLineIntIndex(receivingObject);
-        Mockito.when(mockDataAccess.loadExisting()).thenReturn(true);
-        Mockito.when(mockDataAccess.getHeader(0)).thenReturn(5);
-        Mockito.when(mockDataAccess.getHeader(4)).thenReturn(1813699);
-        Mockito.when(mockDataAccess.getHeader(8)).thenReturn(300);
+        Mockito.lenient().when(mockDataAccess.loadExisting()).thenReturn(true);
+        Mockito.lenient().when(mockDataAccess.getHeader(0)).thenReturn(5);
+        Mockito.lenient().when(mockDataAccess.getHeader(4)).thenReturn(1813699);
+        Mockito.lenient().when(mockDataAccess.getHeader(8)).thenReturn(300);
         // Act
         boolean actual = receivingObject.loadExisting();
         // Assert
@@ -62,10 +62,10 @@ public class TestLineIntIndexRickGen {
         // Arrange
         LineIntIndex receivingObject = deserializeObjectFromFile("com.graphhopper.storage.index.LineIntIndex.loadExisting1-receiving.xml");
         DataAccess mockDataAccess = insertMockField_dataAccess_InLineIntIndex(receivingObject);
-        Mockito.when(mockDataAccess.loadExisting()).thenReturn(true);
-        Mockito.when(mockDataAccess.getHeader(0)).thenReturn(5);
-        Mockito.when(mockDataAccess.getHeader(4)).thenReturn(1813699);
-        Mockito.when(mockDataAccess.getHeader(8)).thenReturn(300);
+        Mockito.lenient().when(mockDataAccess.loadExisting()).thenReturn(true);
+        Mockito.lenient().when(mockDataAccess.getHeader(0)).thenReturn(5);
+        Mockito.lenient().when(mockDataAccess.getHeader(4)).thenReturn(1813699);
+        Mockito.lenient().when(mockDataAccess.getHeader(8)).thenReturn(300);
         // Act
         receivingObject.loadExisting();
         // Assert
@@ -81,10 +81,10 @@ public class TestLineIntIndexRickGen {
         // Arrange
         LineIntIndex receivingObject = deserializeObjectFromFile("com.graphhopper.storage.index.LineIntIndex.loadExisting1-receiving.xml");
         DataAccess mockDataAccess = insertMockField_dataAccess_InLineIntIndex(receivingObject);
-        Mockito.when(mockDataAccess.loadExisting()).thenReturn(true);
-        Mockito.when(mockDataAccess.getHeader(0)).thenReturn(5);
-        Mockito.when(mockDataAccess.getHeader(4)).thenReturn(1813699);
-        Mockito.when(mockDataAccess.getHeader(8)).thenReturn(300);
+        Mockito.lenient().when(mockDataAccess.loadExisting()).thenReturn(true);
+        Mockito.lenient().when(mockDataAccess.getHeader(0)).thenReturn(5);
+        Mockito.lenient().when(mockDataAccess.getHeader(4)).thenReturn(1813699);
+        Mockito.lenient().when(mockDataAccess.getHeader(8)).thenReturn(300);
         // Act
         receivingObject.loadExisting();
         // Assert

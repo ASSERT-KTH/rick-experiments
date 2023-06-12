@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-05 21:12:46.931028
+[LOG] Initiating analysis at 2023-06-11 11:05:45.429500
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -399,15 +399,15 @@ Total mutations found:  477
 [LOG] Invoking cp /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java ./IntEncodedValueImpl.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java
-[LOG] Created OO test at /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java
+[LOG] Created OO test at /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalIntEncodedValueImpl.java with ./IntEncodedValueImpl.java/156.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/156.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/IntEncodedValueImpl.java
@@ -462,15 +462,15 @@ Total mutations found:  477
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  47.783 s
-[INFO] Finished at: 2023-06-05T21:13:46+02:00
+[INFO] Total time:  45.076 s
+[INFO] Finished at: 2023-06-11T11:06:43+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -508,7 +508,7 @@ Total mutations found:  477
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.576 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.53 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -517,8 +517,8 @@ Total mutations found:  477
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.445 s
-[INFO] Finished at: 2023-06-05T21:14:06+02:00
+[INFO] Total time:  14.362 s
+[INFO] Finished at: 2023-06-11T11:07:01+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -544,20 +544,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.882 s
-[INFO] Finished at: 2023-06-05T21:14:10+02:00
+[INFO] Total time:  0.999 s
+[INFO] Finished at: 2023-06-11T11:07:05+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -595,8 +595,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.648 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.078 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.272 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.09 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:42)
 
@@ -611,8 +611,8 @@ org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.260 s
-[INFO] Finished at: 2023-06-05T21:14:29+02:00
+[INFO] Total time:  14.288 s
+[INFO] Finished at: 2023-06-11T11:07:23+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -649,20 +649,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.932 s
-[INFO] Finished at: 2023-06-05T21:14:34+02:00
+[INFO] Total time:  1.130 s
+[INFO] Finished at: 2023-06-11T11:07:28+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -700,8 +700,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.911 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.817 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.862 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.897 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -727,8 +727,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.454 s
-[INFO] Finished at: 2023-06-05T21:14:53+02:00
+[INFO] Total time:  14.838 s
+[INFO] Finished at: 2023-06-11T11:07:46+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -765,20 +765,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.864 s
-[INFO] Finished at: 2023-06-05T21:14:58+02:00
+[INFO] Total time:  0.820 s
+[INFO] Finished at: 2023-06-11T11:07:50+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -816,8 +816,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.861 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.18 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.448 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.185 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -843,8 +843,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.739 s
-[INFO] Finished at: 2023-06-05T21:15:18+02:00
+[INFO] Total time:  14.106 s
+[INFO] Finished at: 2023-06-11T11:08:08+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -881,13 +881,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.151 s
-[INFO] Finished at: 2023-06-05T21:15:23+02:00
+[INFO] Total time:  0.909 s
+[INFO] Finished at: 2023-06-11T11:08:13+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
@@ -932,8 +932,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.385 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 3.272 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.642 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.765 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -943,11 +943,11 @@ Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:54)
 
-[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.052 s  <<< FAILURE!
+[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.043 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <1> but was: <0>
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:42)
 
-[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.051 s  <<< FAILURE!
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.04 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -980,8 +980,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.602 s
-[INFO] Finished at: 2023-06-05T21:15:44+02:00
+[INFO] Total time:  14.574 s
+[INFO] Finished at: 2023-06-11T11:08:31+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1018,13 +1018,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.901 s
-[INFO] Finished at: 2023-06-05T21:15:49+02:00
+[INFO] Total time:  0.822 s
+[INFO] Finished at: 2023-06-11T11:08:35+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting IntEncodedValueImpl.java to original
@@ -1083,15 +1083,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  46.470 s
-[INFO] Finished at: 2023-06-05T21:16:40+02:00
+[INFO] Total time:  44.445 s
+[INFO] Finished at: 2023-06-11T11:09:23+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -1129,7 +1129,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.571 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.252 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1138,8 +1138,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.291 s
-[INFO] Finished at: 2023-06-05T21:16:59+02:00
+[INFO] Total time:  14.577 s
+[INFO] Finished at: 2023-06-11T11:09:42+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1165,20 +1165,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.898 s
-[INFO] Finished at: 2023-06-05T21:17:04+02:00
+[INFO] Total time:  0.868 s
+[INFO] Finished at: 2023-06-11T11:09:46+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -1216,7 +1216,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.724 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.189 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1225,8 +1225,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.128 s
-[INFO] Finished at: 2023-06-05T21:17:23+02:00
+[INFO] Total time:  14.005 s
+[INFO] Finished at: 2023-06-11T11:10:04+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1252,20 +1252,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.947 s
-[INFO] Finished at: 2023-06-05T21:17:28+02:00
+[INFO] Total time:  0.851 s
+[INFO] Finished at: 2023-06-11T11:10:08+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -1303,8 +1303,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.747 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.857 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.448 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.592 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1330,8 +1330,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.605 s
-[INFO] Finished at: 2023-06-05T21:17:48+02:00
+[INFO] Total time:  14.370 s
+[INFO] Finished at: 2023-06-11T11:10:26+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1368,20 +1368,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.844 s
-[INFO] Finished at: 2023-06-05T21:17:53+02:00
+[INFO] Total time:  0.855 s
+[INFO] Finished at: 2023-06-11T11:10:31+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -1419,8 +1419,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.648 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.198 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.358 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.148 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1446,8 +1446,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.462 s
-[INFO] Finished at: 2023-06-05T21:18:12+02:00
+[INFO] Total time:  14.704 s
+[INFO] Finished at: 2023-06-11T11:10:49+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1484,13 +1484,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.944 s
-[INFO] Finished at: 2023-06-05T21:18:17+02:00
+[INFO] Total time:  0.820 s
+[INFO] Finished at: 2023-06-11T11:10:54+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
@@ -1535,8 +1535,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.908 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.938 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.385 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.581 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1546,7 +1546,7 @@ Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:54)
 
-[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.049 s  <<< FAILURE!
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.047 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1578,8 +1578,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.310 s
-[INFO] Finished at: 2023-06-05T21:18:36+02:00
+[INFO] Total time:  14.214 s
+[INFO] Finished at: 2023-06-11T11:11:11+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1616,13 +1616,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.927 s
-[INFO] Finished at: 2023-06-05T21:18:41+02:00
+[INFO] Total time:  0.923 s
+[INFO] Finished at: 2023-06-11T11:11:16+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting IntEncodedValueImpl.java to original
@@ -1681,15 +1681,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  47.751 s
-[INFO] Finished at: 2023-06-05T21:19:33+02:00
+[INFO] Total time:  43.047 s
+[INFO] Finished at: 2023-06-11T11:12:03+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -1727,7 +1727,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.059 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.317 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1736,8 +1736,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.996 s
-[INFO] Finished at: 2023-06-05T21:19:53+02:00
+[INFO] Total time:  13.864 s
+[INFO] Finished at: 2023-06-11T11:12:21+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1763,20 +1763,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.020 s
-[INFO] Finished at: 2023-06-05T21:19:58+02:00
+[INFO] Total time:  0.846 s
+[INFO] Finished at: 2023-06-11T11:12:25+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -1814,7 +1814,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.585 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.797 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1823,8 +1823,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.125 s
-[INFO] Finished at: 2023-06-05T21:20:18+02:00
+[INFO] Total time:  15.874 s
+[INFO] Finished at: 2023-06-11T11:12:45+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1850,20 +1850,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.842 s
-[INFO] Finished at: 2023-06-05T21:20:22+02:00
+[INFO] Total time:  0.830 s
+[INFO] Finished at: 2023-06-11T11:12:49+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -1901,7 +1901,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.678 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.456 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1910,8 +1910,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.386 s
-[INFO] Finished at: 2023-06-05T21:20:42+02:00
+[INFO] Total time:  15.456 s
+[INFO] Finished at: 2023-06-11T11:13:08+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1937,20 +1937,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.934 s
-[INFO] Finished at: 2023-06-05T21:20:46+02:00
+[INFO] Total time:  1.006 s
+[INFO] Finished at: 2023-06-11T11:13:13+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -1988,7 +1988,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.648 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.43 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1997,8 +1997,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.154 s
-[INFO] Finished at: 2023-06-05T21:21:05+02:00
+[INFO] Total time:  14.153 s
+[INFO] Finished at: 2023-06-11T11:13:30+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -2024,13 +2024,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.945 s
-[INFO] Finished at: 2023-06-05T21:21:10+02:00
+[INFO] Total time:  0.822 s
+[INFO] Finished at: 2023-06-11T11:13:35+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
@@ -2075,7 +2075,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.563 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.392 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -2084,8 +2084,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.321 s
-[INFO] Finished at: 2023-06-05T21:21:29+02:00
+[INFO] Total time:  14.105 s
+[INFO] Finished at: 2023-06-11T11:13:52+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -2111,13 +2111,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.081 s
-[INFO] Finished at: 2023-06-05T21:21:34+02:00
+[INFO] Total time:  1.041 s
+[INFO] Finished at: 2023-06-11T11:13:58+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting IntEncodedValueImpl.java to original
@@ -2176,15 +2176,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  47.227 s
-[INFO] Finished at: 2023-06-05T21:22:26+02:00
+[INFO] Total time:  45.259 s
+[INFO] Finished at: 2023-06-11T11:14:47+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -2222,16 +2222,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.836 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.901 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.311 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.438 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:52)
 
-[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.026 s  <<< ERROR!
+[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.027 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:40)
 
-[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.022 s  <<< ERROR!
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.019 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:64)
 
@@ -2248,8 +2248,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.378 s
-[INFO] Finished at: 2023-06-05T21:22:46+02:00
+[INFO] Total time:  14.285 s
+[INFO] Finished at: 2023-06-11T11:15:05+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2286,20 +2286,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.932 s
-[INFO] Finished at: 2023-06-05T21:22:51+02:00
+[INFO] Total time:  0.805 s
+[INFO] Finished at: 2023-06-11T11:15:09+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -2337,16 +2337,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.032 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.981 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.233 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.43 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:52)
 
-[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.033 s  <<< ERROR!
+[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.02 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:40)
 
-[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.022 s  <<< ERROR!
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.016 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:64)
 
@@ -2363,8 +2363,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.940 s
-[INFO] Finished at: 2023-06-05T21:23:11+02:00
+[INFO] Total time:  13.860 s
+[INFO] Finished at: 2023-06-11T11:15:27+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2401,20 +2401,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.923 s
-[INFO] Finished at: 2023-06-05T21:23:15+02:00
+[INFO] Total time:  0.821 s
+[INFO] Finished at: 2023-06-11T11:15:32+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -2452,16 +2452,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.49 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.637 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.294 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.517 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:52)
 
-[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.032 s  <<< ERROR!
+[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.017 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:40)
 
-[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.021 s  <<< ERROR!
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.016 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:64)
 
@@ -2478,8 +2478,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.255 s
-[INFO] Finished at: 2023-06-05T21:23:34+02:00
+[INFO] Total time:  13.926 s
+[INFO] Finished at: 2023-06-11T11:15:49+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2516,20 +2516,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.022 s
-[INFO] Finished at: 2023-06-05T21:23:39+02:00
+[INFO] Total time:  0.983 s
+[INFO] Finished at: 2023-06-11T11:15:54+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -2567,16 +2567,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.579 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.691 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.244 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.466 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:52)
 
-[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.029 s  <<< ERROR!
+[ERROR] test_init_OO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.022 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_OO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:40)
 
-[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.023 s  <<< ERROR!
+[ERROR] test_init_CO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 0.018 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_CO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:64)
 
@@ -2593,8 +2593,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.566 s
-[INFO] Finished at: 2023-06-05T21:23:59+02:00
+[INFO] Total time:  13.785 s
+[INFO] Finished at: 2023-06-11T11:16:11+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2631,13 +2631,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.869 s
-[INFO] Finished at: 2023-06-05T21:24:03+02:00
+[INFO] Total time:  0.899 s
+[INFO] Finished at: 2023-06-11T11:16:16+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
@@ -2682,8 +2682,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.696 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.741 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.179 s <<< FAILURE! - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[ERROR] test_init_PO_662703e4e83742d7975c6e2c1fcd6053  Time elapsed: 2.404 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen.test_init_PO_662703e4e83742d7975c6e2c1fcd6053(TestIntEncodedValueImplRickGen.java:52)
 
@@ -2708,8 +2708,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.538 s
-[INFO] Finished at: 2023-06-05T21:24:23+02:00
+[INFO] Total time:  13.950 s
+[INFO] Finished at: 2023-06-11T11:16:33+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2746,13 +2746,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.824 s
-[INFO] Finished at: 2023-06-05T21:24:27+02:00
+[INFO] Total time:  0.807 s
+[INFO] Finished at: 2023-06-11T11:16:37+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting IntEncodedValueImpl.java to original
@@ -2811,15 +2811,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  52.460 s
-[INFO] Finished at: 2023-06-05T21:25:24+02:00
+[INFO] Total time:  44.232 s
+[INFO] Finished at: 2023-06-11T11:17:25+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -2857,7 +2857,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.706 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.6 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -2866,8 +2866,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.545 s
-[INFO] Finished at: 2023-06-05T21:25:44+02:00
+[INFO] Total time:  14.878 s
+[INFO] Finished at: 2023-06-11T11:17:44+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -2893,20 +2893,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.883 s
-[INFO] Finished at: 2023-06-05T21:25:48+02:00
+[INFO] Total time:  1.045 s
+[INFO] Finished at: 2023-06-11T11:17:49+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -2944,7 +2944,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.713 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.408 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -2953,8 +2953,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.427 s
-[INFO] Finished at: 2023-06-05T21:26:07+02:00
+[INFO] Total time:  14.137 s
+[INFO] Finished at: 2023-06-11T11:18:06+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -2980,20 +2980,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.128 s
-[INFO] Finished at: 2023-06-05T21:26:12+02:00
+[INFO] Total time:  0.841 s
+[INFO] Finished at: 2023-06-11T11:18:11+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -3031,7 +3031,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.752 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.517 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -3040,8 +3040,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.907 s
-[INFO] Finished at: 2023-06-05T21:26:32+02:00
+[INFO] Total time:  14.247 s
+[INFO] Finished at: 2023-06-11T11:18:29+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -3067,20 +3067,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.904 s
-[INFO] Finished at: 2023-06-05T21:26:37+02:00
+[INFO] Total time:  1.048 s
+[INFO] Finished at: 2023-06-11T11:18:33+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestIntEncodedValueImplRickGen']
 [INFO] Scanning for projects...
@@ -3118,7 +3118,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.602 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.462 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -3127,8 +3127,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  14.949 s
-[INFO] Finished at: 2023-06-05T21:26:56+02:00
+[INFO] Total time:  14.351 s
+[INFO] Finished at: 2023-06-11T11:18:52+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -3154,13 +3154,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.870 s
-[INFO] Finished at: 2023-06-05T21:27:00+02:00
+[INFO] Total time:  0.810 s
+[INFO] Finished at: 2023-06-11T11:18:56+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./IntEncodedValueImpl.java/original-test.java
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/ev/TestIntEncodedValueImplRickGen.java
@@ -3205,7 +3205,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.801 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.663 s - in com.graphhopper.routing.ev.TestIntEncodedValueImplRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -3214,8 +3214,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.025 s
-[INFO] Finished at: 2023-06-05T21:27:20+02:00
+[INFO] Total time:  14.146 s
+[INFO] Finished at: 2023-06-11T11:19:14+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -3241,22 +3241,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.834 s
-[INFO] Finished at: 2023-06-05T21:27:24+02:00
+[INFO] Total time:  0.845 s
+[INFO] Finished at: 2023-06-11T11:19:19+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting IntEncodedValueImpl.java to original
 [LOG] Invoking cp ./IntEncodedValueImpl.java/original.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/ev/IntEncodedValueImpl.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/IntEncodedValueImpl.java', '/home/dee/dev/rick-major-review/finches/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/IntEncodedValueImpl.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/EncodedValue_InitializerConfig_init_EncodedValue_InitializerConfig/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-05 21:27:25.096129
+[LOG] Finishing analysis at 2023-06-11 11:19:19.153127
 ====== END OF THE LINE ======

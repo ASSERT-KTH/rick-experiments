@@ -3,31 +3,31 @@
     "CUT": "org.apache.pdfbox.pdmodel.PDPageContentStream",
     "mutant-file": "./PDPageContentStream.java/25.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.161 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.453 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.635 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.302 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.385 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.927 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.246 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.04 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen"
 },
 {
     "mut": "setFont_PDFont_float",
     "CUT": "org.apache.pdfbox.pdmodel.PDPageContentStream",
     "mutant-file": "./PDPageContentStream.java/343.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.415 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.244 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 9.108 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 9.76 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 9.467 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.622 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.02 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.692 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen"
 },
 {
     "mut": "setFont_PDFont_float",
     "CUT": "org.apache.pdfbox.pdmodel.PDPageContentStream",
     "mutant-file": "./PDPageContentStream.java/83.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.594 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 11.633 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.813 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.33 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.126 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 11.692 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.804 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.141 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen"
 },

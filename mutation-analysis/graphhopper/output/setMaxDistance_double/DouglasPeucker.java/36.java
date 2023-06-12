@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RemoveMethod
-----> before:     public int simplify(PointList points, int fromIndex, int lastIndex) {
-----> after:     public int simplify(PointList points, int fromIndex, int lastIndex) {
-----> line number in original file: 80
-----> mutated node: 137
+mutant type: RelationalOperatorReplacement
+----> before:             double dist = (points.is3D() && elevationMaxDistance < Double.MAX_VALUE && !Double.isNaN(firstEle) && !Double.isNaN(lastEle) && !Double.isNaN(ele))
+----> after:             double dist = (points.is3D() && elevationMaxDistance >= Double.MAX_VALUE && !Double.isNaN(firstEle) && !Double.isNaN(lastEle) && !Double.isNaN(ele))
+----> line number in original file: 138
+----> mutated node: 1847
 
 */
 
@@ -87,9 +87,8 @@ public class DouglasPeucker {
     }
 
     public int simplify(PointList points, int fromIndex, int lastIndex) {
-    return 0;
-}
-
+        return simplify(points, fromIndex, lastIndex, true);
+    }
 
     /**
      * Simplifies a part of the <code>points</code>. The <code>fromIndex</code> and <code>lastIndex</code>
@@ -145,7 +144,7 @@ public class DouglasPeucker {
             }
             double lon = points.getLon(i);
             double ele = points.getEle(i);
-            double dist = (points.is3D() && elevationMaxDistance < Double.MAX_VALUE && !Double.isNaN(firstEle) && !Double.isNaN(lastEle) && !Double.isNaN(ele))
+            double dist = (points.is3D() && elevationMaxDistance >= Double.MAX_VALUE && !Double.isNaN(firstEle) && !Double.isNaN(lastEle) && !Double.isNaN(ele))
                     ? calc.calcNormalizedEdgeDistance3D(
                     lat, lon, ele * elevationFactor,
                     firstLat, firstLon, firstEle * elevationFactor,

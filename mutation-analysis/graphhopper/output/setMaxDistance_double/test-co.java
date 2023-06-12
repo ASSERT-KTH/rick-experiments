@@ -40,7 +40,7 @@ public class TestDouglasPeuckerRickGen {
         // Arrange
         DouglasPeucker receivingObject = deserializeObjectFromFile("com.graphhopper.util.DouglasPeucker.setMaxDistance1-receiving.xml");
         DistanceCalc mockDistanceCalc = insertPrivateMockField_calc_InDouglasPeucker(receivingObject);
-        Mockito.when(mockDistanceCalc.calcNormalizedDist(1.0)).thenReturn(2.4636827903947217E-14);
+        Mockito.lenient().when(mockDistanceCalc.calcNormalizedDist(1.0)).thenReturn(2.4636827903947217E-14);
         // Act
         receivingObject.setMaxDistance(1.0);
         // Assert
@@ -53,7 +53,7 @@ public class TestDouglasPeuckerRickGen {
         // Arrange
         DouglasPeucker receivingObject = deserializeObjectFromFile("com.graphhopper.util.DouglasPeucker.setMaxDistance1-receiving.xml");
         DistanceCalc mockDistanceCalc = insertPrivateMockField_calc_InDouglasPeucker(receivingObject);
-        Mockito.when(mockDistanceCalc.calcNormalizedDist(1.0)).thenReturn(2.4636827903947217E-14);
+        Mockito.lenient().when(mockDistanceCalc.calcNormalizedDist(1.0)).thenReturn(2.4636827903947217E-14);
         // Act
         receivingObject.setMaxDistance(1.0);
         // Assert

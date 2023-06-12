@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:             if (numChannelsItem == null)
-----> after:             if (numChannelsItem != null)
-----> line number in original file: 345
-----> mutated node: 1380
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                 int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
+----> after:                 int g = clamp( (1.164f * (Y-16)) + (-0.392f / (Cb-128)) + (-0.813f * (Cr-128)));
+----> line number in original file: 290
+----> mutated node: 4005
 
 */
 
@@ -296,7 +296,7 @@ final class DCTFilter extends Filter
 
                 // YCbCr to RGB, see http://www.equasys.de/colorconversion.html
                 int r = clamp( (1.164f * (Y-16)) + (1.596f * (Cr - 128)) );
-                int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
+                int g = clamp( (1.164f * (Y-16)) + (-0.392f / (Cb-128)) + (-0.813f * (Cr-128)));
                 int b = clamp( (1.164f * (Y-16)) + (2.017f * (Cb-128)));
 
                 // naive RGB to CMYK
@@ -351,7 +351,7 @@ final class DCTFilter extends Filter
             }
             IIOMetadataNode metaTree = (IIOMetadataNode) imageMetadata.getAsTree("javax_imageio_1.0");
             Element numChannelsItem = (Element) metaTree.getElementsByTagName("NumChannels").item(0);
-            if (numChannelsItem != null)
+            if (numChannelsItem == null)
             {
                 return "";
             }

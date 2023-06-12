@@ -36,7 +36,7 @@ public class TestRoundaboutInstructionRickGen {
         // Arrange
         RoundaboutInstruction receivingObject = deserializeObjectFromFile("com.graphhopper.util.RoundaboutInstruction.getTurnDescription1-receiving.xml");
         Translation mockTranslation = Mockito.mock(Translation.class);
-        Mockito.when(mockTranslation.tr(eq("roundabout_exit_onto"),   (Object[]) any())).thenReturn("At roundabout, take exit 2 onto Kungsgatan");
+        Mockito.lenient().when(mockTranslation.tr(eq("roundabout_exit_onto"),   (Object[]) any())).thenReturn("At roundabout, take exit 2 onto Kungsgatan");
         // Act
         String actual = receivingObject.getTurnDescription(mockTranslation);
         // Assert
@@ -49,7 +49,7 @@ public class TestRoundaboutInstructionRickGen {
         // Arrange
         RoundaboutInstruction receivingObject = deserializeObjectFromFile("com.graphhopper.util.RoundaboutInstruction.getTurnDescription1-receiving.xml");
         Translation mockTranslation = Mockito.mock(Translation.class);
-        Mockito.when(mockTranslation.tr(eq("roundabout_exit_onto"),   (Object[]) any())).thenReturn("At roundabout, take exit 2 onto Kungsgatan");
+        Mockito.lenient().when(mockTranslation.tr(eq("roundabout_exit_onto"),   (Object[]) any())).thenReturn("At roundabout, take exit 2 onto Kungsgatan");
         // Act
         receivingObject.getTurnDescription(mockTranslation);
         // Assert
@@ -62,7 +62,7 @@ public class TestRoundaboutInstructionRickGen {
         // Arrange
         RoundaboutInstruction receivingObject = deserializeObjectFromFile("com.graphhopper.util.RoundaboutInstruction.getTurnDescription1-receiving.xml");
         Translation mockTranslation = Mockito.mock(Translation.class);
-        Mockito.when(mockTranslation.tr(eq("roundabout_exit_onto"),   (Object[]) any())).thenReturn("At roundabout, take exit 2 onto Kungsgatan");
+        Mockito.lenient().when(mockTranslation.tr(eq("roundabout_exit_onto"),   (Object[]) any())).thenReturn("At roundabout, take exit 2 onto Kungsgatan");
         // Act
         receivingObject.getTurnDescription(mockTranslation);
         // Assert

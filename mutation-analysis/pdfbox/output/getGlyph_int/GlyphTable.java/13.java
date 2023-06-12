@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RemoveNullCheck
-----> before:             if (glyphs != null && glyphs[gid] == null && cached < MAX_CACHED_GLYPHS)
-----> after:             if (true && glyphs[gid] == null && cached < MAX_CACHED_GLYPHS)
-----> line number in original file: 197
-----> mutated node: 889
+mutant type: NullifyObjectInitialization
+----> before:         GlyphData glyph = new GlyphData();
+----> after:         GlyphData glyph = null;
+----> line number in original file: 209
+----> mutated node: 813
 
 */
 
@@ -203,7 +203,7 @@ public class GlyphTable extends TTFTable
                 data.seek(currentPosition);
             }
 
-            if (true && glyphs[gid] == null && cached < MAX_CACHED_GLYPHS)
+            if (glyphs != null && glyphs[gid] == null && cached < MAX_CACHED_GLYPHS)
             {
                 glyphs[gid] = glyph;
                 ++cached;
@@ -215,7 +215,7 @@ public class GlyphTable extends TTFTable
 
     private GlyphData getGlyphData(int gid) throws IOException
     {
-        GlyphData glyph = new GlyphData();
+        GlyphData glyph = null;
         HorizontalMetricsTable hmt = font.getHorizontalMetrics();
         int leftSideBearing = hmt == null ? 0 : hmt.getLeftSideBearing(gid);
         glyph.initData(this, data, leftSideBearing);

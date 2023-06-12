@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                 tab[off + 2] = tmp;
-----> after:                 tab[off - 2] = tmp;
-----> line number in original file: 326
-----> mutated node: 3187
+mutant type: RemoveMethod
+----> before:     {
+----> after:     {
+----> line number in original file: 370
+----> mutated node: 389
 
 */
 
@@ -332,7 +332,7 @@ final class DCTFilter extends Filter
             {
                 int tmp = tab[off];
                 tab[off] = tab[off + 2];
-                tab[off - 2] = tmp;
+                tab[off + 2] = tmp;
             }
             writableRaster.setPixels(0, y, width, 1, tab);
         }
@@ -377,6 +377,7 @@ final class DCTFilter extends Filter
     protected void encode(InputStream input, OutputStream encoded, COSDictionary parameters)
             throws IOException
     {
-        throw new UnsupportedOperationException("DCTFilter encoding not implemented, use the JPEGFactory methods instead");
-    }
+// void -- no return //
+}
+
 }

@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RemoveNullCheck
-----> before:             if (glyphs != null && glyphs[gid] == null && cached < MAX_CACHED_GLYPHS)
-----> after:             if (glyphs != null && false && cached < MAX_CACHED_GLYPHS)
-----> line number in original file: 197
-----> mutated node: 891
+mutant type: NullifyReturnValue
+----> before:             return glyphs;
+----> after:             return null;
+----> line number in original file: 137
+----> mutated node: 518
 
 */
 
@@ -143,7 +143,7 @@ public class GlyphTable extends TTFTable
                 glyphs[gid] = getGlyphData(gid);
             }
             initialized = true;
-            return glyphs;
+            return null;
         }
     }
 
@@ -203,7 +203,7 @@ public class GlyphTable extends TTFTable
                 data.seek(currentPosition);
             }
 
-            if (glyphs != null && false && cached < MAX_CACHED_GLYPHS)
+            if (glyphs != null && glyphs[gid] == null && cached < MAX_CACHED_GLYPHS)
             {
                 glyphs[gid] = glyph;
                 ++cached;

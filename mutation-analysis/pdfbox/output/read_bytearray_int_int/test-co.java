@@ -52,8 +52,8 @@ public class TestRandomAccessInputStreamRickGenRead {
         int paramObject2 = (Integer) paramObjects[1];
         int paramObject3 = (Integer) paramObjects[2];
         RandomAccessRead mockRandomAccessRead = insertPrivateMockField_input_InRandomAccessInputStream(receivingObject);
-        Mockito.when(mockRandomAccessRead.isEOF()).thenReturn(false);
-        Mockito.when(mockRandomAccessRead.read((byte[]) any(),   eq(0),   eq(4096))).thenReturn(1070);
+        Mockito.lenient().when(mockRandomAccessRead.isEOF()).thenReturn(false);
+        Mockito.lenient().when(mockRandomAccessRead.read((byte[]) any(),   eq(0),   eq(4096))).thenReturn(1070);
         // Act
         int actual = receivingObject.read(paramObject1, paramObject2, paramObject3);
         // Assert
@@ -70,8 +70,8 @@ public class TestRandomAccessInputStreamRickGenRead {
         int paramObject2 = (Integer) paramObjects[1];
         int paramObject3 = (Integer) paramObjects[2];
         RandomAccessRead mockRandomAccessRead = insertPrivateMockField_input_InRandomAccessInputStream(receivingObject);
-        Mockito.when(mockRandomAccessRead.isEOF()).thenReturn(false);
-        Mockito.when(mockRandomAccessRead.read((byte[]) any(),   eq(0),   eq(4096))).thenReturn(1070);
+        Mockito.lenient().when(mockRandomAccessRead.isEOF()).thenReturn(false);
+        Mockito.lenient().when(mockRandomAccessRead.read((byte[]) any(),   eq(0),   eq(4096))).thenReturn(1070);
         // Act
         receivingObject.read(paramObject1, paramObject2, paramObject3);
         // Assert
@@ -89,8 +89,8 @@ public class TestRandomAccessInputStreamRickGenRead {
         int paramObject2 = (Integer) paramObjects[1];
         int paramObject3 = (Integer) paramObjects[2];
         RandomAccessRead mockRandomAccessRead = insertPrivateMockField_input_InRandomAccessInputStream(receivingObject);
-        Mockito.when(mockRandomAccessRead.isEOF()).thenReturn(false);
-        Mockito.when(mockRandomAccessRead.read((byte[]) any(),   eq(0),   eq(4096))).thenReturn(1070);
+        Mockito.lenient().when(mockRandomAccessRead.isEOF()).thenReturn(false);
+        Mockito.lenient().when(mockRandomAccessRead.read((byte[]) any(),   eq(0),   eq(4096))).thenReturn(1070);
         // Act
         receivingObject.read(paramObject1, paramObject2, paramObject3);
         // Assert

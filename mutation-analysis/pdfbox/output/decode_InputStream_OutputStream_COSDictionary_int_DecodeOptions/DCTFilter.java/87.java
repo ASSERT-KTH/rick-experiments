@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:         int w3 = width * 3;
-----> after:         int w3 = width / 3;
-----> line number in original file: 316
-----> mutated node: 1351
+mutant type: RemoveMethod
+----> before:     {
+----> after:     {
+----> line number in original file: 363
+----> mutated node: 381
 
 */
 
@@ -322,7 +322,7 @@ final class DCTFilter extends Filter
 
         int width = raster.getWidth();
         int height = raster.getHeight();
-        int w3 = width / 3;
+        int w3 = width * 3;
         int[] tab = new int[w3];
         //BEWARE: handling the full image at a time is slower than one line at a time        
         for (int y = 0; y < height; y++)
@@ -370,8 +370,9 @@ final class DCTFilter extends Filter
     // clamps value to 0-255 range
     private int clamp(float value)
     {
-        return (int)((value < 0) ? 0 : ((value > 255) ? 255 : value));
-    }
+    return 1;
+}
+
 
     @Override
     protected void encode(InputStream input, OutputStream encoded, COSDictionary parameters)

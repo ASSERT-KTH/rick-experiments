@@ -45,8 +45,8 @@ public class TestStorablePropertiesRickGen {
         // Arrange
         StorableProperties receivingObject = deserializeObjectFromFile("com.graphhopper.storage.StorableProperties.loadExisting1-receiving.xml");
         DataAccess mockDataAccess = insertPrivateMockField_da_InStorableProperties(receivingObject);
-        Mockito.when(mockDataAccess.loadExisting()).thenReturn(true);
-        Mockito.when(mockDataAccess.getCapacity()).thenReturn(32768L);
+        Mockito.lenient().when(mockDataAccess.loadExisting()).thenReturn(true);
+        Mockito.lenient().when(mockDataAccess.getCapacity()).thenReturn(32768L);
         // Act
         boolean actual = receivingObject.loadExisting();
         // Assert
@@ -59,8 +59,8 @@ public class TestStorablePropertiesRickGen {
         // Arrange
         StorableProperties receivingObject = deserializeObjectFromFile("com.graphhopper.storage.StorableProperties.loadExisting1-receiving.xml");
         DataAccess mockDataAccess = insertPrivateMockField_da_InStorableProperties(receivingObject);
-        Mockito.when(mockDataAccess.loadExisting()).thenReturn(true);
-        Mockito.when(mockDataAccess.getCapacity()).thenReturn(32768L);
+        Mockito.lenient().when(mockDataAccess.loadExisting()).thenReturn(true);
+        Mockito.lenient().when(mockDataAccess.getCapacity()).thenReturn(32768L);
         // Act
         receivingObject.loadExisting();
         // Assert
@@ -75,8 +75,8 @@ public class TestStorablePropertiesRickGen {
         // Arrange
         StorableProperties receivingObject = deserializeObjectFromFile("com.graphhopper.storage.StorableProperties.loadExisting1-receiving.xml");
         DataAccess mockDataAccess = insertPrivateMockField_da_InStorableProperties(receivingObject);
-        Mockito.when(mockDataAccess.loadExisting()).thenReturn(true);
-        Mockito.when(mockDataAccess.getCapacity()).thenReturn(32768L);
+        Mockito.lenient().when(mockDataAccess.loadExisting()).thenReturn(true);
+        Mockito.lenient().when(mockDataAccess.getCapacity()).thenReturn(32768L);
         // Act
         receivingObject.loadExisting();
         // Assert

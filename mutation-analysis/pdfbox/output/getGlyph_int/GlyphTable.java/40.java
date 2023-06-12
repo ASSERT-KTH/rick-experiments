@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
 mutant type: RelationalOperatorReplacement
-----> before:                 if (offsets[gid + 1] <= offsets[gid])
-----> after:                 if (offsets[gid + 1] > offsets[gid])
-----> line number in original file: 118
-----> mutated node: 1025
+----> before:         if (gid < 0 || gid >= numGlyphs)
+----> after:         if (gid < 0 || gid < numGlyphs)
+----> line number in original file: 157
+----> mutated node: 524
 
 */
 
@@ -124,7 +124,7 @@ public class GlyphTable extends TTFTable
                 }
                 // the current glyph isn't defined
                 // if the next offset is equal or smaller to the current offset
-                if (offsets[gid + 1] > offsets[gid])
+                if (offsets[gid + 1] <= offsets[gid])
                 {
                     continue;
                 }
@@ -163,7 +163,7 @@ public class GlyphTable extends TTFTable
      */
     public GlyphData getGlyph(int gid) throws IOException
     {
-        if (gid < 0 || gid >= numGlyphs)
+        if (gid < 0 || gid < numGlyphs)
         {
             return null;
         }

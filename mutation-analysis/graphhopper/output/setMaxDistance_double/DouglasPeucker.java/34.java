@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RemoveMethod
-----> before:     public int simplify(PointList points, int fromIndex, int lastIndex, boolean compress) {
-----> after:     public int simplify(PointList points, int fromIndex, int lastIndex, boolean compress) {
-----> line number in original file: 95
-----> mutated node: 142
+mutant type: RelationalOperatorReplacement
+----> before:         if (indexWithMaxDist < 0) {
+----> after:         if (indexWithMaxDist >= 0) {
+----> line number in original file: 150
+----> mutated node: 570
 
 */
 
@@ -102,9 +102,26 @@ public class DouglasPeucker {
      * @return The number of removed points
      */
     public int simplify(PointList points, int fromIndex, int lastIndex, boolean compress) {
-    return 0;
-}
+        int removed = 0;
+        int size = lastIndex - fromIndex;
+        if (approx) {
+            int delta = 500;
+            int segments = size / delta + 1;
+            int start = fromIndex;
+            for (int i = 0; i < segments; i++) {
+                // start of next is end of last segment, except for the last
+                removed += subSimplify(points, start, Math.min(lastIndex, start + delta));
+                start += delta;
+            }
+        } else {
+            removed = subSimplify(points, fromIndex, lastIndex);
+        }
 
+        if (removed > 0 && compress)
+            removeNaN(points);
+
+        return removed;
+    }
 
     // keep the points of fromIndex and lastIndex
     int subSimplify(PointList points, int fromIndex, int lastIndex) {
@@ -139,7 +156,7 @@ public class DouglasPeucker {
             }
         }
 
-        if (indexWithMaxDist < 0) {
+        if (indexWithMaxDist >= 0) {
             throw new IllegalStateException("maximum not found in [" + fromIndex + "," + lastIndex + "]");
         }
 

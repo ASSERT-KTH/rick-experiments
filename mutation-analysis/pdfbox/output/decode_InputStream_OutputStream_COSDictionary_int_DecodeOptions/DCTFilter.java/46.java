@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RemoveMethod
-----> before:     {
-----> after:     {
-----> line number in original file: 335
-----> mutated node: 376
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                 int yellow = 255 - b;
+----> after:                 int yellow = 255 + b;
+----> line number in original file: 296
+----> mutated node: 3348
 
 */
 
@@ -302,7 +302,7 @@ final class DCTFilter extends Filter
                 // naive RGB to CMYK
                 int cyan = 255 - r;
                 int magenta = 255 - g;
-                int yellow = 255 - b;
+                int yellow = 255 + b;
 
                 // update new raster
                 value[0] = cyan;
@@ -342,9 +342,30 @@ final class DCTFilter extends Filter
     // returns the number of channels as a string, or an empty string if there is an error getting the meta data
     private String getNumChannels(ImageReader reader)
     {
-    return "";
-}
-    
+        try
+        {
+            IIOMetadata imageMetadata = reader.getImageMetadata(0);
+            if (imageMetadata == null)
+            {
+                return "";
+            }
+            IIOMetadataNode metaTree = (IIOMetadataNode) imageMetadata.getAsTree("javax_imageio_1.0");
+            Element numChannelsItem = (Element) metaTree.getElementsByTagName("NumChannels").item(0);
+            if (numChannelsItem == null)
+            {
+                return "";
+            }
+            return numChannelsItem.getAttribute("value");
+        }
+        catch (IOException e)
+        {
+            return "";
+        }        
+        catch (NegativeArraySizeException e)
+        {
+            return "";
+        }
+    }    
 
     // clamps value to 0-255 range
     private int clamp(float value)

@@ -52,8 +52,8 @@ public class TestRandomAccessInputStreamRickGenReadNoParam {
         // Arrange
         RandomAccessInputStream receivingObject = deserializeObjectFromFile("org.apache.pdfbox.io.RandomAccessInputStream.read1-receiving.xml");
         RandomAccessRead mockRandomAccessRead = insertPrivateMockField_input_InRandomAccessInputStream(receivingObject);
-        Mockito.when(mockRandomAccessRead.isEOF()).thenReturn(false);
-        Mockito.when(mockRandomAccessRead.read()).thenReturn(72);
+        Mockito.lenient().when(mockRandomAccessRead.isEOF()).thenReturn(false);
+        Mockito.lenient().when(mockRandomAccessRead.read()).thenReturn(72);
         // Act
         int actual = receivingObject.read();
         // Assert
@@ -66,8 +66,8 @@ public class TestRandomAccessInputStreamRickGenReadNoParam {
         // Arrange
         RandomAccessInputStream receivingObject = deserializeObjectFromFile("org.apache.pdfbox.io.RandomAccessInputStream.read1-receiving.xml");
         RandomAccessRead mockRandomAccessRead = insertPrivateMockField_input_InRandomAccessInputStream(receivingObject);
-        Mockito.when(mockRandomAccessRead.isEOF()).thenReturn(false);
-        Mockito.when(mockRandomAccessRead.read()).thenReturn(72);
+        Mockito.lenient().when(mockRandomAccessRead.isEOF()).thenReturn(false);
+        Mockito.lenient().when(mockRandomAccessRead.read()).thenReturn(72);
         // Act
         receivingObject.read();
         // Assert
@@ -81,8 +81,8 @@ public class TestRandomAccessInputStreamRickGenReadNoParam {
         // Arrange
         RandomAccessInputStream receivingObject = deserializeObjectFromFile("org.apache.pdfbox.io.RandomAccessInputStream.read1-receiving.xml");
         RandomAccessRead mockRandomAccessRead = insertPrivateMockField_input_InRandomAccessInputStream(receivingObject);
-        Mockito.when(mockRandomAccessRead.isEOF()).thenReturn(false);
-        Mockito.when(mockRandomAccessRead.read()).thenReturn(72);
+        Mockito.lenient().when(mockRandomAccessRead.isEOF()).thenReturn(false);
+        Mockito.lenient().when(mockRandomAccessRead.read()).thenReturn(72);
         // Act
         receivingObject.read();
         // Assert

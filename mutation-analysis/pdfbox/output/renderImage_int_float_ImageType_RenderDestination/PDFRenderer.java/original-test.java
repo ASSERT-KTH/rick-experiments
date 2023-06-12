@@ -44,7 +44,7 @@ public class TestPDFRendererRickGen {
         float paramObject2 = (Float) paramObjects[1];
         RenderDestination paramObject4 = (RenderDestination) paramObjects[3];
         ImageType mockImageType = Mockito.mock(ImageType.class);
-        Mockito.when(mockImageType.toBufferedImageType()).thenReturn(1);
+        Mockito.lenient().when(mockImageType.toBufferedImageType()).thenReturn(1);
         // Act
         receivingObject.renderImage(paramObject1, paramObject2, mockImageType, paramObject4);
         // Assert
@@ -61,7 +61,7 @@ public class TestPDFRendererRickGen {
         float paramObject2 = (Float) paramObjects[1];
         RenderDestination paramObject4 = (RenderDestination) paramObjects[3];
         ImageType mockImageType = Mockito.mock(ImageType.class);
-        Mockito.when(mockImageType.toBufferedImageType()).thenReturn(1);
+        Mockito.lenient().when(mockImageType.toBufferedImageType()).thenReturn(1);
         // Act
         receivingObject.renderImage(paramObject1, paramObject2, mockImageType, paramObject4);
         // Assert

@@ -52,7 +52,7 @@ public class TestPDICCBasedRickGen {
         // Arrange
         PDICCBased receivingObject = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.graphics.color.PDICCBased.getNumberOfComponents1-receiving.xml");
         ICC_Profile mockICC_Profile = insertPrivateMockField_iccProfile_InPDICCBased(receivingObject);
-        Mockito.when(mockICC_Profile.getNumComponents()).thenReturn(3);
+        Mockito.lenient().when(mockICC_Profile.getNumComponents()).thenReturn(3);
         // Act
         int actual = receivingObject.getNumberOfComponents();
         // Assert
@@ -65,7 +65,7 @@ public class TestPDICCBasedRickGen {
         // Arrange
         PDICCBased receivingObject = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.graphics.color.PDICCBased.getNumberOfComponents1-receiving.xml");
         ICC_Profile mockICC_Profile = insertPrivateMockField_iccProfile_InPDICCBased(receivingObject);
-        Mockito.when(mockICC_Profile.getNumComponents()).thenReturn(3);
+        Mockito.lenient().when(mockICC_Profile.getNumComponents()).thenReturn(3);
         // Act
         receivingObject.getNumberOfComponents();
         // Assert
@@ -78,7 +78,7 @@ public class TestPDICCBasedRickGen {
         // Arrange
         PDICCBased receivingObject = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.graphics.color.PDICCBased.getNumberOfComponents1-receiving.xml");
         ICC_Profile mockICC_Profile = insertPrivateMockField_iccProfile_InPDICCBased(receivingObject);
-        Mockito.when(mockICC_Profile.getNumComponents()).thenReturn(3);
+        Mockito.lenient().when(mockICC_Profile.getNumComponents()).thenReturn(3);
         // Act
         receivingObject.getNumberOfComponents();
         // Assert

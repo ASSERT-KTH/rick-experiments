@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-04 19:18:40.899605
+[LOG] Initiating analysis at 2023-06-10 14:59:57.649967
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -632,13 +632,13 @@ Total mutations found:  2949
 [LOG] Invoking cp /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java ./PDFontDescriptor.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setCapHeight_float/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/setCapHeight_float/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setCapHeight_float/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/setCapHeight_float/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setCapHeight_float/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/setCapHeight_float/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/setCapHeight_float/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalPDFontDescriptor.java with ./PDFontDescriptor.java/96.java
 [LOG] Invoking cp ./PDFontDescriptor.java/96.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDFontDescriptor.java
@@ -868,15 +868,15 @@ Total mutations found:  2949
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  40.734 s
-[INFO] Finished at: 2023-06-04T19:20:04+02:00
+[INFO] Total time:  42.819 s
+[INFO] Finished at: 2023-06-10T15:01:28+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setCapHeight_float/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenSetCapHeight']
 [INFO] Scanning for projects...
@@ -901,7 +901,7 @@ Total mutations found:  2949
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -914,7 +914,7 @@ Total mutations found:  2949
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.852 s - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.952 s - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -926,8 +926,8 @@ Total mutations found:  2949
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  17.684 s
-[INFO] Finished at: 2023-06-04T19:20:25+02:00
+[INFO] Total time:  17.601 s
+[INFO] Finished at: 2023-06-10T15:01:49+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -945,20 +945,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.290 s
-[INFO] Finished at: 2023-06-04T19:20:30+02:00
+[INFO] Total time:  1.323 s
+[INFO] Finished at: 2023-06-10T15:01:54+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setCapHeight_float/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenSetCapHeight']
 [INFO] Scanning for projects...
@@ -983,7 +983,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -996,8 +996,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.892 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
-[ERROR] test_setCapHeight_PO_e67dd33358c54b2d9a83c11d36e60618  Time elapsed: 0.216 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.148 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
+[ERROR] test_setCapHeight_PO_e67dd33358c54b2d9a83c11d36e60618  Time elapsed: 0.221 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1029,8 +1029,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.029 s
-[INFO] Finished at: 2023-06-04T19:20:49+02:00
+[INFO] Total time:  16.001 s
+[INFO] Finished at: 2023-06-10T15:02:14+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1059,20 +1059,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.390 s
-[INFO] Finished at: 2023-06-04T19:20:54+02:00
+[INFO] Total time:  1.428 s
+[INFO] Finished at: 2023-06-10T15:02:19+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setCapHeight_float/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenSetCapHeight']
 [INFO] Scanning for projects...
@@ -1097,7 +1097,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1110,8 +1110,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.083 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
-[ERROR] test_setCapHeight_CO_e67dd33358c54b2d9a83c11d36e60618  Time elapsed: 3.34 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.36 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
+[ERROR] test_setCapHeight_CO_e67dd33358c54b2d9a83c11d36e60618  Time elapsed: 3.509 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1137,8 +1137,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.156 s
-[INFO] Finished at: 2023-06-04T19:21:14+02:00
+[INFO] Total time:  17.541 s
+[INFO] Finished at: 2023-06-10T15:02:40+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1167,13 +1167,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.264 s
-[INFO] Finished at: 2023-06-04T19:21:18+02:00
+[INFO] Total time:  1.303 s
+[INFO] Finished at: 2023-06-10T15:02:45+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetCapHeight.java
@@ -1205,7 +1205,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1218,8 +1218,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
-[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.932 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
-[ERROR] test_setCapHeight_CO_e67dd33358c54b2d9a83c11d36e60618  Time elapsed: 3.167 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 4.342 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight
+[ERROR] test_setCapHeight_CO_e67dd33358c54b2d9a83c11d36e60618  Time elapsed: 3.514 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1229,7 +1229,7 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetCapHeight.test_setCapHeight_CO_e67dd33358c54b2d9a83c11d36e60618(TestPDFontDescriptorRickGenSetCapHeight.java:67)
 
-[ERROR] test_setCapHeight_PO_e67dd33358c54b2d9a83c11d36e60618  Time elapsed: 0.051 s  <<< FAILURE!
+[ERROR] test_setCapHeight_PO_e67dd33358c54b2d9a83c11d36e60618  Time elapsed: 0.059 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1267,8 +1267,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.951 s
-[INFO] Finished at: 2023-06-04T19:21:38+02:00
+[INFO] Total time:  16.740 s
+[INFO] Finished at: 2023-06-10T15:03:05+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1297,22 +1297,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.263 s
-[INFO] Finished at: 2023-06-04T19:21:42+02:00
+[INFO] Total time:  1.314 s
+[INFO] Finished at: 2023-06-10T15:03:10+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDFontDescriptor.java to original
 [LOG] Invoking cp ./PDFontDescriptor.java/original.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDFontDescriptor.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/setCapHeight_float/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/PDFontDescriptor.java', '/home/dee/dev/rick-major-review/finches/output/setCapHeight_float/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/setCapHeight_float/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/PDFontDescriptor.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/setCapHeight_float/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-04 19:21:42.961394
+[LOG] Finishing analysis at 2023-06-10 15:03:10.754356
 ====== END OF THE LINE ======

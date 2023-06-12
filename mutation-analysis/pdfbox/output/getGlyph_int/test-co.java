@@ -51,7 +51,7 @@ public class TestGlyphTableRickGen {
         // Arrange
         GlyphTable receivingObject = deserializeObjectFromFile("org.apache.fontbox.ttf.GlyphTable.getGlyph3-receiving.xml");
         TTFDataStream mockTTFDataStream = insertPrivateMockField_data_InGlyphTable(receivingObject);
-        Mockito.when(mockTTFDataStream.getCurrentPosition()).thenReturn(220L);
+        Mockito.lenient().when(mockTTFDataStream.getCurrentPosition()).thenReturn(220L);
         // Act
         receivingObject.getGlyph(41);
         // Assert
@@ -66,7 +66,7 @@ public class TestGlyphTableRickGen {
         // Arrange
         GlyphTable receivingObject = deserializeObjectFromFile("org.apache.fontbox.ttf.GlyphTable.getGlyph3-receiving.xml");
         TTFDataStream mockTTFDataStream = insertPrivateMockField_data_InGlyphTable(receivingObject);
-        Mockito.when(mockTTFDataStream.getCurrentPosition()).thenReturn(220L);
+        Mockito.lenient().when(mockTTFDataStream.getCurrentPosition()).thenReturn(220L);
         // Act
         receivingObject.getGlyph(41);
         // Assert

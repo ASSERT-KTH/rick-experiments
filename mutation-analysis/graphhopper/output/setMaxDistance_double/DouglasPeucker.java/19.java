@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:             for (int i = fromIndex + 1; i < lastIndex; i++) {
-----> after:             for (int i = fromIndex - 1; i < lastIndex; i++) {
-----> line number in original file: 156
-----> mutated node: 1544
+mutant type: RemoveMethod
+----> before:     static void removeNaN(PointList pointList) {
+----> after:     static void removeNaN(PointList pointList) {
+----> line number in original file: 170
+----> mutated node: 151
 
 */
 
@@ -162,7 +162,7 @@ public class DouglasPeucker {
 
         int counter = 0;
         if (maxDist < normedMaxDist) {
-            for (int i = fromIndex - 1; i < lastIndex; i++) {
+            for (int i = fromIndex + 1; i < lastIndex; i++) {
                 points.set(i, Double.NaN, Double.NaN, Double.NaN);
                 counter++;
             }
@@ -177,14 +177,8 @@ public class DouglasPeucker {
      * Fills all entries of the point list that are NaN with the subsequent values (and therefore shortens the list)
      */
     static void removeNaN(PointList pointList) {
-        int curr = 0;
-        for (int i = 0; i < pointList.size(); i++) {
-            if (!Double.isNaN(pointList.getLat(i))) {
-                pointList.set(curr, pointList.getLat(i), pointList.getLon(i), pointList.getEle(i));
-                curr++;
-            }
-        }
-        pointList.trimToSize(curr);
-    }
+// void -- no return //
+}
+
 
 }

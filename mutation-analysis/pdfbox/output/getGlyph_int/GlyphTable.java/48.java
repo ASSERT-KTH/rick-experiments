@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementShortcut
-----> before:             for (int gid = 0; gid < numGlyphs; gid++)
-----> after:             for (int gid = 0; gid < numGlyphs; gid--)
-----> line number in original file: 109
-----> mutated node: 854
+mutant type: RelationalOperatorReplacement
+----> before:             if (glyphs == null)
+----> after:             if (glyphs != null)
+----> line number in original file: 104
+----> mutated node: 678
 
 */
 
@@ -110,12 +110,12 @@ public class GlyphTable extends TTFTable
             // https://developer.apple.com/fonts/TTRefMan/RM06/Chap6loca.html
             long endOfGlyphs = offsets[numGlyphs];
             long offset = getOffset();
-            if (glyphs == null)
+            if (glyphs != null)
             {
                 glyphs = new GlyphData[numGlyphs];
             }
          
-            for (int gid = 0; gid < numGlyphs; gid--)
+            for (int gid = 0; gid < numGlyphs; gid++)
             {
                 // end of glyphs reached?
                 if (endOfGlyphs != 0 && endOfGlyphs == offsets[gid])

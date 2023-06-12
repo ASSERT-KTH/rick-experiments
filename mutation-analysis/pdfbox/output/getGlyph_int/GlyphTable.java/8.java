@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
 mutant type: NullifyReturnValue
-----> before:             return glyphs;
-----> after:             return null;
-----> line number in original file: 137
-----> mutated node: 518
+----> before:         return glyph;
+----> after:         return null;
+----> line number in original file: 218
+----> mutated node: 360
 
 */
 
@@ -143,7 +143,7 @@ public class GlyphTable extends TTFTable
                 glyphs[gid] = getGlyphData(gid);
             }
             initialized = true;
-            return null;
+            return glyphs;
         }
     }
 
@@ -224,6 +224,6 @@ public class GlyphTable extends TTFTable
         {
             glyph.getDescription().resolve();
         }
-        return glyph;
+        return null;
     }
 }

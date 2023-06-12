@@ -42,8 +42,8 @@ public class TestPDIndexedRickGen {
         // Arrange
         PDIndexed receivingObject = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.graphics.color.PDIndexed.toRGBImage1-receiving.xml");
         WritableRaster mockRaster = Mockito.mock(WritableRaster.class);
-        Mockito.when(mockRaster.getWidth()).thenReturn(8);
-        Mockito.when(mockRaster.getHeight()).thenReturn(128);
+        Mockito.lenient().when(mockRaster.getWidth()).thenReturn(8);
+        Mockito.lenient().when(mockRaster.getHeight()).thenReturn(128);
         // Act
         receivingObject.toRGBImage(mockRaster);
         // Assert
@@ -57,8 +57,8 @@ public class TestPDIndexedRickGen {
         // Arrange
         PDIndexed receivingObject = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.graphics.color.PDIndexed.toRGBImage1-receiving.xml");
         WritableRaster mockRaster = Mockito.mock(WritableRaster.class);
-        Mockito.when(mockRaster.getWidth()).thenReturn(8);
-        Mockito.when(mockRaster.getHeight()).thenReturn(128);
+        Mockito.lenient().when(mockRaster.getWidth()).thenReturn(8);
+        Mockito.lenient().when(mockRaster.getHeight()).thenReturn(128);
         // Act
         receivingObject.toRGBImage(mockRaster);
         // Assert

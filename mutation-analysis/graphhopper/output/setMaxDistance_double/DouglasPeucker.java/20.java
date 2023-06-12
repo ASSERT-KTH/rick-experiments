@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                     lastLat, lastLon, lastEle * elevationFactor)
-----> after:                     lastLat, lastLon, lastEle / elevationFactor)
-----> line number in original file: 142
-----> mutated node: 1609
+mutant type: RemoveMethod
+----> before:     int subSimplify(PointList points, int fromIndex, int lastIndex) {
+----> after:     int subSimplify(PointList points, int fromIndex, int lastIndex) {
+----> line number in original file: 118
+----> mutated node: 146
 
 */
 
@@ -125,53 +125,9 @@ public class DouglasPeucker {
 
     // keep the points of fromIndex and lastIndex
     int subSimplify(PointList points, int fromIndex, int lastIndex) {
-        if (lastIndex - fromIndex < 2) {
-            return 0;
-        }
-        int indexWithMaxDist = -1;
-        double maxDist = -1;
-        double elevationFactor = maxDistance / elevationMaxDistance;
-        double firstLat = points.getLat(fromIndex);
-        double firstLon = points.getLon(fromIndex);
-        double firstEle = points.getEle(fromIndex);
-        double lastLat = points.getLat(lastIndex);
-        double lastLon = points.getLon(lastIndex);
-        double lastEle = points.getEle(lastIndex);
-        for (int i = fromIndex + 1; i < lastIndex; i++) {
-            double lat = points.getLat(i);
-            if (Double.isNaN(lat)) {
-                continue;
-            }
-            double lon = points.getLon(i);
-            double ele = points.getEle(i);
-            double dist = (points.is3D() && elevationMaxDistance < Double.MAX_VALUE && !Double.isNaN(firstEle) && !Double.isNaN(lastEle) && !Double.isNaN(ele))
-                    ? calc.calcNormalizedEdgeDistance3D(
-                    lat, lon, ele * elevationFactor,
-                    firstLat, firstLon, firstEle * elevationFactor,
-                    lastLat, lastLon, lastEle / elevationFactor)
-                    : calc.calcNormalizedEdgeDistance(lat, lon, firstLat, firstLon, lastLat, lastLon);
-            if (maxDist < dist) {
-                indexWithMaxDist = i;
-                maxDist = dist;
-            }
-        }
+    return 0;
+}
 
-        if (indexWithMaxDist < 0) {
-            throw new IllegalStateException("maximum not found in [" + fromIndex + "," + lastIndex + "]");
-        }
-
-        int counter = 0;
-        if (maxDist < normedMaxDist) {
-            for (int i = fromIndex + 1; i < lastIndex; i++) {
-                points.set(i, Double.NaN, Double.NaN, Double.NaN);
-                counter++;
-            }
-        } else {
-            counter = subSimplify(points, fromIndex, indexWithMaxDist);
-            counter += subSimplify(points, indexWithMaxDist, lastIndex);
-        }
-        return counter;
-    }
 
     /**
      * Fills all entries of the point list that are NaN with the subsequent values (and therefore shortens the list)

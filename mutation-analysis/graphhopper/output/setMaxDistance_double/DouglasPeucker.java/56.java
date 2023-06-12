@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementShortcut
-----> before:             for (int i = fromIndex + 1; i < lastIndex; i++) {
-----> after:             for (int i = fromIndex + 1; i < lastIndex; i--) {
-----> line number in original file: 156
-----> mutated node: 1317
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:             int segments = size / delta + 1;
+----> after:             int segments = size * delta + 1;
+----> line number in original file: 100
+----> mutated node: 1432
 
 */
 
@@ -106,7 +106,7 @@ public class DouglasPeucker {
         int size = lastIndex - fromIndex;
         if (approx) {
             int delta = 500;
-            int segments = size / delta + 1;
+            int segments = size * delta + 1;
             int start = fromIndex;
             for (int i = 0; i < segments; i++) {
                 // start of next is end of last segment, except for the last
@@ -162,7 +162,7 @@ public class DouglasPeucker {
 
         int counter = 0;
         if (maxDist < normedMaxDist) {
-            for (int i = fromIndex + 1; i < lastIndex; i--) {
+            for (int i = fromIndex + 1; i < lastIndex; i++) {
                 points.set(i, Double.NaN, Double.NaN, Double.NaN);
                 counter++;
             }

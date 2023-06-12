@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                 int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
-----> after:                 int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb+128)) + (-0.813f * (Cr-128)));
-----> line number in original file: 290
-----> mutated node: 4106
+mutant type: RelationalOperatorReplacement
+----> before:             if (imageMetadata == null)
+----> after:             if (imageMetadata != null)
+----> line number in original file: 339
+----> mutated node: 1372
 
 */
 
@@ -296,7 +296,7 @@ final class DCTFilter extends Filter
 
                 // YCbCr to RGB, see http://www.equasys.de/colorconversion.html
                 int r = clamp( (1.164f * (Y-16)) + (1.596f * (Cr - 128)) );
-                int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb+128)) + (-0.813f * (Cr-128)));
+                int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
                 int b = clamp( (1.164f * (Y-16)) + (2.017f * (Cb-128)));
 
                 // naive RGB to CMYK
@@ -345,7 +345,7 @@ final class DCTFilter extends Filter
         try
         {
             IIOMetadata imageMetadata = reader.getImageMetadata(0);
-            if (imageMetadata == null)
+            if (imageMetadata != null)
             {
                 return "";
             }

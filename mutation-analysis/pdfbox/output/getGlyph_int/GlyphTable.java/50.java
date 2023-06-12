@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:             if (offsets[gid] == offsets[gid + 1])
-----> after:             if (offsets[gid] == offsets[gid - 1])
-----> line number in original file: 176
-----> mutated node: 881
+mutant type: ArithmeticOperatorReplacementShortcut
+----> before:                 ++cached;
+----> after:                 --cached;
+----> line number in original file: 200
+----> mutated node: 1064
 
 */
 
@@ -182,7 +182,7 @@ public class GlyphTable extends TTFTable
             // read a single glyph
             long[] offsets = loca.getOffsets();
 
-            if (offsets[gid] == offsets[gid - 1])
+            if (offsets[gid] == offsets[gid + 1])
             {
                 // no outline
                 // PDFBOX-5135: can't return null, must return an empty glyph because
@@ -206,7 +206,7 @@ public class GlyphTable extends TTFTable
             if (glyphs != null && glyphs[gid] == null && cached < MAX_CACHED_GLYPHS)
             {
                 glyphs[gid] = glyph;
-                ++cached;
+                --cached;
             }
 
             return glyph;

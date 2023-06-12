@@ -3,53 +3,53 @@
     "CUT": "org.apache.pdfbox.pdmodel.graphics.color.PDColor",
     "mutant-file": "./PDColor.java/17.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.724 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.389 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.72 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.847 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.162 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.209 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.391 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.081 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen"
 },
 {
     "mut": "getComponents",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.color.PDColor",
     "mutant-file": "./PDColor.java/18.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.789 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.109 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.483 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.152 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.761 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.762 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.204 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.455 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen"
 },
 {
     "mut": "getComponents",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.color.PDColor",
     "mutant-file": "./PDColor.java/21.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.775 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.657 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 6.669 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 6.832 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 6.875 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.725 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.124 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.434 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen"
 },
 {
     "mut": "getComponents",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.color.PDColor",
     "mutant-file": "./PDColor.java/3.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.61 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.911 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.972 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.643 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.921 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.006 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.396 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.597 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen"
 },
 {
     "mut": "getComponents",
     "CUT": "org.apache.pdfbox.pdmodel.graphics.color.PDColor",
     "mutant-file": "./PDColor.java/4.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.844 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.996 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.009 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.695 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.888 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.461 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.835 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.23 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen"
 },

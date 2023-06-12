@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
 mutant type: ConditionalOperatorReplacement
-----> before:             pos2YBottom >= pos1YTop && pos2YBottom <= pos1YBottom ||
-----> after:             pos2YBottom >= pos1YTop || pos2YBottom <= pos1YBottom ||
-----> line number in original file: 56
-----> mutated node: 226
+----> before:         if (yDifference < .1 ||
+----> after:         if (yDifference < .1 ||
+----> line number in original file: 55
+----> mutated node: 148
 
 */
 
@@ -62,7 +62,7 @@ public class TextPositionComparator implements Comparator<TextPosition>
 
         // we will do a simple tolerance comparison
         if (yDifference < .1 ||
-            pos2YBottom >= pos1YTop || pos2YBottom <= pos1YBottom ||
+            pos2YBottom >= pos1YTop && pos2YBottom <= pos1YBottom &&
             pos1YBottom >= pos2YTop && pos1YBottom <= pos2YBottom)
         {
             return Float.compare(x1, x2);

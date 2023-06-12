@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RemoveMethod
-----> before:     public DouglasPeucker setMaxDistance(double dist) {
-----> after:     public DouglasPeucker setMaxDistance(double dist) {
-----> line number in original file: 55
-----> mutated node: 122
+mutant type: ArithmeticOperatorReplacementShortcut
+----> before:                 curr++;
+----> after:                 curr--;
+----> line number in original file: 175
+----> mutated node: 1493
 
 */
 
@@ -62,9 +62,10 @@ public class DouglasPeucker {
      * maximum distance of discrepancy (from the normal way) in meter
      */
     public DouglasPeucker setMaxDistance(double dist) {
-    return null;
-}
-
+        this.normedMaxDist = calc.calcNormalizedDist(dist);
+        this.maxDistance = dist;
+        return this;
+    }
 
     /**
      * maximum elevation distance of discrepancy (from the normal way) in meters
@@ -180,7 +181,7 @@ public class DouglasPeucker {
         for (int i = 0; i < pointList.size(); i++) {
             if (!Double.isNaN(pointList.getLat(i))) {
                 pointList.set(curr, pointList.getLat(i), pointList.getLon(i), pointList.getEle(i));
-                curr++;
+                curr--;
             }
         }
         pointList.trimToSize(curr);

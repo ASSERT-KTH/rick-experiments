@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                     lat, lon, ele * elevationFactor,
-----> after:                     lat, lon, ele / elevationFactor,
-----> line number in original file: 140
-----> mutated node: 1597
+mutant type: RemoveMethod
+----> before:     public int simplify(PointList points, int fromIndex, int lastIndex, boolean compress) {
+----> after:     public int simplify(PointList points, int fromIndex, int lastIndex, boolean compress) {
+----> line number in original file: 95
+----> mutated node: 142
 
 */
 
@@ -102,26 +102,9 @@ public class DouglasPeucker {
      * @return The number of removed points
      */
     public int simplify(PointList points, int fromIndex, int lastIndex, boolean compress) {
-        int removed = 0;
-        int size = lastIndex - fromIndex;
-        if (approx) {
-            int delta = 500;
-            int segments = size / delta + 1;
-            int start = fromIndex;
-            for (int i = 0; i < segments; i++) {
-                // start of next is end of last segment, except for the last
-                removed += subSimplify(points, start, Math.min(lastIndex, start + delta));
-                start += delta;
-            }
-        } else {
-            removed = subSimplify(points, fromIndex, lastIndex);
-        }
+    return 0;
+}
 
-        if (removed > 0 && compress)
-            removeNaN(points);
-
-        return removed;
-    }
 
     // keep the points of fromIndex and lastIndex
     int subSimplify(PointList points, int fromIndex, int lastIndex) {
@@ -146,7 +129,7 @@ public class DouglasPeucker {
             double ele = points.getEle(i);
             double dist = (points.is3D() && elevationMaxDistance < Double.MAX_VALUE && !Double.isNaN(firstEle) && !Double.isNaN(lastEle) && !Double.isNaN(ele))
                     ? calc.calcNormalizedEdgeDistance3D(
-                    lat, lon, ele / elevationFactor,
+                    lat, lon, ele * elevationFactor,
                     firstLat, firstLon, firstEle * elevationFactor,
                     lastLat, lastLon, lastEle * elevationFactor)
                     : calc.calcNormalizedEdgeDistance(lat, lon, firstLat, firstLon, lastLat, lastLon);

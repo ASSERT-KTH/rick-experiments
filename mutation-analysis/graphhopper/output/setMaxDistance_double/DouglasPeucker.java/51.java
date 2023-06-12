@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:         if (removed > 0 && compress)
-----> after:         if (removed <= 0 && compress)
-----> line number in original file: 111
-----> mutated node: 648
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:         for (int i = fromIndex + 1; i < lastIndex; i++) {
+----> after:         for (int i = fromIndex - 1; i < lastIndex; i++) {
+----> line number in original file: 131
+----> mutated node: 1184
 
 */
 
@@ -117,7 +117,7 @@ public class DouglasPeucker {
             removed = subSimplify(points, fromIndex, lastIndex);
         }
 
-        if (removed <= 0 && compress)
+        if (removed > 0 && compress)
             removeNaN(points);
 
         return removed;
@@ -137,7 +137,7 @@ public class DouglasPeucker {
         double lastLat = points.getLat(lastIndex);
         double lastLon = points.getLon(lastIndex);
         double lastEle = points.getEle(lastIndex);
-        for (int i = fromIndex + 1; i < lastIndex; i++) {
+        for (int i = fromIndex - 1; i < lastIndex; i++) {
             double lat = points.getLat(i);
             if (Double.isNaN(lat)) {
                 continue;

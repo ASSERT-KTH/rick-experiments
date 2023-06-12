@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RemoveMethod
-----> before:     {
-----> after:     {
-----> line number in original file: 145
-----> mutated node: 178
+mutant type: ConditionalOperatorReplacement
+----> before:         if (gid < 0 || gid >= numGlyphs)
+----> after:         if (gid < 0 && gid >= numGlyphs)
+----> line number in original file: 157
+----> mutated node: 454
 
 */
 
@@ -152,9 +152,8 @@ public class GlyphTable extends TTFTable
      */
     public void setGlyphs(GlyphData[] glyphsValue)
     {
-// void -- no return //
-}
-
+        glyphs = glyphsValue;
+    }
 
     /**
      * Returns the data for the glyph with the given GID.
@@ -164,7 +163,7 @@ public class GlyphTable extends TTFTable
      */
     public GlyphData getGlyph(int gid) throws IOException
     {
-        if (gid < 0 || gid >= numGlyphs)
+        if (gid < 0 && gid >= numGlyphs)
         {
             return null;
         }

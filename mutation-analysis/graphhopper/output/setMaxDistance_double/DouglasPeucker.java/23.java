@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:         for (int i = fromIndex + 1; i < lastIndex; i++) {
-----> after:         for (int i = fromIndex - 1; i < lastIndex; i++) {
-----> line number in original file: 131
-----> mutated node: 1184
+mutant type: RemoveMethod
+----> before:     public int simplify(PointList points, int fromIndex, int lastIndex, boolean compress) {
+----> after:     public int simplify(PointList points, int fromIndex, int lastIndex, boolean compress) {
+----> line number in original file: 95
+----> mutated node: 142
 
 */
 
@@ -102,26 +102,9 @@ public class DouglasPeucker {
      * @return The number of removed points
      */
     public int simplify(PointList points, int fromIndex, int lastIndex, boolean compress) {
-        int removed = 0;
-        int size = lastIndex - fromIndex;
-        if (approx) {
-            int delta = 500;
-            int segments = size / delta + 1;
-            int start = fromIndex;
-            for (int i = 0; i < segments; i++) {
-                // start of next is end of last segment, except for the last
-                removed += subSimplify(points, start, Math.min(lastIndex, start + delta));
-                start += delta;
-            }
-        } else {
-            removed = subSimplify(points, fromIndex, lastIndex);
-        }
+    return 1;
+}
 
-        if (removed > 0 && compress)
-            removeNaN(points);
-
-        return removed;
-    }
 
     // keep the points of fromIndex and lastIndex
     int subSimplify(PointList points, int fromIndex, int lastIndex) {
@@ -137,7 +120,7 @@ public class DouglasPeucker {
         double lastLat = points.getLat(lastIndex);
         double lastLon = points.getLon(lastIndex);
         double lastEle = points.getEle(lastIndex);
-        for (int i = fromIndex - 1; i < lastIndex; i++) {
+        for (int i = fromIndex + 1; i < lastIndex; i++) {
             double lat = points.getLat(i);
             if (Double.isNaN(lat)) {
                 continue;

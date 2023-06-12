@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RemoveMethod
-----> before:     {
-----> after:     {
-----> line number in original file: 57
-----> mutated node: 336
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                 int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
+----> after:                 int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f / (Cr-128)));
+----> line number in original file: 290
+----> mutated node: 3958
 
 */
 
@@ -64,9 +64,112 @@ final class DCTFilter extends Filter
     public DecodeResult decode(InputStream encoded, OutputStream decoded, COSDictionary
             parameters, int index, DecodeOptions options) throws IOException
     {
-    return null;
-}
+        ImageReader reader = findImageReader("JPEG", "a suitable JAI I/O image filter is not installed");
+        ImageInputStream iis = null;
+        try
+        {
+            iis = ImageIO.createImageInputStream(encoded);
 
+            // skip one LF if there
+            if (iis.read() != 0x0A)
+            {
+                iis.seek(0);
+            }
+            
+            reader.setInput(iis);
+            ImageReadParam irp = reader.getDefaultReadParam();
+            irp.setSourceSubsampling(options.getSubsamplingX(), options.getSubsamplingY(),
+                    options.getSubsamplingOffsetX(), options.getSubsamplingOffsetY());
+            irp.setSourceRegion(options.getSourceRegion());
+            options.setFilterSubsampled(true);
+
+            String numChannels = getNumChannels(reader);
+
+            // get the raster using horrible JAI workarounds
+            ImageIO.setUseCache(false);
+            Raster raster;
+
+            // Strategy: use read() for RGB or "can't get metadata"
+            // use readRaster() for CMYK and gray and as fallback if read() fails 
+            // after "can't get metadata" because "no meta" file was CMYK
+            if ("3".equals(numChannels) || numChannels.isEmpty())
+            {
+                try
+                {
+                    // I'd like to use ImageReader#readRaster but it is buggy and can't read RGB correctly
+                    BufferedImage image = reader.read(0, irp);
+                    raster = image.getRaster();
+                }
+                catch (IIOException e)
+                {
+                    // JAI can't read CMYK JPEGs using ImageReader#read or ImageIO.read but
+                    // fortunately ImageReader#readRaster isn't buggy when reading 4-channel files
+                    raster = reader.readRaster(0, irp);
+                }
+            }
+            else
+            {
+                // JAI can't read CMYK JPEGs using ImageReader#read or ImageIO.read but
+                // fortunately ImageReader#readRaster isn't buggy when reading 4-channel files
+                raster = reader.readRaster(0, irp);
+            }
+
+            // special handling for 4-component images
+            if (raster.getNumBands() == 4)
+            {
+                // get APP14 marker
+                Integer transform;
+                try
+                {
+                    transform = getAdobeTransform(reader.getImageMetadata(0));
+                }
+                catch (IIOException e)
+                {
+                    // we really tried asking nicely, now we're using brute force.
+                    transform = getAdobeTransformByBruteForce(iis);
+                }
+                catch (NegativeArraySizeException e)
+                {
+                    // we really tried asking nicely, now we're using brute force.
+                    transform = getAdobeTransformByBruteForce(iis);
+                }
+                int colorTransform = transform != null ? transform : 0;
+
+                // 0 = Unknown (RGB or CMYK), 1 = YCbCr, 2 = YCCK
+                switch (colorTransform)
+                {
+                    case 0:
+                        // already CMYK
+                        break;
+                    case 1:
+                        raster = fromYCbCrtoCMYK(raster);
+                        break;
+                    case 2:
+                        raster = fromYCCKtoCMYK(raster);
+                        break;
+                    default:
+                        throw new IllegalArgumentException("Unknown colorTransform");
+                }
+            }
+            else if (raster.getNumBands() == 3)
+            {
+                // BGR to RGB
+                raster = fromBGRtoRGB(raster);
+            }
+
+            DataBufferByte dataBuffer = (DataBufferByte)raster.getDataBuffer();
+            decoded.write(dataBuffer.getData());
+        }
+        finally
+        {
+            if (iis != null)
+            {
+                iis.close();
+            }
+            reader.dispose();
+        }
+        return new DecodeResult(parameters);
+    }
 
     @Override
     public DecodeResult decode(InputStream encoded, OutputStream decoded,
@@ -193,7 +296,7 @@ final class DCTFilter extends Filter
 
                 // YCbCr to RGB, see http://www.equasys.de/colorconversion.html
                 int r = clamp( (1.164f * (Y-16)) + (1.596f * (Cr - 128)) );
-                int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
+                int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f / (Cr-128)));
                 int b = clamp( (1.164f * (Y-16)) + (2.017f * (Cb-128)));
 
                 // naive RGB to CMYK

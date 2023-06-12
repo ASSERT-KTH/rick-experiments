@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:             for (int off = 0; off < w3; off += 3)
-----> after:             for (int off = 0; off >= w3; off += 3)
-----> line number in original file: 322
-----> mutated node: 1573
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                 int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
+----> after:                 int g = clamp( (1.164f / (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
+----> line number in original file: 290
+----> mutated node: 4002
 
 */
 
@@ -296,7 +296,7 @@ final class DCTFilter extends Filter
 
                 // YCbCr to RGB, see http://www.equasys.de/colorconversion.html
                 int r = clamp( (1.164f * (Y-16)) + (1.596f * (Cr - 128)) );
-                int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
+                int g = clamp( (1.164f / (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
                 int b = clamp( (1.164f * (Y-16)) + (2.017f * (Cb-128)));
 
                 // naive RGB to CMYK
@@ -328,7 +328,7 @@ final class DCTFilter extends Filter
         for (int y = 0; y < height; y++)
         {
             raster.getPixels(0, y, width, 1, tab);
-            for (int off = 0; off >= w3; off += 3)
+            for (int off = 0; off < w3; off += 3)
             {
                 int tmp = tab[off];
                 tab[off] = tab[off + 2];

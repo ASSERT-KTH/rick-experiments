@@ -64,9 +64,9 @@ public class TestStringIndexRickGen {
         long paramObject1 = (Long) paramObjects[0];
         String paramObject2 = (String) paramObjects[1];
         DataAccess mockDataAccess = insertPrivateMockField_vals_InStringIndex(receivingObject);
-        Mockito.when(mockDataAccess.getByte(1183750L)).thenReturn((byte) 1);
-        Mockito.when(mockDataAccess.getShort(1183751L)).thenReturn((short) 1);
-        Mockito.when(mockDataAccess.getByte(1183753L)).thenReturn((byte) 15);
+        Mockito.lenient().when(mockDataAccess.getByte(1183750L)).thenReturn((byte) 1);
+        Mockito.lenient().when(mockDataAccess.getShort(1183751L)).thenReturn((short) 1);
+        Mockito.lenient().when(mockDataAccess.getByte(1183753L)).thenReturn((byte) 15);
         // Act
         String actual = receivingObject.get(paramObject1, paramObject2);
         // Assert
@@ -87,9 +87,9 @@ public class TestStringIndexRickGen {
         long paramObject1 = (Long) paramObjects[0];
         String paramObject2 = (String) paramObjects[1];
         DataAccess mockDataAccess = insertPrivateMockField_vals_InStringIndex(receivingObject);
-        Mockito.when(mockDataAccess.getByte(1183750L)).thenReturn((byte) 1);
-        Mockito.when(mockDataAccess.getShort(1183751L)).thenReturn((short) 1);
-        Mockito.when(mockDataAccess.getByte(1183753L)).thenReturn((byte) 15);
+        Mockito.lenient().when(mockDataAccess.getByte(1183750L)).thenReturn((byte) 1);
+        Mockito.lenient().when(mockDataAccess.getShort(1183751L)).thenReturn((short) 1);
+        Mockito.lenient().when(mockDataAccess.getByte(1183753L)).thenReturn((byte) 15);
         // Act
         receivingObject.get(paramObject1, paramObject2);
         // Assert
@@ -113,9 +113,9 @@ public class TestStringIndexRickGen {
         long paramObject1 = (Long) paramObjects[0];
         String paramObject2 = (String) paramObjects[1];
         DataAccess mockDataAccess = insertPrivateMockField_vals_InStringIndex(receivingObject);
-        Mockito.when(mockDataAccess.getByte(1183750L)).thenReturn((byte) 1);
-        Mockito.when(mockDataAccess.getShort(1183751L)).thenReturn((short) 1);
-        Mockito.when(mockDataAccess.getByte(1183753L)).thenReturn((byte) 15);
+        Mockito.lenient().when(mockDataAccess.getByte(1183750L)).thenReturn((byte) 1);
+        Mockito.lenient().when(mockDataAccess.getShort(1183751L)).thenReturn((short) 1);
+        Mockito.lenient().when(mockDataAccess.getByte(1183753L)).thenReturn((byte) 15);
         // Act
         receivingObject.get(paramObject1, paramObject2);
         // Assert

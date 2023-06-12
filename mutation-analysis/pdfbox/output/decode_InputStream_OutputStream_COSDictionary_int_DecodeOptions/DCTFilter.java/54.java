@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RemoveMethod
-----> before:     {
-----> after:     {
-----> line number in original file: 168
-----> mutated node: 344
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                 int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
+----> after:                 int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) - (-0.813f * (Cr-128)));
+----> line number in original file: 290
+----> mutated node: 3706
 
 */
 
@@ -175,9 +175,8 @@ final class DCTFilter extends Filter
     public DecodeResult decode(InputStream encoded, OutputStream decoded,
                                COSDictionary parameters, int index) throws IOException
     {
-    return null;
-}
-
+        return decode(encoded, decoded, parameters, index, DecodeOptions.DEFAULT);
+    }
 
     // reads the APP14 Adobe transform tag and returns its value, or 0 if unknown
     private Integer getAdobeTransform(IIOMetadata metadata)
@@ -297,7 +296,7 @@ final class DCTFilter extends Filter
 
                 // YCbCr to RGB, see http://www.equasys.de/colorconversion.html
                 int r = clamp( (1.164f * (Y-16)) + (1.596f * (Cr - 128)) );
-                int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) + (-0.813f * (Cr-128)));
+                int g = clamp( (1.164f * (Y-16)) + (-0.392f * (Cb-128)) - (-0.813f * (Cr-128)));
                 int b = clamp( (1.164f * (Y-16)) + (2.017f * (Cb-128)));
 
                 // naive RGB to CMYK

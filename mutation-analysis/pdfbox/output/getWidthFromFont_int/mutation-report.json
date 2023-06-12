@@ -3,53 +3,53 @@
     "CUT": "org.apache.pdfbox.pdmodel.font.PDTrueTypeFont",
     "mutant-file": "./PDTrueTypeFont.java/108.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.997 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.271 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.343 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.133 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.409 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.552 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.335 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.048 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.344 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.406 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen"
 },
 {
     "mut": "getWidthFromFont_int",
     "CUT": "org.apache.pdfbox.pdmodel.font.PDTrueTypeFont",
     "mutant-file": "./PDTrueTypeFont.java/187.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 9.11 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 9.18 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 9.788 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 9.308 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 9.339 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.863 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.716 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.516 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.461 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 9.652 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen"
 },
 {
     "mut": "getWidthFromFont_int",
     "CUT": "org.apache.pdfbox.pdmodel.font.PDTrueTypeFont",
     "mutant-file": "./PDTrueTypeFont.java/188.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 8.915 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 8.964 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 9.592 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 9.516 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 9.231 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.076 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.455 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.434 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.184 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 9.868 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen"
 },
 {
     "mut": "getWidthFromFont_int",
     "CUT": "org.apache.pdfbox.pdmodel.font.PDTrueTypeFont",
     "mutant-file": "./PDTrueTypeFont.java/38.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.129 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.197 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.073 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.089 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.732 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.676 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.107 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.584 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.099 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.07 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen"
 },
 {
     "mut": "getWidthFromFont_int",
     "CUT": "org.apache.pdfbox.pdmodel.font.PDTrueTypeFont",
     "mutant-file": "./PDTrueTypeFont.java/57.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.163 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.82 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.49 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.18 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
-    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.129 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.204 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.6 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.923 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.294 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen",
+    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.577 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen"
 },

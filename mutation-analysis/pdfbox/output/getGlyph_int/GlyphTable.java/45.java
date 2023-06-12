@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
 mutant type: RelationalOperatorReplacement
-----> before:         if (numGlyphs < MAX_CACHE_SIZE)
-----> after:         if (numGlyphs >= MAX_CACHE_SIZE)
-----> line number in original file: 70
-----> mutated node: 433
+----> before:                 if (endOfGlyphs != 0 && endOfGlyphs == offsets[gid])
+----> after:                 if (endOfGlyphs != 0 && endOfGlyphs != offsets[gid])
+----> line number in original file: 112
+----> mutated node: 1094
 
 */
 
@@ -76,7 +76,7 @@ public class GlyphTable extends TTFTable
         loca = ttf.getIndexToLocation();
         numGlyphs = ttf.getNumberOfGlyphs();
 
-        if (numGlyphs >= MAX_CACHE_SIZE)
+        if (numGlyphs < MAX_CACHE_SIZE)
         {
             // don't cache the huge fonts to save memory
             glyphs = new GlyphData[numGlyphs];
@@ -118,7 +118,7 @@ public class GlyphTable extends TTFTable
             for (int gid = 0; gid < numGlyphs; gid++)
             {
                 // end of glyphs reached?
-                if (endOfGlyphs != 0 && endOfGlyphs == offsets[gid])
+                if (endOfGlyphs != 0 && endOfGlyphs != offsets[gid])
                 {
                     break;
                 }

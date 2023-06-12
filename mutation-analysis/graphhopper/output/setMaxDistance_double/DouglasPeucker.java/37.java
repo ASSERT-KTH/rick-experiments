@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RemoveMethod
-----> before:     public int simplify(PointList points, int fromIndex, int lastIndex) {
-----> after:     public int simplify(PointList points, int fromIndex, int lastIndex) {
-----> line number in original file: 80
-----> mutated node: 137
+mutant type: RelationalOperatorReplacement
+----> before:         for (int i = fromIndex + 1; i < lastIndex; i++) {
+----> after:         for (int i = fromIndex + 1; i >= lastIndex; i++) {
+----> line number in original file: 131
+----> mutated node: 565
 
 */
 
@@ -87,9 +87,8 @@ public class DouglasPeucker {
     }
 
     public int simplify(PointList points, int fromIndex, int lastIndex) {
-    return 1;
-}
-
+        return simplify(points, fromIndex, lastIndex, true);
+    }
 
     /**
      * Simplifies a part of the <code>points</code>. The <code>fromIndex</code> and <code>lastIndex</code>
@@ -138,7 +137,7 @@ public class DouglasPeucker {
         double lastLat = points.getLat(lastIndex);
         double lastLon = points.getLon(lastIndex);
         double lastEle = points.getEle(lastIndex);
-        for (int i = fromIndex + 1; i < lastIndex; i++) {
+        for (int i = fromIndex + 1; i >= lastIndex; i++) {
             double lat = points.getLat(i);
             if (Double.isNaN(lat)) {
                 continue;

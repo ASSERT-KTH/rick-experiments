@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ConditionalOperatorReplacement
-----> before:         if (gid < 0 || gid >= numGlyphs)
-----> after:         if (gid < 0 && gid >= numGlyphs)
-----> line number in original file: 157
-----> mutated node: 454
+mutant type: RemoveNullCheck
+----> before:             if (glyphs == null)
+----> after:             if (false)
+----> line number in original file: 104
+----> mutated node: 678
 
 */
 
@@ -110,7 +110,7 @@ public class GlyphTable extends TTFTable
             // https://developer.apple.com/fonts/TTRefMan/RM06/Chap6loca.html
             long endOfGlyphs = offsets[numGlyphs];
             long offset = getOffset();
-            if (glyphs == null)
+            if (false)
             {
                 glyphs = new GlyphData[numGlyphs];
             }
@@ -163,7 +163,7 @@ public class GlyphTable extends TTFTable
      */
     public GlyphData getGlyph(int gid) throws IOException
     {
-        if (gid < 0 && gid >= numGlyphs)
+        if (gid < 0 || gid >= numGlyphs)
         {
             return null;
         }

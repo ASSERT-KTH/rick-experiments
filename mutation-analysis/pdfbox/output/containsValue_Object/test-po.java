@@ -48,7 +48,7 @@ public class TestCOSDictionaryRickGen {
         Object[] paramObjects = deserializeObjectFromFile("org.apache.pdfbox.cos.COSDictionary.containsValue1-params.xml");
         Object paramObject1 = (Object) paramObjects[0];
         Map mockMap = insertMockField_items_InCOSDictionary(receivingObject);
-        Mockito.when(mockMap.containsValue(any(Object.class))).thenReturn(false);
+        Mockito.lenient().when(mockMap.containsValue(any(Object.class))).thenReturn(false);
         // Act
         boolean actual = receivingObject.containsValue(paramObject1);
         // Assert
@@ -63,7 +63,7 @@ public class TestCOSDictionaryRickGen {
         Object[] paramObjects = deserializeObjectFromFile("org.apache.pdfbox.cos.COSDictionary.containsValue1-params.xml");
         Object paramObject1 = (Object) paramObjects[0];
         Map mockMap = insertMockField_items_InCOSDictionary(receivingObject);
-        Mockito.when(mockMap.containsValue(any(Object.class))).thenReturn(false);
+        Mockito.lenient().when(mockMap.containsValue(any(Object.class))).thenReturn(false);
         // Act
         receivingObject.containsValue(paramObject1);
         // Assert
@@ -78,7 +78,7 @@ public class TestCOSDictionaryRickGen {
         Object[] paramObjects = deserializeObjectFromFile("org.apache.pdfbox.cos.COSDictionary.containsValue1-params.xml");
         Object paramObject1 = (Object) paramObjects[0];
         Map mockMap = insertMockField_items_InCOSDictionary(receivingObject);
-        Mockito.when(mockMap.containsValue(any(Object.class))).thenReturn(false);
+        Mockito.lenient().when(mockMap.containsValue(any(Object.class))).thenReturn(false);
         // Act
         receivingObject.containsValue(paramObject1);
         // Assert

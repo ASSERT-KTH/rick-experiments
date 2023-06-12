@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:         if (indexWithMaxDist < 0) {
-----> after:         if (indexWithMaxDist >= 0) {
-----> line number in original file: 150
-----> mutated node: 570
+mutant type: ArithmeticOperatorReplacementShortcut
+----> before:             for (int i = 0; i < segments; i++) {
+----> after:             for (int i = 0; i < segments; i--) {
+----> line number in original file: 102
+----> mutated node: 1257
 
 */
 
@@ -108,7 +108,7 @@ public class DouglasPeucker {
             int delta = 500;
             int segments = size / delta + 1;
             int start = fromIndex;
-            for (int i = 0; i < segments; i++) {
+            for (int i = 0; i < segments; i--) {
                 // start of next is end of last segment, except for the last
                 removed += subSimplify(points, start, Math.min(lastIndex, start + delta));
                 start += delta;
@@ -156,7 +156,7 @@ public class DouglasPeucker {
             }
         }
 
-        if (indexWithMaxDist >= 0) {
+        if (indexWithMaxDist < 0) {
             throw new IllegalStateException("maximum not found in [" + fromIndex + "," + lastIndex + "]");
         }
 

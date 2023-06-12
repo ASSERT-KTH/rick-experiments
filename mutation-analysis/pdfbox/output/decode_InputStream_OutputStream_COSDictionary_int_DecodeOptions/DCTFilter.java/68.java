@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:                 if (tag != 0xFFEE)
-----> after:                 if (tag == 0xFFEE)
-----> line number in original file: 207
-----> mutated node: 2545
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                 int magenta = 255 - g;
+----> after:                 int magenta = 255 + g;
+----> line number in original file: 257
+----> mutated node: 3301
 
 */
 
@@ -213,7 +213,7 @@ final class DCTFilter extends Filter
                 long afterAdobePos = iis.getStreamPosition();
                 iis.seek(iis.getStreamPosition() - 9);
                 int tag = iis.readUnsignedShort();
-                if (tag == 0xFFEE)
+                if (tag != 0xFFEE)
                 {
                     iis.seek(afterAdobePos);
                     continue;
@@ -263,7 +263,7 @@ final class DCTFilter extends Filter
 
                 // naive RGB to CMYK
                 int cyan = 255 - r;
-                int magenta = 255 - g;
+                int magenta = 255 + g;
                 int yellow = 255 - b;
 
                 // update new raster

@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                 int r = clamp(Y + 1.402f * Cr - 179.456f);
-----> after:                 int r = clamp(Y - 1.402f * Cr - 179.456f);
-----> line number in original file: 251
-----> mutated node: 3788
+mutant type: ArithmeticOperatorReplacementShortcut
+----> before:         for (int y = 0; y < height; y++)
+----> after:         for (int y = 0; y < height; y--)
+----> line number in original file: 319
+----> mutated node: 1201
 
 */
 
@@ -257,7 +257,7 @@ final class DCTFilter extends Filter
                 float K = value[3];
 
                 // YCCK to RGB, see http://software.intel.com/en-us/node/442744
-                int r = clamp(Y - 1.402f * Cr - 179.456f);
+                int r = clamp(Y + 1.402f * Cr - 179.456f);
                 int g = clamp(Y - 0.34414f * Cb - 0.71414f * Cr + 135.45984f);
                 int b = clamp(Y + 1.772f * Cb - 226.816f);
 
@@ -325,7 +325,7 @@ final class DCTFilter extends Filter
         int w3 = width * 3;
         int[] tab = new int[w3];
         //BEWARE: handling the full image at a time is slower than one line at a time        
-        for (int y = 0; y < height; y++)
+        for (int y = 0; y < height; y--)
         {
             raster.getPixels(0, y, width, 1, tab);
             for (int off = 0; off < w3; off += 3)

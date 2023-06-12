@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:                 if (a != ADOBE.length())
-----> after:                 if (a == ADOBE.length())
-----> line number in original file: 198
-----> mutated node: 2535
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                 int cyan = 255 - r;
+----> after:                 int cyan = 255 + r;
+----> line number in original file: 256
+----> mutated node: 3299
 
 */
 
@@ -204,7 +204,7 @@ final class DCTFilter extends Filter
             if (ADOBE.charAt(a) == by)
             {
                 ++a;
-                if (a == ADOBE.length())
+                if (a != ADOBE.length())
                 {
                     continue;
                 }
@@ -262,7 +262,7 @@ final class DCTFilter extends Filter
                 int b = clamp(Y + 1.772f * Cb - 226.816f);
 
                 // naive RGB to CMYK
-                int cyan = 255 - r;
+                int cyan = 255 + r;
                 int magenta = 255 - g;
                 int yellow = 255 - b;
 

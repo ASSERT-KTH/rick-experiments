@@ -1,0 +1,2717 @@
+[LOG] Initiating analysis at 2023-06-11 18:28:54.707468
+---------------------------------------------------
+[LOG] Removing pre-existing mutants from current working directory
+[LOG] Cleaning up LittleDarwin results
+---------------------------------------------------
+[LOG] Working with StepDisplacement_moveNode_Node_ForceVector
+[LOG] Generating mutants for its parent StepDisplacement.java
+---------------------------------------------------
+[LOG] Running littledarwin on /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/
+[LOG] Invoked LitteDarwin with ['python3', '-m', 'littledarwin', '-m', '-v', '-p', '/home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/', '--all']
+
+    __     _  __   __   __       ____                          _
+   / /    (_)/ /_ / /_ / /___   / __ \ ____ _ _____ _      __ (_)____
+  / /    / // __// __// // _ \ / / / // __ `// ___/| | /| / // // __ \
+ / /___ / // /_ / /_ / //  __// /_/ // /_/ // /    | |/ |/ // // / / /
+/_____//_/ \__/ \__//_/ \___//_____/ \__,_//_/     |__/|__//_//_/ /_/
+
+      _                     _                 ___
+     /_|  /|/|  _/__/'     /_|   _ /   _ ' _ (_  _ _ _  _      _ /
+    (  | /   |(//(///()/) (  |/)(/((/_) /_)  /  / (///)(-((/()/ /(
+                                  /
+
+
+    LittleDarwin version 0.10.7 Copyright (C) 2014-2020 Ali Parsai
+
+    LittleDarwin comes with ABSOLUTELY NO WARRANTY.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; run LittleDarwin --license for details.
+
+    
+Source Path:  /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force
+Target Path:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults
+Creating Mutation Database:  /home/dee/anaconda3/lib/python3.8/site-packages/littledarwin/LittleDarwinResults/mutationdatabase
+
+(1/10) Source file:  /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/StepDisplacement.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  11
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 4
+----> ArithmeticOperatorReplacementBinary : 2
+----> ConditionalOperatorDeletion : 2
+----> NullifyInputVariable : 2
+
+(2/10) Source file:  /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/Displacement.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  0
+
+(3/10) Source file:  /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/ProportionalDisplacement.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  12
+----> NullifyObjectInitialization : 1
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 4
+----> ArithmeticOperatorReplacementBinary : 2
+----> ConditionalOperatorDeletion : 2
+----> NullifyInputVariable : 2
+
+(4/10) Source file:  /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/AbstractForce.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  4
+----> RemoveMethod : 1
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 1
+
+(5/10) Source file:  /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/ForceVector.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  39
+----> AssignmentOperatorReplacementShortcut : 6
+----> NullifyObjectInitialization : 2
+----> RemoveNullCheck : 2
+----> RemoveMethod : 18
+----> RelationalOperatorReplacement : 2
+----> ArithmeticOperatorReplacementBinary : 5
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 2
+
+(6/10) Source file:  /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/quadtree/QuadTree.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  257
+----> NullifyObjectInitialization : 72
+----> ConditionalOperatorReplacement : 3
+----> RemoveMethod : 104
+----> RelationalOperatorReplacement : 5
+----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 21
+----> NullifyInputVariable : 49
+----> NullifyReturnValue : 2
+
+(7/10) Source file:  /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/quadtree/BarnesHut.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  18
+----> NullifyObjectInitialization : 1
+----> ConditionalOperatorReplacement : 1
+----> RemoveMethod : 4
+----> RelationalOperatorReplacement : 4
+----> ArithmeticOperatorReplacementBinary : 1
+----> NullifyInputVariable : 2
+----> NullifyReturnValue : 5
+
+(8/10) Source file:  /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/yifanHu/YifanHuLayout.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  110
+----> AssignmentOperatorReplacementShortcut : 2
+----> NullifyObjectInitialization : 8
+----> RemoveNullCheck : 3
+----> ConditionalOperatorReplacement : 2
+----> RemoveMethod : 33
+----> RelationalOperatorReplacement : 6
+----> ArithmeticOperatorReplacementShortcut : 2
+----> ArithmeticOperatorReplacementBinary : 19
+----> ConditionalOperatorDeletion : 3
+----> NullifyInputVariable : 15
+----> ArithmeticOperatorReplacementUnary : 2
+----> NullifyReturnValue : 15
+
+(9/10) Source file:  /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/yifanHu/YifanHuProportional.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  22
+----> NullifyObjectInitialization : 3
+----> RemoveMethod : 12
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 6
+
+(10/10) Source file:  /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/yifanHu/YifanHu.java
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
+--> Mutations found:  22
+----> NullifyObjectInitialization : 3
+----> RemoveMethod : 12
+----> NullifyInputVariable : 1
+----> NullifyReturnValue : 6
+
+Total mutations found:  495
+--> AssignmentOperatorReplacementShortcut: 8
+--> NullifyObjectInitialization: 90
+--> RemoveNullCheck: 5
+--> ConditionalOperatorReplacement: 8
+--> RemoveMethod: 192
+--> RelationalOperatorReplacement: 17
+--> ArithmeticOperatorReplacementShortcut: 3
+--> ArithmeticOperatorReplacementBinary: 50
+--> ConditionalOperatorDeletion: 7
+--> NullifyInputVariable: 76
+--> ArithmeticOperatorReplacementUnary: 2
+--> NullifyReturnValue: 37
+
+
+---------------------------------------------------
+[LOG] Copying mutants of StepDisplacement.java
+---------------------------------------------------
+[LOG] Generated 11 mutants
+---------------------------------------------------
+[LOG] Backing up original RICK test as ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java ./StepDisplacement.java/original-test.java
+---------------------------------------------------
+[LOG] Generating variants of original RICK test
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-all.java
+---------------------------------------------------
+[LOG] Replacing originalStepDisplacement.java with ./StepDisplacement.java/10.java
+[LOG] Invoking cp ./StepDisplacement.java/10.java /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/StepDisplacement.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.gephi:layout-plugin >-----------------------
+[INFO] Building LayoutPlugin 0.9.6
+[INFO] --------------------------------[ nbm ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ layout-plugin ---
+[INFO] Deleting /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.3.0:parse-version (parse-version) @ layout-plugin ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.2:check (validate) @ layout-plugin ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:copy-resources (generate-modules-xml) @ layout-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ layout-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 178 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.0:compile (default-compile) @ layout-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 54 source files to /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/classes
+[WARNING] No processor claimed any of these annotations: java.base/java.lang.Override
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/openord/DensityGrid.java:[68,19] [rawtypes] found raw type: ArrayDeque
+  missing type arguments for generic class ArrayDeque<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayDeque
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/openord/DensityGrid.java:[68,15] [unchecked] unchecked conversion
+  required: ArrayDeque<Node>[][]
+  found:    ArrayDeque[][]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/quadtree/QuadTree.java:[435,23] [rawtypes] found raw type: Entry
+  missing type arguments for generic class Entry<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Entry
+    V extends Object declared in interface Entry
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[158,48] [unchecked] unchecked call to setValue(T) as a member of the raw type Property
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[241,8] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[249,18] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[256,15] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[260,25] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[193,22] [rawtypes] found raw type: Future
+  missing type arguments for generic class Future<V>
+  where V is a type-variable:
+    V extends Object declared in interface Future
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[193,44] [rawtypes] found raw type: ArrayList
+  missing type arguments for generic class ArrayList<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[193,40] [unchecked] unchecked conversion
+  required: ArrayList<Future>
+  found:    ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[197,16] [rawtypes] found raw type: Future
+  missing type arguments for generic class Future<V>
+  where V is a type-variable:
+    V extends Object declared in interface Future
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[203,17] [rawtypes] found raw type: Future
+  missing type arguments for generic class Future<V>
+  where V is a type-variable:
+    V extends Object declared in interface Future
+[INFO] 
+[INFO] --- nbm-maven-plugin:4.6:manifest (default-manifest) @ layout-plugin ---
+[INFO] NBM Plugin generates manifest
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ layout-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.0:testCompile (default-testCompile) @ layout-plugin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ layout-plugin ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.2:jar (default-jar) @ layout-plugin ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/layout-plugin-0.9.6.jar
+[INFO] 
+[INFO] --- nbm-maven-plugin:4.6:nbm (default-nbm) @ layout-plugin ---
+[INFO] Copying module JAR to /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/nbm/clusters/gephi/modules
+[INFO] Generating Auto Update information for org.gephi.layout.plugin
+[WARNING] No updater.jar specified, cannot validate Info.xml against DTD
+[INFO] Building jar: /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/nbm/layout-plugin-0.9.6.nbm
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ layout-plugin ---
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/layout-plugin-0.9.6.jar to /home/dee/.m2/repository/org/gephi/layout-plugin/0.9.6/layout-plugin-0.9.6.jar
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/pom.xml to /home/dee/.m2/repository/org/gephi/layout-plugin/0.9.6/layout-plugin-0.9.6.pom
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/layout-plugin-0.9.6.nbm to /home/dee/.m2/repository/org/gephi/layout-plugin/0.9.6/layout-plugin-0.9.6.nbm
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  25.753 s
+[INFO] Finished at: 2023-06-11T18:29:33+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-baseline.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 14.207 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 8.813 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:62)
+
+[ERROR] test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 4.574 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:43)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054:62 » NullPointer
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054:43 » NullPointer
+[INFO] 
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  34.128 s
+[INFO] Finished at: 2023-06-11T18:30:11+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.940 s
+[INFO] Finished at: 2023-06-11T18:30:16+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-po.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 14.823 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 8.744 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:62)
+
+[ERROR] test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 5.065 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:43)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054:62 » NullPointer
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054:43 » NullPointer
+[INFO] 
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  32.543 s
+[INFO] Finished at: 2023-06-11T18:30:53+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.073 s
+[INFO] Finished at: 2023-06-11T18:30:58+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-co.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 14.483 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 9.103 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:62)
+
+[ERROR] test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 4.457 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:43)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054:62 » NullPointer
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054:43 » NullPointer
+[INFO] 
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  32.790 s
+[INFO] Finished at: 2023-06-11T18:31:34+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.010 s
+[INFO] Finished at: 2023-06-11T18:31:39+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 15.635 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 8.863 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:62)
+
+[ERROR] test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 5.839 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:43)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054:62 » NullPointer
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054:43 » NullPointer
+[INFO] 
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  33.178 s
+[INFO] Finished at: 2023-06-11T18:32:17+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.972 s
+[INFO] Finished at: 2023-06-11T18:32:22+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting StepDisplacement.java to original
+[LOG] Invoking cp ./StepDisplacement.java/original.java /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/StepDisplacement.java
+---------------------------------------------------
+[LOG] Replacing originalStepDisplacement.java with ./StepDisplacement.java/11.java
+[LOG] Invoking cp ./StepDisplacement.java/11.java /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/StepDisplacement.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.gephi:layout-plugin >-----------------------
+[INFO] Building LayoutPlugin 0.9.6
+[INFO] --------------------------------[ nbm ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ layout-plugin ---
+[INFO] Deleting /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.3.0:parse-version (parse-version) @ layout-plugin ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.2:check (validate) @ layout-plugin ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:copy-resources (generate-modules-xml) @ layout-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ layout-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 178 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.0:compile (default-compile) @ layout-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 54 source files to /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/classes
+[WARNING] No processor claimed any of these annotations: java.base/java.lang.Override
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/openord/DensityGrid.java:[68,19] [rawtypes] found raw type: ArrayDeque
+  missing type arguments for generic class ArrayDeque<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayDeque
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/openord/DensityGrid.java:[68,15] [unchecked] unchecked conversion
+  required: ArrayDeque<Node>[][]
+  found:    ArrayDeque[][]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/quadtree/QuadTree.java:[435,23] [rawtypes] found raw type: Entry
+  missing type arguments for generic class Entry<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Entry
+    V extends Object declared in interface Entry
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[158,48] [unchecked] unchecked call to setValue(T) as a member of the raw type Property
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[241,8] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[249,18] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[256,15] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[260,25] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[193,22] [rawtypes] found raw type: Future
+  missing type arguments for generic class Future<V>
+  where V is a type-variable:
+    V extends Object declared in interface Future
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[193,44] [rawtypes] found raw type: ArrayList
+  missing type arguments for generic class ArrayList<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[193,40] [unchecked] unchecked conversion
+  required: ArrayList<Future>
+  found:    ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[197,16] [rawtypes] found raw type: Future
+  missing type arguments for generic class Future<V>
+  where V is a type-variable:
+    V extends Object declared in interface Future
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[203,17] [rawtypes] found raw type: Future
+  missing type arguments for generic class Future<V>
+  where V is a type-variable:
+    V extends Object declared in interface Future
+[INFO] 
+[INFO] --- nbm-maven-plugin:4.6:manifest (default-manifest) @ layout-plugin ---
+[INFO] NBM Plugin generates manifest
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ layout-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.0:testCompile (default-testCompile) @ layout-plugin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ layout-plugin ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.2:jar (default-jar) @ layout-plugin ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/layout-plugin-0.9.6.jar
+[INFO] 
+[INFO] --- nbm-maven-plugin:4.6:nbm (default-nbm) @ layout-plugin ---
+[INFO] Copying module JAR to /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/nbm/clusters/gephi/modules
+[INFO] Generating Auto Update information for org.gephi.layout.plugin
+[WARNING] No updater.jar specified, cannot validate Info.xml against DTD
+[INFO] Building jar: /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/nbm/layout-plugin-0.9.6.nbm
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ layout-plugin ---
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/layout-plugin-0.9.6.jar to /home/dee/.m2/repository/org/gephi/layout-plugin/0.9.6/layout-plugin-0.9.6.jar
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/pom.xml to /home/dee/.m2/repository/org/gephi/layout-plugin/0.9.6/layout-plugin-0.9.6.pom
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/layout-plugin-0.9.6.nbm to /home/dee/.m2/repository/org/gephi/layout-plugin/0.9.6/layout-plugin-0.9.6.nbm
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  24.545 s
+[INFO] Finished at: 2023-06-11T18:32:51+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-baseline.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 14.044 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 8.329 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:62)
+
+[ERROR] test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 4.566 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:43)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054:62 » NullPointer
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054:43 » NullPointer
+[INFO] 
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  32.299 s
+[INFO] Finished at: 2023-06-11T18:33:27+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.034 s
+[INFO] Finished at: 2023-06-11T18:33:32+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-po.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 18.026 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 10.901 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:62)
+
+[ERROR] test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 5.812 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:43)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054:62 » NullPointer
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054:43 » NullPointer
+[INFO] 
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  36.364 s
+[INFO] Finished at: 2023-06-11T18:34:13+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.100 s
+[INFO] Finished at: 2023-06-11T18:34:18+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-co.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 15.226 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 8.777 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:62)
+
+[ERROR] test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 5.592 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:43)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054:62 » NullPointer
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054:43 » NullPointer
+[INFO] 
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  33.086 s
+[INFO] Finished at: 2023-06-11T18:34:55+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.029 s
+[INFO] Finished at: 2023-06-11T18:35:00+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 15.3 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 9.313 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:62)
+
+[ERROR] test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 5.146 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:43)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Errors: 
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054:62 » NullPointer
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054:43 » NullPointer
+[INFO] 
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  32.004 s
+[INFO] Finished at: 2023-06-11T18:35:36+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.002 s
+[INFO] Finished at: 2023-06-11T18:35:41+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting StepDisplacement.java to original
+[LOG] Invoking cp ./StepDisplacement.java/original.java /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/StepDisplacement.java
+---------------------------------------------------
+[LOG] Replacing originalStepDisplacement.java with ./StepDisplacement.java/3.java
+[LOG] Invoking cp ./StepDisplacement.java/3.java /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/StepDisplacement.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.gephi:layout-plugin >-----------------------
+[INFO] Building LayoutPlugin 0.9.6
+[INFO] --------------------------------[ nbm ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ layout-plugin ---
+[INFO] Deleting /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.3.0:parse-version (parse-version) @ layout-plugin ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.2:check (validate) @ layout-plugin ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:copy-resources (generate-modules-xml) @ layout-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ layout-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 178 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.0:compile (default-compile) @ layout-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 54 source files to /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/classes
+[WARNING] No processor claimed any of these annotations: java.base/java.lang.Override
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/openord/DensityGrid.java:[68,19] [rawtypes] found raw type: ArrayDeque
+  missing type arguments for generic class ArrayDeque<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayDeque
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/openord/DensityGrid.java:[68,15] [unchecked] unchecked conversion
+  required: ArrayDeque<Node>[][]
+  found:    ArrayDeque[][]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/quadtree/QuadTree.java:[435,23] [rawtypes] found raw type: Entry
+  missing type arguments for generic class Entry<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Entry
+    V extends Object declared in interface Entry
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[158,48] [unchecked] unchecked call to setValue(T) as a member of the raw type Property
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[241,8] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[249,18] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[256,15] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[260,25] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[193,22] [rawtypes] found raw type: Future
+  missing type arguments for generic class Future<V>
+  where V is a type-variable:
+    V extends Object declared in interface Future
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[193,44] [rawtypes] found raw type: ArrayList
+  missing type arguments for generic class ArrayList<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[193,40] [unchecked] unchecked conversion
+  required: ArrayList<Future>
+  found:    ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[197,16] [rawtypes] found raw type: Future
+  missing type arguments for generic class Future<V>
+  where V is a type-variable:
+    V extends Object declared in interface Future
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[203,17] [rawtypes] found raw type: Future
+  missing type arguments for generic class Future<V>
+  where V is a type-variable:
+    V extends Object declared in interface Future
+[INFO] 
+[INFO] --- nbm-maven-plugin:4.6:manifest (default-manifest) @ layout-plugin ---
+[INFO] NBM Plugin generates manifest
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ layout-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.0:testCompile (default-testCompile) @ layout-plugin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ layout-plugin ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.2:jar (default-jar) @ layout-plugin ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/layout-plugin-0.9.6.jar
+[INFO] 
+[INFO] --- nbm-maven-plugin:4.6:nbm (default-nbm) @ layout-plugin ---
+[INFO] Copying module JAR to /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/nbm/clusters/gephi/modules
+[INFO] Generating Auto Update information for org.gephi.layout.plugin
+[WARNING] No updater.jar specified, cannot validate Info.xml against DTD
+[INFO] Building jar: /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/nbm/layout-plugin-0.9.6.nbm
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ layout-plugin ---
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/layout-plugin-0.9.6.jar to /home/dee/.m2/repository/org/gephi/layout-plugin/0.9.6/layout-plugin-0.9.6.jar
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/pom.xml to /home/dee/.m2/repository/org/gephi/layout-plugin/0.9.6/layout-plugin-0.9.6.pom
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/layout-plugin-0.9.6.nbm to /home/dee/.m2/repository/org/gephi/layout-plugin/0.9.6/layout-plugin-0.9.6.nbm
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  23.290 s
+[INFO] Finished at: 2023-06-11T18:36:09+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-baseline.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.323 s - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  36.039 s
+[INFO] Finished at: 2023-06-11T18:36:49+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.129 s
+[INFO] Finished at: 2023-06-11T18:36:55+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-po.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 16.727 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 6.208 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+node.x();
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:45)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:45)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054:45 
+Wanted but not invoked:
+node.x();
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:45)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  35.334 s
+[INFO] Finished at: 2023-06-11T18:37:34+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.968 s
+[INFO] Finished at: 2023-06-11T18:37:39+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-co.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.823 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 8.946 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+node.x();
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:65)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:65)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054:65 
+Wanted but not invoked:
+node.x();
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:65)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  35.157 s
+[INFO] Finished at: 2023-06-11T18:38:19+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.960 s
+[INFO] Finished at: 2023-06-11T18:38:24+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 17.042 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 10.328 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+node.x();
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:65)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:65)
+
+[ERROR] test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 5.864 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+node.x();
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:45)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:45)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054:65 
+Wanted but not invoked:
+node.x();
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_CO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:65)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054:45 
+Wanted but not invoked:
+node.x();
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:45)
+Actually, there were zero interactions with this mock.
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  35.396 s
+[INFO] Finished at: 2023-06-11T18:39:03+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.068 s
+[INFO] Finished at: 2023-06-11T18:39:09+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting StepDisplacement.java to original
+[LOG] Invoking cp ./StepDisplacement.java/original.java /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/StepDisplacement.java
+---------------------------------------------------
+[LOG] Replacing originalStepDisplacement.java with ./StepDisplacement.java/6.java
+[LOG] Invoking cp ./StepDisplacement.java/6.java /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/StepDisplacement.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.gephi:layout-plugin >-----------------------
+[INFO] Building LayoutPlugin 0.9.6
+[INFO] --------------------------------[ nbm ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ layout-plugin ---
+[INFO] Deleting /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.3.0:parse-version (parse-version) @ layout-plugin ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.2:check (validate) @ layout-plugin ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:copy-resources (generate-modules-xml) @ layout-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ layout-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 178 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.0:compile (default-compile) @ layout-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 54 source files to /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/classes
+[WARNING] No processor claimed any of these annotations: java.base/java.lang.Override
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/openord/DensityGrid.java:[68,19] [rawtypes] found raw type: ArrayDeque
+  missing type arguments for generic class ArrayDeque<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayDeque
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/openord/DensityGrid.java:[68,15] [unchecked] unchecked conversion
+  required: ArrayDeque<Node>[][]
+  found:    ArrayDeque[][]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/quadtree/QuadTree.java:[435,23] [rawtypes] found raw type: Entry
+  missing type arguments for generic class Entry<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Entry
+    V extends Object declared in interface Entry
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[158,48] [unchecked] unchecked call to setValue(T) as a member of the raw type Property
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[241,8] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[249,18] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[256,15] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[260,25] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[193,22] [rawtypes] found raw type: Future
+  missing type arguments for generic class Future<V>
+  where V is a type-variable:
+    V extends Object declared in interface Future
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[193,44] [rawtypes] found raw type: ArrayList
+  missing type arguments for generic class ArrayList<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[193,40] [unchecked] unchecked conversion
+  required: ArrayList<Future>
+  found:    ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[197,16] [rawtypes] found raw type: Future
+  missing type arguments for generic class Future<V>
+  where V is a type-variable:
+    V extends Object declared in interface Future
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[203,17] [rawtypes] found raw type: Future
+  missing type arguments for generic class Future<V>
+  where V is a type-variable:
+    V extends Object declared in interface Future
+[INFO] 
+[INFO] --- nbm-maven-plugin:4.6:manifest (default-manifest) @ layout-plugin ---
+[INFO] NBM Plugin generates manifest
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ layout-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.0:testCompile (default-testCompile) @ layout-plugin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ layout-plugin ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.2:jar (default-jar) @ layout-plugin ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/layout-plugin-0.9.6.jar
+[INFO] 
+[INFO] --- nbm-maven-plugin:4.6:nbm (default-nbm) @ layout-plugin ---
+[INFO] Copying module JAR to /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/nbm/clusters/gephi/modules
+[INFO] Generating Auto Update information for org.gephi.layout.plugin
+[WARNING] No updater.jar specified, cannot validate Info.xml against DTD
+[INFO] Building jar: /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/nbm/layout-plugin-0.9.6.nbm
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ layout-plugin ---
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/layout-plugin-0.9.6.jar to /home/dee/.m2/repository/org/gephi/layout-plugin/0.9.6/layout-plugin-0.9.6.jar
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/pom.xml to /home/dee/.m2/repository/org/gephi/layout-plugin/0.9.6/layout-plugin-0.9.6.pom
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/layout-plugin-0.9.6.nbm to /home/dee/.m2/repository/org/gephi/layout-plugin/0.9.6/layout-plugin-0.9.6.nbm
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  25.605 s
+[INFO] Finished at: 2023-06-11T18:39:39+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-baseline.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.596 s - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  35.459 s
+[INFO] Finished at: 2023-06-11T18:40:18+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.047 s
+[INFO] Finished at: 2023-06-11T18:40:24+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-po.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 16.35 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 6.181 s  <<< FAILURE!
+org.mockito.exceptions.verification.opentest4j.ArgumentsAreDifferent: 
+
+Argument(s) are different! Wanted:
+node.setY(105.14341f);
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:48)
+Actual invocations have different arguments:
+node.x();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:79)
+node.y();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:80)
+node.setX(-403.92587f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:83)
+node.setY(109.90296f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:86)
+
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:48)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054:48 
+Argument(s) are different! Wanted:
+node.setY(105.14341f);
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:48)
+Actual invocations have different arguments:
+node.x();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:79)
+node.y();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:80)
+node.setX(-403.92587f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:83)
+node.setY(109.90296f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:86)
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  35.333 s
+[INFO] Finished at: 2023-06-11T18:41:03+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.073 s
+[INFO] Finished at: 2023-06-11T18:41:09+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-co.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.623 s - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  36.689 s
+[INFO] Finished at: 2023-06-11T18:41:49+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.078 s
+[INFO] Finished at: 2023-06-11T18:41:55+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 17.338 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 5.76 s  <<< FAILURE!
+org.mockito.exceptions.verification.opentest4j.ArgumentsAreDifferent: 
+
+Argument(s) are different! Wanted:
+node.setY(105.14341f);
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:48)
+Actual invocations have different arguments:
+node.x();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:79)
+node.y();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:80)
+node.setX(-403.92587f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:83)
+node.setY(109.90296f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:86)
+
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:48)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054:48 
+Argument(s) are different! Wanted:
+node.setY(105.14341f);
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:48)
+Actual invocations have different arguments:
+node.x();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:79)
+node.y();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:80)
+node.setX(-403.92587f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:83)
+node.setY(109.90296f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:86)
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  36.567 s
+[INFO] Finished at: 2023-06-11T18:42:36+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.037 s
+[INFO] Finished at: 2023-06-11T18:42:41+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting StepDisplacement.java to original
+[LOG] Invoking cp ./StepDisplacement.java/original.java /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/StepDisplacement.java
+---------------------------------------------------
+[LOG] Replacing originalStepDisplacement.java with ./StepDisplacement.java/7.java
+[LOG] Invoking cp ./StepDisplacement.java/7.java /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/StepDisplacement.java
+[LOG] Invoked a clean install of the parent module with ['mvn', 'clean', 'install', '-DskipTests']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< org.gephi:layout-plugin >-----------------------
+[INFO] Building LayoutPlugin 0.9.6
+[INFO] --------------------------------[ nbm ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.1.0:clean (default-clean) @ layout-plugin ---
+[INFO] Deleting /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target
+[INFO] 
+[INFO] --- build-helper-maven-plugin:3.3.0:parse-version (parse-version) @ layout-plugin ---
+[INFO] 
+[INFO] --- maven-checkstyle-plugin:3.1.2:check (validate) @ layout-plugin ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:copy-resources (generate-modules-xml) @ layout-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ layout-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 178 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.0:compile (default-compile) @ layout-plugin ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 54 source files to /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/classes
+[WARNING] No processor claimed any of these annotations: java.base/java.lang.Override
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/openord/DensityGrid.java:[68,19] [rawtypes] found raw type: ArrayDeque
+  missing type arguments for generic class ArrayDeque<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayDeque
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/openord/DensityGrid.java:[68,15] [unchecked] unchecked conversion
+  required: ArrayDeque<Node>[][]
+  found:    ArrayDeque[][]
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/quadtree/QuadTree.java:[435,23] [rawtypes] found raw type: Entry
+  missing type arguments for generic class Entry<K,V>
+  where K,V are type-variables:
+    K extends Object declared in interface Entry
+    V extends Object declared in interface Entry
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[158,48] [unchecked] unchecked call to setValue(T) as a member of the raw type Property
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[241,8] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[249,18] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[256,15] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/AutoLayout.java:[260,25] [rawtypes] found raw type: Property
+  missing type arguments for generic class Property<T>
+  where T is a type-variable:
+    T extends Object declared in class Property
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[193,22] [rawtypes] found raw type: Future
+  missing type arguments for generic class Future<V>
+  where V is a type-variable:
+    V extends Object declared in interface Future
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[193,44] [rawtypes] found raw type: ArrayList
+  missing type arguments for generic class ArrayList<E>
+  where E is a type-variable:
+    E extends Object declared in class ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[193,40] [unchecked] unchecked conversion
+  required: ArrayList<Future>
+  found:    ArrayList
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[197,16] [rawtypes] found raw type: Future
+  missing type arguments for generic class Future<V>
+  where V is a type-variable:
+    V extends Object declared in interface Future
+[WARNING] /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/forceAtlas2/ForceAtlas2.java:[203,17] [rawtypes] found raw type: Future
+  missing type arguments for generic class Future<V>
+  where V is a type-variable:
+    V extends Object declared in interface Future
+[INFO] 
+[INFO] --- nbm-maven-plugin:4.6:manifest (default-manifest) @ layout-plugin ---
+[INFO] NBM Plugin generates manifest
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:testResources (default-testResources) @ layout-plugin ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] skip non existing resourceDirectory /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.0:testCompile (default-testCompile) @ layout-plugin ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ layout-plugin ---
+[INFO] Tests are skipped.
+[INFO] 
+[INFO] --- maven-jar-plugin:3.2.2:jar (default-jar) @ layout-plugin ---
+[INFO] Building jar: /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/layout-plugin-0.9.6.jar
+[INFO] 
+[INFO] --- nbm-maven-plugin:4.6:nbm (default-nbm) @ layout-plugin ---
+[INFO] Copying module JAR to /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/nbm/clusters/gephi/modules
+[INFO] Generating Auto Update information for org.gephi.layout.plugin
+[WARNING] No updater.jar specified, cannot validate Info.xml against DTD
+[INFO] Building jar: /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/nbm/layout-plugin-0.9.6.nbm
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ layout-plugin ---
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/layout-plugin-0.9.6.jar to /home/dee/.m2/repository/org/gephi/layout-plugin/0.9.6/layout-plugin-0.9.6.jar
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/pom.xml to /home/dee/.m2/repository/org/gephi/layout-plugin/0.9.6/layout-plugin-0.9.6.pom
+[INFO] Installing /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/target/layout-plugin-0.9.6.nbm to /home/dee/.m2/repository/org/gephi/layout-plugin/0.9.6/layout-plugin-0.9.6.nbm
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  22.870 s
+[INFO] Finished at: 2023-06-11T18:43:09+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[BASELINE] Not evaluating any oracle
+[LOG] Replacing original RICK test with variant baseline
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-baseline.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.051 s - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  33.086 s
+[INFO] Finished at: 2023-06-11T18:43:46+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.049 s
+[INFO] Finished at: 2023-06-11T18:43:52+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+---------------------------------------------------
+[PO] Evaluating only PO
+[LOG] Replacing original RICK test with variant po
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-po.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 14.356 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 5.111 s  <<< FAILURE!
+org.mockito.exceptions.verification.opentest4j.ArgumentsAreDifferent: 
+
+Argument(s) are different! Wanted:
+node.setX(-403.92587f);
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:47)
+Actual invocations have different arguments:
+node.x();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:79)
+node.y();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:80)
+node.setX(-443.6417f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:83)
+node.setY(105.14341f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:86)
+
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:47)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054:47 
+Argument(s) are different! Wanted:
+node.setX(-403.92587f);
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:47)
+Actual invocations have different arguments:
+node.x();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:79)
+node.y();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:80)
+node.setX(-443.6417f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:83)
+node.setY(105.14341f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:86)
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  33.062 s
+[INFO] Finished at: 2023-06-11T18:44:30+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.077 s
+[INFO] Finished at: 2023-06-11T18:44:35+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+---------------------------------------------------
+[CO] Evaluating only CO
+[LOG] Replacing original RICK test with variant co
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/test-co.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.528 s - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  34.653 s
+[INFO] Finished at: 2023-06-11T18:45:14+02:00
+[INFO] ------------------------------------------------------------------------
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.995 s
+[INFO] Finished at: 2023-06-11T18:45:19+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+---------------------------------------------------
+[ALL] Evaluating (OO +) PO + CO
+[LOG] Restoring original RICK test from ./StepDisplacement.java/original-test.java
+[LOG] Invoking cp ./StepDisplacement.java/original-test.java /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/layout/plugin/force/TestStepDisplacementRickGen.java
+[LOG] In test module directory /home/dee/dev/rick-major-review/rick-tests
+[LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestStepDisplacementRickGen']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 26 source files to /home/dee/dev/rick-major-review/rick-tests/target/test-classes
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Some input files use unchecked or unsafe operations.
+[WARNING] /home/dee/dev/rick-major-review/rick-tests/src/test/java/org/gephi/importer/impl/TestImportContainerImplRickGenNodeExists.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.877 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[ERROR] test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054  Time elapsed: 5.847 s  <<< FAILURE!
+org.mockito.exceptions.verification.opentest4j.ArgumentsAreDifferent: 
+
+Argument(s) are different! Wanted:
+node.setX(-403.92587f);
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:47)
+Actual invocations have different arguments:
+node.x();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:79)
+node.y();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:80)
+node.setX(-443.6417f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:83)
+node.setY(105.14341f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:86)
+
+	at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:47)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054:47 
+Argument(s) are different! Wanted:
+node.setX(-403.92587f);
+-> at org.gephi.layout.plugin.force.TestStepDisplacementRickGen.test_moveNode_PO_9b888ac8879c4f6383072dc6d8a70054(TestStepDisplacementRickGen.java:47)
+Actual invocations have different arguments:
+node.x();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:79)
+node.y();
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:80)
+node.setX(-443.6417f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:83)
+node.setY(105.14341f);
+-> at org.gephi.layout.plugin.force.StepDisplacement.moveNode(StepDisplacement.java:86)
+
+[INFO] 
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  33.628 s
+[INFO] Finished at: 2023-06-11T18:45:56+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-major-review/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+
+Security framework of XStream not initialized, XStream is probably vulnerable.
+
+---------------------------------------------------
+[LOG] Cleaned targets with ['mvn', 'clean']
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ rick-tests ---
+[INFO] Deleting /home/dee/dev/rick-major-review/rick-tests/target
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.980 s
+[INFO] Finished at: 2023-06-11T18:46:02+02:00
+[INFO] ------------------------------------------------------------------------
+
+
+---------------------------------------------------
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
+---------------------------------------------------
+---------------------------------------------------
+[LOG] Resetting StepDisplacement.java to original
+[LOG] Invoking cp ./StepDisplacement.java/original.java /home/dee/dev/rick-major-review/gephi/modules/LayoutPlugin/src/main/java/org/gephi/layout/plugin/force/StepDisplacement.java
+---------------------------------------------------
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/StepDisplacement.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/StepDisplacement_moveNode_Node_ForceVector/']
+
+
+---------------------------------------------------
+[LOG] Finishing analysis at 2023-06-11 18:46:02.313810
+====== END OF THE LINE ======

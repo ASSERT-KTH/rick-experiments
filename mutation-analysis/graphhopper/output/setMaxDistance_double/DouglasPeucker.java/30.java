@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:         return simplify(points, 0, points.size() - 1);
-----> after:         return simplify(points, 0, points.size() + 1);
-----> line number in original file: 77
-----> mutated node: 625
+mutant type: RemoveMethod
+----> before:     public void setApproximation(boolean a) {
+----> after:     public void setApproximation(boolean a) {
+----> line number in original file: 44
+----> mutated node: 117
 
 */
 
@@ -51,12 +51,9 @@ public class DouglasPeucker {
     }
 
     public void setApproximation(boolean a) {
-        approx = a;
-        if (approx)
-            calc = DistancePlaneProjection.DIST_PLANE;
-        else
-            calc = DistanceCalcEarth.DIST_EARTH;
-    }
+// void -- no return //
+}
+
 
     /**
      * maximum distance of discrepancy (from the normal way) in meter
@@ -83,7 +80,7 @@ public class DouglasPeucker {
      * @return The number removed points
      */
     public int simplify(PointList points) {
-        return simplify(points, 0, points.size() + 1);
+        return simplify(points, 0, points.size() - 1);
     }
 
     public int simplify(PointList points, int fromIndex, int lastIndex) {

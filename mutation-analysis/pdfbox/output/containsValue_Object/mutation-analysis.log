@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-05 01:01:17.644701
+[LOG] Initiating analysis at 2023-06-10 20:46:30.594526
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -87,9 +87,9 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyReturnValue : 3
 ----> NullifyObjectInitialization : 5
 ----> ConditionalOperatorReplacement : 6
-----> ArithmeticOperatorReplacementBinary : 2
 ----> RemoveMethod : 19
 ----> RelationalOperatorReplacement : 9
+----> ArithmeticOperatorReplacementBinary : 2
 ----> ConditionalOperatorDeletion : 2
 
 (6/20) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSObjectKey.java
@@ -101,10 +101,10 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyReturnValue : 1
 ----> RemoveNullCheck : 1
 ----> ConditionalOperatorReplacement : 2
-----> ArithmeticOperatorReplacementBinary : 2
 ----> ShiftOperatorReplacement : 1
 ----> RemoveMethod : 13
 ----> RelationalOperatorReplacement : 7
+----> ArithmeticOperatorReplacementBinary : 2
 
 (7/20) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSNull.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -121,10 +121,10 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 --> Mutations found:  21
 ----> NullifyObjectInitialization : 2
 ----> RemoveNullCheck : 5
-----> ArithmeticOperatorReplacementBinary : 1
 ----> RemoveMethod : 5
 ----> RelationalOperatorReplacement : 7
 ----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 1
 
 (9/20) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/PDFDocEncoding.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -150,9 +150,9 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyObjectInitialization : 7
 ----> LogicalOperatorReplacement : 4
 ----> ConditionalOperatorReplacement : 3
-----> ArithmeticOperatorReplacementBinary : 6
 ----> RemoveMethod : 20
 ----> RelationalOperatorReplacement : 8
+----> ArithmeticOperatorReplacementBinary : 6
 ----> ConditionalOperatorDeletion : 1
 
 (11/20) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSInputStream.java
@@ -163,10 +163,10 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyReturnValue : 4
 ----> NullifyObjectInitialization : 7
 ----> RemoveNullCheck : 1
-----> ArithmeticOperatorReplacementBinary : 1
 ----> RemoveMethod : 4
 ----> RelationalOperatorReplacement : 3
 ----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 1
 ----> ConditionalOperatorDeletion : 1
 
 (12/20) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSInteger.java
@@ -180,10 +180,10 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> LogicalOperatorReplacement : 1
 ----> RemoveNullCheck : 1
 ----> ConditionalOperatorReplacement : 2
-----> ArithmeticOperatorReplacementBinary : 3
 ----> ShiftOperatorReplacement : 1
 ----> RemoveMethod : 20
 ----> RelationalOperatorReplacement : 4
+----> ArithmeticOperatorReplacementBinary : 3
 
 (13/20) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSArray.java
 ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
@@ -259,10 +259,10 @@ ANTLR runtime and generated code versions disagree: 4.13.0!=4.10.1
 ----> NullifyReturnValue : 6
 ----> NullifyObjectInitialization : 3
 ----> ConditionalOperatorReplacement : 4
-----> ArithmeticOperatorReplacementBinary : 1
 ----> RemoveMethod : 3
 ----> RelationalOperatorReplacement : 9
 ----> ArithmeticOperatorReplacementShortcut : 1
+----> ArithmeticOperatorReplacementBinary : 1
 ----> ConditionalOperatorDeletion : 1
 
 (20/20) Source file:  /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSUpdateInfo.java
@@ -279,11 +279,11 @@ Total mutations found:  1787
 --> LogicalOperatorReplacement: 10
 --> RemoveNullCheck: 56
 --> ConditionalOperatorReplacement: 48
---> ArithmeticOperatorReplacementBinary: 16
 --> ShiftOperatorReplacement: 2
 --> RemoveMethod: 437
 --> RelationalOperatorReplacement: 130
 --> ArithmeticOperatorReplacementShortcut: 10
+--> ArithmeticOperatorReplacementBinary: 16
 --> ConditionalOperatorDeletion: 9
 
 
@@ -296,15 +296,15 @@ Total mutations found:  1787
 [LOG] Invoking cp /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java ./COSDictionary.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-oo.java
-[LOG] Created OO test at /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-oo.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-oo.java
+[LOG] Created OO test at /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-oo.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalCOSDictionary.java with ./COSDictionary.java/141.java
 [LOG] Invoking cp ./COSDictionary.java/141.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSDictionary.java
@@ -534,15 +534,15 @@ Total mutations found:  1787
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  49.128 s
-[INFO] Finished at: 2023-06-05T01:02:37+02:00
+[INFO] Total time:  01:02 min
+[INFO] Finished at: 2023-06-10T20:48:18+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -567,7 +567,7 @@ Total mutations found:  1787
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -580,94 +580,21 @@ Total mutations found:  1787
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.154 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.796 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'containsValue' method:
-    map.containsValue(null);
-    -> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
- - has following stubbing(s) with different arguments:
-    1. map.containsValue(null);
-      -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:51)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:53)
-
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.906 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'containsValue' method:
-    map.containsValue(null);
-    -> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
- - has following stubbing(s) with different arguments:
-    1. map.containsValue(null);
-      -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:81)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:83)
-
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.761 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'containsValue' method:
-    map.containsValue(null);
-    -> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
- - has following stubbing(s) with different arguments:
-    1. map.containsValue(null);
-      -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:66)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:68)
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.403 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078:83 » PotentialStubbingProblem
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078:53 » PotentialStubbingProblem
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078:68 » PotentialStubbingProblem
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.527 s
-[INFO] Finished at: 2023-06-05T01:03:05+02:00
+[INFO] Total time:  35.364 s
+[INFO] Finished at: 2023-06-10T20:48:57+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -684,20 +611,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.251 s
-[INFO] Finished at: 2023-06-05T01:03:10+02:00
+[INFO] Total time:  2.038 s
+[INFO] Finished at: 2023-06-10T20:49:03+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -722,7 +649,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -735,94 +662,21 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.222 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.71 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'containsValue' method:
-    map.containsValue(null);
-    -> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
- - has following stubbing(s) with different arguments:
-    1. map.containsValue(null);
-      -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:51)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:53)
-
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 4.025 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'containsValue' method:
-    map.containsValue(null);
-    -> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
- - has following stubbing(s) with different arguments:
-    1. map.containsValue(null);
-      -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:81)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:83)
-
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.823 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'containsValue' method:
-    map.containsValue(null);
-    -> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
- - has following stubbing(s) with different arguments:
-    1. map.containsValue(null);
-      -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:66)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:68)
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 22.376 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078:83 » PotentialStubbingProblem
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078:53 » PotentialStubbingProblem
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078:68 » PotentialStubbingProblem
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.932 s
-[INFO] Finished at: 2023-06-05T01:03:39+02:00
+[INFO] Total time:  39.838 s
+[INFO] Finished at: 2023-06-10T20:49:48+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -839,20 +693,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.245 s
-[INFO] Finished at: 2023-06-05T01:03:44+02:00
+[INFO] Total time:  2.061 s
+[INFO] Finished at: 2023-06-10T20:49:55+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -877,7 +731,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -890,82 +744,39 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.494 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.898 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 22.945 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 3.668 s  <<< FAILURE!
+org.mockito.exceptions.verification.opentest4j.ArgumentsAreDifferent: 
 
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'containsValue' method:
-    map.containsValue(null);
-    -> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
- - has following stubbing(s) with different arguments:
-    1. map.containsValue(null);
-      -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:51)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:53)
+Argument(s) are different! Wanted:
+map.containsValue(<any java.lang.Object>);
+-> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:70)
+Actual invocations have different arguments:
+map.containsValue(null);
+-> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
 
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.885 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'containsValue' method:
-    map.containsValue(null);
-    -> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
- - has following stubbing(s) with different arguments:
-    1. map.containsValue(null);
-      -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:81)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:83)
-
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.993 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'containsValue' method:
-    map.containsValue(null);
-    -> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
- - has following stubbing(s) with different arguments:
-    1. map.containsValue(null);
-      -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:66)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:68)
+	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:70)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078:83 » PotentialStubbingProblem
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078:53 » PotentialStubbingProblem
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078:68 » PotentialStubbingProblem
+[ERROR] Failures: 
+[ERROR]   TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078:70 
+Argument(s) are different! Wanted:
+map.containsValue(<any java.lang.Object>);
+-> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:70)
+Actual invocations have different arguments:
+map.containsValue(null);
+-> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
+
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  26.338 s
-[INFO] Finished at: 2023-06-05T01:04:13+02:00
+[INFO] Total time:  43.130 s
+[INFO] Finished at: 2023-06-10T20:50:43+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -994,20 +805,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.509 s
-[INFO] Finished at: 2023-06-05T01:04:18+02:00
+[INFO] Total time:  1.747 s
+[INFO] Finished at: 2023-06-10T20:50:50+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -1032,7 +843,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1045,94 +856,21 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 12.969 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.568 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'containsValue' method:
-    map.containsValue(null);
-    -> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
- - has following stubbing(s) with different arguments:
-    1. map.containsValue(null);
-      -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:51)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:53)
-
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.844 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'containsValue' method:
-    map.containsValue(null);
-    -> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
- - has following stubbing(s) with different arguments:
-    1. map.containsValue(null);
-      -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:81)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:83)
-
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.841 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'containsValue' method:
-    map.containsValue(null);
-    -> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
- - has following stubbing(s) with different arguments:
-    1. map.containsValue(null);
-      -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:66)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:68)
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.291 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078:83 » PotentialStubbingProblem
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078:53 » PotentialStubbingProblem
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078:68 » PotentialStubbingProblem
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.192 s
-[INFO] Finished at: 2023-06-05T01:04:47+02:00
+[INFO] Total time:  36.399 s
+[INFO] Finished at: 2023-06-10T20:51:32+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -1149,13 +887,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.419 s
-[INFO] Finished at: 2023-06-05T01:04:51+02:00
+[INFO] Total time:  1.881 s
+[INFO] Finished at: 2023-06-10T20:51:38+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
@@ -1187,7 +925,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1200,82 +938,39 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 12.885 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.664 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 13.296 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 2.014 s  <<< FAILURE!
+org.mockito.exceptions.verification.opentest4j.ArgumentsAreDifferent: 
 
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'containsValue' method:
-    map.containsValue(null);
-    -> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
- - has following stubbing(s) with different arguments:
-    1. map.containsValue(null);
-      -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:51)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:53)
+Argument(s) are different! Wanted:
+map.containsValue(<any java.lang.Object>);
+-> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:70)
+Actual invocations have different arguments:
+map.containsValue(null);
+-> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
 
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.597 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'containsValue' method:
-    map.containsValue(null);
-    -> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
- - has following stubbing(s) with different arguments:
-    1. map.containsValue(null);
-      -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:81)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:83)
-
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.898 s  <<< ERROR!
-org.mockito.exceptions.misusing.PotentialStubbingProblem: 
-
-Strict stubbing argument mismatch. Please check:
- - this invocation of 'containsValue' method:
-    map.containsValue(null);
-    -> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
- - has following stubbing(s) with different arguments:
-    1. map.containsValue(null);
-      -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:66)
-Typically, stubbing argument mismatch indicates user mistake when writing tests.
-Mockito fails early so that you can debug potential problem easily.
-However, there are legit scenarios when this exception generates false negative signal:
-  - stubbing the same method multiple times using 'given().will()' or 'when().then()' API
-    Please use 'will().given()' or 'doReturn().when()' API for stubbing.
-  - stubbed method is intentionally invoked with different arguments by code under test
-    Please use default or 'silent' JUnit Rule (equivalent of Strictness.LENIENT).
-For more information see javadoc for PotentialStubbingProblem class.
-	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:68)
+	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:70)
 
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078:83 » PotentialStubbingProblem
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078:53 » PotentialStubbingProblem
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078:68 » PotentialStubbingProblem
+[ERROR] Failures: 
+[ERROR]   TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078:70 
+Argument(s) are different! Wanted:
+map.containsValue(<any java.lang.Object>);
+-> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:70)
+Actual invocations have different arguments:
+map.containsValue(null);
+-> at org.apache.pdfbox.cos.COSDictionary.containsValue(COSDictionary.java:86)
+
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.752 s
-[INFO] Finished at: 2023-06-05T01:05:21+02:00
+[INFO] Total time:  27.704 s
+[INFO] Finished at: 2023-06-10T20:52:10+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1304,13 +999,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.274 s
-[INFO] Finished at: 2023-06-05T01:05:25+02:00
+[INFO] Total time:  1.775 s
+[INFO] Finished at: 2023-06-10T20:52:17+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting COSDictionary.java to original
@@ -1544,15 +1239,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  40.554 s
-[INFO] Finished at: 2023-06-05T01:06:10+02:00
+[INFO] Total time:  53.095 s
+[INFO] Finished at: 2023-06-10T20:53:15+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -1577,7 +1272,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1590,16 +1285,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 12.908 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.572 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 16.356 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 8.114 s  <<< ERROR!
 java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be cast to class org.apache.pdfbox.cos.COSObject (org.apache.pdfbox.cos.COSStream and org.apache.pdfbox.cos.COSObject are in unnamed module of loader 'app')
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:53)
 
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.734 s  <<< ERROR!
+[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 4.91 s  <<< ERROR!
 java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be cast to class org.apache.pdfbox.cos.COSObject (org.apache.pdfbox.cos.COSStream and org.apache.pdfbox.cos.COSObject are in unnamed module of loader 'app')
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:83)
 
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.908 s  <<< ERROR!
+[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 2.589 s  <<< ERROR!
 java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be cast to class org.apache.pdfbox.cos.COSObject (org.apache.pdfbox.cos.COSStream and org.apache.pdfbox.cos.COSObject are in unnamed module of loader 'app')
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:68)
 
@@ -1616,8 +1311,8 @@ java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be ca
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.692 s
-[INFO] Finished at: 2023-06-05T01:06:39+02:00
+[INFO] Total time:  31.607 s
+[INFO] Finished at: 2023-06-10T20:53:50+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1646,20 +1341,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.280 s
-[INFO] Finished at: 2023-06-05T01:06:43+02:00
+[INFO] Total time:  2.849 s
+[INFO] Finished at: 2023-06-10T20:53:57+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -1684,7 +1379,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1697,16 +1392,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.836 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 7.179 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 17.15 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 8.688 s  <<< ERROR!
 java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be cast to class org.apache.pdfbox.cos.COSObject (org.apache.pdfbox.cos.COSStream and org.apache.pdfbox.cos.COSObject are in unnamed module of loader 'app')
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:53)
 
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 4.021 s  <<< ERROR!
+[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 5.366 s  <<< ERROR!
 java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be cast to class org.apache.pdfbox.cos.COSObject (org.apache.pdfbox.cos.COSStream and org.apache.pdfbox.cos.COSObject are in unnamed module of loader 'app')
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:83)
 
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.904 s  <<< ERROR!
+[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 2.029 s  <<< ERROR!
 java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be cast to class org.apache.pdfbox.cos.COSObject (org.apache.pdfbox.cos.COSStream and org.apache.pdfbox.cos.COSObject are in unnamed module of loader 'app')
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:68)
 
@@ -1723,8 +1418,8 @@ java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be ca
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  26.452 s
-[INFO] Finished at: 2023-06-05T01:07:13+02:00
+[INFO] Total time:  32.709 s
+[INFO] Finished at: 2023-06-10T20:54:34+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1753,20 +1448,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.297 s
-[INFO] Finished at: 2023-06-05T01:07:17+02:00
+[INFO] Total time:  1.399 s
+[INFO] Finished at: 2023-06-10T20:54:39+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -1791,7 +1486,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1804,16 +1499,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.319 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.673 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 16.016 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 7.895 s  <<< ERROR!
 java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be cast to class org.apache.pdfbox.cos.COSObject (org.apache.pdfbox.cos.COSStream and org.apache.pdfbox.cos.COSObject are in unnamed module of loader 'app')
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:53)
 
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 4.167 s  <<< ERROR!
+[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 5.246 s  <<< ERROR!
 java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be cast to class org.apache.pdfbox.cos.COSObject (org.apache.pdfbox.cos.COSStream and org.apache.pdfbox.cos.COSObject are in unnamed module of loader 'app')
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:83)
 
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.784 s  <<< ERROR!
+[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 2.054 s  <<< ERROR!
 java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be cast to class org.apache.pdfbox.cos.COSObject (org.apache.pdfbox.cos.COSStream and org.apache.pdfbox.cos.COSObject are in unnamed module of loader 'app')
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:68)
 
@@ -1830,8 +1525,8 @@ java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be ca
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  26.148 s
-[INFO] Finished at: 2023-06-05T01:07:47+02:00
+[INFO] Total time:  30.498 s
+[INFO] Finished at: 2023-06-10T20:55:12+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1860,20 +1555,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.494 s
-[INFO] Finished at: 2023-06-05T01:07:52+02:00
+[INFO] Total time:  1.715 s
+[INFO] Finished at: 2023-06-10T20:55:18+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -1898,7 +1593,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1911,16 +1606,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.11 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.825 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 14.53 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 7.356 s  <<< ERROR!
 java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be cast to class org.apache.pdfbox.cos.COSObject (org.apache.pdfbox.cos.COSStream and org.apache.pdfbox.cos.COSObject are in unnamed module of loader 'app')
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:53)
 
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.674 s  <<< ERROR!
+[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 4.251 s  <<< ERROR!
 java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be cast to class org.apache.pdfbox.cos.COSObject (org.apache.pdfbox.cos.COSStream and org.apache.pdfbox.cos.COSObject are in unnamed module of loader 'app')
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:83)
 
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.866 s  <<< ERROR!
+[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 2.221 s  <<< ERROR!
 java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be cast to class org.apache.pdfbox.cos.COSObject (org.apache.pdfbox.cos.COSStream and org.apache.pdfbox.cos.COSObject are in unnamed module of loader 'app')
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:68)
 
@@ -1937,8 +1632,8 @@ java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be ca
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.568 s
-[INFO] Finished at: 2023-06-05T01:08:21+02:00
+[INFO] Total time:  28.253 s
+[INFO] Finished at: 2023-06-10T20:55:51+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1967,13 +1662,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.259 s
-[INFO] Finished at: 2023-06-05T01:08:25+02:00
+[INFO] Total time:  2.599 s
+[INFO] Finished at: 2023-06-10T20:55:58+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
@@ -2005,7 +1700,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2018,16 +1713,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 12.785 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.631 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 15.346 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 8.147 s  <<< ERROR!
 java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be cast to class org.apache.pdfbox.cos.COSObject (org.apache.pdfbox.cos.COSStream and org.apache.pdfbox.cos.COSObject are in unnamed module of loader 'app')
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:53)
 
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.688 s  <<< ERROR!
+[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 4.323 s  <<< ERROR!
 java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be cast to class org.apache.pdfbox.cos.COSObject (org.apache.pdfbox.cos.COSStream and org.apache.pdfbox.cos.COSObject are in unnamed module of loader 'app')
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:83)
 
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.776 s  <<< ERROR!
+[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.792 s  <<< ERROR!
 java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be cast to class org.apache.pdfbox.cos.COSObject (org.apache.pdfbox.cos.COSStream and org.apache.pdfbox.cos.COSObject are in unnamed module of loader 'app')
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:68)
 
@@ -2044,8 +1739,8 @@ java.lang.ClassCastException: class org.apache.pdfbox.cos.COSStream cannot be ca
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.886 s
-[INFO] Finished at: 2023-06-05T01:08:55+02:00
+[INFO] Total time:  31.240 s
+[INFO] Finished at: 2023-06-10T20:56:34+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2074,13 +1769,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.238 s
-[INFO] Finished at: 2023-06-05T01:08:59+02:00
+[INFO] Total time:  1.299 s
+[INFO] Finished at: 2023-06-10T20:56:39+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting COSDictionary.java to original
@@ -2314,15 +2009,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  40.296 s
-[INFO] Finished at: 2023-06-05T01:09:43+02:00
+[INFO] Total time:  52.085 s
+[INFO] Finished at: 2023-06-10T20:57:35+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -2347,7 +2042,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2360,61 +2055,21 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.055 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.66 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:51)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.945 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:81)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.79 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.866 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.563 s
-[INFO] Finished at: 2023-06-05T01:10:12+02:00
+[INFO] Total time:  32.620 s
+[INFO] Finished at: 2023-06-10T20:58:11+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -2431,20 +2086,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.361 s
-[INFO] Finished at: 2023-06-05T01:10:17+02:00
+[INFO] Total time:  1.507 s
+[INFO] Finished at: 2023-06-10T20:58:17+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -2469,7 +2124,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2482,45 +2137,24 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 12.894 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.751 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 14.509 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 7.262 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:55)
-
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.531 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:81)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.824 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
 [ERROR]   TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078:55 expected: <false> but was: <true>
-[ERROR] Errors: 
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.287 s
-[INFO] Finished at: 2023-06-05T01:10:46+02:00
+[INFO] Total time:  28.653 s
+[INFO] Finished at: 2023-06-10T20:58:50+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2549,20 +2183,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.321 s
-[INFO] Finished at: 2023-06-05T01:10:51+02:00
+[INFO] Total time:  1.877 s
+[INFO] Finished at: 2023-06-10T20:58:55+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -2587,7 +2221,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2600,26 +2234,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 13.054 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 7.012 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:51)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.488 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:81)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.916 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 14.466 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 2.707 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2639,17 +2255,14 @@ map.containsValue(<any java.lang.Object>);
 -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:70)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.207 s
-[INFO] Finished at: 2023-06-05T01:11:19+02:00
+[INFO] Total time:  29.431 s
+[INFO] Finished at: 2023-06-10T20:59:29+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2678,20 +2291,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.392 s
-[INFO] Finished at: 2023-06-05T01:11:24+02:00
+[INFO] Total time:  1.385 s
+[INFO] Finished at: 2023-06-10T20:59:35+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -2716,7 +2329,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2729,17 +2342,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 12.644 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.624 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:51)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.574 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 17.268 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 4.931 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2748,15 +2352,6 @@ map.containsValue(<any>);
 Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:86)
-
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.759 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -2768,17 +2363,14 @@ map.containsValue(<any>);
 -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:86)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.069 s
-[INFO] Finished at: 2023-06-05T01:11:52+02:00
+[INFO] Total time:  30.733 s
+[INFO] Finished at: 2023-06-10T21:00:09+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2807,13 +2399,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.262 s
-[INFO] Finished at: 2023-06-05T01:11:57+02:00
+[INFO] Total time:  1.546 s
+[INFO] Finished at: 2023-06-10T21:00:15+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
@@ -2845,7 +2437,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2858,12 +2450,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 13.41 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.752 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 20.036 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 8.083 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <false> but was: <true>
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:55)
 
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 4.074 s  <<< FAILURE!
+[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 8.419 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2873,7 +2465,7 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:86)
 
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.86 s  <<< FAILURE!
+[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 2.68 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2906,8 +2498,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  26.089 s
-[INFO] Finished at: 2023-06-05T01:12:26+02:00
+[INFO] Total time:  34.844 s
+[INFO] Finished at: 2023-06-10T21:00:54+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2936,13 +2528,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.249 s
-[INFO] Finished at: 2023-06-05T01:12:31+02:00
+[INFO] Total time:  1.858 s
+[INFO] Finished at: 2023-06-10T21:01:00+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting COSDictionary.java to original
@@ -3176,15 +2768,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  40.734 s
-[INFO] Finished at: 2023-06-05T01:13:15+02:00
+[INFO] Total time:  51.505 s
+[INFO] Finished at: 2023-06-10T21:01:57+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -3209,7 +2801,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3222,61 +2814,21 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.31 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.762 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:51)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 4.001 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:81)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.862 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.963 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.752 s
-[INFO] Finished at: 2023-06-05T01:13:44+02:00
+[INFO] Total time:  33.347 s
+[INFO] Finished at: 2023-06-10T21:02:35+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -3293,20 +2845,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.249 s
-[INFO] Finished at: 2023-06-05T01:13:49+02:00
+[INFO] Total time:  1.510 s
+[INFO] Finished at: 2023-06-10T21:02:41+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -3331,7 +2883,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3344,61 +2896,21 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 13.44 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.566 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:51)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.815 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:81)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 2.347 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.196 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  26.131 s
-[INFO] Finished at: 2023-06-05T01:14:18+02:00
+[INFO] Total time:  31.300 s
+[INFO] Finished at: 2023-06-10T21:03:16+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -3415,20 +2927,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.228 s
-[INFO] Finished at: 2023-06-05T01:14:23+02:00
+[INFO] Total time:  1.594 s
+[INFO] Finished at: 2023-06-10T21:03:22+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -3453,7 +2965,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3466,26 +2978,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 13.107 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.725 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:51)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.924 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:81)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.773 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 18.698 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 4.74 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -3505,17 +2999,14 @@ map.containsValue(<any java.lang.Object>);
 -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:70)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.277 s
-[INFO] Finished at: 2023-06-05T01:14:51+02:00
+[INFO] Total time:  34.155 s
+[INFO] Finished at: 2023-06-10T21:03:59+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3544,20 +3035,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.368 s
-[INFO] Finished at: 2023-06-05T01:14:56+02:00
+[INFO] Total time:  1.523 s
+[INFO] Finished at: 2023-06-10T21:04:05+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -3582,7 +3073,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3595,17 +3086,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 12.946 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.654 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:51)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.779 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 13.961 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.442 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -3614,15 +3096,6 @@ map.containsValue(<any>);
 Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:86)
-
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.824 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -3634,17 +3107,14 @@ map.containsValue(<any>);
 -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:86)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.821 s
-[INFO] Finished at: 2023-06-05T01:15:25+02:00
+[INFO] Total time:  27.855 s
+[INFO] Finished at: 2023-06-10T21:04:37+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3673,13 +3143,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.296 s
-[INFO] Finished at: 2023-06-05T01:15:30+02:00
+[INFO] Total time:  1.370 s
+[INFO] Finished at: 2023-06-10T21:04:42+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
@@ -3711,7 +3181,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -3724,17 +3194,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 12.712 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[ERROR] test_containsValue_OO_c95180141c994177881533f75c8fc078  Time elapsed: 6.648 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:51)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.556 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 13.654 s <<< FAILURE! - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[ERROR] test_containsValue_CO_c95180141c994177881533f75c8fc078  Time elapsed: 3.822 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -3744,7 +3205,7 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_CO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:86)
 
-[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.808 s  <<< FAILURE!
+[ERROR] test_containsValue_PO_c95180141c994177881533f75c8fc078  Time elapsed: 1.926 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -3770,16 +3231,14 @@ map.containsValue(<any java.lang.Object>);
 -> at org.apache.pdfbox.cos.TestCOSDictionaryRickGen.test_containsValue_PO_c95180141c994177881533f75c8fc078(TestCOSDictionaryRickGen.java:70)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestCOSDictionaryRickGen.test_containsValue_OO_c95180141c994177881533f75c8fc078 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 2, Errors: 1, Skipped: 0
+[ERROR] Tests run: 3, Failures: 2, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.238 s
-[INFO] Finished at: 2023-06-05T01:15:59+02:00
+[INFO] Total time:  27.027 s
+[INFO] Finished at: 2023-06-10T21:05:12+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3808,13 +3267,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.300 s
-[INFO] Finished at: 2023-06-05T01:16:03+02:00
+[INFO] Total time:  1.274 s
+[INFO] Finished at: 2023-06-10T21:05:17+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting COSDictionary.java to original
@@ -4048,15 +3507,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.733 s
-[INFO] Finished at: 2023-06-05T01:16:47+02:00
+[INFO] Total time:  42.417 s
+[INFO] Finished at: 2023-06-10T21:06:03+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -4081,7 +3540,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4094,7 +3553,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.23 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.54 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4106,8 +3565,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  27.611 s
-[INFO] Finished at: 2023-06-05T01:17:18+02:00
+[INFO] Total time:  28.057 s
+[INFO] Finished at: 2023-06-10T21:06:34+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4125,20 +3584,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.355 s
-[INFO] Finished at: 2023-06-05T01:17:22+02:00
+[INFO] Total time:  1.294 s
+[INFO] Finished at: 2023-06-10T21:06:39+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-oo.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -4163,7 +3622,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4176,7 +3635,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.46 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.469 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4188,8 +3647,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  27.044 s
-[INFO] Finished at: 2023-06-05T01:17:53+02:00
+[INFO] Total time:  28.337 s
+[INFO] Finished at: 2023-06-10T21:07:11+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4207,20 +3666,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.235 s
-[INFO] Finished at: 2023-06-05T01:17:57+02:00
+[INFO] Total time:  1.317 s
+[INFO] Finished at: 2023-06-10T21:07:16+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -4245,7 +3704,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4258,7 +3717,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.256 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.698 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4270,8 +3729,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  27.828 s
-[INFO] Finished at: 2023-06-05T01:18:28+02:00
+[INFO] Total time:  28.067 s
+[INFO] Finished at: 2023-06-10T21:07:48+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4289,20 +3748,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.400 s
-[INFO] Finished at: 2023-06-05T01:18:33+02:00
+[INFO] Total time:  1.359 s
+[INFO] Finished at: 2023-06-10T21:07:53+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/containsValue_Object/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSDictionaryRickGen']
 [INFO] Scanning for projects...
@@ -4327,7 +3786,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4340,7 +3799,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.896 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.222 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4352,8 +3811,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  26.991 s
-[INFO] Finished at: 2023-06-05T01:19:04+02:00
+[INFO] Total time:  27.739 s
+[INFO] Finished at: 2023-06-10T21:08:24+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4371,13 +3830,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.346 s
-[INFO] Finished at: 2023-06-05T01:19:08+02:00
+[INFO] Total time:  1.433 s
+[INFO] Finished at: 2023-06-10T21:08:29+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSDictionary.java/original-test.java
 [LOG] Invoking cp ./COSDictionary.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/cos/TestCOSDictionaryRickGen.java
@@ -4409,7 +3868,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4422,7 +3881,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
-[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.758 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.774 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4434,8 +3893,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  26.775 s
-[INFO] Finished at: 2023-06-05T01:19:38+02:00
+[INFO] Total time:  27.695 s
+[INFO] Finished at: 2023-06-10T21:09:00+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4453,22 +3912,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.245 s
-[INFO] Finished at: 2023-06-05T01:19:43+02:00
+[INFO] Total time:  1.333 s
+[INFO] Finished at: 2023-06-10T21:09:05+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting COSDictionary.java to original
 [LOG] Invoking cp ./COSDictionary.java/original.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/cos/COSDictionary.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/containsValue_Object/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/COSDictionary.java', '/home/dee/dev/rick-major-review/finches/output/containsValue_Object/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/COSDictionary.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/containsValue_Object/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-05 01:19:43.837004
+[LOG] Finishing analysis at 2023-06-10 21:09:05.955054
 ====== END OF THE LINE ======

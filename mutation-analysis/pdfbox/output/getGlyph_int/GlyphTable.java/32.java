@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:             if (glyphs != null && glyphs[gid] == null && cached < MAX_CACHED_GLYPHS)
-----> after:             if (glyphs == null && glyphs[gid] == null && cached < MAX_CACHED_GLYPHS)
-----> line number in original file: 197
-----> mutated node: 889
+mutant type: RemoveMethod
+----> before:     {
+----> after:     {
+----> line number in original file: 66
+----> mutated node: 165
 
 */
 
@@ -73,19 +73,9 @@ public class GlyphTable extends TTFTable
     @Override
     void read(TrueTypeFont ttf, TTFDataStream data) throws IOException
     {
-        loca = ttf.getIndexToLocation();
-        numGlyphs = ttf.getNumberOfGlyphs();
+// void -- no return //
+}
 
-        if (numGlyphs < MAX_CACHE_SIZE)
-        {
-            // don't cache the huge fonts to save memory
-            glyphs = new GlyphData[numGlyphs];
-        }
-
-        // we don't actually read the complete table here because it can contain tens of thousands of glyphs
-        this.data = data;
-        initialized = true;
-    }
 
     /**
      * Returns all glyphs. This method can be very slow.
@@ -203,7 +193,7 @@ public class GlyphTable extends TTFTable
                 data.seek(currentPosition);
             }
 
-            if (glyphs == null && glyphs[gid] == null && cached < MAX_CACHED_GLYPHS)
+            if (glyphs != null && glyphs[gid] == null && cached < MAX_CACHED_GLYPHS)
             {
                 glyphs[gid] = glyph;
                 ++cached;

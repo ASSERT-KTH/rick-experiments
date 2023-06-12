@@ -3,42 +3,42 @@
     "CUT": "org.apache.pdfbox.io.RandomAccessInputStream",
     "mutant-file": "./RandomAccessInputStream.java/10.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 8.299 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 6.793 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 8.255 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 8.373 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 8.519 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.454 s - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.605 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.412 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.933 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 7.622 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable"
 },
 {
     "mut": "available",
     "CUT": "org.apache.pdfbox.io.RandomAccessInputStream",
     "mutant-file": "./RandomAccessInputStream.java/11.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 7.905 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 8.091 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 8.11 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.219 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 8.677 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.759 s - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.334 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.562 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.739 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 7.576 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable"
 },
 {
     "mut": "available",
     "CUT": "org.apache.pdfbox.io.RandomAccessInputStream",
     "mutant-file": "./RandomAccessInputStream.java/15.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.266 s - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.417 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.221 s - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.491 s - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.923 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.194 s - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.696 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.839 s - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.282 s - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.804 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable"
 },
 {
     "mut": "available",
     "CUT": "org.apache.pdfbox.io.RandomAccessInputStream",
     "mutant-file": "./RandomAccessInputStream.java/17.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.872 s - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.404 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.991 s - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.348 s - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
-    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.201 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.524 s - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.839 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.293 s - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.64 s - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable",
+    "result-all": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.554 s <<< FAILURE! - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGenAvailable"
 },

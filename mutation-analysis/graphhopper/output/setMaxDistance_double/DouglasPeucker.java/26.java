@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                 removed += subSimplify(points, start, Math.min(lastIndex, start + delta));
-----> after:                 removed += subSimplify(points, start, Math.min(lastIndex, start - delta));
-----> line number in original file: 104
-----> mutated node: 1811
+mutant type: RemoveMethod
+----> before:     public int simplify(PointList points) {
+----> after:     public int simplify(PointList points) {
+----> line number in original file: 76
+----> mutated node: 132
 
 */
 
@@ -83,8 +83,9 @@ public class DouglasPeucker {
      * @return The number removed points
      */
     public int simplify(PointList points) {
-        return simplify(points, 0, points.size() - 1);
-    }
+    return 0;
+}
+
 
     public int simplify(PointList points, int fromIndex, int lastIndex) {
         return simplify(points, fromIndex, lastIndex, true);
@@ -110,7 +111,7 @@ public class DouglasPeucker {
             int start = fromIndex;
             for (int i = 0; i < segments; i++) {
                 // start of next is end of last segment, except for the last
-                removed += subSimplify(points, start, Math.min(lastIndex, start - delta));
+                removed += subSimplify(points, start, Math.min(lastIndex, start + delta));
                 start += delta;
             }
         } else {

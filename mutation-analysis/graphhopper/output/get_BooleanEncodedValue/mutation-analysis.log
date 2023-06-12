@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-05 16:51:30.493585
+[LOG] Initiating analysis at 2023-06-11 12:02:50.861675
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -150,15 +150,15 @@ Total mutations found:  744
 [LOG] Invoking cp /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java ./VirtualEdgeIteratorState.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-oo.java
-[LOG] Created OO test at /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-oo.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-oo.java
+[LOG] Created OO test at /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-oo.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalVirtualEdgeIteratorState.java with ./VirtualEdgeIteratorState.java/133.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/133.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/VirtualEdgeIteratorState.java
@@ -213,15 +213,15 @@ Total mutations found:  744
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  48.154 s
-[INFO] Finished at: 2023-06-05T16:52:38+02:00
+[INFO] Total time:  45.486 s
+[INFO] Finished at: 2023-06-11T12:03:57+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -259,12 +259,12 @@ Total mutations found:  744
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.835 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.968 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.697 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.889 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:42)
 
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.047 s  <<< ERROR!
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.044 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:68)
 
@@ -285,8 +285,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.799 s
-[INFO] Finished at: 2023-06-05T16:52:59+02:00
+[INFO] Total time:  14.278 s
+[INFO] Finished at: 2023-06-11T12:04:15+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -323,20 +323,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.947 s
-[INFO] Finished at: 2023-06-05T16:53:03+02:00
+[INFO] Total time:  0.889 s
+[INFO] Finished at: 2023-06-11T12:04:19+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -374,12 +374,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.989 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.101 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.397 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.325 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:42)
 
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.053 s  <<< ERROR!
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.061 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:68)
 
@@ -400,8 +400,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.538 s
-[INFO] Finished at: 2023-06-05T16:53:23+02:00
+[INFO] Total time:  15.212 s
+[INFO] Finished at: 2023-06-11T12:04:38+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -438,20 +438,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.031 s
-[INFO] Finished at: 2023-06-05T16:53:28+02:00
+[INFO] Total time:  0.814 s
+[INFO] Finished at: 2023-06-11T12:04:42+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -489,16 +489,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.79 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.915 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.006 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.969 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:42)
 
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.042 s  <<< ERROR!
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.03 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:68)
 
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.034 s  <<< ERROR!
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.029 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:55)
 
@@ -515,8 +515,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.545 s
-[INFO] Finished at: 2023-06-05T16:53:47+02:00
+[INFO] Total time:  15.417 s
+[INFO] Finished at: 2023-06-11T12:05:01+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -553,20 +553,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.858 s
-[INFO] Finished at: 2023-06-05T16:53:52+02:00
+[INFO] Total time:  1.045 s
+[INFO] Finished at: 2023-06-11T12:05:06+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -604,16 +604,16 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.737 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.919 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.58 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.739 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:42)
 
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.032 s  <<< ERROR!
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.047 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:68)
 
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.028 s  <<< ERROR!
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.037 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:55)
 
@@ -630,8 +630,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.618 s
-[INFO] Finished at: 2023-06-05T16:54:11+02:00
+[INFO] Total time:  14.372 s
+[INFO] Finished at: 2023-06-11T12:05:25+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -668,13 +668,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.079 s
-[INFO] Finished at: 2023-06-05T16:54:16+02:00
+[INFO] Total time:  0.878 s
+[INFO] Finished at: 2023-06-11T12:05:30+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
@@ -719,12 +719,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.981 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.131 s  <<< ERROR!
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.712 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.936 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:42)
 
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.034 s  <<< ERROR!
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.035 s  <<< ERROR!
 java.lang.NullPointerException
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:68)
 
@@ -745,8 +745,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.498 s
-[INFO] Finished at: 2023-06-05T16:54:36+02:00
+[INFO] Total time:  14.346 s
+[INFO] Finished at: 2023-06-11T12:05:48+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -783,13 +783,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.865 s
-[INFO] Finished at: 2023-06-05T16:54:40+02:00
+[INFO] Total time:  1.074 s
+[INFO] Finished at: 2023-06-11T12:05:52+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting VirtualEdgeIteratorState.java to original
@@ -848,15 +848,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  47.601 s
-[INFO] Finished at: 2023-06-05T16:55:32+02:00
+[INFO] Total time:  45.374 s
+[INFO] Finished at: 2023-06-11T12:06:42+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -894,61 +894,18 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.03 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.115 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.063 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.041 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.658 s - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.774 s
-[INFO] Finished at: 2023-06-05T16:55:51+02:00
+[INFO] Total time:  14.673 s
+[INFO] Finished at: 2023-06-11T12:07:01+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -973,20 +930,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.924 s
-[INFO] Finished at: 2023-06-05T16:55:56+02:00
+[INFO] Total time:  0.985 s
+[INFO] Finished at: 2023-06-11T12:07:05+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -1024,61 +981,18 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.8 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.894 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.057 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.044 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.554 s - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.395 s
-[INFO] Finished at: 2023-06-05T16:56:16+02:00
+[INFO] Total time:  14.419 s
+[INFO] Finished at: 2023-06-11T12:07:23+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -1103,20 +1017,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.102 s
-[INFO] Finished at: 2023-06-05T16:56:21+02:00
+[INFO] Total time:  0.843 s
+[INFO] Finished at: 2023-06-11T12:07:28+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -1154,26 +1068,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.873 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.972 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.041 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.06 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.886 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.119 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1199,17 +1095,14 @@ booleanEncodedValue.getBool(
 -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.659 s
-[INFO] Finished at: 2023-06-05T16:56:40+02:00
+[INFO] Total time:  14.623 s
+[INFO] Finished at: 2023-06-11T12:07:46+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1246,20 +1139,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.836 s
-[INFO] Finished at: 2023-06-05T16:56:45+02:00
+[INFO] Total time:  1.042 s
+[INFO] Finished at: 2023-06-11T12:07:51+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -1297,17 +1190,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.062 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.13 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.098 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.493 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.103 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1319,15 +1203,6 @@ booleanEncodedValue.getBool(
 Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.042 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -1342,17 +1217,14 @@ booleanEncodedValue.getBool(
 -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.585 s
-[INFO] Finished at: 2023-06-05T16:57:04+02:00
+[INFO] Total time:  14.595 s
+[INFO] Finished at: 2023-06-11T12:08:09+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1389,13 +1261,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.979 s
-[INFO] Finished at: 2023-06-05T16:57:09+02:00
+[INFO] Total time:  1.081 s
+[INFO] Finished at: 2023-06-11T12:08:13+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
@@ -1440,17 +1312,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 3.882 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.988 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.081 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.564 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.114 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1463,7 +1326,7 @@ Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
 
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.043 s  <<< FAILURE!
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.041 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1498,16 +1361,14 @@ booleanEncodedValue.getBool(
 -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 2, Errors: 1, Skipped: 0
+[ERROR] Tests run: 3, Failures: 2, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.617 s
-[INFO] Finished at: 2023-06-05T16:57:29+02:00
+[INFO] Total time:  14.611 s
+[INFO] Finished at: 2023-06-11T12:08:32+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1544,13 +1405,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.894 s
-[INFO] Finished at: 2023-06-05T16:57:34+02:00
+[INFO] Total time:  0.925 s
+[INFO] Finished at: 2023-06-11T12:08:36+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting VirtualEdgeIteratorState.java to original
@@ -1609,15 +1470,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  45.646 s
-[INFO] Finished at: 2023-06-05T16:58:24+02:00
+[INFO] Total time:  43.995 s
+[INFO] Finished at: 2023-06-11T12:09:24+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -1655,61 +1516,18 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.993 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.065 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.055 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.037 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.908 s - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.438 s
-[INFO] Finished at: 2023-06-05T16:58:43+02:00
+[INFO] Total time:  14.408 s
+[INFO] Finished at: 2023-06-11T12:09:42+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -1734,20 +1552,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.011 s
-[INFO] Finished at: 2023-06-05T16:58:47+02:00
+[INFO] Total time:  0.861 s
+[INFO] Finished at: 2023-06-11T12:09:47+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -1785,45 +1603,24 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.993 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.079 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.519 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.723 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:44)
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.047 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.049 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
 [ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987:44 expected: <true> but was: <false>
-[ERROR] Errors: 
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.456 s
-[INFO] Finished at: 2023-06-05T16:59:07+02:00
+[INFO] Total time:  13.972 s
+[INFO] Finished at: 2023-06-11T12:10:04+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1860,20 +1657,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.000 s
-[INFO] Finished at: 2023-06-05T16:59:12+02:00
+[INFO] Total time:  0.814 s
+[INFO] Finished at: 2023-06-11T12:10:09+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -1911,26 +1708,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.114 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.1 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.053 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.073 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.671 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.106 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1956,17 +1735,14 @@ booleanEncodedValue.getBool(
 -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.172 s
-[INFO] Finished at: 2023-06-05T16:59:30+02:00
+[INFO] Total time:  14.795 s
+[INFO] Finished at: 2023-06-11T12:10:27+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2003,20 +1779,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.957 s
-[INFO] Finished at: 2023-06-05T16:59:35+02:00
+[INFO] Total time:  0.980 s
+[INFO] Finished at: 2023-06-11T12:10:32+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -2054,17 +1830,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.048 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.107 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.106 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.608 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.129 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2076,15 +1843,6 @@ booleanEncodedValue.getBool(
 Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.039 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -2099,17 +1857,14 @@ booleanEncodedValue.getBool(
 -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.679 s
-[INFO] Finished at: 2023-06-05T16:59:56+02:00
+[INFO] Total time:  14.904 s
+[INFO] Finished at: 2023-06-11T12:10:51+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2146,13 +1901,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.091 s
-[INFO] Finished at: 2023-06-05T17:00:01+02:00
+[INFO] Total time:  1.087 s
+[INFO] Finished at: 2023-06-11T12:10:56+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
@@ -2197,12 +1952,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.934 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.972 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.879 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.959 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:44)
 
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.089 s  <<< FAILURE!
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.083 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2215,7 +1970,7 @@ Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
 
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.043 s  <<< FAILURE!
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.049 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2257,8 +2012,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.404 s
-[INFO] Finished at: 2023-06-05T17:00:20+02:00
+[INFO] Total time:  14.478 s
+[INFO] Finished at: 2023-06-11T12:11:14+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2295,13 +2050,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.933 s
-[INFO] Finished at: 2023-06-05T17:00:25+02:00
+[INFO] Total time:  0.817 s
+[INFO] Finished at: 2023-06-11T12:11:18+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting VirtualEdgeIteratorState.java to original
@@ -2360,15 +2115,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  48.068 s
-[INFO] Finished at: 2023-06-05T17:01:17+02:00
+[INFO] Total time:  43.300 s
+[INFO] Finished at: 2023-06-11T12:12:05+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-baseline.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -2406,61 +2161,18 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.316 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.256 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.055 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.041 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.548 s - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[INFO] 
-[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  17.674 s
-[INFO] Finished at: 2023-06-05T17:01:39+02:00
+[INFO] Total time:  14.349 s
+[INFO] Finished at: 2023-06-11T12:12:23+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/graphhopper/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -2485,20 +2197,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.145 s
-[INFO] Finished at: 2023-06-05T17:01:44+02:00
+[INFO] Total time:  0.987 s
+[INFO] Finished at: 2023-06-11T12:12:28+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 ---------------------------------------------------
 [OO] Evaluating only OO
 [LOG] Replacing original RICK test with variant oo
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-oo.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -2536,45 +2248,24 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.046 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.092 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.209 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.257 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:44)
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.052 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.037 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
 [INFO] 
 [ERROR] Failures: 
 [ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987:44 expected: <true> but was: <false>
-[ERROR] Errors: 
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.949 s
-[INFO] Finished at: 2023-06-05T17:02:04+02:00
+[INFO] Total time:  17.232 s
+[INFO] Finished at: 2023-06-11T12:12:49+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2611,20 +2302,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.882 s
-[INFO] Finished at: 2023-06-05T17:02:09+02:00
+[INFO] Total time:  0.820 s
+[INFO] Finished at: 2023-06-11T12:12:53+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-po.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -2662,26 +2353,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.997 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.05 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.053 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:66)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.079 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.588 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.083 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2707,17 +2380,14 @@ booleanEncodedValue.getBool(
 -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:57)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.462 s
-[INFO] Finished at: 2023-06-05T17:02:28+02:00
+[INFO] Total time:  14.313 s
+[INFO] Finished at: 2023-06-11T12:13:11+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2755,19 +2425,19 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
 [INFO] Total time:  0.882 s
-[INFO] Finished at: 2023-06-05T17:02:33+02:00
+[INFO] Finished at: 2023-06-11T12:13:16+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/test-co.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/graphhopper/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestVirtualEdgeIteratorStateRickGenGet']
 [INFO] Scanning for projects...
@@ -2805,17 +2475,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.843 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 2.995 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:40)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.064 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.636 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.145 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2827,15 +2488,6 @@ booleanEncodedValue.getBool(
 Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
-
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.028 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:53)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -2850,17 +2502,14 @@ booleanEncodedValue.getBool(
 -> at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
-[ERROR]   TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 3, Failures: 1, Errors: 2, Skipped: 0
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.010 s
-[INFO] Finished at: 2023-06-05T17:02:52+02:00
+[INFO] Total time:  14.544 s
+[INFO] Finished at: 2023-06-11T12:13:34+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2897,13 +2546,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.090 s
-[INFO] Finished at: 2023-06-05T17:02:57+02:00
+[INFO] Total time:  0.901 s
+[INFO] Finished at: 2023-06-11T12:13:39+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./VirtualEdgeIteratorState.java/original-test.java
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original-test.java /home/dee/dev/rick-major-review/graphhopper/rick-major/src/test/java/com/graphhopper/routing/querygraph/TestVirtualEdgeIteratorStateRickGenGet.java
@@ -2948,12 +2597,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.032 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 3.003 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 5.011 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 4.074 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_OO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:44)
 
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.07 s  <<< FAILURE!
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.118 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2966,7 +2615,7 @@ Actually, there were zero interactions with this mock.
 
 	at com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet.test_get_com_graphhopper_routing_ev_BooleanEncodedValue_CO_263deedbe9d042ea98ce4857f15b0987(TestVirtualEdgeIteratorStateRickGenGet.java:71)
 
-[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.043 s  <<< FAILURE!
+[ERROR] test_get_com_graphhopper_routing_ev_BooleanEncodedValue_PO_263deedbe9d042ea98ce4857f15b0987  Time elapsed: 0.035 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -3008,8 +2657,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.635 s
-[INFO] Finished at: 2023-06-05T17:03:16+02:00
+[INFO] Total time:  15.910 s
+[INFO] Finished at: 2023-06-11T12:13:58+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3046,22 +2695,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  0.938 s
-[INFO] Finished at: 2023-06-05T17:03:21+02:00
+[INFO] Total time:  1.007 s
+[INFO] Finished at: 2023-06-11T12:14:03+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting VirtualEdgeIteratorState.java to original
 [LOG] Invoking cp ./VirtualEdgeIteratorState.java/original.java /home/dee/dev/rick-major-review/graphhopper/core/src/main/java/com/graphhopper/routing/querygraph/VirtualEdgeIteratorState.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/VirtualEdgeIteratorState.java', '/home/dee/dev/rick-major-review/finches/output/get_BooleanEncodedValue/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/VirtualEdgeIteratorState.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/get_BooleanEncodedValue/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-05 17:03:21.732182
+[LOG] Finishing analysis at 2023-06-11 12:14:03.329913
 ====== END OF THE LINE ======

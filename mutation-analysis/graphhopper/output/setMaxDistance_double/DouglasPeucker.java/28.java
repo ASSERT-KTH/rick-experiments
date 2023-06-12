@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:             int segments = size / delta + 1;
-----> after:             int segments = size * delta + 1;
-----> line number in original file: 100
-----> mutated node: 1432
+mutant type: RemoveMethod
+----> before:     public DouglasPeucker setElevationMaxDistance(double dist) {
+----> after:     public DouglasPeucker setElevationMaxDistance(double dist) {
+----> line number in original file: 64
+----> mutated node: 127
 
 */
 
@@ -71,9 +71,9 @@ public class DouglasPeucker {
      * maximum elevation distance of discrepancy (from the normal way) in meters
      */
     public DouglasPeucker setElevationMaxDistance(double dist) {
-        this.elevationMaxDistance = dist;
-        return this;
-    }
+    return null;
+}
+
 
     /**
      * Simplifies the <code>points</code>, from index 0 to size-1.
@@ -106,7 +106,7 @@ public class DouglasPeucker {
         int size = lastIndex - fromIndex;
         if (approx) {
             int delta = 500;
-            int segments = size * delta + 1;
+            int segments = size / delta + 1;
             int start = fromIndex;
             for (int i = 0; i < segments; i++) {
                 // start of next is end of last segment, except for the last

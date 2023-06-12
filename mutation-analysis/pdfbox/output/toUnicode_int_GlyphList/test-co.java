@@ -54,7 +54,7 @@ public class TestPDSimpleFontRickGen {
         int paramObject1 = (Integer) paramObjects[0];
         org.apache.pdfbox.pdmodel.font.encoding.GlyphList paramObject2 = (org.apache.pdfbox.pdmodel.font.encoding.GlyphList) paramObjects[1];
         Encoding mockEncoding = insertMockField_encoding_InPDTrueTypeFont(receivingObject);
-        Mockito.when(mockEncoding.getName(32)).thenReturn("space");
+        Mockito.lenient().when(mockEncoding.getName(32)).thenReturn("space");
         // Act
         String actual = receivingObject.toUnicode(paramObject1, paramObject2);
         // Assert
@@ -70,7 +70,7 @@ public class TestPDSimpleFontRickGen {
         int paramObject1 = (Integer) paramObjects[0];
         org.apache.pdfbox.pdmodel.font.encoding.GlyphList paramObject2 = (org.apache.pdfbox.pdmodel.font.encoding.GlyphList) paramObjects[1];
         Encoding mockEncoding = insertMockField_encoding_InPDTrueTypeFont(receivingObject);
-        Mockito.when(mockEncoding.getName(32)).thenReturn("space");
+        Mockito.lenient().when(mockEncoding.getName(32)).thenReturn("space");
         // Act
         receivingObject.toUnicode(paramObject1, paramObject2);
         // Assert
@@ -86,7 +86,7 @@ public class TestPDSimpleFontRickGen {
         int paramObject1 = (Integer) paramObjects[0];
         org.apache.pdfbox.pdmodel.font.encoding.GlyphList paramObject2 = (org.apache.pdfbox.pdmodel.font.encoding.GlyphList) paramObjects[1];
         Encoding mockEncoding = insertMockField_encoding_InPDTrueTypeFont(receivingObject);
-        Mockito.when(mockEncoding.getName(32)).thenReturn("space");
+        Mockito.lenient().when(mockEncoding.getName(32)).thenReturn("space");
         // Act
         receivingObject.toUnicode(paramObject1, paramObject2);
         // Assert

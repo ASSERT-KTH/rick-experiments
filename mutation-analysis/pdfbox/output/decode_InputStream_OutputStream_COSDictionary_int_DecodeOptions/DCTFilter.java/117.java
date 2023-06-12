@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                 int g = clamp(Y - 0.34414f * Cb - 0.71414f * Cr + 135.45984f);
-----> after:                 int g = clamp(Y - 0.34414f * Cb - 0.71414f / Cr + 135.45984f);
-----> line number in original file: 252
-----> mutated node: 3885
+mutant type: RelationalOperatorReplacement
+----> before:             else if (raster.getNumBands() == 3)
+----> after:             else if (raster.getNumBands() != 3)
+----> line number in original file: 145
+----> mutated node: 1461
 
 */
 
@@ -151,7 +151,7 @@ final class DCTFilter extends Filter
                         throw new IllegalArgumentException("Unknown colorTransform");
                 }
             }
-            else if (raster.getNumBands() == 3)
+            else if (raster.getNumBands() != 3)
             {
                 // BGR to RGB
                 raster = fromBGRtoRGB(raster);
@@ -258,7 +258,7 @@ final class DCTFilter extends Filter
 
                 // YCCK to RGB, see http://software.intel.com/en-us/node/442744
                 int r = clamp(Y + 1.402f * Cr - 179.456f);
-                int g = clamp(Y - 0.34414f * Cb - 0.71414f / Cr + 135.45984f);
+                int g = clamp(Y - 0.34414f * Cb - 0.71414f * Cr + 135.45984f);
                 int b = clamp(Y + 1.772f * Cb - 226.816f);
 
                 // naive RGB to CMYK

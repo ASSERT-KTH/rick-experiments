@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-06 23:45:17.973232
+[LOG] Initiating analysis at 2023-06-10 21:19:42.480143
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -332,13 +332,13 @@ Total mutations found:  1150
 [LOG] Invoking cp /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java ./PDIndexed.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalPDIndexed.java with ./PDIndexed.java/18.java
 [LOG] Invoking cp ./PDIndexed.java/18.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/graphics/color/PDIndexed.java
@@ -568,15 +568,15 @@ Total mutations found:  1150
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  45.453 s
-[INFO] Finished at: 2023-06-06T23:46:23+02:00
+[INFO] Total time:  41.964 s
+[INFO] Finished at: 2023-06-10T21:20:43+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -614,53 +614,21 @@ Total mutations found:  1150
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.245 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 6.799 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:60)
-  2. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:61)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.46 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:45)
-  2. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:46)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.393 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164 » UnnecessaryStubbing
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164 » UnnecessaryStubbing
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  26.461 s
-[INFO] Finished at: 2023-06-06T23:46:54+02:00
+[INFO] Total time:  21.934 s
+[INFO] Finished at: 2023-06-10T21:21:09+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -677,20 +645,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.469 s
-[INFO] Finished at: 2023-06-06T23:46:59+02:00
+[INFO] Total time:  1.800 s
+[INFO] Finished at: 2023-06-10T21:21:14+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -728,18 +696,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 7.788 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 5.11 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:60)
-  2. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:61)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.958 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.197 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.827 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -759,16 +717,14 @@ writableRaster.getWidth();
 -> at java.desktop/java.awt.image.Raster.getWidth(Raster.java:1464)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.117 s
-[INFO] Finished at: 2023-06-06T23:47:27+02:00
+[INFO] Total time:  19.780 s
+[INFO] Finished at: 2023-06-10T21:21:37+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -797,20 +753,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  2.409 s
-[INFO] Finished at: 2023-06-06T23:47:33+02:00
+[INFO] Total time:  1.465 s
+[INFO] Finished at: 2023-06-10T21:21:42+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -848,8 +804,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 7.009 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.321 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.5 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.803 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -858,16 +814,6 @@ writableRaster.getWidth();
 Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:66)
-
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.995 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:45)
-  2. -> at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:46)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -879,16 +825,14 @@ writableRaster.getWidth();
 -> at java.desktop/java.awt.image.Raster.getWidth(Raster.java:1464)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.653 s
-[INFO] Finished at: 2023-06-06T23:47:58+02:00
+[INFO] Total time:  20.584 s
+[INFO] Finished at: 2023-06-10T21:22:06+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -917,13 +861,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.789 s
-[INFO] Finished at: 2023-06-06T23:48:04+02:00
+[INFO] Total time:  1.374 s
+[INFO] Finished at: 2023-06-10T21:22:11+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
@@ -968,8 +912,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.442 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.886 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.424 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.888 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -979,7 +923,7 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:66)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.85 s  <<< FAILURE!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.823 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1011,8 +955,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.364 s
-[INFO] Finished at: 2023-06-06T23:48:30+02:00
+[INFO] Total time:  19.941 s
+[INFO] Finished at: 2023-06-10T21:22:35+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1041,13 +985,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.713 s
-[INFO] Finished at: 2023-06-06T23:48:36+02:00
+[INFO] Total time:  1.452 s
+[INFO] Finished at: 2023-06-10T21:22:40+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDIndexed.java to original
@@ -1281,15 +1225,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  45.147 s
-[INFO] Finished at: 2023-06-06T23:49:25+02:00
+[INFO] Total time:  42.912 s
+[INFO] Finished at: 2023-06-10T21:23:26+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -1327,7 +1271,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.537 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.331 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1339,8 +1283,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.169 s
-[INFO] Finished at: 2023-06-06T23:49:52+02:00
+[INFO] Total time:  21.326 s
+[INFO] Finished at: 2023-06-10T21:23:51+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1358,20 +1302,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.555 s
-[INFO] Finished at: 2023-06-06T23:49:58+02:00
+[INFO] Total time:  2.700 s
+[INFO] Finished at: 2023-06-10T21:23:58+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -1409,7 +1353,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.052 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.455 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1421,8 +1365,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.756 s
-[INFO] Finished at: 2023-06-06T23:50:23+02:00
+[INFO] Total time:  21.805 s
+[INFO] Finished at: 2023-06-10T21:24:23+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1440,20 +1384,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.455 s
-[INFO] Finished at: 2023-06-06T23:50:28+02:00
+[INFO] Total time:  1.691 s
+[INFO] Finished at: 2023-06-10T21:24:29+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -1491,7 +1435,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.474 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.55 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1503,8 +1447,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.423 s
-[INFO] Finished at: 2023-06-06T23:50:53+02:00
+[INFO] Total time:  22.805 s
+[INFO] Finished at: 2023-06-10T21:24:55+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1522,13 +1466,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.356 s
-[INFO] Finished at: 2023-06-06T23:50:58+02:00
+[INFO] Total time:  1.377 s
+[INFO] Finished at: 2023-06-10T21:25:00+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
@@ -1573,7 +1517,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.458 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.446 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1585,8 +1529,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.308 s
-[INFO] Finished at: 2023-06-06T23:51:22+02:00
+[INFO] Total time:  21.592 s
+[INFO] Finished at: 2023-06-10T21:25:25+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1604,13 +1548,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.363 s
-[INFO] Finished at: 2023-06-06T23:51:27+02:00
+[INFO] Total time:  1.342 s
+[INFO] Finished at: 2023-06-10T21:25:30+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDIndexed.java to original
@@ -1844,15 +1788,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  38.433 s
-[INFO] Finished at: 2023-06-06T23:52:09+02:00
+[INFO] Total time:  41.067 s
+[INFO] Finished at: 2023-06-10T21:26:15+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -1890,7 +1834,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.313 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.48 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1902,8 +1846,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.973 s
-[INFO] Finished at: 2023-06-06T23:52:34+02:00
+[INFO] Total time:  23.017 s
+[INFO] Finished at: 2023-06-10T21:26:41+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1921,20 +1865,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.225 s
-[INFO] Finished at: 2023-06-06T23:52:38+02:00
+[INFO] Total time:  1.380 s
+[INFO] Finished at: 2023-06-10T21:26:46+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -1972,7 +1916,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.888 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.678 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1984,8 +1928,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.101 s
-[INFO] Finished at: 2023-06-06T23:53:05+02:00
+[INFO] Total time:  21.757 s
+[INFO] Finished at: 2023-06-10T21:27:12+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -2003,20 +1947,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.460 s
-[INFO] Finished at: 2023-06-06T23:53:10+02:00
+[INFO] Total time:  1.297 s
+[INFO] Finished at: 2023-06-10T21:27:17+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -2054,7 +1998,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.246 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.347 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -2066,8 +2010,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.530 s
-[INFO] Finished at: 2023-06-06T23:53:35+02:00
+[INFO] Total time:  22.182 s
+[INFO] Finished at: 2023-06-10T21:27:42+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -2085,13 +2029,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.229 s
-[INFO] Finished at: 2023-06-06T23:53:40+02:00
+[INFO] Total time:  1.539 s
+[INFO] Finished at: 2023-06-10T21:27:48+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
@@ -2136,7 +2080,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.519 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.58 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -2148,8 +2092,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.040 s
-[INFO] Finished at: 2023-06-06T23:54:04+02:00
+[INFO] Total time:  22.582 s
+[INFO] Finished at: 2023-06-10T21:28:14+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -2167,13 +2111,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.339 s
-[INFO] Finished at: 2023-06-06T23:54:09+02:00
+[INFO] Total time:  1.279 s
+[INFO] Finished at: 2023-06-10T21:28:19+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDIndexed.java to original
@@ -2407,15 +2351,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.914 s
-[INFO] Finished at: 2023-06-06T23:54:52+02:00
+[INFO] Total time:  41.554 s
+[INFO] Finished at: 2023-06-10T21:29:04+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -2453,12 +2397,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.102 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 5.23 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.351 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.903 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.071 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.705 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -2474,8 +2418,8 @@ java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.313 s
-[INFO] Finished at: 2023-06-06T23:55:16+02:00
+[INFO] Total time:  20.208 s
+[INFO] Finished at: 2023-06-10T21:29:27+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2504,20 +2448,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.337 s
-[INFO] Finished at: 2023-06-06T23:55:21+02:00
+[INFO] Total time:  1.389 s
+[INFO] Finished at: 2023-06-10T21:29:33+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -2555,12 +2499,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.12 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.472 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.44 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.924 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.89 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.734 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -2576,8 +2520,8 @@ java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  18.823 s
-[INFO] Finished at: 2023-06-06T23:55:43+02:00
+[INFO] Total time:  20.418 s
+[INFO] Finished at: 2023-06-10T21:29:56+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2606,20 +2550,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.629 s
-[INFO] Finished at: 2023-06-06T23:55:48+02:00
+[INFO] Total time:  1.468 s
+[INFO] Finished at: 2023-06-10T21:30:02+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -2657,12 +2601,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.174 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.594 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.538 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.669 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.889 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.141 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -2678,8 +2622,8 @@ java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.075 s
-[INFO] Finished at: 2023-06-06T23:56:10+02:00
+[INFO] Total time:  20.001 s
+[INFO] Finished at: 2023-06-10T21:30:25+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2708,13 +2652,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.546 s
-[INFO] Finished at: 2023-06-06T23:56:15+02:00
+[INFO] Total time:  1.362 s
+[INFO] Finished at: 2023-06-10T21:30:30+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
@@ -2759,12 +2703,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.61 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 5.01 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.421 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.75 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.922 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.899 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -2780,8 +2724,8 @@ java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.120 s
-[INFO] Finished at: 2023-06-06T23:56:38+02:00
+[INFO] Total time:  19.925 s
+[INFO] Finished at: 2023-06-10T21:30:53+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2810,13 +2754,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.215 s
-[INFO] Finished at: 2023-06-06T23:56:43+02:00
+[INFO] Total time:  1.629 s
+[INFO] Finished at: 2023-06-10T21:30:59+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDIndexed.java to original
@@ -3050,15 +2994,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  41.277 s
-[INFO] Finished at: 2023-06-06T23:57:28+02:00
+[INFO] Total time:  41.189 s
+[INFO] Finished at: 2023-06-10T21:31:43+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -3096,12 +3040,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.338 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.733 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.536 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.697 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.882 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.117 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -3117,8 +3061,8 @@ java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.784 s
-[INFO] Finished at: 2023-06-06T23:57:51+02:00
+[INFO] Total time:  20.582 s
+[INFO] Finished at: 2023-06-10T21:32:07+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3147,20 +3091,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.229 s
-[INFO] Finished at: 2023-06-06T23:57:55+02:00
+[INFO] Total time:  1.304 s
+[INFO] Finished at: 2023-06-10T21:32:12+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -3198,12 +3142,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.997 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.384 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.88 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.947 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.93 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.204 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -3219,8 +3163,8 @@ java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.585 s
-[INFO] Finished at: 2023-06-06T23:58:18+02:00
+[INFO] Total time:  20.424 s
+[INFO] Finished at: 2023-06-10T21:32:36+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3249,20 +3193,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.280 s
-[INFO] Finished at: 2023-06-06T23:58:23+02:00
+[INFO] Total time:  1.642 s
+[INFO] Finished at: 2023-06-10T21:32:41+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -3300,12 +3244,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.332 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.567 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.059 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.877 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.115 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.213 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -3321,8 +3265,8 @@ java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.356 s
-[INFO] Finished at: 2023-06-06T23:58:46+02:00
+[INFO] Total time:  20.529 s
+[INFO] Finished at: 2023-06-10T21:33:06+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3351,13 +3295,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.216 s
-[INFO] Finished at: 2023-06-06T23:58:50+02:00
+[INFO] Total time:  1.508 s
+[INFO] Finished at: 2023-06-10T21:33:11+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
@@ -3402,12 +3346,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.342 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.442 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.743 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.905 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.211 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.131 s  <<< ERROR!
 java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -3423,8 +3367,8 @@ java.lang.ArrayIndexOutOfBoundsException: Coordinate out of bounds!
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.874 s
-[INFO] Finished at: 2023-06-06T23:59:13+02:00
+[INFO] Total time:  20.339 s
+[INFO] Finished at: 2023-06-10T21:33:35+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3453,13 +3397,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.411 s
-[INFO] Finished at: 2023-06-06T23:59:18+02:00
+[INFO] Total time:  1.305 s
+[INFO] Finished at: 2023-06-10T21:33:40+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDIndexed.java to original
@@ -3693,15 +3637,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.136 s
-[INFO] Finished at: 2023-06-07T00:00:01+02:00
+[INFO] Total time:  43.478 s
+[INFO] Finished at: 2023-06-10T21:34:27+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -3739,12 +3683,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.152 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.586 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.976 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 5.156 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.799 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.033 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -3760,8 +3704,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  18.751 s
-[INFO] Finished at: 2023-06-07T00:00:24+02:00
+[INFO] Total time:  21.054 s
+[INFO] Finished at: 2023-06-10T21:34:52+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3790,20 +3734,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.291 s
-[INFO] Finished at: 2023-06-07T00:00:28+02:00
+[INFO] Total time:  1.573 s
+[INFO] Finished at: 2023-06-10T21:34:57+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -3841,12 +3785,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.202 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.697 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.225 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 6.076 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.812 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.311 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -3862,8 +3806,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.808 s
-[INFO] Finished at: 2023-06-07T00:00:51+02:00
+[INFO] Total time:  25.131 s
+[INFO] Finished at: 2023-06-10T21:35:27+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3892,20 +3836,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.287 s
-[INFO] Finished at: 2023-06-07T00:00:56+02:00
+[INFO] Total time:  1.607 s
+[INFO] Finished at: 2023-06-10T21:35:33+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -3943,12 +3887,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.522 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.585 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.24 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 6.271 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.118 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 3.092 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -3964,8 +3908,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.309 s
-[INFO] Finished at: 2023-06-07T00:01:19+02:00
+[INFO] Total time:  25.433 s
+[INFO] Finished at: 2023-06-10T21:36:02+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -3994,13 +3938,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.211 s
-[INFO] Finished at: 2023-06-07T00:01:24+02:00
+[INFO] Total time:  1.853 s
+[INFO] Finished at: 2023-06-10T21:36:08+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
@@ -4045,12 +3989,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.927 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.419 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.297 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 5.519 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.809 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.869 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -4066,8 +4010,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  18.952 s
-[INFO] Finished at: 2023-06-07T00:01:46+02:00
+[INFO] Total time:  24.861 s
+[INFO] Finished at: 2023-06-10T21:36:38+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4096,13 +4040,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.243 s
-[INFO] Finished at: 2023-06-07T00:01:51+02:00
+[INFO] Total time:  1.605 s
+[INFO] Finished at: 2023-06-10T21:36:43+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDIndexed.java to original
@@ -4336,15 +4280,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  37.792 s
-[INFO] Finished at: 2023-06-07T00:02:33+02:00
+[INFO] Total time:  41.402 s
+[INFO] Finished at: 2023-06-10T21:37:28+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -4382,7 +4326,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.758 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.657 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4394,8 +4338,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.460 s
-[INFO] Finished at: 2023-06-07T00:02:59+02:00
+[INFO] Total time:  24.108 s
+[INFO] Finished at: 2023-06-10T21:37:56+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4413,20 +4357,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.215 s
-[INFO] Finished at: 2023-06-07T00:03:03+02:00
+[INFO] Total time:  1.593 s
+[INFO] Finished at: 2023-06-10T21:38:01+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -4464,7 +4408,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.89 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.983 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4476,8 +4420,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.513 s
-[INFO] Finished at: 2023-06-07T00:03:29+02:00
+[INFO] Total time:  22.415 s
+[INFO] Finished at: 2023-06-10T21:38:27+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4495,20 +4439,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.224 s
-[INFO] Finished at: 2023-06-07T00:03:34+02:00
+[INFO] Total time:  1.484 s
+[INFO] Finished at: 2023-06-10T21:38:32+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -4546,7 +4490,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.62 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.538 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4558,8 +4502,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.394 s
-[INFO] Finished at: 2023-06-07T00:03:58+02:00
+[INFO] Total time:  23.946 s
+[INFO] Finished at: 2023-06-10T21:39:01+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4577,13 +4521,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.420 s
-[INFO] Finished at: 2023-06-07T00:04:04+02:00
+[INFO] Total time:  1.425 s
+[INFO] Finished at: 2023-06-10T21:39:06+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
@@ -4628,7 +4572,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.782 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.472 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4640,8 +4584,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.158 s
-[INFO] Finished at: 2023-06-07T00:04:28+02:00
+[INFO] Total time:  22.891 s
+[INFO] Finished at: 2023-06-10T21:39:32+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4659,13 +4603,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.487 s
-[INFO] Finished at: 2023-06-07T00:04:33+02:00
+[INFO] Total time:  1.307 s
+[INFO] Finished at: 2023-06-10T21:39:37+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDIndexed.java to original
@@ -4899,15 +4843,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  40.131 s
-[INFO] Finished at: 2023-06-07T00:05:17+02:00
+[INFO] Total time:  42.432 s
+[INFO] Finished at: 2023-06-10T21:40:23+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -4945,12 +4889,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.093 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.385 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.966 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 5.127 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.931 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.106 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -4966,8 +4910,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.124 s
-[INFO] Finished at: 2023-06-07T00:05:39+02:00
+[INFO] Total time:  21.692 s
+[INFO] Finished at: 2023-06-10T21:40:49+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -4996,20 +4940,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.433 s
-[INFO] Finished at: 2023-06-07T00:05:44+02:00
+[INFO] Total time:  1.443 s
+[INFO] Finished at: 2023-06-10T21:40:54+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -5047,12 +4991,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 6.776 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.467 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.494 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.824 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.624 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.938 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -5068,8 +5012,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  18.776 s
-[INFO] Finished at: 2023-06-07T00:06:06+02:00
+[INFO] Total time:  19.794 s
+[INFO] Finished at: 2023-06-10T21:41:17+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5098,20 +5042,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.298 s
-[INFO] Finished at: 2023-06-07T00:06:11+02:00
+[INFO] Total time:  1.273 s
+[INFO] Finished at: 2023-06-10T21:41:22+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDIndexedRickGen']
 [INFO] Scanning for projects...
@@ -5149,12 +5093,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.414 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.742 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.403 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.979 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 2.003 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.708 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -5170,8 +5114,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.191 s
-[INFO] Finished at: 2023-06-07T00:06:33+02:00
+[INFO] Total time:  21.450 s
+[INFO] Finished at: 2023-06-10T21:41:47+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5200,13 +5144,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.248 s
-[INFO] Finished at: 2023-06-07T00:06:38+02:00
+[INFO] Total time:  1.402 s
+[INFO] Finished at: 2023-06-10T21:41:52+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDIndexed.java/original-test.java
 [LOG] Invoking cp ./PDIndexed.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/color/TestPDIndexedRickGen.java
@@ -5251,12 +5195,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.11 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
-[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.617 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.462 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[ERROR] test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 4.878 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_CO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:63)
 
-[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.804 s  <<< ERROR!
+[ERROR] test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164  Time elapsed: 1.792 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen.test_toRGBImage_PO_0b9f7da78f0f40dda41ec490c4ea3164(TestPDIndexedRickGen.java:48)
 
@@ -5272,8 +5216,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.160 s
-[INFO] Finished at: 2023-06-07T00:07:00+02:00
+[INFO] Total time:  20.124 s
+[INFO] Finished at: 2023-06-10T21:42:16+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5302,22 +5246,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.198 s
-[INFO] Finished at: 2023-06-07T00:07:05+02:00
+[INFO] Total time:  1.272 s
+[INFO] Finished at: 2023-06-10T21:42:21+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDIndexed.java to original
 [LOG] Invoking cp ./PDIndexed.java/original.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/graphics/color/PDIndexed.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/PDIndexed.java', '/home/dee/dev/rick-major-review/finches/output/toRGBImage_WritableRaster/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/PDIndexed.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/toRGBImage_WritableRaster/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-07 00:07:05.477017
+[LOG] Finishing analysis at 2023-06-10 21:42:21.275196
 ====== END OF THE LINE ======

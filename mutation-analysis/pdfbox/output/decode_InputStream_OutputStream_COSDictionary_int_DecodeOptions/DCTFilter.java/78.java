@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:             if (iis.read() != 0x0A)
-----> after:             if (iis.read() == 0x0A)
-----> line number in original file: 65
-----> mutated node: 1237
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                 int r = clamp(Y + 1.402f * Cr - 179.456f);
+----> after:                 int r = clamp(Y + 1.402f * Cr + 179.456f);
+----> line number in original file: 251
+----> mutated node: 3679
 
 */
 
@@ -71,7 +71,7 @@ final class DCTFilter extends Filter
             iis = ImageIO.createImageInputStream(encoded);
 
             // skip one LF if there
-            if (iis.read() == 0x0A)
+            if (iis.read() != 0x0A)
             {
                 iis.seek(0);
             }
@@ -257,7 +257,7 @@ final class DCTFilter extends Filter
                 float K = value[3];
 
                 // YCCK to RGB, see http://software.intel.com/en-us/node/442744
-                int r = clamp(Y + 1.402f * Cr - 179.456f);
+                int r = clamp(Y + 1.402f * Cr + 179.456f);
                 int g = clamp(Y - 0.34414f * Cb - 0.71414f * Cr + 135.45984f);
                 int b = clamp(Y + 1.772f * Cb - 226.816f);
 

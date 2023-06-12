@@ -3,53 +3,53 @@
     "CUT": "com.graphhopper.util.FinishInstruction",
     "mutant-file": "./FinishInstruction.java/3.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.086 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.658 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.487 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.542 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.615 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 6.594 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.723 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 6.204 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.85 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.491 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen"
 },
 {
     "mut": "FinishInstruction_getTurnDescription_Translation",
     "CUT": "com.graphhopper.util.FinishInstruction",
     "mutant-file": "./FinishInstruction.java/4.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.415 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.191 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 6.386 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 7.226 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.448 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.05 s - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.063 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.615 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.666 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 6.019 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen"
 },
 {
     "mut": "FinishInstruction_getTurnDescription_Translation",
     "CUT": "com.graphhopper.util.FinishInstruction",
     "mutant-file": "./FinishInstruction.java/5.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.195 s - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.178 s - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.902 s - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.517 s - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.955 s - in com.graphhopper.util.TestFinishInstructionRickGen"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.601 s - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.029 s - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.288 s - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.461 s - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.519 s - in com.graphhopper.util.TestFinishInstructionRickGen"
 },
 {
     "mut": "FinishInstruction_getTurnDescription_Translation",
     "CUT": "com.graphhopper.util.FinishInstruction",
     "mutant-file": "./FinishInstruction.java/6.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.36 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.903 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.039 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 5.417 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.411 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.206 s - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.222 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.191 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.229 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.378 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen"
 },
 {
     "mut": "FinishInstruction_getTurnDescription_Translation",
     "CUT": "com.graphhopper.util.FinishInstruction",
     "mutant-file": "./FinishInstruction.java/7.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.99 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.243 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.728 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.301 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
-    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.244 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.14 s - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 5.336 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.274 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.266 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.303 s <<< FAILURE! - in com.graphhopper.util.TestFinishInstructionRickGen"
 },

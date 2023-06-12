@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-05 10:30:55.176611
+[LOG] Initiating analysis at 2023-06-11 06:53:00.298787
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -79,13 +79,13 @@ Total mutations found:  63
 [LOG] Invoking cp /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java ./PDFormXObject.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalPDFormXObject.java with ./PDFormXObject.java/11.java
 [LOG] Invoking cp ./PDFormXObject.java/11.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/graphics/form/PDFormXObject.java
@@ -315,15 +315,15 @@ Total mutations found:  63
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  45.839 s
-[INFO] Finished at: 2023-06-05T10:31:49+02:00
+[INFO] Total time:  45.993 s
+[INFO] Finished at: 2023-06-11T06:53:54+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFormXObjectRickGen']
 [INFO] Scanning for projects...
@@ -348,7 +348,7 @@ Total mutations found:  63
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -361,7 +361,7 @@ Total mutations found:  63
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.447 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.297 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -373,8 +373,8 @@ Total mutations found:  63
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  28.636 s
-[INFO] Finished at: 2023-06-05T10:32:21+02:00
+[INFO] Total time:  24.681 s
+[INFO] Finished at: 2023-06-11T06:54:23+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -392,20 +392,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.400 s
-[INFO] Finished at: 2023-06-05T10:32:27+02:00
+[INFO] Total time:  1.493 s
+[INFO] Finished at: 2023-06-11T06:54:28+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFormXObject.java/original-test.java
 [LOG] Invoking cp ./PDFormXObject.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFormXObjectRickGen']
 [INFO] Scanning for projects...
@@ -430,7 +430,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -443,8 +443,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.662 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.896 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.223 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.747 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -470,8 +470,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.102 s
-[INFO] Finished at: 2023-06-05T10:32:56+02:00
+[INFO] Total time:  24.241 s
+[INFO] Finished at: 2023-06-11T06:54:56+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -500,20 +500,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.776 s
-[INFO] Finished at: 2023-06-05T10:33:02+02:00
+[INFO] Total time:  1.468 s
+[INFO] Finished at: 2023-06-11T06:55:01+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFormXObject.java/original-test.java
 [LOG] Invoking cp ./PDFormXObject.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFormXObjectRickGen']
 [INFO] Scanning for projects...
@@ -538,7 +538,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -551,8 +551,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.176 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 5.976 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.702 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 6.381 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -578,8 +578,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.584 s
-[INFO] Finished at: 2023-06-05T10:33:29+02:00
+[INFO] Total time:  23.691 s
+[INFO] Finished at: 2023-06-11T06:55:28+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -608,13 +608,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.328 s
-[INFO] Finished at: 2023-06-05T10:33:33+02:00
+[INFO] Total time:  1.309 s
+[INFO] Finished at: 2023-06-11T06:55:33+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFormXObject.java/original-test.java
 [LOG] Invoking cp ./PDFormXObject.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
@@ -646,7 +646,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -659,8 +659,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.111 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 6.035 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.829 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 6.531 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -670,7 +670,7 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:63)
 
-[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.303 s  <<< FAILURE!
+[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.564 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -702,8 +702,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.449 s
-[INFO] Finished at: 2023-06-05T10:34:01+02:00
+[INFO] Total time:  23.826 s
+[INFO] Finished at: 2023-06-11T06:56:01+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -732,13 +732,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.344 s
-[INFO] Finished at: 2023-06-05T10:34:05+02:00
+[INFO] Total time:  1.372 s
+[INFO] Finished at: 2023-06-11T06:56:05+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDFormXObject.java to original
@@ -972,15 +972,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  40.148 s
-[INFO] Finished at: 2023-06-05T10:34:49+02:00
+[INFO] Total time:  43.819 s
+[INFO] Finished at: 2023-06-11T06:56:53+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFormXObjectRickGen']
 [INFO] Scanning for projects...
@@ -1005,7 +1005,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1018,12 +1018,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.739 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 6.284 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.156 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 5.893 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:60)
 
-[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.732 s  <<< ERROR!
+[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.486 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:48)
 
@@ -1039,8 +1039,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  24.579 s
-[INFO] Finished at: 2023-06-05T10:35:18+02:00
+[INFO] Total time:  23.040 s
+[INFO] Finished at: 2023-06-11T06:57:20+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1069,20 +1069,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.873 s
-[INFO] Finished at: 2023-06-05T10:35:23+02:00
+[INFO] Total time:  1.314 s
+[INFO] Finished at: 2023-06-11T06:57:25+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFormXObject.java/original-test.java
 [LOG] Invoking cp ./PDFormXObject.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFormXObjectRickGen']
 [INFO] Scanning for projects...
@@ -1107,7 +1107,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1120,12 +1120,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.452 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 6.105 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.465 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 6.327 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:60)
 
-[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.403 s  <<< ERROR!
+[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.424 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:48)
 
@@ -1141,8 +1141,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.792 s
-[INFO] Finished at: 2023-06-05T10:35:53+02:00
+[INFO] Total time:  22.829 s
+[INFO] Finished at: 2023-06-11T06:57:51+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1171,20 +1171,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.484 s
-[INFO] Finished at: 2023-06-05T10:35:58+02:00
+[INFO] Total time:  1.561 s
+[INFO] Finished at: 2023-06-11T06:57:56+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFormXObject.java/original-test.java
 [LOG] Invoking cp ./PDFormXObject.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFormXObjectRickGen']
 [INFO] Scanning for projects...
@@ -1209,7 +1209,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1222,12 +1222,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.895 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 5.794 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.125 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 5.858 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:60)
 
-[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.386 s  <<< ERROR!
+[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.295 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:48)
 
@@ -1243,8 +1243,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.043 s
-[INFO] Finished at: 2023-06-05T10:36:24+02:00
+[INFO] Total time:  23.041 s
+[INFO] Finished at: 2023-06-11T06:58:23+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1273,13 +1273,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.278 s
-[INFO] Finished at: 2023-06-05T10:36:29+02:00
+[INFO] Total time:  1.463 s
+[INFO] Finished at: 2023-06-11T06:58:28+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFormXObject.java/original-test.java
 [LOG] Invoking cp ./PDFormXObject.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
@@ -1311,7 +1311,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1324,12 +1324,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.776 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 5.693 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.948 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 5.871 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:60)
 
-[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.4 s  <<< ERROR!
+[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.356 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:48)
 
@@ -1345,8 +1345,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.145 s
-[INFO] Finished at: 2023-06-05T10:36:54+02:00
+[INFO] Total time:  22.915 s
+[INFO] Finished at: 2023-06-11T06:58:54+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1375,13 +1375,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.528 s
-[INFO] Finished at: 2023-06-05T10:36:59+02:00
+[INFO] Total time:  1.341 s
+[INFO] Finished at: 2023-06-11T06:58:59+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDFormXObject.java to original
@@ -1615,15 +1615,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  41.592 s
-[INFO] Finished at: 2023-06-05T10:37:44+02:00
+[INFO] Total time:  41.692 s
+[INFO] Finished at: 2023-06-11T06:59:45+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFormXObjectRickGen']
 [INFO] Scanning for projects...
@@ -1648,7 +1648,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1661,7 +1661,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.149 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.971 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1673,8 +1673,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  26.625 s
-[INFO] Finished at: 2023-06-05T10:38:15+02:00
+[INFO] Total time:  25.015 s
+[INFO] Finished at: 2023-06-11T07:00:14+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1692,20 +1692,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.459 s
-[INFO] Finished at: 2023-06-05T10:38:20+02:00
+[INFO] Total time:  1.492 s
+[INFO] Finished at: 2023-06-11T07:00:19+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFormXObject.java/original-test.java
 [LOG] Invoking cp ./PDFormXObject.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFormXObjectRickGen']
 [INFO] Scanning for projects...
@@ -1730,7 +1730,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1743,7 +1743,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.3 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.764 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1755,8 +1755,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  26.687 s
-[INFO] Finished at: 2023-06-05T10:38:50+02:00
+[INFO] Total time:  25.688 s
+[INFO] Finished at: 2023-06-11T07:00:48+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1774,20 +1774,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.424 s
-[INFO] Finished at: 2023-06-05T10:38:55+02:00
+[INFO] Total time:  1.319 s
+[INFO] Finished at: 2023-06-11T07:00:53+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFormXObject.java/original-test.java
 [LOG] Invoking cp ./PDFormXObject.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFormXObjectRickGen']
 [INFO] Scanning for projects...
@@ -1812,7 +1812,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1825,7 +1825,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.688 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.582 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1837,8 +1837,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  28.140 s
-[INFO] Finished at: 2023-06-05T10:39:27+02:00
+[INFO] Total time:  25.243 s
+[INFO] Finished at: 2023-06-11T07:01:22+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1856,13 +1856,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.692 s
-[INFO] Finished at: 2023-06-05T10:39:33+02:00
+[INFO] Total time:  1.584 s
+[INFO] Finished at: 2023-06-11T07:01:27+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFormXObject.java/original-test.java
 [LOG] Invoking cp ./PDFormXObject.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
@@ -1894,7 +1894,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1907,7 +1907,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.355 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.049 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1919,8 +1919,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  24.412 s
-[INFO] Finished at: 2023-06-05T10:40:01+02:00
+[INFO] Total time:  24.818 s
+[INFO] Finished at: 2023-06-11T07:01:55+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1938,13 +1938,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.342 s
-[INFO] Finished at: 2023-06-05T10:40:07+02:00
+[INFO] Total time:  1.317 s
+[INFO] Finished at: 2023-06-11T07:02:00+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDFormXObject.java to original
@@ -2178,15 +2178,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  41.786 s
-[INFO] Finished at: 2023-06-05T10:40:52+02:00
+[INFO] Total time:  45.392 s
+[INFO] Finished at: 2023-06-11T07:02:49+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFormXObjectRickGen']
 [INFO] Scanning for projects...
@@ -2211,7 +2211,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2224,12 +2224,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 11.07 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 6.642 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.642 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 6.247 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:60)
 
-[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.726 s  <<< ERROR!
+[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.633 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:48)
 
@@ -2245,8 +2245,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.992 s
-[INFO] Finished at: 2023-06-05T10:41:20+02:00
+[INFO] Total time:  24.442 s
+[INFO] Finished at: 2023-06-11T07:03:18+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2275,20 +2275,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.662 s
-[INFO] Finished at: 2023-06-05T10:41:25+02:00
+[INFO] Total time:  1.320 s
+[INFO] Finished at: 2023-06-11T07:03:22+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFormXObject.java/original-test.java
 [LOG] Invoking cp ./PDFormXObject.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFormXObjectRickGen']
 [INFO] Scanning for projects...
@@ -2313,7 +2313,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2326,12 +2326,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.824 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 5.805 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.652 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 6.297 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:60)
 
-[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 4.304 s  <<< ERROR!
+[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.585 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:48)
 
@@ -2347,8 +2347,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.924 s
-[INFO] Finished at: 2023-06-05T10:41:53+02:00
+[INFO] Total time:  23.293 s
+[INFO] Finished at: 2023-06-11T07:03:49+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2377,20 +2377,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.694 s
-[INFO] Finished at: 2023-06-05T10:41:59+02:00
+[INFO] Total time:  1.385 s
+[INFO] Finished at: 2023-06-11T07:03:54+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFormXObject.java/original-test.java
 [LOG] Invoking cp ./PDFormXObject.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFormXObjectRickGen']
 [INFO] Scanning for projects...
@@ -2415,7 +2415,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2428,12 +2428,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 11.816 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 6.855 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.091 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 6.013 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:60)
 
-[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 4.179 s  <<< ERROR!
+[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.355 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:48)
 
@@ -2449,8 +2449,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  27.354 s
-[INFO] Finished at: 2023-06-05T10:42:30+02:00
+[INFO] Total time:  22.651 s
+[INFO] Finished at: 2023-06-11T07:04:21+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2479,13 +2479,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.688 s
-[INFO] Finished at: 2023-06-05T10:42:36+02:00
+[INFO] Total time:  1.523 s
+[INFO] Finished at: 2023-06-11T07:04:27+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFormXObject.java/original-test.java
 [LOG] Invoking cp ./PDFormXObject.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/graphics/form/TestPDFormXObjectRickGen.java
@@ -2517,7 +2517,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2530,12 +2530,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 12.649 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
-[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 7.639 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.392 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[ERROR] test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 6.118 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_CO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:60)
 
-[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 4.136 s  <<< ERROR!
+[ERROR] test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c  Time elapsed: 3.462 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen.test_setMatrix_PO_5cf162cf3fb140d784d0bfaaf3c2159c(TestPDFormXObjectRickGen.java:48)
 
@@ -2551,8 +2551,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  26.705 s
-[INFO] Finished at: 2023-06-05T10:43:07+02:00
+[INFO] Total time:  22.792 s
+[INFO] Finished at: 2023-06-11T07:04:53+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2581,22 +2581,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.754 s
-[INFO] Finished at: 2023-06-05T10:43:13+02:00
+[INFO] Total time:  1.431 s
+[INFO] Finished at: 2023-06-11T07:04:58+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDFormXObject.java to original
 [LOG] Invoking cp ./PDFormXObject.java/original.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/graphics/form/PDFormXObject.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/PDFormXObject.java', '/home/dee/dev/rick-major-review/finches/output/setMatrix_AffineTransform/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/PDFormXObject.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/setMatrix_AffineTransform/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-05 10:43:13.883256
+[LOG] Finishing analysis at 2023-06-11 07:04:58.828444
 ====== END OF THE LINE ======

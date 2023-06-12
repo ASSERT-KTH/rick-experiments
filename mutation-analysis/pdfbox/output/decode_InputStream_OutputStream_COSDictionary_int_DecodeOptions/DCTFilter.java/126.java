@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:                 iis.seek(iis.getStreamPosition() - 9);
-----> after:                 iis.seek(iis.getStreamPosition() + 9);
-----> line number in original file: 205
-----> mutated node: 2984
+mutant type: ArithmeticOperatorReplacementShortcut
+----> before:                 ++a;
+----> after:                 --a;
+----> line number in original file: 197
+----> mutated node: 2533
 
 */
 
@@ -203,7 +203,7 @@ final class DCTFilter extends Filter
         {
             if (ADOBE.charAt(a) == by)
             {
-                ++a;
+                --a;
                 if (a != ADOBE.length())
                 {
                     continue;
@@ -211,7 +211,7 @@ final class DCTFilter extends Filter
                 // match
                 a = 0;
                 long afterAdobePos = iis.getStreamPosition();
-                iis.seek(iis.getStreamPosition() + 9);
+                iis.seek(iis.getStreamPosition() - 9);
                 int tag = iis.readUnsignedShort();
                 if (tag != 0xFFEE)
                 {

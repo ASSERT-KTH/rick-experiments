@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-05 09:58:33.080927
+[LOG] Initiating analysis at 2023-06-11 06:19:18.639050
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -4603,13 +4603,13 @@ Total mutations found:  21133
 [LOG] Invoking cp /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java ./PDPage.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalPDPage.java with ./PDPage.java/139.java
 [LOG] Invoking cp ./PDPage.java/139.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/PDPage.java
@@ -4839,15 +4839,15 @@ Total mutations found:  21133
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  43.192 s
-[INFO] Finished at: 2023-06-05T10:03:36+02:00
+[INFO] Total time:  46.515 s
+[INFO] Finished at: 2023-06-11T06:24:25+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageRickGenSetMediaBox']
 [INFO] Scanning for projects...
@@ -4872,7 +4872,7 @@ Total mutations found:  21133
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4885,7 +4885,7 @@ Total mutations found:  21133
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.199 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.479 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4897,8 +4897,8 @@ Total mutations found:  21133
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  24.568 s
-[INFO] Finished at: 2023-06-05T10:04:04+02:00
+[INFO] Total time:  26.178 s
+[INFO] Finished at: 2023-06-11T06:24:55+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4916,20 +4916,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.304 s
-[INFO] Finished at: 2023-06-05T10:04:09+02:00
+[INFO] Total time:  1.313 s
+[INFO] Finished at: 2023-06-11T06:25:00+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPage.java/original-test.java
 [LOG] Invoking cp ./PDPage.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageRickGenSetMediaBox']
 [INFO] Scanning for projects...
@@ -4954,7 +4954,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4967,8 +4967,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.379 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] test_setMediaBox_PO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 4.86 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.447 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[ERROR] test_setMediaBox_PO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 4.906 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -5000,8 +5000,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.851 s
-[INFO] Finished at: 2023-06-05T10:04:36+02:00
+[INFO] Total time:  23.403 s
+[INFO] Finished at: 2023-06-11T06:25:27+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5030,20 +5030,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.299 s
-[INFO] Finished at: 2023-06-05T10:04:41+02:00
+[INFO] Total time:  1.269 s
+[INFO] Finished at: 2023-06-11T06:25:32+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPage.java/original-test.java
 [LOG] Invoking cp ./PDPage.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageRickGenSetMediaBox']
 [INFO] Scanning for projects...
@@ -5068,7 +5068,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5081,8 +5081,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.182 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] test_setMediaBox_CO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 5.908 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.416 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[ERROR] test_setMediaBox_CO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 5.936 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -5108,8 +5108,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.371 s
-[INFO] Finished at: 2023-06-05T10:05:07+02:00
+[INFO] Total time:  23.146 s
+[INFO] Finished at: 2023-06-11T06:25:58+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5138,13 +5138,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.344 s
-[INFO] Finished at: 2023-06-05T10:05:11+02:00
+[INFO] Total time:  1.316 s
+[INFO] Finished at: 2023-06-11T06:26:03+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPage.java/original-test.java
 [LOG] Invoking cp ./PDPage.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
@@ -5176,7 +5176,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5189,8 +5189,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 9.935 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] test_setMediaBox_CO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 5.855 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 11.42 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[ERROR] test_setMediaBox_CO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 6.043 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -5200,7 +5200,7 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox.test_setMediaBox_CO_f7a86044d6bc408da39110eb91bfbd73(TestPDPageRickGenSetMediaBox.java:75)
 
-[ERROR] test_setMediaBox_PO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 3.363 s  <<< FAILURE!
+[ERROR] test_setMediaBox_PO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 4.647 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -5238,8 +5238,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.890 s
-[INFO] Finished at: 2023-06-05T10:05:37+02:00
+[INFO] Total time:  23.648 s
+[INFO] Finished at: 2023-06-11T06:26:30+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5268,13 +5268,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.246 s
-[INFO] Finished at: 2023-06-05T10:05:41+02:00
+[INFO] Total time:  1.388 s
+[INFO] Finished at: 2023-06-11T06:26:35+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDPage.java to original
@@ -5508,15 +5508,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  42.106 s
-[INFO] Finished at: 2023-06-05T10:06:27+02:00
+[INFO] Total time:  41.636 s
+[INFO] Finished at: 2023-06-11T06:27:21+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageRickGenSetMediaBox']
 [INFO] Scanning for projects...
@@ -5541,7 +5541,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5554,7 +5554,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.549 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.593 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -5566,8 +5566,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.210 s
-[INFO] Finished at: 2023-06-05T10:06:54+02:00
+[INFO] Total time:  25.793 s
+[INFO] Finished at: 2023-06-11T06:27:50+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -5585,20 +5585,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.481 s
-[INFO] Finished at: 2023-06-05T10:06:59+02:00
+[INFO] Total time:  1.560 s
+[INFO] Finished at: 2023-06-11T06:27:55+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPage.java/original-test.java
 [LOG] Invoking cp ./PDPage.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageRickGenSetMediaBox']
 [INFO] Scanning for projects...
@@ -5623,7 +5623,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5636,8 +5636,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.665 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] test_setMediaBox_PO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 3.195 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.42 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[ERROR] test_setMediaBox_PO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 3.483 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -5677,8 +5677,8 @@ cOSDictionary.removeItem(COSName{MediaBox});
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.936 s
-[INFO] Finished at: 2023-06-05T10:07:24+02:00
+[INFO] Total time:  22.237 s
+[INFO] Finished at: 2023-06-11T06:28:21+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5707,20 +5707,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.526 s
-[INFO] Finished at: 2023-06-05T10:07:29+02:00
+[INFO] Total time:  1.359 s
+[INFO] Finished at: 2023-06-11T06:28:26+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPage.java/original-test.java
 [LOG] Invoking cp ./PDPage.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageRickGenSetMediaBox']
 [INFO] Scanning for projects...
@@ -5745,7 +5745,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5758,8 +5758,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.889 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] test_setMediaBox_CO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 5.866 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 9.93 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[ERROR] test_setMediaBox_CO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 5.872 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -5793,8 +5793,8 @@ cOSDictionary.removeItem(COSName{MediaBox});
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.958 s
-[INFO] Finished at: 2023-06-05T10:07:54+02:00
+[INFO] Total time:  23.947 s
+[INFO] Finished at: 2023-06-11T06:28:54+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5823,13 +5823,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.488 s
-[INFO] Finished at: 2023-06-05T10:07:59+02:00
+[INFO] Total time:  1.482 s
+[INFO] Finished at: 2023-06-11T06:28:59+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPage.java/original-test.java
 [LOG] Invoking cp ./PDPage.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
@@ -5861,7 +5861,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5874,8 +5874,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.009 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] test_setMediaBox_CO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 5.988 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 9.673 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[ERROR] test_setMediaBox_CO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 5.853 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -5889,7 +5889,7 @@ cOSDictionary.removeItem(COSName{MediaBox});
 
 	at org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox.test_setMediaBox_CO_f7a86044d6bc408da39110eb91bfbd73(TestPDPageRickGenSetMediaBox.java:75)
 
-[ERROR] test_setMediaBox_PO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 3.343 s  <<< FAILURE!
+[ERROR] test_setMediaBox_PO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 3.149 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -5939,8 +5939,8 @@ cOSDictionary.removeItem(COSName{MediaBox});
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.939 s
-[INFO] Finished at: 2023-06-05T10:08:25+02:00
+[INFO] Total time:  21.967 s
+[INFO] Finished at: 2023-06-11T06:29:24+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5969,13 +5969,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.455 s
-[INFO] Finished at: 2023-06-05T10:08:29+02:00
+[INFO] Total time:  1.361 s
+[INFO] Finished at: 2023-06-11T06:29:30+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDPage.java to original
@@ -6209,15 +6209,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.874 s
-[INFO] Finished at: 2023-06-05T10:09:13+02:00
+[INFO] Total time:  41.690 s
+[INFO] Finished at: 2023-06-11T06:30:15+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageRickGenSetMediaBox']
 [INFO] Scanning for projects...
@@ -6242,7 +6242,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -6255,7 +6255,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.607 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.794 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -6267,8 +6267,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.212 s
-[INFO] Finished at: 2023-06-05T10:09:39+02:00
+[INFO] Total time:  27.260 s
+[INFO] Finished at: 2023-06-11T06:30:46+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -6286,20 +6286,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.320 s
-[INFO] Finished at: 2023-06-05T10:09:44+02:00
+[INFO] Total time:  1.399 s
+[INFO] Finished at: 2023-06-11T06:30:51+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPage.java/original-test.java
 [LOG] Invoking cp ./PDPage.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageRickGenSetMediaBox']
 [INFO] Scanning for projects...
@@ -6324,7 +6324,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -6337,8 +6337,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.222 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] test_setMediaBox_PO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 3.682 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.895 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[ERROR] test_setMediaBox_PO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 5.094 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -6378,8 +6378,8 @@ cOSDictionary.removeItem(COSName{MediaBox});
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.736 s
-[INFO] Finished at: 2023-06-05T10:10:10+02:00
+[INFO] Total time:  24.504 s
+[INFO] Finished at: 2023-06-11T06:31:19+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -6408,20 +6408,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.243 s
-[INFO] Finished at: 2023-06-05T10:10:15+02:00
+[INFO] Total time:  1.456 s
+[INFO] Finished at: 2023-06-11T06:31:24+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPage.java/original-test.java
 [LOG] Invoking cp ./PDPage.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageRickGenSetMediaBox']
 [INFO] Scanning for projects...
@@ -6446,7 +6446,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -6459,8 +6459,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.071 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] test_setMediaBox_CO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 5.739 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.253 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[ERROR] test_setMediaBox_CO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 6.149 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -6494,8 +6494,8 @@ cOSDictionary.removeItem(COSName{MediaBox});
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.048 s
-[INFO] Finished at: 2023-06-05T10:10:42+02:00
+[INFO] Total time:  23.159 s
+[INFO] Finished at: 2023-06-11T06:31:51+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -6524,13 +6524,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.273 s
-[INFO] Finished at: 2023-06-05T10:10:46+02:00
+[INFO] Total time:  1.529 s
+[INFO] Finished at: 2023-06-11T06:31:56+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPage.java/original-test.java
 [LOG] Invoking cp ./PDPage.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
@@ -6562,7 +6562,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -6575,8 +6575,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.217 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[ERROR] test_setMediaBox_CO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 5.703 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 9.845 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[ERROR] test_setMediaBox_CO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 6.044 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -6590,7 +6590,7 @@ cOSDictionary.removeItem(COSName{MediaBox});
 
 	at org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox.test_setMediaBox_CO_f7a86044d6bc408da39110eb91bfbd73(TestPDPageRickGenSetMediaBox.java:75)
 
-[ERROR] test_setMediaBox_PO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 3.721 s  <<< FAILURE!
+[ERROR] test_setMediaBox_PO_f7a86044d6bc408da39110eb91bfbd73  Time elapsed: 3.15 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -6640,8 +6640,8 @@ cOSDictionary.removeItem(COSName{MediaBox});
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.503 s
-[INFO] Finished at: 2023-06-05T10:11:12+02:00
+[INFO] Total time:  22.141 s
+[INFO] Finished at: 2023-06-11T06:32:22+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -6670,13 +6670,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.411 s
-[INFO] Finished at: 2023-06-05T10:11:17+02:00
+[INFO] Total time:  1.286 s
+[INFO] Finished at: 2023-06-11T06:32:27+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDPage.java to original
@@ -6910,15 +6910,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.439 s
-[INFO] Finished at: 2023-06-05T10:12:00+02:00
+[INFO] Total time:  44.341 s
+[INFO] Finished at: 2023-06-11T06:33:15+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageRickGenSetMediaBox']
 [INFO] Scanning for projects...
@@ -6943,7 +6943,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -6956,7 +6956,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.046 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.842 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -6968,8 +6968,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  26.456 s
-[INFO] Finished at: 2023-06-05T10:12:30+02:00
+[INFO] Total time:  24.128 s
+[INFO] Finished at: 2023-06-11T06:33:43+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -6987,20 +6987,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.248 s
-[INFO] Finished at: 2023-06-05T10:12:35+02:00
+[INFO] Total time:  1.463 s
+[INFO] Finished at: 2023-06-11T06:33:48+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPage.java/original-test.java
 [LOG] Invoking cp ./PDPage.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageRickGenSetMediaBox']
 [INFO] Scanning for projects...
@@ -7025,7 +7025,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -7038,7 +7038,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.33 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.215 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -7050,8 +7050,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.074 s
-[INFO] Finished at: 2023-06-05T10:13:03+02:00
+[INFO] Total time:  25.366 s
+[INFO] Finished at: 2023-06-11T06:34:17+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -7069,20 +7069,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.283 s
-[INFO] Finished at: 2023-06-05T10:13:08+02:00
+[INFO] Total time:  1.288 s
+[INFO] Finished at: 2023-06-11T06:34:22+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPage.java/original-test.java
 [LOG] Invoking cp ./PDPage.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageRickGenSetMediaBox']
 [INFO] Scanning for projects...
@@ -7107,7 +7107,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -7120,7 +7120,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.999 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.194 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -7132,8 +7132,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.719 s
-[INFO] Finished at: 2023-06-05T10:13:35+02:00
+[INFO] Total time:  24.435 s
+[INFO] Finished at: 2023-06-11T06:34:50+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -7151,13 +7151,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.268 s
-[INFO] Finished at: 2023-06-05T10:13:39+02:00
+[INFO] Total time:  1.335 s
+[INFO] Finished at: 2023-06-11T06:34:55+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPage.java/original-test.java
 [LOG] Invoking cp ./PDPage.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageRickGenSetMediaBox.java
@@ -7189,7 +7189,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -7202,7 +7202,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.979 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.906 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGenSetMediaBox
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -7214,8 +7214,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.570 s
-[INFO] Finished at: 2023-06-05T10:14:06+02:00
+[INFO] Total time:  25.630 s
+[INFO] Finished at: 2023-06-11T06:35:24+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -7233,22 +7233,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.297 s
-[INFO] Finished at: 2023-06-05T10:14:11+02:00
+[INFO] Total time:  1.268 s
+[INFO] Finished at: 2023-06-11T06:35:29+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDPage.java to original
 [LOG] Invoking cp ./PDPage.java/original.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/PDPage.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/PDPage.java', '/home/dee/dev/rick-major-review/finches/output/setMediaBox_PDRectangle/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/PDPage.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/setMediaBox_PDRectangle/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-05 10:14:11.691447
+[LOG] Finishing analysis at 2023-06-11 06:35:29.697947
 ====== END OF THE LINE ======

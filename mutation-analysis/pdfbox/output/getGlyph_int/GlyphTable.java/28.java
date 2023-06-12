@@ -2,8 +2,8 @@
 mutant type: RemoveMethod
 ----> before:     {
 ----> after:     {
-----> line number in original file: 66
-----> mutated node: 165
+----> line number in original file: 208
+----> mutated node: 192
 
 */
 
@@ -73,9 +73,19 @@ public class GlyphTable extends TTFTable
     @Override
     void read(TrueTypeFont ttf, TTFDataStream data) throws IOException
     {
-// void -- no return //
-}
+        loca = ttf.getIndexToLocation();
+        numGlyphs = ttf.getNumberOfGlyphs();
 
+        if (numGlyphs < MAX_CACHE_SIZE)
+        {
+            // don't cache the huge fonts to save memory
+            glyphs = new GlyphData[numGlyphs];
+        }
+
+        // we don't actually read the complete table here because it can contain tens of thousands of glyphs
+        this.data = data;
+        initialized = true;
+    }
 
     /**
      * Returns all glyphs. This method can be very slow.
@@ -205,15 +215,7 @@ public class GlyphTable extends TTFTable
 
     private GlyphData getGlyphData(int gid) throws IOException
     {
-        GlyphData glyph = new GlyphData();
-        HorizontalMetricsTable hmt = font.getHorizontalMetrics();
-        int leftSideBearing = hmt == null ? 0 : hmt.getLeftSideBearing(gid);
-        glyph.initData(this, data, leftSideBearing);
-        // resolve composite glyph
-        if (glyph.getDescription().isComposite())
-        {
-            glyph.getDescription().resolve();
-        }
-        return glyph;
-    }
+    return null;
+}
+
 }

@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:             if (ADOBE.charAt(a) == by)
-----> after:             if (ADOBE.charAt(a) != by)
-----> line number in original file: 195
-----> mutated node: 1509
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:                 int b = clamp(Y + 1.772f * Cb - 226.816f);
+----> after:                 int b = clamp(Y + 1.772f * Cb + 226.816f);
+----> line number in original file: 253
+----> mutated node: 3683
 
 */
 
@@ -201,7 +201,7 @@ final class DCTFilter extends Filter
         int by;
         while ((by = iis.read()) != -1)
         {
-            if (ADOBE.charAt(a) != by)
+            if (ADOBE.charAt(a) == by)
             {
                 ++a;
                 if (a != ADOBE.length())
@@ -259,7 +259,7 @@ final class DCTFilter extends Filter
                 // YCCK to RGB, see http://software.intel.com/en-us/node/442744
                 int r = clamp(Y + 1.402f * Cr - 179.456f);
                 int g = clamp(Y - 0.34414f * Cb - 0.71414f * Cr + 135.45984f);
-                int b = clamp(Y + 1.772f * Cb - 226.816f);
+                int b = clamp(Y + 1.772f * Cb + 226.816f);
 
                 // naive RGB to CMYK
                 int cyan = 255 - r;

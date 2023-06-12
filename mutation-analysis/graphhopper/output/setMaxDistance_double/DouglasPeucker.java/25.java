@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: ArithmeticOperatorReplacementBinary
-----> before:         if (lastIndex - fromIndex < 2) {
-----> after:         if (lastIndex + fromIndex < 2) {
-----> line number in original file: 119
-----> mutated node: 653
+mutant type: RemoveMethod
+----> before:     public int simplify(PointList points, int fromIndex, int lastIndex) {
+----> after:     public int simplify(PointList points, int fromIndex, int lastIndex) {
+----> line number in original file: 80
+----> mutated node: 137
 
 */
 
@@ -87,8 +87,9 @@ public class DouglasPeucker {
     }
 
     public int simplify(PointList points, int fromIndex, int lastIndex) {
-        return simplify(points, fromIndex, lastIndex, true);
-    }
+    return 1;
+}
+
 
     /**
      * Simplifies a part of the <code>points</code>. The <code>fromIndex</code> and <code>lastIndex</code>
@@ -125,7 +126,7 @@ public class DouglasPeucker {
 
     // keep the points of fromIndex and lastIndex
     int subSimplify(PointList points, int fromIndex, int lastIndex) {
-        if (lastIndex + fromIndex < 2) {
+        if (lastIndex - fromIndex < 2) {
             return 0;
         }
         int indexWithMaxDist = -1;

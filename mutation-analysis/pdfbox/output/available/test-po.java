@@ -52,8 +52,8 @@ public class TestRandomAccessInputStreamRickGenAvailable {
         // Arrange
         RandomAccessInputStream receivingObject = deserializeObjectFromFile("org.apache.pdfbox.io.RandomAccessInputStream.available1-receiving.xml");
         RandomAccessRead mockRandomAccessRead = insertPrivateMockField_input_InRandomAccessInputStream(receivingObject);
-        Mockito.when(mockRandomAccessRead.length()).thenReturn(2296L);
-        Mockito.when(mockRandomAccessRead.getPosition()).thenReturn(2050L);
+        Mockito.lenient().when(mockRandomAccessRead.length()).thenReturn(2296L);
+        Mockito.lenient().when(mockRandomAccessRead.getPosition()).thenReturn(2050L);
         // Act
         int actual = receivingObject.available();
         // Assert
@@ -66,8 +66,8 @@ public class TestRandomAccessInputStreamRickGenAvailable {
         // Arrange
         RandomAccessInputStream receivingObject = deserializeObjectFromFile("org.apache.pdfbox.io.RandomAccessInputStream.available1-receiving.xml");
         RandomAccessRead mockRandomAccessRead = insertPrivateMockField_input_InRandomAccessInputStream(receivingObject);
-        Mockito.when(mockRandomAccessRead.length()).thenReturn(2296L);
-        Mockito.when(mockRandomAccessRead.getPosition()).thenReturn(2050L);
+        Mockito.lenient().when(mockRandomAccessRead.length()).thenReturn(2296L);
+        Mockito.lenient().when(mockRandomAccessRead.getPosition()).thenReturn(2050L);
         // Act
         receivingObject.available();
         // Assert
@@ -81,8 +81,8 @@ public class TestRandomAccessInputStreamRickGenAvailable {
         // Arrange
         RandomAccessInputStream receivingObject = deserializeObjectFromFile("org.apache.pdfbox.io.RandomAccessInputStream.available1-receiving.xml");
         RandomAccessRead mockRandomAccessRead = insertPrivateMockField_input_InRandomAccessInputStream(receivingObject);
-        Mockito.when(mockRandomAccessRead.length()).thenReturn(2296L);
-        Mockito.when(mockRandomAccessRead.getPosition()).thenReturn(2050L);
+        Mockito.lenient().when(mockRandomAccessRead.length()).thenReturn(2296L);
+        Mockito.lenient().when(mockRandomAccessRead.getPosition()).thenReturn(2050L);
         // Act
         receivingObject.available();
         // Assert

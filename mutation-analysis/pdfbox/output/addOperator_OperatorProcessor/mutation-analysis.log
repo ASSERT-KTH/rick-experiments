@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-05 01:48:23.638771
+[LOG] Initiating analysis at 2023-06-10 21:42:21.277236
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -770,13 +770,13 @@ Total mutations found:  878
 [LOG] Invoking cp /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java ./PDFStreamEngine.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/addOperator_OperatorProcessor/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/addOperator_OperatorProcessor/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/addOperator_OperatorProcessor/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/addOperator_OperatorProcessor/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/addOperator_OperatorProcessor/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/addOperator_OperatorProcessor/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/addOperator_OperatorProcessor/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/addOperator_OperatorProcessor/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/addOperator_OperatorProcessor/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/addOperator_OperatorProcessor/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/addOperator_OperatorProcessor/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/addOperator_OperatorProcessor/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/addOperator_OperatorProcessor/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/addOperator_OperatorProcessor/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalPDFStreamEngine.java with ./PDFStreamEngine.java/118.java
 [LOG] Invoking cp ./PDFStreamEngine.java/118.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/contentstream/PDFStreamEngine.java
@@ -1006,15 +1006,15 @@ Total mutations found:  878
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  44.467 s
-[INFO] Finished at: 2023-06-05T01:49:25+02:00
+[INFO] Total time:  47.853 s
+[INFO] Finished at: 2023-06-10T21:43:28+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/addOperator_OperatorProcessor/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/addOperator_OperatorProcessor/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFStreamEngineRickGen']
 [INFO] Scanning for projects...
@@ -1039,7 +1039,7 @@ Total mutations found:  878
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1052,12 +1052,12 @@ Total mutations found:  878
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.57 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] test_addOperator_PO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 4.694 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.838 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
+[ERROR] test_addOperator_PO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 4.773 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_PO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:46)
 
-[ERROR] test_addOperator_CO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 2.184 s  <<< ERROR!
+[ERROR] test_addOperator_CO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 2.311 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_CO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:59)
 
@@ -1073,8 +1073,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.992 s
-[INFO] Finished at: 2023-06-05T01:49:48+02:00
+[INFO] Total time:  20.651 s
+[INFO] Finished at: 2023-06-10T21:43:52+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1103,20 +1103,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.267 s
-[INFO] Finished at: 2023-06-05T01:49:53+02:00
+[INFO] Total time:  2.000 s
+[INFO] Finished at: 2023-06-10T21:44:00+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFStreamEngine.java/original-test.java
 [LOG] Invoking cp ./PDFStreamEngine.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/addOperator_OperatorProcessor/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/addOperator_OperatorProcessor/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFStreamEngineRickGen']
 [INFO] Scanning for projects...
@@ -1141,7 +1141,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1154,12 +1154,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.682 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] test_addOperator_PO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 4.77 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.665 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
+[ERROR] test_addOperator_PO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 4.702 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_PO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:46)
 
-[ERROR] test_addOperator_CO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 2.171 s  <<< ERROR!
+[ERROR] test_addOperator_CO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 3.205 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_CO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:59)
 
@@ -1175,8 +1175,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.969 s
-[INFO] Finished at: 2023-06-05T01:50:16+02:00
+[INFO] Total time:  21.880 s
+[INFO] Finished at: 2023-06-10T21:44:25+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1205,20 +1205,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.413 s
-[INFO] Finished at: 2023-06-05T01:50:22+02:00
+[INFO] Total time:  1.348 s
+[INFO] Finished at: 2023-06-10T21:44:30+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFStreamEngine.java/original-test.java
 [LOG] Invoking cp ./PDFStreamEngine.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/addOperator_OperatorProcessor/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/addOperator_OperatorProcessor/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFStreamEngineRickGen']
 [INFO] Scanning for projects...
@@ -1243,7 +1243,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1256,12 +1256,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.676 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] test_addOperator_PO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 4.782 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.061 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
+[ERROR] test_addOperator_PO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 5.029 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_PO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:46)
 
-[ERROR] test_addOperator_CO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 2.172 s  <<< ERROR!
+[ERROR] test_addOperator_CO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 2.298 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_CO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:59)
 
@@ -1277,8 +1277,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.219 s
-[INFO] Finished at: 2023-06-05T01:50:45+02:00
+[INFO] Total time:  21.887 s
+[INFO] Finished at: 2023-06-10T21:44:56+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1307,13 +1307,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.261 s
-[INFO] Finished at: 2023-06-05T01:50:50+02:00
+[INFO] Total time:  1.332 s
+[INFO] Finished at: 2023-06-10T21:45:01+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFStreamEngine.java/original-test.java
 [LOG] Invoking cp ./PDFStreamEngine.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
@@ -1345,7 +1345,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1358,12 +1358,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.396 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] test_addOperator_PO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 4.684 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.542 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
+[ERROR] test_addOperator_PO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 4.824 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_PO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:46)
 
-[ERROR] test_addOperator_CO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 2.013 s  <<< ERROR!
+[ERROR] test_addOperator_CO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 1.999 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_CO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:59)
 
@@ -1379,8 +1379,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.934 s
-[INFO] Finished at: 2023-06-05T01:51:13+02:00
+[INFO] Total time:  20.218 s
+[INFO] Finished at: 2023-06-10T21:45:25+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1409,13 +1409,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.565 s
-[INFO] Finished at: 2023-06-05T01:51:18+02:00
+[INFO] Total time:  1.360 s
+[INFO] Finished at: 2023-06-10T21:45:30+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDFStreamEngine.java to original
@@ -1649,15 +1649,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  40.100 s
-[INFO] Finished at: 2023-06-05T01:52:02+02:00
+[INFO] Total time:  41.810 s
+[INFO] Finished at: 2023-06-10T21:46:16+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/addOperator_OperatorProcessor/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/addOperator_OperatorProcessor/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFStreamEngineRickGen']
 [INFO] Scanning for projects...
@@ -1682,7 +1682,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1695,51 +1695,21 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.622 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] test_addOperator_PO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 4.648 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_PO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:44)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_addOperator_CO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 2.139 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_CO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:57)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.662 s - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDFStreamEngineRickGen.test_addOperator_CO_db991bce2164463f985326d9cbdc99c8 » UnnecessaryStubbing
-[ERROR]   TestPDFStreamEngineRickGen.test_addOperator_PO_db991bce2164463f985326d9cbdc99c8 » UnnecessaryStubbing
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.226 s
-[INFO] Finished at: 2023-06-05T01:52:26+02:00
+[INFO] Total time:  23.152 s
+[INFO] Finished at: 2023-06-10T21:46:43+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -1756,20 +1726,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.512 s
-[INFO] Finished at: 2023-06-05T01:52:31+02:00
+[INFO] Total time:  1.296 s
+[INFO] Finished at: 2023-06-10T21:46:48+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFStreamEngine.java/original-test.java
 [LOG] Invoking cp ./PDFStreamEngine.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/addOperator_OperatorProcessor/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/addOperator_OperatorProcessor/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFStreamEngineRickGen']
 [INFO] Scanning for projects...
@@ -1794,7 +1764,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1807,8 +1777,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 7.634 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] test_addOperator_PO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 4.759 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.183 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
+[ERROR] test_addOperator_PO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 5.11 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1817,15 +1787,6 @@ operatorProcessor.getName();
 Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_PO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:48)
-
-[ERROR] test_addOperator_CO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 2.124 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_CO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:57)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -1837,16 +1798,14 @@ operatorProcessor.getName();
 -> at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_PO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:48)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDFStreamEngineRickGen.test_addOperator_CO_db991bce2164463f985326d9cbdc99c8 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.406 s
-[INFO] Finished at: 2023-06-05T01:52:54+02:00
+[INFO] Total time:  21.366 s
+[INFO] Finished at: 2023-06-10T21:47:12+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1875,20 +1834,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.552 s
-[INFO] Finished at: 2023-06-05T01:53:00+02:00
+[INFO] Total time:  1.508 s
+[INFO] Finished at: 2023-06-10T21:47:18+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFStreamEngine.java/original-test.java
 [LOG] Invoking cp ./PDFStreamEngine.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/addOperator_OperatorProcessor/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/addOperator_OperatorProcessor/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFStreamEngineRickGen']
 [INFO] Scanning for projects...
@@ -1913,7 +1872,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1926,17 +1885,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 7.775 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] test_addOperator_PO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 4.647 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_PO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:44)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_addOperator_CO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 2.416 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.641 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
+[ERROR] test_addOperator_CO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 2.107 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1956,16 +1906,14 @@ operatorProcessor.getName();
 -> at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_CO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:62)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDFStreamEngineRickGen.test_addOperator_PO_db991bce2164463f985326d9cbdc99c8 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.938 s
-[INFO] Finished at: 2023-06-05T01:53:23+02:00
+[INFO] Total time:  20.227 s
+[INFO] Finished at: 2023-06-10T21:47:41+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1994,13 +1942,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.251 s
-[INFO] Finished at: 2023-06-05T01:53:28+02:00
+[INFO] Total time:  1.310 s
+[INFO] Finished at: 2023-06-10T21:47:47+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFStreamEngine.java/original-test.java
 [LOG] Invoking cp ./PDFStreamEngine.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/contentstream/TestPDFStreamEngineRickGen.java
@@ -2032,7 +1980,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -2045,8 +1993,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.6 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
-[ERROR] test_addOperator_PO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 4.781 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.816 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
+[ERROR] test_addOperator_PO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 4.947 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2056,7 +2004,7 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_addOperator_PO_db991bce2164463f985326d9cbdc99c8(TestPDFStreamEngineRickGen.java:48)
 
-[ERROR] test_addOperator_CO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 2.076 s  <<< FAILURE!
+[ERROR] test_addOperator_CO_db991bce2164463f985326d9cbdc99c8  Time elapsed: 2.159 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -2088,8 +2036,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  19.749 s
-[INFO] Finished at: 2023-06-05T01:53:51+02:00
+[INFO] Total time:  20.534 s
+[INFO] Finished at: 2023-06-10T21:48:11+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -2118,22 +2066,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.439 s
-[INFO] Finished at: 2023-06-05T01:53:56+02:00
+[INFO] Total time:  1.373 s
+[INFO] Finished at: 2023-06-10T21:48:16+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDFStreamEngine.java to original
 [LOG] Invoking cp ./PDFStreamEngine.java/original.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/contentstream/PDFStreamEngine.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/addOperator_OperatorProcessor/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/PDFStreamEngine.java', '/home/dee/dev/rick-major-review/finches/output/addOperator_OperatorProcessor/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/addOperator_OperatorProcessor/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/PDFStreamEngine.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/addOperator_OperatorProcessor/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-05 01:53:56.462971
+[LOG] Finishing analysis at 2023-06-10 21:48:16.806594
 ====== END OF THE LINE ======

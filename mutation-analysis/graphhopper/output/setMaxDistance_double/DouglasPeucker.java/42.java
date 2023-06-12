@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RemoveMethod
-----> before:     public void setApproximation(boolean a) {
-----> after:     public void setApproximation(boolean a) {
-----> line number in original file: 44
-----> mutated node: 117
+mutant type: ArithmeticOperatorReplacementShortcut
+----> before:         for (int i = 0; i < pointList.size(); i++) {
+----> after:         for (int i = 0; i < pointList.size(); i--) {
+----> line number in original file: 172
+----> mutated node: 860
 
 */
 
@@ -51,9 +51,12 @@ public class DouglasPeucker {
     }
 
     public void setApproximation(boolean a) {
-// void -- no return //
-}
-
+        approx = a;
+        if (approx)
+            calc = DistancePlaneProjection.DIST_PLANE;
+        else
+            calc = DistanceCalcEarth.DIST_EARTH;
+    }
 
     /**
      * maximum distance of discrepancy (from the normal way) in meter
@@ -175,7 +178,7 @@ public class DouglasPeucker {
      */
     static void removeNaN(PointList pointList) {
         int curr = 0;
-        for (int i = 0; i < pointList.size(); i++) {
+        for (int i = 0; i < pointList.size(); i--) {
             if (!Double.isNaN(pointList.getLat(i))) {
                 pointList.set(curr, pointList.getLat(i), pointList.getLon(i), pointList.getEle(i));
                 curr++;

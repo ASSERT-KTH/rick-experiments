@@ -50,7 +50,7 @@ public class TestPDFontDescriptorRickGenGetCapHeight {
         // Arrange
         PDFontDescriptor receivingObject = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.font.PDFontDescriptor.getCapHeight1-receiving.xml");
         COSDictionary mockCOSDictionary = insertPrivateMockField_dic_InPDFontDescriptor(receivingObject);
-        Mockito.when(mockCOSDictionary.getFloat(any(org.apache.pdfbox.cos.COSName.class),   eq(0.0F))).thenReturn(718.0F);
+        Mockito.lenient().when(mockCOSDictionary.getFloat(any(org.apache.pdfbox.cos.COSName.class),   eq(0.0F))).thenReturn(718.0F);
         // Act
         float actual = receivingObject.getCapHeight();
         // Assert
@@ -63,7 +63,7 @@ public class TestPDFontDescriptorRickGenGetCapHeight {
         // Arrange
         PDFontDescriptor receivingObject = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.font.PDFontDescriptor.getCapHeight1-receiving.xml");
         COSDictionary mockCOSDictionary = insertPrivateMockField_dic_InPDFontDescriptor(receivingObject);
-        Mockito.when(mockCOSDictionary.getFloat(any(org.apache.pdfbox.cos.COSName.class),   eq(0.0F))).thenReturn(718.0F);
+        Mockito.lenient().when(mockCOSDictionary.getFloat(any(org.apache.pdfbox.cos.COSName.class),   eq(0.0F))).thenReturn(718.0F);
         // Act
         receivingObject.getCapHeight();
         // Assert
@@ -76,7 +76,7 @@ public class TestPDFontDescriptorRickGenGetCapHeight {
         // Arrange
         PDFontDescriptor receivingObject = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.font.PDFontDescriptor.getCapHeight1-receiving.xml");
         COSDictionary mockCOSDictionary = insertPrivateMockField_dic_InPDFontDescriptor(receivingObject);
-        Mockito.when(mockCOSDictionary.getFloat(any(org.apache.pdfbox.cos.COSName.class),   eq(0.0F))).thenReturn(718.0F);
+        Mockito.lenient().when(mockCOSDictionary.getFloat(any(org.apache.pdfbox.cos.COSName.class),   eq(0.0F))).thenReturn(718.0F);
         // Act
         receivingObject.getCapHeight();
         // Assert

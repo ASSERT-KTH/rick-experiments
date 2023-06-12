@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-05 00:36:01.873204
+[LOG] Initiating analysis at 2023-06-10 20:14:37.126820
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -4603,13 +4603,13 @@ Total mutations found:  21133
 [LOG] Invoking cp /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java ./PDPageContentStream.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalPDPageContentStream.java with ./PDPageContentStream.java/25.java
 [LOG] Invoking cp ./PDPageContentStream.java/25.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/PDPageContentStream.java
@@ -4839,15 +4839,15 @@ Total mutations found:  21133
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  50.315 s
-[INFO] Finished at: 2023-06-05T00:40:54+02:00
+[INFO] Total time:  49.556 s
+[INFO] Finished at: 2023-06-10T20:21:25+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageContentStreamRickGen']
 [INFO] Scanning for projects...
@@ -4872,7 +4872,7 @@ Total mutations found:  21133
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4885,7 +4885,7 @@ Total mutations found:  21133
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.161 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.453 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4897,8 +4897,8 @@ Total mutations found:  21133
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.721 s
-[INFO] Finished at: 2023-06-05T00:41:21+02:00
+[INFO] Total time:  23.564 s
+[INFO] Finished at: 2023-06-10T20:21:52+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4916,20 +4916,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.301 s
-[INFO] Finished at: 2023-06-05T00:41:25+02:00
+[INFO] Total time:  1.366 s
+[INFO] Finished at: 2023-06-10T20:21:58+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPageContentStream.java/original-test.java
 [LOG] Invoking cp ./PDPageContentStream.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageContentStreamRickGen']
 [INFO] Scanning for projects...
@@ -4954,7 +4954,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -4967,7 +4967,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.635 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.927 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -4979,8 +4979,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  23.282 s
-[INFO] Finished at: 2023-06-05T00:41:52+02:00
+[INFO] Total time:  27.615 s
+[INFO] Finished at: 2023-06-10T20:22:29+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -4998,20 +4998,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.279 s
-[INFO] Finished at: 2023-06-05T00:41:57+02:00
+[INFO] Total time:  1.448 s
+[INFO] Finished at: 2023-06-10T20:22:34+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPageContentStream.java/original-test.java
 [LOG] Invoking cp ./PDPageContentStream.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageContentStreamRickGen']
 [INFO] Scanning for projects...
@@ -5036,7 +5036,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5049,7 +5049,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.302 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.246 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -5061,8 +5061,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  22.905 s
-[INFO] Finished at: 2023-06-05T00:42:23+02:00
+[INFO] Total time:  27.078 s
+[INFO] Finished at: 2023-06-10T20:23:05+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -5080,13 +5080,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.227 s
-[INFO] Finished at: 2023-06-05T00:42:27+02:00
+[INFO] Total time:  1.663 s
+[INFO] Finished at: 2023-06-10T20:23:11+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPageContentStream.java/original-test.java
 [LOG] Invoking cp ./PDPageContentStream.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
@@ -5118,7 +5118,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5131,7 +5131,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.385 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.04 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -5143,8 +5143,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  24.181 s
-[INFO] Finished at: 2023-06-05T00:42:55+02:00
+[INFO] Total time:  25.555 s
+[INFO] Finished at: 2023-06-10T20:23:40+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -5162,13 +5162,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.391 s
-[INFO] Finished at: 2023-06-05T00:42:59+02:00
+[INFO] Total time:  1.518 s
+[INFO] Finished at: 2023-06-10T20:23:46+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDPageContentStream.java to original
@@ -5402,15 +5402,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  38.453 s
-[INFO] Finished at: 2023-06-05T00:43:42+02:00
+[INFO] Total time:  50.412 s
+[INFO] Finished at: 2023-06-10T20:24:41+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageContentStreamRickGen']
 [INFO] Scanning for projects...
@@ -5435,7 +5435,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5448,51 +5448,21 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.415 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 6.191 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:62)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 2.567 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:47)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.244 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
 [INFO] 
 [INFO] Results:
 [INFO] 
-[ERROR] Errors: 
-[ERROR]   TestPDPageContentStreamRickGen.test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8 » UnnecessaryStubbing
-[ERROR]   TestPDPageContentStreamRickGen.test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8 » UnnecessaryStubbing
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
 [INFO] 
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0
 [INFO] 
+[INFO] --- animal-sniffer-maven-plugin:1.17:check (check-java-version) @ rick-major ---
+[INFO] Checking unresolved references to org.codehaus.mojo.signature:java16:1.0
 [INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
+[INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.188 s
-[INFO] Finished at: 2023-06-05T00:44:06+02:00
+[INFO] Total time:  24.826 s
+[INFO] Finished at: 2023-06-10T20:25:09+02:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
-[ERROR] 
-[ERROR] Please refer to /home/dee/dev/rick-major-review/pdfbox/rick-major/target/surefire-reports for the individual test results.
-[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
-[ERROR] -> [Help 1]
-[ERROR] 
-[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[ERROR] 
-[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
 
@@ -5509,20 +5479,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.336 s
-[INFO] Finished at: 2023-06-05T00:44:11+02:00
+[INFO] Total time:  1.512 s
+[INFO] Finished at: 2023-06-10T20:25:15+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPageContentStream.java/original-test.java
 [LOG] Invoking cp ./PDPageContentStream.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageContentStreamRickGen']
 [INFO] Scanning for projects...
@@ -5547,7 +5517,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5560,17 +5530,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 9.108 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 5.892 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:62)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
-
-[ERROR] test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 2.529 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 11.622 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
+[ERROR] test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 3.007 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -5590,16 +5551,14 @@ pDFont.willBeSubset();
 -> at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:51)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDPageContentStreamRickGen.test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.145 s
-[INFO] Finished at: 2023-06-05T00:44:35+02:00
+[INFO] Total time:  25.913 s
+[INFO] Finished at: 2023-06-10T20:25:44+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5628,20 +5587,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.248 s
-[INFO] Finished at: 2023-06-05T00:44:40+02:00
+[INFO] Total time:  1.417 s
+[INFO] Finished at: 2023-06-10T20:25:49+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPageContentStream.java/original-test.java
 [LOG] Invoking cp ./PDPageContentStream.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageContentStreamRickGen']
 [INFO] Scanning for projects...
@@ -5666,7 +5625,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5679,8 +5638,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 9.76 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 5.798 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.02 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
+[ERROR] test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 6.429 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -5689,15 +5648,6 @@ pDFont.willBeSubset();
 Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:67)
-
-[ERROR] test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 3.275 s  <<< ERROR!
-org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
-
-Unnecessary stubbings detected.
-Clean & maintainable test code requires zero unnecessary code.
-Following stubbings are unnecessary (click to navigate to relevant line of code):
-  1. -> at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:47)
-Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
 
 [INFO] 
 [INFO] Results:
@@ -5709,16 +5659,14 @@ pDFont.willBeSubset();
 -> at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:67)
 Actually, there were zero interactions with this mock.
 
-[ERROR] Errors: 
-[ERROR]   TestPDPageContentStreamRickGen.test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8 » UnnecessaryStubbing
 [INFO] 
-[ERROR] Tests run: 2, Failures: 1, Errors: 1, Skipped: 0
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0
 [INFO] 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.622 s
-[INFO] Finished at: 2023-06-05T00:45:05+02:00
+[INFO] Total time:  23.801 s
+[INFO] Finished at: 2023-06-10T20:26:17+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5747,13 +5695,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.496 s
-[INFO] Finished at: 2023-06-05T00:45:10+02:00
+[INFO] Total time:  1.327 s
+[INFO] Finished at: 2023-06-10T20:26:22+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPageContentStream.java/original-test.java
 [LOG] Invoking cp ./PDPageContentStream.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
@@ -5785,7 +5733,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -5798,8 +5746,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 9.467 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 5.963 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 10.692 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
+[ERROR] test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 6.646 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -5809,7 +5757,7 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:67)
 
-[ERROR] test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 2.792 s  <<< FAILURE!
+[ERROR] test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 3.326 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -5841,8 +5789,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.547 s
-[INFO] Finished at: 2023-06-05T00:45:35+02:00
+[INFO] Total time:  24.808 s
+[INFO] Finished at: 2023-06-10T20:26:50+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -5871,13 +5819,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.275 s
-[INFO] Finished at: 2023-06-05T00:45:39+02:00
+[INFO] Total time:  1.381 s
+[INFO] Finished at: 2023-06-10T20:26:55+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDPageContentStream.java to original
@@ -6111,15 +6059,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.967 s
-[INFO] Finished at: 2023-06-05T00:46:23+02:00
+[INFO] Total time:  49.173 s
+[INFO] Finished at: 2023-06-10T20:27:48+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageContentStreamRickGen']
 [INFO] Scanning for projects...
@@ -6144,7 +6092,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -6157,12 +6105,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.594 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 5.803 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 11.633 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
+[ERROR] test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 7.383 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:64)
 
-[ERROR] test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 3.042 s  <<< ERROR!
+[ERROR] test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 3.367 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:49)
 
@@ -6178,8 +6126,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.211 s
-[INFO] Finished at: 2023-06-05T00:46:47+02:00
+[INFO] Total time:  26.091 s
+[INFO] Finished at: 2023-06-10T20:28:19+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -6208,20 +6156,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.343 s
-[INFO] Finished at: 2023-06-05T00:46:52+02:00
+[INFO] Total time:  1.779 s
+[INFO] Finished at: 2023-06-10T20:28:25+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPageContentStream.java/original-test.java
 [LOG] Invoking cp ./PDPageContentStream.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageContentStreamRickGen']
 [INFO] Scanning for projects...
@@ -6246,7 +6194,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -6259,12 +6207,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.813 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 5.782 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 11.692 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
+[ERROR] test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 7.001 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:64)
 
-[ERROR] test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 3.285 s  <<< ERROR!
+[ERROR] test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 3.805 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:49)
 
@@ -6280,8 +6228,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  21.907 s
-[INFO] Finished at: 2023-06-05T00:47:17+02:00
+[INFO] Total time:  28.170 s
+[INFO] Finished at: 2023-06-10T20:28:58+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -6310,20 +6258,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.322 s
-[INFO] Finished at: 2023-06-05T00:47:22+02:00
+[INFO] Total time:  1.755 s
+[INFO] Finished at: 2023-06-10T20:29:04+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPageContentStream.java/original-test.java
 [LOG] Invoking cp ./PDPageContentStream.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDPageContentStreamRickGen']
 [INFO] Scanning for projects...
@@ -6348,7 +6296,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -6361,12 +6309,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.33 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 6.108 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.804 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
+[ERROR] test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 6.669 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:64)
 
-[ERROR] test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 2.523 s  <<< ERROR!
+[ERROR] test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 3.339 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:49)
 
@@ -6382,8 +6330,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.909 s
-[INFO] Finished at: 2023-06-05T00:47:46+02:00
+[INFO] Total time:  25.387 s
+[INFO] Finished at: 2023-06-10T20:29:34+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -6412,13 +6360,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.237 s
-[INFO] Finished at: 2023-06-05T00:47:51+02:00
+[INFO] Total time:  1.677 s
+[INFO] Finished at: 2023-06-10T20:29:40+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDPageContentStream.java/original-test.java
 [LOG] Invoking cp ./PDPageContentStream.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/TestPDPageContentStreamRickGen.java
@@ -6450,7 +6398,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -6463,12 +6411,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.126 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
-[ERROR] test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 5.799 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.141 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
+[ERROR] test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 6.325 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_CO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:64)
 
-[ERROR] test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 2.656 s  <<< ERROR!
+[ERROR] test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8  Time elapsed: 3.007 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen.test_setFont_PO_aa069937c06c4fe5b22a8696fb90aab8(TestPDPageContentStreamRickGen.java:49)
 
@@ -6484,8 +6432,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  20.943 s
-[INFO] Finished at: 2023-06-05T00:48:15+02:00
+[INFO] Total time:  25.712 s
+[INFO] Finished at: 2023-06-10T20:30:09+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -6514,22 +6462,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.333 s
-[INFO] Finished at: 2023-06-05T00:48:20+02:00
+[INFO] Total time:  1.340 s
+[INFO] Finished at: 2023-06-10T20:30:14+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDPageContentStream.java to original
 [LOG] Invoking cp ./PDPageContentStream.java/original.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/PDPageContentStream.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/PDPageContentStream.java', '/home/dee/dev/rick-major-review/finches/output/setFont_PDFont_float/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/PDPageContentStream.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/setFont_PDFont_float/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-05 00:48:20.375192
+[LOG] Finishing analysis at 2023-06-10 20:30:15.259135
 ====== END OF THE LINE ======

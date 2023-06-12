@@ -1,0 +1,55 @@
+{
+    "mut": "StepDisplacement_moveNode_Node_ForceVector",
+    "CUT": "org.gephi.layout.plugin.force.StepDisplacement",
+    "mutant-file": "./StepDisplacement.java/10.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 14.207 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 14.823 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 14.483 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 15.635 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen"
+},
+{
+    "mut": "StepDisplacement_moveNode_Node_ForceVector",
+    "CUT": "org.gephi.layout.plugin.force.StepDisplacement",
+    "mutant-file": "./StepDisplacement.java/11.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 14.044 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 18.026 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 15.226 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 15.3 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen"
+},
+{
+    "mut": "StepDisplacement_moveNode_Node_ForceVector",
+    "CUT": "org.gephi.layout.plugin.force.StepDisplacement",
+    "mutant-file": "./StepDisplacement.java/3.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.323 s - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 16.727 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.823 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 17.042 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen"
+},
+{
+    "mut": "StepDisplacement_moveNode_Node_ForceVector",
+    "CUT": "org.gephi.layout.plugin.force.StepDisplacement",
+    "mutant-file": "./StepDisplacement.java/6.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.596 s - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 16.35 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.623 s - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen",
+    "result-all": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 17.338 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen"
+},
+{
+    "mut": "StepDisplacement_moveNode_Node_ForceVector",
+    "CUT": "org.gephi.layout.plugin.force.StepDisplacement",
+    "mutant-file": "./StepDisplacement.java/7.java",
+    "mutant-within-mut": true,
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 15.051 s - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen",
+    "result-oo": "",
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 14.356 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 16.528 s - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen",
+    "result-all": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 15.877 s <<< FAILURE! - in org.gephi.layout.plugin.force.TestStepDisplacementRickGen"
+},

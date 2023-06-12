@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-05 11:48:02.813748
+[LOG] Initiating analysis at 2023-06-11 08:11:16.892923
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -105,13 +105,13 @@ Total mutations found:  374
 [LOG] Invoking cp /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java ./COSWriter.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalCOSWriter.java with ./COSWriter.java/216.java
 [LOG] Invoking cp ./COSWriter.java/216.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdfwriter/COSWriter.java
@@ -341,15 +341,15 @@ Total mutations found:  374
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  54.543 s
-[INFO] Finished at: 2023-06-05T11:49:14+02:00
+[INFO] Total time:  52.938 s
+[INFO] Finished at: 2023-06-11T08:12:26+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSWriterRickGenVisitFromName']
 [INFO] Scanning for projects...
@@ -374,7 +374,7 @@ Total mutations found:  374
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -387,7 +387,7 @@ Total mutations found:  374
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.702 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.108 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -399,8 +399,8 @@ Total mutations found:  374
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  36.132 s
-[INFO] Finished at: 2023-06-05T11:49:55+02:00
+[INFO] Total time:  37.127 s
+[INFO] Finished at: 2023-06-11T08:13:08+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -418,20 +418,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.701 s
-[INFO] Finished at: 2023-06-05T11:50:01+02:00
+[INFO] Total time:  1.827 s
+[INFO] Finished at: 2023-06-11T08:13:14+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSWriter.java/original-test.java
 [LOG] Invoking cp ./COSWriter.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSWriterRickGenVisitFromName']
 [INFO] Scanning for projects...
@@ -456,7 +456,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -469,8 +469,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 12.245 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[ERROR] test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 4.842 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 12.822 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
+[ERROR] test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 5.1 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -496,8 +496,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  24.601 s
-[INFO] Finished at: 2023-06-05T11:50:29+02:00
+[INFO] Total time:  26.737 s
+[INFO] Finished at: 2023-06-11T08:13:45+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -526,20 +526,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.288 s
-[INFO] Finished at: 2023-06-05T11:50:34+02:00
+[INFO] Total time:  1.386 s
+[INFO] Finished at: 2023-06-11T08:13:50+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSWriter.java/original-test.java
 [LOG] Invoking cp ./COSWriter.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSWriterRickGenVisitFromName']
 [INFO] Scanning for projects...
@@ -564,7 +564,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -577,8 +577,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 12.494 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[ERROR] test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 6.933 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 12.674 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
+[ERROR] test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 7.191 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -604,8 +604,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  25.176 s
-[INFO] Finished at: 2023-06-05T11:51:02+02:00
+[INFO] Total time:  27.337 s
+[INFO] Finished at: 2023-06-11T08:14:21+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -634,13 +634,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.271 s
-[INFO] Finished at: 2023-06-05T11:51:07+02:00
+[INFO] Total time:  1.347 s
+[INFO] Finished at: 2023-06-11T08:14:26+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSWriter.java/original-test.java
 [LOG] Invoking cp ./COSWriter.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
@@ -672,7 +672,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -685,8 +685,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 11.657 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[ERROR] test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 6.877 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 12.538 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
+[ERROR] test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 7.185 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -696,7 +696,7 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName.test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3(TestCOSWriterRickGenVisitFromName.java:65)
 
-[ERROR] test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 4.093 s  <<< FAILURE!
+[ERROR] test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 4.524 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -728,8 +728,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  24.109 s
-[INFO] Finished at: 2023-06-05T11:51:34+02:00
+[INFO] Total time:  25.712 s
+[INFO] Finished at: 2023-06-11T08:14:56+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -758,13 +758,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.298 s
-[INFO] Finished at: 2023-06-05T11:51:39+02:00
+[INFO] Total time:  1.331 s
+[INFO] Finished at: 2023-06-11T08:15:01+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting COSWriter.java to original
@@ -998,15 +998,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  39.987 s
-[INFO] Finished at: 2023-06-05T11:52:23+02:00
+[INFO] Total time:  41.089 s
+[INFO] Finished at: 2023-06-11T08:15:46+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSWriterRickGenVisitFromName']
 [INFO] Scanning for projects...
@@ -1031,7 +1031,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1044,12 +1044,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 12.54 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[ERROR] test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 7.258 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 12.496 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
+[ERROR] test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 6.891 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName.test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3(TestCOSWriterRickGenVisitFromName.java:62)
 
-[ERROR] test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 4.546 s  <<< ERROR!
+[ERROR] test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 4.863 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName.test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3(TestCOSWriterRickGenVisitFromName.java:50)
 
@@ -1065,8 +1065,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  24.876 s
-[INFO] Finished at: 2023-06-05T11:52:52+02:00
+[INFO] Total time:  25.464 s
+[INFO] Finished at: 2023-06-11T08:16:15+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1095,20 +1095,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.265 s
-[INFO] Finished at: 2023-06-05T11:52:57+02:00
+[INFO] Total time:  1.520 s
+[INFO] Finished at: 2023-06-11T08:16:20+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSWriter.java/original-test.java
 [LOG] Invoking cp ./COSWriter.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSWriterRickGenVisitFromName']
 [INFO] Scanning for projects...
@@ -1133,7 +1133,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1146,12 +1146,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 12.364 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[ERROR] test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 6.862 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 13.114 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
+[ERROR] test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 7.281 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName.test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3(TestCOSWriterRickGenVisitFromName.java:62)
 
-[ERROR] test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 4.785 s  <<< ERROR!
+[ERROR] test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 4.898 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName.test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3(TestCOSWriterRickGenVisitFromName.java:50)
 
@@ -1167,8 +1167,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  24.965 s
-[INFO] Finished at: 2023-06-05T11:53:25+02:00
+[INFO] Total time:  27.076 s
+[INFO] Finished at: 2023-06-11T08:16:51+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1197,20 +1197,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.321 s
-[INFO] Finished at: 2023-06-05T11:53:30+02:00
+[INFO] Total time:  1.465 s
+[INFO] Finished at: 2023-06-11T08:16:56+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSWriter.java/original-test.java
 [LOG] Invoking cp ./COSWriter.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSWriterRickGenVisitFromName']
 [INFO] Scanning for projects...
@@ -1235,7 +1235,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1248,12 +1248,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 12.182 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[ERROR] test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 6.778 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 12.569 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
+[ERROR] test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 7.117 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName.test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3(TestCOSWriterRickGenVisitFromName.java:62)
 
-[ERROR] test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 4.679 s  <<< ERROR!
+[ERROR] test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 4.694 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName.test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3(TestCOSWriterRickGenVisitFromName.java:50)
 
@@ -1269,8 +1269,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  24.690 s
-[INFO] Finished at: 2023-06-05T11:53:58+02:00
+[INFO] Total time:  25.333 s
+[INFO] Finished at: 2023-06-11T08:17:25+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1299,13 +1299,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.276 s
-[INFO] Finished at: 2023-06-05T11:54:03+02:00
+[INFO] Total time:  1.338 s
+[INFO] Finished at: 2023-06-11T08:17:30+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSWriter.java/original-test.java
 [LOG] Invoking cp ./COSWriter.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
@@ -1337,7 +1337,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1350,12 +1350,12 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 15.276 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[ERROR] test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 8.629 s  <<< ERROR!
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 12.873 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
+[ERROR] test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 6.878 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName.test_visitFromName_CO_b6a6cdb1d2a540f6ab146b740ed191a3(TestCOSWriterRickGenVisitFromName.java:62)
 
-[ERROR] test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 5.857 s  <<< ERROR!
+[ERROR] test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3  Time elapsed: 5.227 s  <<< ERROR!
 java.lang.NullPointerException
 	at org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName.test_visitFromName_PO_b6a6cdb1d2a540f6ab146b740ed191a3(TestCOSWriterRickGenVisitFromName.java:50)
 
@@ -1371,8 +1371,8 @@ java.lang.NullPointerException
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  27.599 s
-[INFO] Finished at: 2023-06-05T11:54:34+02:00
+[INFO] Total time:  26.401 s
+[INFO] Finished at: 2023-06-11T08:18:00+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1401,13 +1401,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.711 s
-[INFO] Finished at: 2023-06-05T11:54:40+02:00
+[INFO] Total time:  1.288 s
+[INFO] Finished at: 2023-06-11T08:18:05+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting COSWriter.java to original
@@ -1641,15 +1641,15 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  42.305 s
-[INFO] Finished at: 2023-06-05T11:55:27+02:00
+[INFO] Total time:  42.706 s
+[INFO] Finished at: 2023-06-11T08:18:51+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSWriterRickGenVisitFromName']
 [INFO] Scanning for projects...
@@ -1674,7 +1674,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1687,7 +1687,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.091 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.601 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1699,8 +1699,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  28.082 s
-[INFO] Finished at: 2023-06-05T11:55:59+02:00
+[INFO] Total time:  27.644 s
+[INFO] Finished at: 2023-06-11T08:19:23+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1718,20 +1718,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.434 s
-[INFO] Finished at: 2023-06-05T11:56:05+02:00
+[INFO] Total time:  1.750 s
+[INFO] Finished at: 2023-06-11T08:19:28+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSWriter.java/original-test.java
 [LOG] Invoking cp ./COSWriter.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSWriterRickGenVisitFromName']
 [INFO] Scanning for projects...
@@ -1756,7 +1756,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1769,7 +1769,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.592 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.85 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1781,8 +1781,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  27.896 s
-[INFO] Finished at: 2023-06-05T11:56:37+02:00
+[INFO] Total time:  27.274 s
+[INFO] Finished at: 2023-06-11T08:19:59+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1800,20 +1800,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.224 s
-[INFO] Finished at: 2023-06-05T11:56:41+02:00
+[INFO] Total time:  1.289 s
+[INFO] Finished at: 2023-06-11T08:20:04+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSWriter.java/original-test.java
 [LOG] Invoking cp ./COSWriter.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestCOSWriterRickGenVisitFromName']
 [INFO] Scanning for projects...
@@ -1838,7 +1838,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1851,7 +1851,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.29 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.14 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1863,8 +1863,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  26.824 s
-[INFO] Finished at: 2023-06-05T11:57:12+02:00
+[INFO] Total time:  26.612 s
+[INFO] Finished at: 2023-06-11T08:20:34+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1882,13 +1882,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.549 s
-[INFO] Finished at: 2023-06-05T11:57:17+02:00
+[INFO] Total time:  1.459 s
+[INFO] Finished at: 2023-06-11T08:20:39+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./COSWriter.java/original-test.java
 [LOG] Invoking cp ./COSWriter.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdfwriter/TestCOSWriterRickGenVisitFromName.java
@@ -1920,7 +1920,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1933,7 +1933,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.173 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 12.556 s - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGenVisitFromName
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -1945,8 +1945,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  28.002 s
-[INFO] Finished at: 2023-06-05T11:57:48+02:00
+[INFO] Total time:  27.751 s
+[INFO] Finished at: 2023-06-11T08:21:10+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -1964,22 +1964,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.290 s
-[INFO] Finished at: 2023-06-05T11:57:53+02:00
+[INFO] Total time:  1.342 s
+[INFO] Finished at: 2023-06-11T08:21:15+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting COSWriter.java to original
 [LOG] Invoking cp ./COSWriter.java/original.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdfwriter/COSWriter.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/COSWriter.java', '/home/dee/dev/rick-major-review/finches/output/visitFromName_COSName/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/COSWriter.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/visitFromName_COSName/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-05 11:57:53.632719
+[LOG] Finishing analysis at 2023-06-11 08:21:16.012084
 ====== END OF THE LINE ======

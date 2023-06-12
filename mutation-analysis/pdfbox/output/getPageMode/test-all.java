@@ -53,7 +53,7 @@ public class TestPDDocumentCatalogRickGenGetPageMode {
         // Arrange
         PDDocumentCatalog receivingObject = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.PDDocumentCatalog.getPageMode1-receiving.xml");
         COSDictionary mockCOSDictionary = insertPrivateMockField_root_InPDDocumentCatalog(receivingObject);
-        Mockito.when(mockCOSDictionary.getNameAsString(any(org.apache.pdfbox.cos.COSName.class))).thenReturn(null);
+        Mockito.lenient().when(mockCOSDictionary.getNameAsString(any(org.apache.pdfbox.cos.COSName.class))).thenReturn(null);
         // Act
         receivingObject.getPageMode();
         // Assert
@@ -66,7 +66,7 @@ public class TestPDDocumentCatalogRickGenGetPageMode {
         // Arrange
         PDDocumentCatalog receivingObject = deserializeObjectFromFile("org.apache.pdfbox.pdmodel.PDDocumentCatalog.getPageMode1-receiving.xml");
         COSDictionary mockCOSDictionary = insertPrivateMockField_root_InPDDocumentCatalog(receivingObject);
-        Mockito.when(mockCOSDictionary.getNameAsString(any(org.apache.pdfbox.cos.COSName.class))).thenReturn(null);
+        Mockito.lenient().when(mockCOSDictionary.getNameAsString(any(org.apache.pdfbox.cos.COSName.class))).thenReturn(null);
         // Act
         receivingObject.getPageMode();
         // Assert

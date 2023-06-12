@@ -34,7 +34,7 @@ public class TestBuilderRickGen {
         // Arrange
         EncodingManager.Builder receivingObject = deserializeObjectFromFile("com.graphhopper.routing.util.EncodingManager$Builder.add_com.graphhopper.routing.ev.EncodedValue1-receiving.xml");
         EncodedValue mockEncodedValue = Mockito.mock(EncodedValue.class);
-        Mockito.when(mockEncodedValue.getName()).thenReturn("car_subnetwork");
+        Mockito.lenient().when(mockEncodedValue.getName()).thenReturn("car_subnetwork");
         // Act
         receivingObject.add(mockEncodedValue);
         // Assert
@@ -47,7 +47,7 @@ public class TestBuilderRickGen {
         // Arrange
         EncodingManager.Builder receivingObject = deserializeObjectFromFile("com.graphhopper.routing.util.EncodingManager$Builder.add_com.graphhopper.routing.ev.EncodedValue1-receiving.xml");
         EncodedValue mockEncodedValue = Mockito.mock(EncodedValue.class);
-        Mockito.when(mockEncodedValue.getName()).thenReturn("car_subnetwork");
+        Mockito.lenient().when(mockEncodedValue.getName()).thenReturn("car_subnetwork");
         // Act
         receivingObject.add(mockEncodedValue);
         // Assert

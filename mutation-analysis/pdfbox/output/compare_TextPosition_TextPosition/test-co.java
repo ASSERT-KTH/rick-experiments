@@ -43,9 +43,9 @@ public class TestTextPositionComparatorRickGen {
         Object[] paramObjects = deserializeObjectFromFile("org.apache.pdfbox.text.TextPositionComparator.compare1-params.xml");
         TextPosition paramObject2 = (TextPosition) paramObjects[1];
         TextPosition mockTextPosition = Mockito.mock(TextPosition.class);
-        Mockito.when(mockTextPosition.getDir()).thenReturn(0.0F);
-        Mockito.when(mockTextPosition.getYDirAdj()).thenReturn(58.319885F);
-        Mockito.when(mockTextPosition.getYDirAdj()).thenReturn(168.89996F);
+        Mockito.lenient().when(mockTextPosition.getDir()).thenReturn(0.0F);
+        Mockito.lenient().when(mockTextPosition.getYDirAdj()).thenReturn(58.319885F);
+        Mockito.lenient().when(mockTextPosition.getYDirAdj()).thenReturn(168.89996F);
         // Act
         int actual = receivingObject.compare(mockTextPosition, paramObject2);
         // Assert
@@ -62,9 +62,9 @@ public class TestTextPositionComparatorRickGen {
         Object[] paramObjects = deserializeObjectFromFile("org.apache.pdfbox.text.TextPositionComparator.compare1-params.xml");
         TextPosition paramObject2 = (TextPosition) paramObjects[1];
         TextPosition mockTextPosition = Mockito.mock(TextPosition.class);
-        Mockito.when(mockTextPosition.getDir()).thenReturn(0.0F);
-        Mockito.when(mockTextPosition.getYDirAdj()).thenReturn(58.319885F);
-        Mockito.when(mockTextPosition.getYDirAdj()).thenReturn(168.89996F);
+        Mockito.lenient().when(mockTextPosition.getDir()).thenReturn(0.0F);
+        Mockito.lenient().when(mockTextPosition.getYDirAdj()).thenReturn(58.319885F);
+        Mockito.lenient().when(mockTextPosition.getYDirAdj()).thenReturn(168.89996F);
         // Act
         receivingObject.compare(mockTextPosition, paramObject2);
         // Assert
@@ -83,9 +83,9 @@ public class TestTextPositionComparatorRickGen {
         Object[] paramObjects = deserializeObjectFromFile("org.apache.pdfbox.text.TextPositionComparator.compare1-params.xml");
         TextPosition paramObject2 = (TextPosition) paramObjects[1];
         TextPosition mockTextPosition = Mockito.mock(TextPosition.class);
-        Mockito.when(mockTextPosition.getDir()).thenReturn(0.0F);
-        Mockito.when(mockTextPosition.getYDirAdj()).thenReturn(58.319885F);
-        Mockito.when(mockTextPosition.getYDirAdj()).thenReturn(168.89996F);
+        Mockito.lenient().when(mockTextPosition.getDir()).thenReturn(0.0F);
+        Mockito.lenient().when(mockTextPosition.getYDirAdj()).thenReturn(58.319885F);
+        Mockito.lenient().when(mockTextPosition.getYDirAdj()).thenReturn(168.89996F);
         // Act
         receivingObject.compare(mockTextPosition, paramObject2);
         // Assert

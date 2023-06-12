@@ -36,7 +36,7 @@ public class TestViaInstructionRickGen {
         // Arrange
         ViaInstruction receivingObject = deserializeObjectFromFile("com.graphhopper.util.ViaInstruction.getTurnDescription1-receiving.xml");
         Translation mockTranslation = Mockito.mock(Translation.class);
-        Mockito.when(mockTranslation.tr(eq("stopover"),   (Object[]) any())).thenReturn("waypoint 1");
+        Mockito.lenient().when(mockTranslation.tr(eq("stopover"),   (Object[]) any())).thenReturn("waypoint 1");
         // Act
         String actual = receivingObject.getTurnDescription(mockTranslation);
         // Assert
@@ -49,7 +49,7 @@ public class TestViaInstructionRickGen {
         // Arrange
         ViaInstruction receivingObject = deserializeObjectFromFile("com.graphhopper.util.ViaInstruction.getTurnDescription1-receiving.xml");
         Translation mockTranslation = Mockito.mock(Translation.class);
-        Mockito.when(mockTranslation.tr(eq("stopover"),   (Object[]) any())).thenReturn("waypoint 1");
+        Mockito.lenient().when(mockTranslation.tr(eq("stopover"),   (Object[]) any())).thenReturn("waypoint 1");
         // Act
         receivingObject.getTurnDescription(mockTranslation);
         // Assert
@@ -62,7 +62,7 @@ public class TestViaInstructionRickGen {
         // Arrange
         ViaInstruction receivingObject = deserializeObjectFromFile("com.graphhopper.util.ViaInstruction.getTurnDescription1-receiving.xml");
         Translation mockTranslation = Mockito.mock(Translation.class);
-        Mockito.when(mockTranslation.tr(eq("stopover"),   (Object[]) any())).thenReturn("waypoint 1");
+        Mockito.lenient().when(mockTranslation.tr(eq("stopover"),   (Object[]) any())).thenReturn("waypoint 1");
         // Act
         receivingObject.getTurnDescription(mockTranslation);
         // Assert

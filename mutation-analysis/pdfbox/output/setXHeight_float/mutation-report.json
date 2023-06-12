@@ -3,9 +3,9 @@
     "CUT": "org.apache.pdfbox.pdmodel.font.PDFontDescriptor",
     "mutant-file": "./PDFontDescriptor.java/93.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.843 s - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.797 s - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight",
     "result-oo": "",
     "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.915 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.96 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.938 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight"
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.286 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.979 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight"
 },

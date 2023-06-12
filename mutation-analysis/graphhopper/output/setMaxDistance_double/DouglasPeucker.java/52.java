@@ -1,9 +1,9 @@
 /* LittleDarwin generated order-1 mutant
-mutant type: RelationalOperatorReplacement
-----> before:             for (int i = 0; i < segments; i++) {
-----> after:             for (int i = 0; i >= segments; i++) {
-----> line number in original file: 102
-----> mutated node: 1032
+mutant type: ArithmeticOperatorReplacementBinary
+----> before:         double elevationFactor = maxDistance / elevationMaxDistance;
+----> after:         double elevationFactor = maxDistance * elevationMaxDistance;
+----> line number in original file: 124
+----> mutated node: 936
 
 */
 
@@ -108,7 +108,7 @@ public class DouglasPeucker {
             int delta = 500;
             int segments = size / delta + 1;
             int start = fromIndex;
-            for (int i = 0; i >= segments; i++) {
+            for (int i = 0; i < segments; i++) {
                 // start of next is end of last segment, except for the last
                 removed += subSimplify(points, start, Math.min(lastIndex, start + delta));
                 start += delta;
@@ -130,7 +130,7 @@ public class DouglasPeucker {
         }
         int indexWithMaxDist = -1;
         double maxDist = -1;
-        double elevationFactor = maxDistance / elevationMaxDistance;
+        double elevationFactor = maxDistance * elevationMaxDistance;
         double firstLat = points.getLat(fromIndex);
         double firstLon = points.getLon(fromIndex);
         double firstEle = points.getEle(fromIndex);

@@ -3,42 +3,42 @@
     "CUT": "com.graphhopper.routing.querygraph.VirtualEdgeIteratorState",
     "mutant-file": "./VirtualEdgeIteratorState.java/133.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.835 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.989 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.79 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.737 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.981 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.697 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.397 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-po": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.006 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-co": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.58 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-all": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.712 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet"
 },
 {
     "mut": "get_BooleanEncodedValue",
     "CUT": "com.graphhopper.routing.querygraph.VirtualEdgeIteratorState",
     "mutant-file": "./VirtualEdgeIteratorState.java/45.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.03 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-oo": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.8 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.873 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.062 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-all": "Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 3.882 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.658 s - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-oo": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.554 s - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.886 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.493 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-all": "Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.564 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet"
 },
 {
     "mut": "get_BooleanEncodedValue",
     "CUT": "com.graphhopper.routing.querygraph.VirtualEdgeIteratorState",
     "mutant-file": "./VirtualEdgeIteratorState.java/46.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.993 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.993 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.114 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.048 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.934 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.908 s - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.519 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.671 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.608 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.879 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet"
 },
 {
     "mut": "get_BooleanEncodedValue",
     "CUT": "com.graphhopper.routing.querygraph.VirtualEdgeIteratorState",
     "mutant-file": "./VirtualEdgeIteratorState.java/65.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 4.316 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-oo": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 4.046 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-po": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.997 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-co": "Tests run: 3, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 3.843 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
-    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 4.032 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet"
+    "result_baseline": "Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.548 s - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-oo": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.209 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-po": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.588 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-co": "Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.636 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet",
+    "result-all": "Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 5.011 s <<< FAILURE! - in com.graphhopper.routing.querygraph.TestVirtualEdgeIteratorStateRickGenGet"
 },

@@ -3,20 +3,20 @@
     "CUT": "org.apache.pdfbox.contentstream.PDFStreamEngine",
     "mutant-file": "./PDFStreamEngine.java/118.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.57 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.838 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.682 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen",
-    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.676 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen",
-    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.396 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen"
+    "result-po": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.665 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen",
+    "result-co": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.061 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen",
+    "result-all": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.542 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen"
 },
 {
     "mut": "addOperator_OperatorProcessor",
     "CUT": "org.apache.pdfbox.contentstream.PDFStreamEngine",
     "mutant-file": "./PDFStreamEngine.java/242.java",
     "mutant-within-mut": true,
-    "result_baseline": "Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 7.622 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen",
+    "result_baseline": "Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.662 s - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen",
     "result-oo": "",
-    "result-po": "Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 7.634 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen",
-    "result-co": "Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 7.775 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen",
-    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.6 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen"
+    "result-po": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.183 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen",
+    "result-co": "Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.641 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen",
+    "result-all": "Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 7.816 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen"
 },

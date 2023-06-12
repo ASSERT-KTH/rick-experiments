@@ -1,4 +1,4 @@
-[LOG] Initiating analysis at 2023-06-04 19:21:42.963585
+[LOG] Initiating analysis at 2023-06-10 15:03:10.756611
 ---------------------------------------------------
 [LOG] Removing pre-existing mutants from current working directory
 [LOG] Cleaning up LittleDarwin results
@@ -632,13 +632,13 @@ Total mutations found:  2949
 [LOG] Invoking cp /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetXHeight.java ./PDFontDescriptor.java/original-test.java
 ---------------------------------------------------
 [LOG] Generating variants of original RICK test
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setXHeight_float/test-baseline.java
-[LOG] Created baseline test at /home/dee/dev/rick-major-review/finches/output/setXHeight_float/test-baseline.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setXHeight_float/test-po.java
-[LOG] Created PO test at /home/dee/dev/rick-major-review/finches/output/setXHeight_float/test-po.java
-[LOG] Modifying /home/dee/dev/rick-major-review/finches/output/setXHeight_float/test-co.java
-[LOG] Created CO test at /home/dee/dev/rick-major-review/finches/output/setXHeight_float/test-co.java
-[LOG] Created test with all oracles at /home/dee/dev/rick-major-review/finches/output/setXHeight_float/test-all.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setXHeight_float/test-baseline.java
+[LOG] Created baseline test at /home/dee/dev/rick-experiments/mutation-analysis/output/setXHeight_float/test-baseline.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setXHeight_float/test-po.java
+[LOG] Created PO test at /home/dee/dev/rick-experiments/mutation-analysis/output/setXHeight_float/test-po.java
+[LOG] Modifying /home/dee/dev/rick-experiments/mutation-analysis/output/setXHeight_float/test-co.java
+[LOG] Created CO test at /home/dee/dev/rick-experiments/mutation-analysis/output/setXHeight_float/test-co.java
+[LOG] Created test with all oracles at /home/dee/dev/rick-experiments/mutation-analysis/output/setXHeight_float/test-all.java
 ---------------------------------------------------
 [LOG] Replacing originalPDFontDescriptor.java with ./PDFontDescriptor.java/93.java
 [LOG] Invoking cp ./PDFontDescriptor.java/93.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDFontDescriptor.java
@@ -868,15 +868,15 @@ Total mutations found:  2949
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  41.765 s
-[INFO] Finished at: 2023-06-04T19:23:07+02:00
+[INFO] Total time:  42.632 s
+[INFO] Finished at: 2023-06-10T15:04:48+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
 [BASELINE] Not evaluating any oracle
 [LOG] Replacing original RICK test with variant baseline
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setXHeight_float/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetXHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setXHeight_float/test-baseline.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetXHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenSetXHeight']
 [INFO] Scanning for projects...
@@ -901,7 +901,7 @@ Total mutations found:  2949
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -914,7 +914,7 @@ Total mutations found:  2949
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight
-[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.843 s - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.797 s - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -926,8 +926,8 @@ Total mutations found:  2949
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  17.223 s
-[INFO] Finished at: 2023-06-04T19:23:28+02:00
+[INFO] Total time:  17.255 s
+[INFO] Finished at: 2023-06-10T15:05:09+02:00
 [INFO] ------------------------------------------------------------------------
 
 Security framework of XStream not initialized, XStream is probably vulnerable.
@@ -945,20 +945,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.280 s
-[INFO] Finished at: 2023-06-04T19:23:32+02:00
+[INFO] Total time:  1.397 s
+[INFO] Finished at: 2023-06-10T15:05:14+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetXHeight.java
 ---------------------------------------------------
 [PO] Evaluating only PO
 [LOG] Replacing original RICK test with variant po
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setXHeight_float/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetXHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setXHeight_float/test-po.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetXHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenSetXHeight']
 [INFO] Scanning for projects...
@@ -983,7 +983,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -997,7 +997,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight
 [ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.915 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight
-[ERROR] test_setXHeight_PO_4934de1a58da45e78d8351b0542d974d  Time elapsed: 0.219 s  <<< FAILURE!
+[ERROR] test_setXHeight_PO_4934de1a58da45e78d8351b0542d974d  Time elapsed: 0.201 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1029,8 +1029,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.316 s
-[INFO] Finished at: 2023-06-04T19:23:52+02:00
+[INFO] Total time:  16.528 s
+[INFO] Finished at: 2023-06-10T15:05:34+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1059,20 +1059,20 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.385 s
-[INFO] Finished at: 2023-06-04T19:23:57+02:00
+[INFO] Total time:  1.389 s
+[INFO] Finished at: 2023-06-10T15:05:39+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetXHeight.java
 ---------------------------------------------------
 [CO] Evaluating only CO
 [LOG] Replacing original RICK test with variant co
-[LOG] Invoking cp /home/dee/dev/rick-major-review/finches/output/setXHeight_float/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetXHeight.java
+[LOG] Invoking cp /home/dee/dev/rick-experiments/mutation-analysis/output/setXHeight_float/test-co.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetXHeight.java
 [LOG] In test module directory /home/dee/dev/rick-major-review/pdfbox/rick-major
 [LOG] Invoked tests with ['mvn', 'test', '-Dtest=TestPDFontDescriptorRickGenSetXHeight']
 [INFO] Scanning for projects...
@@ -1097,7 +1097,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1110,8 +1110,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight
-[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.96 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight
-[ERROR] test_setXHeight_CO_4934de1a58da45e78d8351b0542d974d  Time elapsed: 3.225 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.286 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight
+[ERROR] test_setXHeight_CO_4934de1a58da45e78d8351b0542d974d  Time elapsed: 3.555 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1137,8 +1137,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  15.861 s
-[INFO] Finished at: 2023-06-04T19:24:16+02:00
+[INFO] Total time:  16.434 s
+[INFO] Finished at: 2023-06-10T15:05:59+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1167,13 +1167,13 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.290 s
-[INFO] Finished at: 2023-06-04T19:24:21+02:00
+[INFO] Total time:  1.325 s
+[INFO] Finished at: 2023-06-10T15:06:03+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 [LOG] Restoring original RICK test from ./PDFontDescriptor.java/original-test.java
 [LOG] Invoking cp ./PDFontDescriptor.java/original-test.java /home/dee/dev/rick-major-review/pdfbox/rick-major/src/test/java/org/apache/pdfbox/pdmodel/font/TestPDFontDescriptorRickGenSetXHeight.java
@@ -1205,7 +1205,7 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] 
 [INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-major ---
 [INFO] Using 'UTF-8' encoding to copy filtered resources.
-[INFO] Copying 69 resources
+[INFO] Copying 72 resources
 [INFO] Copying 3 resources
 [INFO] 
 [INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-major ---
@@ -1218,8 +1218,8 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight
-[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.938 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight
-[ERROR] test_setXHeight_CO_4934de1a58da45e78d8351b0542d974d  Time elapsed: 3.16 s  <<< FAILURE!
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 3.979 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight
+[ERROR] test_setXHeight_CO_4934de1a58da45e78d8351b0542d974d  Time elapsed: 3.173 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1229,7 +1229,7 @@ Actually, there were zero interactions with this mock.
 
 	at org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGenSetXHeight.test_setXHeight_CO_4934de1a58da45e78d8351b0542d974d(TestPDFontDescriptorRickGenSetXHeight.java:68)
 
-[ERROR] test_setXHeight_PO_4934de1a58da45e78d8351b0542d974d  Time elapsed: 0.055 s  <<< FAILURE!
+[ERROR] test_setXHeight_PO_4934de1a58da45e78d8351b0542d974d  Time elapsed: 0.084 s  <<< FAILURE!
 org.mockito.exceptions.verification.WantedButNotInvoked: 
 
 Wanted but not invoked:
@@ -1267,8 +1267,8 @@ Actually, there were zero interactions with this mock.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  16.095 s
-[INFO] Finished at: 2023-06-04T19:24:40+02:00
+[INFO] Total time:  15.861 s
+[INFO] Finished at: 2023-06-10T15:06:23+02:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-major: There are test failures.
 [ERROR] 
@@ -1297,22 +1297,22 @@ Security framework of XStream not initialized, XStream is probably vulnerable.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.287 s
-[INFO] Finished at: 2023-06-04T19:24:45+02:00
+[INFO] Total time:  1.380 s
+[INFO] Finished at: 2023-06-10T15:06:28+02:00
 [INFO] ------------------------------------------------------------------------
 
 
 ---------------------------------------------------
-[LOG] In experiment directory /home/dee/dev/rick-major-review/finches
+[LOG] In experiment directory /home/dee/dev/rick-experiments/mutation-analysis
 ---------------------------------------------------
 ---------------------------------------------------
 [LOG] Resetting PDFontDescriptor.java to original
 [LOG] Invoking cp ./PDFontDescriptor.java/original.java /home/dee/dev/rick-major-review/pdfbox/pdfbox/src/main/java/org/apache/pdfbox/pdmodel/font/PDFontDescriptor.java
 ---------------------------------------------------
-[LOG] Copying littledarwin mutants to /home/dee/dev/rick-major-review/finches/output/setXHeight_float/
-[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-major-review/finches/PDFontDescriptor.java', '/home/dee/dev/rick-major-review/finches/output/setXHeight_float/']
+[LOG] Copying littledarwin mutants to /home/dee/dev/rick-experiments/mutation-analysis/output/setXHeight_float/
+[LOG] Invoked copying with ['cp', '-r', '/home/dee/dev/rick-experiments/mutation-analysis/PDFontDescriptor.java', '/home/dee/dev/rick-experiments/mutation-analysis/output/setXHeight_float/']
 
 
 ---------------------------------------------------
-[LOG] Finishing analysis at 2023-06-04 19:24:45.389720
+[LOG] Finishing analysis at 2023-06-10 15:06:28.451266
 ====== END OF THE LINE ======
