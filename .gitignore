@@ -3,4 +3,4 @@ graph-cache/
 target/
 *.tmp
 .idea/
-
+.ipynb_checkpoints/
