@@ -1,0 +1,1829 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------< org.gephi:rick-tests >------------------------
+[INFO] Building rick-tests 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ rick-tests ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 119 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.3.0:test (default-test) @ rick-tests ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.gephi.datalab.plugin.manipulators.columns.merge.TestAttributeColumnsMergeStrategiesControllerImplRickGen
+[ERROR] Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 17.03 s <<< FAILURE! -- in org.gephi.datalab.plugin.manipulators.columns.merge.TestAttributeColumnsMergeStrategiesControllerImplRickGen
+[ERROR] org.gephi.datalab.plugin.manipulators.columns.merge.TestAttributeColumnsMergeStrategiesControllerImplRickGen.test_mergeDateColumnsToTimeInterval_PO_0fdc275bfe5d438382837f778a4e3eb8 -- Time elapsed: 10.31 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.getNodesArray(AttributeColumnsControllerImpl.java:779)
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.getTableAttributeRows(AttributeColumnsControllerImpl.java:469)
+	at org.gephi.datalab.impl.AttributeColumnsMergeStrategiesControllerImpl.mergeDateColumnsToTimeInterval(AttributeColumnsMergeStrategiesControllerImpl.java:261)
+	at org.gephi.datalab.plugin.manipulators.columns.merge.TestAttributeColumnsMergeStrategiesControllerImplRickGen.test_mergeDateColumnsToTimeInterval_PO_0fdc275bfe5d438382837f778a4e3eb8(TestAttributeColumnsMergeStrategiesControllerImplRickGen.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.datalab.plugin.manipulators.columns.merge.TestAttributeColumnsMergeStrategiesControllerImplRickGen.test_mergeNumericColumnsToTimeInterval_CO_e30a6170a94e4ee1b4f910d197dc41d9 -- Time elapsed: 3.487 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.graph.api.AttributeUtils.isDynamicType(AttributeUtils.java:944)
+	at org.gephi.datalab.impl.AttributeColumnsMergeStrategiesControllerImpl.mergeNumericColumnsToTimeInterval(AttributeColumnsMergeStrategiesControllerImpl.java:183)
+	at org.gephi.datalab.plugin.manipulators.columns.merge.TestAttributeColumnsMergeStrategiesControllerImplRickGen.test_mergeNumericColumnsToTimeInterval_CO_e30a6170a94e4ee1b4f910d197dc41d9(TestAttributeColumnsMergeStrategiesControllerImplRickGen.java:124)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.datalab.plugin.manipulators.columns.merge.TestAttributeColumnsMergeStrategiesControllerImplRickGen.test_mergeNumericColumnsToTimeInterval_PO_e30a6170a94e4ee1b4f910d197dc41d9 -- Time elapsed: 1.311 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.graph.api.AttributeUtils.isDynamicType(AttributeUtils.java:944)
+	at org.gephi.datalab.impl.AttributeColumnsMergeStrategiesControllerImpl.mergeNumericColumnsToTimeInterval(AttributeColumnsMergeStrategiesControllerImpl.java:183)
+	at org.gephi.datalab.plugin.manipulators.columns.merge.TestAttributeColumnsMergeStrategiesControllerImplRickGen.test_mergeNumericColumnsToTimeInterval_PO_e30a6170a94e4ee1b4f910d197dc41d9(TestAttributeColumnsMergeStrategiesControllerImplRickGen.java:102)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.datalab.plugin.manipulators.columns.merge.TestAttributeColumnsMergeStrategiesControllerImplRickGen.test_mergeDateColumnsToTimeInterval_CO_0fdc275bfe5d438382837f778a4e3eb8 -- Time elapsed: 1.027 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.getNodesArray(AttributeColumnsControllerImpl.java:779)
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.getTableAttributeRows(AttributeColumnsControllerImpl.java:469)
+	at org.gephi.datalab.impl.AttributeColumnsMergeStrategiesControllerImpl.mergeDateColumnsToTimeInterval(AttributeColumnsMergeStrategiesControllerImpl.java:261)
+	at org.gephi.datalab.plugin.manipulators.columns.merge.TestAttributeColumnsMergeStrategiesControllerImplRickGen.test_mergeDateColumnsToTimeInterval_CO_0fdc275bfe5d438382837f778a4e3eb8(TestAttributeColumnsMergeStrategiesControllerImplRickGen.java:78)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGen
+[ERROR] Tests run: 11, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 5.745 s <<< FAILURE! -- in org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGen
+[ERROR] org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGen.test_canClearColumnData_OO_f4dc0aa00d034745b0a3f656925fec59 -- Time elapsed: 0.066 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.isEdgeTable(AttributeColumnsControllerImpl.java:491)
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.isEdgeColumn(AttributeColumnsControllerImpl.java:511)
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.canClearColumnData(AttributeColumnsControllerImpl.java:521)
+	at org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGen.test_canClearColumnData_OO_f4dc0aa00d034745b0a3f656925fec59(TestAttributeColumnsControllerImplRickGen.java:46)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGen.test_canClearColumnData_OO_f4dc0aa00d034745b0a3f656925fec59(TestAttributeColumnsControllerImplRickGen.java:44)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGen.test_canClearColumnData_CO_f4dc0aa00d034745b0a3f656925fec59 -- Time elapsed: 0.022 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.isEdgeTable(AttributeColumnsControllerImpl.java:491)
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.isEdgeColumn(AttributeColumnsControllerImpl.java:511)
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.canClearColumnData(AttributeColumnsControllerImpl.java:521)
+	at org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGen.test_canClearColumnData_CO_f4dc0aa00d034745b0a3f656925fec59(TestAttributeColumnsControllerImplRickGen.java:76)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGen.test_canClearColumnData_CO_f4dc0aa00d034745b0a3f656925fec59(TestAttributeColumnsControllerImplRickGen.java:74)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGen.test_canClearColumnData_PO_f4dc0aa00d034745b0a3f656925fec59 -- Time elapsed: 0.013 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.isEdgeTable(AttributeColumnsControllerImpl.java:491)
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.isEdgeColumn(AttributeColumnsControllerImpl.java:511)
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.canClearColumnData(AttributeColumnsControllerImpl.java:521)
+	at org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGen.test_canClearColumnData_PO_f4dc0aa00d034745b0a3f656925fec59(TestAttributeColumnsControllerImplRickGen.java:61)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.datalab.impl.TestAttributeColumnsControllerImplRickGen.test_canClearColumnData_PO_f4dc0aa00d034745b0a3f656925fec59(TestAttributeColumnsControllerImplRickGen.java:59)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen
+[ERROR] Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 5.415 s <<< FAILURE! -- in org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen
+[ERROR] org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_mergeNodes_CO_d44d16a58ee84119acd8f2f817251b9f -- Time elapsed: 1.139 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.setAttributeValue(AttributeColumnsControllerImpl.java:104)
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.mergeRowsValues(AttributeColumnsControllerImpl.java:727)
+	at org.gephi.datalab.impl.GraphElementsControllerImpl.mergeNodes(GraphElementsControllerImpl.java:247)
+	at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_mergeNodes_CO_d44d16a58ee84119acd8f2f817251b9f(TestGraphElementsControllerImplRickGen.java:172)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_mergeNodes_CO_d44d16a58ee84119acd8f2f817251b9f(TestGraphElementsControllerImplRickGen.java:167)
+  2. -> at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_mergeNodes_CO_d44d16a58ee84119acd8f2f817251b9f(TestGraphElementsControllerImplRickGen.java:168)
+  3. -> at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_mergeNodes_CO_d44d16a58ee84119acd8f2f817251b9f(TestGraphElementsControllerImplRickGen.java:169)
+  4. -> at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_mergeNodes_CO_d44d16a58ee84119acd8f2f817251b9f(TestGraphElementsControllerImplRickGen.java:170)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_createEdge_java_lang_String_org_gephi_graph_api_Node_org_gephi_graph_api_Node_boolean_java_lang_Object_org_gephi_graph_api_Graph_CO_bf0e2c71b1144da388f41f5c12817ec6 -- Time elapsed: 0.971 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.datalab.impl.GraphElementsControllerImpl.buildEdge(GraphElementsControllerImpl.java:406)
+	at org.gephi.datalab.impl.GraphElementsControllerImpl.createEdge(GraphElementsControllerImpl.java:154)
+	at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_createEdge_java_lang_String_org_gephi_graph_api_Node_org_gephi_graph_api_Node_boolean_java_lang_Object_org_gephi_graph_api_Graph_CO_bf0e2c71b1144da388f41f5c12817ec6(TestGraphElementsControllerImplRickGen.java:71)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_createEdge_java_lang_String_org_gephi_graph_api_Node_org_gephi_graph_api_Node_boolean_java_lang_Object_org_gephi_graph_api_Graph_CO_bf0e2c71b1144da388f41f5c12817ec6(TestGraphElementsControllerImplRickGen.java:69)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_mergeNodes_PO_d44d16a58ee84119acd8f2f817251b9f -- Time elapsed: 0.826 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.setAttributeValue(AttributeColumnsControllerImpl.java:104)
+	at org.gephi.datalab.impl.AttributeColumnsControllerImpl.mergeRowsValues(AttributeColumnsControllerImpl.java:727)
+	at org.gephi.datalab.impl.GraphElementsControllerImpl.mergeNodes(GraphElementsControllerImpl.java:247)
+	at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_mergeNodes_PO_d44d16a58ee84119acd8f2f817251b9f(TestGraphElementsControllerImplRickGen.java:136)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_mergeNodes_PO_d44d16a58ee84119acd8f2f817251b9f(TestGraphElementsControllerImplRickGen.java:131)
+  2. -> at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_mergeNodes_PO_d44d16a58ee84119acd8f2f817251b9f(TestGraphElementsControllerImplRickGen.java:132)
+  3. -> at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_mergeNodes_PO_d44d16a58ee84119acd8f2f817251b9f(TestGraphElementsControllerImplRickGen.java:133)
+  4. -> at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_mergeNodes_PO_d44d16a58ee84119acd8f2f817251b9f(TestGraphElementsControllerImplRickGen.java:134)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_createNode_java_lang_String_org_gephi_graph_api_Graph_CO_71886cbf1e244d3fa43aadb95b023ca6 -- Time elapsed: 0.651 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.datalab.impl.GraphElementsControllerImpl.buildNode(GraphElementsControllerImpl.java:391)
+	at org.gephi.datalab.impl.GraphElementsControllerImpl.buildNode(GraphElementsControllerImpl.java:383)
+	at org.gephi.datalab.impl.GraphElementsControllerImpl.createNode(GraphElementsControllerImpl.java:81)
+	at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_createNode_java_lang_String_org_gephi_graph_api_Graph_CO_71886cbf1e244d3fa43aadb95b023ca6(TestGraphElementsControllerImplRickGen.java:106)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_createNode_java_lang_String_org_gephi_graph_api_Graph_CO_71886cbf1e244d3fa43aadb95b023ca6(TestGraphElementsControllerImplRickGen.java:104)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_createEdge_java_lang_String_org_gephi_graph_api_Node_org_gephi_graph_api_Node_boolean_java_lang_Object_org_gephi_graph_api_Graph_PO_bf0e2c71b1144da388f41f5c12817ec6 -- Time elapsed: 0.932 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.datalab.impl.GraphElementsControllerImpl.buildEdge(GraphElementsControllerImpl.java:406)
+	at org.gephi.datalab.impl.GraphElementsControllerImpl.createEdge(GraphElementsControllerImpl.java:154)
+	at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_createEdge_java_lang_String_org_gephi_graph_api_Node_org_gephi_graph_api_Node_boolean_java_lang_Object_org_gephi_graph_api_Graph_PO_bf0e2c71b1144da388f41f5c12817ec6(TestGraphElementsControllerImplRickGen.java:50)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_createEdge_java_lang_String_org_gephi_graph_api_Node_org_gephi_graph_api_Node_boolean_java_lang_Object_org_gephi_graph_api_Graph_PO_bf0e2c71b1144da388f41f5c12817ec6(TestGraphElementsControllerImplRickGen.java:48)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_createNode_java_lang_String_org_gephi_graph_api_Graph_PO_71886cbf1e244d3fa43aadb95b023ca6 -- Time elapsed: 0.860 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.datalab.impl.GraphElementsControllerImpl.buildNode(GraphElementsControllerImpl.java:391)
+	at org.gephi.datalab.impl.GraphElementsControllerImpl.buildNode(GraphElementsControllerImpl.java:383)
+	at org.gephi.datalab.impl.GraphElementsControllerImpl.createNode(GraphElementsControllerImpl.java:81)
+	at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_createNode_java_lang_String_org_gephi_graph_api_Graph_PO_71886cbf1e244d3fa43aadb95b023ca6(TestGraphElementsControllerImplRickGen.java:89)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.datalab.impl.TestGraphElementsControllerImplRickGen.test_createNode_java_lang_String_org_gephi_graph_api_Graph_PO_71886cbf1e244d3fa43aadb95b023ca6(TestGraphElementsControllerImplRickGen.java:87)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.datalab.impl.TestSearchReplaceControllerImplRickGen
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 3.675 s <<< FAILURE! -- in org.gephi.datalab.impl.TestSearchReplaceControllerImplRickGen
+[ERROR] org.gephi.datalab.impl.TestSearchReplaceControllerImplRickGen.test_replaceAll_OO_3ffa029d19364a5caddf91d6d3643ace -- Time elapsed: 1.503 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.datalab.impl.SearchReplaceControllerImpl.findOnEdges(SearchReplaceControllerImpl.java:249)
+	at org.gephi.datalab.impl.SearchReplaceControllerImpl.findNext(SearchReplaceControllerImpl.java:93)
+	at org.gephi.datalab.impl.SearchReplaceControllerImpl.replaceAll(SearchReplaceControllerImpl.java:194)
+	at org.gephi.datalab.impl.TestSearchReplaceControllerImplRickGen.test_replaceAll_OO_3ffa029d19364a5caddf91d6d3643ace(TestSearchReplaceControllerImplRickGen.java:41)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.datalab.impl.TestSearchReplaceControllerImplRickGen.test_replaceAll_CO_3ffa029d19364a5caddf91d6d3643ace -- Time elapsed: 0.918 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.datalab.impl.SearchReplaceControllerImpl.findOnEdges(SearchReplaceControllerImpl.java:249)
+	at org.gephi.datalab.impl.SearchReplaceControllerImpl.findNext(SearchReplaceControllerImpl.java:93)
+	at org.gephi.datalab.impl.SearchReplaceControllerImpl.replaceAll(SearchReplaceControllerImpl.java:194)
+	at org.gephi.datalab.impl.TestSearchReplaceControllerImplRickGen.test_replaceAll_CO_3ffa029d19364a5caddf91d6d3643ace(TestSearchReplaceControllerImplRickGen.java:73)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.datalab.impl.TestSearchReplaceControllerImplRickGen.test_replaceAll_PO_3ffa029d19364a5caddf91d6d3643ace -- Time elapsed: 1.228 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.datalab.impl.SearchReplaceControllerImpl.findOnEdges(SearchReplaceControllerImpl.java:249)
+	at org.gephi.datalab.impl.SearchReplaceControllerImpl.findNext(SearchReplaceControllerImpl.java:93)
+	at org.gephi.datalab.impl.SearchReplaceControllerImpl.replaceAll(SearchReplaceControllerImpl.java:194)
+	at org.gephi.datalab.impl.TestSearchReplaceControllerImplRickGen.test_replaceAll_PO_3ffa029d19364a5caddf91d6d3643ace(TestSearchReplaceControllerImplRickGen.java:57)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.gephi.preview.plugin.builders.TestNodeBuilderRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.059 s <<< FAILURE! -- in org.gephi.preview.plugin.builders.TestNodeBuilderRickGen
+[ERROR] org.gephi.preview.plugin.builders.TestNodeBuilderRickGen.test_getItems_CO_d966ad6ddeae4252980af57e5927c677 -- Time elapsed: 0.024 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.preview.plugin.builders.NodeBuilder.getItems(NodeBuilder.java:63)
+	at org.gephi.preview.plugin.builders.TestNodeBuilderRickGen.test_getItems_CO_d966ad6ddeae4252980af57e5927c677(TestNodeBuilderRickGen.java:54)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.preview.plugin.builders.TestNodeBuilderRickGen.test_getItems_PO_d966ad6ddeae4252980af57e5927c677 -- Time elapsed: 0.010 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.preview.plugin.builders.NodeBuilder.getItems(NodeBuilder.java:63)
+	at org.gephi.preview.plugin.builders.TestNodeBuilderRickGen.test_getItems_PO_d966ad6ddeae4252980af57e5927c677(TestNodeBuilderRickGen.java:39)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.gephi.preview.plugin.builders.TestEdgeBuilderRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.050 s <<< FAILURE! -- in org.gephi.preview.plugin.builders.TestEdgeBuilderRickGen
+[ERROR] org.gephi.preview.plugin.builders.TestEdgeBuilderRickGen.test_getItems_CO_32dbe480e2ea4c80950e6eb19ac80ebf -- Time elapsed: 0.017 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.preview.plugin.builders.EdgeBuilder.getItems(EdgeBuilder.java:64)
+	at org.gephi.preview.plugin.builders.TestEdgeBuilderRickGen.test_getItems_CO_32dbe480e2ea4c80950e6eb19ac80ebf(TestEdgeBuilderRickGen.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.preview.plugin.builders.TestEdgeBuilderRickGen.test_getItems_CO_32dbe480e2ea4c80950e6eb19ac80ebf(TestEdgeBuilderRickGen.java:58)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.preview.plugin.builders.TestEdgeBuilderRickGen.test_getItems_PO_32dbe480e2ea4c80950e6eb19ac80ebf -- Time elapsed: 0.010 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.preview.plugin.builders.EdgeBuilder.getItems(EdgeBuilder.java:64)
+	at org.gephi.preview.plugin.builders.TestEdgeBuilderRickGen.test_getItems_PO_32dbe480e2ea4c80950e6eb19ac80ebf(TestEdgeBuilderRickGen.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.preview.plugin.builders.TestEdgeBuilderRickGen.test_getItems_PO_32dbe480e2ea4c80950e6eb19ac80ebf(TestEdgeBuilderRickGen.java:41)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.preview.plugin.renderers.TestNodeRendererRickGen
+[ERROR] Tests run: 4, Failures: 2, Errors: 2, Skipped: 0, Time elapsed: 11.67 s <<< FAILURE! -- in org.gephi.preview.plugin.renderers.TestNodeRendererRickGen
+[ERROR] org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_renderPDF_PO_d8eb3a3013c14d05b7e99c12306df548 -- Time elapsed: 4.716 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.preview.plugin.renderers.NodeRenderer.renderPDF(NodeRenderer.java:192)
+	at org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_renderPDF_PO_d8eb3a3013c14d05b7e99c12306df548(TestNodeRendererRickGen.java:83)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_renderPDF_PO_d8eb3a3013c14d05b7e99c12306df548(TestNodeRendererRickGen.java:79)
+  2. -> at org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_renderPDF_PO_d8eb3a3013c14d05b7e99c12306df548(TestNodeRendererRickGen.java:80)
+  3. -> at org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_renderPDF_PO_d8eb3a3013c14d05b7e99c12306df548(TestNodeRendererRickGen.java:81)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_getCanvasSize_CO_b286eddbe387428fb752619921096014 -- Time elapsed: 2.350 s <<< FAILURE!
+Wanted but not invoked:
+previewProperties.getFloatValue(
+    <any string>
+);
+-> at org.gephi.preview.api.PreviewProperties.getFloatValue(PreviewProperties.java:198)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.preview.api.PreviewProperties.getFloatValue(PreviewProperties.java:198)
+	at org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_getCanvasSize_CO_b286eddbe387428fb752619921096014(TestNodeRendererRickGen.java:67)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_getCanvasSize_CO_b286eddbe387428fb752619921096014(TestNodeRendererRickGen.java:62)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_getCanvasSize_PO_b286eddbe387428fb752619921096014 -- Time elapsed: 2.584 s <<< FAILURE!
+Wanted but not invoked:
+previewProperties.getFloatValue(
+    "node.border.width"
+);
+-> at org.gephi.preview.api.PreviewProperties.getFloatValue(PreviewProperties.java:198)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.preview.api.PreviewProperties.getFloatValue(PreviewProperties.java:198)
+	at org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_getCanvasSize_PO_b286eddbe387428fb752619921096014(TestNodeRendererRickGen.java:51)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_getCanvasSize_PO_b286eddbe387428fb752619921096014(TestNodeRendererRickGen.java:47)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_renderPDF_CO_d8eb3a3013c14d05b7e99c12306df548 -- Time elapsed: 1.981 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.preview.plugin.renderers.NodeRenderer.renderPDF(NodeRenderer.java:192)
+	at org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_renderPDF_CO_d8eb3a3013c14d05b7e99c12306df548(TestNodeRendererRickGen.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_renderPDF_CO_d8eb3a3013c14d05b7e99c12306df548(TestNodeRendererRickGen.java:99)
+  2. -> at org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_renderPDF_CO_d8eb3a3013c14d05b7e99c12306df548(TestNodeRendererRickGen.java:100)
+  3. -> at org.gephi.preview.plugin.renderers.TestNodeRendererRickGen.test_renderPDF_CO_d8eb3a3013c14d05b7e99c12306df548(TestNodeRendererRickGen.java:101)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.preview.types.TestEdgeColorRickGen
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.406 s <<< FAILURE! -- in org.gephi.preview.types.TestEdgeColorRickGen
+[ERROR] org.gephi.preview.types.TestEdgeColorRickGen.test_getColor_CO_0fdd2586263f4a01939a6792f6c26498 -- Time elapsed: 0.016 s <<< FAILURE!
+org.mockito.exceptions.verification.VerificationInOrderFailure: 
+
+Verification in order failure
+Wanted but not invoked:
+color.getRed();
+-> at java.desktop/java.awt.Color.getRed(Color.java:557)
+Wanted anywhere AFTER following interaction:
+color.getAlpha();
+-> at org.gephi.preview.types.EdgeColor.getColor(EdgeColor.java:93)
+
+	at java.desktop/java.awt.Color.getRed(Color.java:557)
+	at org.gephi.preview.types.TestEdgeColorRickGen.test_getColor_CO_0fdd2586263f4a01939a6792f6c26498(TestEdgeColorRickGen.java:72)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.gephi.preview.TestSVGRenderTargetImplRickGen
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 1.212 s <<< FAILURE! -- in org.gephi.preview.TestSVGRenderTargetImplRickGen
+[ERROR] org.gephi.preview.TestSVGRenderTargetImplRickGen.test_toHexString_CO_b39626b373c6430bb9b3657fa24481f2 -- Time elapsed: 1.145 s <<< FAILURE!
+org.mockito.exceptions.verification.VerificationInOrderFailure: 
+
+Verification in order failure:
+color.getRGB();
+Wanted 5 times:
+-> at java.desktop/java.awt.Color.getRGB(Color.java:603)
+But was 1 time:
+-> at org.gephi.preview.SVGRenderTargetBuilder$SVGRenderTargetImpl.toHexString(SVGRenderTargetBuilder.java:211)
+
+	at java.desktop/java.awt.Color.getRGB(Color.java:603)
+	at org.gephi.preview.TestSVGRenderTargetImplRickGen.test_toHexString_CO_b39626b373c6430bb9b3657fa24481f2(TestSVGRenderTargetImplRickGen.java:68)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.gephi.preview.TestPreviewControllerImplRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.248 s <<< FAILURE! -- in org.gephi.preview.TestPreviewControllerImplRickGen
+[ERROR] org.gephi.preview.TestPreviewControllerImplRickGen.test_getModel_org_gephi_project_api_Workspace_CO_466c140343a94a5dae10c5112be85918 -- Time elapsed: 0.221 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.preview.PreviewControllerImpl.getModel(PreviewControllerImpl.java:304)
+	at org.gephi.preview.TestPreviewControllerImplRickGen.test_getModel_org_gephi_project_api_Workspace_CO_466c140343a94a5dae10c5112be85918(TestPreviewControllerImplRickGen.java:51)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.preview.TestPreviewControllerImplRickGen.test_getModel_org_gephi_project_api_Workspace_PO_466c140343a94a5dae10c5112be85918 -- Time elapsed: 0.010 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.preview.PreviewControllerImpl.getModel(PreviewControllerImpl.java:304)
+	at org.gephi.preview.TestPreviewControllerImplRickGen.test_getModel_org_gephi_project_api_Workspace_PO_466c140343a94a5dae10c5112be85918(TestPreviewControllerImplRickGen.java:39)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.gephi.io.exporter.impl.TestExportControllerImplRickGen
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.336 s <<< FAILURE! -- in org.gephi.io.exporter.impl.TestExportControllerImplRickGen
+[ERROR] org.gephi.io.exporter.impl.TestExportControllerImplRickGen.test_exportFile_java_io_File_org_gephi_io_exporter_spi_Exporter_CO_744b86beaa414f12b21b78c862057698 -- Time elapsed: 0.276 s <<< FAILURE!
+org.mockito.exceptions.verification.VerificationInOrderFailure: 
+
+Verification in order failure
+Wanted but not invoked:
+exporter.execute();
+-> at org.gephi.io.exporter.impl.TestExportControllerImplRickGen.test_exportFile_java_io_File_org_gephi_io_exporter_spi_Exporter_CO_744b86beaa414f12b21b78c862057698(TestExportControllerImplRickGen.java:62)
+Wanted anywhere AFTER following interaction:
+exporter.setWorkspace(null);
+-> at org.gephi.io.exporter.impl.ExportControllerImpl.exportFile(ExportControllerImpl.java:111)
+
+	at org.gephi.io.exporter.impl.TestExportControllerImplRickGen.test_exportFile_java_io_File_org_gephi_io_exporter_spi_Exporter_CO_744b86beaa414f12b21b78c862057698(TestExportControllerImplRickGen.java:62)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.io.exporter.impl.TestExportControllerImplRickGen.test_exportFile_java_io_File_org_gephi_io_exporter_spi_Exporter_CO_744b86beaa414f12b21b78c862057698(TestExportControllerImplRickGen.java:56)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.io.exporter.impl.TestExportControllerImplRickGen.test_exportFile_java_io_File_org_gephi_io_exporter_spi_Exporter_PO_744b86beaa414f12b21b78c862057698 -- Time elapsed: 0.041 s <<< FAILURE!
+Argument(s) are different! Wanted:
+exporter.setWorkspace(
+    <any org.gephi.project.api.Workspace>
+);
+-> at org.gephi.io.exporter.impl.TestExportControllerImplRickGen.test_exportFile_java_io_File_org_gephi_io_exporter_spi_Exporter_PO_744b86beaa414f12b21b78c862057698(TestExportControllerImplRickGen.java:44)
+Actual invocations have different arguments:
+exporter.getWorkspace(
+    
+);
+-> at org.gephi.io.exporter.impl.ExportControllerImpl.exportFile(ExportControllerImpl.java:108)
+exporter.setWorkspace(
+    null
+);
+-> at org.gephi.io.exporter.impl.ExportControllerImpl.exportFile(ExportControllerImpl.java:111)
+
+	at org.gephi.io.exporter.impl.TestExportControllerImplRickGen.test_exportFile_java_io_File_org_gephi_io_exporter_spi_Exporter_PO_744b86beaa414f12b21b78c862057698(TestExportControllerImplRickGen.java:44)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.io.exporter.impl.TestExportControllerImplRickGen.test_exportFile_java_io_File_org_gephi_io_exporter_spi_Exporter_PO_744b86beaa414f12b21b78c862057698(TestExportControllerImplRickGen.java:40)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen
+[ERROR] Tests run: 3, Failures: 0, Errors: 3, Skipped: 0, Time elapsed: 0.686 s <<< FAILURE! -- in org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen
+[ERROR] org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen.test_execute_OO_ff17d438970544afacf562bacbe1108b -- Time elapsed: 0.560 s <<< ERROR!
+java.lang.RuntimeException: com.ctc.wstx.exc.WstxIOException: Bad file descriptor
+	at org.gephi.io.importer.plugin.file.ImporterGEXF.execute(ImporterGEXF.java:182)
+	at org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen.test_execute_OO_ff17d438970544afacf562bacbe1108b(TestImporterGEXFRickGen.java:58)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen.test_execute_OO_ff17d438970544afacf562bacbe1108b(TestImporterGEXFRickGen.java:47)
+  2. -> at org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen.test_execute_OO_ff17d438970544afacf562bacbe1108b(TestImporterGEXFRickGen.java:53)
+  3. -> at org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen.test_execute_OO_ff17d438970544afacf562bacbe1108b(TestImporterGEXFRickGen.java:56)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+Caused by: com.ctc.wstx.exc.WstxIOException: Bad file descriptor
+	at com.ctc.wstx.stax.WstxInputFactory.doCreateSR(WstxInputFactory.java:578)
+	at com.ctc.wstx.stax.WstxInputFactory.createSR(WstxInputFactory.java:633)
+	at com.ctc.wstx.stax.WstxInputFactory.createSR(WstxInputFactory.java:687)
+	at com.ctc.wstx.stax.WstxInputFactory.createXMLStreamReader(WstxInputFactory.java:350)
+	at org.gephi.io.importer.plugin.file.ImporterGEXF.execute(ImporterGEXF.java:154)
+	... 4 more
+Caused by: java.io.IOException: Bad file descriptor
+	at java.base/java.io.FileInputStream.readBytes(Native Method)
+	at java.base/java.io.FileInputStream.read(FileInputStream.java:279)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:183)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.base/java.io.BufferedReader.read1(BufferedReader.java:212)
+	at java.base/java.io.BufferedReader.read(BufferedReader.java:287)
+	at java.base/java.io.LineNumberReader.read(LineNumberReader.java:168)
+	at com.ctc.wstx.io.ReaderBootstrapper.initialLoad(ReaderBootstrapper.java:254)
+	at com.ctc.wstx.io.ReaderBootstrapper.bootstrapInput(ReaderBootstrapper.java:134)
+	at com.ctc.wstx.stax.WstxInputFactory.doCreateSR(WstxInputFactory.java:573)
+	... 8 more
+
+[ERROR] org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen.test_execute_CO_ff17d438970544afacf562bacbe1108b -- Time elapsed: 0.051 s <<< ERROR!
+java.lang.RuntimeException: com.ctc.wstx.exc.WstxIOException: Bad file descriptor
+	at org.gephi.io.importer.plugin.file.ImporterGEXF.execute(ImporterGEXF.java:182)
+	at org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen.test_execute_CO_ff17d438970544afacf562bacbe1108b(TestImporterGEXFRickGen.java:109)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen.test_execute_CO_ff17d438970544afacf562bacbe1108b(TestImporterGEXFRickGen.java:98)
+  2. -> at org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen.test_execute_CO_ff17d438970544afacf562bacbe1108b(TestImporterGEXFRickGen.java:104)
+  3. -> at org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen.test_execute_CO_ff17d438970544afacf562bacbe1108b(TestImporterGEXFRickGen.java:107)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+Caused by: com.ctc.wstx.exc.WstxIOException: Bad file descriptor
+	at com.ctc.wstx.stax.WstxInputFactory.doCreateSR(WstxInputFactory.java:578)
+	at com.ctc.wstx.stax.WstxInputFactory.createSR(WstxInputFactory.java:633)
+	at com.ctc.wstx.stax.WstxInputFactory.createSR(WstxInputFactory.java:687)
+	at com.ctc.wstx.stax.WstxInputFactory.createXMLStreamReader(WstxInputFactory.java:350)
+	at org.gephi.io.importer.plugin.file.ImporterGEXF.execute(ImporterGEXF.java:154)
+	... 4 more
+Caused by: java.io.IOException: Bad file descriptor
+	at java.base/java.io.FileInputStream.readBytes(Native Method)
+	at java.base/java.io.FileInputStream.read(FileInputStream.java:279)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:183)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.base/java.io.BufferedReader.read1(BufferedReader.java:212)
+	at java.base/java.io.BufferedReader.read(BufferedReader.java:287)
+	at java.base/java.io.LineNumberReader.read(LineNumberReader.java:168)
+	at com.ctc.wstx.io.ReaderBootstrapper.initialLoad(ReaderBootstrapper.java:254)
+	at com.ctc.wstx.io.ReaderBootstrapper.bootstrapInput(ReaderBootstrapper.java:134)
+	at com.ctc.wstx.stax.WstxInputFactory.doCreateSR(WstxInputFactory.java:573)
+	... 8 more
+
+[ERROR] org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen.test_execute_PO_ff17d438970544afacf562bacbe1108b -- Time elapsed: 0.049 s <<< ERROR!
+java.lang.RuntimeException: com.ctc.wstx.exc.WstxIOException: Bad file descriptor
+	at org.gephi.io.importer.plugin.file.ImporterGEXF.execute(ImporterGEXF.java:182)
+	at org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen.test_execute_PO_ff17d438970544afacf562bacbe1108b(TestImporterGEXFRickGen.java:82)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen.test_execute_PO_ff17d438970544afacf562bacbe1108b(TestImporterGEXFRickGen.java:71)
+  2. -> at org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen.test_execute_PO_ff17d438970544afacf562bacbe1108b(TestImporterGEXFRickGen.java:77)
+  3. -> at org.gephi.io.importer.plugin.file.TestImporterGEXFRickGen.test_execute_PO_ff17d438970544afacf562bacbe1108b(TestImporterGEXFRickGen.java:80)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+Caused by: com.ctc.wstx.exc.WstxIOException: Bad file descriptor
+	at com.ctc.wstx.stax.WstxInputFactory.doCreateSR(WstxInputFactory.java:578)
+	at com.ctc.wstx.stax.WstxInputFactory.createSR(WstxInputFactory.java:633)
+	at com.ctc.wstx.stax.WstxInputFactory.createSR(WstxInputFactory.java:687)
+	at com.ctc.wstx.stax.WstxInputFactory.createXMLStreamReader(WstxInputFactory.java:350)
+	at org.gephi.io.importer.plugin.file.ImporterGEXF.execute(ImporterGEXF.java:154)
+	... 4 more
+Caused by: java.io.IOException: Bad file descriptor
+	at java.base/java.io.FileInputStream.readBytes(Native Method)
+	at java.base/java.io.FileInputStream.read(FileInputStream.java:279)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:133)
+	at java.base/java.io.PushbackInputStream.read(PushbackInputStream.java:183)
+	at java.base/sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:284)
+	at java.base/sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:326)
+	at java.base/sun.nio.cs.StreamDecoder.read(StreamDecoder.java:178)
+	at java.base/java.io.InputStreamReader.read(InputStreamReader.java:181)
+	at java.base/java.io.BufferedReader.fill(BufferedReader.java:161)
+	at java.base/java.io.BufferedReader.read1(BufferedReader.java:212)
+	at java.base/java.io.BufferedReader.read(BufferedReader.java:287)
+	at java.base/java.io.LineNumberReader.read(LineNumberReader.java:168)
+	at com.ctc.wstx.io.ReaderBootstrapper.initialLoad(ReaderBootstrapper.java:254)
+	at com.ctc.wstx.io.ReaderBootstrapper.bootstrapInput(ReaderBootstrapper.java:134)
+	at com.ctc.wstx.stax.WstxInputFactory.doCreateSR(WstxInputFactory.java:573)
+	... 8 more
+
+[INFO] Running org.gephi.layout.plugin.openord.TestOpenOrdLayoutRickGen
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.224 s <<< FAILURE! -- in org.gephi.layout.plugin.openord.TestOpenOrdLayoutRickGen
+[ERROR] org.gephi.layout.plugin.openord.TestOpenOrdLayoutRickGen.test_initAlgo_CO_85f725216cd6499ba5dc3c7d81605e53 -- Time elapsed: 1.410 s <<< FAILURE!
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.layout.plugin.openord.TestOpenOrdLayoutRickGen.test_initAlgo_CO_85f725216cd6499ba5dc3c7d81605e53(TestOpenOrdLayoutRickGen.java:77)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.layout.plugin.openord.TestOpenOrdLayoutRickGen.test_initAlgo_CO_85f725216cd6499ba5dc3c7d81605e53(TestOpenOrdLayoutRickGen.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.layout.plugin.openord.TestOpenOrdLayoutRickGen.test_initAlgo_CO_85f725216cd6499ba5dc3c7d81605e53(TestOpenOrdLayoutRickGen.java:72)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.layout.plugin.openord.TestOpenOrdLayoutRickGen.test_initAlgo_PO_85f725216cd6499ba5dc3c7d81605e53 -- Time elapsed: 0.794 s <<< FAILURE!
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.layout.plugin.openord.TestOpenOrdLayoutRickGen.test_initAlgo_PO_85f725216cd6499ba5dc3c7d81605e53(TestOpenOrdLayoutRickGen.java:60)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.layout.plugin.openord.TestOpenOrdLayoutRickGen.test_initAlgo_PO_85f725216cd6499ba5dc3c7d81605e53(TestOpenOrdLayoutRickGen.java:60)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.layout.plugin.openord.TestOpenOrdLayoutRickGen.test_initAlgo_PO_85f725216cd6499ba5dc3c7d81605e53(TestOpenOrdLayoutRickGen.java:56)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.layout.plugin.force.quadtree.TestFirstAddRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.048 s -- in org.gephi.layout.plugin.force.quadtree.TestFirstAddRickGen
+[INFO] Running org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.989 s <<< FAILURE! -- in org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen
+[ERROR] org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen.test_moveNode_PO_bb082e870eda4717ae6f5897572bc3fa -- Time elapsed: 1.858 s <<< FAILURE!
+Argument(s) are different! Wanted:
+node.setX(-403.2223f);
+-> at org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen.test_moveNode_PO_bb082e870eda4717ae6f5897572bc3fa(TestProportionalDisplacementRickGen.java:43)
+Actual invocations have different arguments:
+node.x();
+-> at org.gephi.layout.plugin.force.ProportionalDisplacement.moveNode(ProportionalDisplacement.java:76)
+node.y();
+-> at org.gephi.layout.plugin.force.ProportionalDisplacement.moveNode(ProportionalDisplacement.java:77)
+node.setX(0.7035823f);
+-> at org.gephi.layout.plugin.force.ProportionalDisplacement.moveNode(ProportionalDisplacement.java:80)
+node.setY(-0.080993615f);
+-> at org.gephi.layout.plugin.force.ProportionalDisplacement.moveNode(ProportionalDisplacement.java:83)
+
+	at org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen.test_moveNode_PO_bb082e870eda4717ae6f5897572bc3fa(TestProportionalDisplacementRickGen.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.gephi.layout.plugin.force.yifanHu.TestElectricalForceRickGen
+[ERROR] Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 6.232 s <<< FAILURE! -- in org.gephi.layout.plugin.force.yifanHu.TestElectricalForceRickGen
+[ERROR] org.gephi.layout.plugin.force.yifanHu.TestElectricalForceRickGen.test_calculateForce_CO_d0210372b49f4df5ae7d0bf8d546afe7 -- Time elapsed: 2.711 s <<< FAILURE!
+org.mockito.exceptions.verification.VerificationInOrderFailure: 
+
+Verification in order failure:
+node.x();
+Wanted 2 times:
+-> at org.gephi.layout.plugin.force.yifanHu.TestElectricalForceRickGen.test_calculateForce_CO_d0210372b49f4df5ae7d0bf8d546afe7(TestElectricalForceRickGen.java:66)
+But was 1 time:
+-> at org.gephi.layout.plugin.force.yifanHu.YifanHuLayout$ElectricalForce.calculateForce(YifanHuLayout.java:495)
+
+	at org.gephi.layout.plugin.force.yifanHu.TestElectricalForceRickGen.test_calculateForce_CO_d0210372b49f4df5ae7d0bf8d546afe7(TestElectricalForceRickGen.java:66)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 5.627 s <<< FAILURE! -- in org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen
+[ERROR] org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen.test_calculateForce_CO_cba1ebc0864a4ad6a95856e93b7b9931 -- Time elapsed: 2.609 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.yifanHu.YifanHuLayout$SpringForce.calculateForce(YifanHuLayout.java:462)
+	at org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen.test_calculateForce_CO_cba1ebc0864a4ad6a95856e93b7b9931(TestSpringForceRickGen.java:56)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen.test_calculateForce_CO_cba1ebc0864a4ad6a95856e93b7b9931(TestSpringForceRickGen.java:54)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen.test_calculateForce_PO_cba1ebc0864a4ad6a95856e93b7b9931 -- Time elapsed: 2.976 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.layout.plugin.force.yifanHu.YifanHuLayout$SpringForce.calculateForce(YifanHuLayout.java:462)
+	at org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen.test_calculateForce_PO_cba1ebc0864a4ad6a95856e93b7b9931(TestSpringForceRickGen.java:40)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.layout.plugin.force.yifanHu.TestSpringForceRickGen.test_calculateForce_PO_cba1ebc0864a4ad6a95856e93b7b9931(TestSpringForceRickGen.java:38)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.657 s -- in org.gephi.layout.plugin.force.TestStepDisplacementRickGen
+[INFO] Running org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen
+[ERROR] Tests run: 4, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 7.823 s <<< FAILURE! -- in org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen
+[ERROR] org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_PO_4cb273fad91240dea89f4a71102a2dfe -- Time elapsed: 2.188 s <<< FAILURE!
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_PO_4cb273fad91240dea89f4a71102a2dfe(TestAbstractScaleLayoutRickGen.java:97)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_PO_4cb273fad91240dea89f4a71102a2dfe(TestAbstractScaleLayoutRickGen.java:97)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_PO_4cb273fad91240dea89f4a71102a2dfe(TestAbstractScaleLayoutRickGen.java:93)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_CO_46fb8f888c2146728f293a4aa5817f64 -- Time elapsed: 2.050 s <<< FAILURE!
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_CO_46fb8f888c2146728f293a4aa5817f64(TestAbstractScaleLayoutRickGen.java:75)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_CO_46fb8f888c2146728f293a4aa5817f64(TestAbstractScaleLayoutRickGen.java:75)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_CO_46fb8f888c2146728f293a4aa5817f64(TestAbstractScaleLayoutRickGen.java:70)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_CO_4cb273fad91240dea89f4a71102a2dfe -- Time elapsed: 1.799 s <<< FAILURE!
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_CO_4cb273fad91240dea89f4a71102a2dfe(TestAbstractScaleLayoutRickGen.java:111)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_CO_4cb273fad91240dea89f4a71102a2dfe(TestAbstractScaleLayoutRickGen.java:111)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_CO_4cb273fad91240dea89f4a71102a2dfe(TestAbstractScaleLayoutRickGen.java:106)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_PO_46fb8f888c2146728f293a4aa5817f64 -- Time elapsed: 1.768 s <<< FAILURE!
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_PO_46fb8f888c2146728f293a4aa5817f64(TestAbstractScaleLayoutRickGen.java:61)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_PO_46fb8f888c2146728f293a4aa5817f64(TestAbstractScaleLayoutRickGen.java:61)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_PO_46fb8f888c2146728f293a4aa5817f64(TestAbstractScaleLayoutRickGen.java:57)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 4.509 s <<< FAILURE! -- in org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen
+[ERROR] org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_CO_99781e1806a64e57860bf422828f5e88 -- Time elapsed: 2.208 s <<< FAILURE!
+Wanted but not invoked:
+graph.getDegree(<any>);
+-> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_CO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:76)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_CO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:76)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_CO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:66)
+  2. -> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_CO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:67)
+  3. -> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_CO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:68)
+  4. -> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_CO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:69)
+  5. -> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_CO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:70)
+  6. -> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_CO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:71)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_PO_99781e1806a64e57860bf422828f5e88 -- Time elapsed: 2.289 s <<< FAILURE!
+Wanted but not invoked:
+graph.getDegree(
+    <any org.gephi.graph.api.Node>
+);
+-> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_PO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:57)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_PO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:57)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_PO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:48)
+  2. -> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_PO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:49)
+  3. -> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_PO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:50)
+  4. -> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_PO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:51)
+  5. -> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_PO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:52)
+  6. -> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_PO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:53)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen
+[ERROR] Tests run: 6, Failures: 2, Errors: 2, Skipped: 0, Time elapsed: 4.600 s <<< FAILURE! -- in org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen
+[ERROR] org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_CO_eb4141c9f7a240ef8280c1ff8e1ad4e9 -- Time elapsed: 0.776 s <<< FAILURE!
+Wanted but not invoked:
+graph.getDegree(<any>);
+-> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_CO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:77)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_CO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_CO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:67)
+  2. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_CO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:68)
+  3. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_CO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:69)
+  4. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_CO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:70)
+  5. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_CO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:71)
+  6. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_CO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:72)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_CO_3c2dc05b779e4224aef418ec6e93d188 -- Time elapsed: 0.815 s <<< ERROR!
+java.lang.NullPointerException
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1341)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:118)
+	at org.gephi.layout.plugin.forceAtlas2.ForceAtlas2.goAlgo(ForceAtlas2.java:197)
+	at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_CO_3c2dc05b779e4224aef418ec6e93d188(TestForceAtlas2RickGen.java:111)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_CO_3c2dc05b779e4224aef418ec6e93d188(TestForceAtlas2RickGen.java:104)
+  2. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_CO_3c2dc05b779e4224aef418ec6e93d188(TestForceAtlas2RickGen.java:105)
+  3. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_CO_3c2dc05b779e4224aef418ec6e93d188(TestForceAtlas2RickGen.java:106)
+  4. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_CO_3c2dc05b779e4224aef418ec6e93d188(TestForceAtlas2RickGen.java:107)
+  5. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_CO_3c2dc05b779e4224aef418ec6e93d188(TestForceAtlas2RickGen.java:108)
+  6. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_CO_3c2dc05b779e4224aef418ec6e93d188(TestForceAtlas2RickGen.java:109)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_PO_eb4141c9f7a240ef8280c1ff8e1ad4e9 -- Time elapsed: 0.579 s <<< FAILURE!
+Wanted but not invoked:
+graph.getDegree(
+    <any org.gephi.graph.api.Node>
+);
+-> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_PO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:58)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_PO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:58)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_PO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:49)
+  2. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_PO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:50)
+  3. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_PO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:51)
+  4. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_PO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:52)
+  5. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_PO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:53)
+  6. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_PO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:54)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_PO_3c2dc05b779e4224aef418ec6e93d188 -- Time elapsed: 0.692 s <<< ERROR!
+java.lang.NullPointerException
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1341)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:118)
+	at org.gephi.layout.plugin.forceAtlas2.ForceAtlas2.goAlgo(ForceAtlas2.java:197)
+	at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_PO_3c2dc05b779e4224aef418ec6e93d188(TestForceAtlas2RickGen.java:93)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_PO_3c2dc05b779e4224aef418ec6e93d188(TestForceAtlas2RickGen.java:86)
+  2. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_PO_3c2dc05b779e4224aef418ec6e93d188(TestForceAtlas2RickGen.java:87)
+  3. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_PO_3c2dc05b779e4224aef418ec6e93d188(TestForceAtlas2RickGen.java:88)
+  4. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_PO_3c2dc05b779e4224aef418ec6e93d188(TestForceAtlas2RickGen.java:89)
+  5. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_PO_3c2dc05b779e4224aef418ec6e93d188(TestForceAtlas2RickGen.java:90)
+  6. -> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_goAlgo_PO_3c2dc05b779e4224aef418ec6e93d188(TestForceAtlas2RickGen.java:91)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.layout.plugin.forceatlas2.TestNodesThreadRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.884 s -- in org.gephi.layout.plugin.forceatlas2.TestNodesThreadRickGen
+[INFO] Running org.gephi.importer.impl.TestImportContainerImplRickGen
+[ERROR] Tests run: 16, Failures: 2, Errors: 5, Skipped: 0, Time elapsed: 2.346 s <<< FAILURE! -- in org.gephi.importer.impl.TestImportContainerImplRickGen
+[ERROR] org.gephi.importer.impl.TestImportContainerImplRickGen.test_verify_PO_dd8042f5945b45f09b42141fd205eac1 -- Time elapsed: 0.775 s <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at org.gephi.io.importer.impl.ImportContainerImpl.getOpposite(ImportContainerImpl.java:1108)
+	at org.gephi.io.importer.impl.ImportContainerImpl.verify(ImportContainerImpl.java:693)
+	at org.gephi.importer.impl.TestImportContainerImplRickGen.test_verify_PO_dd8042f5945b45f09b42141fd205eac1(TestImportContainerImplRickGen.java:298)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.importer.impl.TestImportContainerImplRickGen.test_addEdge_CO_31ab0355440e490b85d71648e585de54 -- Time elapsed: 0.863 s <<< ERROR!
+java.lang.ClassCastException
+	at org.gephi.io.importer.impl.ImportContainerImpl.checkElementDraftImpl(ImportContainerImpl.java:1141)
+	at org.gephi.io.importer.impl.ImportContainerImpl.addEdge(ImportContainerImpl.java:242)
+	at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addEdge_CO_31ab0355440e490b85d71648e585de54(TestImportContainerImplRickGen.java:257)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addEdge_CO_31ab0355440e490b85d71648e585de54(TestImportContainerImplRickGen.java:251)
+  2. -> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addEdge_CO_31ab0355440e490b85d71648e585de54(TestImportContainerImplRickGen.java:252)
+  3. -> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addEdge_CO_31ab0355440e490b85d71648e585de54(TestImportContainerImplRickGen.java:253)
+  4. -> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addEdge_CO_31ab0355440e490b85d71648e585de54(TestImportContainerImplRickGen.java:254)
+  5. -> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addEdge_CO_31ab0355440e490b85d71648e585de54(TestImportContainerImplRickGen.java:255)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.importer.impl.TestImportContainerImplRickGen.test_addEdge_PO_31ab0355440e490b85d71648e585de54 -- Time elapsed: 0.021 s <<< ERROR!
+java.lang.ClassCastException
+	at org.gephi.io.importer.impl.ImportContainerImpl.checkElementDraftImpl(ImportContainerImpl.java:1141)
+	at org.gephi.io.importer.impl.ImportContainerImpl.addEdge(ImportContainerImpl.java:242)
+	at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addEdge_PO_31ab0355440e490b85d71648e585de54(TestImportContainerImplRickGen.java:234)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addEdge_PO_31ab0355440e490b85d71648e585de54(TestImportContainerImplRickGen.java:228)
+  2. -> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addEdge_PO_31ab0355440e490b85d71648e585de54(TestImportContainerImplRickGen.java:229)
+  3. -> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addEdge_PO_31ab0355440e490b85d71648e585de54(TestImportContainerImplRickGen.java:230)
+  4. -> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addEdge_PO_31ab0355440e490b85d71648e585de54(TestImportContainerImplRickGen.java:231)
+  5. -> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addEdge_PO_31ab0355440e490b85d71648e585de54(TestImportContainerImplRickGen.java:232)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.importer.impl.TestImportContainerImplRickGen.test_verify_OO_dd8042f5945b45f09b42141fd205eac1 -- Time elapsed: 0.044 s <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at org.gephi.io.importer.impl.ImportContainerImpl.getOpposite(ImportContainerImpl.java:1108)
+	at org.gephi.io.importer.impl.ImportContainerImpl.verify(ImportContainerImpl.java:693)
+	at org.gephi.importer.impl.TestImportContainerImplRickGen.test_verify_OO_dd8042f5945b45f09b42141fd205eac1(TestImportContainerImplRickGen.java:286)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.importer.impl.TestImportContainerImplRickGen.test_addNode_CO_022ea0a43645422280137589127ed85b -- Time elapsed: 0.022 s <<< FAILURE!
+Wanted but not invoked:
+object2IntMap.containsKey(<any>);
+-> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addNode_CO_022ea0a43645422280137589127ed85b(TestImportContainerImplRickGen.java:159)
+
+However, there were exactly 4 interactions with this mock:
+object2IntMap.containsKey("1");
+-> at org.gephi.io.importer.impl.ImportContainerImpl.addNode(ImportContainerImpl.java:172)
+
+objectList.size();
+-> at org.gephi.io.importer.impl.ImportContainerImpl.addNode(ImportContainerImpl.java:179)
+
+objectList.add(1);
+-> at org.gephi.io.importer.impl.ImportContainerImpl.addNode(ImportContainerImpl.java:180)
+
+object2IntMap.put("1", 0);
+-> at org.gephi.io.importer.impl.ImportContainerImpl.addNode(ImportContainerImpl.java:181)
+
+
+	at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addNode_CO_022ea0a43645422280137589127ed85b(TestImportContainerImplRickGen.java:159)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addNode_CO_022ea0a43645422280137589127ed85b(TestImportContainerImplRickGen.java:152)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.importer.impl.TestImportContainerImplRickGen.test_verify_CO_dd8042f5945b45f09b42141fd205eac1 -- Time elapsed: 0.042 s <<< ERROR!
+java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+	at org.gephi.io.importer.impl.ImportContainerImpl.getOpposite(ImportContainerImpl.java:1108)
+	at org.gephi.io.importer.impl.ImportContainerImpl.verify(ImportContainerImpl.java:693)
+	at org.gephi.importer.impl.TestImportContainerImplRickGen.test_verify_CO_dd8042f5945b45f09b42141fd205eac1(TestImportContainerImplRickGen.java:311)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.importer.impl.TestImportContainerImplRickGen.test_addNode_PO_022ea0a43645422280137589127ed85b -- Time elapsed: 0.020 s <<< FAILURE!
+Wanted but not invoked:
+object2IntMap.containsKey(
+    <any java.lang.Object>
+);
+-> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addNode_PO_022ea0a43645422280137589127ed85b(TestImportContainerImplRickGen.java:137)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addNode_PO_022ea0a43645422280137589127ed85b(TestImportContainerImplRickGen.java:137)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addNode_PO_022ea0a43645422280137589127ed85b(TestImportContainerImplRickGen.java:131)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.importer.impl.TestImportControllerImplRickGen
+[ERROR] Tests run: 4, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.061 s <<< FAILURE! -- in org.gephi.importer.impl.TestImportControllerImplRickGen
+[ERROR] org.gephi.importer.impl.TestImportControllerImplRickGen.test_importFile_java_io_Reader_org_gephi_io_importer_spi_FileImporter_java_io_File_CO_8421f36aa3e24ed0982be3c55dc2a156 -- Time elapsed: 0.627 s <<< FAILURE!
+org.mockito.exceptions.verification.VerificationInOrderFailure: 
+
+Verification in order failure
+Wanted but not invoked:
+importer.execute(<any>);
+-> at org.gephi.importer.impl.TestImportControllerImplRickGen.test_importFile_java_io_Reader_org_gephi_io_importer_spi_FileImporter_java_io_File_CO_8421f36aa3e24ed0982be3c55dc2a156(TestImportControllerImplRickGen.java:72)
+Wanted anywhere AFTER following interaction:
+fileImporter.setReader(
+    Mock for Reader, hashCode: 307307754
+);
+-> at org.gephi.io.importer.impl.ImportControllerImpl.importFile(ImportControllerImpl.java:200)
+
+	at org.gephi.importer.impl.TestImportControllerImplRickGen.test_importFile_java_io_Reader_org_gephi_io_importer_spi_FileImporter_java_io_File_CO_8421f36aa3e24ed0982be3c55dc2a156(TestImportControllerImplRickGen.java:72)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.importer.impl.TestImportControllerImplRickGen.test_importFile_java_io_Reader_org_gephi_io_importer_spi_FileImporter_java_io_File_CO_8421f36aa3e24ed0982be3c55dc2a156(TestImportControllerImplRickGen.java:66)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.importer.impl.TestImportControllerImplRickGen.test_importFile_java_io_Reader_org_gephi_io_importer_spi_FileImporter_java_io_File_PO_8421f36aa3e24ed0982be3c55dc2a156 -- Time elapsed: 0.020 s <<< FAILURE!
+Wanted but not invoked:
+importer.execute(
+    <any org.gephi.io.importer.api.ContainerLoader>
+);
+-> at org.gephi.importer.impl.TestImportControllerImplRickGen.test_importFile_java_io_Reader_org_gephi_io_importer_spi_FileImporter_java_io_File_PO_8421f36aa3e24ed0982be3c55dc2a156(TestImportControllerImplRickGen.java:51)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.importer.impl.TestImportControllerImplRickGen.test_importFile_java_io_Reader_org_gephi_io_importer_spi_FileImporter_java_io_File_PO_8421f36aa3e24ed0982be3c55dc2a156(TestImportControllerImplRickGen.java:51)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.importer.impl.TestImportControllerImplRickGen.test_importFile_java_io_Reader_org_gephi_io_importer_spi_FileImporter_java_io_File_PO_8421f36aa3e24ed0982be3c55dc2a156(TestImportControllerImplRickGen.java:46)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.importer.impl.TestElementDraftImplRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.266 s -- in org.gephi.importer.impl.TestElementDraftImplRickGen
+[INFO] Running org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.056 s <<< FAILURE! -- in org.gephi.statistics.plugin.TestClusteringCoefficientRickGen
+[ERROR] org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc -- Time elapsed: 0.033 s <<< FAILURE!
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:39)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:39)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:35)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc -- Time elapsed: 0.006 s <<< FAILURE!
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:53)
+Actually, there were zero interactions with this mock.
+
+	at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:48)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.statistics.plugin.TestModularityRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.030 s <<< FAILURE! -- in org.gephi.statistics.plugin.TestModularityRickGen
+[ERROR] org.gephi.statistics.plugin.TestModularityRickGen.test_execute_org_gephi_graph_api_Graph_CO_604ce04c42df40da9cc34b4d8b34ad3e -- Time elapsed: 0.012 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.Modularity.execute(Modularity.java:139)
+	at org.gephi.statistics.plugin.TestModularityRickGen.test_execute_org_gephi_graph_api_Graph_CO_604ce04c42df40da9cc34b4d8b34ad3e(TestModularityRickGen.java:50)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.statistics.plugin.TestModularityRickGen.test_execute_org_gephi_graph_api_Graph_CO_604ce04c42df40da9cc34b4d8b34ad3e(TestModularityRickGen.java:48)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.statistics.plugin.TestModularityRickGen.test_execute_org_gephi_graph_api_Graph_PO_604ce04c42df40da9cc34b4d8b34ad3e -- Time elapsed: 0.008 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.Modularity.execute(Modularity.java:139)
+	at org.gephi.statistics.plugin.TestModularityRickGen.test_execute_org_gephi_graph_api_Graph_PO_604ce04c42df40da9cc34b4d8b34ad3e(TestModularityRickGen.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.statistics.plugin.TestModularityRickGen.test_execute_org_gephi_graph_api_Graph_PO_604ce04c42df40da9cc34b4d8b34ad3e(TestModularityRickGen.java:35)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.statistics.plugin.TestHitsRickGen
+[ERROR] Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 4.698 s <<< FAILURE! -- in org.gephi.statistics.plugin.TestHitsRickGen
+[ERROR] org.gephi.statistics.plugin.TestHitsRickGen.test_execute_org_gephi_graph_api_Graph_CO_0d1971289ec8456aa6da5d1654cf4c34 -- Time elapsed: 0.013 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.Hits.initializeAttributeColunms(Hits.java:159)
+	at org.gephi.statistics.plugin.Hits.execute(Hits.java:114)
+	at org.gephi.statistics.plugin.TestHitsRickGen.test_execute_org_gephi_graph_api_Graph_CO_0d1971289ec8456aa6da5d1654cf4c34(TestHitsRickGen.java:90)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.statistics.plugin.TestHitsRickGen.test_execute_org_gephi_graph_api_Graph_CO_0d1971289ec8456aa6da5d1654cf4c34(TestHitsRickGen.java:88)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.statistics.plugin.TestHitsRickGen.test_calculateHits_CO_251f37f2e7be4ff084fb1f1bf02e45fe -- Time elapsed: 2.456 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.Hits.updateAutorithy(Hits.java:186)
+	at org.gephi.statistics.plugin.Hits.calculateHits(Hits.java:145)
+	at org.gephi.statistics.plugin.TestHitsRickGen.test_calculateHits_CO_251f37f2e7be4ff084fb1f1bf02e45fe(TestHitsRickGen.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.statistics.plugin.TestHitsRickGen.test_execute_org_gephi_graph_api_Graph_PO_0d1971289ec8456aa6da5d1654cf4c34 -- Time elapsed: 0.010 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.Hits.initializeAttributeColunms(Hits.java:159)
+	at org.gephi.statistics.plugin.Hits.execute(Hits.java:114)
+	at org.gephi.statistics.plugin.TestHitsRickGen.test_execute_org_gephi_graph_api_Graph_PO_0d1971289ec8456aa6da5d1654cf4c34(TestHitsRickGen.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.statistics.plugin.TestHitsRickGen.test_execute_org_gephi_graph_api_Graph_PO_0d1971289ec8456aa6da5d1654cf4c34(TestHitsRickGen.java:75)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.statistics.plugin.TestHitsRickGen.test_calculateHits_PO_251f37f2e7be4ff084fb1f1bf02e45fe -- Time elapsed: 2.194 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.Hits.updateAutorithy(Hits.java:186)
+	at org.gephi.statistics.plugin.Hits.calculateHits(Hits.java:145)
+	at org.gephi.statistics.plugin.TestHitsRickGen.test_calculateHits_PO_251f37f2e7be4ff084fb1f1bf02e45fe(TestHitsRickGen.java:44)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.gephi.statistics.plugin.TestWeightedDegreeRickGen
+[ERROR] Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 5.913 s <<< FAILURE! -- in org.gephi.statistics.plugin.TestWeightedDegreeRickGen
+[ERROR] org.gephi.statistics.plugin.TestWeightedDegreeRickGen.test_execute_org_gephi_graph_api_Graph_PO_c8bab684def54b5c8fefc8d09ad3b5c8 -- Time elapsed: 0.012 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.WeightedDegree.initializeAttributeColunms(WeightedDegree.java:170)
+	at org.gephi.statistics.plugin.WeightedDegree.execute(WeightedDegree.java:98)
+	at org.gephi.statistics.plugin.TestWeightedDegreeRickGen.test_execute_org_gephi_graph_api_Graph_PO_c8bab684def54b5c8fefc8d09ad3b5c8(TestWeightedDegreeRickGen.java:88)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.statistics.plugin.TestWeightedDegreeRickGen.test_calculateAverageWeightedDegree_OO_93725bb82fc6428cb50f6e2fb652a87e -- Time elapsed: 2.227 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.WeightedDegree.calculateAverageWeightedDegree(WeightedDegree.java:120)
+	at org.gephi.statistics.plugin.TestWeightedDegreeRickGen.test_calculateAverageWeightedDegree_OO_93725bb82fc6428cb50f6e2fb652a87e(TestWeightedDegreeRickGen.java:42)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.statistics.plugin.TestWeightedDegreeRickGen.test_calculateAverageWeightedDegree_CO_93725bb82fc6428cb50f6e2fb652a87e -- Time elapsed: 1.789 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.WeightedDegree.calculateAverageWeightedDegree(WeightedDegree.java:120)
+	at org.gephi.statistics.plugin.TestWeightedDegreeRickGen.test_calculateAverageWeightedDegree_CO_93725bb82fc6428cb50f6e2fb652a87e(TestWeightedDegreeRickGen.java:74)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.statistics.plugin.TestWeightedDegreeRickGen.test_calculateAverageWeightedDegree_PO_93725bb82fc6428cb50f6e2fb652a87e -- Time elapsed: 1.862 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.WeightedDegree.calculateAverageWeightedDegree(WeightedDegree.java:120)
+	at org.gephi.statistics.plugin.TestWeightedDegreeRickGen.test_calculateAverageWeightedDegree_PO_93725bb82fc6428cb50f6e2fb652a87e(TestWeightedDegreeRickGen.java:58)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.statistics.plugin.TestWeightedDegreeRickGen.test_execute_org_gephi_graph_api_Graph_CO_c8bab684def54b5c8fefc8d09ad3b5c8 -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.WeightedDegree.initializeAttributeColunms(WeightedDegree.java:170)
+	at org.gephi.statistics.plugin.WeightedDegree.execute(WeightedDegree.java:98)
+	at org.gephi.statistics.plugin.TestWeightedDegreeRickGen.test_execute_org_gephi_graph_api_Graph_CO_c8bab684def54b5c8fefc8d09ad3b5c8(TestWeightedDegreeRickGen.java:101)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.gephi.statistics.plugin.TestGraphDistanceRickGen
+[ERROR] Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 5.820 s <<< FAILURE! -- in org.gephi.statistics.plugin.TestGraphDistanceRickGen
+[ERROR] org.gephi.statistics.plugin.TestGraphDistanceRickGen.test_execute_org_gephi_graph_api_Graph_CO_bb43dde8695241028be25606a7ce8e81 -- Time elapsed: 0.024 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.GraphDistance.initializeAttributeColunms(GraphDistance.java:328)
+	at org.gephi.statistics.plugin.GraphDistance.execute(GraphDistance.java:178)
+	at org.gephi.statistics.plugin.TestGraphDistanceRickGen.test_execute_org_gephi_graph_api_Graph_CO_bb43dde8695241028be25606a7ce8e81(TestGraphDistanceRickGen.java:85)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.statistics.plugin.TestGraphDistanceRickGen.test_execute_org_gephi_graph_api_Graph_CO_bb43dde8695241028be25606a7ce8e81(TestGraphDistanceRickGen.java:83)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.statistics.plugin.TestGraphDistanceRickGen.test_calculateDistanceMetrics_CO_0f51babd20ff473a8ffb0356324f7d4b -- Time elapsed: 2.629 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.GraphDistance.calculateDistanceMetrics(GraphDistance.java:223)
+	at org.gephi.statistics.plugin.TestGraphDistanceRickGen.test_calculateDistanceMetrics_CO_0f51babd20ff473a8ffb0356324f7d4b(TestGraphDistanceRickGen.java:58)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.statistics.plugin.TestGraphDistanceRickGen.test_execute_org_gephi_graph_api_Graph_PO_bb43dde8695241028be25606a7ce8e81 -- Time elapsed: 0.008 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.GraphDistance.initializeAttributeColunms(GraphDistance.java:328)
+	at org.gephi.statistics.plugin.GraphDistance.execute(GraphDistance.java:178)
+	at org.gephi.statistics.plugin.TestGraphDistanceRickGen.test_execute_org_gephi_graph_api_Graph_PO_bb43dde8695241028be25606a7ce8e81(TestGraphDistanceRickGen.java:72)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.statistics.plugin.TestGraphDistanceRickGen.test_execute_org_gephi_graph_api_Graph_PO_bb43dde8695241028be25606a7ce8e81(TestGraphDistanceRickGen.java:70)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.statistics.plugin.TestGraphDistanceRickGen.test_calculateDistanceMetrics_PO_0f51babd20ff473a8ffb0356324f7d4b -- Time elapsed: 3.142 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.GraphDistance.calculateDistanceMetrics(GraphDistance.java:223)
+	at org.gephi.statistics.plugin.TestGraphDistanceRickGen.test_calculateDistanceMetrics_PO_0f51babd20ff473a8ffb0356324f7d4b(TestGraphDistanceRickGen.java:41)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.gephi.statistics.plugin.TestStatisticalInferenceClusteringRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.042 s <<< FAILURE! -- in org.gephi.statistics.plugin.TestStatisticalInferenceClusteringRickGen
+[ERROR] org.gephi.statistics.plugin.TestStatisticalInferenceClusteringRickGen.test_execute_org_gephi_graph_api_Graph_CO_640f32335d41424898ebd239b5ff4a68 -- Time elapsed: 0.026 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.StatisticalInferenceClustering.execute(StatisticalInferenceClustering.java:110)
+	at org.gephi.statistics.plugin.TestStatisticalInferenceClusteringRickGen.test_execute_org_gephi_graph_api_Graph_CO_640f32335d41424898ebd239b5ff4a68(TestStatisticalInferenceClusteringRickGen.java:50)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.statistics.plugin.TestStatisticalInferenceClusteringRickGen.test_execute_org_gephi_graph_api_Graph_CO_640f32335d41424898ebd239b5ff4a68(TestStatisticalInferenceClusteringRickGen.java:48)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.statistics.plugin.TestStatisticalInferenceClusteringRickGen.test_execute_org_gephi_graph_api_Graph_PO_640f32335d41424898ebd239b5ff4a68 -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.StatisticalInferenceClustering.execute(StatisticalInferenceClustering.java:110)
+	at org.gephi.statistics.plugin.TestStatisticalInferenceClusteringRickGen.test_execute_org_gephi_graph_api_Graph_PO_640f32335d41424898ebd239b5ff4a68(TestStatisticalInferenceClusteringRickGen.java:37)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.statistics.plugin.TestStatisticalInferenceClusteringRickGen.test_execute_org_gephi_graph_api_Graph_PO_640f32335d41424898ebd239b5ff4a68(TestStatisticalInferenceClusteringRickGen.java:35)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.statistics.plugin.TestEigenvectorCentralityRickGen
+[ERROR] Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 9.988 s <<< FAILURE! -- in org.gephi.statistics.plugin.TestEigenvectorCentralityRickGen
+[ERROR] org.gephi.statistics.plugin.TestEigenvectorCentralityRickGen.test_calculateEigenvectorCentrality_CO_89da1e133bb0494c93295dcc90d608ee -- Time elapsed: 3.665 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.EigenvectorCentrality.computeMaxValueAndTempValues(EigenvectorCentrality.java:211)
+	at org.gephi.statistics.plugin.EigenvectorCentrality.calculateEigenvectorCentrality(EigenvectorCentrality.java:253)
+	at org.gephi.statistics.plugin.TestEigenvectorCentralityRickGen.test_calculateEigenvectorCentrality_CO_89da1e133bb0494c93295dcc90d608ee(TestEigenvectorCentralityRickGen.java:83)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.statistics.plugin.TestEigenvectorCentralityRickGen.test_calculateEigenvectorCentrality_PO_89da1e133bb0494c93295dcc90d608ee -- Time elapsed: 3.015 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.EigenvectorCentrality.computeMaxValueAndTempValues(EigenvectorCentrality.java:211)
+	at org.gephi.statistics.plugin.EigenvectorCentrality.calculateEigenvectorCentrality(EigenvectorCentrality.java:253)
+	at org.gephi.statistics.plugin.TestEigenvectorCentralityRickGen.test_calculateEigenvectorCentrality_PO_89da1e133bb0494c93295dcc90d608ee(TestEigenvectorCentralityRickGen.java:64)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.statistics.plugin.TestEigenvectorCentralityRickGen.test_execute_org_gephi_graph_api_Graph_CO_30ddb992f3a94b558263cae9e8e56ab2 -- Time elapsed: 0.015 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.EigenvectorCentrality.initializeAttributeColunms(EigenvectorCentrality.java:158)
+	at org.gephi.statistics.plugin.EigenvectorCentrality.execute(EigenvectorCentrality.java:133)
+	at org.gephi.statistics.plugin.TestEigenvectorCentralityRickGen.test_execute_org_gephi_graph_api_Graph_CO_30ddb992f3a94b558263cae9e8e56ab2(TestEigenvectorCentralityRickGen.java:110)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.statistics.plugin.TestEigenvectorCentralityRickGen.test_execute_org_gephi_graph_api_Graph_CO_30ddb992f3a94b558263cae9e8e56ab2(TestEigenvectorCentralityRickGen.java:108)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[ERROR] org.gephi.statistics.plugin.TestEigenvectorCentralityRickGen.test_calculateEigenvectorCentrality_OO_89da1e133bb0494c93295dcc90d608ee -- Time elapsed: 3.269 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.EigenvectorCentrality.computeMaxValueAndTempValues(EigenvectorCentrality.java:211)
+	at org.gephi.statistics.plugin.EigenvectorCentrality.calculateEigenvectorCentrality(EigenvectorCentrality.java:253)
+	at org.gephi.statistics.plugin.TestEigenvectorCentralityRickGen.test_calculateEigenvectorCentrality_OO_89da1e133bb0494c93295dcc90d608ee(TestEigenvectorCentralityRickGen.java:45)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.statistics.plugin.TestEigenvectorCentralityRickGen.test_execute_org_gephi_graph_api_Graph_PO_30ddb992f3a94b558263cae9e8e56ab2 -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.EigenvectorCentrality.initializeAttributeColunms(EigenvectorCentrality.java:158)
+	at org.gephi.statistics.plugin.EigenvectorCentrality.execute(EigenvectorCentrality.java:133)
+	at org.gephi.statistics.plugin.TestEigenvectorCentralityRickGen.test_execute_org_gephi_graph_api_Graph_PO_30ddb992f3a94b558263cae9e8e56ab2(TestEigenvectorCentralityRickGen.java:97)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	Suppressed: org.mockito.exceptions.misusing.UnnecessaryStubbingException: 
+Unnecessary stubbings detected.
+Clean & maintainable test code requires zero unnecessary code.
+Following stubbings are unnecessary (click to navigate to relevant line of code):
+  1. -> at org.gephi.statistics.plugin.TestEigenvectorCentralityRickGen.test_execute_org_gephi_graph_api_Graph_PO_30ddb992f3a94b558263cae9e8e56ab2(TestEigenvectorCentralityRickGen.java:95)
+Please remove unnecessary stubbings or use 'lenient' strictness. More info: javadoc for UnnecessaryStubbingException class.
+		at org.mockito.junit.jupiter.MockitoExtension.afterEach(MockitoExtension.java:211)
+		... 2 more
+
+[INFO] Running org.gephi.statistics.plugin.TestDegreeRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.033 s <<< FAILURE! -- in org.gephi.statistics.plugin.TestDegreeRickGen
+[ERROR] org.gephi.statistics.plugin.TestDegreeRickGen.test_execute_org_gephi_graph_api_Graph_CO_28b577ff98254859875c3c7e7314d536 -- Time elapsed: 0.018 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.Degree.initializeAttributeColunms(Degree.java:184)
+	at org.gephi.statistics.plugin.Degree.execute(Degree.java:110)
+	at org.gephi.statistics.plugin.TestDegreeRickGen.test_execute_org_gephi_graph_api_Graph_CO_28b577ff98254859875c3c7e7314d536(TestDegreeRickGen.java:54)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.statistics.plugin.TestDegreeRickGen.test_execute_org_gephi_graph_api_Graph_PO_28b577ff98254859875c3c7e7314d536 -- Time elapsed: 0.005 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.Degree.initializeAttributeColunms(Degree.java:184)
+	at org.gephi.statistics.plugin.Degree.execute(Degree.java:110)
+	at org.gephi.statistics.plugin.TestDegreeRickGen.test_execute_org_gephi_graph_api_Graph_PO_28b577ff98254859875c3c7e7314d536(TestDegreeRickGen.java:40)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.gephi.statistics.plugin.TestConnectedComponentsRickGen
+[ERROR] Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 8.014 s <<< FAILURE! -- in org.gephi.statistics.plugin.TestConnectedComponentsRickGen
+[ERROR] org.gephi.statistics.plugin.TestConnectedComponentsRickGen.test_top_tarjans_PO_2ea50032a1f144aba3ac58f0d451e49c -- Time elapsed: 2.277 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.ConnectedComponents.top_tarjans(ConnectedComponents.java:278)
+	at org.gephi.statistics.plugin.TestConnectedComponentsRickGen.test_top_tarjans_PO_2ea50032a1f144aba3ac58f0d451e49c(TestConnectedComponentsRickGen.java:71)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.statistics.plugin.TestConnectedComponentsRickGen.test_computeWeaklyConnectedComponents_CO_5f92bbe159c340e6825c0e2c7e5a84cf -- Time elapsed: 2.115 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.ConnectedComponents.computeWeaklyConnectedComponents(ConnectedComponents.java:151)
+	at org.gephi.statistics.plugin.TestConnectedComponentsRickGen.test_computeWeaklyConnectedComponents_CO_5f92bbe159c340e6825c0e2c7e5a84cf(TestConnectedComponentsRickGen.java:55)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.statistics.plugin.TestConnectedComponentsRickGen.test_computeWeaklyConnectedComponents_PO_5f92bbe159c340e6825c0e2c7e5a84cf -- Time elapsed: 1.654 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.ConnectedComponents.computeWeaklyConnectedComponents(ConnectedComponents.java:151)
+	at org.gephi.statistics.plugin.TestConnectedComponentsRickGen.test_computeWeaklyConnectedComponents_PO_5f92bbe159c340e6825c0e2c7e5a84cf(TestConnectedComponentsRickGen.java:40)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[ERROR] org.gephi.statistics.plugin.TestConnectedComponentsRickGen.test_top_tarjans_CO_2ea50032a1f144aba3ac58f0d451e49c -- Time elapsed: 1.957 s <<< ERROR!
+java.lang.NullPointerException
+	at org.gephi.statistics.plugin.ConnectedComponents.top_tarjans(ConnectedComponents.java:278)
+	at org.gephi.statistics.plugin.TestConnectedComponentsRickGen.test_top_tarjans_CO_2ea50032a1f144aba3ac58f0d451e49c(TestConnectedComponentsRickGen.java:86)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+
+[INFO] Running org.gephi.statistics.plugin.TestGraphDensityRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.666 s -- in org.gephi.statistics.plugin.TestGraphDensityRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestImportContainerImplRickGen.test_addNode_CO_022ea0a43645422280137589127ed85b:159 
+Wanted but not invoked:
+object2IntMap.containsKey(<any>);
+-> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addNode_CO_022ea0a43645422280137589127ed85b(TestImportContainerImplRickGen.java:159)
+
+However, there were exactly 4 interactions with this mock:
+object2IntMap.containsKey("1");
+-> at org.gephi.io.importer.impl.ImportContainerImpl.addNode(ImportContainerImpl.java:172)
+
+objectList.size();
+-> at org.gephi.io.importer.impl.ImportContainerImpl.addNode(ImportContainerImpl.java:179)
+
+objectList.add(1);
+-> at org.gephi.io.importer.impl.ImportContainerImpl.addNode(ImportContainerImpl.java:180)
+
+object2IntMap.put("1", 0);
+-> at org.gephi.io.importer.impl.ImportContainerImpl.addNode(ImportContainerImpl.java:181)
+
+
+[ERROR]   TestImportContainerImplRickGen.test_addNode_PO_022ea0a43645422280137589127ed85b:137 
+Wanted but not invoked:
+object2IntMap.containsKey(
+    <any java.lang.Object>
+);
+-> at org.gephi.importer.impl.TestImportContainerImplRickGen.test_addNode_PO_022ea0a43645422280137589127ed85b(TestImportContainerImplRickGen.java:137)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestImportControllerImplRickGen.test_importFile_java_io_Reader_org_gephi_io_importer_spi_FileImporter_java_io_File_CO_8421f36aa3e24ed0982be3c55dc2a156:72 
+Verification in order failure
+Wanted but not invoked:
+importer.execute(<any>);
+-> at org.gephi.importer.impl.TestImportControllerImplRickGen.test_importFile_java_io_Reader_org_gephi_io_importer_spi_FileImporter_java_io_File_CO_8421f36aa3e24ed0982be3c55dc2a156(TestImportControllerImplRickGen.java:72)
+Wanted anywhere AFTER following interaction:
+fileImporter.setReader(
+    Mock for Reader, hashCode: 307307754
+);
+-> at org.gephi.io.importer.impl.ImportControllerImpl.importFile(ImportControllerImpl.java:200)
+
+[ERROR]   TestImportControllerImplRickGen.test_importFile_java_io_Reader_org_gephi_io_importer_spi_FileImporter_java_io_File_PO_8421f36aa3e24ed0982be3c55dc2a156:51 
+Wanted but not invoked:
+importer.execute(
+    <any org.gephi.io.importer.api.ContainerLoader>
+);
+-> at org.gephi.importer.impl.TestImportControllerImplRickGen.test_importFile_java_io_Reader_org_gephi_io_importer_spi_FileImporter_java_io_File_PO_8421f36aa3e24ed0982be3c55dc2a156(TestImportControllerImplRickGen.java:51)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestExportControllerImplRickGen.test_exportFile_java_io_File_org_gephi_io_exporter_spi_Exporter_CO_744b86beaa414f12b21b78c862057698:62 
+Verification in order failure
+Wanted but not invoked:
+exporter.execute();
+-> at org.gephi.io.exporter.impl.TestExportControllerImplRickGen.test_exportFile_java_io_File_org_gephi_io_exporter_spi_Exporter_CO_744b86beaa414f12b21b78c862057698(TestExportControllerImplRickGen.java:62)
+Wanted anywhere AFTER following interaction:
+exporter.setWorkspace(null);
+-> at org.gephi.io.exporter.impl.ExportControllerImpl.exportFile(ExportControllerImpl.java:111)
+
+[ERROR]   TestExportControllerImplRickGen.test_exportFile_java_io_File_org_gephi_io_exporter_spi_Exporter_PO_744b86beaa414f12b21b78c862057698:44 
+Argument(s) are different! Wanted:
+exporter.setWorkspace(
+    <any org.gephi.project.api.Workspace>
+);
+-> at org.gephi.io.exporter.impl.TestExportControllerImplRickGen.test_exportFile_java_io_File_org_gephi_io_exporter_spi_Exporter_PO_744b86beaa414f12b21b78c862057698(TestExportControllerImplRickGen.java:44)
+Actual invocations have different arguments:
+exporter.getWorkspace(
+    
+);
+-> at org.gephi.io.exporter.impl.ExportControllerImpl.exportFile(ExportControllerImpl.java:108)
+exporter.setWorkspace(
+    null
+);
+-> at org.gephi.io.exporter.impl.ExportControllerImpl.exportFile(ExportControllerImpl.java:111)
+
+[ERROR]   TestProportionalDisplacementRickGen.test_moveNode_PO_bb082e870eda4717ae6f5897572bc3fa:43 
+Argument(s) are different! Wanted:
+node.setX(-403.2223f);
+-> at org.gephi.layout.plugin.force.TestProportionalDisplacementRickGen.test_moveNode_PO_bb082e870eda4717ae6f5897572bc3fa(TestProportionalDisplacementRickGen.java:43)
+Actual invocations have different arguments:
+node.x();
+-> at org.gephi.layout.plugin.force.ProportionalDisplacement.moveNode(ProportionalDisplacement.java:76)
+node.y();
+-> at org.gephi.layout.plugin.force.ProportionalDisplacement.moveNode(ProportionalDisplacement.java:77)
+node.setX(0.7035823f);
+-> at org.gephi.layout.plugin.force.ProportionalDisplacement.moveNode(ProportionalDisplacement.java:80)
+node.setY(-0.080993615f);
+-> at org.gephi.layout.plugin.force.ProportionalDisplacement.moveNode(ProportionalDisplacement.java:83)
+
+[ERROR]   TestElectricalForceRickGen.test_calculateForce_CO_d0210372b49f4df5ae7d0bf8d546afe7:66 
+Verification in order failure:
+node.x();
+Wanted 2 times:
+-> at org.gephi.layout.plugin.force.yifanHu.TestElectricalForceRickGen.test_calculateForce_CO_d0210372b49f4df5ae7d0bf8d546afe7(TestElectricalForceRickGen.java:66)
+But was 1 time:
+-> at org.gephi.layout.plugin.force.yifanHu.YifanHuLayout$ElectricalForce.calculateForce(YifanHuLayout.java:495)
+
+[ERROR]   TestForceAtlasLayoutRickGen.test_goAlgo_CO_99781e1806a64e57860bf422828f5e88:76 
+Wanted but not invoked:
+graph.getDegree(<any>);
+-> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_CO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:76)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestForceAtlasLayoutRickGen.test_goAlgo_PO_99781e1806a64e57860bf422828f5e88:57 
+Wanted but not invoked:
+graph.getDegree(
+    <any org.gephi.graph.api.Node>
+);
+-> at org.gephi.layout.plugin.forceatlas.TestForceAtlasLayoutRickGen.test_goAlgo_PO_99781e1806a64e57860bf422828f5e88(TestForceAtlasLayoutRickGen.java:57)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestForceAtlas2RickGen.test_initAlgo_CO_eb4141c9f7a240ef8280c1ff8e1ad4e9:77 
+Wanted but not invoked:
+graph.getDegree(<any>);
+-> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_CO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:77)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestForceAtlas2RickGen.test_initAlgo_PO_eb4141c9f7a240ef8280c1ff8e1ad4e9:58 
+Wanted but not invoked:
+graph.getDegree(
+    <any org.gephi.graph.api.Node>
+);
+-> at org.gephi.layout.plugin.forceatlas2.TestForceAtlas2RickGen.test_initAlgo_PO_eb4141c9f7a240ef8280c1ff8e1ad4e9(TestForceAtlas2RickGen.java:58)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestOpenOrdLayoutRickGen.test_initAlgo_CO_85f725216cd6499ba5dc3c7d81605e53:77 
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.layout.plugin.openord.TestOpenOrdLayoutRickGen.test_initAlgo_CO_85f725216cd6499ba5dc3c7d81605e53(TestOpenOrdLayoutRickGen.java:77)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestOpenOrdLayoutRickGen.test_initAlgo_PO_85f725216cd6499ba5dc3c7d81605e53:60 
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.layout.plugin.openord.TestOpenOrdLayoutRickGen.test_initAlgo_PO_85f725216cd6499ba5dc3c7d81605e53(TestOpenOrdLayoutRickGen.java:60)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestAbstractScaleLayoutRickGen.test_goAlgo_CO_46fb8f888c2146728f293a4aa5817f64:75 
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_CO_46fb8f888c2146728f293a4aa5817f64(TestAbstractScaleLayoutRickGen.java:75)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestAbstractScaleLayoutRickGen.test_goAlgo_CO_4cb273fad91240dea89f4a71102a2dfe:111 
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_CO_4cb273fad91240dea89f4a71102a2dfe(TestAbstractScaleLayoutRickGen.java:111)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestAbstractScaleLayoutRickGen.test_goAlgo_PO_46fb8f888c2146728f293a4aa5817f64:61 
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_PO_46fb8f888c2146728f293a4aa5817f64(TestAbstractScaleLayoutRickGen.java:61)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestAbstractScaleLayoutRickGen.test_goAlgo_PO_4cb273fad91240dea89f4a71102a2dfe:97 
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.layout.plugin.scale.TestAbstractScaleLayoutRickGen.test_goAlgo_PO_4cb273fad91240dea89f4a71102a2dfe(TestAbstractScaleLayoutRickGen.java:97)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestSVGRenderTargetImplRickGen.test_toHexString_CO_b39626b373c6430bb9b3657fa24481f2:68 
+Verification in order failure:
+color.getRGB();
+Wanted 5 times:
+-> at java.desktop/java.awt.Color.getRGB(Color.java:603)
+But was 1 time:
+-> at org.gephi.preview.SVGRenderTargetBuilder$SVGRenderTargetImpl.toHexString(SVGRenderTargetBuilder.java:211)
+
+[ERROR]   TestNodeRendererRickGen.test_getCanvasSize_CO_b286eddbe387428fb752619921096014:67 
+Wanted but not invoked:
+previewProperties.getFloatValue(
+    <any string>
+);
+-> at org.gephi.preview.api.PreviewProperties.getFloatValue(PreviewProperties.java:198)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestNodeRendererRickGen.test_getCanvasSize_PO_b286eddbe387428fb752619921096014:51 
+Wanted but not invoked:
+previewProperties.getFloatValue(
+    "node.border.width"
+);
+-> at org.gephi.preview.api.PreviewProperties.getFloatValue(PreviewProperties.java:198)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestEdgeColorRickGen.test_getColor_CO_0fdd2586263f4a01939a6792f6c26498:72 
+Verification in order failure
+Wanted but not invoked:
+color.getRed();
+-> at java.desktop/java.awt.Color.getRed(Color.java:557)
+Wanted anywhere AFTER following interaction:
+color.getAlpha();
+-> at org.gephi.preview.types.EdgeColor.getColor(EdgeColor.java:93)
+
+[ERROR]   TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc:53 
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_CO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:53)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc:39 
+Wanted but not invoked:
+graph.getNodeCount();
+-> at org.gephi.statistics.plugin.TestClusteringCoefficientRickGen.test_initStartValues_PO_f29a1b805ab24ee590cd363de4ce23cc(TestClusteringCoefficientRickGen.java:39)
+Actually, there were zero interactions with this mock.
+
+[ERROR] Errors: 
+[ERROR]   TestAttributeColumnsControllerImplRickGen.test_canClearColumnData_CO_f4dc0aa00d034745b0a3f656925fec59:76 » NullPointer
+[ERROR]   TestAttributeColumnsControllerImplRickGen.test_canClearColumnData_OO_f4dc0aa00d034745b0a3f656925fec59:46 » NullPointer
+[ERROR]   TestAttributeColumnsControllerImplRickGen.test_canClearColumnData_PO_f4dc0aa00d034745b0a3f656925fec59:61 » NullPointer
+[ERROR]   TestGraphElementsControllerImplRickGen.test_createEdge_java_lang_String_org_gephi_graph_api_Node_org_gephi_graph_api_Node_boolean_java_lang_Object_org_gephi_graph_api_Graph_CO_bf0e2c71b1144da388f41f5c12817ec6:71 » NullPointer
+[ERROR]   TestGraphElementsControllerImplRickGen.test_createEdge_java_lang_String_org_gephi_graph_api_Node_org_gephi_graph_api_Node_boolean_java_lang_Object_org_gephi_graph_api_Graph_PO_bf0e2c71b1144da388f41f5c12817ec6:50 » NullPointer
+[ERROR]   TestGraphElementsControllerImplRickGen.test_createNode_java_lang_String_org_gephi_graph_api_Graph_CO_71886cbf1e244d3fa43aadb95b023ca6:106 » NullPointer
+[ERROR]   TestGraphElementsControllerImplRickGen.test_createNode_java_lang_String_org_gephi_graph_api_Graph_PO_71886cbf1e244d3fa43aadb95b023ca6:89 » NullPointer
+[ERROR]   TestGraphElementsControllerImplRickGen.test_mergeNodes_CO_d44d16a58ee84119acd8f2f817251b9f:172 » NullPointer
+[ERROR]   TestGraphElementsControllerImplRickGen.test_mergeNodes_PO_d44d16a58ee84119acd8f2f817251b9f:136 » NullPointer
+[ERROR]   TestSearchReplaceControllerImplRickGen.test_replaceAll_CO_3ffa029d19364a5caddf91d6d3643ace:73 » NullPointer
+[ERROR]   TestSearchReplaceControllerImplRickGen.test_replaceAll_OO_3ffa029d19364a5caddf91d6d3643ace:41 » NullPointer
+[ERROR]   TestSearchReplaceControllerImplRickGen.test_replaceAll_PO_3ffa029d19364a5caddf91d6d3643ace:57 » NullPointer
+[ERROR]   TestAttributeColumnsMergeStrategiesControllerImplRickGen.test_mergeDateColumnsToTimeInterval_CO_0fdc275bfe5d438382837f778a4e3eb8:78 » NullPointer
+[ERROR]   TestAttributeColumnsMergeStrategiesControllerImplRickGen.test_mergeDateColumnsToTimeInterval_PO_0fdc275bfe5d438382837f778a4e3eb8:53 » NullPointer
+[ERROR]   TestAttributeColumnsMergeStrategiesControllerImplRickGen.test_mergeNumericColumnsToTimeInterval_CO_e30a6170a94e4ee1b4f910d197dc41d9:124 » NullPointer
+[ERROR]   TestAttributeColumnsMergeStrategiesControllerImplRickGen.test_mergeNumericColumnsToTimeInterval_PO_e30a6170a94e4ee1b4f910d197dc41d9:102 » NullPointer
+[ERROR]   TestImportContainerImplRickGen.test_addEdge_CO_31ab0355440e490b85d71648e585de54:257 » ClassCast
+[ERROR]   TestImportContainerImplRickGen.test_addEdge_PO_31ab0355440e490b85d71648e585de54:234 » ClassCast
+[ERROR]   TestImportContainerImplRickGen.test_verify_CO_dd8042f5945b45f09b42141fd205eac1:311 » ArrayIndexOutOfBounds Index 1 out of bounds for length 1
+[ERROR]   TestImportContainerImplRickGen.test_verify_OO_dd8042f5945b45f09b42141fd205eac1:286 » ArrayIndexOutOfBounds Index 1 out of bounds for length 1
+[ERROR]   TestImportContainerImplRickGen.test_verify_PO_dd8042f5945b45f09b42141fd205eac1:298 » ArrayIndexOutOfBounds Index 1 out of bounds for length 1
+[ERROR]   TestImporterGEXFRickGen.test_execute_CO_ff17d438970544afacf562bacbe1108b:109 » Runtime com.ctc.wstx.exc.WstxIOException: Bad file descriptor
+[ERROR]   TestImporterGEXFRickGen.test_execute_OO_ff17d438970544afacf562bacbe1108b:58 » Runtime com.ctc.wstx.exc.WstxIOException: Bad file descriptor
+[ERROR]   TestImporterGEXFRickGen.test_execute_PO_ff17d438970544afacf562bacbe1108b:82 » Runtime com.ctc.wstx.exc.WstxIOException: Bad file descriptor
+[ERROR]   TestSpringForceRickGen.test_calculateForce_CO_cba1ebc0864a4ad6a95856e93b7b9931:56 » NullPointer
+[ERROR]   TestSpringForceRickGen.test_calculateForce_PO_cba1ebc0864a4ad6a95856e93b7b9931:40 » NullPointer
+[ERROR]   TestForceAtlas2RickGen.test_goAlgo_CO_3c2dc05b779e4224aef418ec6e93d188:111 » NullPointer
+[ERROR]   TestForceAtlas2RickGen.test_goAlgo_PO_3c2dc05b779e4224aef418ec6e93d188:93 » NullPointer
+[ERROR]   TestPreviewControllerImplRickGen.test_getModel_org_gephi_project_api_Workspace_CO_466c140343a94a5dae10c5112be85918:51 » NullPointer
+[ERROR]   TestPreviewControllerImplRickGen.test_getModel_org_gephi_project_api_Workspace_PO_466c140343a94a5dae10c5112be85918:39 » NullPointer
+[ERROR]   TestEdgeBuilderRickGen.test_getItems_CO_32dbe480e2ea4c80950e6eb19ac80ebf:60 » NullPointer
+[ERROR]   TestEdgeBuilderRickGen.test_getItems_PO_32dbe480e2ea4c80950e6eb19ac80ebf:43 » NullPointer
+[ERROR]   TestNodeBuilderRickGen.test_getItems_CO_d966ad6ddeae4252980af57e5927c677:54 » NullPointer
+[ERROR]   TestNodeBuilderRickGen.test_getItems_PO_d966ad6ddeae4252980af57e5927c677:39 » NullPointer
+[ERROR]   TestNodeRendererRickGen.test_renderPDF_CO_d8eb3a3013c14d05b7e99c12306df548:103 » NullPointer
+[ERROR]   TestNodeRendererRickGen.test_renderPDF_PO_d8eb3a3013c14d05b7e99c12306df548:83 » NullPointer
+[ERROR]   TestConnectedComponentsRickGen.test_computeWeaklyConnectedComponents_CO_5f92bbe159c340e6825c0e2c7e5a84cf:55 » NullPointer
+[ERROR]   TestConnectedComponentsRickGen.test_computeWeaklyConnectedComponents_PO_5f92bbe159c340e6825c0e2c7e5a84cf:40 » NullPointer
+[ERROR]   TestConnectedComponentsRickGen.test_top_tarjans_CO_2ea50032a1f144aba3ac58f0d451e49c:86 » NullPointer
+[ERROR]   TestConnectedComponentsRickGen.test_top_tarjans_PO_2ea50032a1f144aba3ac58f0d451e49c:71 » NullPointer
+[ERROR]   TestDegreeRickGen.test_execute_org_gephi_graph_api_Graph_CO_28b577ff98254859875c3c7e7314d536:54 » NullPointer
+[ERROR]   TestDegreeRickGen.test_execute_org_gephi_graph_api_Graph_PO_28b577ff98254859875c3c7e7314d536:40 » NullPointer
+[ERROR]   TestEigenvectorCentralityRickGen.test_calculateEigenvectorCentrality_CO_89da1e133bb0494c93295dcc90d608ee:83 » NullPointer
+[ERROR]   TestEigenvectorCentralityRickGen.test_calculateEigenvectorCentrality_OO_89da1e133bb0494c93295dcc90d608ee:45 » NullPointer
+[ERROR]   TestEigenvectorCentralityRickGen.test_calculateEigenvectorCentrality_PO_89da1e133bb0494c93295dcc90d608ee:64 » NullPointer
+[ERROR]   TestEigenvectorCentralityRickGen.test_execute_org_gephi_graph_api_Graph_CO_30ddb992f3a94b558263cae9e8e56ab2:110 » NullPointer
+[ERROR]   TestEigenvectorCentralityRickGen.test_execute_org_gephi_graph_api_Graph_PO_30ddb992f3a94b558263cae9e8e56ab2:97 » NullPointer
+[ERROR]   TestGraphDistanceRickGen.test_calculateDistanceMetrics_CO_0f51babd20ff473a8ffb0356324f7d4b:58 » NullPointer
+[ERROR]   TestGraphDistanceRickGen.test_calculateDistanceMetrics_PO_0f51babd20ff473a8ffb0356324f7d4b:41 » NullPointer
+[ERROR]   TestGraphDistanceRickGen.test_execute_org_gephi_graph_api_Graph_CO_bb43dde8695241028be25606a7ce8e81:85 » NullPointer
+[ERROR]   TestGraphDistanceRickGen.test_execute_org_gephi_graph_api_Graph_PO_bb43dde8695241028be25606a7ce8e81:72 » NullPointer
+[ERROR]   TestHitsRickGen.test_calculateHits_CO_251f37f2e7be4ff084fb1f1bf02e45fe:63 » NullPointer
+[ERROR]   TestHitsRickGen.test_calculateHits_PO_251f37f2e7be4ff084fb1f1bf02e45fe:44 » NullPointer
+[ERROR]   TestHitsRickGen.test_execute_org_gephi_graph_api_Graph_CO_0d1971289ec8456aa6da5d1654cf4c34:90 » NullPointer
+[ERROR]   TestHitsRickGen.test_execute_org_gephi_graph_api_Graph_PO_0d1971289ec8456aa6da5d1654cf4c34:77 » NullPointer
+[ERROR]   TestModularityRickGen.test_execute_org_gephi_graph_api_Graph_CO_604ce04c42df40da9cc34b4d8b34ad3e:50 » NullPointer
+[ERROR]   TestModularityRickGen.test_execute_org_gephi_graph_api_Graph_PO_604ce04c42df40da9cc34b4d8b34ad3e:37 » NullPointer
+[ERROR]   TestStatisticalInferenceClusteringRickGen.test_execute_org_gephi_graph_api_Graph_CO_640f32335d41424898ebd239b5ff4a68:50 » NullPointer
+[ERROR]   TestStatisticalInferenceClusteringRickGen.test_execute_org_gephi_graph_api_Graph_PO_640f32335d41424898ebd239b5ff4a68:37 » NullPointer
+[ERROR]   TestWeightedDegreeRickGen.test_calculateAverageWeightedDegree_CO_93725bb82fc6428cb50f6e2fb652a87e:74 » NullPointer
+[ERROR]   TestWeightedDegreeRickGen.test_calculateAverageWeightedDegree_OO_93725bb82fc6428cb50f6e2fb652a87e:42 » NullPointer
+[ERROR]   TestWeightedDegreeRickGen.test_calculateAverageWeightedDegree_PO_93725bb82fc6428cb50f6e2fb652a87e:58 » NullPointer
+[ERROR]   TestWeightedDegreeRickGen.test_execute_org_gephi_graph_api_Graph_CO_c8bab684def54b5c8fefc8d09ad3b5c8:101 » NullPointer
+[ERROR]   TestWeightedDegreeRickGen.test_execute_org_gephi_graph_api_Graph_PO_c8bab684def54b5c8fefc8d09ad3b5c8:88 » NullPointer
+[INFO] 
+[ERROR] Tests run: 126, Failures: 24, Errors: 64, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:22 min
+[INFO] Finished at: 2024-06-26T18:17:25+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.3.0:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-experiments/gephi/tests/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

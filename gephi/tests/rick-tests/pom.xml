@@ -11,9 +11,9 @@
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <junit.jupiter.engine.version>5.8.2</junit.jupiter.engine.version>
+        <junit.jupiter.engine.version>5.10.2</junit.jupiter.engine.version>
         <junit.platform.runner.version>1.8.2</junit.platform.runner.version>
-        <junit.jupiter.params.version>5.8.2</junit.jupiter.params.version>
+        <junit.jupiter.params.version>5.10.2</junit.jupiter.params.version>
         <mockito.core.version>4.4.0</mockito.core.version>
         <mockito.junit.jupiter.version>2.23.0</mockito.junit.jupiter.version>
         <xstream.version>1.4.12</xstream.version>
@@ -437,12 +437,12 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.jupiter.engine.version}</version>
         </dependency>
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-runner</artifactId>
-            <version>${junit.platform.runner.version}</version>
-            <scope>runtime</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.junit.platform</groupId>-->
+<!--            <artifactId>junit-platform-runner</artifactId>-->
+<!--            <version>${junit.platform.runner.version}</version>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-params</artifactId>
@@ -481,8 +481,30 @@
             <version>0.20</version>
             <scope>test</scope>
         </dependency>
-
-
+        <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
+        <dependency>
+            <groupId>org.junit.platform</groupId>
+            <artifactId>junit-platform-launcher</artifactId>
+            <version>1.11.0-M2</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
+
+    <build>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.3.0</version>
+            <dependencies>
+                <dependency>
+                    <groupId>org.junit.jupiter</groupId>
+                    <artifactId>junit-jupiter-engine</artifactId>
+                    <version>5.9.1</version>
+                </dependency>
+            </dependencies>
+        </plugin>
+      </plugins>
+    </build>
 
 </project>
