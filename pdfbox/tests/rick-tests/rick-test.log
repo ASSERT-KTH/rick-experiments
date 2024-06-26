@@ -1,0 +1,368 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< org.apache.pdfbox:rick-tests >--------------------
+[INFO] Building rick-tests 2.0.24
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (default) @ rick-tests ---
+[INFO] 
+[INFO] --- maven-enforcer-plugin:1.4.1:enforce (enforce-maven-version) @ rick-tests ---
+[INFO] 
+[INFO] --- maven-remote-resources-plugin:1.5:process (process-resource-bundles) @ rick-tests ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ rick-tests ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 0 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:compile (default-compile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ rick-tests ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 111 resources
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.6.0:testCompile (default-testCompile) @ rick-tests ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.22.2:test (default-test) @ rick-tests ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running org.apache.pdfbox.filter.TestDCTFilterRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.013 s - in org.apache.pdfbox.filter.TestDCTFilterRickGen
+[INFO] Running org.apache.pdfbox.rendering.TestPDFRendererRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.318 s - in org.apache.pdfbox.rendering.TestPDFRendererRickGen
+[INFO] Running org.apache.pdfbox.rendering.TestPageDrawerRickGen
+[ERROR] Tests run: 12, Failures: 2, Errors: 6, Skipped: 2, Time elapsed: 44.74 s <<< FAILURE! - in org.apache.pdfbox.rendering.TestPageDrawerRickGen
+[ERROR] test_endPath_CO_d77007dd58194e4d9785a60c4ffa3dcb  Time elapsed: 5.238 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_endPath_CO_d77007dd58194e4d9785a60c4ffa3dcb(TestPageDrawerRickGen.java:274)
+
+[ERROR] test_appendRectangle_PO_07c5938e25cd4651a9bd0c76f75e7699  Time elapsed: 4.393 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+generalPath.moveTo(199.8f, 241.5f);
+-> at java.desktop/java.awt.geom.Path2D$Float.moveTo(Path2D.java:412)
+Actually, there were zero interactions with this mock.
+
+	at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_appendRectangle_PO_07c5938e25cd4651a9bd0c76f75e7699(TestPageDrawerRickGen.java:75)
+
+[ERROR] test_endPath_PO_d77007dd58194e4d9785a60c4ffa3dcb  Time elapsed: 4.582 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_endPath_PO_d77007dd58194e4d9785a60c4ffa3dcb(TestPageDrawerRickGen.java:261)
+
+[ERROR] test_drawImage_CO_1e563a915da2443ca43bcfc98ebcd62d  Time elapsed: 4.085 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_drawImage_CO_1e563a915da2443ca43bcfc98ebcd62d(TestPageDrawerRickGen.java:209)
+
+[ERROR] test_fillPath_CO_43d6ea955a4f4ed9949ef7d2019c5688  Time elapsed: 3.127 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_fillPath_CO_43d6ea955a4f4ed9949ef7d2019c5688(TestPageDrawerRickGen.java:144)
+
+[ERROR] test_drawImage_PO_1e563a915da2443ca43bcfc98ebcd62d  Time elapsed: 4.355 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_drawImage_PO_1e563a915da2443ca43bcfc98ebcd62d(TestPageDrawerRickGen.java:194)
+
+[ERROR] test_fillPath_PO_43d6ea955a4f4ed9949ef7d2019c5688  Time elapsed: 4.293 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_fillPath_PO_43d6ea955a4f4ed9949ef7d2019c5688(TestPageDrawerRickGen.java:132)
+
+[ERROR] test_appendRectangle_CO_07c5938e25cd4651a9bd0c76f75e7699  Time elapsed: 4.124 s  <<< FAILURE!
+org.mockito.exceptions.verification.VerificationInOrderFailure: 
+
+Verification in order failure
+Wanted but not invoked:
+generalPath.moveTo(<any float>, <any float>);
+-> at java.desktop/java.awt.geom.Path2D$Float.moveTo(Path2D.java:412)
+Wanted anywhere AFTER following interaction:
+point2D.getY();
+-> at org.apache.pdfbox.rendering.PageDrawer.appendRectangle(PageDrawer.java:627)
+
+	at org.apache.pdfbox.rendering.TestPageDrawerRickGen.test_appendRectangle_CO_07c5938e25cd4651a9bd0c76f75e7699(TestPageDrawerRickGen.java:104)
+
+[INFO] Running org.apache.pdfbox.io.TestRandomAccessInputStreamRickGen
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.025 s - in org.apache.pdfbox.io.TestRandomAccessInputStreamRickGen
+[INFO] Running org.apache.pdfbox.io.TestScratchFileBufferRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.958 s - in org.apache.pdfbox.io.TestScratchFileBufferRickGen
+[INFO] Running org.apache.pdfbox.pdmodel.encryption.TestStandardSecurityHandlerRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.268 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.encryption.TestStandardSecurityHandlerRickGen
+[ERROR] test_prepareForDecryption_CO_878e9f65ce984b099b5955aa79bc2f0d  Time elapsed: 0.231 s  <<< ERROR!
+java.io.IOException: Unknown Encryption Revision 0
+	at org.apache.pdfbox.pdmodel.encryption.TestStandardSecurityHandlerRickGen.test_prepareForDecryption_CO_878e9f65ce984b099b5955aa79bc2f0d(TestStandardSecurityHandlerRickGen.java:63)
+
+[ERROR] test_prepareForDecryption_PO_878e9f65ce984b099b5955aa79bc2f0d  Time elapsed: 0.026 s  <<< ERROR!
+java.io.IOException: Unknown Encryption Revision 0
+	at org.apache.pdfbox.pdmodel.encryption.TestStandardSecurityHandlerRickGen.test_prepareForDecryption_PO_878e9f65ce984b099b5955aa79bc2f0d(TestStandardSecurityHandlerRickGen.java:47)
+
+[INFO] Running org.apache.pdfbox.pdmodel.TestPDPageRickGen
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.063 s - in org.apache.pdfbox.pdmodel.TestPDPageRickGen
+[INFO] Running org.apache.pdfbox.pdmodel.TestPDResourcesRickGen
+[ERROR] Tests run: 10, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 8.637 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDResourcesRickGen
+[ERROR] test_getColorSpace_org_apache_pdfbox_cos_COSName_boolean_CO_1c7bad64de7946669bb369f40c21d95c  Time elapsed: 0.776 s  <<< ERROR!
+java.io.IOException: Invalid color space kind: COSName{ICCBased}
+	at org.apache.pdfbox.pdmodel.TestPDResourcesRickGen.test_getColorSpace_org_apache_pdfbox_cos_COSName_boolean_CO_1c7bad64de7946669bb369f40c21d95c(TestPDResourcesRickGen.java:131)
+
+[ERROR] test_getColorSpace_org_apache_pdfbox_cos_COSName_boolean_PO_1c7bad64de7946669bb369f40c21d95c  Time elapsed: 0.614 s  <<< ERROR!
+java.io.IOException: Invalid color space kind: COSName{ICCBased}
+	at org.apache.pdfbox.pdmodel.TestPDResourcesRickGen.test_getColorSpace_org_apache_pdfbox_cos_COSName_boolean_PO_1c7bad64de7946669bb369f40c21d95c(TestPDResourcesRickGen.java:116)
+
+[INFO] Running org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGen
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.777 s - in org.apache.pdfbox.pdmodel.font.TestPDFontDescriptorRickGen
+[INFO] Running org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[WARNING] Tests run: 6, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 2.224 s - in org.apache.pdfbox.pdmodel.font.TestPDTrueTypeFontRickGen
+[INFO] Running org.apache.pdfbox.pdmodel.font.TestPDSimpleFontRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.73 s - in org.apache.pdfbox.pdmodel.font.TestPDSimpleFontRickGen
+[INFO] Running org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGen
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.614 s - in org.apache.pdfbox.pdmodel.TestPDDocumentCatalogRickGen
+[INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.978 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDIndexedRickGen
+[INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDICCBasedRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.673 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDICCBasedRickGen
+[INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.362 s - in org.apache.pdfbox.pdmodel.graphics.color.TestPDColorRickGen
+[INFO] Running org.apache.pdfbox.pdmodel.graphics.color.TestPDDeviceRGBRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.032 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.color.TestPDDeviceRGBRickGen
+[ERROR] test_toRGBImage_CO_26d48267338b49859216278eb4271320  Time elapsed: 0.013 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDDeviceRGBRickGen.test_toRGBImage_CO_26d48267338b49859216278eb4271320(TestPDDeviceRGBRickGen.java:62)
+
+[ERROR] test_toRGBImage_PO_26d48267338b49859216278eb4271320  Time elapsed: 0.008 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.pdmodel.graphics.color.TestPDDeviceRGBRickGen.test_toRGBImage_PO_26d48267338b49859216278eb4271320(TestPDDeviceRGBRickGen.java:47)
+
+[INFO] Running org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.284 s - in org.apache.pdfbox.pdmodel.graphics.form.TestPDFormXObjectRickGen
+[INFO] Running org.apache.pdfbox.pdmodel.graphics.state.TestPDGraphicsStateRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.206 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.graphics.state.TestPDGraphicsStateRickGen
+[ERROR] test_intersectClippingPath_java_awt_geom_Area_CO_3febd04a156f4fd99ce27a0bd156f9c3  Time elapsed: 0.181 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.pdmodel.graphics.state.TestPDGraphicsStateRickGen.test_intersectClippingPath_java_awt_geom_Area_CO_3febd04a156f4fd99ce27a0bd156f9c3(TestPDGraphicsStateRickGen.java:72)
+
+[ERROR] test_intersectClippingPath_java_awt_geom_Area_PO_3febd04a156f4fd99ce27a0bd156f9c3  Time elapsed: 0.012 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.pdmodel.graphics.state.TestPDGraphicsStateRickGen.test_intersectClippingPath_java_awt_geom_Area_PO_3febd04a156f4fd99ce27a0bd156f9c3(TestPDGraphicsStateRickGen.java:58)
+
+[INFO] Running org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.1 s - in org.apache.pdfbox.pdmodel.graphics.shading.TestAxialShadingContextRickGen
+[INFO] Running org.apache.pdfbox.pdmodel.TestPDDocumentRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 1.402 s <<< FAILURE! - in org.apache.pdfbox.pdmodel.TestPDDocumentRickGen
+[ERROR] test_importPage_CO_2dfeb5f6f94b45ada65f6a41c12d2664  Time elapsed: 0.708 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.pdmodel.TestPDDocumentRickGen.test_importPage_CO_2dfeb5f6f94b45ada65f6a41c12d2664(TestPDDocumentRickGen.java:57)
+
+[ERROR] test_importPage_PO_2dfeb5f6f94b45ada65f6a41c12d2664  Time elapsed: 0.683 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.pdmodel.TestPDDocumentRickGen.test_importPage_PO_2dfeb5f6f94b45ada65f6a41c12d2664(TestPDDocumentRickGen.java:44)
+
+[INFO] Running org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.467 s - in org.apache.pdfbox.pdmodel.TestPDPageContentStreamRickGen
+[INFO] Running org.apache.pdfbox.multipdf.TestPDFMergerUtilityRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 3.571 s <<< FAILURE! - in org.apache.pdfbox.multipdf.TestPDFMergerUtilityRickGen
+[ERROR] test_appendDocument_CO_416b19ad41de47b89575ad63ea2351da  Time elapsed: 1.982 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.multipdf.TestPDFMergerUtilityRickGen.test_appendDocument_CO_416b19ad41de47b89575ad63ea2351da(TestPDFMergerUtilityRickGen.java:65)
+
+[ERROR] test_appendDocument_PO_416b19ad41de47b89575ad63ea2351da  Time elapsed: 1.574 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.multipdf.TestPDFMergerUtilityRickGen.test_appendDocument_PO_416b19ad41de47b89575ad63ea2351da(TestPDFMergerUtilityRickGen.java:50)
+
+[INFO] Running org.apache.pdfbox.text.TestTextPositionComparatorRickGen
+[ERROR] Tests run: 3, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.107 s <<< FAILURE! - in org.apache.pdfbox.text.TestTextPositionComparatorRickGen
+[ERROR] test_compare_CO_d5e017d5af7242fba30ab9c3bcb6f433  Time elapsed: 0.757 s  <<< FAILURE!
+org.mockito.exceptions.verification.VerificationInOrderFailure: 
+
+Verification in order failure:
+textPosition.getDir();
+Wanted 5 times:
+-> at org.apache.pdfbox.text.TextPosition.getDir(TextPosition.java:210)
+But was 1 time:
+-> at org.apache.pdfbox.text.TextPositionComparator.compare(TextPositionComparator.java:35)
+
+	at org.apache.pdfbox.text.TestTextPositionComparatorRickGen.test_compare_CO_d5e017d5af7242fba30ab9c3bcb6f433(TestTextPositionComparatorRickGen.java:93)
+
+[INFO] Running org.apache.pdfbox.text.TestLegacyPDFStreamEngineRickGen
+[ERROR] Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 1.685 s <<< FAILURE! - in org.apache.pdfbox.text.TestLegacyPDFStreamEngineRickGen
+[ERROR] test_processPage_CO_e5bf7f8d4f1d4b8f8fb58d2958e920b4  Time elapsed: 0.836 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.text.TestLegacyPDFStreamEngineRickGen.test_processPage_CO_e5bf7f8d4f1d4b8f8fb58d2958e920b4(TestLegacyPDFStreamEngineRickGen.java:58)
+
+[ERROR] test_processPage_PO_e5bf7f8d4f1d4b8f8fb58d2958e920b4  Time elapsed: 0.839 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.text.TestLegacyPDFStreamEngineRickGen.test_processPage_PO_e5bf7f8d4f1d4b8f8fb58d2958e920b4(TestLegacyPDFStreamEngineRickGen.java:45)
+
+[INFO] Running org.apache.pdfbox.cos.TestCOSNameRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.043 s - in org.apache.pdfbox.cos.TestCOSNameRickGen
+[INFO] Running org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.616 s - in org.apache.pdfbox.cos.TestCOSDictionaryRickGen
+[INFO] Running org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
+[ERROR] Tests run: 4, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 3.048 s <<< FAILURE! - in org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen
+[ERROR] test_processPage_CO_c06c49663bef49cdbf624cd98bc941b2  Time elapsed: 0.694 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_processPage_CO_c06c49663bef49cdbf624cd98bc941b2(TestPDFStreamEngineRickGen.java:85)
+
+[ERROR] test_processPage_PO_c06c49663bef49cdbf624cd98bc941b2  Time elapsed: 0.903 s  <<< ERROR!
+java.lang.NullPointerException
+	at org.apache.pdfbox.contentstream.TestPDFStreamEngineRickGen.test_processPage_PO_c06c49663bef49cdbf624cd98bc941b2(TestPDFStreamEngineRickGen.java:72)
+
+[INFO] Running org.apache.pdfbox.pdfwriter.TestCOSWriterRickGen
+[ERROR] Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 7.198 s <<< FAILURE! - in org.apache.pdfbox.pdfwriter.TestCOSWriterRickGen
+[ERROR] test_close_CO_e315d9d52149466290d7ba5b2fdb6a93  Time elapsed: 1.31 s  <<< FAILURE!
+org.mockito.exceptions.verification.VerificationInOrderFailure: 
+
+Verification in order failure:
+outputStream.close();
+Wanted 10 times:
+-> at java.base/java.io.OutputStream.close(OutputStream.java:193)
+But was 1 time:
+-> at org.apache.pdfbox.pdfwriter.COSWriter.close(COSWriter.java:356)
+
+	at org.apache.pdfbox.pdfwriter.TestCOSWriterRickGen.test_close_CO_e315d9d52149466290d7ba5b2fdb6a93(TestCOSWriterRickGen.java:98)
+
+[INFO] Running org.apache.pdfbox.tools.TestImageGraphicsEngineRickGen
+Writing image: /home/dee/dev/rick-review-2024/pdfbox/workload/pdfs/000752-locked-1
+Writing image: /home/dee/dev/rick-review-2024/pdfbox/workload/pdfs/000752-locked-1
+[ERROR] Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.754 s <<< FAILURE! - in org.apache.pdfbox.tools.TestImageGraphicsEngineRickGen
+[ERROR] test_drawImage_CO_6f68e8e80ae544919ec11fba613c7b77  Time elapsed: 0.8 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+pDImage.isStencil();
+-> at org.apache.pdfbox.tools.TestImageGraphicsEngineRickGen.test_drawImage_CO_6f68e8e80ae544919ec11fba613c7b77(TestImageGraphicsEngineRickGen.java:62)
+
+However, there were exactly 2 interactions with this mock:
+pDImage.getSuffix();
+-> at org.apache.pdfbox.tools.ExtractImages$ImageGraphicsEngine.write2file(ExtractImages.java:392)
+
+pDImage.getImage();
+-> at org.apache.pdfbox.tools.ExtractImages$ImageGraphicsEngine.write2file(ExtractImages.java:506)
+
+
+	at org.apache.pdfbox.tools.TestImageGraphicsEngineRickGen.test_drawImage_CO_6f68e8e80ae544919ec11fba613c7b77(TestImageGraphicsEngineRickGen.java:62)
+
+[ERROR] test_drawImage_PO_6f68e8e80ae544919ec11fba613c7b77  Time elapsed: 0.948 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+pDImage.isStencil();
+-> at org.apache.pdfbox.tools.TestImageGraphicsEngineRickGen.test_drawImage_PO_6f68e8e80ae544919ec11fba613c7b77(TestImageGraphicsEngineRickGen.java:48)
+
+However, there were exactly 2 interactions with this mock:
+pDImage.getSuffix();
+-> at org.apache.pdfbox.tools.ExtractImages$ImageGraphicsEngine.write2file(ExtractImages.java:392)
+
+pDImage.getImage();
+-> at org.apache.pdfbox.tools.ExtractImages$ImageGraphicsEngine.write2file(ExtractImages.java:506)
+
+
+	at org.apache.pdfbox.tools.TestImageGraphicsEngineRickGen.test_drawImage_PO_6f68e8e80ae544919ec11fba613c7b77(TestImageGraphicsEngineRickGen.java:48)
+
+[INFO] Running org.apache.fontbox.ttf.TestGlyphTableRickGen
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.344 s - in org.apache.fontbox.ttf.TestGlyphTableRickGen
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   TestCOSWriterRickGen.test_close_CO_e315d9d52149466290d7ba5b2fdb6a93:98 
+Verification in order failure:
+outputStream.close();
+Wanted 10 times:
+-> at java.base/java.io.OutputStream.close(OutputStream.java:193)
+But was 1 time:
+-> at org.apache.pdfbox.pdfwriter.COSWriter.close(COSWriter.java:356)
+
+[ERROR]   TestPageDrawerRickGen.test_appendRectangle_CO_07c5938e25cd4651a9bd0c76f75e7699:104 
+Verification in order failure
+Wanted but not invoked:
+generalPath.moveTo(<any float>, <any float>);
+-> at java.desktop/java.awt.geom.Path2D$Float.moveTo(Path2D.java:412)
+Wanted anywhere AFTER following interaction:
+point2D.getY();
+-> at org.apache.pdfbox.rendering.PageDrawer.appendRectangle(PageDrawer.java:627)
+
+[ERROR]   TestPageDrawerRickGen.test_appendRectangle_PO_07c5938e25cd4651a9bd0c76f75e7699:75 
+Wanted but not invoked:
+generalPath.moveTo(199.8f, 241.5f);
+-> at java.desktop/java.awt.geom.Path2D$Float.moveTo(Path2D.java:412)
+Actually, there were zero interactions with this mock.
+
+[ERROR]   TestTextPositionComparatorRickGen.test_compare_CO_d5e017d5af7242fba30ab9c3bcb6f433:93 
+Verification in order failure:
+textPosition.getDir();
+Wanted 5 times:
+-> at org.apache.pdfbox.text.TextPosition.getDir(TextPosition.java:210)
+But was 1 time:
+-> at org.apache.pdfbox.text.TextPositionComparator.compare(TextPositionComparator.java:35)
+
+[ERROR]   TestImageGraphicsEngineRickGen.test_drawImage_CO_6f68e8e80ae544919ec11fba613c7b77:62 
+Wanted but not invoked:
+pDImage.isStencil();
+-> at org.apache.pdfbox.tools.TestImageGraphicsEngineRickGen.test_drawImage_CO_6f68e8e80ae544919ec11fba613c7b77(TestImageGraphicsEngineRickGen.java:62)
+
+However, there were exactly 2 interactions with this mock:
+pDImage.getSuffix();
+-> at org.apache.pdfbox.tools.ExtractImages$ImageGraphicsEngine.write2file(ExtractImages.java:392)
+
+pDImage.getImage();
+-> at org.apache.pdfbox.tools.ExtractImages$ImageGraphicsEngine.write2file(ExtractImages.java:506)
+
+
+[ERROR]   TestImageGraphicsEngineRickGen.test_drawImage_PO_6f68e8e80ae544919ec11fba613c7b77:48 
+Wanted but not invoked:
+pDImage.isStencil();
+-> at org.apache.pdfbox.tools.TestImageGraphicsEngineRickGen.test_drawImage_PO_6f68e8e80ae544919ec11fba613c7b77(TestImageGraphicsEngineRickGen.java:48)
+
+However, there were exactly 2 interactions with this mock:
+pDImage.getSuffix();
+-> at org.apache.pdfbox.tools.ExtractImages$ImageGraphicsEngine.write2file(ExtractImages.java:392)
+
+pDImage.getImage();
+-> at org.apache.pdfbox.tools.ExtractImages$ImageGraphicsEngine.write2file(ExtractImages.java:506)
+
+
+[ERROR] Errors: 
+[ERROR]   TestPDFStreamEngineRickGen.test_processPage_CO_c06c49663bef49cdbf624cd98bc941b2:85 » NullPointer
+[ERROR]   TestPDFStreamEngineRickGen.test_processPage_PO_c06c49663bef49cdbf624cd98bc941b2:72 » NullPointer
+[ERROR]   TestPDFMergerUtilityRickGen.test_appendDocument_CO_416b19ad41de47b89575ad63ea2351da:65 » NullPointer
+[ERROR]   TestPDFMergerUtilityRickGen.test_appendDocument_PO_416b19ad41de47b89575ad63ea2351da:50 » NullPointer
+[ERROR]   TestPDDocumentRickGen.test_importPage_CO_2dfeb5f6f94b45ada65f6a41c12d2664:57 » NullPointer
+[ERROR]   TestPDDocumentRickGen.test_importPage_PO_2dfeb5f6f94b45ada65f6a41c12d2664:44 » NullPointer
+[ERROR]   TestPDResourcesRickGen.test_getColorSpace_org_apache_pdfbox_cos_COSName_boolean_CO_1c7bad64de7946669bb369f40c21d95c:131 » IO
+[ERROR]   TestPDResourcesRickGen.test_getColorSpace_org_apache_pdfbox_cos_COSName_boolean_PO_1c7bad64de7946669bb369f40c21d95c:116 » IO
+[ERROR]   TestStandardSecurityHandlerRickGen.test_prepareForDecryption_CO_878e9f65ce984b099b5955aa79bc2f0d:63 » IO
+[ERROR]   TestStandardSecurityHandlerRickGen.test_prepareForDecryption_PO_878e9f65ce984b099b5955aa79bc2f0d:47 » IO
+[ERROR]   TestPDDeviceRGBRickGen.test_toRGBImage_CO_26d48267338b49859216278eb4271320:62 » NullPointer
+[ERROR]   TestPDDeviceRGBRickGen.test_toRGBImage_PO_26d48267338b49859216278eb4271320:47 » NullPointer
+[ERROR]   TestPDGraphicsStateRickGen.test_intersectClippingPath_java_awt_geom_Area_CO_3febd04a156f4fd99ce27a0bd156f9c3:72 » NullPointer
+[ERROR]   TestPDGraphicsStateRickGen.test_intersectClippingPath_java_awt_geom_Area_PO_3febd04a156f4fd99ce27a0bd156f9c3:58 » NullPointer
+[ERROR]   TestPageDrawerRickGen.test_drawImage_CO_1e563a915da2443ca43bcfc98ebcd62d:209 » NullPointer
+[ERROR]   TestPageDrawerRickGen.test_drawImage_PO_1e563a915da2443ca43bcfc98ebcd62d:194 » NullPointer
+[ERROR]   TestPageDrawerRickGen.test_endPath_CO_d77007dd58194e4d9785a60c4ffa3dcb:274 » NullPointer
+[ERROR]   TestPageDrawerRickGen.test_endPath_PO_d77007dd58194e4d9785a60c4ffa3dcb:261 » NullPointer
+[ERROR]   TestPageDrawerRickGen.test_fillPath_CO_43d6ea955a4f4ed9949ef7d2019c5688:144 » NullPointer
+[ERROR]   TestPageDrawerRickGen.test_fillPath_PO_43d6ea955a4f4ed9949ef7d2019c5688:132 » NullPointer
+[ERROR]   TestLegacyPDFStreamEngineRickGen.test_processPage_CO_e5bf7f8d4f1d4b8f8fb58d2958e920b4:58 » NullPointer
+[ERROR]   TestLegacyPDFStreamEngineRickGen.test_processPage_PO_e5bf7f8d4f1d4b8f8fb58d2958e920b4:45 » NullPointer
+[INFO] 
+[ERROR] Tests run: 106, Failures: 6, Errors: 22, Skipped: 5
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:18 min
+[INFO] Finished at: 2024-06-26T14:25:02+02:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.2:test (default-test) on project rick-tests: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /home/dee/dev/rick-experiments/pdfbox/tests/rick-tests/target/surefire-reports for the individual test results.
+[ERROR] Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
