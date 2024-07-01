@@ -2,7 +2,8 @@
 
 Setup and running:
 - Clone Gephi [v0.9.6](https://github.com/gephi/gephi/tree/v0.9.6)
-- `cd /path/to/gephi/modules/application/` 
+- `cd /path/to/gephi/modules/application/`
+- Note: We consider 8 modules: `DataLaboratoryAPI, ImportAPI, ImportPlugin, ExportAPI, LayoutPlugin, PreviewAPI, PreviewPlugin, StatisticsPlugin`
 - To enable Glowroot, modify `default_options` in `/path/to/gephi/modules/application/target/gephi.conf`
   - `default_options="--branding ${branding.token} -J-javaagent:/path/to/glowroot/glowroot.jar -J-Dsun.java2d.metal=true -J-Dsun.java2d.noddraw=true -J-Dsun.awt.noerasebackground=true -J-Dapple.awt.graphics.UseQuartz=true -J-Dnetbeans.indexing.noFileRefresh=true -J-Dplugin.manager.check.interval=EVERY_DAY -J--add-opens=java.base/java.net=ALL-UNNAMED -J--add-exports=java.desktop/sun.awt=ALL-UNNAMED -J--add-opens=java.desktop/javax.swing=ALL-UNNAMED -J--add-opens=java.base/java.nio=ALL-UNNAMED -J--add-exports=java.desktop/sun.awt=ALL-UNNAMED"`
 - Run with `mvn nbm:cluster-app nbm:run-platform`
@@ -20,6 +21,6 @@ Setup and running:
   - Refresh to generate preview after each change
   - Choose between different presets
   - Enable/disable features
-  - Export as SVG, PDF, PNG 
+  - Export as SVG, PDF, PNG
 
 #### [Data](https://kth-my.sharepoint.com/:f:/g/personal/deepikat_ug_kth_se/EpATFwDVPhBFqS2IOxPLAcIBhgumvYfcZ9CXVc3hE2sLkg?e=HP7qFM)
